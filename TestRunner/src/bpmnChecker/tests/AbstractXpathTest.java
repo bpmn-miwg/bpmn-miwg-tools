@@ -68,7 +68,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			Attr attr = (Attr) n.getAttributes().getNamedItem("name");
 			String s = attr.getValue();
 			s = s.trim();
-			//out.println(">>>" + s);
+			// out.println(">>>" + s);
 			s = s.replaceAll("&#10;", " ");
 			s = s.replaceAll("  ", " ");
 			attr.setTextContent(s);
@@ -102,8 +102,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		currentNode = n;
 		for (XpathAutoChecker c : autoChecker) {
 			if (c.isApplicable(n, param)) {
-				out.println(generateSpaces(depth() * 2)
-						+ "> Auto Checker: " + c.getClass().getSimpleName());
+				out.println(generateSpaces(depth() * 2) + "> Auto Checker: "
+						+ c.getClass().getSimpleName());
 				push(n);
 				c.check(n, this);
 				pop();
@@ -150,12 +150,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public Node navigateElement(String description, String expr)
-			throws Throwable {
-		return navigateElement(description, expr, null);
+	public Node navigateElement(String expr) throws Throwable {
+		return navigateElement(expr, null);
 	}
 
-	public Node navigateElement(String description, String expr, String param)
+	public Node navigateElement(String expr, String param)
 			throws Throwable {
 		if (head() == null) {
 			issue(expr, "Parent failed");
@@ -171,12 +170,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return n;
 	}
 
-	public void selectElement(String description, String expr) throws Throwable {
-		selectElement(description, expr, null);
+	public void selectElement(String expr) throws Throwable {
+		selectElement(expr, null);
 	}
 
-	public void selectElement(String description, String expr, String param)
-			throws Throwable {
+	public void selectElement(String expr, String param) throws Throwable {
 		if (head() == null) {
 			issue(expr, "Parent failed");
 			push(null);
@@ -193,8 +191,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		push(n);
 	}
 
-	public void selectProcess(String description, String xpath)
-			throws Throwable {
+	public void selectProcess(String xpath) throws Throwable {
 		if (head() == null) {
 			issue(xpath, "Parent failed");
 			push(null);
@@ -218,17 +215,16 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		push(n);
 	}
 
-	public void selectProcessOfCallActivity(String description)
-			throws Throwable {
+	public void selectProcessOfCallActivity() throws Throwable {
 		if (head() == null) {
-			issue(description, "Parent failed");
+			issue("selectProcessofCallActivity", "Parent failed");
 			push(null);
 			return;
 		}
 		String processID = getAttribute("calledElement");
 
 		if (processID == null) {
-			issue(description, "Cannot retreive process id");
+			issue("selectProcessofCallActivity", "Cannot retreive process id");
 			push(null);
 			return;
 		}

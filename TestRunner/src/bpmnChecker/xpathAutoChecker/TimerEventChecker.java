@@ -8,7 +8,7 @@ public class TimerEventChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {
-		test.navigateElement("Timer Event Definition",
+		test.navigateElement(
 				"bpmn:timerEventDefinition | bpmn:eventDefinitionRef");
 	}
 

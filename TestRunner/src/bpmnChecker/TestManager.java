@@ -9,11 +9,29 @@ public class TestManager {
 
 	private List<Test> registeredTests = new ArrayList<Test>();
 
+	private String application = null;
+	
+	public String getApplication() {
+		return application;
+	}
+
 	public TestManager() {
 	}
 
 	public void registerTest(Test test) {
 		registeredTests.add(test);
+	}
+
+	public void limitApplication(String application) {
+		this.application = application;
+	}
+
+	public boolean isAnyTestApplicable(String fileName) {
+		for (Test test : registeredTests) {
+			if (test.isApplicable(fileName))
+				return true;
+		}
+		return false;
 	}
 
 	public void printApplicableTests(String fileName, TestOutput out) {
@@ -45,12 +63,12 @@ public class TestManager {
 				out.println("  * OK    : " + test.ResultsOK());
 				out.println("  * ISSUES: " + test.ResultsIssue());
 				out.println();
-				
+
 				numOK += test.ResultsOK();
 				numIssue += test.ResultsIssue();
 			}
 		}
-		
+
 		out.println(">> TEST RESULTS TOTAL:");
 		out.println("  * OK    : " + numOK);
 		out.println("  * ISSUES: " + numIssue);

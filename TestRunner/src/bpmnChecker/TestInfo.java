@@ -10,6 +10,7 @@ import java.util.List;
 public class TestInfo {
 
 	private String testFile;
+
 	public String getTest() {
 		return testFile;
 	}
@@ -28,8 +29,8 @@ public class TestInfo {
 	public TestInfo() {
 	}
 
-	public static List<TestInfo> findTestFiles(String rootDir)
-			throws IOException {
+	public static List<TestInfo> findTestFiles(final TestManager testManager,
+			String rootDir) throws IOException {
 		System.out.println("Test files in " + rootDir);
 
 		File root = new File(rootDir);
@@ -50,9 +51,7 @@ public class TestInfo {
 
 						@Override
 						public boolean accept(File folder, String name) {
-							return name.equals("B.1.0-export.bpmn")
-									|| name.equals("B.1.0-roundtrip.bpmn")
-											|| name.equals("B.1.0.bpmn");
+							return testManager.isAnyTestApplicable(name);
 						}
 
 					});
@@ -63,7 +62,10 @@ public class TestInfo {
 				tfi.application = f.getParentFile().getName();
 				tfi.testFile = f.getName();
 
-				allTestFiles.add(tfi);
+				if (testManager.getApplication() == null
+						|| testManager.getApplication()
+								.equals(tfi.application))
+					allTestFiles.add(tfi);
 			}
 		}
 
@@ -79,7 +81,7 @@ public class TestInfo {
 		File f2 = new File(f1, testFile);
 		return f2;
 	}
-	
+
 	public void printTestFileInfo(TestOutput out) {
 		out.println("Root       : " + root);
 		out.println("Application: " + application);

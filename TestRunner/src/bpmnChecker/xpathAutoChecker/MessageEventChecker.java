@@ -8,7 +8,7 @@ public class MessageEventChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {
-		test.navigateElement("Message Event Definition",
+		test.navigateElement(
 				"bpmn:messageEventDefinition | bpmn:eventDefinitionRef");
 	}
 

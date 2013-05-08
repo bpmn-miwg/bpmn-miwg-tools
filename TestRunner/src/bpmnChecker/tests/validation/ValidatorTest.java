@@ -48,12 +48,12 @@ public class ValidatorTest extends AbstractTest {
 		}
 	}
 
-
 	@Override
 	public boolean isApplicable(String fileName) {
-		return true;
+		return fileName.endsWith("-export.bpmn")
+				|| fileName.endsWith("-roundtrip.bpmn");
 	}
-	
+
 	@Override
 	public String getName() {
 		return "BPMN Schema Validator";
@@ -92,6 +92,5 @@ public class ValidatorTest extends AbstractTest {
 					+ ", Errors: " + eHandler.numError + ", Fata Errors: "
 					+ eHandler.numFatalError);
 	}
-
 
 }

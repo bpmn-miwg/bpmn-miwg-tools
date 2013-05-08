@@ -8,7 +8,7 @@ public class TerminateEventChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {
-		test.navigateElement("Terminate Event Definition",
+		test.navigateElement(
 				"bpmn:terminateEventDefinition | bpmn:eventDefinitionRef");
 	}
 
