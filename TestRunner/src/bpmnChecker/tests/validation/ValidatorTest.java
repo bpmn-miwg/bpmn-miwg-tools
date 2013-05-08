@@ -1,0 +1,97 @@
+package bpmnChecker.tests.validation;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+import javax.xml.XMLConstants;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+
+import org.w3c.dom.bootstrap.DOMImplementationRegistry;
+import org.w3c.dom.ls.DOMImplementationLS;
+import org.w3c.dom.ls.LSInput;
+import org.w3c.dom.ls.LSResourceResolver;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.DefaultHandler;
+
+import bpmnChecker.tests.AbstractTest;
+
+public class ValidatorTest extends AbstractTest {
+
+	class LocalResourcsResolver implements LSResourceResolver {
+		@Override
+		public LSInput resolveResource(String type, String namespaceURI,
+				String publicId, String systemId, String baseURI) {
+			DOMImplementationRegistry registry;
+			try {
+				registry = DOMImplementationRegistry.newInstance();
+			} catch (Exception e) {
+				return null;
+			}
+			DOMImplementationLS domImplementationLS = (DOMImplementationLS) registry
+					.getDOMImplementation("LS");
+			LSInput ret = domImplementationLS.createLSInput();
+
+			FileInputStream fis = null;
+			try {
+				fis = new FileInputStream("res/schema/" + systemId);
+			} catch (Exception e) {
+				System.err.println(e.toString());
+			}
+
+			ret.setSystemId(systemId);
+			ret.setByteStream(fis);
+			return ret;
+		}
+	}
+
+
+	@Override
+	public boolean isApplicable(String fileName) {
+		return true;
+	}
+	
+	@Override
+	public String getName() {
+		return "BPMN Schema Validator";
+	}
+
+	@Override
+	public void execute(String fileName) throws Throwable {
+		ValidationErrorHandler eHandler = new ValidationErrorHandler();
+
+		SchemaFactory schemaFactory = SchemaFactory
+				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		schemaFactory.setResourceResolver(new LocalResourcsResolver());
+
+		Schema schema = schemaFactory.newSchema(new StreamSource(new File(
+				"res/schema/BPMN20.xsd")));
+
+		SAXParserFactory parserFactory = SAXParserFactory.newInstance();
+		// parserFactory.setValidating(true);
+		parserFactory.setNamespaceAware(true);
+		parserFactory.setSchema(schema);
+
+		SAXParser parser = parserFactory.newSAXParser();
+		XMLReader reader = parser.getXMLReader();
+		reader.setErrorHandler(eHandler);
+
+		try {
+			parser.parse(fileName, (DefaultHandler) null);
+		} catch (Exception e) {
+			issue("Validation failed", "Exception: " + e.getMessage());
+		}
+
+		if (eHandler.valid())
+			ok("Validation succeeded");
+		else
+			issue("Validation failed", "Warnings " + eHandler.numWarning
+					+ ", Errors: " + eHandler.numError + ", Fata Errors: "
+					+ eHandler.numFatalError);
+	}
+
+
+}
