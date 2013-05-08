@@ -1,5 +1,5 @@
-Principle
-=========
+OMG MIWIG Test Runner
+=====================
 
 The engine searches the repository for BPMN files that are named according the standards:
 - export.bpmn
