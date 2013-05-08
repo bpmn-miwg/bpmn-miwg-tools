@@ -85,7 +85,7 @@ The tests confirms the already reported issues.
 
 Signavio
 --------
-Signavio serializes models containing UTF-8 line breaks (&#10;). This irritates the XPath
+Signavio serializes models containing UTF-8 line breaks (```&#10;```). This irritates the XPath
 engine which cannot find the corresponding attributes.
 
 Yaoqiang
