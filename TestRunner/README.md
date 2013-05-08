@@ -17,7 +17,7 @@ The test procedure currently consists of the following steps:
    A stack ensures that the test can traverse down and up the DOM.
    Tests are specified in the following format:
 
-	loadFile(fileName);
+```	loadFile(fileName);
 
 	selectElement("Collaboration", "//bpmn:collaboration");
 
@@ -40,6 +40,7 @@ The test procedure currently consists of the following steps:
 				"bpmn:endEvent[@name='End Event None 1']");
 		pop();
 	}
+```
 
 Constraints
 ===========
