@@ -11,12 +11,12 @@ public class BPMNChecker {
 
 		if (args.length != 2) {
 			System.err.println("OMG MIWG BPMN Checker");
-			System.err.println("Two parameters required: SOURCEFOLDER REPORTFOLDER");
+			System.err
+					.println("Two parameters required: SOURCEFOLDER REPORTFOLDER");
 			return;
 		}
-		
-		List<TestInfo> testFiles = TestInfo
-				.findTestFiles(args[0]);
+
+		List<TestInfo> testFiles = TestInfo.findTestFiles(args[0]);
 
 		TestManager manager = new TestManager();
 		manager.registerTest(new ValidatorTest());
@@ -29,26 +29,18 @@ public class BPMNChecker {
 			System.out.println("EXAMINING FILE " + file);
 			System.out.println();
 
-			if (true) {
-				
-				/*
-				 * tfi.getApplication().equals("MID Innovator-11.5.1.30223")
-					|| tfi.getApplication().equals("Reference")
-				 */
+			TestOutput out = new TestOutput(tfi, args[1]);
+			try {
 
-				TestOutput out = new TestOutput(tfi, args[1]);
-				try {
+				tfi.printTestFileInfo(out);
+				out.println();
 
-					tfi.printTestFileInfo(out);
-					out.println();
+				manager.printApplicableTests(file, out);
+				out.println();
 
-					manager.printApplicableTests(file, out);
-					out.println();
-
-					manager.executeTests(file, out);
-				} finally {
-					out.close();
-				}
+				manager.executeTests(file, out);
+			} finally {
+				out.close();
 			}
 		}
 
