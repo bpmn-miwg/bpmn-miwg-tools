@@ -1,6 +1,6 @@
-package bpmnChecker.tests;
+package bpmnChecker.testBase;
 
-import bpmnChecker.TestOutput;
+import bpmnChecker.base.TestOutput;
 
 public abstract class AbstractTest implements Test {
 

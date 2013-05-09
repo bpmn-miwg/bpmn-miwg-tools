@@ -1,4 +1,4 @@
-package bpmnChecker;
+package bpmnChecker.base;
 
 import java.io.File;
 import java.io.FileFilter;

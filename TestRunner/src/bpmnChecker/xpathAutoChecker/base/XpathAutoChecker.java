@@ -1,8 +1,8 @@
-package bpmnChecker.xpathAutoChecker;
+package bpmnChecker.xpathAutoChecker.base;
 
 import org.w3c.dom.Node;
 
-import bpmnChecker.tests.AbstractXpathTest;
+import bpmnChecker.testBase.AbstractXpathTest;
 
 public interface XpathAutoChecker {
 

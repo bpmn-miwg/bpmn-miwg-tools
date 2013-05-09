@@ -1,4 +1,4 @@
-package bpmnChecker.tests;
+package bpmnChecker.testBase;
 import java.util.Iterator;
 
 import javax.xml.namespace.NamespaceContext;

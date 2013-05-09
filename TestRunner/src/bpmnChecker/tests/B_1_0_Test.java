@@ -2,6 +2,8 @@ package bpmnChecker.tests;
 
 import java.io.File;
 
+import bpmnChecker.testBase.AbstractXpathTest;
+
 public class B_1_0_Test extends AbstractXpathTest {
 
 	@Override

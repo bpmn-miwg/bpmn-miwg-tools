@@ -2,8 +2,8 @@ package bpmnChecker.xpathAutoChecker.Level1Descriptive;
 
 import org.w3c.dom.Node;
 
-import bpmnChecker.tests.AbstractXpathTest;
-import bpmnChecker.xpathAutoChecker.XpathAutoChecker;
+import bpmnChecker.testBase.AbstractXpathTest;
+import bpmnChecker.xpathAutoChecker.base.XpathAutoChecker;
 
 public class L1SignalEventChecker implements XpathAutoChecker {
 

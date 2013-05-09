@@ -3,7 +3,7 @@ package bpmnChecker.tests.validation;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import bpmnChecker.TestOutput;
+import bpmnChecker.base.TestOutput;
 
 public class ValidationErrorHandler extends DefaultHandler {
 	private String errMessage = "";

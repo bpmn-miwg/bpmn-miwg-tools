@@ -1,9 +1,9 @@
-package bpmnChecker;
+package bpmnChecker.base;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import bpmnChecker.tests.Test;
+import bpmnChecker.testBase.Test;
 
 public class TestManager {
 

@@ -2,9 +2,12 @@ package bpmnChecker;
 
 import java.util.List;
 
+import bpmnChecker.base.TestInfo;
+import bpmnChecker.base.TestManager;
+import bpmnChecker.base.TestOutput;
 import bpmnChecker.tests.B_1_0_Test;
 import bpmnChecker.tests.B_2_0_Test;
-import bpmnChecker.tests.validation.ValidatorTest;
+import bpmnChecker.tests.ValidatorTest;
 
 public class Main {
 
