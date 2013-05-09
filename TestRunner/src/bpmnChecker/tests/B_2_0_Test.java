@@ -26,7 +26,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 			selectElement("//bpmn:collaboration");
 
 			navigateElement(
-					"bpmn:messageFlow[@name='Message Flow 1']");
+					"bpmn:messageFlow[@name='Message Flow 1']", "messageFlowL2");
 			navigateElement(
 					"bpmn:messageFlow[@name='Message Flow 2']");
 
@@ -37,6 +37,10 @@ public class B_2_0_Test extends AbstractXpathTest {
 						"bpmn:startEvent[@name='Start Event 1 Timer']",
 						"timerStartEvent");
 				navigateElement("bpmn:task[@name='Abstract Task 1']");
+				
+				navigateElement("bpmn:sendTask[@name='Send Task 2']");
+				
+				
 				navigateElement("bpmn:dataObjectReference[@name='Data Object']");
 				pop();
 			}

@@ -1,10 +1,11 @@
-package bpmnChecker.xpathAutoChecker;
+package bpmnChecker.xpathAutoChecker.Level1Descriptive;
 
 import org.w3c.dom.Node;
 
 import bpmnChecker.tests.AbstractXpathTest;
+import bpmnChecker.xpathAutoChecker.XpathAutoChecker;
 
-public class TerminateEventChecker implements XpathAutoChecker {
+public class L1TerminateEventChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {

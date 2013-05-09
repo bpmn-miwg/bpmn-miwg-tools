@@ -17,10 +17,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import bpmnChecker.TestOutput;
-import bpmnChecker.xpathAutoChecker.MessageEventChecker;
-import bpmnChecker.xpathAutoChecker.TerminateEventChecker;
-import bpmnChecker.xpathAutoChecker.TimerEventChecker;
 import bpmnChecker.xpathAutoChecker.XpathAutoChecker;
+import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1TerminateEventChecker;
+import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1TimerEventChecker;
+import bpmnChecker.xpathAutoChecker.Level2Analytic.L2MessageFlowChecker;
 
 public abstract class AbstractXpathTest extends AbstractTest {
 
@@ -76,9 +76,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	protected void registerAutoChecker() {
-		autoChecker.add(new MessageEventChecker());
-		autoChecker.add(new TimerEventChecker());
-		autoChecker.add(new TerminateEventChecker());
+		autoChecker.add(new L2MessageFlowChecker());
+		autoChecker.add(new L1TimerEventChecker());
+		autoChecker.add(new L1TerminateEventChecker());
+		autoChecker.add(new L2MessageFlowChecker());
 	}
 
 	protected Node pop() {
@@ -154,8 +155,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return navigateElement(expr, null);
 	}
 
-	public Node navigateElement(String expr, String param)
-			throws Throwable {
+	public Node navigateElement(String expr, String param) throws Throwable {
 		if (head() == null) {
 			issue(expr, "Parent failed");
 			return null;
@@ -168,6 +168,51 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		ok(expr);
 		currentNode(n, param);
 		return n;
+	}
+
+	public void navigateElementByParam(String xpathNav, String xpathVal)
+			throws Throwable {
+		navigateElementByParam(xpathNav, xpathVal, null);
+	}
+
+	public void navigateElementByParam(String xpathNav, String xpathVal,
+			String param) throws Throwable {
+		String message = "Navigation: " + xpathNav + "; Value: " + xpathVal;
+		if (head() == null) {
+			issue(message, "Parent failed");
+			return;
+		}
+
+		Node n = findNode(xpathVal);
+		if (n == null) {
+			issue(message, "Value node not found");
+			return;
+		}
+
+		if (!(n instanceof Attr)) {
+			issue(message, "Value node was found yet is not an attribute");
+			return;
+		}
+
+		Attr valAttr = (Attr) n;
+		String value = valAttr.getNodeValue();
+
+		if (value == null) {
+			issue(message, "Value node was found yet has no value");
+			return;
+		}
+
+		String xpath = String.format(xpathNav, value);
+		message += "; Generated: " + xpath;
+
+		Node n2 = findNode(xpath);
+		if (n2 == null) {
+			issue(message, "Node not found");
+			return;
+		}
+
+		ok(xpath);
+		currentNode(n2, param);
 	}
 
 	public void selectElement(String expr) throws Throwable {
