@@ -1,6 +1,7 @@
 package bpmnChecker.tests;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -13,18 +14,20 @@ import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import bpmnChecker.TestOutput;
 import bpmnChecker.xpathAutoChecker.XpathAutoChecker;
+import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1MessageEventChecker;
+import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1SignalEventChecker;
 import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1TerminateEventChecker;
 import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1TimerEventChecker;
 import bpmnChecker.xpathAutoChecker.Level2Analytic.L2MessageFlowChecker;
 
 public abstract class AbstractXpathTest extends AbstractTest {
 
-	@SuppressWarnings("unused")
 	private Node currentNode;
 	private DocumentBuilderFactory factory;
 	private DocumentBuilder builder;
@@ -44,6 +47,23 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		super.init(out);
 	}
 
+	private void normalizeNames() throws XPathExpressionException {
+		Object o = xpath.evaluate("//bpmn:*[@name]", head(),
+				XPathConstants.NODESET);
+		NodeList nl = (NodeList) o;
+		for (int i = 0; i < nl.getLength(); i++) {
+			Node n = nl.item(i);
+			Attr attr = (Attr) n.getAttributes().getNamedItem("name");
+			String s = attr.getValue();
+			s = s.trim();
+			// out.println(">>>  " + s);
+			s = s.replaceAll("&#10;", " ");
+			s = s.replaceAll("  ", " ");
+			// out.println(">>>>>" + s);
+			attr.setTextContent(s);
+		}
+	}
+
 	protected void loadFile(String fileName) throws Throwable {
 		factory = DocumentBuilderFactory.newInstance();
 		factory.setNamespaceAware(true);
@@ -59,26 +79,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		normalizeNames();
 	}
 
-	private void normalizeNames() throws XPathExpressionException {
-		Object o = xpath.evaluate("//bpmn:*[@name]", head(),
-				XPathConstants.NODESET);
-		NodeList nl = (NodeList) o;
-		for (int i = 0; i < nl.getLength(); i++) {
-			Node n = nl.item(i);
-			Attr attr = (Attr) n.getAttributes().getNamedItem("name");
-			String s = attr.getValue();
-			s = s.trim();
-			// out.println(">>>" + s);
-			s = s.replaceAll("&#10;", " ");
-			s = s.replaceAll("  ", " ");
-			attr.setTextContent(s);
-		}
-	}
-
 	protected void registerAutoChecker() {
-		autoChecker.add(new L2MessageFlowChecker());
 		autoChecker.add(new L1TimerEventChecker());
 		autoChecker.add(new L1TerminateEventChecker());
+		autoChecker.add(new L1SignalEventChecker());
+		autoChecker.add(new L1MessageEventChecker());
 		autoChecker.add(new L2MessageFlowChecker());
 	}
 
@@ -122,16 +127,35 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	private String callingMethod() {
 		StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
-		StackTraceElement e = stacktrace[4];// maybe this number needs to be
-											// corrected
-		String methodName = e.getMethodName();
-		return methodName;
+
+		String lastName = null;
+		for (StackTraceElement e : stacktrace) {
+			String methodName = e.getMethodName();
+
+			if (methodName.startsWith("navigate")
+					|| methodName.startsWith("select")
+					|| methodName.startsWith("check")) {
+				lastName = methodName;
+			}
+
+		}
+
+		if (lastName == null)
+			return stacktrace[1].getMethodName();
+		else
+			return lastName;
 	}
 
 	private String getAttribute(String name) {
-		Node namedItem = head().getAttributes().getNamedItem(name);
-		if (namedItem == null)
+		return getAttribute(head(), name);
+	}
+
+	private String getAttribute(Node n, String name) {
+		Node namedItem = n.getAttributes().getNamedItem(name);
+		if (namedItem == null) {
+			issue(name, "Cannot find attribute");
 			return null;
+		}
 		return namedItem.getNodeValue();
 	}
 
@@ -149,6 +173,99 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			Node n = (Node) o;
 			return n;
 		}
+	}
+
+	private List<Node> findNodes(Node base, String expr)
+			throws XPathExpressionException {
+		Object o = xpath.evaluate(expr, base, XPathConstants.NODESET);
+		if (o == null)
+			return null;
+		else {
+			List<Node> l = new LinkedList<Node>();
+			NodeList nl = (NodeList) o;
+
+			for (int i = 0; i < nl.getLength(); i++)
+				l.add(nl.item(i));
+
+			return l;
+		}
+	}
+
+	@Override
+	protected void printOK(String message) {
+		out.println(generateSpaces(depth() * 2) + "> Assertion OK   : "
+				+ callingMethod() + ": " + message);
+	}
+
+	@Override
+	protected void printIssue(String message, String parameter) {
+		if (parameter == null)
+			out.println(generateSpaces(depth() * 2) + "> Assertion ISSUE: "
+					+ callingMethod() + ": " + message);
+		else
+			out.println(generateSpaces(depth() * 2) + "> Assertion ISSUE: "
+					+ callingMethod() + ": " + parameter + ": " + message);
+	}
+
+	public void navigateGatewaySequenceFlow(String sequenceFlowName)
+			throws Throwable {
+		navigateReference("bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']",
+				".",
+				String.format("self::node()[@name='%s']", sequenceFlowName));
+	}
+
+	public void navigateReference(String referenceXpath, String targetXpath,
+			String targetXpathParameter, String targetCheckXpath)
+			throws Throwable {
+
+		if (head() == null) {
+			issue("", "Parent failed");
+			return;
+		}
+
+		List<Node> nodes = findNodes(head(), referenceXpath);
+		if (nodes.size() == 0) {
+			issue(referenceXpath, "No reference nodes found");
+			return;
+		}
+
+		Node foundNode = null;
+		for (Node n : nodes) {
+			Node evaluatedTargetXpathParameterNode = findNode(n,
+					targetXpathParameter);
+			if (evaluatedTargetXpathParameterNode == null) {
+				issue(targetXpathParameter,
+						"Target parameter cannot be evaluated");
+				return;
+			}
+			String evaluatedTargetXpathParameter = evaluatedTargetXpathParameterNode
+					.getTextContent();
+
+			String evaluatedXpath = String.format(targetXpath,
+					evaluatedTargetXpathParameter);
+			Node fn = findNode(n, evaluatedXpath);
+
+			if (fn == null) {
+				issue(evaluatedXpath, "Target node not found");
+				return;
+			}
+
+			if (findNode(fn, targetCheckXpath) != null)
+				foundNode = fn;
+		}
+
+		if (foundNode != null) {
+			String message = String
+					.format("Reference: %s; Target: %s; Target parameter %s; Target Check: %s",
+							referenceXpath, targetXpath, targetXpathParameter,
+							targetCheckXpath);
+			ok(message);
+			currentNode(foundNode, message);
+		} else {
+			issue(targetCheckXpath, "Target check failed");
+			return;
+		}
+
 	}
 
 	public Node navigateElement(String expr) throws Throwable {
@@ -189,13 +306,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 
-		if (!(n instanceof Attr)) {
-			issue(message, "Value node was found yet is not an attribute");
-			return;
-		}
-
-		Attr valAttr = (Attr) n;
-		String value = valAttr.getNodeValue();
+		String value;
+		if (n instanceof Element)
+			value = n.getTextContent();
+		else
+			value = n.getNodeValue();
 
 		if (value == null) {
 			issue(message, "Value node was found yet has no value");
@@ -212,7 +327,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 
 		ok(xpath);
-		currentNode(n2, param);
+		currentNode(n2, message);
 	}
 
 	public void selectElement(String expr) throws Throwable {
@@ -287,16 +402,39 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		push(n);
 	}
 
-	@Override
-	protected void printOK(String assertion) {
-		out.println(generateSpaces(depth() * 2) + "> Assertion OK   : "
-				+ callingMethod() + ": " + assertion);
-	}
+	public void checkDefaultSequenceFlow() throws Throwable {
+		if (currentNode == null) {
+			issue("", "No current node");
+			return;
+		}
 
-	@Override
-	protected void printIssue(String assertion, String message) {
-		out.println(generateSpaces(depth() * 2) + "> Assertion ISSUE: "
-				+ callingMethod() + ": " + assertion + ": " + message);
-	}
+		if (!currentNode.getLocalName().equals("sequenceFlow")) {
+			issue(currentNode.getLocalName(),
+					"Current node is not a sequenceFlow");
+			return;
+		}
 
+		String currentId = getAttribute(currentNode, "id");
+
+		String sourceRef = getAttribute(currentNode, "sourceRef");
+
+		String xpath = String.format("//bpmn:*[@id='%s']", sourceRef);
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			issue(xpath, "Cannot find source gateway");
+			return;
+		}
+
+		String value = getAttribute(n, "default");
+
+		if (!currentId.equals(value)) {
+			issue(null, "Not a default sequence flow");
+			return;
+		}
+
+		ok("Default Sequence Flow");
+	}
+	
+	
 }

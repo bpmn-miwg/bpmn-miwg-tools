@@ -15,14 +15,14 @@ public abstract class AbstractTest implements Test {
 
 	protected void issue(String assertion, String message) {
 		numIssues++;
-		printIssue(assertion, message);
+		printIssue(message, assertion);
 	}
 
 	protected void printOK(String assertion) {
 		out.println("  > Assertion " + assertion + ": OK");
 	}
 
-	protected void printIssue(String assertion, String message) {
+	protected void printIssue(String message, String assertion) {
 		out.println("  > Assertion " + assertion + ": ISSUE: " + message);
 	}
 
