@@ -1,0 +1,73 @@
+Root       : M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set
+Application: MID Innovator 11.5.1.30223
+File       : B.1.0-export.bpmn
+
+Applicable Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\MID Innovator 11.5.1.30223\B.1.0-export.bpmn:
+ - BPMN Schema Validator
+ - B.1.0
+
+Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\MID Innovator 11.5.1.30223\B.1.0-export.bpmn:
+> TEST BPMN Schema Validator
+  > Assertion Validation failed: ISSUE: Exception: null
+  > Assertion Validation failed: ISSUE: Warnings 0, Errors: 1, Fata Errors: 0
+
+  TEST BPMN Schema Validator results:
+  * OK    : 0
+  * ISSUES: 2
+
+> TEST B.1.0
+  > Assertion OK   : selectElement: //bpmn:collaboration
+    > Assertion ISSUE: navigateElement: bpmn:messageFlow[@name='Message Flow 1']: No node found
+    > Assertion ISSUE: navigateElement: bpmn:messageFlow[@name='Message Flow 2']: No node found
+    > Assertion OK   : selectProcess: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+      > Assertion OK   : navigateElement: bpmn:startEvent[@name='Start Event Timer']
+      > Auto Checker: L1TimerEventChecker
+        > Assertion OK   : navigateElement: bpmn:timerEventDefinition | bpmn:eventDefinitionRef
+      > Pop
+      > Assertion OK   : navigateElement: bpmn:userTask[@name='User Task 2']
+      > Assertion OK   : navigateElement: bpmn:serviceTask[@name='Service Task 3']
+      > Assertion OK   : navigateElement: bpmn:endEvent[@name='End Event None 1']
+    > Pop
+    > Assertion OK   : selectProcess: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]
+      > Assertion OK   : navigateElement: .//bpmn:lane[@name='Lane 1']
+      > Assertion OK   : navigateElement: .//bpmn:lane[@name='Lane 2']
+      > Assertion OK   : navigateElement: bpmn:startEvent[@name='Start Event Message']
+      > Assertion OK   : navigateElement: bpmn:parallelGateway[@name='Parallel Gateway Divergence']
+      > Assertion OK   : navigateElement: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 1']
+      > Assertion OK   : navigateElement: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 2']
+      > Assertion OK   : navigateElement: bpmn:callActivity[@name='Call Activity Collapsed']
+      > Assertion ISSUE: selectElement: bpmn:callActivity[@name='Call Activity - Expanded']: No node found
+        > Assertion ISSUE: selectProcessOfCallActivity: selectProcessofCallActivity: Parent failed
+          > Assertion ISSUE: navigateElement: bpmn:startEvent[@name='Start Event None 1']: Parent failed
+          > Assertion ISSUE: navigateElement: bpmn:task[@name='Abstract Task 4']: Parent failed
+          > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event None 2']: Parent failed
+        > Pop
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 1']: No node found
+      > Assertion OK   : navigateElement: bpmn:endEvent[@name='End Event Message']
+      > Assertion ISSUE: navigateElement: bpmn:textAnnotation/bpmn:text[contains(text(), 'Text Annotation')]: No node found
+      > Assertion ISSUE: navigateElement: bpmn:subProcess[@name='Collapsed Sub-Process']: No node found
+      > Assertion OK   : navigateElement: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2']
+      > Assertion OK   : navigateElement: bpmn:endEvent[@name='End Event Terminate']
+      > Auto Checker: L1TerminateEventChecker
+        > Assertion OK   : navigateElement: bpmn:terminateEventDefinition | bpmn:eventDefinitionRef
+      > Pop
+      > Assertion OK   : navigateElement: bpmn:serviceTask[@name='Service Task 7']
+      > Assertion OK   : navigateElement: bpmn:dataObjectReference[@name='Data Object']
+      > Assertion OK   : navigateElement: bpmn:dataStoreReference[@name='Data Store Reference']
+      > Assertion ISSUE: navigateElement: //bpmn:categoryValue[@value='Group']: No node found
+      > Assertion OK   : selectElement: bpmn:subProcess[@name='Sub Process - Expanded']
+        > Assertion OK   : navigateElement: bpmn:startEvent[@name='Start Event None 2']
+        > Assertion OK   : navigateElement: bpmn:task[@name='Abstract Task 6']
+        > Assertion OK   : navigateElement: bpmn:endEvent[@name='End Event None 3']
+      > Pop
+    > Pop
+  > Pop
+
+  TEST B.1.0 results:
+  * OK    : 26
+  * ISSUES: 11
+
+>> TEST RESULTS TOTAL:
+  * OK    : 26
+  * ISSUES: 13

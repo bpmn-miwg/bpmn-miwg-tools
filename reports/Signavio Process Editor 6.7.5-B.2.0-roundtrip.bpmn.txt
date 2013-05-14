@@ -1,0 +1,56 @@
+Root       : M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set
+Application: Signavio Process Editor 6.7.5
+File       : B.2.0-roundtrip.bpmn
+
+Applicable Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\Signavio Process Editor 6.7.5\B.2.0-roundtrip.bpmn:
+ - BPMN Schema Validator
+ - B.2.0
+
+Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\Signavio Process Editor 6.7.5\B.2.0-roundtrip.bpmn:
+> TEST BPMN Schema Validator
+  > Assertion Validation failed: ISSUE: Exception: null
+  > Assertion Validation failed: ISSUE: Warnings 0, Errors: 1, Fata Errors: 0
+
+  TEST BPMN Schema Validator results:
+  * OK    : 0
+  * ISSUES: 2
+
+> TEST B.2.0
+  > Assertion OK   : selectElement: //bpmn:collaboration
+    > Assertion OK   : navigateElement: bpmn:messageFlow[@name='Message Flow 1']
+    > Auto Checker: L2MessageFlowChecker
+      > Assertion OK   : navigateElement: //bpmn:message[@id='Message_1362595272195']
+    > Pop
+    > Assertion OK   : navigateElement: bpmn:messageFlow[@name='Message Flow 2']
+    > Assertion ISSUE: selectProcess: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]: Process node not found
+      > Assertion ISSUE: navigateElement: bpmn:startEvent[@name='Start Event 1 Timer']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:task[@name='Abstract Task 1']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:sendTask[@name='Send Task 2']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:userTask[@name='User Task 3']: Parent failed
+        > Assertion ISSUE: navigateElementByParam: Navigation: //bpmn:dataObjectReference[@id='%s']; Value: bpmn:dataInputAssociation/bpmn:sourceRef: Parent failed
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:dataObjectReference[@name='Data Object']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:inclusiveGateway[@name='Inclusive Gateway 1']: Parent failed
+        > Assertion ISSUE: navigateGatewaySequenceFlow: : Parent failed
+        > Assertion ISSUE: navigateGatewaySequenceFlow: : Parent failed
+        > Assertion ISSUE: checkDefaultSequenceFlow: messageFlow: Current node is not a sequenceFlow
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:serviceTask[@name='Service Task 4']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:task[@name='Task 5']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Conditional']: Parent failed
+        > Assertion ISSUE: navigateElementByParam: Navigation: ../bpmn:task[@name='Task 5' and @id='%s']; Value: @attachedToRef: Parent failed
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:parallelGateway[@name='Parallel Gateway 2']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event 1 Message']: Parent failed
+    > Pop
+  > Pop
+
+  TEST B.2.0 results:
+  * OK    : 4
+  * ISSUES: 19
+
+>> TEST RESULTS TOTAL:
+  * OK    : 4
+  * ISSUES: 21

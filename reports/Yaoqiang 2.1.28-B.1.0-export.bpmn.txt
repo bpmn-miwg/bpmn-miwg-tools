@@ -1,0 +1,66 @@
+Root       : M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set
+Application: Yaoqiang 2.1.28
+File       : B.1.0-export.bpmn
+
+Applicable Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\Yaoqiang 2.1.28\B.1.0-export.bpmn:
+ - BPMN Schema Validator
+ - B.1.0
+
+Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\Yaoqiang 2.1.28\B.1.0-export.bpmn:
+> TEST BPMN Schema Validator
+  > Assertion Validation succeeded: OK
+
+  TEST BPMN Schema Validator results:
+  * OK    : 1
+  * ISSUES: 0
+
+> TEST B.1.0
+  > Assertion OK   : selectElement: //bpmn:collaboration
+    > Assertion OK   : navigateElement: bpmn:messageFlow[@name='Message Flow 1']
+    > Assertion OK   : navigateElement: bpmn:messageFlow[@name='Message Flow 2']
+    > Assertion OK   : selectProcess: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+      > Assertion ISSUE: navigateElement: bpmn:startEvent[@name='Start Event Timer']: No node found
+      > Assertion ISSUE: navigateElement: bpmn:userTask[@name='User Task 2']: No node found
+      > Assertion ISSUE: navigateElement: bpmn:serviceTask[@name='Service Task 3']: No node found
+      > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event None 1']: No node found
+    > Pop
+    > Assertion ISSUE: selectProcess: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]: Process node not found
+      > Assertion ISSUE: navigateElement: .//bpmn:lane[@name='Lane 1']: Parent failed
+      > Assertion ISSUE: navigateElement: .//bpmn:lane[@name='Lane 2']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:startEvent[@name='Start Event Message']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:parallelGateway[@name='Parallel Gateway Divergence']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 1']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 2']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:callActivity[@name='Call Activity Collapsed']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:callActivity[@name='Call Activity - Expanded']: Parent failed
+        > Assertion ISSUE: selectProcessOfCallActivity: selectProcessofCallActivity: Parent failed
+          > Assertion ISSUE: navigateElement: bpmn:startEvent[@name='Start Event None 1']: Parent failed
+          > Assertion ISSUE: navigateElement: bpmn:task[@name='Abstract Task 4']: Parent failed
+          > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event None 2']: Parent failed
+        > Pop
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 1']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event Message']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:textAnnotation/bpmn:text[contains(text(), 'Text Annotation')]: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:subProcess[@name='Collapsed Sub-Process']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event Terminate']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:serviceTask[@name='Service Task 7']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:dataObjectReference[@name='Data Object']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:dataStoreReference[@name='Data Store Reference']: Parent failed
+      > Assertion ISSUE: navigateElement: //bpmn:categoryValue[@value='Group']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:subProcess[@name='Sub Process - Expanded']: Parent failed
+        > Assertion ISSUE: navigateElement: bpmn:startEvent[@name='Start Event None 2']: Parent failed
+        > Assertion ISSUE: navigateElement: bpmn:task[@name='Abstract Task 6']: Parent failed
+        > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event None 3']: Parent failed
+      > Pop
+    > Pop
+  > Pop
+
+  TEST B.1.0 results:
+  * OK    : 4
+  * ISSUES: 31
+
+>> TEST RESULTS TOTAL:
+  * OK    : 5
+  * ISSUES: 31
