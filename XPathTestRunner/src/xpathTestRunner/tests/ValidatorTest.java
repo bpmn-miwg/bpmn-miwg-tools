@@ -20,7 +20,6 @@ import org.xml.sax.helpers.DefaultHandler;
 import xpathTestRunner.testBase.AbstractTest;
 import xpathTestRunner.tests.validation.ValidationErrorHandler;
 
-
 public class ValidatorTest extends AbstractTest {
 
 	class LocalResourcsResolver implements LSResourceResolver {
@@ -89,13 +88,15 @@ public class ValidatorTest extends AbstractTest {
 			e.printStackTrace(System.out);
 		}
 
-		if (eHandler.valid())
+		if (eHandler.valid()) {
 			ok("Validation succeeded");
-		else
-			addIssues(eHandler.numError - 1); // Make sure the following issue won't be counted.
+		} else {
+			addIssues(eHandler.numError - 1); // Make sure the following issue
+												// won't be counted.
 			issue("Validation failed", "Warnings " + eHandler.numWarning
-				+ ", Errors: " + eHandler.numError + ", Fatal Errors: "
-				+ eHandler.numFatalError);
+					+ ", Errors: " + eHandler.numError + ", Fatal Errors: "
+					+ eHandler.numFatalError);
+		}
 	}
 
 }
