@@ -43,4 +43,8 @@ public abstract class AbstractTest implements Test {
 		this.out = out;
 	}
 
+	protected void addIssues(int number) {
+		numIssues += number;
+	}
+
 }
