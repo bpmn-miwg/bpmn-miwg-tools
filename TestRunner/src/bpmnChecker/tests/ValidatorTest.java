@@ -63,6 +63,7 @@ public class ValidatorTest extends AbstractTest {
 	@Override
 	public void execute(String fileName) throws Throwable {
 		ValidationErrorHandler eHandler = new ValidationErrorHandler();
+		eHandler.setTestOutput(out);
 
 		SchemaFactory schemaFactory = SchemaFactory
 				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
@@ -84,13 +85,14 @@ public class ValidatorTest extends AbstractTest {
 			parser.parse(fileName, (DefaultHandler) null);
 		} catch (Exception e) {
 			issue("Validation failed", "Exception: " + e.getMessage());
+			e.printStackTrace(System.out);
 		}
 
 		if (eHandler.valid())
 			ok("Validation succeeded");
 		else
 			issue("Validation failed", "Warnings " + eHandler.numWarning
-					+ ", Errors: " + eHandler.numError + ", Fata Errors: "
+					+ ", Errors: " + eHandler.numError + ", Fatal Errors: "
 					+ eHandler.numFatalError);
 	}
 
