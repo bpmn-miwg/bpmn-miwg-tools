@@ -1,4 +1,4 @@
-package bpmnChecker.testBase;
+package xpathTestRunner.testBase;
 import java.util.Iterator;
 
 import javax.xml.namespace.NamespaceContext;

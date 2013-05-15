@@ -1,13 +1,14 @@
-package bpmnChecker;
+package xpathTestRunner;
 
 import java.util.List;
 
-import bpmnChecker.base.TestInfo;
-import bpmnChecker.base.TestManager;
-import bpmnChecker.base.TestOutput;
-import bpmnChecker.tests.B_1_0_Test;
-import bpmnChecker.tests.B_2_0_Test;
-import bpmnChecker.tests.ValidatorTest;
+import xpathTestRunner.base.TestInfo;
+import xpathTestRunner.base.TestManager;
+import xpathTestRunner.base.TestOutput;
+import xpathTestRunner.tests.B_1_0_Test;
+import xpathTestRunner.tests.B_2_0_Test;
+import xpathTestRunner.tests.ValidatorTest;
+
 
 public class Main {
 

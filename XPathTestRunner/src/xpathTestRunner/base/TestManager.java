@@ -1,9 +1,10 @@
-package bpmnChecker.base;
+package xpathTestRunner.base;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import bpmnChecker.testBase.Test;
+import xpathTestRunner.testBase.Test;
+
 
 public class TestManager {
 

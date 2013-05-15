@@ -1,6 +1,6 @@
-package bpmnChecker.testBase;
+package xpathTestRunner.testBase;
 
-import bpmnChecker.base.TestOutput;
+import xpathTestRunner.base.TestOutput;
 
 public abstract class AbstractTest implements Test {
 

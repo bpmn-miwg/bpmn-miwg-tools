@@ -1,4 +1,4 @@
-package bpmnChecker.tests;
+package xpathTestRunner.tests;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,8 +17,9 @@ import org.w3c.dom.ls.LSResourceResolver;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
-import bpmnChecker.testBase.AbstractTest;
-import bpmnChecker.tests.validation.ValidationErrorHandler;
+import xpathTestRunner.testBase.AbstractTest;
+import xpathTestRunner.tests.validation.ValidationErrorHandler;
+
 
 public class ValidatorTest extends AbstractTest {
 

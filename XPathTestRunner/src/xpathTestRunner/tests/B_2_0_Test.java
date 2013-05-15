@@ -1,8 +1,9 @@
-package bpmnChecker.tests;
+package xpathTestRunner.tests;
 
 import java.io.File;
 
-import bpmnChecker.testBase.AbstractXpathTest;
+import xpathTestRunner.testBase.AbstractXpathTest;
+
 
 public class B_2_0_Test extends AbstractXpathTest {
 

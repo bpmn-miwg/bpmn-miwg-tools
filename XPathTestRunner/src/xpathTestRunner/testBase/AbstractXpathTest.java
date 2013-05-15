@@ -1,4 +1,4 @@
-package bpmnChecker.testBase;
+package xpathTestRunner.testBase;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -18,13 +18,14 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import bpmnChecker.base.TestOutput;
-import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1MessageEventChecker;
-import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1SignalEventChecker;
-import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1TerminateEventChecker;
-import bpmnChecker.xpathAutoChecker.Level1Descriptive.L1TimerEventChecker;
-import bpmnChecker.xpathAutoChecker.Level2Analytic.L2MessageFlowChecker;
-import bpmnChecker.xpathAutoChecker.base.XpathAutoChecker;
+import xpathTestRunner.base.TestOutput;
+import xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1MessageEventChecker;
+import xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1SignalEventChecker;
+import xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TerminateEventChecker;
+import xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TimerEventChecker;
+import xpathTestRunner.xpathAutoChecker.Level2Analytic.L2MessageFlowChecker;
+import xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
+
 
 public abstract class AbstractXpathTest extends AbstractTest {
 

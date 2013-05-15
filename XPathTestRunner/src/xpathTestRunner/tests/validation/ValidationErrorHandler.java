@@ -1,9 +1,10 @@
-package bpmnChecker.tests.validation;
+package xpathTestRunner.tests.validation;
 
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import bpmnChecker.base.TestOutput;
+import xpathTestRunner.base.TestOutput;
+
 
 public class ValidationErrorHandler extends DefaultHandler {
 	private String errMessage = "";

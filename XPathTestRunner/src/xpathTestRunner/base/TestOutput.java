@@ -1,4 +1,4 @@
-package bpmnChecker.base;
+package xpathTestRunner.base;
 
 import java.io.*;
 
