@@ -3,10 +3,23 @@ Objective
 
 This test tool runs the following tests on the BPMN files:
 
-(1) Validate the BPMN XSD Schema
-(2) Test selected aspects of the B.1 test using Xpath expressions
-(3) Test selected aspects of the B.2 tests using Xpath expressions
+(1) Validate the BPMN XSD Schema.
+(2) Test selected aspects of the B.1 test using XPath expressions.
+(3) Test selected aspects of the B.2 tests using XPath expressions.
 
+Running
+=======
+
+The application expects two parameters:
+
+(1) A folder containing the rest results
+   (e.g., ```B - Validate that tool covers conformance class set``` in the test case repository).
+ 
+(2) A folder where the results are stored. Existing files will be overwritten.
+
+An optional third parameter limits which applications can be run. An application is designated
+by the folder containing the BPMN files (e.g., ```MID Innovator 11.5.1.30223```).
+This is particularly useful when debugging the program.
 
 
 Constraints
@@ -25,10 +38,10 @@ In particular, the names have to be correct on a byte-to-byte base.
 
 E.g., the engine won't find the following tag:
 
-<messageFlow name="MessageFlow 1" ... 
+```<messageFlow name="MessageFlow 1" ... ```
 
 The correct tag is:
-<messageFlow name="Message Flow 1" ... 
+```<messageFlow name="Message Flow 1" ... ```
 
 There are only the following exceptions:
 - During a normalization of the DOM, trailing and leading white spaces are removed.
@@ -74,8 +87,8 @@ The test procedure currently consists of the following steps:
 		navigateElement("End Event None 1",
 				"bpmn:endEvent[@name='End Event None 1']");
 		pop();
-	}
-```
+	}```
+
 
 Results
 =======
