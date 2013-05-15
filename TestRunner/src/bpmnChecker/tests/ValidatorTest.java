@@ -91,8 +91,7 @@ public class ValidatorTest extends AbstractTest {
 		if (eHandler.valid())
 			ok("Validation succeeded");
 		else
-			addIssues(eHandler.numError);
-			addIssues(-1); // Make sure the following issue won't be counted.
+			addIssues(eHandler.numError - 1); // Make sure the following issue won't be counted.
 			issue("Validation failed", "Warnings " + eHandler.numWarning
 				+ ", Errors: " + eHandler.numError + ", Fatal Errors: "
 				+ eHandler.numFatalError);

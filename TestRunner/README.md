@@ -1,9 +1,44 @@
-OMG MIWIG Test Runner
-=====================
+Objective
+=========
 
-The engine searches the repository for BPMN files that are named according the standards:
-- export.bpmn
-- roundtrip.bpmn
+This test tool runs the following tests on the BPMN files:
+
+(1) Validate the BPMN XSD Schema
+(2) Test selected aspects of the B.1 test using Xpath expressions
+(3) Test selected aspects of the B.2 tests using Xpath expressions
+
+
+
+Constraints
+===========
+
+Completeness
+------------
+Only parts of the model are tested. Therefore, BPMN files which are successfully tested,
+may still contain semantic errors. Syntactic errors are unlikely, as the XSD validation
+is quite strict.
+
+Attributes
+----------
+The test engine is quite strict and expects the tests in a correct format.
+In particular, the names have to be correct on a byte-to-byte base.
+
+E.g., the engine won't find the following tag:
+
+<messageFlow name="MessageFlow 1" ... 
+
+The correct tag is:
+<messageFlow name="Message Flow 1" ... 
+
+There are only the following exceptions:
+- During a normalization of the DOM, trailing and leading white spaces are removed.
+- Double white spaces are reduced to a single whitespace. 
+
+
+Technical details
+=================
+
+The engine searches the repository for BPMN files that are named according the naming conventions
 
 For each application and BPM file, the available tests (currently only B.1.0) are executed and
 a log file is created. The log file is stored in a separate directory in order to avoid merge
@@ -41,32 +76,6 @@ The test procedure currently consists of the following steps:
 		pop();
 	}
 ```
-
-Constraints
-===========
-
-Completeness
-------------
-Only parts of the model are tested. Therefore, BPMN files which are successfully tested,
-may still contain semantic errors. Syntactic errors are unlikely, as the XSD validation
-is quite strict.
-
-Attributes
-----------
-The test engine is quite strict and expects the tests in a correct format.
-In particular, the names have to be correct on a byte-to-byte base.
-
-E.g., the engine won't find the following tag:
-
-<messageFlow name="MessageFlow 1" ... 
-
-The correct tag is:
-<messageFlow name="Message Flow 1" ... 
-
-There are only the following exceptions:
-- During a normalization of the DOM, trailing and leading white spaces are removed.
-- Double white spaces are reduced to a single whitespace. 
-
 
 Results
 =======
