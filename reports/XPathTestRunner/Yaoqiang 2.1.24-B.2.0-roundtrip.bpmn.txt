@@ -8,8 +8,11 @@ Applicable Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that to
 
 Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\Yaoqiang 2.1.24\B.2.0-roundtrip.bpmn:
 > TEST BPMN Schema Validator
-  > Assertion Validation failed: ISSUE: Exception: null
-  > Assertion Validation failed: ISSUE: Warnings 0, Errors: 1, Fata Errors: 0
+Error Line 223: cvc-id.2: There are multiple occurrences of ID value '_ba16239e-181e-4b9f-bc5b-0bb2ee973450'.
+
+Error Line 223: cvc-attribute.3: The value '_ba16239e-181e-4b9f-bc5b-0bb2ee973450' of attribute 'id' on element 'semantic:subProcess' is not valid with respect to its type, 'ID'.
+
+  > Assertion Validation failed: ISSUE: Warnings 0, Errors: 2, Fatal Errors: 0
 
   TEST BPMN Schema Validator results:
   * OK    : 0
@@ -43,7 +46,9 @@ Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool 
       > Auto Checker: L1SignalEventChecker
         > Assertion OK   : navigateElement: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef
       > Pop
-      > Assertion OK   : navigateElement: bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']
+      > Assertion OK   : selectElement: bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']
+        > Assertion OK   : navigateElement: bpmn:multiInstanceLoopCharacteristics[@isSequential='false']
+      > Pop
       > Assertion OK   : navigateElement: bpmn:task[@name='Task 5']
       > Assertion OK   : selectElement: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Conditional']
         > Assertion OK   : navigateElementByParam: ../bpmn:task[@name='Task 5' and @id='_2a08c361-be51-437e-a86d-c62798c14e83']
@@ -53,13 +58,23 @@ Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool 
       > Auto Checker: L1MessageEventChecker
         > Assertion OK   : navigateElement: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
       > Pop
+      > Assertion OK   : selectElement: //bpmn:globalUserTask[@name='Call Activity calling a Global User Task']
+        > Assertion OK   : navigateElementByParam: //bpmn:callActivity[@calledElement='_1362595271489' and @name='Call Activity calling a Global User Task']
+      > Pop
+      > Assertion OK   : selectElement: bpmn:subProcess[@name='Expanded Sub-Process 1']
+        > Assertion OK   : navigateElement: bpmn:startEvent[@name='Start Event 2']
+        > Assertion OK   : selectElement: bpmn:userTask[@name='User Task 7 Standard Loop']
+          > Assertion OK   : navigateElement: bpmn:standardLoopCharacteristics
+        > Pop
+        > Assertion OK   : navigateElement: bpmn:endEvent[@name='End Event 2']
+      > Pop
     > Pop
   > Pop
 
   TEST B.2.0 results:
-  * OK    : 26
+  * OK    : 34
   * ISSUES: 0
 
 >> TEST RESULTS TOTAL:
-  * OK    : 26
+  * OK    : 34
   * ISSUES: 2

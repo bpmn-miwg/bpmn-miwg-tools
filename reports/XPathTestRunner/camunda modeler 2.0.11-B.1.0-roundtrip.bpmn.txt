@@ -8,8 +8,11 @@ Applicable Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that to
 
 Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\camunda modeler 2.0.11\B.1.0-roundtrip.bpmn:
 > TEST BPMN Schema Validator
-  > Assertion Validation failed: ISSUE: Exception: null
-  > Assertion Validation failed: ISSUE: Warnings 0, Errors: 1, Fata Errors: 0
+Error Line 95: cvc-id.2: There are multiple occurrences of ID value '_ba16239e-181e-4b9f-bc5b-0bb2ee973450'.
+
+Error Line 95: cvc-attribute.3: The value '_ba16239e-181e-4b9f-bc5b-0bb2ee973450' of attribute 'id' on element 'semantic:callActivity' is not valid with respect to its type, 'ID'.
+
+  > Assertion Validation failed: ISSUE: Warnings 0, Errors: 2, Fatal Errors: 0
 
   TEST BPMN Schema Validator results:
   * OK    : 0

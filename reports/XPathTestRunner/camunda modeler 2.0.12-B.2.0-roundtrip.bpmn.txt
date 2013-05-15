@@ -42,7 +42,9 @@ Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool 
       > Auto Checker: L1SignalEventChecker
         > Assertion OK   : navigateElement: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef
       > Pop
-      > Assertion OK   : navigateElement: bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']
+      > Assertion OK   : selectElement: bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']
+        > Assertion ISSUE: navigateElement: bpmn:multiInstanceLoopCharacteristics[@isSequential='false']: No node found
+      > Pop
       > Assertion OK   : navigateElement: bpmn:task[@name='Task 5']
       > Assertion OK   : selectElement: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Conditional']
         > Assertion OK   : navigateElementByParam: ../bpmn:task[@name='Task 5' and @id='_2a08c361-be51-437e-a86d-c62798c14e83']
@@ -52,13 +54,23 @@ Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool 
       > Auto Checker: L1MessageEventChecker
         > Assertion OK   : navigateElement: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
       > Pop
+      > Assertion OK   : selectElement: //bpmn:globalUserTask[@name='Call Activity calling a Global User Task']
+        > Assertion OK   : navigateElementByParam: //bpmn:callActivity[@calledElement='_1367417559734' and @name='Call Activity calling a Global User Task']
+      > Pop
+      > Assertion OK   : selectElement: bpmn:subProcess[@name='Expanded Sub-Process 1']
+        > Assertion OK   : navigateElement: bpmn:startEvent[@name='Start Event 2']
+        > Assertion OK   : selectElement: bpmn:userTask[@name='User Task 7 Standard Loop']
+          > Assertion OK   : navigateElement: bpmn:standardLoopCharacteristics
+        > Pop
+        > Assertion OK   : navigateElement: bpmn:endEvent[@name='End Event 2']
+      > Pop
     > Pop
   > Pop
 
   TEST B.2.0 results:
-  * OK    : 26
-  * ISSUES: 0
+  * OK    : 33
+  * ISSUES: 1
 
 >> TEST RESULTS TOTAL:
-  * OK    : 27
-  * ISSUES: 0
+  * OK    : 34
+  * ISSUES: 1

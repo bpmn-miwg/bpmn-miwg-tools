@@ -8,12 +8,27 @@ Applicable Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that to
 
 Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool covers conformance class set\Signavio Process Editor 6.7.5\B.1.0-roundtrip.bpmn:
 > TEST BPMN Schema Validator
-  > Assertion Validation failed: ISSUE: Exception: null
-  > Assertion Validation failed: ISSUE: Warnings 0, Errors: 1, Fata Errors: 0
+Error Line 97: cvc-id.2: There are multiple occurrences of ID value '_73afd30d-7d54-4897-9350-1f7d301ef1b2'.
+
+Error Line 97: cvc-attribute.3: The value '_73afd30d-7d54-4897-9350-1f7d301ef1b2' of attribute 'id' on element 'dataInputAssociation' is not valid with respect to its type, 'ID'.
+
+Error Line 97: cvc-complex-type.3.2.2: Attribute 'name' is not allowed to appear in element 'dataInputAssociation'.
+
+Error Line 105: cvc-id.2: There are multiple occurrences of ID value '_fa10ebaf-7088-4def-8cc3-d959b8876b06'.
+
+Error Line 105: cvc-attribute.3: The value '_fa10ebaf-7088-4def-8cc3-d959b8876b06' of attribute 'id' on element 'dataOutputAssociation' is not valid with respect to its type, 'ID'.
+
+Error Line 105: cvc-complex-type.3.2.2: Attribute 'name' is not allowed to appear in element 'dataOutputAssociation'.
+
+Error Line 172: cvc-id.2: There are multiple occurrences of ID value '_ba16239e-181e-4b9f-bc5b-0bb2ee973450'.
+
+Error Line 172: cvc-attribute.3: The value '_ba16239e-181e-4b9f-bc5b-0bb2ee973450' of attribute 'id' on element 'process' is not valid with respect to its type, 'ID'.
+
+  > Assertion Validation failed: ISSUE: Warnings 0, Errors: 8, Fatal Errors: 0
 
   TEST BPMN Schema Validator results:
   * OK    : 0
-  * ISSUES: 2
+  * ISSUES: 8
 
 > TEST B.1.0
   > Assertion OK   : selectElement: //bpmn:collaboration
@@ -64,4 +79,4 @@ Running Tests for M:\mk-home\GitHub\bpmn-miwg-test-suite\B - Validate that tool 
 
 >> TEST RESULTS TOTAL:
   * OK    : 3
-  * ISSUES: 34
+  * ISSUES: 40
