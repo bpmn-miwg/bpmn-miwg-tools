@@ -23,7 +23,7 @@
  * 
  */
 
-package com.signavio.bpmn2_0.comparison;
+package org.omg.bpmn.miwg.bpmn2_0.comparison;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,12 +36,12 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.ElementQualifier;
+import org.omg.bpmn.miwg.util.xml.diff.XmlDiffConfiguration;
+import org.omg.bpmn.miwg.util.xml.diff.XmlDiffUtil;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import com.signavio.util.xml.diff.XmlDiffConfiguration;
-import com.signavio.util.xml.diff.XmlDiffUtil;
 
 /**
  * @author Sven

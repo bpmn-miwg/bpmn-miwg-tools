@@ -23,15 +23,16 @@
  * 
  */
 
-package com.signavio.util.xml.diff;
+package org.omg.bpmn.miwg.util.xml.diff;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import com.signavio.util.ArrayUtil;
-import com.signavio.util.ObjectUtils;
+import org.omg.bpmn.miwg.util.ArrayUtil;
+import org.omg.bpmn.miwg.util.ObjectUtils;
+
 
 
 /**

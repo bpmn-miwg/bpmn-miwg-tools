@@ -23,7 +23,7 @@
  * 
  */
 
-package com.signavio.util.xml;
+package org.omg.bpmn.miwg.util.xml;
 
 import java.util.List;
 

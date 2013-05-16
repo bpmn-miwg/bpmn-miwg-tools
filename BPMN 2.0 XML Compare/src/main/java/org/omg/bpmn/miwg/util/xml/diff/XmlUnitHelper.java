@@ -23,7 +23,7 @@
  * 
  */
 
-package com.signavio.util.xml.diff;
+package org.omg.bpmn.miwg.util.xml.diff;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,13 +34,13 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.log4j.Logger;
 import org.custommonkey.xmlunit.Difference;
+import org.omg.bpmn.miwg.util.xml.XPathUtil;
+import org.omg.bpmn.miwg.util.xml.diff.AbstractXmlDifferenceListener.XmlDiffDocumentType;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.signavio.util.xml.XPathUtil;
-import com.signavio.util.xml.diff.AbstractXmlDifferenceListener.XmlDiffDocumentType;
 
 
 /**

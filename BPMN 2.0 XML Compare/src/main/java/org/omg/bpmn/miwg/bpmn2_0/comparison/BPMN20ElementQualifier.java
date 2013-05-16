@@ -23,7 +23,7 @@
  * 
  */
 
-package com.signavio.bpmn2_0.comparison;
+package org.omg.bpmn.miwg.bpmn2_0.comparison;
 
 import java.util.Collection;
 import java.util.HashSet;

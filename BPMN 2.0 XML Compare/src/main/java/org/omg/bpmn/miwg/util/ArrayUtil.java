@@ -23,43 +23,29 @@
  * 
  */
 
-package com.signavio.util.xml;
+package org.omg.bpmn.miwg.util;
 
-import javax.xml.XMLConstants;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-/**
- * Enumeration of all relevant namespaces in our projects and corresponding prefixes
- * 
- * @author philipp.maschke
- * 
- */
-public enum XmlNamespace {
-
-	// @formatter:off
-	BPMN20(					"bpmn",						"http://www.omg.org/spec/BPMN/20100524/MODEL"), 
-	BPMN20DI(				"bpmndi",					"http://www.omg.org/spec/BPMN/20100524/DI"), 
-	BPMN20OMGDC(			"omgdc",					"http://www.omg.org/spec/DD/20100524/DC"),
-	BPMN20OMGDI( 			"omgdi",					"http://www.omg.org/spec/DD/20100524/DI"),	
-	Signavio(				"signavio",					"http://www.signavio.com"),
+public class ArrayUtil {
 	
-	XML(					XMLConstants.XML_NS_PREFIX, XMLConstants.XML_NS_URI),
-	XMLNS(					XMLConstants.XMLNS_ATTRIBUTE, XMLConstants.XMLNS_ATTRIBUTE_NS_URI),
-	DEFAULT(				XMLConstants.DEFAULT_NS_PREFIX, BPMN20.getUri());
-	// @formatter:on
-
-	private String prefix;
-	private String uri;
-
-	XmlNamespace(String prefix, String uri) {
-		this.prefix = prefix;
-		this.uri = uri;
-	}
-
-	public String getPrefix() {
-		return prefix;
-	}
-
-	public String getUri() {
-		return uri;
+	/**
+	 * Creates a list by copying all elements of the given array into a new list.
+	 * </p>
+	 * As opposed to {@link Arrays#asList(Object...)}, this list will be mutable (you can add/remove elements without
+	 * causing an exception).
+	 * 
+	 * @param <X> the type of the array
+	 * @param array the array to convert, may be null
+	 * @return a mutable list containing all elements of the array
+	 */
+	public static <X> List<X> toMutableList(X[] array) {
+		if (array == null) {
+			return new ArrayList<X>();
+		} else {
+			return new ArrayList<X>(Arrays.asList(array));
+		}
 	}
 }

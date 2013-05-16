@@ -23,7 +23,7 @@
  * 
  */
 
-package com.signavio.util.xml.diff;
+package org.omg.bpmn.miwg.util.xml.diff;
 
 import java.util.LinkedList;
 import java.util.List;

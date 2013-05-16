@@ -23,7 +23,7 @@
  * 
  */
 
-package com.signavio.util.xml.diff;
+package org.omg.bpmn.miwg.util.xml.diff;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -39,12 +39,12 @@ import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.DifferenceConstants;
 import org.custommonkey.xmlunit.DifferenceListener;
 import org.custommonkey.xmlunit.NodeDetail;
+import org.omg.bpmn.miwg.util.xml.XPathUtil;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.signavio.util.xml.XPathUtil;
 
 /**
  * Difference listener for XMLUnit's {@link Diff} class.

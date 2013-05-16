@@ -23,41 +23,43 @@
  * 
  */
 
-package com.signavio.bpmn2_0.comparison;
+package org.omg.bpmn.miwg.util.xml;
 
-import com.signavio.util.xml.diff.ElementsPrefixMatcher;
-import com.signavio.util.xml.diff.XmlDiffConfiguration;
+import javax.xml.XMLConstants;
 
-public class Bpmn20DiffConfiguration extends XmlDiffConfiguration {
-	
-	//@formatter:off
-	private static final String[] ignoredNodes = { // "/bpmn:definitions/bpmn:globalTask",
-		//"//extensionElements/signavio:signavioMetaData"
-	};
+/**
+ * Enumeration of all relevant namespaces in our projects and corresponding prefixes
+ * 
+ * @author philipp.maschke
+ * 
+ */
+public enum XmlNamespace {
 
-	private static final String[] ignoredAttributes = {
-		"/definitions/@exporterVersion"
-	};
+	// @formatter:off
+	BPMN20(					"bpmn",						"http://www.omg.org/spec/BPMN/20100524/MODEL"), 
+	BPMN20DI(				"bpmndi",					"http://www.omg.org/spec/BPMN/20100524/DI"), 
+	BPMN20OMGDC(			"omgdc",					"http://www.omg.org/spec/DD/20100524/DC"),
+	BPMN20OMGDI( 			"omgdi",					"http://www.omg.org/spec/DD/20100524/DI"),	
+	Signavio(				"signavio",					"http://www.signavio.com"),
 	
-	private static final String[] idsAndIdRefs = {"id", "dataStoreRef", "bpmnElement"};
-	
-	private static final String[][]	defaultAttributeValueRegexes = {
-		{"top", "false"},{"bottom", "false"},{"left", "false"},	{"right", "false"}
-	};
-	
-	private static final String[] optionalAttributes = {};
-	
-	//@formatter:on
-	
-	/**
-	 * Keep the matchiner up to date as the XPath expressions above will not match an XML element not listed there!!!
-	 */
-	private static final ElementsPrefixMatcher	prefixMatcher					= new Bpmn20ElementsPrefixMatcher();
+	XML(					XMLConstants.XML_NS_PREFIX, XMLConstants.XML_NS_URI),
+	XMLNS(					XMLConstants.XMLNS_ATTRIBUTE, XMLConstants.XMLNS_ATTRIBUTE_NS_URI),
+	DEFAULT(				XMLConstants.DEFAULT_NS_PREFIX, BPMN20.getUri());
+	// @formatter:on
 
-	
-	public Bpmn20DiffConfiguration() {
-		super(ignoredNodes, ignoredAttributes, optionalAttributes,
-				idsAndIdRefs, null, null, null, prefixMatcher,
-				defaultAttributeValueRegexes);
+	private String prefix;
+	private String uri;
+
+	XmlNamespace(String prefix, String uri) {
+		this.prefix = prefix;
+		this.uri = uri;
+	}
+
+	public String getPrefix() {
+		return prefix;
+	}
+
+	public String getUri() {
+		return uri;
 	}
 }

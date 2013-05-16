@@ -23,7 +23,7 @@
  * 
  */
 
-package com.signavio.util;
+package org.omg.bpmn.miwg.util;
 
 public class ObjectUtils {
 

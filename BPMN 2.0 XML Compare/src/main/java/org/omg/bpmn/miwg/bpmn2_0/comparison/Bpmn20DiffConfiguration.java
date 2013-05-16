@@ -23,29 +23,41 @@
  * 
  */
 
-package com.signavio.util;
+package org.omg.bpmn.miwg.bpmn2_0.comparison;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import org.omg.bpmn.miwg.util.xml.diff.ElementsPrefixMatcher;
+import org.omg.bpmn.miwg.util.xml.diff.XmlDiffConfiguration;
 
-public class ArrayUtil {
+public class Bpmn20DiffConfiguration extends XmlDiffConfiguration {
+	
+	//@formatter:off
+	private static final String[] ignoredNodes = { // "/bpmn:definitions/bpmn:globalTask",
+		//"//extensionElements/signavio:signavioMetaData"
+	};
+
+	private static final String[] ignoredAttributes = {
+		"/definitions/@exporterVersion"
+	};
+	
+	private static final String[] idsAndIdRefs = {"id", "dataStoreRef", "bpmnElement"};
+	
+	private static final String[][]	defaultAttributeValueRegexes = {
+		{"top", "false"},{"bottom", "false"},{"left", "false"},	{"right", "false"}
+	};
+	
+	private static final String[] optionalAttributes = {};
+	
+	//@formatter:on
 	
 	/**
-	 * Creates a list by copying all elements of the given array into a new list.
-	 * </p>
-	 * As opposed to {@link Arrays#asList(Object...)}, this list will be mutable (you can add/remove elements without
-	 * causing an exception).
-	 * 
-	 * @param <X> the type of the array
-	 * @param array the array to convert, may be null
-	 * @return a mutable list containing all elements of the array
+	 * Keep the matchiner up to date as the XPath expressions above will not match an XML element not listed there!!!
 	 */
-	public static <X> List<X> toMutableList(X[] array) {
-		if (array == null) {
-			return new ArrayList<X>();
-		} else {
-			return new ArrayList<X>(Arrays.asList(array));
-		}
+	private static final ElementsPrefixMatcher	prefixMatcher					= new Bpmn20ElementsPrefixMatcher();
+
+	
+	public Bpmn20DiffConfiguration() {
+		super(ignoredNodes, ignoredAttributes, optionalAttributes,
+				idsAndIdRefs, null, null, null, prefixMatcher,
+				defaultAttributeValueRegexes);
 	}
 }

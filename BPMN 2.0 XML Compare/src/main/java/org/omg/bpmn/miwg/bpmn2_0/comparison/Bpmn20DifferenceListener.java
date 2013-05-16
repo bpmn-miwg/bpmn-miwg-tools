@@ -23,18 +23,28 @@
  * 
  */
 
-package com.signavio.bpmn2_0.comparison;
+package org.omg.bpmn.miwg.bpmn2_0.comparison;
 
-import com.signavio.util.xml.XmlNamespace;
-import com.signavio.util.xml.diff.ElementsPrefixMatcher;
+import org.apache.commons.lang3.StringUtils;
+import org.custommonkey.xmlunit.Difference;
+import org.omg.bpmn.miwg.util.xml.diff.AbstractXmlDifferenceListener;
 
-public class Bpmn20ElementsPrefixMatcher extends ElementsPrefixMatcher {
-	public Bpmn20ElementsPrefixMatcher() {
-		// the elements are ordered alphabetically; please keep it that way
-		addMatchInfo("/(collaboration|dataState|dataStore|dataStoreReference|definitions|documentation|"
-				+ "extensionElements|ioSpecification|laneSet|lane|participant|process|sequenceFlow|startEvent|"
-				+ "subProcess|task|transformation)", "/" + XmlNamespace.BPMN20.getPrefix() + ":$1");
 
-		addMatchInfo("/(BPMNDiagram|BPMNPlane)", "/" + XmlNamespace.BPMN20DI.getPrefix() + ":$1");
+public class Bpmn20DifferenceListener extends AbstractXmlDifferenceListener {
+
+	@Override
+	protected boolean canDifferenceBeIgnored(Difference difference) {
+		return false;
 	}
+
+	@Override
+	protected boolean canDifferingIdBeIgnored(Difference difference, String controlId, String testId) {
+		return StringUtils.isEmpty(controlId) == StringUtils.isEmpty(testId);
+	}
+
+	@Override
+	protected boolean canMissingIdBeIgnored(Difference difference, String controlId) {
+		return false;
+	}
+
 }
