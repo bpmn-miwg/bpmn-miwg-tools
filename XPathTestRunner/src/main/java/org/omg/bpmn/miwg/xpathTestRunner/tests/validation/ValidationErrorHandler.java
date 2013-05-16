@@ -1,9 +1,9 @@
-package xpathTestRunner.tests.validation;
+package org.omg.bpmn.miwg.xpathTestRunner.tests.validation;
 
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import xpathTestRunner.base.TestOutput;
 
 
 public class ValidationErrorHandler extends DefaultHandler {

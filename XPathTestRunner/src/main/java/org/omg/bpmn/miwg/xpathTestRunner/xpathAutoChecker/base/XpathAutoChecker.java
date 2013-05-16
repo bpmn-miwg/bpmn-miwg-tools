@@ -1,8 +1,8 @@
-package xpathTestRunner.xpathAutoChecker.base;
+package org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.base;
 
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 import org.w3c.dom.Node;
 
-import xpathTestRunner.testBase.AbstractXpathTest;
 
 
 public interface XpathAutoChecker {

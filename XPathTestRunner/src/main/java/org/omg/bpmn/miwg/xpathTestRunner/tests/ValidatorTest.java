@@ -1,4 +1,4 @@
-package xpathTestRunner.tests;
+package org.omg.bpmn.miwg.xpathTestRunner.tests;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,6 +10,8 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractTest;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.validation.ValidationErrorHandler;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
 import org.w3c.dom.ls.LSInput;
@@ -17,8 +19,6 @@ import org.w3c.dom.ls.LSResourceResolver;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
-import xpathTestRunner.testBase.AbstractTest;
-import xpathTestRunner.tests.validation.ValidationErrorHandler;
 
 public class ValidatorTest extends AbstractTest {
 

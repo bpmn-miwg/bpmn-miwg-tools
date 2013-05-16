@@ -1,9 +1,9 @@
-package xpathTestRunner.xpathAutoChecker.Level1Descriptive;
+package org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive;
 
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
+import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
 import org.w3c.dom.Node;
 
-import xpathTestRunner.testBase.AbstractXpathTest;
-import xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
 
 
 public class L1TerminateEventChecker implements XpathAutoChecker {

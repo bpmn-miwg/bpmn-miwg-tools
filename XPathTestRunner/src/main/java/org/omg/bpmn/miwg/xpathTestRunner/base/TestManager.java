@@ -1,9 +1,10 @@
-package xpathTestRunner.base;
+package org.omg.bpmn.miwg.xpathTestRunner.base;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import xpathTestRunner.testBase.Test;
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.Test;
+
 
 
 public class TestManager {

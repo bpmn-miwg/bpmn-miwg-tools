@@ -1,4 +1,4 @@
-package xpathTestRunner.testBase;
+package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -12,19 +12,19 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
+import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1MessageEventChecker;
+import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1SignalEventChecker;
+import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TerminateEventChecker;
+import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TimerEventChecker;
+import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level2Analytic.L2MessageFlowChecker;
+import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import xpathTestRunner.base.TestOutput;
-import xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1MessageEventChecker;
-import xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1SignalEventChecker;
-import xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TerminateEventChecker;
-import xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TimerEventChecker;
-import xpathTestRunner.xpathAutoChecker.Level2Analytic.L2MessageFlowChecker;
-import xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
 
 
 public abstract class AbstractXpathTest extends AbstractTest {

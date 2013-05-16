@@ -1,8 +1,9 @@
-package xpathTestRunner.tests;
+package org.omg.bpmn.miwg.xpathTestRunner.tests;
 
 import java.io.File;
 
-import xpathTestRunner.testBase.AbstractXpathTest;
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
+
 
 
 public class B_1_0_Test extends AbstractXpathTest {

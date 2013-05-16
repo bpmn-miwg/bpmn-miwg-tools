@@ -1,4 +1,4 @@
-package xpathTestRunner.base;
+package org.omg.bpmn.miwg.xpathTestRunner.base;
 
 import java.io.File;
 import java.io.FileFilter;

@@ -1,6 +1,6 @@
-package xpathTestRunner.testBase;
+package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
-import xpathTestRunner.base.TestOutput;
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 
 
 public interface Test {

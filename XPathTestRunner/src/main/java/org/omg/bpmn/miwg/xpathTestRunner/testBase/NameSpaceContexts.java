@@ -1,4 +1,4 @@
-package xpathTestRunner.testBase;
+package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 import java.util.Iterator;
 
 import javax.xml.namespace.NamespaceContext;

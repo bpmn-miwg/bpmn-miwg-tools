@@ -1,13 +1,14 @@
-package xpathTestRunner;
+package org.omg.bpmn.miwg.xpathTestRunner;
 
 import java.util.List;
 
-import xpathTestRunner.base.TestInfo;
-import xpathTestRunner.base.TestManager;
-import xpathTestRunner.base.TestOutput;
-import xpathTestRunner.tests.B_1_0_Test;
-import xpathTestRunner.tests.B_2_0_Test;
-import xpathTestRunner.tests.ValidatorTest;
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestInfo;
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestManager;
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
+
 
 
 public class Main {
