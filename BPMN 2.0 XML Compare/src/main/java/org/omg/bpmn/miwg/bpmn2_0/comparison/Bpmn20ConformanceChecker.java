@@ -75,6 +75,15 @@ public class Bpmn20ConformanceChecker {
 		docBuilder = domFactory.newDocumentBuilder();
 	}
 
+	public List<Difference> getSignificantDifferences(File expectedBpmnXmlFile,
+			File actualBpmnXmlFile) throws SAXException, IOException,
+			ParserConfigurationException {
+		Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXmlFile);
+		Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXmlFile);
+		return xmlDiff.areDocumentsEqualReporting(expectedBpmnXmlDoc,
+				actualBpmnXmlDoc);
+	}
+
 	public String checkForSignificantDifferences(File expectedBpmnXmlFile, File actualBpmnXmlFile) throws SAXException,
 			IOException, ParserConfigurationException {
 		Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXmlFile);
