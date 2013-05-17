@@ -2,15 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.omg.bpmn.miwg</groupId>
-    <artifactId>tools</artifactId>
-    <version>0.1</version>
-    <relativePath>..</relativePath>
-  </parent>
-  <artifactId>xml-compare</artifactId>
-  <name>BPMN 2.0 XML Compare</name>
-  <packaging>jar</packaging>
+  <groupId>org.omg.bpmn.miwg</groupId>
+  <artifactId>tools</artifactId>
+  <name>BPMN 2.0 Model Interchange Tools</name>
+  <packaging>pom</packaging>
+  <version>0.1</version>
 
   <inceptionYear>2013</inceptionYear>
   <organization>
@@ -21,6 +17,11 @@
   <properties>
     <java.version>1.6</java.version>
   </properties>
+
+  <modules>
+    <module>BPMN 2.0 XML Compare</module>
+    <module>XPathTestRunner</module>
+  </modules>
 
   <dependencies>
     <dependency>
