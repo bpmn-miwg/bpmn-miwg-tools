@@ -29,6 +29,12 @@ public class TestInfo {
 	public TestInfo() {
 	}
 
+	public TestInfo(String root, String application, String testFile) {
+		this.root = root;
+		this.application = application;
+		this.testFile = testFile;
+	}
+	
 	public static List<TestInfo> findTestFiles(final TestManager testManager,
 			String rootDir) throws IOException {
 		System.out.println("Test files in " + rootDir);

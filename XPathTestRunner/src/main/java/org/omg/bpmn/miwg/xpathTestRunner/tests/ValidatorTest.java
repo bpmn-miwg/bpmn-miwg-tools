@@ -38,7 +38,8 @@ public class ValidatorTest extends AbstractTest {
 
 			FileInputStream fis = null;
 			try {
-				fis = new FileInputStream("res/schema/" + systemId);
+				fis = new FileInputStream("src/main/resources/schema/"
+						+ systemId);
 			} catch (Exception e) {
 				System.err.println(e.toString());
 			}
@@ -70,7 +71,7 @@ public class ValidatorTest extends AbstractTest {
 		schemaFactory.setResourceResolver(new LocalResourcsResolver());
 
 		Schema schema = schemaFactory.newSchema(new StreamSource(new File(
-				"res/schema/BPMN20.xsd")));
+				"src/main/resources/schema/BPMN20.xsd")));
 
 		SAXParserFactory parserFactory = SAXParserFactory.newInstance();
 		// parserFactory.setValidating(true);
