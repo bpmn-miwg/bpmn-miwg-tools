@@ -109,7 +109,7 @@ public class XPathTest {
 	private void doTest(org.omg.bpmn.miwg.xpathTestRunner.testBase.Test test, String baseFileName) {
 		for (String tool : tools) {
 			TestInfo info = new TestInfo(baseDir.getAbsolutePath()
-					+ testBDir.getName(), tool, baseFileName
+					+ testBDir.getName() + S, tool, baseFileName
 							+ "-roundtrip.bpmn");
 			TestOutput out = null;
 			try {
