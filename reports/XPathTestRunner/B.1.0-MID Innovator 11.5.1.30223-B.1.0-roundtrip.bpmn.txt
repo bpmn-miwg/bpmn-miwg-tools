@@ -1,0 +1,8 @@
+Running Tests for B.1.0:
+> TEST B.1.0
+/Users/timstephenson/git/bpmn-miwg-tools/XPathTestRunner/../../bpmn-miwg-test-suiteB - Validate that tool covers conformance class set/MID Innovator 11.5.1.30223/B.1.0-roundtrip.bpmn (No such file or directory)
+
+  TEST B.1.0 results:
+  * OK    : 0
+  * ISSUES: 0
+

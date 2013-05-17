@@ -1,0 +1,58 @@
+Running Tests for B.2.0:
+> TEST B.2.0
+  > Assertion OK   : selectElement: //bpmn:collaboration
+    > Assertion OK   : navigateElement: bpmn:messageFlow[@name='Message Flow 1']
+    > Auto Checker: L2MessageFlowChecker
+      > Assertion OK   : navigateElement: //bpmn:message[@id='Message_1362595272195']
+    > Pop
+    > Assertion OK   : navigateElement: bpmn:messageFlow[@name='Message Flow 2']
+    > Assertion OK   : selectProcess: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+      > Assertion OK   : navigateElement: bpmn:startEvent[@name='Start Event 1 Timer']
+      > Auto Checker: L1TimerEventChecker
+        > Assertion OK   : navigateElement: bpmn:timerEventDefinition | bpmn:eventDefinitionRef
+      > Pop
+      > Assertion OK   : navigateElement: bpmn:task[@name='Abstract Task 1']
+      > Assertion OK   : navigateElement: bpmn:sendTask[@name='Send Task 2']
+      > Assertion OK   : selectElement: bpmn:userTask[@name='User Task 3']
+        > Assertion OK   : navigateElementByParam: //bpmn:dataObjectReference[@id='_aa8c769a-276c-4589-b182-7c7bbd0a9e1e']
+      > Pop
+      > Assertion OK   : navigateElement: bpmn:dataObjectReference[@name='Data Object']
+      > Assertion OK   : selectElement: bpmn:inclusiveGateway[@name='Inclusive Gateway 1']
+        > Assertion OK   : navigateGatewaySequenceFlow: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id='%s']; Target parameter .; Target Check: self::node()[@name='Conditional Sequence Flow']
+        > Assertion OK   : navigateGatewaySequenceFlow: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id='%s']; Target parameter .; Target Check: self::node()[@name='Default Sequence Flow 1']
+        > Assertion OK   : checkDefaultSequenceFlow: Default Sequence Flow
+      > Pop
+      > Assertion OK   : navigateElement: bpmn:serviceTask[@name='Service Task 4']
+      > Assertion OK   : navigateElement: bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1']
+      > Auto Checker: L1SignalEventChecker
+        > Assertion OK   : navigateElement: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef
+      > Pop
+      > Assertion OK   : selectElement: bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']
+        > Assertion ISSUE: navigateElement: bpmn:multiInstanceLoopCharacteristics[@isSequential='false']: No node found
+      > Pop
+      > Assertion OK   : navigateElement: bpmn:task[@name='Task 5']
+      > Assertion OK   : selectElement: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Conditional']
+        > Assertion OK   : navigateElementByParam: ../bpmn:task[@name='Task 5' and @id='_2a08c361-be51-437e-a86d-c62798c14e83']
+      > Pop
+      > Assertion OK   : navigateElement: bpmn:parallelGateway[@name='Parallel Gateway 2']
+      > Assertion OK   : navigateElement: bpmn:endEvent[@name='End Event 1 Message']
+      > Auto Checker: L1MessageEventChecker
+        > Assertion OK   : navigateElement: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+      > Pop
+      > Assertion OK   : selectElement: //bpmn:globalUserTask[@name='Call Activity calling a Global User Task']
+        > Assertion OK   : navigateElementByParam: //bpmn:callActivity[@calledElement='_1362595271489' and @name='Call Activity calling a Global User Task']
+      > Pop
+      > Assertion OK   : selectElement: bpmn:subProcess[@name='Expanded Sub-Process 1']
+        > Assertion OK   : navigateElement: bpmn:startEvent[@name='Start Event 2']
+        > Assertion OK   : selectElement: bpmn:userTask[@name='User Task 7 Standard Loop']
+          > Assertion OK   : navigateElement: bpmn:standardLoopCharacteristics
+        > Pop
+        > Assertion OK   : navigateElement: bpmn:endEvent[@name='End Event 2']
+      > Pop
+    > Pop
+  > Pop
+
+  TEST B.2.0 results:
+  * OK    : 33
+  * ISSUES: 1
+

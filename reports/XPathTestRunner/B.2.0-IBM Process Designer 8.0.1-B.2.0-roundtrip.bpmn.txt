@@ -1,0 +1,8 @@
+Running Tests for B.2.0:
+> TEST B.2.0
+/Users/timstephenson/git/bpmn-miwg-tools/XPathTestRunner/../../bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/IBM Process Designer 8.0.1/B.2.0-roundtrip.bpmn (No such file or directory)
+
+  TEST B.2.0 results:
+  * OK    : 0
+  * ISSUES: 0
+

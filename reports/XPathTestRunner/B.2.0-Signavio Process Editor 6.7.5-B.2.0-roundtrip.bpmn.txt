@@ -1,0 +1,49 @@
+Running Tests for B.2.0:
+> TEST B.2.0
+  > Assertion OK   : selectElement: //bpmn:collaboration
+    > Assertion OK   : navigateElement: bpmn:messageFlow[@name='Message Flow 1']
+    > Auto Checker: L2MessageFlowChecker
+      > Assertion OK   : navigateElement: //bpmn:message[@id='Message_1362595272195']
+    > Pop
+    > Assertion OK   : navigateElement: bpmn:messageFlow[@name='Message Flow 2']
+    > Assertion ISSUE: selectProcess: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]: Process node not found
+      > Assertion ISSUE: navigateElement: bpmn:startEvent[@name='Start Event 1 Timer']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:task[@name='Abstract Task 1']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:sendTask[@name='Send Task 2']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:userTask[@name='User Task 3']: Parent failed
+        > Assertion ISSUE: navigateElementByParam: Navigation: //bpmn:dataObjectReference[@id='%s']; Value: bpmn:dataInputAssociation/bpmn:sourceRef: Parent failed
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:dataObjectReference[@name='Data Object']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:inclusiveGateway[@name='Inclusive Gateway 1']: Parent failed
+        > Assertion ISSUE: navigateGatewaySequenceFlow: : Parent failed
+        > Assertion ISSUE: navigateGatewaySequenceFlow: : Parent failed
+        > Assertion ISSUE: checkDefaultSequenceFlow: messageFlow: Current node is not a sequenceFlow
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:serviceTask[@name='Service Task 4']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']: Parent failed
+        > Assertion ISSUE: navigateElement: bpmn:multiInstanceLoopCharacteristics[@isSequential='false']: Parent failed
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:task[@name='Task 5']: Parent failed
+      > Assertion ISSUE: selectElement: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Conditional']: Parent failed
+        > Assertion ISSUE: navigateElementByParam: Navigation: ../bpmn:task[@name='Task 5' and @id='%s']; Value: @attachedToRef: Parent failed
+      > Pop
+      > Assertion ISSUE: navigateElement: bpmn:parallelGateway[@name='Parallel Gateway 2']: Parent failed
+      > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event 1 Message']: Parent failed
+      > Assertion ISSUE: selectElement: //bpmn:globalUserTask[@name='Call Activity calling a Global User Task']: Parent failed
+        > Assertion ISSUE: navigateElementByParam: Navigation: //bpmn:callActivity[@calledElement='%s' and @name='Call Activity calling a Global User Task']; Value: @id: Parent failed
+      > Pop
+      > Assertion ISSUE: selectElement: bpmn:subProcess[@name='Expanded Sub-Process 1']: Parent failed
+        > Assertion ISSUE: navigateElement: bpmn:startEvent[@name='Start Event 2']: Parent failed
+        > Assertion ISSUE: selectElement: bpmn:userTask[@name='User Task 7 Standard Loop']: Parent failed
+          > Assertion ISSUE: navigateElement: bpmn:standardLoopCharacteristics: Parent failed
+        > Pop
+        > Assertion ISSUE: navigateElement: bpmn:endEvent[@name='End Event 2']: Parent failed
+      > Pop
+    > Pop
+  > Pop
+
+  TEST B.2.0 results:
+  * OK    : 4
+  * ISSUES: 27
+

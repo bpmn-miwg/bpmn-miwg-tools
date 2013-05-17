@@ -1,0 +1,9 @@
+Running Tests for BPMN Schema Validator:
+> TEST BPMN Schema Validator
+  > Assertion Validation failed: ISSUE: Exception: /Users/timstephenson/git/bpmn-miwg-tools/XPathTestRunner/../../bpmn-miwg-test-suiteB - Validate that tool covers conformance class set/camunda modeler 2.0.11/B.1.0-roundtrip.bpmn (No such file or directory)
+  > Assertion Validation succeeded: OK
+
+  TEST BPMN Schema Validator results:
+  * OK    : 1
+  * ISSUES: 1
+
