@@ -29,21 +29,24 @@ import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 import org.custommonkey.xmlunit.Difference;
-import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20ConformanceChecker;
 
 /**
  * 
  * @author Tim Stephenson
- * 
  */
+@RunWith(value = Parameterized.class)
 public class XmlCompareTest {
 
 	private static final String S = File.separator;
@@ -54,17 +57,42 @@ public class XmlCompareTest {
 
 	private static final String B_DIR = "B - Validate that tool covers conformance class set";
 
+	private static final String RPT_DIR = "target" + S + "surefire-reports";
+
 	private static File baseDir;
 
 	private static File testADir;
 
 	private static File testBDir;
 
-	private static List<String> tools;
-
 	private static Bpmn20ConformanceChecker checker;
 
-	@BeforeClass
+	private String tool;
+
+	/**
+	 * Several tests are run for each reference model. Valid values are
+	 * "import", "-export", "-roundtrip".
+	 */
+	private String variant;
+
+	public XmlCompareTest(String tool, String variant) {
+		this.tool = tool;
+		this.variant = variant;
+	}
+
+	@Parameters
+	public static Collection<Object[]> data() throws Exception {
+		setUp();
+		ArrayList<Object[]> tools = new ArrayList<Object[]>();
+		for (String dir : testADir.list()) {
+			if (!dir.equals("Reference") && !dir.startsWith(".")) {
+				tools.add(new Object[] { dir, "-export" });
+				tools.add(new Object[] { dir, "-roundtrip" });
+			}
+		}
+		return tools;
+	}
+
 	public static void setUp() throws Exception {
 		baseDir = new File(RESOURCE_BASE_DIR);
 		System.out.println("Looking for MIWG resources in: "
@@ -80,69 +108,86 @@ public class XmlCompareTest {
 				+ ", please ensure you have checked out the MIWG resources.",
 				testBDir.exists());
 
-		tools = new ArrayList<String>();
-		for (String dir : testADir.list()) {
-			if (!dir.equals("Reference") && !dir.startsWith(".")) {
-				tools.add(dir);
-			}
-		}
-
 		checker = new Bpmn20ConformanceChecker();
+		new File(RPT_DIR).mkdirs();
 	}
 
 	@Test
 	public void testA10() {
 		String testName = "A.1.0";
-		reportSummary(testName, doTest(testName));
+		reportSummary(tool, testName, doTest(tool, testName, variant));
 	}
 
 	@Test
 	public void testA20() {
 		String testName = "A.2.0";
-		reportSummary(testName, doTest(testName));
+		reportSummary(tool, testName, doTest(tool, testName, variant));
 	}
 
 	@Test
 	public void testA30() {
 		String testName = "A.3.0";
-		reportSummary(testName, doTest(testName));
+		reportSummary(tool, testName, doTest(tool, testName, variant));
 	}
 
 	@Test
 	public void testA40() {
 		String testName = "A.4.0";
-		reportSummary(testName, doTest(testName));
+		reportSummary(tool, testName, doTest(tool, testName, variant));
 	}
 
 	@Test
 	public void testB10() {
 		String testName = "B.1.0";
-		reportSummary(testName, doTest(testName));
+		reportSummary(tool, testName, doTest(tool, testName, variant));
 	}
 
 	@Test
 	public void testB20() {
 		String testName = "B.2.0";
-		reportSummary(testName, doTest(testName));
+		reportSummary(tool, testName, doTest(tool, testName, variant));
 	}
 
-	private Map<String, List<Difference>> doTest(String testName) {
-		Map<String, List<Difference>> results = new HashMap<String, List<Difference>>();
-		for (String tool : tools) {
+	private List<Difference> doTest(String tool, String testName, String variant) {
+		List<Difference> diffs = null;
+		try {
+			diffs = checker
+					.getSignificantDifferences(getReferenceFile(testName
+							+ ".bpmn"),
+							getBpmnFile(tool, testName + variant + ".bpmn"));
+		} catch (FileNotFoundException e) {
+			// Not a test failure but missing the file to compare
+			diffs = convertToDiff(e);
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail(e.getClass().getName() + ":" + e.getMessage());
+		}
+
+		reportDetail(tool, testName, diffs);
+		return diffs;
+	}
+
+	private void reportDetail(String tool, String testName,
+			List<Difference> diffs) {
+		File f = new File(RPT_DIR, getClass().getName() + "-" + tool + "-"
+				+ testName + variant + ".txt");
+		FileWriter out = null;
+		try {
+			out = new FileWriter(f);
+			for (Difference difference : diffs) {
+				out.append(difference.toString());
+				out.append('\n');
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			fail(e.getClass().getName() + ":" + e.getMessage());
+		} finally {
 			try {
-				List<Difference> diffs = checker.getSignificantDifferences(
-						getReferenceFile(testName + ".bpmn"),
-						getBpmnFile(tool, testName + "-roundtrip.bpmn"));
-				results.put(tool, diffs);
-			} catch (FileNotFoundException e) {
-				// Not a test failure but missing the file to compare
-				results.put(tool, convertToDiff(e));
+				out.close();
 			} catch (Exception e) {
-				e.printStackTrace();
-				fail(e.getClass().getName() + ":" + e.getMessage());
+				;
 			}
 		}
-		return results;
 	}
 
 	private List<Difference> convertToDiff(FileNotFoundException e) {
@@ -163,14 +208,12 @@ public class XmlCompareTest {
 		}
 	}
 
-	private void reportSummary(String testName,
-			Map<String, List<Difference>> results) {
-		for (Map.Entry<String, List<Difference>> result : results.entrySet()) {
-			String msg = "Issues found in implementation of " + testName
-					+ " by " + result.getKey();
-			System.out.println(msg + ": " + result.getValue().size());
-			// assertEquals(msg, 0, result.getValue().size());
-		}
+	private void reportSummary(String tool, String testName,
+			List<Difference> diffs) {
+		String msg = "Issues found in implementation of " + testName + " by "
+				+ tool;
+		System.out.println(msg + ": " + diffs.size());
+		// assertEquals(msg, 0, result.getValue().size());
 	}
 
 }
