@@ -13,6 +13,7 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
+import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1ExclusiveGatewayChecker;
 import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1MessageEventChecker;
 import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1SignalEventChecker;
 import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TerminateEventChecker;
@@ -85,6 +86,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		autoChecker.add(new L1TerminateEventChecker());
 		autoChecker.add(new L1SignalEventChecker());
 		autoChecker.add(new L1MessageEventChecker());
+		autoChecker.add(new L1ExclusiveGatewayChecker());
 		autoChecker.add(new L2MessageFlowChecker());
 	}
 
@@ -132,11 +134,14 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String lastName = null;
 		for (StackTraceElement e : stacktrace) {
 			String methodName = e.getMethodName();
+			
+			//System.err.println(" >> " + methodName);
 
 			if (methodName.startsWith("navigate")
 					|| methodName.startsWith("select")
 					|| methodName.startsWith("check")) {
 				lastName = methodName;
+				break;
 			}
 
 		}
@@ -435,6 +440,47 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 
 		ok("Default Sequence Flow");
+	}
+	
+	public void checkAttribute(String attribute) throws Throwable {
+		if (currentNode == null) {
+			issue("", "No current node");
+			return;
+		}
+		
+		String s = getAttribute(attribute);
+		
+		if (s == null)
+		{
+			// Issue is thrown by getAttribute
+			return;
+		}
+		
+		
+		ok("Attribute " + attribute + "exists"); 
+	}
+	
+	public void checkAttribute(String attribute, String value) throws Throwable {
+		if (currentNode == null) {
+			issue("", "No current node");
+			return;
+		}
+		
+		String s = getAttribute(attribute);
+		
+		if (s == null)
+		{
+			// Issue is thrown by getAttribute
+			return;
+		}
+		
+		if (!s.equals(value))
+		{
+			issue(attribute, "Attribute does not have the expected value '" + value + "'");
+			return;
+		}
+
+		ok("Attribute " + attribute + "=" + value); 
 	}
 	
 	

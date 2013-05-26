@@ -4,8 +4,6 @@ import java.io.File;
 
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 
-
-
 public class B_2_0_Test extends AbstractXpathTest {
 
 	@Override
@@ -35,6 +33,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
+
 				navigateElement("bpmn:startEvent[@name='Start Event 1 Timer']",
 						"timerStartEvent");
 				navigateElement("bpmn:task[@name='Abstract Task 1']");
@@ -103,6 +102,45 @@ public class B_2_0_Test extends AbstractXpathTest {
 					pop();
 				}
 
+				pop();
+			}
+
+			{
+				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
+
+				navigateElement("bpmn:laneSet/bpmn:lane[@name='Lane 1']");
+				navigateElement("bpmn:laneSet/bpmn:lane[@name='Lane 2']");
+
+				navigateElement(
+						"bpmn:startEvent[@name='Start Event 2 Message']",
+						"messageEvent");
+
+				navigateElement("bpmn:task[@name='Task 11']");
+
+				navigateElement(
+						"bpmn:eventBasedGateway[@name='Event Base Gateway 3']",
+						"exclusiveGateway");
+
+				navigateElement("bpmn:intermediateCatchEvent[@name='Intermediate Event Timer Catch']");
+
+				navigateElement(
+						"bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch']",
+						"messageEvent");
+
+				navigateElement("bpmn:receiveTask[@name='Receive Task 20']");
+				
+				navigateElement("bpmn:subProcess[@name='Collapsed Sub-Process 2']", "L2CollapsedSubProcess");
+
+				/*
+				Data Association is ABSTRACT: Data Input Association and Data Output Association will appear in the
+				XML serialization. These both have REQUIRED attributes[sourceRef and targetRef] which refer to
+				itemAwareElements. To be consistent with the metamodel, this will require the following additional elements:
+				ioSpecification, inputSet, outputSet, Data Input, Data Output. When a BPMN editor draws a Data
+				Association to an Activity or Event it should generate this supporting invisible substructure. Otherwise, the
+				metamodel would have to be changed to make sourceRef and targetRef optional or allow reference to
+				non-itemAwareElements, e.g., Activity and Event.
+				*/
+				
 				pop();
 			}
 
