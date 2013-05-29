@@ -7,12 +7,48 @@
   <name>BPMN 2.0 Model Interchange Tools</name>
   <packaging>pom</packaging>
   <version>0.1</version>
-
+  <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>http://opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
   <inceptionYear>2013</inceptionYear>
   <organization>
     <name>BPMN-MIWG</name>
     <url>https://github.com/bpmn-miwg</url>
   </organization>
+  
+  <developers>
+    <developer>
+      <name>Denis Gagne</name>
+      <!-- 
+      <email>http://mailhide.recaptcha.net/d?k=01ebFB9eM2hZL-T96IpUgRmA==&amp;c=AI-pouLFNTr5xMTBVDaj8iKeIFI5dy9Wj5cxSY0Nuhw=</email>
+      -->
+      <organization>Trisotech / Business Process Incubator</organization>
+      <organizationUrl>http://www.businessprocessincubator.com/</organizationUrl>
+    </developer>
+    <developer>
+      <name>Falko Menge</name>
+      <organization>Camunda Services GmbH</organization>
+      <organizationUrl>http://www.camunda.com/</organizationUrl>
+    </developer>
+    <developer>
+      <name>Matthias Kurz</name>
+      <organization></organization>
+    </developer>
+    <developer>
+      <name>Sven Wagner-Boysen</name>
+      <organization>Signavio</organization>
+      <organizationUrl>http://www.signavio.com/</organizationUrl>
+    </developer>
+    <developer>
+      <name>Tim Stephenson</name>
+      <organization>Know Process</organization>
+      <organizationUrl>http://www.knowprocess.com/</organizationUrl>
+    </developer>
+  </developers>
 
   <properties>
     <java.version>1.6</java.version>
@@ -58,10 +94,24 @@
       <artifactId>junit</artifactId>
       <version>4.8.2</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-scm-publish-plugin</artifactId>
+      <version>1.0-beta-2</version>
+      <type>maven-plugin</type>
+    </dependency>
   </dependencies>
 
   <build>
-
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-scm-publish-plugin</artifactId>
+          <version>1.0-beta-2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -72,14 +122,68 @@
         </configuration>
         <version>2.3.2</version>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-publish-plugin</artifactId>
+        <version>1.0-beta-2</version>
+        <configuration>
+            <scmBranch>gh-pages</scmBranch>                
+            <pubScmUrl>scm:git:git@github.com:bpmn-miwg/bpmn-miwg-tools.git</pubScmUrl>
+          </configuration>
+      </plugin>
     </plugins>
 
   </build>
 
   <reporting>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.6</version>
+        <!-- TODO probably restrict the report generation to a subset
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>dependencies</report>
+              <report>project-team</report>
+              <report>mailing-list</report>
+              <report>cim</report>
+              <report>issue-tracking</report>
+              <report>license</report>
+              <report>scm</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+        -->
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-linkcheck-plugin</artifactId>
+        <version>1.1</version>
+        <configuration>
 
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.14.1</version>
+      </plugin>
     </plugins>
   </reporting>
 
+
+  <scm>
+    <url>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
+  </scm>
+  <distributionManagement>
+    <site>
+      <id>github-bpmn-miwg</id>
+      <url>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
+    </site>
+  </distributionManagement>
+  <issueManagement>
+    <system>JIRA</system>
+  </issueManagement>
 </project>
