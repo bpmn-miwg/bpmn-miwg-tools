@@ -42,13 +42,9 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				navigateElement("bpmn:sendTask[@name='Send Task 2']");
 
-				{
-					selectElement("bpmn:userTask[@name='User Task 3']");
-					navigateElementByParam(
-							"//bpmn:dataObjectReference[@id='%s']",
-							"bpmn:dataInputAssociation/bpmn:sourceRef");
-					pop();
-				}
+				navigateElement("bpmn:userTask[@name='User Task 3']");
+				checkArtifactAssociation(ArtifactType.DataObject,
+						"Data Object", AssociationDirection.Input);
 
 				navigateElement("bpmn:dataObjectReference[@name='Data Object']");
 
@@ -130,13 +126,14 @@ public class B_2_0_Test extends AbstractXpathTest {
 						"messageEvent");
 
 				navigateElement("bpmn:receiveTask[@name='Receive Task 20']");
-				
-				navigateElement("bpmn:subProcess[@name='Collapsed Sub-Process 2']", "L2CollapsedSubProcess");
 
-				checkArtifactAssociation(ArtifactType.DataStoreReference, "Data Store Reference", AssociationDirection.Input);
-				
-				
-				
+				navigateElement(
+						"bpmn:subProcess[@name='Collapsed Sub-Process 2']",
+						"L2CollapsedSubProcess");
+
+				checkArtifactAssociation(ArtifactType.DataStoreReference,
+						"Data Store Reference", AssociationDirection.Input);
+
 				pop();
 			}
 

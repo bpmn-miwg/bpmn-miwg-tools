@@ -26,5 +26,5 @@
 package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
 public enum ArtifactType {
-	DataStoreReference
+	DataStoreReference, DataObject
 }

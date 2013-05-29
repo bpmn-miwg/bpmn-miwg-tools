@@ -482,6 +482,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		switch (artifactType) {
 		case DataStoreReference:
 			return "dataStoreReference";
+		case DataObject:
+			return "dataObject";
 		default:
 			assert false;
 			return null;
@@ -559,7 +561,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 					String artifact;
 					switch (artifactType) {
 					case DataStoreReference:
-						artifact = "//bpmn:dataStoreReference[@id='%s']";
+						artifact = "../bpmn:dataStoreReference[@id='%s']";
+						break;
+					case DataObject:
+						artifact = "../bpmn:dataObjectReference[@id='%s']";
 						break;
 					default:
 						artifact = null;
@@ -568,6 +573,13 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 					String artifact2 = String.format(artifact, artifactID);
 					Node artifactNode = findNode(elementNode, artifact2);
+					
+					if (artifactNode == null) {
+						issue(artifact2, "Cannot find artifact node");
+						pop();
+						return;
+					}
+					
 					if (getAttribute(artifactNode, "name").equals(artifactName)) {
 						ok(String.format("Association reference %s '%s' found",
 								artifactTypeToString(artifactType),
@@ -584,6 +596,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		issue(null, String.format(
 				"Cannot find the associated artifact %s '%s'",
 				artifactTypeToString(artifactType), artifactName));
+		pop();
 
 	}
 }
