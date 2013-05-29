@@ -36,15 +36,16 @@ public class B_2_0_Test extends AbstractXpathTest {
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
 
-				navigateElement("bpmn:startEvent[@name='Start Event 1 Timer']",
-						"timerStartEvent");
+				navigateElement("bpmn:startEvent[@name='Start Event 1 Timer']");
+				checkTimerEventL1();
+
 				navigateElement("bpmn:task[@name='Abstract Task 1']");
 
 				navigateElement("bpmn:sendTask[@name='Send Task 2']");
 
 				navigateElement("bpmn:userTask[@name='User Task 3']");
-				checkArtifactAssociation(ArtifactType.DataObject,
-						"Data Object", AssociationDirection.Input);
+				checkAssociation(ArtifactType.DataObject, "Data Object",
+						AssociationDirection.Input);
 
 				navigateElement("bpmn:dataObjectReference[@name='Data Object']");
 
@@ -57,9 +58,8 @@ public class B_2_0_Test extends AbstractXpathTest {
 				}
 				navigateElement("bpmn:serviceTask[@name='Service Task 4']");
 
-				navigateElement(
-						"bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1']",
-						"signalEvent");
+				navigateElement("bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1']");
+				checkSignalEventL1();
 
 				{
 					selectElement("bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']");
@@ -78,8 +78,8 @@ public class B_2_0_Test extends AbstractXpathTest {
 				}
 
 				navigateElement("bpmn:parallelGateway[@name='Parallel Gateway 2']");
-				navigateElement("bpmn:endEvent[@name='End Event 1 Message']",
-						"messageEvent");
+				navigateElement("bpmn:endEvent[@name='End Event 1 Message']");
+				checkMessageEventL1();
 				{
 					selectElement("//bpmn:globalUserTask[@name='Call Activity calling a Global User Task']");
 					navigateElementByParam(
@@ -109,9 +109,8 @@ public class B_2_0_Test extends AbstractXpathTest {
 				navigateElement("bpmn:laneSet/bpmn:lane[@name='Lane 1']");
 				navigateElement("bpmn:laneSet/bpmn:lane[@name='Lane 2']");
 
-				navigateElement(
-						"bpmn:startEvent[@name='Start Event 2 Message']",
-						"messageEvent");
+				navigateElement("bpmn:startEvent[@name='Start Event 2 Message']");
+				checkMessageEventL1();
 
 				navigateElement("bpmn:task[@name='Task 11']");
 
@@ -121,18 +120,26 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				navigateElement("bpmn:intermediateCatchEvent[@name='Intermediate Event Timer Catch']");
 
-				navigateElement(
-						"bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch']",
-						"messageEvent");
+				navigateElement("bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch']");
+				checkMessageEventL1();
 
 				navigateElement("bpmn:receiveTask[@name='Receive Task 20']");
 
 				navigateElement(
 						"bpmn:subProcess[@name='Collapsed Sub-Process 2']",
 						"L2CollapsedSubProcess");
-
-				checkArtifactAssociation(ArtifactType.DataStoreReference,
+				checkAssociation(ArtifactType.DataStoreReference,
 						"Data Store Reference", AssociationDirection.Input);
+
+				{
+					selectElement("bpmn:exclusiveGateway[@name='Exclusive Gateway 4']");
+					navigateGatewaySequenceFlow("Default Sequence Flow 2");
+					checkDefaultSequenceFlow();
+					pop();
+				}
+
+				navigateElement("bpmn:intermediateThrowEvent[@name='Intermediate Event Message Throw']");
+				checkMessageEventL1();
 
 				pop();
 			}

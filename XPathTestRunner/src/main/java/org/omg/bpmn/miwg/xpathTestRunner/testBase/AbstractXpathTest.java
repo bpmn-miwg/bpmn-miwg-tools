@@ -490,7 +490,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public void checkArtifactAssociation(ArtifactType artifactType,
+	public void checkAssociation(ArtifactType artifactType,
 			String artifactName, AssociationDirection associationDirection)
 			throws Throwable {
 		Node elementNode = currentNode;
@@ -597,6 +597,61 @@ public abstract class AbstractXpathTest extends AbstractTest {
 				"Cannot find the associated artifact %s '%s'",
 				artifactTypeToString(artifactType), artifactName));
 		pop();
-
+	}
+	
+	
+	
+	
+	
+	public void checkTerminateEventL1() throws Throwable {
+		String xpath = "bpmn:terminateEventDefinition | bpmn:eventDefinitionRef";
+		Node n = findNode(currentNode, xpath);
+		
+		if (n == null) {
+			issue(xpath, "Cannot find message event definition");
+			return;
+		} else {
+			ok("Message event definition");
+			return;
+		}
+	}
+	
+	public void checkSignalEventL1() throws Throwable {
+		String xpath = "bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef";
+		Node n = findNode(currentNode, xpath);
+		
+		if (n == null) {
+			issue(xpath, "Cannot find message event definition");
+			return;
+		} else {
+			ok("Message event definition");
+			return;
+		}
+	}
+	
+	public void checkMessageEventL1() throws Throwable {
+		String xpath = "bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef";
+		Node n = findNode(currentNode, xpath);
+		
+		if (n == null) {
+			issue(xpath, "Cannot find message event definition");
+			return;
+		} else {
+			ok("Message event definition");
+			return;
+		}
+	}
+	
+	public void checkTimerEventL1() throws Throwable {
+		String xpath = "bpmn:timerEventDefinition | bpmn:eventDefinitionRef";
+		Node n = findNode(currentNode, xpath);
+		
+		if (n == null) {
+			issue(xpath, "Cannot find message event definition");
+			return;
+		} else {
+			ok("Message event definition");
+			return;
+		}
 	}
 }
