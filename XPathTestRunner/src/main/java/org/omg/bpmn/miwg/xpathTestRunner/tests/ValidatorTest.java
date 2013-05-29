@@ -19,7 +19,6 @@ import org.w3c.dom.ls.LSResourceResolver;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
-
 public class ValidatorTest extends AbstractTest {
 
 	class LocalResourcsResolver implements LSResourceResolver {
@@ -51,9 +50,12 @@ public class ValidatorTest extends AbstractTest {
 	}
 
 	@Override
-	public boolean isApplicable(String fileName) {
+	public boolean isApplicable(File file) {
+		String dir = file.getParentFile().getName();
+		String fileName = file.getName();
 		return fileName.endsWith("-export.bpmn")
-				|| fileName.endsWith("-roundtrip.bpmn");
+				|| fileName.endsWith("-roundtrip.bpmn")
+				 || (dir.equals("Reference") && fileName.endsWith(".bpmn"));
 	}
 
 	@Override
@@ -62,7 +64,7 @@ public class ValidatorTest extends AbstractTest {
 	}
 
 	@Override
-	public void execute(String fileName) throws Throwable {
+	public void execute(File file) throws Throwable {
 		ValidationErrorHandler eHandler = new ValidationErrorHandler();
 		eHandler.setTestOutput(out);
 
@@ -83,7 +85,7 @@ public class ValidatorTest extends AbstractTest {
 		reader.setErrorHandler(eHandler);
 
 		try {
-			parser.parse(fileName, (DefaultHandler) null);
+			parser.parse(file, (DefaultHandler) null);
 		} catch (Exception e) {
 			issue("Validation failed", "Exception: " + e.getMessage());
 			e.printStackTrace(System.out);

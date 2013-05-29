@@ -1,5 +1,6 @@
 package org.omg.bpmn.miwg.xpathTestRunner;
 
+import java.io.File;
 import java.util.List;
 
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestInfo;
@@ -33,10 +34,10 @@ public class Main {
 		List<TestInfo> testFiles = TestInfo.findTestFiles(manager, args[0]);
 
 		for (TestInfo tfi : testFiles) {
-			String file = tfi.getFile().getCanonicalPath();
+			File file = tfi.getFile();
 
 			System.out.println();
-			System.out.println("EXAMINING FILE " + file);
+			System.out.println("EXAMINING FILE " + file.getCanonicalPath());
 			System.out.println();
 
 			TestOutput out = new TestOutput(tfi, args[1]);

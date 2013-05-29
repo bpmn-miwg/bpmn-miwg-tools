@@ -1,5 +1,6 @@
 package org.omg.bpmn.miwg.xpathTestRunner.base;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,33 +29,33 @@ public class TestManager {
 		this.application = application;
 	}
 
-	public boolean isAnyTestApplicable(String fileName) {
+	public boolean isAnyTestApplicable(File file) {
 		for (Test test : registeredTests) {
-			if (test.isApplicable(fileName))
+			if (test.isApplicable(file))
 				return true;
 		}
 		return false;
 	}
 
-	public void printApplicableTests(String fileName, TestOutput out) {
-		out.println("Applicable Tests for " + fileName + ":");
+	public void printApplicableTests(File file, TestOutput out) {
+		out.println("Applicable Tests for " + file + ":");
 		for (Test test : registeredTests) {
-			if (test.isApplicable(fileName)) {
+			if (test.isApplicable(file)) {
 				out.println(" - " + test.getName());
 			}
 		}
 	}
 
-	public void executeTests(String fileName, TestOutput out) throws Throwable {
-		out.println("Running Tests for " + fileName + ":");
+	public void executeTests(File file, TestOutput out) throws Throwable {
+		out.println("Running Tests for " + file + ":");
 		int numOK = 0;
 		int numIssue = 0;
 		for (Test test : registeredTests) {
-			if (test.isApplicable(fileName)) {
+			if (test.isApplicable(file)) {
 				out.println("> TEST " + test.getName());
 				try {
 					test.init(out);
-					test.execute(fileName);
+					test.execute(file);
 				} catch (Exception e) {
 					out.println("Exception during test execution of "
 							+ test.getName());

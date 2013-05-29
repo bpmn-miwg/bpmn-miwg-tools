@@ -57,7 +57,7 @@ public class TestInfo {
 
 						@Override
 						public boolean accept(File folder, String name) {
-							return testManager.isAnyTestApplicable(name);
+							return testManager.isAnyTestApplicable(new File(folder, name));
 						}
 
 					});

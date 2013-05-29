@@ -1,5 +1,6 @@
 package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -64,11 +65,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	protected void loadFile(String fileName) throws Throwable {
+	protected void loadFile(File file) throws Throwable {
 		factory = DocumentBuilderFactory.newInstance();
 		factory.setNamespaceAware(true);
 		builder = factory.newDocumentBuilder();
-		doc = builder.parse(fileName);
+		doc = builder.parse(file);
 		XPathFactory xpathfactory = XPathFactory.newInstance();
 		xpath = xpathfactory.newXPath();
 		xpath.setNamespaceContext(new NameSpaceContexts());

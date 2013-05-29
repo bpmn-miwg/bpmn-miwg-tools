@@ -139,11 +139,11 @@ public class XPathTest {
 			out.println("Running Tests for " + test.getName() + ":");
 			int numOK = 0;
 			int numIssue = 0;
-			if (test.isApplicable(info.getFile().getName())) {
+			if (test.isApplicable(info.getFile())) {
 				out.println("> TEST " + test.getName());
 				try {
 					test.init(out);
-					test.execute(info.getFile().getAbsolutePath());
+					test.execute(info.getFile());
 				} catch (FileNotFoundException e) {
 					// Most likely this is because this tool has not
 					// provided a test file

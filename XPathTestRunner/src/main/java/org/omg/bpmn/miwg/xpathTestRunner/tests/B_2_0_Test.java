@@ -14,18 +14,17 @@ public class B_2_0_Test extends AbstractXpathTest {
 	}
 
 	@Override
-	public boolean isApplicable(String fileName) {
-		File f = new File(fileName);
-		String fn = f.getName();
+	public boolean isApplicable(File file) {
+		String fn = file.getName();
 		return fn.equals("B.2.0-export.bpmn")
 				|| fn.equals("B.2.0-roundtrip.bpmn") || fn.equals("B.2.0.bpmn");
 	}
 
 	@Override
-	public void execute(String fileName) throws Throwable {
+	public void execute(File file) throws Throwable {
 
 		{
-			loadFile(fileName);
+			loadFile(file);
 
 			selectElement("//bpmn:collaboration");
 
