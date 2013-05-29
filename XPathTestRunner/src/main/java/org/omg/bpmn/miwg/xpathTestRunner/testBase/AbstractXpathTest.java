@@ -26,8 +26,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-
-
 public abstract class AbstractXpathTest extends AbstractTest {
 
 	private Node currentNode;
@@ -134,8 +132,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String lastName = null;
 		for (StackTraceElement e : stacktrace) {
 			String methodName = e.getMethodName();
-			
-			//System.err.println(" >> " + methodName);
+
+			// System.err.println(" >> " + methodName);
 
 			if (methodName.startsWith("navigate")
 					|| methodName.startsWith("select")
@@ -441,47 +439,151 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		ok("Default Sequence Flow");
 	}
-	
+
 	public void checkAttribute(String attribute) throws Throwable {
 		if (currentNode == null) {
 			issue("", "No current node");
 			return;
 		}
-		
+
 		String s = getAttribute(attribute);
-		
-		if (s == null)
-		{
+
+		if (s == null) {
 			// Issue is thrown by getAttribute
 			return;
 		}
-		
-		
-		ok("Attribute " + attribute + "exists"); 
+
+		ok("Attribute " + attribute + "exists");
 	}
-	
+
 	public void checkAttribute(String attribute, String value) throws Throwable {
 		if (currentNode == null) {
 			issue("", "No current node");
 			return;
 		}
-		
+
 		String s = getAttribute(attribute);
-		
-		if (s == null)
-		{
+
+		if (s == null) {
 			// Issue is thrown by getAttribute
 			return;
 		}
-		
-		if (!s.equals(value))
-		{
-			issue(attribute, "Attribute does not have the expected value '" + value + "'");
+
+		if (!s.equals(value)) {
+			issue(attribute, "Attribute does not have the expected value '"
+					+ value + "'");
 			return;
 		}
 
-		ok("Attribute " + attribute + "=" + value); 
+		ok("Attribute " + attribute + "=" + value);
 	}
-	
-	
+
+	private String artifactTypeToString(ArtifactType artifactType) {
+		switch (artifactType) {
+		case DataStoreReference:
+			return "dataStoreReference";
+		default:
+			assert false;
+			return null;
+		}
+	}
+
+	public void checkArtifactAssociation(ArtifactType artifactType,
+			String artifactName, AssociationDirection associationDirection)
+			throws Throwable {
+		Node elementNode = currentNode;
+
+		push(elementNode);
+
+		String data;
+		String setDataRef;
+		String dataAssociationRef;
+		String artifactRef;
+
+		switch (associationDirection) {
+		case Input:
+			data = "bpmn:ioSpecification/bpmn:dataInput";
+			setDataRef = "bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()='%s']";
+			dataAssociationRef = "bpmn:dataInputAssociation/bpmn:targetRef[text()='%s']";
+			artifactRef = "../bpmn:sourceRef";
+			break;
+		case Output:
+			data = "bpmn:ioSpecification/bpmn:dataOutput";
+			setDataRef = "bpmn:ioSpecification/bpmn:outputSet/bpmn:dataOutputRefs[text()='%s']";
+			dataAssociationRef = "bpmn:dataOutputAssociation/bpmn:sourceRef[text()='%s']";
+			artifactRef = "../bpmn:targetRef";
+			break;
+		default:
+			data = null;
+			setDataRef = null;
+			dataAssociationRef = null;
+			artifactRef = null;
+			assert false;
+		}
+
+		for (Node n : findNodes(elementNode, data)) {
+			String id = getAttribute(n, "id");
+
+			{
+				String setDataRef2 = String.format(setDataRef, id);
+				Node dataRefNode = findNode(elementNode, setDataRef2);
+
+				if (dataRefNode == null) {
+					issue(setDataRef2, "Cannot find node");
+					pop();
+					return;
+				}
+			}
+
+			{
+				String dataAssociationRef2 = String.format(dataAssociationRef,
+						id);
+				Node dataAssociationRefNode = findNode(elementNode,
+						dataAssociationRef2);
+
+				if (dataAssociationRefNode == null) {
+					issue(dataAssociationRef2, "Cannot find node");
+					pop();
+					return;
+				} else {
+					Node artifactRefNode = findNode(dataAssociationRefNode,
+							artifactRef);
+
+					if (artifactRefNode == null) {
+						issue(artifactRef, "Cannot find node");
+						pop();
+						return;
+					}
+
+					String artifactID = artifactRefNode.getTextContent();
+					String artifact;
+					switch (artifactType) {
+					case DataStoreReference:
+						artifact = "//bpmn:dataStoreReference[@id='%s']";
+						break;
+					default:
+						artifact = null;
+						assert false;
+					}
+
+					String artifact2 = String.format(artifact, artifactID);
+					Node artifactNode = findNode(elementNode, artifact2);
+					if (getAttribute(artifactNode, "name").equals(artifactName)) {
+						ok(String.format("Association reference %s '%s' found",
+								artifactTypeToString(artifactType),
+								artifactName));
+						pop();
+						return;
+					}
+				}
+
+			}
+
+		}
+
+		issue(null, String.format(
+				"Cannot find the associated artifact %s '%s'",
+				artifactTypeToString(artifactType), artifactName));
+
+	}
 }

@@ -3,6 +3,8 @@ package org.omg.bpmn.miwg.xpathTestRunner.tests;
 import java.io.File;
 
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.ArtifactType;
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.AssociationDirection;
 
 public class B_2_0_Test extends AbstractXpathTest {
 
@@ -131,15 +133,9 @@ public class B_2_0_Test extends AbstractXpathTest {
 				
 				navigateElement("bpmn:subProcess[@name='Collapsed Sub-Process 2']", "L2CollapsedSubProcess");
 
-				/*
-				Data Association is ABSTRACT: Data Input Association and Data Output Association will appear in the
-				XML serialization. These both have REQUIRED attributes[sourceRef and targetRef] which refer to
-				itemAwareElements. To be consistent with the metamodel, this will require the following additional elements:
-				ioSpecification, inputSet, outputSet, Data Input, Data Output. When a BPMN editor draws a Data
-				Association to an Activity or Event it should generate this supporting invisible substructure. Otherwise, the
-				metamodel would have to be changed to make sourceRef and targetRef optional or allow reference to
-				non-itemAwareElements, e.g., Activity and Event.
-				*/
+				checkArtifactAssociation(ArtifactType.DataStoreReference, "Data Store Reference", AssociationDirection.Input);
+				
+				
 				
 				pop();
 			}
