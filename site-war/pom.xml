@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.omg.bpmn.miwg</groupId>
+    <artifactId>tools</artifactId>
+    <version>0.1</version>
+    <relativePath>..</relativePath>
+  </parent>
+  
+  <artifactId>site-war</artifactId>
+  <packaging>war</packaging>
+  <name>BPMN MIWG Tools Site</name>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>xpath</artifactId>
+      <version>${project.version}</version>
+      <classifier>site</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>tools</artifactId>
+      <version>${project.version}</version>
+      <classifier>site</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>xml-compare</artifactId>
+      <version>${project.version}</version>
+      <classifier>site</classifier>
+    </dependency>
+  </dependencies>
+  
+  <build>
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+        <version>2.3.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>prepare-package</phase>
+            <configuration>
+              <target>
+
+                <echo>Extract docs for each tool and the overall site ready for packaging as war file.</echo>
+                <unzip src="${settings.localRepository}/${maven.dependency.org.omg.bpmn.miwg:tools:site:jar.path}"
+					   dest="${project.build.directory}/${project.build.finalName}">
+					<patternset>
+						<include name="**/*"/>
+						<exclude name="**/.*"/>
+					</patternset>
+				</unzip>
+                
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+  </build>
+</project>
