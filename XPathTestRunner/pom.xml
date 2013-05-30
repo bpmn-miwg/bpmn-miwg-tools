@@ -43,6 +43,35 @@
         </configuration>
         <version>2.3.2</version>
       </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>post-site</phase>
+            <configuration>
+              <target>
+
+                <echo>Install ${project.name} site into repo at ${settings.localRepository}</echo>
+                <exec executable="mvn">
+                  <arg value="-o"/>
+                  <arg value="install:install-file"/>
+                  <arg value="-DgroupId=${project.groupId}"/>
+                  <arg value="-DartifactId=${project.artifactId}"/>
+                  <arg value="-Dversion=${project.version}"/>
+                  <arg value="-Dpackaging=${project.packaging}"/>
+                  <arg value="-Dclassifier=site"/>
+                  <arg value="-Dfile=${project.build.directory}/${project.groupId}.${project.artifactId}-${project.version}-site.jar"/>
+                </exec>
+                
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
 
   </build>
