@@ -58,7 +58,7 @@ public class XPathTest {
 	private static final String A_DIR = "A - Fixed Digrams with Variations of Attributes";
 
 	private static final String B_DIR = "B - Validate that tool covers conformance class set";
-	private static final String RPT_DIR = "target" + S + "surefire-reports";
+	private static final String RPT_DIR = "target" + S + "site";
 
 	private static File baseDir;
 

@@ -57,7 +57,7 @@ public class XmlCompareTest {
 
 	private static final String B_DIR = "B - Validate that tool covers conformance class set";
 
-	private static final String RPT_DIR = "target" + S + "surefire-reports";
+	private static final String RPT_DIR = "target" + S + "site";
 
 	private static File baseDir;
 
