@@ -10,6 +10,12 @@
   </parent>
   <artifactId>xpath</artifactId>
   <name>BPMN 2.0 XPath Test Runner</name>
+  <description>
+    <![CDATA[
+       Asserts that expected content from the reference model exists in each vendor model. Read more 
+      at: https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner
+    ]]>
+  </description>
   <packaging>jar</packaging>
 
   <inceptionYear>2013</inceptionYear>
@@ -61,7 +67,7 @@
                   <arg value="-Dversion=${project.version}"/>
                   <arg value="-Dpackaging=${project.packaging}"/>
                   <arg value="-Dclassifier=site"/>
-                  <arg value="-Dfile=${project.build.directory}/${project.groupId}.${project.artifactId}-${project.version}-site.jar"/>
+                  <arg value="-Dfile=${project.build.directory}/${project.artifactId}-${project.version}-site.jar"/>
                 </exec>
                 
               </target>

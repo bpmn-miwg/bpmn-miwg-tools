@@ -10,6 +10,12 @@
   </parent>
   <artifactId>xml-compare</artifactId>
   <name>BPMN 2.0 XML Compare</name>
+  <description>
+    <![CDATA[
+      Utilises XML diff to compare vendor models to reference ones. Read more 
+      at: https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN 2.0 XML Compare
+    ]]>
+  </description>
   <packaging>jar</packaging>
 
   <inceptionYear>2013</inceptionYear>

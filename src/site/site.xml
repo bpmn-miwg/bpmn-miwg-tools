@@ -30,11 +30,7 @@
   <body>
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
-      <!-- TODO These pages may be ones we want to write...
-      <item name="Goals" href="goals.html"/>
-      <item name="Usage" href="usage.html"/>
-      <item name="FAQ" href="faq.html"/>
-      -->
+      <item name="For Tool Developers" href="tool-dev.html"/>
       <item name="License" href="license.html"/>
       <item name="Team" href="team-list.html"/>
     </menu>
