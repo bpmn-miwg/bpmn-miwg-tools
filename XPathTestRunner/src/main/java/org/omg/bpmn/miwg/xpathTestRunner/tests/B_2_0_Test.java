@@ -145,7 +145,32 @@ public class B_2_0_Test extends AbstractXpathTest {
 						"Receive Task 20");
 
 				{
-					// // FLOW following the event message catch
+					// Flow following the intermediate timer event
+					
+					{
+						selectElement("bpmn:callActivity", "Expanded Call Activity");
+						
+						pop();
+					}
+
+					n = navigateFollowingElement("bpmn:serviceTask", "Service Task 15");
+					navigateBoundaryEvent("Boundary Intermediate Event Interrupting Conditional");
+					checkConditionalEventL1();
+					checkCancelActivity(true);
+					
+					navigateFollowingElement("bpmn:intermediateThrowEvent",
+							"Intermediate Event Link Throw");
+					checkLinkEventL1();
+					
+					navigateFollowingElement(n, "bpmn:userTask", "User Task 16");
+					
+					navigateFollowingElement("bpmn:endEvent", "End Event 6 Message");
+					checkMessageFlow("Message Flow 2", Direction.Output);
+					
+				}
+
+				{
+					// FLOW following the event message catch
 
 					navigateElementX(
 							"bpmn:subProcess[@name='Collapsed Sub-Process 2']",
@@ -168,9 +193,13 @@ public class B_2_0_Test extends AbstractXpathTest {
 					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Escalation");
 					checkEscalationEventL1();
 
-					navigateFollowingElement("bpmn:intermediateThrowEvent",
-							"Intermediate Event Link Throw");
-					checkLinkEventL1();
+					navigateFollowingElement("bpmn:task", "Task 18");
+
+					navigateFollowingElement("bpmn:intermediateThrowEvent", "");
+					checkEscalationEventL1();
+
+					navigateFollowingElement("bpmn:task", "Task 23");			
+					
 
 					n = navigateFollowingElement(n, "bpmn:task", "Task 17");
 					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Message");
@@ -188,49 +217,47 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				}
 
-				navigateElementX("bpmn:task[@name='Task 18']");
-
-				navigateFollowingElement("bpmn:intermediateThrowEvent", "");
-				checkEscalationEventL1();
-
-				navigateFollowingElement("bpmn:task", "Task 23");
-
-				navigateElementX("bpmn:receiveTask[@name='Receive Task 20']");
-
-				n = navigateFollowingElement("bpmn:task", "Task 21");
-				navigateBoundaryEvent("Boundary Intermediate Event Interrupting Timer");
-				checkCancelActivity(true);
-				checkTimerEventL1();
-
-				navigateFollowingElement("bpmn:task", "Task 27");
-
-				navigateFollowingElement("bpmn:inclusiveGateway",
-						"Inclusive Gateway 6");
-
 				{
-					selectFollowingElement(n, "bpmn:subProcess",
-							"Expanded Sub-Process 2");
-					navigateElement("bpmn:startEvent", "Start Event 5 None");
+					// FLOW following the receive Task 20
 
-					navigateFollowingElement("bpmn:serviceTask",
-							"Service Task 22");
-					checkMultiInstanceParallel();
+					navigateElementX("bpmn:receiveTask[@name='Receive Task 20']");
+
+					n = navigateFollowingElement("bpmn:task", "Task 21");
+					navigateBoundaryEvent("Boundary Intermediate Event Interrupting Timer");
+					checkCancelActivity(true);
+					checkTimerEventL1();
+
+					navigateFollowingElement("bpmn:task", "Task 27");
+
+					navigateFollowingElement("bpmn:inclusiveGateway",
+							"Inclusive Gateway 6");
+
+					{
+						selectFollowingElement(n, "bpmn:subProcess",
+								"Expanded Sub-Process 2");
+						navigateElement("bpmn:startEvent", "Start Event 5 None");
+
+						navigateFollowingElement("bpmn:serviceTask",
+								"Service Task 22");
+						checkMultiInstanceParallel();
+
+						navigateFollowingElement("bpmn:endEvent",
+								"End Event 8 None");
+
+						pop();
+					}
+
+					navigateFollowingElement("bpmn:task", "Task 23");
+					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Signal");
+					checkSignalEventL1();
+					checkCancelActivity(false);
+
+					navigateFollowingElement("bpmn:task", "Task 24");
 
 					navigateFollowingElement("bpmn:endEvent",
-							"End Event 8 None");
+							"End Event 11 Escatation");
 
-					pop();
 				}
-
-				navigateFollowingElement("bpmn:task", "Task 23");
-				navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Signal");
-				checkSignalEventL1();
-				checkCancelActivity(false);
-
-				navigateFollowingElement("bpmn:task", "Task 24");
-
-				navigateFollowingElement("bpmn:endEvent",
-						"End Event 11 Escatation");
 
 				pop();
 			}
