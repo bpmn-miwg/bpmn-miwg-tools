@@ -182,7 +182,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	private String currentNodeID() {
+	private String getCurrentNodeID() {
 		return getAttribute(currentNode, "id");
 	}
 
@@ -391,7 +391,16 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void navigateBoundaryEvent(String name) throws Throwable {
-		String currentElementID = getAttribute(currentNode, "id");
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		if (head() == null) {
+			issue(null, "Parent failed");
+			return;
+		}
+		
+		String currentElementID = getCurrentNodeID();
 		String xpathBoundaryElement = String.format(
 				"bpmn:boundaryEvent[@name='%s' and @attachedToRef='%s']", name,
 				currentElementID);
@@ -594,6 +603,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	protected void checkAttribute(String attribute, boolean value)
 			throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
 		String v = getAttribute(currentNode, attribute);
 		if (v == null)
 			return;
@@ -621,6 +634,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	public void checkAssociation(ArtifactType artifactType,
 			String artifactName, Direction associationDirection)
 			throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		
 		Node elementNode = currentNode;
 
 		push(elementNode);
@@ -728,6 +746,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkTerminateEvent() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		
 		String xpath = "bpmn:terminateEventDefinition | bpmn:eventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -741,6 +764,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkSignalEvent() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		
 		String xpath = "bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -754,6 +782,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkMessageEvent() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		
 		String xpath = "bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -767,6 +800,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkTimerEvent() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		
 		String xpath = "bpmn:timerEventDefinition | bpmn:eventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -780,6 +818,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkEscalationEvent() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		
 		String xpath = "bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -793,6 +836,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkLinkEvent() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		
 		String xpath = "bpmn:linkEventDefinition | bpmn:linkDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -806,6 +854,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkErrorEvent() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+		
 		String xpath = "bpmn:errorEventDefinition | bpmn:errorDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -819,6 +872,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkConditionalEvent() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+
 		String xpath = "bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -842,6 +900,15 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkMessageFlow(String name, Direction direction)
 			throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+
+		if (head() == null) {
+			issue(null, "Parent failed");
+			return;
+		}
 
 		String dir;
 		switch (direction) {
@@ -858,7 +925,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		String xpath = String.format(
 				"//bpmn:messageFlow[@name='%s' and @%s='%s']", name, dir,
-				currentNodeID());
+				getCurrentNodeID());
 
 		Node n = findNode(xpath);
 		if (n == null) {
@@ -870,6 +937,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkMultiInstance(boolean sequential) throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+
+		
 		String xpath = "bpmn:multiInstanceLoopCharacteristics";
 		Node n = findNode(currentNode, xpath);
 
