@@ -6,14 +6,12 @@ import java.util.List;
 
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Test;
 
-
-
 public class TestManager {
 
 	private List<Test> registeredTests = new ArrayList<Test>();
 
 	private String application = null;
-	
+
 	public String getApplication() {
 		return application;
 	}

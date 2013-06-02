@@ -4,8 +4,6 @@ import java.io.File;
 
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 
-
-
 public class B_1_0_Test extends AbstractXpathTest {
 
 	@Override
@@ -16,8 +14,8 @@ public class B_1_0_Test extends AbstractXpathTest {
 	@Override
 	public boolean isApplicable(File file) {
 		String fn = file.getName();
-		return fn.equals("B.1.0-export.bpmn")
-				|| fn.equals("B.1.0-roundtrip.bpmn") || fn.equals("B.1.0.bpmn");
+		return // fn.equals("B.1.0-export.bpmn")
+		fn.equals("B.1.0-roundtrip.bpmn") || fn.equals("B.1.0.bpmn");
 	}
 
 	@Override
@@ -74,7 +72,7 @@ public class B_1_0_Test extends AbstractXpathTest {
 				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2']");
 				navigateElementX("bpmn:endEvent[@name='End Event Terminate']");
 				checkTerminateEvent();
-				
+
 				navigateElementX("bpmn:serviceTask[@name='Service Task 7']");
 				navigateElementX("bpmn:dataObjectReference[@name='Data Object']");
 				navigateElementX("bpmn:dataStoreReference[@name='Data Store Reference']");

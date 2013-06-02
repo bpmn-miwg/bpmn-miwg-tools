@@ -17,8 +17,8 @@ public class B_2_0_Test extends AbstractXpathTest {
 	@Override
 	public boolean isApplicable(File file) {
 		String fn = file.getName();
-		return fn.equals("B.2.0-export.bpmn")
-				|| fn.equals("B.2.0-roundtrip.bpmn") || fn.equals("B.2.0.bpmn");
+		return // fn.equals("B.2.0-export.bpmn")||
+		fn.equals("B.2.0-roundtrip.bpmn") || fn.equals("B.2.0.bpmn");
 	}
 
 	@Override
@@ -289,63 +289,71 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				{
 					navigateElement("bpmn:startEvent", "Start Event 6 Signal");
-					
+
 					navigateFollowingElement("bpmn:task", "Task 25");
-					
-					navigateFollowingElement("bpmn:parallelGateway", "Parallel Gateway 5");
-					
+
+					navigateFollowingElement("bpmn:parallelGateway",
+							"Parallel Gateway 5");
+
 					navigateFollowingElement("bpmn:task", "Task 26");
-					
-					navigateFollowingElement("bpmn:intermediateThrowEvent", "Intermediate Event Signal Throw 2");
-					
-					navigateFollowingElement("bpmn:inclusiveGateway", "Inclusive Gateway 6");
-					
+
+					navigateFollowingElement("bpmn:intermediateThrowEvent",
+							"Intermediate Event Signal Throw 2");
+
+					navigateFollowingElement("bpmn:inclusiveGateway",
+							"Inclusive Gateway 6");
+
 					navigateFollowingElement("bpmn:task", "Task 28");
-					
-					navigateFollowingElement("bpmn:parallelGateway", "Parallel Gateway 7");
-					
+
+					navigateFollowingElement("bpmn:parallelGateway",
+							"Parallel Gateway 7");
+
 					navigateFollowingElement("bpmn:endEvent",
 							"End Event 11 Escatation");
-					
-					
-					navigateElement("bpmn:parallelGateway", "Parallel Gateway 5");
-					
-					navigateFollowingElement("bpmn:subProcess", "Expanded Sub-Process 3");
-					
-					navigateElement("bpmn:intermediateCatchEvent", "Intermediate Event Link Catch");
-					
-					
+
+					navigateElement("bpmn:parallelGateway",
+							"Parallel Gateway 5");
+
+					navigateFollowingElement("bpmn:subProcess",
+							"Expanded Sub-Process 3");
+
+					navigateElement("bpmn:intermediateCatchEvent",
+							"Intermediate Event Link Catch");
+
 					{
-						selectFollowingElement("bpmn:subProcess", "Expanded Sub-Process 3");
+						selectFollowingElement("bpmn:subProcess",
+								"Expanded Sub-Process 3");
 
 						navigateElement("bpmn:startEvent", "Start Event 7");
-						
-						navigateFollowingElement("bpmn:intermediateCatchEvent", "Intermediate Event Signal Catch");
+
+						navigateFollowingElement("bpmn:intermediateCatchEvent",
+								"Intermediate Event Signal Catch");
 						checkSignalEvent();
-						
+
 						navigateFollowingElement("bpmn:task", "Task 31");
-						
-						n = navigateFollowingElement("bpmn:exclusiveGateway", "Exclusive Gateway 7");
-						
-						navigateFollowingElement(n, "bpmn:endEvent", "End Event 12");
-						
-						navigateFollowingElement(n, "bpmn:endEvent", "End Event 13 Error");
+
+						n = navigateFollowingElement("bpmn:exclusiveGateway",
+								"Exclusive Gateway 7");
+
+						navigateFollowingElement(n, "bpmn:endEvent",
+								"End Event 12");
+
+						navigateFollowingElement(n, "bpmn:endEvent",
+								"End Event 13 Error");
 						checkErrorEvent();
-						
-						
-						
+
 						pop();
 					}
-					
+
 					navigateFollowingElement("bpmn:task", "Task 32");
 					navigateBoundaryEvent("");
-					
+
 					navigateFollowingElement("bpmn:task", "Task 33");
-					
+
 					navigateFollowingElement("bpmn:endEvent", "End Event 14");
-					
+
 				}
-				
+
 				pop();
 			}
 

@@ -4,13 +4,12 @@ import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
 import org.w3c.dom.Node;
 
-
-
 public class L2MessageFlowChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {
-		test.navigateElementXByParam("//bpmn:message[@id='%s']", "./@messageRef");
+		test.navigateElementXByParam("//bpmn:message[@id='%s']",
+				"./@messageRef");
 	}
 
 	@Override

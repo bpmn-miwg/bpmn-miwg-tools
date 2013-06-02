@@ -1,10 +1,11 @@
 package org.omg.bpmn.miwg.xpathTestRunner.testBase;
+
 import java.util.Iterator;
 
 import javax.xml.namespace.NamespaceContext;
 
 public class NameSpaceContexts implements NamespaceContext {
-	
+
 	public String getNamespaceURI(String prefix) {
 		if ("bpmn".equals(prefix))
 			return "http://www.omg.org/spec/BPMN/20100524/MODEL";

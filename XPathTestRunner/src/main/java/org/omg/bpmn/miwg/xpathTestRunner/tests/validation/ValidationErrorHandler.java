@@ -4,8 +4,6 @@ import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-
-
 public class ValidationErrorHandler extends DefaultHandler {
 	private String errMessage = "";
 	public int numWarning = 0;
@@ -20,8 +18,8 @@ public class ValidationErrorHandler extends DefaultHandler {
 
 	public void warning(SAXParseException e) {
 		numWarning++;
-		out.println("Warning Line " + e.getLineNumber() + ": "
-				+ e.getMessage() + "\n");
+		out.println("Warning Line " + e.getLineNumber() + ": " + e.getMessage()
+				+ "\n");
 	}
 
 	public void error(SAXParseException e) {

@@ -34,7 +34,7 @@ public class TestInfo {
 		this.application = application;
 		this.testFile = testFile;
 	}
-	
+
 	public static List<TestInfo> findTestFiles(final TestManager testManager,
 			String rootDir) throws IOException {
 		System.out.println("Test files in " + rootDir);
@@ -57,7 +57,8 @@ public class TestInfo {
 
 						@Override
 						public boolean accept(File folder, String name) {
-							return testManager.isAnyTestApplicable(new File(folder, name));
+							return testManager.isAnyTestApplicable(new File(
+									folder, name));
 						}
 
 					});
@@ -69,8 +70,7 @@ public class TestInfo {
 				tfi.testFile = f.getName();
 
 				if (testManager.getApplication() == null
-						|| testManager.getApplication()
-								.equals(tfi.application))
+						|| testManager.getApplication().equals(tfi.application))
 					allTestFiles.add(tfi);
 			}
 		}

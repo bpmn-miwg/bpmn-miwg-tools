@@ -10,8 +10,6 @@ import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
 
-
-
 public class Main {
 
 	public static void main(String[] args) throws Throwable {

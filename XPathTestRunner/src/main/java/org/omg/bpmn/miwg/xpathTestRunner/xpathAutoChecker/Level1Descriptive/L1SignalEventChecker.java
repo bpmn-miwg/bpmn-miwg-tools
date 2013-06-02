@@ -4,8 +4,6 @@ import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
 import org.w3c.dom.Node;
 
-
-
 public class L1SignalEventChecker implements XpathAutoChecker {
 
 	@Override

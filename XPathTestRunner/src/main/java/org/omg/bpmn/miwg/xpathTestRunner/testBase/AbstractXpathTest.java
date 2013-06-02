@@ -804,7 +804,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 	}
-	
+
 	public void checkErrorEvent() throws Throwable {
 		String xpath = "bpmn:errorEventDefinition | bpmn:errorDefinitionRef";
 		Node n = findNode(currentNode, xpath);

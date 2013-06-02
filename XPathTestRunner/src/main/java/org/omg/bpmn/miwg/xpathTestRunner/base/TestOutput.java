@@ -18,15 +18,13 @@ public class TestOutput {
 		if (!file.getParentFile().exists()) {
 			file.getParentFile().mkdirs();
 		}
-		fileWriter = new PrintWriter(new BufferedWriter(new FileWriter(
-				file)));
+		fileWriter = new PrintWriter(new BufferedWriter(new FileWriter(file)));
 	}
 
 	public TestOutput(Test test, TestInfo info, String outputFolder)
 			throws IOException {
 		File file = new File(outputFolder, test.getName() + "-"
-				+ info.getApplication() + "-"
-				+ info.getTest() + ".txt");
+				+ info.getApplication() + "-" + info.getTest() + ".txt");
 		if (!file.getParentFile().exists()) {
 			file.getParentFile().mkdirs();
 		}
@@ -37,7 +35,7 @@ public class TestOutput {
 		System.out.println(line);
 		fileWriter.println(line);
 	}
-	
+
 	public void println() {
 		println("");
 	}
