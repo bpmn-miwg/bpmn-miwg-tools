@@ -727,7 +727,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		pop();
 	}
 
-	public void checkTerminateEventL1() throws Throwable {
+	public void checkTerminateEvent() throws Throwable {
 		String xpath = "bpmn:terminateEventDefinition | bpmn:eventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -740,7 +740,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public void checkSignalEventL1() throws Throwable {
+	public void checkSignalEvent() throws Throwable {
 		String xpath = "bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -753,7 +753,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public void checkMessageEventL1() throws Throwable {
+	public void checkMessageEvent() throws Throwable {
 		String xpath = "bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -766,7 +766,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public void checkTimerEventL1() throws Throwable {
+	public void checkTimerEvent() throws Throwable {
 		String xpath = "bpmn:timerEventDefinition | bpmn:eventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -779,7 +779,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public void checkEscalationEventL1() throws Throwable {
+	public void checkEscalationEvent() throws Throwable {
 		String xpath = "bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -792,7 +792,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public void checkLinkEventL1() throws Throwable {
+	public void checkLinkEvent() throws Throwable {
 		String xpath = "bpmn:linkEventDefinition | bpmn:linkDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -804,8 +804,21 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 	}
+	
+	public void checkErrorEvent() throws Throwable {
+		String xpath = "bpmn:errorEventDefinition | bpmn:errorDefinitionRef";
+		Node n = findNode(currentNode, xpath);
 
-	public void checkConditionalEventL1() throws Throwable {
+		if (n == null) {
+			issue(xpath, "Cannot find error event definition");
+			return;
+		} else {
+			ok("Error event definition");
+			return;
+		}
+	}
+
+	public void checkConditionalEvent() throws Throwable {
 		String xpath = "bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 

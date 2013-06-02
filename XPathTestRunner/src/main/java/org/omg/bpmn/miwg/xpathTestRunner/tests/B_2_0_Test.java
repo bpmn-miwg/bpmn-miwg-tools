@@ -38,7 +38,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
 
 				navigateElementX("bpmn:startEvent[@name='Start Event 1 Timer']");
-				checkTimerEventL1();
+				checkTimerEvent();
 
 				navigateElementX("bpmn:task[@name='Abstract Task 1']");
 
@@ -61,7 +61,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				navigateElementX("bpmn:serviceTask[@name='Service Task 4']");
 
 				navigateElementX("bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1']");
-				checkSignalEventL1();
+				checkSignalEvent();
 
 				{
 					selectElement("bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']");
@@ -74,11 +74,11 @@ public class B_2_0_Test extends AbstractXpathTest {
 				navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Conditional");
 				checkCancelActivity(false);
 				checkParallelMultiple(false);
-				checkConditionalEventL1();
+				checkConditionalEvent();
 
 				navigateElementX("bpmn:parallelGateway[@name='Parallel Gateway 2']");
 				navigateElementX("bpmn:endEvent[@name='End Event 1 Message']");
-				checkMessageEventL1();
+				checkMessageEvent();
 				{
 					selectElement("//bpmn:globalUserTask[@name='Call Activity calling a Global User Task']");
 					navigateElementXByParam(
@@ -101,19 +101,19 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				navigateElementX("bpmn:userTask[@name='User Task 8']");
 				navigateBoundaryEvent("");
-				checkEscalationEventL1();
+				checkEscalationEvent();
 
 				navigateFollowingElement("bpmn:task", "Task 9");
 
 				navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Intermediate Event Conditional Catch");
-				checkConditionalEventL1();
+				checkConditionalEvent();
 
 				navigateFollowingElement("bpmn:task", "Task 10");
 				checkMessageFlow("Message Flow 2", Direction.Input);
 
 				navigateFollowingElement("bpmn:endEvent", "End Event 3 Signal");
-				checkSignalEventL1();
+				checkSignalEvent();
 
 				pop();
 			}
@@ -125,7 +125,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				navigateElementX("bpmn:laneSet/bpmn:lane[@name='Lane 2']");
 
 				navigateElement("bpmn:startEvent", "Start Event 2 Message");
-				checkMessageEventL1();
+				checkMessageEvent();
 				checkMessageFlow("Message Flow 1", Direction.Input);
 
 				navigateFollowingElement("bpmn:task", "Task 11");
@@ -139,7 +139,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				navigateFollowingElement(n, "bpmn:intermediateCatchEvent",
 						"Intermediate Event Message Catch");
-				checkMessageEventL1();
+				checkMessageEvent();
 
 				navigateFollowingElement(n, "bpmn:receiveTask",
 						"Receive Task 20");
@@ -165,11 +165,11 @@ public class B_2_0_Test extends AbstractXpathTest {
 								"User Task 13");
 						navigateBoundaryEvent("Boundary Intermediate Event Interrupting Message");
 						checkCancelActivity(true);
-						checkMessageEventL1();
+						checkMessageEvent();
 
 						navigateFollowingElement("bpmn:endEvent",
 								"End Event 5 Terminate");
-						checkTerminateEventL1();
+						checkTerminateEvent();
 
 						navigateFollowingElement(n, "bpmn:serviceTask",
 								"Service Task 14");
@@ -183,12 +183,12 @@ public class B_2_0_Test extends AbstractXpathTest {
 					n = navigateFollowingElement("bpmn:serviceTask",
 							"Service Task 15");
 					navigateBoundaryEvent("Boundary Intermediate Event Interrupting Conditional");
-					checkConditionalEventL1();
+					checkConditionalEvent();
 					checkCancelActivity(true);
 
 					navigateFollowingElement("bpmn:intermediateThrowEvent",
 							"Intermediate Event Link Throw");
-					checkLinkEventL1();
+					checkLinkEvent();
 
 					navigateFollowingElement(n, "bpmn:userTask", "User Task 16");
 
@@ -215,17 +215,17 @@ public class B_2_0_Test extends AbstractXpathTest {
 					}
 
 					navigateElementX("bpmn:intermediateThrowEvent[@name='Intermediate Event Message Throw']");
-					checkMessageEventL1();
+					checkMessageEvent();
 
 					n = navigateElementX("bpmn:callActivity[@name='Collapsed Call Activity']");
 
 					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Escalation");
-					checkEscalationEventL1();
+					checkEscalationEvent();
 
 					navigateFollowingElement("bpmn:task", "Task 18");
 
 					navigateFollowingElement("bpmn:intermediateThrowEvent", "");
-					checkEscalationEventL1();
+					checkEscalationEvent();
 
 					navigateFollowingElement("bpmn:task", "Task 23");
 
@@ -233,7 +233,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Message");
 					checkCancelActivity(false);
 					checkParallelMultiple(false);
-					checkMessageEventL1();
+					checkMessageEvent();
 
 					navigateFollowingElement("bpmn:task", "Task 19");
 
@@ -253,7 +253,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 					n = navigateFollowingElement("bpmn:task", "Task 21");
 					navigateBoundaryEvent("Boundary Intermediate Event Interrupting Timer");
 					checkCancelActivity(true);
-					checkTimerEventL1();
+					checkTimerEvent();
 
 					navigateFollowingElement("bpmn:task", "Task 27");
 
@@ -277,7 +277,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 					navigateFollowingElement("bpmn:task", "Task 23");
 					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Signal");
-					checkSignalEventL1();
+					checkSignalEvent();
 					checkCancelActivity(false);
 
 					navigateFollowingElement("bpmn:task", "Task 24");
@@ -292,6 +292,57 @@ public class B_2_0_Test extends AbstractXpathTest {
 					
 					navigateFollowingElement("bpmn:task", "Task 25");
 					
+					navigateFollowingElement("bpmn:parallelGateway", "Parallel Gateway 5");
+					
+					navigateFollowingElement("bpmn:task", "Task 26");
+					
+					navigateFollowingElement("bpmn:intermediateThrowEvent", "Intermediate Event Signal Throw 2");
+					
+					navigateFollowingElement("bpmn:inclusiveGateway", "Inclusive Gateway 6");
+					
+					navigateFollowingElement("bpmn:task", "Task 28");
+					
+					navigateFollowingElement("bpmn:parallelGateway", "Parallel Gateway 7");
+					
+					navigateFollowingElement("bpmn:endEvent",
+							"End Event 11 Escatation");
+					
+					
+					navigateElement("bpmn:parallelGateway", "Parallel Gateway 5");
+					
+					navigateFollowingElement("bpmn:subProcess", "Expanded Sub-Process 3");
+					
+					navigateElement("bpmn:intermediateCatchEvent", "Intermediate Event Link Catch");
+					
+					
+					{
+						selectFollowingElement("bpmn:subProcess", "Expanded Sub-Process 3");
+
+						navigateElement("bpmn:startEvent", "Start Event 7");
+						
+						navigateFollowingElement("bpmn:intermediateCatchEvent", "Intermediate Event Signal Catch");
+						checkSignalEvent();
+						
+						navigateFollowingElement("bpmn:task", "Task 31");
+						
+						n = navigateFollowingElement("bpmn:exclusiveGateway", "Exclusive Gateway 7");
+						
+						navigateFollowingElement(n, "bpmn:endEvent", "End Event 12");
+						
+						navigateFollowingElement(n, "bpmn:endEvent", "End Event 13 Error");
+						checkErrorEvent();
+						
+						
+						
+						pop();
+					}
+					
+					navigateFollowingElement("bpmn:task", "Task 32");
+					navigateBoundaryEvent("");
+					
+					navigateFollowingElement("bpmn:task", "Task 33");
+					
+					navigateFollowingElement("bpmn:endEvent", "End Event 14");
 					
 				}
 				

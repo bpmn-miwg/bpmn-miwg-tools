@@ -34,7 +34,7 @@ public class B_1_0_Test extends AbstractXpathTest {
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
 				navigateElementX("bpmn:startEvent[@name='Start Event Timer']");
-				checkTimerEventL1();
+				checkTimerEvent();
 				navigateElementX("bpmn:userTask[@name='User Task 2']");
 				navigateElementX("bpmn:serviceTask[@name='Service Task 3']");
 				navigateElementX("bpmn:endEvent[@name='End Event None 1']");
@@ -46,7 +46,7 @@ public class B_1_0_Test extends AbstractXpathTest {
 				navigateElementX(".//bpmn:lane[@name='Lane 1']");
 				navigateElementX(".//bpmn:lane[@name='Lane 2']");
 				navigateElementX("bpmn:startEvent[@name='Start Event Message']");
-				checkMessageEventL1();
+				checkMessageEvent();
 				navigateElementX("bpmn:parallelGateway[@name='Parallel Gateway Divergence']");
 				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 1']");
 				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 2']");
@@ -67,13 +67,13 @@ public class B_1_0_Test extends AbstractXpathTest {
 
 				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 1']");
 				navigateElementX("bpmn:endEvent[@name='End Event Message']");
-				checkMessageEventL1();
+				checkMessageEvent();
 
 				navigateElementX("bpmn:textAnnotation/bpmn:text[contains(text(), 'Text Annotation')]");
 				navigateElementX("bpmn:subProcess[@name='Collapsed Sub-Process']");
 				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2']");
 				navigateElementX("bpmn:endEvent[@name='End Event Terminate']");
-				checkTerminateEventL1();
+				checkTerminateEvent();
 				
 				navigateElementX("bpmn:serviceTask[@name='Service Task 7']");
 				navigateElementX("bpmn:dataObjectReference[@name='Data Object']");
