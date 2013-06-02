@@ -539,7 +539,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 
-		String s = getAttribute(attribute);
+		String s = getAttribute(currentNode, attribute);
 
 		if (s == null) {
 			// Issue is thrown by getAttribute
@@ -851,6 +851,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkMultiInstanceParallel() throws Throwable {
 		checkMultiInstance(false);
+	}
+
+	public void checkEventGatewayExclusive(boolean exclusive) throws Throwable {
+		checkAttribute("eventGatewayType", exclusive ? "Exclusive"
+				: "Inclusive");
 	}
 
 }
