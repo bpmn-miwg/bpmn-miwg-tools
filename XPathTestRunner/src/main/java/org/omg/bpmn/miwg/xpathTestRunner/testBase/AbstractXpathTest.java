@@ -142,7 +142,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 					|| methodName.startsWith("select")
 					|| methodName.startsWith("check")) {
 				lastName = methodName;
-				break;
+				//break;
 			}
 
 		}
