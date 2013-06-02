@@ -298,6 +298,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			throws Throwable {
 		String xpathOutgoing = "bpmn:outgoing";
 
+		if (node == null) {
+			issue(null, "The base node is null");
+			return null;
+		}
+
 		for (Node outgoingNode : findNodes(node, xpathOutgoing)) {
 			String sequenceFlowId = outgoingNode.getTextContent();
 
@@ -430,6 +435,30 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		ok(expr);
 		setCurrentNode(n, param);
 		push(n);
+	}
+
+	public Node selectCallActivityProcess() throws Throwable {
+		if (head() == null) {
+			issue(null, "Parent failed");
+			push(null);
+			return null;
+		}
+
+		String calledId = getAttribute(currentNode, "calledElement");
+		String xpath = String.format("//bpmn:process[@id='%s']", calledId);
+
+		Node n = findNode(xpath);
+
+		if (n == null) {
+			issue(xpath, "Process node not found");
+			push(null);
+			return null;
+		}
+
+		ok(xpath);
+		setCurrentNode(n, null);
+		push(n);
+		return null;
 	}
 
 	public void selectProcess(String xpath) throws Throwable {
@@ -566,6 +595,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	protected void checkAttribute(String attribute, boolean value)
 			throws Throwable {
 		String v = getAttribute(currentNode, attribute);
+		if (v == null)
+			return;
 		if (v.equals(Boolean.toString(value))) {
 			ok(String.format("@%s = '%s'", attribute, value));
 			return;
