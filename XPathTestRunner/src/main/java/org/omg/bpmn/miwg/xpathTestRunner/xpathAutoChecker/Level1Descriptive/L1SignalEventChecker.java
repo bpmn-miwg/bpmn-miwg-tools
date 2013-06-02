@@ -10,7 +10,7 @@ public class L1SignalEventChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {
-		test.navigateElement("bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef");
+		test.navigateElementX("bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef");
 	}
 
 	@Override

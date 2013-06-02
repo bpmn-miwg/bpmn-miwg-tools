@@ -10,7 +10,7 @@ public class L1MessageEventChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {
-		test.navigateElement("bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef");
+		test.navigateElementX("bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef");
 	}
 
 	@Override

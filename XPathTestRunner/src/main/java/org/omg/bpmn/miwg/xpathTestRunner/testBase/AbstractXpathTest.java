@@ -91,7 +91,9 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	protected Node pop() {
 		out.println(generateSpaces((depth() - 1) * 2) + "> Pop");
-		return nodeStack.pop();
+		Node n = nodeStack.pop();
+		currentNode = n;
+		return n;
 	}
 
 	protected void push(Node n) {
@@ -106,7 +108,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return nodeStack.size();
 	}
 
-	private void currentNode(Node n, String param) throws Throwable {
+	private void setCurrentNode(Node n, String param) throws Throwable {
 		currentNode = n;
 		for (XpathAutoChecker c : autoChecker) {
 			if (c.isApplicable(n, param)) {
@@ -218,12 +220,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void navigateGatewaySequenceFlow(String sequenceFlowName)
 			throws Throwable {
-		navigateReference("bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']",
+		navigateReferenceX("bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']",
 				".",
 				String.format("self::node()[@name='%s']", sequenceFlowName));
 	}
 
-	public void navigateReference(String referenceXpath, String targetXpath,
+	public void navigateReferenceX(String referenceXpath, String targetXpath,
 			String targetXpathParameter, String targetCheckXpath)
 			throws Throwable {
 
@@ -269,7 +271,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 							referenceXpath, targetXpath, targetXpathParameter,
 							targetCheckXpath);
 			ok(message);
-			currentNode(foundNode, message);
+			setCurrentNode(foundNode, message);
 		} else {
 			issue(targetCheckXpath, "Target check failed");
 			return;
@@ -277,8 +279,14 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	}
 
-	public Node navigateElement(String expr) throws Throwable {
-		return navigateElement(expr, null);
+	public Node navigateElementX(String expr) throws Throwable {
+		return navigateElementX(expr, null);
+	}
+
+	public Node navigateElement(String type, String name) throws Throwable {
+		String xpath = String.format("%s[@name='%s']", type, name);
+		Node n = navigateElementX(xpath);
+		return n;
 	}
 
 	public Node navigateFollowingElement(String type, String name)
@@ -309,7 +317,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			Node n = findNode(xpathTarget);
 			if (n != null) {
 				ok(xpathTarget);
-				currentNode(n, null);
+				setCurrentNode(n, null);
 				return n;
 			}
 		}
@@ -319,7 +327,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return null;
 	}
 
-	public Node navigateElement(String expr, String param) throws Throwable {
+	public Node navigateElementX(String expr, String param) throws Throwable {
 		if (head() == null) {
 			issue(expr, "Parent failed");
 			return null;
@@ -330,16 +338,16 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return null;
 		}
 		ok(expr);
-		currentNode(n, param);
+		setCurrentNode(n, param);
 		return n;
 	}
 
-	public void navigateElementByParam(String xpathNav, String xpathVal)
+	public void navigateElementXByParam(String xpathNav, String xpathVal)
 			throws Throwable {
-		navigateElementByParam(xpathNav, xpathVal, null);
+		navigateElementXByParam(xpathNav, xpathVal, null);
 	}
 
-	public void navigateElementByParam(String xpathNav, String xpathVal,
+	public void navigateElementXByParam(String xpathNav, String xpathVal,
 			String param) throws Throwable {
 		String message = "Navigation: " + xpathNav + "; Value: " + xpathVal;
 		if (head() == null) {
@@ -374,7 +382,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 
 		ok(xpath);
-		currentNode(n2, message);
+		setCurrentNode(n2, message);
 	}
 
 	public void navigateBoundaryEvent(String name) throws Throwable {
@@ -387,8 +395,20 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(xpathBoundaryElement, "Cannot find boundary element");
 			return;
 		}
-		currentNode = n;
+		setCurrentNode(n, null);
 		ok(String.format("Boundary element '%s' found", name));
+	}
+
+	public void selectFollowingElement(String type, String name)
+			throws Throwable {
+		Node n = navigateFollowingElement(type, name);
+		push(n);
+	}
+
+	public void selectFollowingElement(Node current, String type, String name)
+			throws Throwable {
+		Node n = navigateFollowingElement(current, type, name);
+		push(n);
 	}
 
 	public void selectElement(String expr) throws Throwable {
@@ -408,7 +428,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 		ok(expr);
-		currentNode(n, param);
+		setCurrentNode(n, param);
 		push(n);
 	}
 
@@ -432,7 +452,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = (Node) o;
 
 		ok(xpath);
-		currentNode(n, null);
+		setCurrentNode(n, null);
 		push(n);
 	}
 
@@ -459,7 +479,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 
 		ok(xpath);
-		currentNode(n, null);
+		setCurrentNode(n, null);
 		push(n);
 	}
 
@@ -803,6 +823,34 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 
 		ok(String.format("message flow '%s' (%s)", name, direction));
+	}
+
+	public void checkMultiInstance(boolean sequential) throws Throwable {
+		String xpath = "bpmn:multiInstanceLoopCharacteristics";
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			issue(xpath, "Loop characteristics not set");
+			return;
+		}
+
+		String v = getAttribute(n, "isSequential");
+		if (!v.equals(Boolean.toString(sequential))) {
+			issue(null, String.format("isSequential=%s, should be %s", v,
+					sequential));
+			return;
+		}
+
+		ok(String.format("Multi instance loop characteristics (sequential=%s)",
+				sequential));
+	}
+
+	public void checkMultiInstanceSequential() throws Throwable {
+		checkMultiInstance(true);
+	}
+
+	public void checkMultiInstanceParallel() throws Throwable {
+		checkMultiInstance(false);
 	}
 
 }

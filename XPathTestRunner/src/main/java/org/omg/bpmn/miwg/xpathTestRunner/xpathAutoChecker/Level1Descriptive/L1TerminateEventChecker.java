@@ -10,7 +10,7 @@ public class L1TerminateEventChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {
-		test.navigateElement(
+		test.navigateElementX(
 				"bpmn:terminateEventDefinition | bpmn:eventDefinitionRef");
 	}
 

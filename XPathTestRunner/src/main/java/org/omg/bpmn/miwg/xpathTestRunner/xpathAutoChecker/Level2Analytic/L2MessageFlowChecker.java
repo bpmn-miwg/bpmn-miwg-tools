@@ -10,7 +10,7 @@ public class L2MessageFlowChecker implements XpathAutoChecker {
 
 	@Override
 	public void check(Node n, AbstractXpathTest test) throws Throwable {
-		test.navigateElementByParam("//bpmn:message[@id='%s']", "./@messageRef");
+		test.navigateElementXByParam("//bpmn:message[@id='%s']", "./@messageRef");
 	}
 
 	@Override
