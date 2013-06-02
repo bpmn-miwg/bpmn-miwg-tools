@@ -30,9 +30,10 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 			selectElement("//bpmn:collaboration");
 
-			navigateElementX("bpmn:messageFlow[@name='Message Flow 1']",
-					"messageFlowL2");
+			navigateElementX("bpmn:messageFlow[@name='Message Flow 1']");
+			checkMessageDefinition();
 			navigateElementX("bpmn:messageFlow[@name='Message Flow 2']");
+			checkMessageDefinition();
 
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");

@@ -953,7 +953,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		String v = getAttribute(n, "isSequential");
 		if (v == null) {
-			issue(null, "No attribute 'isSequential'");
+			// issue is raised by getAttribute
 			return;
 		}
 		
@@ -979,5 +979,31 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		checkAttribute("eventGatewayType", exclusive ? "Exclusive"
 				: "Inclusive");
 	}
+	
+	public void checkMessageDefinition() throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+	
+		String messageID = getAttribute(currentNode, "messageRef");
+		if (messageID == null) {
+			// issues raised by getAttribute
+			return;
+		}
+		
+		String xpath = String.format("//bpmn:message[@id='%s']", messageID);
+		Node n = findNode(xpath);
+		
+		if (n == null) {
+			issue(xpath, "No message definition");
+			return;
+		}
+		
+		ok("Message definition");
+		
+		
+	}
+		
 
 }
