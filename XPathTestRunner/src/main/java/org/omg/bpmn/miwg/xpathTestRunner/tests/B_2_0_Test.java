@@ -101,7 +101,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				}
 
 				navigateElementX("bpmn:userTask[@name='User Task 8']");
-				navigateBoundaryEvent("");
+				navigateBoundaryEvent(null);
 				checkEscalationEvent();
 
 				navigateFollowingElement("bpmn:task", "Task 9");
@@ -225,7 +225,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 					navigateFollowingElement("bpmn:task", "Task 18");
 
-					navigateFollowingElement("bpmn:intermediateThrowEvent", "");
+					navigateFollowingElement("bpmn:intermediateThrowEvent", null);
 					checkEscalationEvent();
 
 					navigateFollowingElement("bpmn:task", "Task 23");
@@ -347,7 +347,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 					}
 
 					navigateFollowingElement("bpmn:task", "Task 32");
-					navigateBoundaryEvent("");
+					navigateBoundaryEvent(null);
 
 					navigateFollowingElement("bpmn:task", "Task 33");
 

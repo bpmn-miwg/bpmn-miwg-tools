@@ -142,7 +142,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 					|| methodName.startsWith("select")
 					|| methodName.startsWith("check")) {
 				lastName = methodName;
-				//break;
+				// break;
 			}
 
 		}
@@ -315,9 +315,16 @@ public abstract class AbstractXpathTest extends AbstractTest {
 				return null;
 			}
 
+			String nameCondition;
+			if (name == null) {
+				nameCondition = "";
+			} else {
+				nameCondition = String.format("@name='%s' and ", name);
+			}
+			
 			String targetId = getAttribute(nSequenceFlow, "targetRef");
-			String xpathTarget = String.format("%s[@name='%s' and @id='%s']",
-					type, name, targetId);
+			String xpathTarget = String.format("%s[%s@id='%s']",
+					type, nameCondition, targetId);
 
 			Node n = findNode(xpathTarget);
 			if (n != null) {
@@ -399,10 +406,18 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Parent failed");
 			return;
 		}
-		
+
 		String currentElementID = getCurrentNodeID();
+
+		String nameCondition;
+		if (name == null) {
+			nameCondition = "";
+		} else {
+			nameCondition = String.format("@name='%s' and ", name);
+		}
+
 		String xpathBoundaryElement = String.format(
-				"bpmn:boundaryEvent[@name='%s' and @attachedToRef='%s']", name,
+				"bpmn:boundaryEvent[%s@attachedToRef='%s']", nameCondition,
 				currentElementID);
 		Node n = findNode(xpathBoundaryElement);
 		if (n == null) {
@@ -638,7 +653,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Current node is null");
 			return;
 		}
-		
+
 		Node elementNode = currentNode;
 
 		push(elementNode);
@@ -750,7 +765,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Current node is null");
 			return;
 		}
-		
+
 		String xpath = "bpmn:terminateEventDefinition | bpmn:eventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -768,7 +783,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Current node is null");
 			return;
 		}
-		
+
 		String xpath = "bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -786,7 +801,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Current node is null");
 			return;
 		}
-		
+
 		String xpath = "bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -804,7 +819,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Current node is null");
 			return;
 		}
-		
+
 		String xpath = "bpmn:timerEventDefinition | bpmn:eventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -822,7 +837,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Current node is null");
 			return;
 		}
-		
+
 		String xpath = "bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -840,7 +855,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Current node is null");
 			return;
 		}
-		
+
 		String xpath = "bpmn:linkEventDefinition | bpmn:linkDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -858,7 +873,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			issue(null, "Current node is null");
 			return;
 		}
-		
+
 		String xpath = "bpmn:errorEventDefinition | bpmn:errorDefinitionRef";
 		Node n = findNode(currentNode, xpath);
 
@@ -942,7 +957,6 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 
-		
 		String xpath = "bpmn:multiInstanceLoopCharacteristics";
 		Node n = findNode(currentNode, xpath);
 
@@ -956,7 +970,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			// issue is raised by getAttribute
 			return;
 		}
-		
+
 		if (!v.equals(Boolean.toString(sequential))) {
 			issue(null, String.format("isSequential=%s, should be %s", v,
 					sequential));
@@ -979,31 +993,29 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		checkAttribute("eventGatewayType", exclusive ? "Exclusive"
 				: "Inclusive");
 	}
-	
+
 	public void checkMessageDefinition() throws Throwable {
 		if (currentNode == null) {
 			issue(null, "Current node is null");
 			return;
 		}
-	
+
 		String messageID = getAttribute(currentNode, "messageRef");
 		if (messageID == null) {
 			// issues raised by getAttribute
 			return;
 		}
-		
+
 		String xpath = String.format("//bpmn:message[@id='%s']", messageID);
 		Node n = findNode(xpath);
-		
+
 		if (n == null) {
 			issue(xpath, "No message definition");
 			return;
 		}
-		
+
 		ok("Message definition");
-		
-		
+
 	}
-		
 
 }
