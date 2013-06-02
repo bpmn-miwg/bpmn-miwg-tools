@@ -952,6 +952,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 
 		String v = getAttribute(n, "isSequential");
+		if (v == null) {
+			issue(null, "No attribute 'isSequential'");
+			return;
+		}
+		
 		if (!v.equals(Boolean.toString(sequential))) {
 			issue(null, String.format("isSequential=%s, should be %s", v,
 					sequential));
