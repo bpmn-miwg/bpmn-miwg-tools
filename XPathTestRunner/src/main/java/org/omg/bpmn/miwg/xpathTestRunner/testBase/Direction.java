@@ -25,6 +25,6 @@
 
 package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
-public enum AssociationDirection {
+public enum Direction {
 	Input, Output
 }

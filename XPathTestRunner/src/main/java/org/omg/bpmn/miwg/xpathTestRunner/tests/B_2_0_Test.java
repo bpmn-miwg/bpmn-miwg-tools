@@ -4,7 +4,8 @@ import java.io.File;
 
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.ArtifactType;
-import org.omg.bpmn.miwg.xpathTestRunner.testBase.AssociationDirection;
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.Direction;
+import org.w3c.dom.Node;
 
 public class B_2_0_Test extends AbstractXpathTest {
 
@@ -23,6 +24,8 @@ public class B_2_0_Test extends AbstractXpathTest {
 	@Override
 	public void execute(File file) throws Throwable {
 
+		Node n;
+		
 		{
 			loadFile(file);
 
@@ -41,10 +44,11 @@ public class B_2_0_Test extends AbstractXpathTest {
 				navigateElement("bpmn:task[@name='Abstract Task 1']");
 
 				navigateElement("bpmn:sendTask[@name='Send Task 2']");
+				checkMessageFlow("Message Flow 1", Direction.Output);
 
 				navigateElement("bpmn:userTask[@name='User Task 3']");
 				checkAssociation(ArtifactType.DataObject, "Data Object",
-						AssociationDirection.Input);
+						Direction.Input);
 
 				navigateElement("bpmn:dataObjectReference[@name='Data Object']");
 
@@ -68,13 +72,11 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				navigateElement("bpmn:task[@name='Task 5']");
 
-				{
-					selectElement("bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Conditional']");
-					navigateElementByParam(
-							"../bpmn:task[@name='Task 5' and @id='%s']",
-							"@attachedToRef");
-					pop();
-				}
+				navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Conditional");
+				checkCancelActivity(false);
+				checkParallelMultiple(false);		
+				checkConditionalEventL1();
+				
 
 				navigateElement("bpmn:parallelGateway[@name='Parallel Gateway 2']");
 				navigateElement("bpmn:endEvent[@name='End Event 1 Message']");
@@ -98,6 +100,21 @@ public class B_2_0_Test extends AbstractXpathTest {
 					navigateElement("bpmn:endEvent[@name='End Event 2']");
 					pop();
 				}
+				
+				navigateElement("bpmn:userTask[@name='User Task 8']");
+				navigateBoundaryEvent("");
+				checkEscalationEventL1();
+				
+				navigateFollowingElement("bpmn:task", "Task 9");
+				
+				navigateFollowingElement("bpmn:intermediateCatchEvent", "Intermediate Event Conditional Catch");
+				checkConditionalEventL1();
+				
+				navigateFollowingElement("bpmn:task", "Task 10");
+				checkMessageFlow("Message Flow 2", Direction.Input);
+				
+				navigateFollowingElement("bpmn:endEvent", "End Event 3 Signal");
+				checkSignalEventL1();
 
 				pop();
 			}
@@ -128,7 +145,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 						"bpmn:subProcess[@name='Collapsed Sub-Process 2']",
 						"L2CollapsedSubProcess");
 				checkAssociation(ArtifactType.DataStoreReference,
-						"Data Store Reference", AssociationDirection.Input);
+						"Data Store Reference", Direction.Input);
 
 				{
 					selectElement("bpmn:exclusiveGateway[@name='Exclusive Gateway 4']");
@@ -139,6 +156,19 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				navigateElement("bpmn:intermediateThrowEvent[@name='Intermediate Event Message Throw']");
 				checkMessageEventL1();
+
+				navigateElement("bpmn:callActivity[@name='Collapsed Call Activity']");
+
+				navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Escalation");
+				checkEscalationEventL1();
+
+				navigateElement("bpmn:intermediateThrowEvent[@name='Intermediate Event Link Throw']");
+				checkLinkEventL1();
+
+				navigateElement("bpmn:task[@name='Task 17']");
+				navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Message");
+				checkCancelActivity(false);
+				checkParallelMultiple(false);
 
 				pop();
 			}

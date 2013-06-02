@@ -180,6 +180,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
+	private String currentNodeID() {
+		return getAttribute(currentNode, "id");
+	}
+
 	private List<Node> findNodes(Node base, String expr)
 			throws XPathExpressionException {
 		Object o = xpath.evaluate(expr, base, XPathConstants.NODESET);
@@ -277,6 +281,44 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return navigateElement(expr, null);
 	}
 
+	public Node navigateFollowingElement(String type, String name)
+			throws Throwable {
+		return navigateFollowingElement(currentNode, type, name);
+	}
+
+	public Node navigateFollowingElement(Node node, String type, String name)
+			throws Throwable {
+		String xpathOutgoing = "bpmn:outgoing";
+
+		for (Node outgoingNode : findNodes(node, xpathOutgoing)) {
+			String sequenceFlowId = outgoingNode.getTextContent();
+
+			String xpathSequenceFlow = String.format(
+					"bpmn:sequenceFlow[@id='%s']", sequenceFlowId);
+			Node nSequenceFlow = findNode(xpathSequenceFlow);
+
+			if (nSequenceFlow == null) {
+				issue(xpathSequenceFlow, "Cannot find sequence flow");
+				return null;
+			}
+
+			String targetId = getAttribute(nSequenceFlow, "targetRef");
+			String xpathTarget = String.format("%s[@name='%s' and @id='%s']",
+					type, name, targetId);
+
+			Node n = findNode(xpathTarget);
+			if (n != null) {
+				ok(xpathTarget);
+				currentNode(n, null);
+				return n;
+			}
+		}
+
+		issue(String.format("%s[@name='%s']", type, name),
+				"No outgoing reference found");
+		return null;
+	}
+
 	public Node navigateElement(String expr, String param) throws Throwable {
 		if (head() == null) {
 			issue(expr, "Parent failed");
@@ -333,6 +375,20 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		ok(xpath);
 		currentNode(n2, message);
+	}
+
+	public void navigateBoundaryEvent(String name) throws Throwable {
+		String currentElementID = getAttribute(currentNode, "id");
+		String xpathBoundaryElement = String.format(
+				"bpmn:boundaryEvent[@name='%s' and @attachedToRef='%s']", name,
+				currentElementID);
+		Node n = findNode(xpathBoundaryElement);
+		if (n == null) {
+			issue(xpathBoundaryElement, "Cannot find boundary element");
+			return;
+		}
+		currentNode = n;
+		ok(String.format("Boundary element '%s' found", name));
 	}
 
 	public void selectElement(String expr) throws Throwable {
@@ -479,6 +535,26 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		ok("Attribute " + attribute + "=" + value);
 	}
 
+	protected void checkCancelActivity(boolean value) throws Throwable {
+		checkAttribute("cancelActivity", value);
+	}
+
+	protected void checkParallelMultiple(boolean value) throws Throwable {
+		checkAttribute("parallelMultiple", value);
+	}
+
+	protected void checkAttribute(String attribute, boolean value)
+			throws Throwable {
+		String v = getAttribute(currentNode, attribute);
+		if (v.equals(Boolean.toString(value))) {
+			ok(String.format("@%s = '%s'", attribute, value));
+			return;
+		} else {
+			issue(null, String.format("@%s <> '%s'", attribute, value));
+			return;
+		}
+	}
+
 	private String artifactTypeToString(ArtifactType artifactType) {
 		switch (artifactType) {
 		case DataStoreReference:
@@ -492,7 +568,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkAssociation(ArtifactType artifactType,
-			String artifactName, AssociationDirection associationDirection)
+			String artifactName, Direction associationDirection)
 			throws Throwable {
 		Node elementNode = currentNode;
 
@@ -574,13 +650,13 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 					String artifact2 = String.format(artifact, artifactID);
 					Node artifactNode = findNode(elementNode, artifact2);
-					
+
 					if (artifactNode == null) {
 						issue(artifact2, "Cannot find artifact node");
 						pop();
 						return;
 					}
-					
+
 					if (getAttribute(artifactNode, "name").equals(artifactName)) {
 						ok(String.format("Association reference %s '%s' found",
 								artifactTypeToString(artifactType),
@@ -599,41 +675,37 @@ public abstract class AbstractXpathTest extends AbstractTest {
 				artifactTypeToString(artifactType), artifactName));
 		pop();
 	}
-	
-	
-	
-	
-	
+
 	public void checkTerminateEventL1() throws Throwable {
 		String xpath = "bpmn:terminateEventDefinition | bpmn:eventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
-		
+
 		if (n == null) {
-			issue(xpath, "Cannot find message event definition");
+			issue(xpath, "Cannot find terminate event definition");
 			return;
 		} else {
-			ok("Message event definition");
+			ok("Terminate event definition");
 			return;
 		}
 	}
-	
+
 	public void checkSignalEventL1() throws Throwable {
 		String xpath = "bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
-		
+
 		if (n == null) {
-			issue(xpath, "Cannot find message event definition");
+			issue(xpath, "Cannot find signal event definition");
 			return;
 		} else {
-			ok("Message event definition");
+			ok("Signal event definition");
 			return;
 		}
 	}
-	
+
 	public void checkMessageEventL1() throws Throwable {
 		String xpath = "bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
-		
+
 		if (n == null) {
 			issue(xpath, "Cannot find message event definition");
 			return;
@@ -642,17 +714,95 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 	}
-	
+
 	public void checkTimerEventL1() throws Throwable {
 		String xpath = "bpmn:timerEventDefinition | bpmn:eventDefinitionRef";
 		Node n = findNode(currentNode, xpath);
-		
+
 		if (n == null) {
-			issue(xpath, "Cannot find message event definition");
+			issue(xpath, "Cannot find timer event definition");
 			return;
 		} else {
-			ok("Message event definition");
+			ok("Timer event definition");
 			return;
 		}
 	}
+
+	public void checkEscalationEventL1() throws Throwable {
+		String xpath = "bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef";
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			issue(xpath, "Cannot find escalation event definition");
+			return;
+		} else {
+			ok("Escalation event definition");
+			return;
+		}
+	}
+
+	public void checkLinkEventL1() throws Throwable {
+		String xpath = "bpmn:linkEventDefinition | bpmn:linkDefinitionRef";
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			issue(xpath, "Cannot find link event definition");
+			return;
+		} else {
+			ok("Link event definition");
+			return;
+		}
+	}
+
+	public void checkConditionalEventL1() throws Throwable {
+		String xpath = "bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef";
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			issue(xpath, "Cannot find conditional event definition");
+			return;
+		} else {
+
+			String xpath2 = "bpmn:condition";
+			Node n2 = findNode(n, xpath2);
+
+			if (n2 == null) {
+				issue(xpath2, "Cannot find condition");
+				return;
+			}
+
+			ok("Conditional event definition");
+			return;
+		}
+	}
+
+	public void checkMessageFlow(String name, Direction direction)
+			throws Throwable {
+
+		String dir;
+		switch (direction) {
+		case Input:
+			dir = "targetRef";
+			break;
+		case Output:
+			dir = "sourceRef";
+			break;
+		default:
+			assert false;
+			return;
+		}
+
+		String xpath = String.format(
+				"//bpmn:messageFlow[@name='%s' and @%s='%s']", name, dir,
+				currentNodeID());
+
+		Node n = findNode(xpath);
+		if (n == null) {
+			issue(xpath, "Could not find flow");
+			return;
+		}
+
+		ok(String.format("message flow '%s' (%s)", name, direction));
+	}
+
 }
