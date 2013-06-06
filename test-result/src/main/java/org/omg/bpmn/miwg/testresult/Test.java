@@ -9,64 +9,73 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-@Root(name="div")
+@Root(name = "div")
 public class Test {
 	/* Fields */
-	
+
 	@Attribute(name = "class", required = true)
 	private String clazz = Test.class.getSimpleName().toLowerCase();
-	
+
 	@Element(name = "h3", required = true)
 	private String name;
 
-	@ElementList(inline = true, required = true)
-	private List<Issue> issues;
+	@ElementList(inline = true, required = false, empty = true)
+	private List<Output> output;
 
 	/* Constructors */
 
 	public Test() {
 	}
 
+	public Test(String name) {
+		this.name = name;
+	}
+
 	/**
 	 * Constructor setting the name property (e.g. Signavio Process Editor 7.0)
-	 * and adds a collection of issue elements
+	 * and adds a collection of output elements
 	 * 
 	 * @param name
 	 */
-	public Test(String name, Collection<Issue> issues) {
+	public Test(String name, Collection<Output> outputs) {
 		this.setName(name);
-		this.addIssues(issues);
+		this.addOutput(outputs);
 	}
 
 	/* Business methods */
 
 	/**
-	 * Adds an issue element.
+	 * Adds an output element.
 	 * 
-	 * @param issue
+	 * @param output
 	 */
-	public void addIssue(Issue issue) {
-		this.getIssues().add(issue);
+	public void addOutput(Output output) {
+		this.getIssues().add(output);
 	}
 
 	/**
-	 * Adds all entries in issues.
+	 * Adds all entries in outputs.
 	 * 
-	 * @param issues
+	 * @param output
 	 */
-	public void addIssues(Collection<Issue> issues) {
-		this.getIssues().addAll(issues);
+	public void addOutput(Collection<Output> output) {
+		this.getIssues().addAll(output);
 	}
-	
+
 	/**
-	 * Returns a shadow copy of all issues.
+	 * Returns a shadow copy of all output.
 	 * 
-	 * @return {@link List} of {@link Issue}
+	 * @return {@link List} of {@link Output}
 	 */
-	public List<Issue> getIssuesCopy() {
-		List<Issue> i = new LinkedList<Issue>();
+	public List<Output> getOutputCopy() {
+		List<Output> i = new LinkedList<Output>();
 		i.addAll(getIssues());
 		return i;
+	}
+
+	public boolean equals(Object obj) {
+		return (obj instanceof Test)
+				&& ((Test) obj).getName().equalsIgnoreCase(this.getName());
 	}
 
 	/* Getters & Setters */
@@ -79,10 +88,10 @@ public class Test {
 		this.name = name;
 	}
 
-	private List<Issue> getIssues() {
-		if (this.issues == null) {
-			this.issues = new LinkedList<Issue>();
+	private List<Output> getIssues() {
+		if (this.output == null) {
+			this.output = new LinkedList<Output>();
 		}
-		return this.issues;
+		return this.output;
 	}
 }

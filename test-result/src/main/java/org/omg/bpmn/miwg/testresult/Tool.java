@@ -7,7 +7,9 @@ import java.util.List;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.Root;
 
+@Root(name="div")
 public class Tool {
 
 	/* Fields */
@@ -23,6 +25,15 @@ public class Tool {
 	/* Constructors */
 
 	public Tool() {
+	}
+	
+	/**
+	 * Constructor setting the name property (e.g. A.1.0-roundtrip)
+	 * 
+	 * @param name
+	 */
+	public Tool(String name) {
+		this.name = name;
 	}
 
 	/**
@@ -42,9 +53,22 @@ public class Tool {
 	 * Adds a test element.
 	 * 
 	 * @param test
+	 * 
+	 * @return The test added.
 	 */
-	public void addTest(Test test) {
-		this.getTests().add(test);
+	public Test addTest(Test test) {
+		Test t = test;
+		if(this.getTests().contains(test)) {
+			t = this.getTests().get(this.getTests().indexOf(test));
+		} else {
+			this.getTests().add(t);
+		}
+		
+		return t;
+	}
+	
+	public Test addTest(String name) {
+		return addTest(new Test(name));
 	}
 
 	/**
@@ -65,6 +89,10 @@ public class Tool {
 		List<Test> t = new LinkedList<Test>();
 		t.addAll(getTests());
 		return t;
+	}
+	
+	public boolean equals(Object obj) {
+		return (obj instanceof Tool) && ((Tool) obj).getName().equals(this.getName());
 	}
 
 	/* Getters & Setters */

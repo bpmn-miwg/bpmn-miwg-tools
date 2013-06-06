@@ -99,9 +99,8 @@ public class XmlCompareTestXmlResult {
 	 *            The test result xml structure
 	 * @throws IOException
 	 */
-	private void reportTestResult(String tool, String testCategory,
-			String result) throws IOException {
-		File f = new File(RPT_DIR, getClass().getName() + "-" + tool + "-"
+	private void reportTestResult(String result) throws IOException {
+		File f = new File(RPT_DIR, getClass().getSimpleName() + "-" + testCategory + "-" + tool + "-"
 				+ variant + ".html");
 		FileUtils.writeStringToFile(f, result);
 	}
@@ -121,7 +120,7 @@ public class XmlCompareTestXmlResult {
 
 		String result = TestRunner.runXmlCompareTest(getReferenceFolder()
 				.getAbsolutePath(), getToolFolder().getAbsolutePath(), variant);
-		reportTestResult(this.tool, this.testCategory.toString(), result);
+		reportTestResult(result);
 	}
 
 }

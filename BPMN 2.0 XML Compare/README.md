@@ -30,6 +30,21 @@ could be to create a baseline that asserted if the number of differences
 increased between different versions of a given tool or different versions of 
 the reference models but this is not decided. 
 
+Standalone executable JAR
+=========================
+
+Download JAR file from https://raw.github.com/bpmn-miwg/bpmn-miwg-tools/master/BPMN%202.0%20XML%20Compare/bpmn20xmlcompare.jar
+Run program by: java -jar bpmn20xmlcompare.jar PATH_TO_REFERENCE_FOLDER PATH_TO_TOOL_FOLDER export|roundtrip [outputfile]
+
+Example:
+
+java -jar bpmn20xmlcompare.jar '.\A - Fixed Digrams with Variations of Attributes\Reference' '.\A - Fixed Digrams with Variations of Attributes\Signavio Process Editor 6.7.5' roundtrip output.html
+Runing BPMN 2.0 XML Compare Test...
+Output printed to:
+C:\Users\Sven\Documents\Signavio\BPMN2.0\MIWG\git\bpmn-miwg-test-suite\output.html
+Finished BPMN 2.0 XML Compare Test
+
+
 Results
 =======
 

@@ -55,20 +55,41 @@ import org.simpleframework.xml.core.Persister;
  */
 @Root(name = "div")
 public class TestResults {
-	
+
 	@Attribute(name = "class", required = true)
 	private String clazz = TestResults.class.getSimpleName().toLowerCase();
 
-	@ElementList(inline = true)
+	@ElementList(inline = true, required = false, empty = true)
 	private List<Tool> tools;
 
 	/**
 	 * Adds a child {@link Tool} element to the results structure.
 	 * 
 	 * @param tool
+	 * 
+	 * @return The tool added or the existing
 	 */
-	public void addTool(Tool tool) {
-		this.getTools().add(tool);
+	public Tool addTool(Tool tool) {
+		Tool t = tool;
+		if (this.getTools().contains(tool)) {
+			t = this.getTools().get(this.getTools().indexOf(tool));
+		} else {
+			this.getTools().add(t);
+		}
+
+		return t;
+	}
+
+	/**
+	 * Adds a tool by name or returns the existing.
+	 * 
+	 * @param toolName
+	 * @return
+	 */
+	public Tool addTool(String toolName) {
+		Tool tool = new Tool(toolName);
+
+		return this.addTool(tool);
 	}
 
 	/**

@@ -27,18 +27,17 @@ package org.omg.bpmn.miwg;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.io.FileUtils;
 import org.custommonkey.xmlunit.Difference;
 import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20ConformanceChecker;
-import org.omg.bpmn.miwg.testresult.Issue;
-import org.omg.bpmn.miwg.testresult.IssueType;
+import org.omg.bpmn.miwg.testresult.Output;
+import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.testresult.Test;
 import org.omg.bpmn.miwg.testresult.TestResults;
-import org.omg.bpmn.miwg.testresult.Tool;
 import org.xml.sax.SAXException;
 
 public class TestRunner {
@@ -58,11 +57,20 @@ public class TestRunner {
 	public static void main(String[] args) throws SAXException, IOException,
 			ParserConfigurationException {
 
-		System.out.println("Runing BPMN 2.0 XML Test...");
+		System.out.println("Runing BPMN 2.0 XML Compare Test...");
 		String result = runXmlCompareTest(args[0], args[1],
 				Variant.valueOf(args[2]));
 
-		System.out.println(result);
+		if (args.length > 3) {
+			File outputFile = new File(args[3]);
+			FileUtils.writeStringToFile(outputFile, result);
+			System.out.println("Output printed to: \n"
+					+ outputFile.getAbsolutePath());
+		} else {
+			System.out.println(result);
+		}
+
+		System.out.println("Finished BPMN 2.0 XML Compare Test");
 	}
 
 	/**
@@ -94,24 +102,23 @@ public class TestRunner {
 
 		Bpmn20ConformanceChecker checker = new Bpmn20ConformanceChecker();
 		TestResults results = new TestResults();
-		Tool tool = new Tool(testFolder.getName(),
-				Collections.<Test> emptyList());
-		results.addTool(tool);
 
 		for (File bpmnFile : refFolder.listFiles()) {
 			if (isBpmnFile(bpmnFile)) {
 				File compareFile = getCompareFile(bpmnFile, testFolder, variant);
 				if (compareFile.exists()) {
-					Test test = new Test(bpmnFile.getName(),
-							Collections.<Issue> emptyList());
+
+					// Building test output structure
+					Test test = results.addTool(testFolder.getName()).addTest(
+							bpmnFile.getName());
+
 					List<Difference> diffs = checker.getSignificantDifferences(
 							bpmnFile, compareFile);
 					for (Difference diff : diffs) {
-						Issue issue = new Issue(IssueType.issue,
+						Output output = new Output(OutputType.finding,
 								describeDifference(diff));
-						test.addIssue(issue);
+						test.addOutput(output);
 					}
-					tool.addTest(test);
 				}
 			}
 		}
