@@ -73,6 +73,7 @@
   </properties>
 
   <modules>
+    <module>test-result</module>
     <module>BPMN 2.0 XML Compare</module>
     <module>XPathTestRunner</module>
   </modules>
