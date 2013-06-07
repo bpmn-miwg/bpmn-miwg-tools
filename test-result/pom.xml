@@ -4,6 +4,10 @@
   <artifactId>test-result</artifactId>
   <version>0.1</version>
   
+  <properties>
+    <java.version>1.6</java.version>
+  </properties>
+  
   <distributionManagement>
     <site>
       <id>github-bpmn-miwg</id>
@@ -19,5 +23,18 @@
   	</dependency>
   </dependencies>
   
-  
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+        <version>2.3.2</version>
+      </plugin>
+    </plugins>
+  </build>  
+    
 </project>
