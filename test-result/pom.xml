@@ -4,12 +4,20 @@
   <artifactId>test-result</artifactId>
   <version>0.1</version>
   
+  <distributionManagement>
+    <site>
+      <id>github-bpmn-miwg</id>
+      <url>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
+    </site>
+  </distributionManagement>
+  
   <dependencies>
   	<dependency>
 	    <groupId>org.simpleframework</groupId>
-		<artifactId>simple-xml</artifactId>
-		<version>2.7</version>
-	</dependency>
+  		<artifactId>simple-xml</artifactId>
+  		<version>2.7</version>
+  	</dependency>
   </dependencies>
+  
   
 </project>
