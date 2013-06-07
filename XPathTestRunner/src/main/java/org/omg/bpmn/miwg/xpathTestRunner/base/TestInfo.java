@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class TestInfo {
 
 	private String application;
 	private String root;
+	private String category;
 
 	public TestInfo() {
 	}
@@ -40,7 +42,8 @@ public class TestInfo {
 		System.out.println("Test files in " + rootDir);
 
 		File root = new File(rootDir);
-		File[] applicationFolders = root.listFiles(new FileFilter() {
+
+		File[] categoryFolders = root.listFiles(new FileFilter() {
 
 			@Override
 			public boolean accept(File f) {
@@ -48,6 +51,21 @@ public class TestInfo {
 			}
 
 		});
+
+		List<File> applicationFolders = new LinkedList<File>();
+
+		for (File category : categoryFolders) {
+
+			applicationFolders.addAll(Arrays.asList(category
+					.listFiles(new FileFilter() {
+
+						@Override
+						public boolean accept(File f) {
+							return f.isDirectory();
+						}
+
+					})));
+		}
 
 		List<TestInfo> allTestFiles = new LinkedList<TestInfo>();
 
@@ -67,6 +85,7 @@ public class TestInfo {
 				TestInfo tfi = new TestInfo();
 				tfi.root = f.getParentFile().getParentFile().getCanonicalPath();
 				tfi.application = f.getParentFile().getName();
+				tfi.category = f.getParentFile().getParentFile().getName();
 				tfi.testFile = f.getName();
 
 				if (testManager.getApplication() == null
@@ -101,6 +120,14 @@ public class TestInfo {
 		} catch (IOException e) {
 			return null;
 		}
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 }

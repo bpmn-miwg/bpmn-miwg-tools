@@ -6,6 +6,7 @@ import java.util.List;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestInfo;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestManager;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
@@ -25,6 +26,7 @@ public class Main {
 		manager.registerTest(new ValidatorTest());
 		manager.registerTest(new B_1_0_Test());
 		manager.registerTest(new B_2_0_Test());
+		manager.registerTest(new A_1_0_Test());
 
 		if (args.length == 3)
 			manager.limitApplication(args[2]);
