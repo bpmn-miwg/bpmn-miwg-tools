@@ -3,6 +3,7 @@ package org.omg.bpmn.miwg.xpathTestRunner.tests;
 import java.io.File;
 
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
+import org.w3c.dom.Node;
 
 public class A_2_0_Test extends AbstractXpathTest {
 
@@ -30,9 +31,17 @@ public class A_2_0_Test extends AbstractXpathTest {
 			
 			navigateFollowingElement("bpmn:task", "Task 1");
 			
-			navigateFollowingElement("bpmn:task", "Task 2");
+			Node n1 = navigateFollowingElement("bpmn:exclusiveGateway", "Gateway (Split Flow)");
 			
-			navigateFollowingElement("bpmn:task", "Task 3");
+			navigateFollowingElement(n1, "bpmn:task", "Task 2");
+			
+			Node n2 = navigateFollowingElement(n1, "bpmn:task", "Task 3");
+
+			navigateFollowingElement(n1, "bpmn:task", "Task 4");
+			
+			navigateFollowingElement("bpmn:exclusiveGateway", "Gateway (Merge Flows)");
+			
+			navigateFollowingElement(n2, "bpmn:exclusiveGateway", "Gateway (Merge Flows)");
 			
 			navigateFollowingElement("bpmn:endEvent", "End Event");
 
