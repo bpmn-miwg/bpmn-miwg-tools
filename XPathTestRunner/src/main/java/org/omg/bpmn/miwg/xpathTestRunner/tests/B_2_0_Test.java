@@ -59,7 +59,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				{
 					selectElementX("bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']");
-					navigateElementX("bpmn:multiInstanceLoopCharacteristics[@isSequential='false']");
+					checkMultiInstanceParallel();
 					pop();
 				}
 

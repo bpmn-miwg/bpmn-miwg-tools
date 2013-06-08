@@ -14,12 +14,6 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
-import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1ExclusiveGatewayChecker;
-import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1MessageEventChecker;
-import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1SignalEventChecker;
-import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TerminateEventChecker;
-import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level1Descriptive.L1TimerEventChecker;
-import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.Level2Analytic.L2MessageFlowChecker;
 import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
@@ -81,12 +75,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	protected void registerAutoChecker() {
-		autoChecker.add(new L1TimerEventChecker());
-		autoChecker.add(new L1TerminateEventChecker());
-		autoChecker.add(new L1SignalEventChecker());
-		autoChecker.add(new L1MessageEventChecker());
-		autoChecker.add(new L1ExclusiveGatewayChecker());
-		autoChecker.add(new L2MessageFlowChecker());
+
 	}
 
 	protected Node pop() {
@@ -629,7 +618,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		ok("Default Sequence Flow");
 	}
 
-	public void checkAttribute(String attribute) throws Throwable {
+	public void checkAttributeExists(String attribute) throws Throwable {
 		if (currentNode == null) {
 			finding("", "No current node");
 			return;
@@ -645,22 +634,42 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		ok("Attribute " + attribute + "exists");
 	}
 
-	public void checkAttribute(String attribute, String value) throws Throwable {
+	protected void checkAttributeValue(String attribute, boolean value,
+			boolean defaultValue) throws Throwable {
+		checkAttributeValue(attribute, Boolean.toString(value),
+				Boolean.toString(defaultValue));
+	}
+
+	protected void checkAttributeValue(String attribute, String value,
+			String defaultValue) throws Throwable {
 		if (currentNode == null) {
 			finding("", "No current node");
 			return;
 		}
 
-		String s = getAttribute(currentNode, attribute);
+		Node attr = currentNode.getAttributes().getNamedItem(attribute);
 
-		if (s == null) {
-			// Finding is thrown by getAttribute
-			return;
+		if (attr == null) {
+			if (value.equals(defaultValue)) {
+				ok(String
+						.format("Attribute %s is not existing but the expected value (%s) equals the default value (%s)",
+								attribute, value, defaultValue));
+				return;
+			} else {
+				finding("",
+						String.format(
+								"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
+								attribute, value, defaultValue));
+				return;
+			}
 		}
 
+		String s = attr.getTextContent();
+
 		if (!s.equals(value)) {
-			finding(attribute, "Attribute does not have the expected value '"
-					+ value + "'");
+			finding(attribute, String.format(
+					"Attribute %s does not have the expected value '%s'",
+					attribute, value));
 			return;
 		}
 
@@ -668,29 +677,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	protected void checkCancelActivity(boolean value) throws Throwable {
-		checkAttribute("cancelActivity", value);
+		checkAttributeValue("cancelActivity", value, true);
 	}
 
 	protected void checkParallelMultiple(boolean value) throws Throwable {
-		checkAttribute("parallelMultiple", value);
-	}
-
-	protected void checkAttribute(String attribute, boolean value)
-			throws Throwable {
-		if (currentNode == null) {
-			finding(null, "Current node is null");
-			return;
-		}
-		String v = getAttribute(currentNode, attribute);
-		if (v == null)
-			return;
-		if (v.equals(Boolean.toString(value))) {
-			ok(String.format("@%s = '%s'", attribute, value));
-			return;
-		} else {
-			finding(null, String.format("@%s <> '%s'", attribute, value));
-			return;
-		}
+		checkAttributeValue("parallelMultiple", value, false);
 	}
 
 	private String artifactTypeToString(ArtifactType artifactType) {
@@ -950,6 +941,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			finding(null, "Current node is null");
 			return;
 		}
+		if (head() == null) {
+			finding(null, "Parent failed");
+			return;
+		}
 
 		String currentID = getCurrentNodeID();
 		if (currentID == null) {
@@ -957,7 +952,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 
 		// /bpmn:text
-		
+
 		String xpath = String
 				.format("bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='%s']/@targetRef]/bpmn:text",
 						currentID);
@@ -1039,7 +1034,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		ok(String.format("message flow '%s' (%s)", name, direction));
 	}
 
-	public void checkMultiInstance(boolean sequential) throws Throwable {
+	protected void checkMultiInstance(boolean sequential) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
@@ -1053,20 +1048,35 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 
-		String v = getAttribute(n, "isSequential");
-		if (v == null) {
-			// Finding is raised by getAttribute
-			return;
-		}
+		boolean defaultValue = false;
+		String attribute = "isSequential";
+		Node attr = n.getAttributes().getNamedItem(attribute);
 
-		if (!v.equals(Boolean.toString(sequential))) {
-			finding(null, String.format("isSequential=%s, should be %s", v,
+		if (attr == null) {
+			if (sequential == defaultValue) {
+				ok(String
+						.format("Attribute %s is not existing but the expected value (%s) equals the default value (%s)",
+								attribute, sequential, defaultValue));
+				return;
+			} else {
+				finding("",
+						String.format(
+								"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
+								attribute, sequential, defaultValue));
+				return;
+			}
+		} else {
+			String v = attr.getTextContent();
+			if (!v.equals(Boolean.toString(sequential))) {
+				finding(null, String.format("%s=%s, should be %s", attribute,
+						v, sequential));
+				return;
+			}
+
+			ok(String.format(
+					"Multi instance loop characteristics (sequential=%s)",
 					sequential));
-			return;
 		}
-
-		ok(String.format("Multi instance loop characteristics (sequential=%s)",
-				sequential));
 	}
 
 	public void checkMultiInstanceSequential() throws Throwable {
@@ -1078,8 +1088,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkEventGatewayExclusive(boolean exclusive) throws Throwable {
-		checkAttribute("eventGatewayType", exclusive ? "Exclusive"
-				: "Inclusive");
+		checkAttributeValue("eventGatewayType", exclusive ? "Exclusive"
+				: "Inclusive", "Exclusive");
 	}
 
 	public void checkMessageDefinition() throws Throwable {
