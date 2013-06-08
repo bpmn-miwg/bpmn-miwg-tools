@@ -167,7 +167,6 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	private Node findNode(String expr) throws Throwable {
-		// return findNode(currentRoot(), expr);
 		return findNode(head(), expr);
 	}
 
@@ -323,7 +322,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return navigateFollowingElement(currentNode, type, name);
 	}
 
-	public Node navigateFollowingElement(Node node, String type, String name)
+	protected Node navigateFollowingElement(Node node, String type, String name)
 			throws Throwable {
 		String xpathOutgoing = "bpmn:outgoing";
 
@@ -396,18 +395,18 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String xpath = String.format("bpmn:participant[@name='%s']", name);
 		selectElementX(xpath);
 	}
-	
-		public void selectReferencedProcess() throws Throwable {
+
+	public void selectReferencedProcess() throws Throwable {
 		String ref = getAttribute("processRef");
 		if (ref == null) {
 			return;
 		}
-		
+
 		String xpath = String.format("//bpmn:process[@id='%s']", ref);
-		
+
 		selectElementX(xpath);
 	}
-	
+
 	public void navigateElementXByParam(String xpathNav, String xpathVal,
 			String param) throws Throwable {
 		String message = "Navigation: " + xpathNav + "; Value: " + xpathVal;
@@ -480,7 +479,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	public void navigateElement(Node node) throws Throwable {
 		setCurrentNode(node, null);
 		String path = getPath(node);
-		info(path);
+		ok(path);
 	}
 
 	public void selectFollowingElement(String type, String name)
@@ -489,7 +488,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		push(n);
 	}
 
-	public void selectFollowingElement(Node current, String type, String name)
+	protected void selectFollowingElement(Node current, String type, String name)
 			throws Throwable {
 		Node n = navigateFollowingElement(current, type, name);
 		push(n);
@@ -499,7 +498,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String xpath = String.format("%s[@name='%s']", type, name);
 		selectElementX(xpath);
 	}
-	
+
 	public void selectElementX(String expr) throws Throwable {
 		selectElementX(expr, null);
 	}
@@ -568,8 +567,6 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		setCurrentNode(n, null);
 		push(n);
 	}
-	
-	
 
 	public void selectProcessOfCallActivity() throws Throwable {
 		if (head() == null) {
@@ -708,7 +705,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public void checkAssociation(ArtifactType artifactType,
+	public void checkDataAssociation(ArtifactType artifactType,
 			String artifactName, Direction associationDirection)
 			throws Throwable {
 		if (currentNode == null) {
@@ -946,6 +943,35 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			ok("Error event definition");
 			return;
 		}
+	}
+
+	public void checkTextAssociation(String text) throws Throwable {
+		if (currentNode == null) {
+			issue(null, "Current node is null");
+			return;
+		}
+
+		String currentID = getCurrentNodeID();
+		if (currentID == null) {
+			return;
+		}
+
+		// /bpmn:text
+		
+		String xpath = String
+				.format("bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='%s']/@targetRef]/bpmn:text",
+						currentID);
+
+		List<Node> nl = findNodes(head(), xpath);
+		for (Node candidate : nl) {
+			String value = candidate.getTextContent();
+			if (value.equals(text)) {
+				ok(String.format("Text annotation found: %s", text));
+				return;
+			}
+		}
+
+		issue(xpath, "Text annotation not found");
 	}
 
 	public void checkConditionalEvent() throws Throwable {

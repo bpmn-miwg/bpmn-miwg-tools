@@ -3,6 +3,9 @@ package org.omg.bpmn.miwg.xpathTestRunner.tests;
 import java.io.File;
 
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.ArtifactType;
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.Direction;
+import org.w3c.dom.Node;
 
 public class B_1_0_Test extends AbstractXpathTest {
 
@@ -19,16 +22,18 @@ public class B_1_0_Test extends AbstractXpathTest {
 
 			selectElementX("//bpmn:collaboration");
 
-			navigateElementX("bpmn:messageFlow[@name='Message Flow 1']");
-			navigateElementX("bpmn:messageFlow[@name='Message Flow 2']");
+			navigateElement("bpmn:messageFlow", "Message Flow 1");
+			navigateElement("bpmn:messageFlow", "Message Flow 2");
 
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
-				navigateElementX("bpmn:startEvent[@name='Start Event Timer']");
+				navigateElement("bpmn:startEvent", "Start Event Timer");
 				checkTimerEvent();
-				navigateElementX("bpmn:userTask[@name='User Task 2']");
-				navigateElementX("bpmn:serviceTask[@name='Service Task 3']");
-				navigateElementX("bpmn:endEvent[@name='End Event None 1']");
+				navigateFollowingElement("bpmn:task", "Abstract Task 1");
+				checkMessageFlow("Message Flow 1", Direction.Output);
+				navigateFollowingElement("bpmn:userTask", "User Task 2");
+				navigateFollowingElement("bpmn:serviceTask", "Service Task 3");
+				navigateFollowingElement("bpmn:endEvent", "End Event None 1");
 				pop();
 			}
 
@@ -36,51 +41,75 @@ public class B_1_0_Test extends AbstractXpathTest {
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
 				navigateElementX(".//bpmn:lane[@name='Lane 1']");
 				navigateElementX(".//bpmn:lane[@name='Lane 2']");
-				navigateElementX("bpmn:startEvent[@name='Start Event Message']");
+				navigateElement("bpmn:startEvent", "Start Event Message");
 				checkMessageEvent();
-				navigateElementX("bpmn:parallelGateway[@name='Parallel Gateway Divergence']");
-				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 1']");
-				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 2']");
-				navigateElementX("bpmn:callActivity[@name='Call Activity Collapsed']");
+				Node n1 = navigateFollowingElement("bpmn:parallelGateway",
+						"Parallel Gateway Divergence");
+				Node n2 = navigateFollowingElement("bpmn:exclusiveGateway",
+						"Exclusive Gateway Divergence 1");
+				navigateFollowingElement("bpmn:callActivity",
+						"Call Activity Collapsed");
+				checkTextAssociation("Text Annotation");
 
 				{
-					selectElementX("bpmn:callActivity[@name='Call Activity - Expanded']");
-					{
-						selectProcessOfCallActivity();
-						navigateElementX("bpmn:startEvent[@name='Start Event None 1']");
-						navigateElementX("bpmn:task[@name='Abstract Task 4']");
-						navigateElementX("bpmn:endEvent[@name='End Event None 2']");
-						pop();
-					}
+					selectFollowingElement("bpmn:callActivity",
+							"Call Activity - Expanded");
+					selectProcessOfCallActivity();
 
+					navigateElement("bpmn:startEvent", "Start Event None 1");
+					navigateFollowingElement("bpmn:task", "Abstract Task 4");
+					navigateFollowingElement("bpmn:endEvent",
+							"End Event None 2");
+
+					pop();
 					pop();
 				}
 
-				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 1']");
-				navigateElementX("bpmn:endEvent[@name='End Event Message']");
+				navigateFollowingElement("bpmn:exclusiveGateway",
+						"Exclusive Gateway Convergence 1");
+				navigateFollowingElement("bpmn:endEvent", "End Event Message");
 				checkMessageEvent();
+				checkMessageFlow("Message Flow 2", Direction.Output);
 
-				navigateElementX("bpmn:textAnnotation/bpmn:text[contains(text(), 'Text Annotation')]");
-				navigateElementX("bpmn:subProcess[@name='Collapsed Sub-Process']");
-				navigateElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2']");
-				navigateElementX("bpmn:endEvent[@name='End Event Terminate']");
-				checkTerminateEvent();
+				navigateElement(n2);
 
-				navigateElementX("bpmn:serviceTask[@name='Service Task 7']");
-				navigateElementX("bpmn:dataObjectReference[@name='Data Object']");
-				navigateElementX("bpmn:dataStoreReference[@name='Data Store Reference']");
-				navigateElementX("//bpmn:categoryValue[@value='Group']");
+				navigateFollowingElement("bpmn:callActivity",
+						"Call Activity Calling a Global Task");
+				navigateFollowingElement("bpmn:exclusiveGateway",
+						"Exclusive Gateway Convergence 1");
+
+				navigateElement(n1);
+
+				navigateFollowingElement("bpmn:userTask", "User Task 5");
+				n1 = navigateFollowingElement("bpmn:exclusiveGateway",
+						"Exclusive Gateway Divergence 2");
+
+				navigateFollowingElement("bpmn:subProcess",
+						"Collapsed Sub-Process");
 
 				{
-					selectElementX("bpmn:subProcess[@name='Sub Process - Expanded']");
+					selectFollowingElement("bpmn:subProcess",
+							"Sub Process - Expanded");
 
-					navigateElementX("bpmn:startEvent[@name='Start Event None 2']");
-					navigateElementX("bpmn:task[@name='Abstract Task 6']");
-					navigateElementX("bpmn:endEvent[@name='End Event None 3']");
-
+					navigateElement("bpmn:startEvent", "Start Event None 2");
+					navigateFollowingElement("bpmn:task", "Abstract Task 6");
+					navigateFollowingElement("bpmn:endEvent", "End Event None 3");
+					
 					pop();
 				}
-
+				
+				navigateFollowingElement("bpmn:exclusiveGateway", "Exclusive Gateway Convergence 2");
+				
+				navigateFollowingElement("bpmn:endEvent", "End Event Terminate");
+				
+				navigateElement(n1);
+				
+				navigateFollowingElement("bpmn:serviceTask", "Service Task 7");
+				checkDataAssociation(ArtifactType.DataObject, "Data Object", Direction.Input);
+				checkDataAssociation(ArtifactType.DataStoreReference, "Data Store Reference", Direction.Output);
+				
+				navigateFollowingElement("bpmn:exclusiveGateway", "Exclusive Gateway Convergence 2");
+				
 				pop();
 			}
 
