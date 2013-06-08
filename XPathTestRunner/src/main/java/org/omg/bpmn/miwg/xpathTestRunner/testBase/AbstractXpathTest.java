@@ -186,6 +186,29 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return getAttribute(currentNode, "id");
 	}
 
+	protected String getPath(Node node) {
+		Node c = node;
+		String path = "";
+
+		while (c != null) {
+
+			String nodeName = c.getNodeName();
+			Node attr = null;
+
+			if (c.hasAttributes()) {
+				attr = c.getAttributes().getNamedItem("id");
+			}
+			if (attr != null) {
+				nodeName = String.format("%s[@id='%s']", nodeName, attr);
+			}
+
+			path = nodeName + "/" + path;
+			c = c.getParentNode();
+		}
+
+		return path;
+	}
+
 	private List<Node> findNodes(Node base, String expr)
 			throws XPathExpressionException {
 		Object o = xpath.evaluate(expr, base, XPathConstants.NODESET);
@@ -216,6 +239,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		else
 			out.println(generateSpaces(depth() * 2) + "> Assertion ISSUE: "
 					+ callingMethod() + ": " + parameter + ": " + message);
+	}
+
+	@Override
+	protected void printInfo(String message) {
+		out.println(generateSpaces(depth() * 2) + "> Assertion INFO : "
+				+ callingMethod() + ": " + message);
 	}
 
 	public void navigateGatewaySequenceFlow(String sequenceFlowName)
@@ -321,10 +350,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			} else {
 				nameCondition = String.format("@name='%s' and ", name);
 			}
-			
+
 			String targetId = getAttribute(nSequenceFlow, "targetRef");
-			String xpathTarget = String.format("%s[%s@id='%s']",
-					type, nameCondition, targetId);
+			String xpathTarget = String.format("%s[%s@id='%s']", type,
+					nameCondition, targetId);
 
 			Node n = findNode(xpathTarget);
 			if (n != null) {
@@ -426,6 +455,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 		setCurrentNode(n, null);
 		ok(String.format("Boundary element '%s' found", name));
+	}
+
+	public void navigateElement(Node node) throws Throwable {
+		setCurrentNode(node, null);
+		String path = getPath(node);
+		info(path);
 	}
 
 	public void selectFollowingElement(String type, String name)

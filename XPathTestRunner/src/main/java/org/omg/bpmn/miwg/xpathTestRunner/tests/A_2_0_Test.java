@@ -33,15 +33,21 @@ public class A_2_0_Test extends AbstractXpathTest {
 			
 			Node n1 = navigateFollowingElement("bpmn:exclusiveGateway", "Gateway (Split Flow)");
 			
-			navigateFollowingElement(n1, "bpmn:task", "Task 2");
+			navigateFollowingElement("bpmn:task", "Task 2");
 			
-			Node n2 = navigateFollowingElement(n1, "bpmn:task", "Task 3");
+			navigateElement(n1);
+			
+			Node n2 = navigateFollowingElement("bpmn:task", "Task 3");
 
-			navigateFollowingElement(n1, "bpmn:task", "Task 4");
+			navigateElement(n1);
+			
+			navigateFollowingElement("bpmn:task", "Task 4");
 			
 			navigateFollowingElement("bpmn:exclusiveGateway", "Gateway (Merge Flows)");
 			
-			navigateFollowingElement(n2, "bpmn:exclusiveGateway", "Gateway (Merge Flows)");
+			navigateElement(n2);
+			
+			navigateFollowingElement("bpmn:exclusiveGateway", "Gateway (Merge Flows)");
 			
 			navigateFollowingElement("bpmn:endEvent", "End Event");
 

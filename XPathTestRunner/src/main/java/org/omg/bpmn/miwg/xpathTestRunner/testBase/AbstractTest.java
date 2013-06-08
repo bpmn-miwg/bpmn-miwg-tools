@@ -12,6 +12,10 @@ public abstract class AbstractTest implements Test {
 		numOK++;
 		printOK(assertion);
 	}
+	
+	protected void info(String assertion) {
+		printInfo(assertion);
+	}
 
 	protected void issue(String assertion, String message) {
 		numIssues++;
@@ -24,6 +28,10 @@ public abstract class AbstractTest implements Test {
 
 	protected void printIssue(String message, String assertion) {
 		out.println("  > Assertion " + assertion + ": ISSUE: " + message);
+	}
+	
+	protected void printInfo(String assertion) {
+		out.println("  > Assertion " + assertion);
 	}
 
 	@Override
