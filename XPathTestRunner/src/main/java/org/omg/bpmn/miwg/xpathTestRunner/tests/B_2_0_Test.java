@@ -31,55 +31,53 @@ public class B_2_0_Test extends AbstractXpathTest {
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
 
-				navigateElementX("bpmn:startEvent[@name='Start Event 1 Timer']");
+				navigateElement("bpmn:startEvent", "Start Event 1 Timer");
 				checkTimerEvent();
 
-				navigateElementX("bpmn:task[@name='Abstract Task 1']");
+				navigateFollowingElement("bpmn:task", "Abstract Task 1");
 
-				navigateElementX("bpmn:sendTask[@name='Send Task 2']");
+				navigateFollowingElement("bpmn:sendTask", "Send Task 2");
 				checkMessageFlow("Message Flow 1", Direction.Output);
 
-				navigateElementX("bpmn:userTask[@name='User Task 3']");
+				navigateFollowingElement("bpmn:userTask", "User Task 3");
 				checkDataAssociation(ArtifactType.DataObject, "Data Object",
 						Direction.Input);
 
-				navigateElementX("bpmn:dataObjectReference[@name='Data Object']");
-
 				{
-					selectElementX("bpmn:inclusiveGateway[@name='Inclusive Gateway 1']");
+					selectElement("bpmn:inclusiveGateway", "Inclusive Gateway 1");
 					navigateGatewaySequenceFlow("Conditional Sequence Flow");
 					navigateGatewaySequenceFlow("Default Sequence Flow 1");
 					checkDefaultSequenceFlow();
+					n = head();
 					pop();
 				}
-				navigateElementX("bpmn:serviceTask[@name='Service Task 4']");
+				
+				navigateFollowingElement("bpmn:serviceTask", "Service Task 4");
 
-				navigateElementX("bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1']");
+				navigateFollowingElement("bpmn:intermediateThrowEvent", "Intermediate Event Signal Throw 1");
 				checkSignalEvent();
 
 				{
-					selectElementX("bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']");
+					selectFollowingElement("bpmn:subProcess", "Collapsed Sub-Process 1 Multi-Instances");
 					checkMultiInstanceParallel();
 					pop();
 				}
 
-				navigateElementX("bpmn:task[@name='Task 5']");
+				navigateFollowingElement("bpmn:task", "Task 5");
 
 				navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Conditional");
 				checkCancelActivity(false);
 				checkParallelMultiple(false);
 				checkConditionalEvent();
 
-				navigateElementX("bpmn:parallelGateway[@name='Parallel Gateway 2']");
-				navigateElementX("bpmn:endEvent[@name='End Event 1 Message']");
+				navigateElement("bpmn:parallelGateway", "Parallel Gateway 2");
+				navigateElement("bpmn:endEvent", "End Event 1 Message");
 				checkMessageEvent();
-				{
-					selectElementX("//bpmn:globalUserTask[@name='Call Activity calling a Global User Task']");
-					navigateElementXByParam(
-							"//bpmn:callActivity[@calledElement='%s' and @name='Call Activity calling a Global User Task']",
-							"@id");
-					pop();
-				}
+				
+				navigateElement(n);
+
+				navigateFollowingElement("bpmn:callActivity", "Call Activity calling a Global User Task");
+				checkGlobalTask();
 
 				{
 					selectElementX("bpmn:subProcess[@name='Expanded Sub-Process 1']");

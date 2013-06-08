@@ -936,6 +936,29 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
+	public void checkGlobalTask() throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String calledElement = getAttribute(currentNode, "calledElement");
+		if (calledElement == null)
+			return;
+		
+		
+		String xpath = String.format("//bpmn:globalUserTask[@id='%s']", calledElement);
+		
+		Node n = findNode(currentNode, xpath);
+		if (n == null) {
+			finding(xpath, "Cannot find global Task");
+			return;
+		} else {
+			ok("Global Task");
+			return;
+		}
+	}
+
 	public void checkTextAssociation(String text) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
