@@ -1,5 +1,7 @@
 package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
+import java.io.File;
+
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 
 public abstract class AbstractTest implements Test {
@@ -8,11 +10,18 @@ public abstract class AbstractTest implements Test {
 	private int numOK = 0;
 	protected TestOutput out;
 
+	@Override
+	public boolean isApplicable(File file) {
+		String fn = file.getName();
+		return fn.equals(getName() + "-roundtrip.bpmn")
+				|| fn.equals(getName() + ".bpmn");
+	}
+
 	protected void ok(String assertion) {
 		numOK++;
 		printOK(assertion);
 	}
-	
+
 	protected void info(String assertion) {
 		printInfo(assertion);
 	}
@@ -29,7 +38,7 @@ public abstract class AbstractTest implements Test {
 	protected void printIssue(String message, String assertion) {
 		out.println("  > Assertion " + assertion + ": ISSUE: " + message);
 	}
-	
+
 	protected void printInfo(String assertion) {
 		out.println("  > Assertion " + assertion);
 	}

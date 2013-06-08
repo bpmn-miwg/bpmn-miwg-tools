@@ -12,19 +12,12 @@ public class A_1_0_Test extends AbstractXpathTest {
 	}
 
 	@Override
-	public boolean isApplicable(File file) {
-		String fn = file.getName();
-		return // fn.equals("B.1.0-export.bpmn")
-		fn.equals("A.1.0-roundtrip.bpmn") || fn.equals("A.1.0.bpmn");
-	}
-
-	@Override
 	public void execute(File file) throws Throwable {
 
 		{
 			loadFile(file);
 
-			selectElement("/bpmn:definitions/bpmn:process");
+			selectElementX("/bpmn:definitions/bpmn:process");
 			
 			navigateElement("bpmn:startEvent", "Start Event");
 			

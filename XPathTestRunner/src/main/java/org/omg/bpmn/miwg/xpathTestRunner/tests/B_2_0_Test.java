@@ -15,20 +15,13 @@ public class B_2_0_Test extends AbstractXpathTest {
 	}
 
 	@Override
-	public boolean isApplicable(File file) {
-		String fn = file.getName();
-		return // fn.equals("B.2.0-export.bpmn")||
-		fn.equals("B.2.0-roundtrip.bpmn") || fn.equals("B.2.0.bpmn");
-	}
-
-	@Override
 	public void execute(File file) throws Throwable {
 
 		Node n;
 		{
 			loadFile(file);
 
-			selectElement("//bpmn:collaboration");
+			selectElementX("//bpmn:collaboration");
 
 			navigateElementX("bpmn:messageFlow[@name='Message Flow 1']");
 			checkMessageDefinition();
@@ -53,7 +46,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				navigateElementX("bpmn:dataObjectReference[@name='Data Object']");
 
 				{
-					selectElement("bpmn:inclusiveGateway[@name='Inclusive Gateway 1']");
+					selectElementX("bpmn:inclusiveGateway[@name='Inclusive Gateway 1']");
 					navigateGatewaySequenceFlow("Conditional Sequence Flow");
 					navigateGatewaySequenceFlow("Default Sequence Flow 1");
 					checkDefaultSequenceFlow();
@@ -65,7 +58,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				checkSignalEvent();
 
 				{
-					selectElement("bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']");
+					selectElementX("bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances']");
 					navigateElementX("bpmn:multiInstanceLoopCharacteristics[@isSequential='false']");
 					pop();
 				}
@@ -81,7 +74,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				navigateElementX("bpmn:endEvent[@name='End Event 1 Message']");
 				checkMessageEvent();
 				{
-					selectElement("//bpmn:globalUserTask[@name='Call Activity calling a Global User Task']");
+					selectElementX("//bpmn:globalUserTask[@name='Call Activity calling a Global User Task']");
 					navigateElementXByParam(
 							"//bpmn:callActivity[@calledElement='%s' and @name='Call Activity calling a Global User Task']",
 							"@id");
@@ -89,10 +82,10 @@ public class B_2_0_Test extends AbstractXpathTest {
 				}
 
 				{
-					selectElement("bpmn:subProcess[@name='Expanded Sub-Process 1']");
+					selectElementX("bpmn:subProcess[@name='Expanded Sub-Process 1']");
 					navigateElementX("bpmn:startEvent[@name='Start Event 2']");
 					{
-						selectElement("bpmn:userTask[@name='User Task 7 Standard Loop']");
+						selectElementX("bpmn:userTask[@name='User Task 7 Standard Loop']");
 						navigateElementX("bpmn:standardLoopCharacteristics");
 						pop();
 					}
@@ -149,7 +142,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 					// Flow following the intermediate timer event
 
 					{
-						selectElement("bpmn:callActivity",
+						selectElementX("bpmn:callActivity",
 								"Expanded Call Activity");
 						selectCallActivityProcess();
 
@@ -209,7 +202,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 							"Data Store Reference", Direction.Input);
 
 					{
-						selectElement("bpmn:exclusiveGateway[@name='Exclusive Gateway 4']");
+						selectElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway 4']");
 						navigateGatewaySequenceFlow("Default Sequence Flow 2");
 						checkDefaultSequenceFlow();
 						pop();

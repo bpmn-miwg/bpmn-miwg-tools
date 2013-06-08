@@ -9,6 +9,7 @@ import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_2_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_3_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
@@ -31,6 +32,7 @@ public class Main {
 		manager.registerTest(new A_1_0_Test());
 		manager.registerTest(new A_2_0_Test());
 		manager.registerTest(new A_3_0_Test());
+		manager.registerTest(new A_4_0_Test());
 
 		if (args.length == 3)
 			manager.limitApplication(args[2]);

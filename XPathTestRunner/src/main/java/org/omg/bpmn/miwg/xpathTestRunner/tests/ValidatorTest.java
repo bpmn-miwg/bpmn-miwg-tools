@@ -53,8 +53,7 @@ public class ValidatorTest extends AbstractTest {
 	public boolean isApplicable(File file) {
 		String dir = file.getParentFile().getName();
 		String fileName = file.getName();
-		return // fileName.endsWith("-export.bpmn")||
-		fileName.endsWith("-roundtrip.bpmn")
+		return fileName.endsWith("-roundtrip.bpmn")
 				|| (dir.equals("Reference") && fileName.endsWith(".bpmn"));
 	}
 

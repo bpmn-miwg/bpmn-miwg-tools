@@ -388,6 +388,26 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		navigateElementXByParam(xpathNav, xpathVal, null);
 	}
 
+	public void selectCollaboration() throws Throwable {
+		selectElementX("bpmn:collaboration");
+	}
+
+	public void selectPool(String name) throws Throwable {
+		String xpath = String.format("bpmn:participant[@name='%s']", name);
+		selectElementX(xpath);
+	}
+	
+		public void selectReferencedProcess() throws Throwable {
+		String ref = getAttribute("processRef");
+		if (ref == null) {
+			return;
+		}
+		
+		String xpath = String.format("//bpmn:process[@id='%s']", ref);
+		
+		selectElementX(xpath);
+	}
+	
 	public void navigateElementXByParam(String xpathNav, String xpathVal,
 			String param) throws Throwable {
 		String message = "Navigation: " + xpathNav + "; Value: " + xpathVal;
@@ -475,11 +495,16 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		push(n);
 	}
 
-	public void selectElement(String expr) throws Throwable {
-		selectElement(expr, null);
+	public void selectElement(String type, String name) throws Throwable {
+		String xpath = String.format("%s[@name='%s']", type, name);
+		selectElementX(xpath);
+	}
+	
+	public void selectElementX(String expr) throws Throwable {
+		selectElementX(expr, null);
 	}
 
-	public void selectElement(String expr, String param) throws Throwable {
+	public void selectElementX(String expr, String param) throws Throwable {
 		if (head() == null) {
 			issue(expr, "Parent failed");
 			push(null);
@@ -543,6 +568,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		setCurrentNode(n, null);
 		push(n);
 	}
+	
+	
 
 	public void selectProcessOfCallActivity() throws Throwable {
 		if (head() == null) {

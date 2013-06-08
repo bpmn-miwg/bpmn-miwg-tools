@@ -12,19 +12,12 @@ public class B_1_0_Test extends AbstractXpathTest {
 	}
 
 	@Override
-	public boolean isApplicable(File file) {
-		String fn = file.getName();
-		return // fn.equals("B.1.0-export.bpmn")
-		fn.equals("B.1.0-roundtrip.bpmn") || fn.equals("B.1.0.bpmn");
-	}
-
-	@Override
 	public void execute(File file) throws Throwable {
 
 		{
 			loadFile(file);
 
-			selectElement("//bpmn:collaboration");
+			selectElementX("//bpmn:collaboration");
 
 			navigateElementX("bpmn:messageFlow[@name='Message Flow 1']");
 			navigateElementX("bpmn:messageFlow[@name='Message Flow 2']");
@@ -51,7 +44,7 @@ public class B_1_0_Test extends AbstractXpathTest {
 				navigateElementX("bpmn:callActivity[@name='Call Activity Collapsed']");
 
 				{
-					selectElement("bpmn:callActivity[@name='Call Activity - Expanded']");
+					selectElementX("bpmn:callActivity[@name='Call Activity - Expanded']");
 					{
 						selectProcessOfCallActivity();
 						navigateElementX("bpmn:startEvent[@name='Start Event None 1']");
@@ -79,7 +72,7 @@ public class B_1_0_Test extends AbstractXpathTest {
 				navigateElementX("//bpmn:categoryValue[@value='Group']");
 
 				{
-					selectElement("bpmn:subProcess[@name='Sub Process - Expanded']");
+					selectElementX("bpmn:subProcess[@name='Sub Process - Expanded']");
 
 					navigateElementX("bpmn:startEvent[@name='Start Event None 2']");
 					navigateElementX("bpmn:task[@name='Abstract Task 6']");
