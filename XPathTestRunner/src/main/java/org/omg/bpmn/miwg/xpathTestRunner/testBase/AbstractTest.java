@@ -26,17 +26,17 @@ public abstract class AbstractTest implements Test {
 		printInfo(assertion);
 	}
 
-	protected void issue(String assertion, String message) {
+	protected void finding(String assertion, String message) {
 		numIssues++;
-		printIssue(message, assertion);
+		printFinding(message, assertion);
 	}
 
 	protected void printOK(String assertion) {
 		out.println("  > Assertion " + assertion + ": OK");
 	}
 
-	protected void printIssue(String message, String assertion) {
-		out.println("  > Assertion " + assertion + ": ISSUE: " + message);
+	protected void printFinding(String message, String assertion) {
+		out.println("  > Assertion " + assertion + ": FINDING: " + message);
 	}
 
 	protected void printInfo(String assertion) {
@@ -44,12 +44,12 @@ public abstract class AbstractTest implements Test {
 	}
 
 	@Override
-	public int ResultsOK() {
+	public int resultsOK() {
 		return numOK;
 	}
 
 	@Override
-	public int ResultsIssue() {
+	public int resultsFindings() {
 		return numIssues;
 	}
 

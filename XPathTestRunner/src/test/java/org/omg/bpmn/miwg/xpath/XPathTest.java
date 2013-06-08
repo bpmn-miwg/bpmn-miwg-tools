@@ -159,12 +159,12 @@ public class XPathTest {
 				}
 				out.println();
 				out.println("  TEST " + test.getName() + " results:");
-				out.println("  * OK    : " + test.ResultsOK());
-				out.println("  * ISSUES: " + test.ResultsIssue());
+				out.println("  * OK    : " + test.resultsOK());
+				out.println("  * ISSUES: " + test.resultsFindings());
 				out.println();
 
-				numOK += test.ResultsOK();
-				numIssue += test.ResultsIssue();
+				numOK += test.resultsOK();
+				numIssue += test.resultsFindings();
 			} else {
 				System.out.println("File to test is not applicable: "
 						+ info.getFile().getName());

@@ -160,7 +160,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	private String getAttribute(Node n, String name) {
 		Node namedItem = n.getAttributes().getNamedItem(name);
 		if (namedItem == null) {
-			issue(name, "Cannot find attribute");
+			finding(name, "Cannot find attribute");
 			return null;
 		}
 		return namedItem.getNodeValue();
@@ -226,17 +226,17 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	@Override
 	protected void printOK(String message) {
-		out.println(generateSpaces(depth() * 2) + "> Assertion OK   : "
+		out.println(generateSpaces(depth() * 2) + "> Assertion OK     : "
 				+ callingMethod() + ": " + message);
 	}
 
 	@Override
-	protected void printIssue(String message, String parameter) {
+	protected void printFinding(String message, String parameter) {
 		if (parameter == null)
-			out.println(generateSpaces(depth() * 2) + "> Assertion ISSUE: "
+			out.println(generateSpaces(depth() * 2) + "> Assertion FINDING: "
 					+ callingMethod() + ": " + message);
 		else
-			out.println(generateSpaces(depth() * 2) + "> Assertion ISSUE: "
+			out.println(generateSpaces(depth() * 2) + "> Assertion FINDING: "
 					+ callingMethod() + ": " + parameter + ": " + message);
 	}
 
@@ -258,13 +258,13 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			throws Throwable {
 
 		if (head() == null) {
-			issue("", "Parent failed");
+			finding("", "Parent failed");
 			return;
 		}
 
 		List<Node> nodes = findNodes(head(), referenceXpath);
 		if (nodes.size() == 0) {
-			issue(referenceXpath, "No reference nodes found");
+			finding(referenceXpath, "No reference nodes found");
 			return;
 		}
 
@@ -273,7 +273,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			Node evaluatedTargetXpathParameterNode = findNode(n,
 					targetXpathParameter);
 			if (evaluatedTargetXpathParameterNode == null) {
-				issue(targetXpathParameter,
+				finding(targetXpathParameter,
 						"Target parameter cannot be evaluated");
 				return;
 			}
@@ -285,7 +285,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			Node fn = findNode(n, evaluatedXpath);
 
 			if (fn == null) {
-				issue(evaluatedXpath, "Target node not found");
+				finding(evaluatedXpath, "Target node not found");
 				return;
 			}
 
@@ -301,7 +301,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			ok(message);
 			setCurrentNode(foundNode, message);
 		} else {
-			issue(targetCheckXpath, "Target check failed");
+			finding(targetCheckXpath, "Target check failed");
 			return;
 		}
 
@@ -327,7 +327,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String xpathOutgoing = "bpmn:outgoing";
 
 		if (node == null) {
-			issue(null, "The base node is null");
+			finding(null, "The base node is null");
 			return null;
 		}
 
@@ -339,7 +339,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			Node nSequenceFlow = findNode(xpathSequenceFlow);
 
 			if (nSequenceFlow == null) {
-				issue(xpathSequenceFlow, "Cannot find sequence flow");
+				finding(xpathSequenceFlow, "Cannot find sequence flow");
 				return null;
 			}
 
@@ -362,19 +362,19 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			}
 		}
 
-		issue(String.format("%s[@name='%s']", type, name),
+		finding(String.format("%s[@name='%s']", type, name),
 				"No outgoing reference found");
 		return null;
 	}
 
 	public Node navigateElementX(String expr, String param) throws Throwable {
 		if (head() == null) {
-			issue(expr, "Parent failed");
+			finding(expr, "Parent failed");
 			return null;
 		}
 		Node n = findNode(expr);
 		if (n == null) {
-			issue(expr, "No node found");
+			finding(expr, "No node found");
 			return null;
 		}
 		ok(expr);
@@ -411,13 +411,13 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			String param) throws Throwable {
 		String message = "Navigation: " + xpathNav + "; Value: " + xpathVal;
 		if (head() == null) {
-			issue(message, "Parent failed");
+			finding(message, "Parent failed");
 			return;
 		}
 
 		Node n = findNode(xpathVal);
 		if (n == null) {
-			issue(message, "Value node not found");
+			finding(message, "Value node not found");
 			return;
 		}
 
@@ -428,7 +428,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			value = n.getNodeValue();
 
 		if (value == null) {
-			issue(message, "Value node was found yet has no value");
+			finding(message, "Value node was found yet has no value");
 			return;
 		}
 
@@ -437,7 +437,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		Node n2 = findNode(xpath);
 		if (n2 == null) {
-			issue(message, "Node not found");
+			finding(message, "Node not found");
 			return;
 		}
 
@@ -447,11 +447,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void navigateBoundaryEvent(String name) throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 		if (head() == null) {
-			issue(null, "Parent failed");
+			finding(null, "Parent failed");
 			return;
 		}
 
@@ -469,7 +469,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 				currentElementID);
 		Node n = findNode(xpathBoundaryElement);
 		if (n == null) {
-			issue(xpathBoundaryElement, "Cannot find boundary element");
+			finding(xpathBoundaryElement, "Cannot find boundary element");
 			return;
 		}
 		setCurrentNode(n, null);
@@ -505,13 +505,13 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void selectElementX(String expr, String param) throws Throwable {
 		if (head() == null) {
-			issue(expr, "Parent failed");
+			finding(expr, "Parent failed");
 			push(null);
 			return;
 		}
 		Node n = findNode(expr);
 		if (n == null) {
-			issue(expr, "No node found");
+			finding(expr, "No node found");
 			push(null);
 			return;
 		}
@@ -522,7 +522,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public Node selectCallActivityProcess() throws Throwable {
 		if (head() == null) {
-			issue(null, "Parent failed");
+			finding(null, "Parent failed");
 			push(null);
 			return null;
 		}
@@ -533,7 +533,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(xpath);
 
 		if (n == null) {
-			issue(xpath, "Process node not found");
+			finding(xpath, "Process node not found");
 			push(null);
 			return null;
 		}
@@ -546,18 +546,18 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void selectProcess(String xpath) throws Throwable {
 		if (head() == null) {
-			issue(xpath, "Parent failed");
+			finding(xpath, "Parent failed");
 			push(null);
 			return;
 		}
 		Object o = findNode(xpath);
 		if (o == null) {
-			issue(xpath, "Process node not found");
+			finding(xpath, "Process node not found");
 			push(null);
 			return;
 		}
 		if (!(o instanceof Node)) {
-			issue(xpath, "Wrong type (" + Node.class.getName() + ")");
+			finding(xpath, "Wrong type (" + Node.class.getName() + ")");
 			push(null);
 			return;
 		}
@@ -570,14 +570,14 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void selectProcessOfCallActivity() throws Throwable {
 		if (head() == null) {
-			issue("selectProcessofCallActivity", "Parent failed");
+			finding("selectProcessofCallActivity", "Parent failed");
 			push(null);
 			return;
 		}
 		String processID = getAttribute("calledElement");
 
 		if (processID == null) {
-			issue("selectProcessofCallActivity", "Cannot retreive process id");
+			finding("selectProcessofCallActivity", "Cannot retreive process id");
 			push(null);
 			return;
 		}
@@ -585,7 +585,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String xpath = "//bpmn:process[@id='" + processID + "']";
 		Node n = findNode(xpath);
 		if (n == null) {
-			issue(xpath, "Cannot find process with id " + processID);
+			finding(xpath, "Cannot find process with id " + processID);
 			push(null);
 			return;
 		}
@@ -597,12 +597,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkDefaultSequenceFlow() throws Throwable {
 		if (currentNode == null) {
-			issue("", "No current node");
+			finding("", "No current node");
 			return;
 		}
 
 		if (!currentNode.getLocalName().equals("sequenceFlow")) {
-			issue(currentNode.getLocalName(),
+			finding(currentNode.getLocalName(),
 					"Current node is not a sequenceFlow");
 			return;
 		}
@@ -615,14 +615,14 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find source gateway");
+			finding(xpath, "Cannot find source gateway");
 			return;
 		}
 
 		String value = getAttribute(n, "default");
 
 		if (!currentId.equals(value)) {
-			issue(null, "Not a default sequence flow");
+			finding(null, "Not a default sequence flow");
 			return;
 		}
 
@@ -631,14 +631,14 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkAttribute(String attribute) throws Throwable {
 		if (currentNode == null) {
-			issue("", "No current node");
+			finding("", "No current node");
 			return;
 		}
 
 		String s = getAttribute(attribute);
 
 		if (s == null) {
-			// Issue is thrown by getAttribute
+			// Finding is thrown by getAttribute
 			return;
 		}
 
@@ -647,19 +647,19 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkAttribute(String attribute, String value) throws Throwable {
 		if (currentNode == null) {
-			issue("", "No current node");
+			finding("", "No current node");
 			return;
 		}
 
 		String s = getAttribute(currentNode, attribute);
 
 		if (s == null) {
-			// Issue is thrown by getAttribute
+			// Finding is thrown by getAttribute
 			return;
 		}
 
 		if (!s.equals(value)) {
-			issue(attribute, "Attribute does not have the expected value '"
+			finding(attribute, "Attribute does not have the expected value '"
 					+ value + "'");
 			return;
 		}
@@ -678,7 +678,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	protected void checkAttribute(String attribute, boolean value)
 			throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 		String v = getAttribute(currentNode, attribute);
@@ -688,7 +688,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			ok(String.format("@%s = '%s'", attribute, value));
 			return;
 		} else {
-			issue(null, String.format("@%s <> '%s'", attribute, value));
+			finding(null, String.format("@%s <> '%s'", attribute, value));
 			return;
 		}
 	}
@@ -709,7 +709,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			String artifactName, Direction associationDirection)
 			throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -751,7 +751,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 				Node dataRefNode = findNode(elementNode, setDataRef2);
 
 				if (dataRefNode == null) {
-					issue(setDataRef2, "Cannot find node");
+					finding(setDataRef2, "Cannot find node");
 					pop();
 					return;
 				}
@@ -764,7 +764,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 						dataAssociationRef2);
 
 				if (dataAssociationRefNode == null) {
-					issue(dataAssociationRef2, "Cannot find node");
+					finding(dataAssociationRef2, "Cannot find node");
 					pop();
 					return;
 				} else {
@@ -772,7 +772,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 							artifactRef);
 
 					if (artifactRefNode == null) {
-						issue(artifactRef, "Cannot find node");
+						finding(artifactRef, "Cannot find node");
 						pop();
 						return;
 					}
@@ -795,7 +795,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 					Node artifactNode = findNode(elementNode, artifact2);
 
 					if (artifactNode == null) {
-						issue(artifact2, "Cannot find artifact node");
+						finding(artifact2, "Cannot find artifact node");
 						pop();
 						return;
 					}
@@ -813,7 +813,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		}
 
-		issue(null, String.format(
+		finding(null, String.format(
 				"Cannot find the associated artifact %s '%s'",
 				artifactTypeToString(artifactType), artifactName));
 		pop();
@@ -821,7 +821,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkTerminateEvent() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -829,7 +829,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find terminate event definition");
+			finding(xpath, "Cannot find terminate event definition");
 			return;
 		} else {
 			ok("Terminate event definition");
@@ -839,7 +839,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkSignalEvent() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -847,7 +847,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find signal event definition");
+			finding(xpath, "Cannot find signal event definition");
 			return;
 		} else {
 			ok("Signal event definition");
@@ -857,7 +857,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkMessageEvent() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -865,7 +865,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find message event definition");
+			finding(xpath, "Cannot find message event definition");
 			return;
 		} else {
 			ok("Message event definition");
@@ -875,7 +875,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkTimerEvent() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -883,7 +883,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find timer event definition");
+			finding(xpath, "Cannot find timer event definition");
 			return;
 		} else {
 			ok("Timer event definition");
@@ -893,7 +893,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkEscalationEvent() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -901,7 +901,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find escalation event definition");
+			finding(xpath, "Cannot find escalation event definition");
 			return;
 		} else {
 			ok("Escalation event definition");
@@ -911,7 +911,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkLinkEvent() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -919,7 +919,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find link event definition");
+			finding(xpath, "Cannot find link event definition");
 			return;
 		} else {
 			ok("Link event definition");
@@ -929,7 +929,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkErrorEvent() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -937,7 +937,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find error event definition");
+			finding(xpath, "Cannot find error event definition");
 			return;
 		} else {
 			ok("Error event definition");
@@ -947,7 +947,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkTextAssociation(String text) throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -971,12 +971,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			}
 		}
 
-		issue(xpath, "Text annotation not found");
+		finding(xpath, "Text annotation not found");
 	}
 
 	public void checkConditionalEvent() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -984,7 +984,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Cannot find conditional event definition");
+			finding(xpath, "Cannot find conditional event definition");
 			return;
 		} else {
 
@@ -992,7 +992,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			Node n2 = findNode(n, xpath2);
 
 			if (n2 == null) {
-				issue(xpath2, "Cannot find condition");
+				finding(xpath2, "Cannot find condition");
 				return;
 			}
 
@@ -1004,12 +1004,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	public void checkMessageFlow(String name, Direction direction)
 			throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
 		if (head() == null) {
-			issue(null, "Parent failed");
+			finding(null, "Parent failed");
 			return;
 		}
 
@@ -1032,7 +1032,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		Node n = findNode(xpath);
 		if (n == null) {
-			issue(xpath, "Could not find flow");
+			finding(xpath, "Could not find flow");
 			return;
 		}
 
@@ -1041,7 +1041,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkMultiInstance(boolean sequential) throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
@@ -1049,18 +1049,18 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(currentNode, xpath);
 
 		if (n == null) {
-			issue(xpath, "Loop characteristics not set");
+			finding(xpath, "Loop characteristics not set");
 			return;
 		}
 
 		String v = getAttribute(n, "isSequential");
 		if (v == null) {
-			// issue is raised by getAttribute
+			// Finding is raised by getAttribute
 			return;
 		}
 
 		if (!v.equals(Boolean.toString(sequential))) {
-			issue(null, String.format("isSequential=%s, should be %s", v,
+			finding(null, String.format("isSequential=%s, should be %s", v,
 					sequential));
 			return;
 		}
@@ -1084,13 +1084,13 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkMessageDefinition() throws Throwable {
 		if (currentNode == null) {
-			issue(null, "Current node is null");
+			finding(null, "Current node is null");
 			return;
 		}
 
 		String messageID = getAttribute(currentNode, "messageRef");
 		if (messageID == null) {
-			// issues raised by getAttribute
+			// Finding is raised by getAttribute
 			return;
 		}
 
@@ -1098,7 +1098,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		Node n = findNode(xpath);
 
 		if (n == null) {
-			issue(xpath, "No message definition");
+			finding(xpath, "No message definition");
 			return;
 		}
 

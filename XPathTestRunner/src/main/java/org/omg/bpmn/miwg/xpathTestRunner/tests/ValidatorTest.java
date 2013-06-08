@@ -86,7 +86,7 @@ public class ValidatorTest extends AbstractTest {
 		try {
 			parser.parse(file, (DefaultHandler) null);
 		} catch (Exception e) {
-			issue("Validation failed", "Exception: " + e.getMessage());
+			finding("Validation failed", "Exception: " + e.getMessage());
 			e.printStackTrace(System.out);
 		}
 
@@ -95,7 +95,7 @@ public class ValidatorTest extends AbstractTest {
 		} else {
 			addIssues(eHandler.numError - 1); // Make sure the following issue
 												// won't be counted.
-			issue("Validation failed", "Warnings " + eHandler.numWarning
+			finding("Validation failed", "Warnings " + eHandler.numWarning
 					+ ", Errors: " + eHandler.numError + ", Fatal Errors: "
 					+ eHandler.numFatalError);
 		}

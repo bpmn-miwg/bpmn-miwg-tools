@@ -14,8 +14,8 @@ public interface Test {
 
 	String getName();
 
-	int ResultsOK();
+	int resultsOK();
 
-	int ResultsIssue();
+	int resultsFindings();
 
 }
