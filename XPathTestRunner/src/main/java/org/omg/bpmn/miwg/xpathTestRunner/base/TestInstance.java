@@ -8,7 +8,9 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TestInfo {
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.Test;
+
+public class TestInstance {
 
 	private String testFile;
 
@@ -28,17 +30,20 @@ public class TestInfo {
 	private String root;
 	private String category;
 
-	public TestInfo() {
+	private int findings = 0;
+	private int oks = 0;
+
+	public TestInstance() {
 	}
 
-	public TestInfo(String root, String application, String testFile) {
+	public TestInstance(String root, String application, String testFile) {
 		this.root = root;
 		this.application = application;
 		this.testFile = testFile;
 	}
 
-	public static List<TestInfo> findTestFiles(final TestManager testManager,
-			String rootDir) throws IOException {
+	public static List<TestInstance> buildTestInstances(
+			final TestManager testManager, String rootDir) throws IOException {
 		System.out.println("Test files in " + rootDir);
 
 		File root = new File(rootDir);
@@ -67,7 +72,7 @@ public class TestInfo {
 					})));
 		}
 
-		List<TestInfo> allTestFiles = new LinkedList<TestInfo>();
+		List<TestInstance> allTestFiles = new LinkedList<TestInstance>();
 
 		for (File applicationFolder : applicationFolders) {
 			File[] testFiles = applicationFolder
@@ -82,7 +87,7 @@ public class TestInfo {
 					});
 
 			for (File f : testFiles) {
-				TestInfo tfi = new TestInfo();
+				TestInstance tfi = new TestInstance();
 				tfi.root = f.getParentFile().getParentFile().getCanonicalPath();
 				tfi.application = f.getParentFile().getName();
 				tfi.category = f.getParentFile().getParentFile().getName();
@@ -94,7 +99,7 @@ public class TestInfo {
 			}
 		}
 
-		for (TestInfo testFile : allTestFiles) {
+		for (TestInstance testFile : allTestFiles) {
 			System.out.println(" - " + testFile);
 		}
 		System.out.println();
@@ -128,6 +133,27 @@ public class TestInfo {
 
 	public void setCategory(String category) {
 		this.category = category;
+	}
+
+	public int getFindings() {
+		return findings;
+	}
+
+	public void addFindings(int findings) {
+		this.findings += findings;
+	}
+
+	public int getOKs() {
+		return oks;
+	}
+
+	public void addOK(int oks) {
+		this.oks += oks;
+	}
+
+	public void addResults(Test test) {
+		this.oks += test.resultsOK();
+		this.findings += test.resultsFinding();
 	}
 
 }

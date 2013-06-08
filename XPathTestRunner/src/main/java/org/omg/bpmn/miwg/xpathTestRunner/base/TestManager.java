@@ -1,10 +1,18 @@
 package org.omg.bpmn.miwg.xpathTestRunner.base;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_2_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_3_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
 
 public class TestManager {
 
@@ -17,9 +25,16 @@ public class TestManager {
 	}
 
 	public TestManager() {
+		registerTest(new ValidatorTest());
+		registerTest(new B_1_0_Test());
+		registerTest(new B_2_0_Test());
+		registerTest(new A_1_0_Test());
+		registerTest(new A_2_0_Test());
+		registerTest(new A_3_0_Test());
+		registerTest(new A_4_0_Test());
 	}
 
-	public void registerTest(Test test) {
+	private void registerTest(Test test) {
 		registeredTests.add(test);
 	}
 
@@ -44,17 +59,20 @@ public class TestManager {
 		}
 	}
 
-	public void executeTests(File file, TestOutput out) throws Throwable {
-		out.println("Running Tests for " + file + ":");
-		int numOK = 0;
-		int numIssue = 0;
+	public void executeTests(TestInstance instance, String outputFolder) throws IOException {
+
+		TestOutput out = new TestOutput(instance, outputFolder);
+
+		out.println(String.format("Running tests for %s:", instance.getFile()
+				.getPath()));
+
 		for (Test test : registeredTests) {
-			if (test.isApplicable(file)) {
+			if (test.isApplicable(instance.getFile())) {
 				out.println("> TEST " + test.getName());
 				try {
 					test.init(out);
-					test.execute(file);
-				} catch (Exception e) {
+					test.execute(instance);
+				} catch (Throwable e) {
 					out.println("Exception during test execution of "
 							+ test.getName());
 					e.printStackTrace();
@@ -62,17 +80,19 @@ public class TestManager {
 				out.println();
 				out.println("  TEST " + test.getName() + " results:");
 				out.println("  * OK    : " + test.resultsOK());
-				out.println("  * ISSUES: " + test.resultsFindings());
+				out.println("  * ISSUES: " + test.resultsFinding());
 				out.println();
-
-				numOK += test.resultsOK();
-				numIssue += test.resultsFindings();
 			}
 		}
 
 		out.println(">> TEST RESULTS TOTAL:");
-		out.println("  * OK    : " + numOK);
-		out.println("  * ISSUES: " + numIssue);
+		out.println("  * OK    : " + instance.getOKs());
+		out.println("  * ISSUES: " + instance.getFindings());
+		out.println();
+		out.println();
+		
+		out.close();
+
 	}
 
 }

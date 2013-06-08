@@ -1,7 +1,6 @@
 package org.omg.bpmn.miwg.xpathTestRunner.tests;
 
-import java.io.File;
-
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 
 public class A_1_0_Test extends AbstractXpathTest {
@@ -12,10 +11,10 @@ public class A_1_0_Test extends AbstractXpathTest {
 	}
 
 	@Override
-	public void execute(File file) throws Throwable {
+	public void execute(TestInstance instance) throws Throwable {
 
 		{
-			loadFile(file);
+			loadFile(instance.getFile());
 
 			selectElementX("/bpmn:definitions/bpmn:process");
 			
@@ -30,6 +29,9 @@ public class A_1_0_Test extends AbstractXpathTest {
 			navigateFollowingElement("bpmn:endEvent", "End Event");
 
 			pop();
+			
+			instance.addFindings(resultsFinding());
+			instance.addOK(resultsOK());
 
 		}
 	}

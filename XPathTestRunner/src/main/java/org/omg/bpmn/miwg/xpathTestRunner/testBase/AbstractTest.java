@@ -22,10 +22,6 @@ public abstract class AbstractTest implements Test {
 		printOK(assertion);
 	}
 
-	protected void info(String assertion) {
-		printInfo(assertion);
-	}
-
 	protected void finding(String assertion, String message) {
 		numIssues++;
 		printFinding(message, assertion);
@@ -49,7 +45,7 @@ public abstract class AbstractTest implements Test {
 	}
 
 	@Override
-	public int resultsFindings() {
+	public int resultsFinding() {
 		return numIssues;
 	}
 

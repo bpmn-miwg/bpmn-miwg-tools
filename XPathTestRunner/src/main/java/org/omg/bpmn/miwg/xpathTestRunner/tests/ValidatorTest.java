@@ -10,6 +10,7 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractTest;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.validation.ValidationErrorHandler;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
@@ -63,7 +64,7 @@ public class ValidatorTest extends AbstractTest {
 	}
 
 	@Override
-	public void execute(File file) throws Throwable {
+	public void execute(TestInstance instance) throws Throwable {
 		ValidationErrorHandler eHandler = new ValidationErrorHandler();
 		eHandler.setTestOutput(out);
 
@@ -84,7 +85,7 @@ public class ValidatorTest extends AbstractTest {
 		reader.setErrorHandler(eHandler);
 
 		try {
-			parser.parse(file, (DefaultHandler) null);
+			parser.parse(instance.getFile(), (DefaultHandler) null);
 		} catch (Exception e) {
 			finding("Validation failed", "Exception: " + e.getMessage());
 			e.printStackTrace(System.out);
@@ -99,6 +100,9 @@ public class ValidatorTest extends AbstractTest {
 					+ ", Errors: " + eHandler.numError + ", Fatal Errors: "
 					+ eHandler.numFatalError);
 		}
+		
+		instance.addFindings(resultsFinding());
+		instance.addOK(resultsOK());
 	}
 
 }

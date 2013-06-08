@@ -1,66 +1,57 @@
 package org.omg.bpmn.miwg.xpathTestRunner;
 
-import java.io.File;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-import org.omg.bpmn.miwg.xpathTestRunner.base.TestInfo;
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestManager;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
-import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_0_Test;
-import org.omg.bpmn.miwg.xpathTestRunner.tests.A_2_0_Test;
-import org.omg.bpmn.miwg.xpathTestRunner.tests.A_3_0_Test;
-import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_0_Test;
-import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
-import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
-import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
 
 public class Main {
 
 	public static void main(String[] args) throws Throwable {
 
 		if (args.length < 2 && args.length > 3) {
-			System.err.println("OMG MIWG BPMN Checker");
+			System.err.println("OMG MIWG XPATH automated test");
 			System.err
 					.println("Two parameters required: SOURCEFOLDER REPORTFOLDER [APPLICATION]");
 			return;
 		}
 
 		TestManager manager = new TestManager();
-		manager.registerTest(new ValidatorTest());
-		manager.registerTest(new B_1_0_Test());
-		manager.registerTest(new B_2_0_Test());
-		manager.registerTest(new A_1_0_Test());
-		manager.registerTest(new A_2_0_Test());
-		manager.registerTest(new A_3_0_Test());
-		manager.registerTest(new A_4_0_Test());
 
 		if (args.length == 3)
 			manager.limitApplication(args[2]);
 
-		List<TestInfo> testFiles = TestInfo.findTestFiles(manager, args[0]);
+		List<TestInstance> testInstances = TestInstance.buildTestInstances(
+				manager, args[0]);
 
-		for (TestInfo tfi : testFiles) {
-			File file = tfi.getFile();
-
-			System.out.println();
-			System.out.println("EXAMINING FILE " + file.getCanonicalPath());
-			System.out.println();
-
-			TestOutput out = new TestOutput(tfi, args[1]);
-			try {
-
-				tfi.printTestFileInfo(out);
-				out.println();
-
-				manager.printApplicableTests(file, out);
-				out.println();
-
-				manager.executeTests(file, out);
-			} finally {
-				out.close();
-			}
+		for (TestInstance testInstance : testInstances) {
+			manager.executeTests(testInstance, args[1]);
 		}
 
+		Collections.sort(testInstances, new Comparator<TestInstance>() {
+			@Override
+		    public int compare(TestInstance o1, TestInstance o2) {
+				
+				if (!o1.getApplication().equals(o2.getApplication())) {
+					return o1.getApplication().compareTo(o2.getApplication());
+				} else {
+					return o1.getTest().compareTo(o2.getTest());
+				}
+		    }
+		});
+	
+		TestOutput out = new TestOutput("Overview", args[1]);
+		out.println("Summary:");
+		out.println("========");
+		for (TestInstance testInstance : testInstances) {
+			out.println(String.format(
+					"%1$-30s : %2$-20s: OK: %3$3d, Findings: %4$3d",
+					testInstance.getApplication(), testInstance.getTest(),
+					testInstance.getOKs(), testInstance.getFindings()));
+		}
+		out.close();
 	}
-
 }

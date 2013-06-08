@@ -2,6 +2,7 @@ package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
 import java.io.File;
 
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 
 public interface Test {
@@ -10,12 +11,12 @@ public interface Test {
 
 	boolean isApplicable(File file);
 
-	void execute(File file) throws Throwable;
+	void execute(TestInstance instance) throws Throwable;
 
 	String getName();
 
 	int resultsOK();
 
-	int resultsFindings();
+	int resultsFinding();
 
 }

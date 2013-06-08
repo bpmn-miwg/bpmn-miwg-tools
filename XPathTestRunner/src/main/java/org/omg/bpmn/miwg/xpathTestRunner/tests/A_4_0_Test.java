@@ -1,7 +1,6 @@
 package org.omg.bpmn.miwg.xpathTestRunner.tests;
 
-import java.io.File;
-
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Direction;
 import org.w3c.dom.Node;
@@ -14,8 +13,8 @@ public class A_4_0_Test extends AbstractXpathTest {
 	}
 
 	@Override
-	public void execute(File file) throws Throwable {
-		loadFile(file);
+	public void execute(TestInstance instance) throws Throwable {
+		loadFile(instance.getFile());
 
 		selectCollaboration();
 
@@ -42,41 +41,46 @@ public class A_4_0_Test extends AbstractXpathTest {
 			selectElementX("/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]");
 
 			navigateElement("bpmn:startEvent", "Start Event 2");
-			
+
 			Node n1 = navigateFollowingElement("bpmn:task", "Task 3");
 			checkMessageFlow("Message Flow 1", Direction.Input);
-			
+
 			{
-				selectFollowingElement("bpmn:subProcess", "Expanded Sub-Process 1");
-				
+				selectFollowingElement("bpmn:subProcess",
+						"Expanded Sub-Process 1");
+
 				pop();
 			}
-			
+
 			navigateFollowingElement("bpmn:task", "Task 5");
 			checkMessageFlow("Message Flow 2", Direction.Output);
-			
+
 			navigateFollowingElement("bpmn:endEvent", "End Event 2");
-			
+
 			navigateElement(n1);
-			
+
 			{
-				selectFollowingElement("bpmn:subProcess", "Expanded Sub-Process 2");
-				
+				selectFollowingElement("bpmn:subProcess",
+						"Expanded Sub-Process 2");
+
 				navigateElement("bpmn:startEvent", "Start Event 4");
-				
+
 				navigateFollowingElement("bpmn:task", "Task 6");
-				
+
 				navigateFollowingElement("bpmn:endEvent", "End Event 4");
-				
+
 				pop();
 			}
-			
-			navigateFollowingElement("bpmn:endEvent", "End Event 5");		
+
+			navigateFollowingElement("bpmn:endEvent", "End Event 5");
 
 			pop();
 		}
 
 		pop();
+
+		instance.addFindings(resultsFinding());
+		instance.addOK(resultsOK());
 	}
 
 }
