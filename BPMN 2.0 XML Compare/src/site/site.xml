@@ -40,114 +40,40 @@
       <item name="XPath Tests" href="../xpath/index.html"/>
     </menu>
     <menu name="XML Compare Test Results">
-        <item name="camunda modeler 2.0.11-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-A.1.0-export.txt"/>
-        <item name="camunda modeler 2.0.11-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-A.1.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.11-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-A.2.0-export.txt"/>
-        <item name="camunda modeler 2.0.11-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-A.2.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.11-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-A.3.0-export.txt"/>
-        <item name="camunda modeler 2.0.11-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-A.3.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.11-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-A.4.0-export.txt"/>
-        <item name="camunda modeler 2.0.11-A.4.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-A.4.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.11-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-B.1.0-export.txt"/>
-        <item name="camunda modeler 2.0.11-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-B.1.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.11-B.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-B.2.0-export.txt"/>
-        <item name="camunda modeler 2.0.11-B.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.11-B.2.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.12-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-A.1.0-export.txt"/>
-        <item name="camunda modeler 2.0.12-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-A.1.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.12-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-A.2.0-export.txt"/>
-        <item name="camunda modeler 2.0.12-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-A.2.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.12-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-A.3.0-export.txt"/>
-        <item name="camunda modeler 2.0.12-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-A.3.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.12-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-A.4.0-export.txt"/>
-        <item name="camunda modeler 2.0.12-A.4.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-A.4.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.12-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-B.1.0-export.txt"/>
-        <item name="camunda modeler 2.0.12-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-B.1.0-roundtrip.txt"/>
-        <item name="camunda modeler 2.0.12-B.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-B.2.0-export.txt"/>
-        <item name="camunda modeler 2.0.12-B.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-camunda modeler 2.0.12-B.2.0-roundtrip.txt"/>
-        <item name="IBM Process Designer 8.0.1-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-A.1.0-export.txt"/>
-        <item name="IBM Process Designer 8.0.1-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-A.1.0-roundtrip.txt"/>
-        <item name="IBM Process Designer 8.0.1-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-A.2.0-export.txt"/>
-        <item name="IBM Process Designer 8.0.1-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-A.2.0-roundtrip.txt"/>
-        <item name="IBM Process Designer 8.0.1-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-A.3.0-export.txt"/>
-        <item name="IBM Process Designer 8.0.1-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-A.3.0-roundtrip.txt"/>
-        <item name="IBM Process Designer 8.0.1-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-A.4.0-export.txt"/>
-        <item name="IBM Process Designer 8.0.1-A.5.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-A.4.0-roundtrip.txt"/>
-        <item name="IBM Process Designer 8.0.1-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-B.1.0-export.txt"/>
-        <item name="IBM Process Designer 8.0.1-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-B.1.0-roundtrip.txt"/>
-        <item name="IBM Process Designer 8.0.1-B.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-B.2.0-export.txt"/>
-        <item name="IBM Process Designer 8.0.1-B.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-IBM Process Designer 8.0.1-B.2.0-roundtrip.txt"/>
-        <item name="MID Innovator 11.5.1.30223-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-A.1.0-export.txt"/>
-        <item name="MID Innovator 11.5.1.30223-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-A.1.0-roundtrip.txt"/>
-        <item name="MID Innovator 11.5.1.30223-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-A.2.0-export.txt"/>
-        <item name="MID Innovator 11.5.1.30223-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-A.2.0-roundtrip.txt"/>
-        <item name="MID Innovator 11.5.1.30223-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-A.3.0-export.txt"/>
-        <item name="MID Innovator 11.5.1.30223-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-A.3.0-roundtrip.txt"/>
-        <item name="MID Innovator 11.5.1.30223-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-A.4.0-export.txt"/>
-        <item name="MID Innovator 11.5.1.30223-A.4.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-A.4.0-roundtrip.txt"/>
-        <item name="MID Innovator 11.5.1.30223-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-B.1.0-export.txt"/>
-        <item name="MID Innovator 11.5.1.30223-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-B.1.0-roundtrip.txt"/>
-        <item name="MID Innovator 11.5.1.30223-B.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-B.2.0-export.txt"/>
-        <item name="MID Innovator 11.5.1.30223-B.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-MID Innovator 11.5.1.30223-B.2.0-roundtrip.txt"/>
-        <item name="Signavio Process Editor 6.7.5-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-A.1.0-export.txt"/>
-        <item name="Signavio Process Editor 6.7.5-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-A.1.0-roundtrip.txt"/>
-        <item name="Signavio Process Editor 6.7.5-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-A.2.0-export.txt"/>
-        <item name="Signavio Process Editor 6.7.5-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-A.2.0-roundtrip.txt"/>
-        <item name="Signavio Process Editor 6.7.5-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-A.3.0-export.txt"/>
-        <item name="Signavio Process Editor 6.7.5-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-A.3.0-roundtrip.txt"/>
-        <item name="Signavio Process Editor 6.7.5-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-A.4.0-export.txt"/>
-        <item name="Signavio Process Editor 6.7.5-A.4.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-A.4.0-roundtrip.txt"/>
-        <item name="Signavio Process Editor 6.7.5-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-B.1.0-export.txt"/>
-        <item name="Signavio Process Editor 6.7.5-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-B.1.0-roundtrip.txt"/>
-        <item name="Signavio Process Editor 6.7.5-B.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-B.2.0-export.txt"/>
-        <item name="Signavio Process Editor 6.7.5-B.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Signavio Process Editor 6.7.5-B.2.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.24-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-A.1.0-export.txt"/>
-        <item name="Yaoqiang 2.1.24-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-A.1.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.24-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-A.2.0-export.txt"/>
-        <item name="Yaoqiang 2.1.24-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-A.2.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.24-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-A.3.0-export.txt"/>
-        <item name="Yaoqiang 2.1.24-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-A.3.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.24-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-A.4.0-export.txt"/>
-        <item name="Yaoqiang 2.1.24-A.4.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-A.4.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.24-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-B.1.0-export.txt"/>
-        <item name="Yaoqiang 2.1.24-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-B.1.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.24-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-B.2.0-export.txt"/>
-        <item name="Yaoqiang 2.1.24-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.24-B.2.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.28-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-A.1.0-export.txt"/>
-        <item name="Yaoqiang 2.1.28-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-A.1.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.28-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-A.2.0-export.txt"/>
-        <item name="Yaoqiang 2.1.28-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-A.2.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.28-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-A.3.0-export.txt"/>
-        <item name="Yaoqiang 2.1.28-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-A.3.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.28-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-A.4.0-export.txt"/>
-        <item name="Yaoqiang 2.1.28-A.4.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-A.4.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.28-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-B.1.0-export.txt"/>
-        <item name="Yaoqiang 2.1.28-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-B.1.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.28-B.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-B.2.0-export.txt"/>
-        <item name="Yaoqiang 2.1.28-B.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.28-B.2.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.33-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-A.1.0-export.txt"/>
-        <item name="Yaoqiang 2.1.33-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-A.1.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.33-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-A.2.0-export.txt"/>
-        <item name="Yaoqiang 2.1.33-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-A.2.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.33-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-A.3.0-export.txt"/>
-        <item name="Yaoqiang 2.1.33-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-A.3.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.33-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-A.4.0-export.txt"/>
-        <item name="Yaoqiang 2.1.33-A.4.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-A.4.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.33-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-B.1.0-export.txt"/>
-        <item name="Yaoqiang 2.1.33-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-B.1.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.33-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-B.2.0-export.txt"/>
-        <item name="Yaoqiang 2.1.34-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.33-B.2.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.34-A.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-A.1.0-export.txt"/>
-        <item name="Yaoqiang 2.1.34-A.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-A.1.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.34-A.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-A.2.0-export.txt"/>
-        <item name="Yaoqiang 2.1.34-A.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-A.2.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.34-A.3.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-A.3.0-export.txt"/>
-        <item name="Yaoqiang 2.1.34-A.3.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-A.3.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.34-A.4.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-A.4.0-export.txt"/>
-        <item name="Yaoqiang 2.1.34-A.4.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-A.4.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.34-B.1.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-B.1.0-export.txt"/>
-        <item name="Yaoqiang 2.1.34-B.1.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-B.1.0-roundtrip.txt"/>
-        <item name="Yaoqiang 2.1.34-B.2.0-export" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-B.2.0-export.txt"/>
-        <item name="Yaoqiang 2.1.34-B.2.0-roundtrip" href="org.omg.bpmn.miwg.XmlCompareTest-Yaoqiang 2.1.34-B.2.0-roundtrip.txt"/>
+        <item name="A-camunda modeler 2.0.11-export" href="XmlCompareTestXmlResult-A-camunda modeler 2.0.11-export.html"/>
+        <item name="A-camunda modeler 2.0.11-roundtrip" href="XmlCompareTestXmlResult-A-camunda modeler 2.0.11-roundtrip.html"/>
+        <item name="B-camunda modeler 2.0.11-export" href="XmlCompareTestXmlResult-B-camunda modeler 2.0.11-export.html"/>
+        <item name="B-camunda modeler 2.0.11-roundtrip" href="XmlCompareTestXmlResult-B-camunda modeler 2.0.11-roundtrip.html"/>
+        <item name="A-camunda modeler 2.0.12-export" href="XmlCompareTestXmlResult-A-camunda modeler 2.0.12-export.html"/>
+        <item name="A-camunda modeler 2.0.12-roundtrip" href="XmlCompareTestXmlResult-A-camunda modeler 2.0.12-roundtrip.html"/>
+        <item name="B-camunda modeler 2.0.12-export" href="XmlCompareTestXmlResult-B-camunda modeler 2.0.12-export.html"/>
+        <item name="B-camunda modeler 2.0.12-roundtrip" href="XmlCompareTestXmlResult-B-camunda modeler 2.0.12-roundtrip.html"/>
+        <item name="A-IBM Process Designer 8.0.1-export" href="XmlCompareTestXmlResult-A-IBM Process Designer 8.0.1-export.html"/>
+        <item name="A-IBM Process Designer 8.0.1-roundtrip" href="XmlCompareTestXmlResult-A-IBM Process Designer 8.0.1-roundtrip.html"/>
+        <item name="A-MID Innovator 11.5.1.30223-export" href="XmlCompareTestXmlResult-A-MID Innovator 11.5.1.30223-export.html"/>
+        <item name="A-MID Innovator 11.5.1.30223-roundtrip" href="XmlCompareTestXmlResult-A-MID Innovator 11.5.1.30223-roundtrip.html"/>
+        <item name="B-MID Innovator 11.5.1.30223-export" href="XmlCompareTestXmlResult-B-MID Innovator 11.5.1.30223-export.html"/>
+        <item name="B-MID Innovator 11.5.1.30223-roundtrip" href="XmlCompareTestXmlResult-B-MID Innovator 11.5.1.30223-roundtrip.html"/>
+        <item name="A-Signavio Process Editor 6.7.5-export" href="XmlCompareTestXmlResult-A-Signavio Process Editor 6.7.5-export.html"/>
+        <item name="A-Signavio Process Editor 6.7.5-roundtrip" href="XmlCompareTestXmlResult-A-Signavio Process Editor 6.7.5-roundtrip.html"/>
+        <item name="B-Signavio Process Editor 6.7.5-export" href="XmlCompareTestXmlResult-B-Signavio Process Editor 6.7.5-export.html"/>
+        <item name="B-Signavio Process Editor 6.7.5-roundtrip" href="XmlCompareTestXmlResult-B-Signavio Process Editor 6.7.5-roundtrip.html"/>
+        <item name="A-Yaoqiang 2.1.24-export" href="XmlCompareTestXmlResult-A-Yaoqiang 2.1.24-export.html"/>
+        <item name="A-Yaoqiang 2.1.24-roundtrip" href="XmlCompareTestXmlResult-A-Yaoqiang 2.1.24-roundtrip.html"/>
+        <item name="B-Yaoqiang 2.1.24-export" href="XmlCompareTestXmlResult-B-Yaoqiang 2.1.24-export.html"/>
+        <item name="B-Yaoqiang 2.1.24-roundtrip" href="XmlCompareTestXmlResult-B-Yaoqiang 2.1.24-roundtrip.html"/>
+        <item name="A-Yaoqiang 2.1.28-export" href="XmlCompareTestXmlResult-A-Yaoqiang 2.1.28-export.html"/>
+        <item name="A-Yaoqiang 2.1.28-roundtrip" href="XmlCompareTestXmlResult-A-Yaoqiang 2.1.28-roundtrip.html"/>
+        <item name="B-Yaoqiang 2.1.28-export" href="XmlCompareTestXmlResult-B-Yaoqiang 2.1.28-export.html"/>
+        <item name="B-Yaoqiang 2.1.28-roundtrip" href="XmlCompareTestXmlResult-B-Yaoqiang 2.1.28-roundtrip.html"/>
+        <item name="A-Yaoqiang 2.1.33-export" href="XmlCompareTestXmlResult-A-Yaoqiang 2.1.33-export.html"/>
+        <item name="A-Yaoqiang 2.1.33-roundtrip" href="XmlCompareTestXmlResult-A-Yaoqiang 2.1.33-roundtrip.html"/>
+        <item name="B-Yaoqiang 2.1.33-export" href="XmlCompareTestXmlResult-B-Yaoqiang 2.1.33-export.html"/>
+        <item name="B-Yaoqiang 2.1.33-roundtrip" href="XmlCompareTestXmlResult-B-Yaoqiang 2.1.33-roundtrip.html"/>
+        <item name="A-Yaoqiang 2.1.34-export" href="XmlCompareTestXmlResult-A-Yaoqiang 2.1.34-export.html"/>
+        <item name="A-Yaoqiang 2.1.34-roundtrip" href="XmlCompareTestXmlResult-A-Yaoqiang 2.1.34-roundtrip.html"/>
+        <item name="B-Yaoqiang 2.1.34-export" href="XmlCompareTestXmlResult-B-Yaoqiang 2.1.34-export.html"/>
+        <item name="B-Yaoqiang 2.1.34-roundtrip" href="XmlCompareTestXmlResult-B-Yaoqiang 2.1.34-roundtrip.html"/>
     </menu>
     <menu ref="reports"/>
   </body>

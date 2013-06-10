@@ -49,8 +49,20 @@ public class Test {
 	 * 
 	 * @param output
 	 */
-	public void addOutput(Output output) {
-		this.getIssues().add(output);
+	public Output addOutput(Output output) {
+		Output o = output;
+		if(this.getOutputs().contains(output)) {
+			o = this.getOutputs().get(this.getOutputs().indexOf(o));
+		} else {
+			this.getOutputs().add(o);
+		}
+		
+		return o;
+	}
+	
+	public Output addOutput(OutputType outputType, String description) {
+		Output o = new Output(outputType, description);
+		return this.addOutput(o);
 	}
 
 	/**
@@ -59,7 +71,7 @@ public class Test {
 	 * @param output
 	 */
 	public void addOutput(Collection<Output> output) {
-		this.getIssues().addAll(output);
+		this.getOutputs().addAll(output);
 	}
 
 	/**
@@ -69,7 +81,7 @@ public class Test {
 	 */
 	public List<Output> getOutputCopy() {
 		List<Output> i = new LinkedList<Output>();
-		i.addAll(getIssues());
+		i.addAll(getOutputs());
 		return i;
 	}
 
@@ -88,7 +100,7 @@ public class Test {
 		this.name = name;
 	}
 
-	private List<Output> getIssues() {
+	private List<Output> getOutputs() {
 		if (this.output == null) {
 			this.output = new LinkedList<Output>();
 		}

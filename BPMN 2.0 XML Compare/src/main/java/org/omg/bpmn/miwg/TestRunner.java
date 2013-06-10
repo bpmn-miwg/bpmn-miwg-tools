@@ -119,6 +119,10 @@ public class TestRunner {
 								describeDifference(diff));
 						test.addOutput(output);
 					}
+				} else {
+					results.addTool(testFolder.getName())
+							.addTest(bpmnFile.getName())
+							.addOutput(OutputType.info, "Missing test file!");
 				}
 			}
 		}

@@ -100,9 +100,21 @@ public class XmlCompareTestXmlResult {
 	 * @throws IOException
 	 */
 	private void reportTestResult(String result) throws IOException {
-		File f = new File(RPT_DIR, getClass().getSimpleName() + "-" + testCategory + "-" + tool + "-"
-				+ variant + ".html");
+		File f = new File(RPT_DIR, getFileName());
 		FileUtils.writeStringToFile(f, result);
+	}
+
+	private String getName() {
+		return getClass().getSimpleName() + "-" + getShortName();
+	}
+
+	private String getShortName() {
+		return testCategory.toString().split(" ")[0] + "-" + tool + "-"
+				+ variant;
+	}
+
+	private String getFileName() {
+		return getName() + ".html";
 	}
 
 	private File getReferenceFolder() {
@@ -118,9 +130,17 @@ public class XmlCompareTestXmlResult {
 	public void testXmlCompare() throws ParserConfigurationException,
 			SAXException, IOException {
 
-		String result = TestRunner.runXmlCompareTest(getReferenceFolder()
-				.getAbsolutePath(), getToolFolder().getAbsolutePath(), variant);
-		reportTestResult(result);
+		try {
+			String result = TestRunner.runXmlCompareTest(getReferenceFolder()
+					.getAbsolutePath(), getToolFolder().getAbsolutePath(),
+					variant);
+			reportTestResult(result);
+			System.out.println("<item name=\"" + getShortName() + "\" href=\""
+					+ getFileName() + "\"/>");
+
+		} catch (Exception e) {
+			reportTestResult(e.getMessage());
+		}
 	}
 
 }

@@ -9,22 +9,23 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-@Root(name="div")
+@Root(name = "div")
 public class Output {
 
 	/* Fields */
 
 	@Attribute(name = "class", required = true)
 	private OutputType outputType;
-	@Element(name = "p")
+	@Element(name = "p", required = true)
 	private String description;
 	@ElementList(inline = true, required = false)
 	private List<Output> suboutputs;
-	
+
 	/* Constructors */
-	
-	public Output() {}
-	
+
+	public Output() {
+	}
+
 	public Output(OutputType outputType, String description) {
 		this.setOutputType(outputType);
 		this.setDescription(description);
@@ -46,7 +47,7 @@ public class Output {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
 	/**
 	 * Adds an output element.
 	 * 
@@ -64,7 +65,7 @@ public class Output {
 	public void addSuboutputs(Collection<Output> outputs) {
 		this.getSuboutputs().addAll(outputs);
 	}
-	
+
 	/**
 	 * Returns a shadow copy of all suboutputs.
 	 * 
@@ -74,6 +75,12 @@ public class Output {
 		List<Output> i = new LinkedList<Output>();
 		i.addAll(getSuboutputs());
 		return i;
+	}
+
+	public boolean equals(Object obj) {
+		return (obj instanceof Output)
+				&& ((Output) obj).getDescription() != null
+				&& ((Output) obj).getDescription().equals(this.getDescription());
 	}
 
 	/* Getter & Setter */
