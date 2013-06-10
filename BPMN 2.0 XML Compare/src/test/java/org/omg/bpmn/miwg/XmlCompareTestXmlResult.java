@@ -135,8 +135,8 @@ public class XmlCompareTestXmlResult {
 					.getAbsolutePath(), getToolFolder().getAbsolutePath(),
 					variant);
 			reportTestResult(result);
-			System.out.println("<item name=\"" + getShortName() + "\" href=\""
-					+ getFileName() + "\"/>");
+//			System.out.println("<item name=\"" + getShortName() + "\" href=\""
+//					+ getFileName() + "\"/>");
 
 		} catch (Exception e) {
 			reportTestResult(e.getMessage());
