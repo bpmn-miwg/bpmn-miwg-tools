@@ -132,6 +132,11 @@
       <version>1.0-beta-2</version>
       <type>maven-plugin</type>
     </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>test-result</artifactId>
+      <version>${project.version}</version>
+    </dependency>
   </dependencies>
 
   <build>

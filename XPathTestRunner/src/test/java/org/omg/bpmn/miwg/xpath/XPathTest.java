@@ -24,16 +24,21 @@
  */
 package org.omg.bpmn.miwg.xpath;
 
+import static org.junit.Assert.assertNotNull;
+
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.testresult.IndexWriter;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestManager;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
@@ -54,11 +59,21 @@ public class XPathTest {
 
 	private static File baseDir;
 
+    private static List<File> files = new ArrayList<File>();
+
 	private TestInstance instance;
 
 	public XPathTest(TestInstance instance) {
 		this.instance = instance;
 	}
+
+    @AfterClass
+    public static void tearDown() {
+        File idx = new File(RPT_DIR, "index.xml");
+        System.out.println("writing index to " + idx);
+        IndexWriter.write(XPathTest.class.getSimpleName(), idx,
+                files);
+    }
 
 	@Parameters //(name= "{index}: {0}")
 	public static Collection<Object[]> data() throws Throwable {
@@ -86,6 +101,8 @@ public class XPathTest {
 		//Assert.assertEquals(0, instance.getFindings());
 		
 		out.close();
+        assertNotNull(out.getFile());
+        files.add(out.getFile());
 	}
 
 }
