@@ -1,4 +1,4 @@
-/**
+/*
  * The MIT License (MIT)
  * Copyright (c) 2013 OMG BPMN Model Interchange Working Group
  *
@@ -29,9 +29,14 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.List;
 
+/**
+ * Simple wrapper to write an index of the test results created.
+ * 
+ * @author Tim Stephenson
+ */
 public class IndexWriter {
 
-    public static void write(String rptName, File idx, List<File> files) {
+    public static void writeXml(String rptName, File idx, List<File> files) {
         PrintWriter out = null;
         try {
             out = new PrintWriter(idx);
@@ -44,8 +49,42 @@ public class IndexWriter {
                 out.println("\"/>");
             }
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage(), e);
+        } finally {
+            out.close();
+        }
+    }
+
+    public static void write(String rptName, File idx, List<File> files) {
+        PrintWriter out = null;
+        try {
+            out = new PrintWriter(idx);
+            out.println("<!DOCTYPE html><html><head>");
+            out.println("\t<link rel=\"stylesheet\" href=\"http://twitter.github.io/bootstrap/assets/css/bootstrap.css\">");
+            out.println("\t<link rel=\"stylesheet\" href=\"http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css\">");
+            out.println("\t<link rel=\"stylesheet\" href=\"/css/bpmn-miwg.css\">");
+            out.println("</head><body>");
+            out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");
+            out.println("\t\t<li><a href=\"/\">Home</a></li>");
+            out.println("\t\t<li><a href=\"/xml-compare/\">XML Compare</a></li>");
+            out.println("\t\t<li><a href=\"/xpath\">XPath</a></li>");
+            out.println("\t</ul>\t</div></div>");
+
+            for (File f : files) {
+                out.print("\t<div class=\"test\">");
+                out.print("<a href=\"");
+                out.print(f.getName());
+                out.print("\">");
+                out.print(f.getName());
+                out.print("</a>");
+                out.println("</div>");
+            }
+
+            out.println("\t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"><!-- required --></script>");
+            out.println("\t<script src=\"/js/bpmn-miwg.js\"><!-- required --></script>");
+            out.println("</body></html>"); 
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e.getMessage(), e);
         } finally {
             out.close();
         }

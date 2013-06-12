@@ -35,72 +35,13 @@
       <item name="License" href="../license.html"/>
       <item name="Team" href="../team-list.html"/>
     </menu>
-    <menu name="Tools" inherit="top">
-      <item name="XML Compare" href="../xml-compare/index.html"/>
-      <item name="XPath Tests" href="index.html"/>
+    <menu name="XML Compare" inherit="top">
+      <item name="Introduction" href="../xml-compare/index.html"/>
+      <item name="Results" href="../xml-compare/overview.html"/>
     </menu>
-    <menu name="XPath Test Results">
-      <item name="camunda modeler 2.0.11-A.1.0-roundtrip" href="camunda modeler 2.0.11-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.11-A.2.0-roundtrip" href="camunda modeler 2.0.11-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.11-A.3.0-roundtrip" href="camunda modeler 2.0.11-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.12-A.1.0-roundtrip" href="camunda modeler 2.0.12-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.12-A.2.0-roundtrip" href="camunda modeler 2.0.12-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.12-A.3.0-roundtrip" href="camunda modeler 2.0.12-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.12-A.4.0-roundtrip" href="camunda modeler 2.0.12-A.4.0-roundtrip.bpmn.txt"/>
-      <item name="IBM Process Designer 8.0.1-A.1.0-roundtrip" href="IBM Process Designer 8.0.1-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="IBM Process Designer 8.0.1-A.2.0-roundtrip" href="IBM Process Designer 8.0.1-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="IBM Process Designer 8.0.1-A.3.0-roundtrip" href="IBM Process Designer 8.0.1-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="itp-commerce Process Modeler 6.3442.15675-A.1.0-roundtrip" href="itp-commerce Process Modeler 6.3442.15675-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="itp-commerce Process Modeler 6.3442.15675-A.2.0-roundtrip" href="itp-commerce Process Modeler 6.3442.15675-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="itp-commerce Process Modeler 6.3442.15675-A.3.0-roundtrip" href="itp-commerce Process Modeler 6.3442.15675-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="itp-commerce Process Modeler 6.3442.15675-A.4.0-roundtrip" href="itp-commerce Process Modeler 6.3442.15675-A.4.0-roundtrip.bpmn.txt"/>
-      <item name="Reference-A.1.0" href="Reference-A.1.0.bpmn.txt"/>
-      <item name="Reference-A.2.0" href="Reference-A.2.0.bpmn.txt"/>
-      <item name="Reference-A.3.0" href="Reference-A.3.0.bpmn.txt"/>
-      <item name="Reference-A.4.0" href="Reference-A.4.0.bpmn.txt"/>
-      <item name="Signavio Process Editor 6.7.5-A.1.0-roundtrip" href="Signavio Process Editor 6.7.5-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="Signavio Process Editor 6.7.5-A.2.0-roundtrip" href="Signavio Process Editor 6.7.5-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="Signavio Process Editor 6.7.5-A.3.0-roundtrip" href="Signavio Process Editor 6.7.5-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="Signavio Process Editor 6.7.5-A.4.0-roundtrip" href="Signavio Process Editor 6.7.5-A.4.0-roundtrip.bpmn.txt"/>
-      <item name="Trisotech BPMN Web Modeler 4.1-A.1.0-roundtrip" href="Trisotech BPMN Web Modeler 4.1-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="Trisotech BPMN Web Modeler 4.1-A.2.0-roundtrip" href="Trisotech BPMN Web Modeler 4.1-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="Trisotech BPMN Web Modeler 4.1-A.3.0-roundtrip" href="Trisotech BPMN Web Modeler 4.1-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="Trisotech BPMN Web Modeler 4.1-A.4.0-roundtrip" href="Trisotech BPMN Web Modeler 4.1-A.4.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.24-A.1.0-roundtrip" href="Yaoqiang 2.1.24-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.24-A.2.0-roundtrip" href="Yaoqiang 2.1.24-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.24-A.3.0-roundtrip" href="Yaoqiang 2.1.24-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.28-A.1.0-roundtrip" href="Yaoqiang 2.1.28-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.28-A.2.0-roundtrip" href="Yaoqiang 2.1.28-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.28-A.3.0-roundtrip" href="Yaoqiang 2.1.28-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.28-A.4.0-roundtrip" href="Yaoqiang 2.1.28-A.4.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.33-A.1.0-roundtrip" href="Yaoqiang 2.1.33-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.33-A.2.0-roundtrip" href="Yaoqiang 2.1.33-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.33-A.3.0-roundtrip" href="Yaoqiang 2.1.33-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.33-A.4.0-roundtrip" href="Yaoqiang 2.1.33-A.4.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.34-A.1.0-roundtrip" href="Yaoqiang 2.1.34-A.1.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.34-A.2.0-roundtrip" href="Yaoqiang 2.1.34-A.2.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.34-A.3.0-roundtrip" href="Yaoqiang 2.1.34-A.3.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.34-A.4.0-roundtrip" href="Yaoqiang 2.1.34-A.4.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.11-B.1.0-roundtrip" href="camunda modeler 2.0.11-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.11-B.2.0-roundtrip" href="camunda modeler 2.0.11-B.2.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.12-B.1.0-roundtrip" href="camunda modeler 2.0.12-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="camunda modeler 2.0.12-B.2.0-roundtrip" href="camunda modeler 2.0.12-B.2.0-roundtrip.bpmn.txt"/>
-      <item name="itp-commerce Process Modeler 6.3442.15675-B.1.0-roundtrip" href="itp-commerce Process Modeler 6.3442.15675-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="itp-commerce Process Modeler 6.3442.15675-B.2.0-roundtrip" href="itp-commerce Process Modeler 6.3442.15675-B.2.0-roundtrip.bpmn.txt"/>
-      <item name="Reference-B.1.0" href="Reference-B.1.0.bpmn.txt"/>
-      <item name="Reference-B.2.0" href="Reference-B.2.0.bpmn.txt"/>
-      <item name="Signavio Process Editor 6.7.5-B.1.0-roundtrip" href="Signavio Process Editor 6.7.5-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="Signavio Process Editor 6.7.5-B.2.0-roundtrip" href="Signavio Process Editor 6.7.5-B.2.0-roundtrip.bpmn.txt"/>
-      <item name="Trisotech BPMN Web Modeler 4.1-B.1.0-roundtrip" href="Trisotech BPMN Web Modeler 4.1-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="Trisotech BPMN Web Modeler 4.1-B.2.0-roundtrip" href="Trisotech BPMN Web Modeler 4.1-B.2.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.24-B.1.0-roundtrip" href="Yaoqiang 2.1.24-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.24-B.2.0-roundtrip" href="Yaoqiang 2.1.24-B.2.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.28-B.1.0-roundtrip" href="Yaoqiang 2.1.28-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.28-B.2.0-roundtrip" href="Yaoqiang 2.1.28-B.2.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.33-B.1.0-roundtrip" href="Yaoqiang 2.1.33-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.33-B.2.0-roundtrip" href="Yaoqiang 2.1.33-B.2.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.34-B.1.0-roundtrip" href="Yaoqiang 2.1.34-B.1.0-roundtrip.bpmn.txt"/>
-      <item name="Yaoqiang 2.1.34-B.2.0-roundtrip" href="Yaoqiang 2.1.34-B.2.0-roundtrip.bpmn.txt"/>
+    <menu name="XPath Tests" inherit="top">
+      <item name="Introduction" href="index.html"/>
+      <item name="Results" href="overview.html"/>
     </menu>
     <menu ref="reports"/>
   </body>

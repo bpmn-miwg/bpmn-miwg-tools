@@ -118,7 +118,7 @@ public class XmlCompareTestXmlResult {
 
 	@AfterClass
     public static void tearDown() {
-        File idx = new File(RPT_DIR, "index.xml");
+        File idx = new File(RPT_DIR, "overview.html");
         System.out.println("writing index to " + idx);
         IndexWriter.write(XmlCompareTestXmlResult.class.getSimpleName(), idx,
                 files);
