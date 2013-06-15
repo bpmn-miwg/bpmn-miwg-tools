@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>XPathTestRunner</name>
-	<comment></comment>
+	<name>xpath</name>
+	<comment>Asserts that expected content from the reference model exists in each vendor model. Read more 
+      at: https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
 	<projects>
+		<project>test-result</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
