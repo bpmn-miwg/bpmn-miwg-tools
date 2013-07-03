@@ -79,15 +79,15 @@ public class TestManager {
 				}
 				out.println();
 				out.println("  TEST " + test.getName() + " results:");
-				out.println("  * OK    : " + test.resultsOK());
-				out.println("  * ISSUES: " + test.resultsFinding());
+				out.println("  * OK      : " + test.resultsOK());
+				out.println("  * FINDINGS: " + test.resultsFinding());
 				out.println();
 			}
 		}
 
 		out.println(">> TEST RESULTS TOTAL:");
-		out.println("  * OK    : " + instance.getOKs());
-		out.println("  * ISSUES: " + instance.getFindings());
+		out.println("  * OK      : " + instance.getOKs());
+		out.println("  * FINDINGS: " + instance.getFindings());
 		out.println();
 		out.println();
 		

@@ -20,6 +20,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Text;
 
 public abstract class AbstractXpathTest extends AbstractTest {
 
@@ -54,8 +55,18 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			// out.println(">>>  " + s);
 			s = s.replaceAll("&#10;", " ");
 			s = s.replaceAll("  ", " ");
+			s = s.trim();
 			// out.println(">>>>>" + s);
 			attr.setTextContent(s);
+		}
+
+		Object o2 = xpath.evaluate("//child::text()", head(),
+				XPathConstants.NODESET);
+		NodeList nl2 = (NodeList) o2;
+		for (int i = 0; i < nl2.getLength(); i++) {
+			Node n = nl2.item(i);
+			Text text = (Text) n;
+			text.setTextContent(text.getTextContent().trim());
 		}
 	}
 
@@ -320,6 +331,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return null;
 		}
 
+		if (head() == null) {
+			finding(null, "Parent failed");
+			return null;
+		}
+		
 		for (Node outgoingNode : findNodes(node, xpathOutgoing)) {
 			String sequenceFlowId = outgoingNode.getTextContent();
 
@@ -945,10 +961,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String calledElement = getAttribute(currentNode, "calledElement");
 		if (calledElement == null)
 			return;
-		
-		
-		String xpath = String.format("//bpmn:globalUserTask[@id='%s']", calledElement);
-		
+
+		String xpath = String.format("//bpmn:globalUserTask[@id='%s']",
+				calledElement);
+
 		Node n = findNode(currentNode, xpath);
 		if (n == null) {
 			finding(xpath, "Cannot find global Task");
@@ -989,7 +1005,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			}
 		}
 
-		finding(xpath, "Text annotation not found");
+		finding(xpath, String.format("Text annotation '%s' not found", text));
 	}
 
 	public void checkConditionalEvent() throws Throwable {
