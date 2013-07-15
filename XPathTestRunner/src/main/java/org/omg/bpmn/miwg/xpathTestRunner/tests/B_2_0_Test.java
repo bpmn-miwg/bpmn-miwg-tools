@@ -138,14 +138,14 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				navigateElement(n);
 
-				navigateFollowingElement("bpmn:receiveTask", "Receive Task 20");
+				navigateFollowingElement("bpmn:intermediateCatchEvent", "Intermediate Event Message Catch 2");
 
 				{
 					// Flow following the intermediate timer event
 
 					{
-						selectElementX("bpmn:callActivity",
-								"Expanded Call Activity");
+                        selectElementX("bpmn:callActivity[@name='Expanded Call Activity']");
+
 						selectCallActivityProcess();
 
 						navigateElement("bpmn:startEvent", "Start Event 3");
@@ -183,12 +183,12 @@ public class B_2_0_Test extends AbstractXpathTest {
 					checkCancelActivity(true);
 
 					navigateFollowingElement("bpmn:intermediateThrowEvent",
-							"Intermediate Event Link Throw");
+							"Intermediate Event Link");
 					checkLinkEvent();
 
 					navigateElement(n);
 
-					navigateFollowingElement("bpmn:userTask", "User Task 16");
+					navigateFollowingElement("bpmn:receiveTask", "Receive Task 16");
 
 					navigateFollowingElement("bpmn:endEvent",
 							"End Event 6 Message");
@@ -249,9 +249,9 @@ public class B_2_0_Test extends AbstractXpathTest {
 				}
 
 				{
-					// FLOW following the receive Task 20
+					// FLOW following the Intermediate Event Message Catch 2
 
-					navigateElementX("bpmn:receiveTask[@name='Receive Task 20']");
+					navigateElementX("bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch 2']");
 
 					n = navigateFollowingElement("bpmn:task", "Task 21");
 					navigateBoundaryEvent("Boundary Intermediate Event Interrupting Timer");
@@ -288,7 +288,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 					navigateFollowingElement("bpmn:task", "Task 24");
 
 					navigateFollowingElement("bpmn:endEvent",
-							"End Event 11 Escatation");
+							"End Event 11 Escalation");
 
 				}
 
@@ -314,7 +314,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 							"Parallel Gateway 7");
 
 					navigateFollowingElement("bpmn:endEvent",
-							"End Event 11 Escatation");
+							"End Event 11 Escalation");
 
 					navigateElement("bpmn:parallelGateway",
 							"Parallel Gateway 5");
@@ -323,7 +323,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 							"Expanded Sub-Process 3");
 
 					navigateElement("bpmn:intermediateCatchEvent",
-							"Intermediate Event Link Catch");
+							"Intermediate Event Link");
 
 					{
 						selectFollowingElement("bpmn:subProcess",
