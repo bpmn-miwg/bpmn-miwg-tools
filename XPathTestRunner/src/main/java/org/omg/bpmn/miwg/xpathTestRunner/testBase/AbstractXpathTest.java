@@ -158,9 +158,15 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	private String getAttribute(Node n, String name) {
+		return getAttribute(n, name, true);
+	}
+
+	private String getAttribute(Node n, String name, boolean throwFinding) {
 		Node namedItem = n.getAttributes().getNamedItem(name);
 		if (namedItem == null) {
-			finding(name, "Cannot find attribute");
+			if (throwFinding) {
+				finding(name, "Cannot find attribute");
+			}
 			return null;
 		}
 		return namedItem.getNodeValue();
@@ -335,7 +341,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			finding(null, "Parent failed");
 			return null;
 		}
-		
+
 		for (Node outgoingNode : findNodes(node, xpathOutgoing)) {
 			String sequenceFlowId = outgoingNode.getTextContent();
 
@@ -952,27 +958,42 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	public void checkGlobalTask() throws Throwable {
+	public void checkGlobalTask(boolean globalTaskShouldExist) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
 		}
 
-		String calledElement = getAttribute(currentNode, "calledElement");
-		if (calledElement == null)
-			return;
+		String calledElement = getAttribute(currentNode, "calledElement", false);
 
-		String xpath = String.format("//bpmn:globalUserTask[@id='%s']",
-				calledElement);
+		if (globalTaskShouldExist) {
+			if (calledElement == null) {
+				finding(null, "Attribute 'calledElement' does not exist");
+				return;
+			}
 
-		Node n = findNode(currentNode, xpath);
-		if (n == null) {
-			finding(xpath, "Cannot find global Task");
-			return;
+			String xpath = String.format("//bpmn:globalUserTask[@id='%s']",
+					calledElement);
+
+			Node n = findNode(currentNode, xpath);
+			if (n == null) {
+				finding(xpath, "Cannot find global Task");
+				return;
+			} else {
+				ok("Global Task is referenced");
+				return;
+			}
 		} else {
-			ok("Global Task");
-			return;
+			if (calledElement != null) {
+				finding(null,
+						"Attribute 'calledElement' exists although the test expects that this element does not exist");
+				return;
+			} else {
+				ok("Attibute 'calledElement' does not exist (as expected)");
+				return;
+			}
 		}
+
 	}
 
 	public void checkTextAssociation(String text) throws Throwable {

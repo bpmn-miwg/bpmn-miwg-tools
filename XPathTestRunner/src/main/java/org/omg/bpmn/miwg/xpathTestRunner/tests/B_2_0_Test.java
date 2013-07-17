@@ -76,7 +76,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				navigateElement(n);
 
 				navigateFollowingElement("bpmn:callActivity", "Call Activity calling a Global User Task");
-				checkGlobalTask();
+				checkGlobalTask(true);
 
 				{
 					selectElementX("bpmn:subProcess[@name='Expanded Sub-Process 1']");

@@ -74,6 +74,7 @@ public class B_1_0_Test extends AbstractXpathTest {
 
 				navigateFollowingElement("bpmn:callActivity",
 						"Call Activity Calling a Global Task");
+				checkGlobalTask(false);
 				navigateFollowingElement("bpmn:exclusiveGateway",
 						"Exclusive Gateway Convergence 1");
 
