@@ -10,6 +10,7 @@ import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_2_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_3_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_1_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
@@ -32,6 +33,7 @@ public class TestManager {
 		registerTest(new A_2_0_Test());
 		registerTest(new A_3_0_Test());
 		registerTest(new A_4_0_Test());
+		registerTest(new A_4_1_Test());
 	}
 
 	private void registerTest(Test test) {
