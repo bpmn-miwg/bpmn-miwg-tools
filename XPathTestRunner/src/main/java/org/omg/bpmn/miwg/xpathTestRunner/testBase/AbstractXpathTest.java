@@ -903,7 +903,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 	}
-	
+
 	public void checkXORMarkersForProcess(boolean hasMarker) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
@@ -912,27 +912,43 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		String xpath = ".//bpmn:exclusiveGateway";
 		List<Node> gatewayNodes = findNodes(currentNode, xpath);
-		
+
 		for (Node gatewayNode : gatewayNodes) {
 			String id = getAttribute(gatewayNode, "id");
-			String xpath2 = String.format("//bpmndi:BPMNShape[@bpmnElement='%s']", id);
-			Node n= findNode(currentNode, xpath2);
-			
+			String xpath2 = String.format(
+					"//bpmndi:BPMNShape[@bpmnElement='%s']", id);
+			Node n = findNode(currentNode, xpath2);
+
 			if (n == null) {
-				finding(xpath, String.format("There is no BPMNShape element for the BPMN element with the id '%s'.", id));
+				finding(xpath,
+						String.format(
+								"There is no BPMNShape element for the BPMN element with the id '%s'.",
+								id));
 				return;
 			} else {
-				String value = getAttribute(n, "isMarkerVisible");
-				
-				if (value != null) {
+				String value = getAttribute(n, "isMarkerVisible", false);
+
+				if (value == null) {
+					if (hasMarker) {
+						finding(null,
+								String.format(
+										"There is no isMarkerVisible attribute in the BPMNShape element for the BPMN element with the id '%s' although %s is expected.",
+										id, Boolean.toString(true)));
+						return;
+					}
+				} else {
 					if (!value.equals(Boolean.toString(hasMarker))) {
-						finding(null, String.format("The XOR marker for the BPMN element with the id '%s' is %s although %s is expected.", id, value, Boolean.toString(hasMarker)));
+						finding(null,
+								String.format(
+										"The XOR marker for the BPMN element with the id '%s' is %s although %s is expected.",
+										id, value, Boolean.toString(hasMarker)));
 						return;
 					}
 				}
 			}
-			
-			ok(String.format("All XOR markers have the expected value '%s'.", Boolean.toString(hasMarker)));
+
+			ok(String.format("All XOR markers have the expected value '%s'.",
+					Boolean.toString(hasMarker)));
 		}
 	}
 
