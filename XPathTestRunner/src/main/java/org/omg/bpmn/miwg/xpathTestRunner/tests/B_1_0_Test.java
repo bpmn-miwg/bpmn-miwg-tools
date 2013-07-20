@@ -26,6 +26,7 @@ public class B_1_0_Test extends AbstractXpathTest {
 
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
+				checkXORMarkersForProcess(false);
 				navigateElement("bpmn:startEvent", "Start Event Timer");
 				checkTimerEvent();
 				navigateFollowingElement("bpmn:task", "Abstract Task 1");
@@ -38,6 +39,7 @@ public class B_1_0_Test extends AbstractXpathTest {
 
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
+				checkXORMarkersForProcess(false);
 				navigateElementX(".//bpmn:lane[@name='Lane 1']");
 				navigateElementX(".//bpmn:lane[@name='Lane 2']");
 				navigateElement("bpmn:startEvent", "Start Event Message");

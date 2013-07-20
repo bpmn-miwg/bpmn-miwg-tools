@@ -9,6 +9,8 @@ public class NameSpaceContexts implements NamespaceContext {
 	public String getNamespaceURI(String prefix) {
 		if ("bpmn".equals(prefix))
 			return "http://www.omg.org/spec/BPMN/20100524/MODEL";
+		if ("bpmndi".equals(prefix))
+			return "http://www.omg.org/spec/BPMN/20100524/DI";
 		throw new IllegalArgumentException(prefix);
 	}
 

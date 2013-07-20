@@ -29,6 +29,8 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
+				
+				checkXORMarkersForProcess(true);
 
 				navigateElement("bpmn:startEvent", "Start Event 1 Timer");
 				checkTimerEvent();
@@ -59,6 +61,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 				{
 					selectFollowingElement("bpmn:subProcess", "Collapsed Sub-Process 1 Multi-Instances");
 					checkMultiInstanceParallel();
+					checkXORMarkersForProcess(true);
 					pop();
 				}
 
@@ -80,6 +83,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				{
 					selectElementX("bpmn:subProcess[@name='Expanded Sub-Process 1']");
+					checkXORMarkersForProcess(true);
 					navigateElementX("bpmn:startEvent[@name='Start Event 2']");
 					{
 						selectElementX("bpmn:userTask[@name='User Task 7 Standard Loop']");
@@ -111,6 +115,8 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 			{
 				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
+				
+				checkXORMarkersForProcess(true);
 
 				navigateElementX("bpmn:laneSet/bpmn:lane[@name='Lane 1']");
 				navigateElementX("bpmn:laneSet/bpmn:lane[@name='Lane 2']");

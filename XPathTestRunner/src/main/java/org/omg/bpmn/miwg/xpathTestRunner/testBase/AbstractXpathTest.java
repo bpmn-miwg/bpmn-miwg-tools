@@ -903,6 +903,38 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 	}
+	
+	public void checkXORMarkersForProcess(boolean hasMarker) throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String xpath = ".//bpmn:exclusiveGateway";
+		List<Node> gatewayNodes = findNodes(currentNode, xpath);
+		
+		for (Node gatewayNode : gatewayNodes) {
+			String id = getAttribute(gatewayNode, "id");
+			String xpath2 = String.format("//bpmndi:BPMNShape[@bpmnElement='%s']", id);
+			Node n= findNode(currentNode, xpath2);
+			
+			if (n == null) {
+				finding(xpath, String.format("There is no BPMNShape element for the BPMN element with the id '%s'.", id));
+				return;
+			} else {
+				String value = getAttribute(n, "isMarkerVisible");
+				
+				if (value != null) {
+					if (!value.equals(Boolean.toString(hasMarker))) {
+						finding(null, String.format("The XOR marker for the BPMN element with the id '%s' is %s although %s is expected.", id, value, Boolean.toString(hasMarker)));
+						return;
+					}
+				}
+			}
+			
+			ok(String.format("All XOR markers have the expected value '%s'.", Boolean.toString(hasMarker)));
+		}
+	}
 
 	public void checkEscalationEvent() throws Throwable {
 		if (currentNode == null) {
