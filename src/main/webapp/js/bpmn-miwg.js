@@ -23,4 +23,54 @@
  * 
  */
 
-/* Currently just a placeholder for future extensibility */
+var mi = new ModelInterchangePresenter();
+
+function ModelInterchangePresenter() {
+  this.reset = function() {
+    $('#highlight-reference').removeClass('highlight');
+    $('#highlight-vendor').removeClass('highlight');
+    if (orig.length == 2) {
+      for (idx in orig) {
+        $( '#'+orig[idx].target ).empty().html( orig[idx].data );
+        $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+      }
+    } else {
+      console.log('waiting for both models to be loaded');
+    }
+  };
+  this.loadBpmn = function(url,target) {
+    $.ajax({
+      url: url,
+      dataType: 'text',
+      success: function( data ) {
+        console.log('success');
+        var xml = data.replace(/</g,'&lt;');
+        orig.push({"target":target,"data":xml});
+        mi.reset();
+      }
+    });
+  };
+  this.scrollToFrag = function(idx, target) {
+    this.reset();    
+    this.highlightFrag(idx,'reference');
+    this.highlightFrag(idx,'vendor');
+    document.getElementById('highlight-'+target).scrollIntoView(false); 
+  };
+  this.highlightFrag= function(fragIdx,target) {
+    var fragToSeek = frags[fragIdx];
+    console.log('Highlighting: '+ fragToSeek+' in '+target);
+    var xml = $('#'+target).html();
+    
+    var idx = xml.indexOf(fragToSeek);
+    if (idx==-1) {
+      $('li[data-index='+fragIdx+'] .'+target).replaceWith('<span id="highlight-'+target+'" class="highlight">Not found</span>');
+    } else { 
+      console.log('Found frag at: '+ idx);
+      var fragBefore = xml.substring(0,idx);
+      //console.log('Frag before: '+fragBefore.substring(0,20)+'...'+fragBefore.substring(fragBefore.length-20));
+      var fragAfter = xml.substring(idx+fragToSeek.length);
+      //console.log('Frag after: '+fragAfter.substring(0,20)+'...'+fragAfter.substring(fragBefore.length-20));
+      $( '#'+target ).html(fragBefore+'<span id="highlight-'+target+'" class="highlight">'+fragToSeek+'</span>'+fragAfter);
+    }
+  }
+}

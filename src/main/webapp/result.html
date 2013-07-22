@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BPMN MIWG Automated test results - Proof of concept</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/highlightjs/github.css">
+<style>
+.highlight {
+  background-color: yellow;
+}
+[class*="span"] {
+  margin-left:10px;
+}
+.well {
+  style="margin:10px;"
+}
+.backToFindings {
+  padding: 10px;
+  background-color: #cecece;
+  position: fixed;
+  bottom: 0;
+  border-radius: 4px;
+  border: solid 1px #575757;
+}
+
+</style>
+</head>
+<body>
+  <!-- Cannot use iframe as x-frame-options has been set to deny
+  <iframe src="https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.bpmn"></iframe>
+  -->
+  <div class="container">
+    <h1>Findings for B.1.0</h1>
+    <div class="well" id="findings">
+      <ol>
+        <li data-index='0'>Finding: lorem ipsum top: <a class="reference" onclick="mi.scrollToFrag(0,'reference');return false;">Show in Reference</a> <a class="vendor" onclick="mi.scrollToFrag(0,'vendor');return false;">Show in Vendor</a>
+        <li data-index='1'>Finding: lorem ipsum middle: <a class="reference" onclick="mi.scrollToFrag(1,'reference');return false;">Show in Reference</a> <a class="vendor" onclick="mi.scrollToFrag(1,'vendor');return false;">Show in Vendor</a>
+        <li data-index='2'>Finding: lorem ipsum bottom: <a class="reference" onclick="mi.scrollToFrag(2,'reference');return false;">Show in Reference</a> <a class="vendor" onclick="mi.scrollToFrag(2,'vendor');return false;">Show in Vendor</a>
+      </ol>
+    </div>
+    <div class="span6">
+      <h2 id="referenceTitle">Reference (BPI Visio)</h2>
+      <pre><code class="xml" id="reference">
+
+      </code></pre>
+    </div>
+    
+    <div class="span6">
+      <h2 id="vendorTitle">Yaoqiang 2.1.34</h2>
+      <pre><code class="xml" id="vendor">
+  
+      </code></pre>
+    </div>
+  </div>
+  
+  <div class="backToFindings">
+    <a href="#findings">Top</a>
+  </div>  
+  
+  <script src="js/jquery-1.9.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/highlight.pack.js"></script>
+  <script src="js/bpmn-miwg.js"></script>
+  <script> 
+    var frags = ['B.1.0','End Event None 3','LS1373655174955'];
+    var orig = [];
+    mi.loadBpmn("./B.1.0-Reference.bpmn","reference");
+    mi.loadBpmn("./B.1.0-Yaoqiang-2.1.34-roundtrip.bpmn","vendor");
+  </script>
+  
+</body>
+</html>
