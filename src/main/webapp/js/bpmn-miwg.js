@@ -58,16 +58,16 @@ function ModelInterchangePresenter() {
       });
     });
   };
-  this.scrollToFrag = function(idx, target) {
+  this.scrollToFrag = function(test, idx, target) {
     this.reset();    
-    this.highlightFrag(idx,'reference');
-    this.highlightFrag(idx,'vendor');
+    this.highlightFrag(test, idx,'reference');
+    this.highlightFrag(test, idx,'vendor');
     document.getElementById('highlight-'+target).scrollIntoView(false); 
   };
-  this.highlightFrag= function(fragIdx,target) {
+  this.highlightFrag= function(test,fragIdx,target) {
     var fragToSeek = frags[fragIdx];
     console.log('Highlighting: '+ fragToSeek+' in '+target);
-    var xml = $('#'+target).html();
+    var xml = $( 'div[data-test="'+test+'"] code.'+target ).html();
     // adjust string to seek for the code highlighting 
     // e.g. id="11" becomes 
     //      <span class="attribute">id</span></span>=<span class="value"><span class="value">"11

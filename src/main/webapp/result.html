@@ -14,23 +14,23 @@
   <div class="container">
     <div class="test well span12" data-test="B.1.0">
       <h1>Findings for B.1.0</h1>
-      <div class="well" id="findings">
+      <div class="well">
         <div data-index='0' class="finding">
            <p>Finding: lorem ipsum top:
-             <a class="reference" onclick="mi.scrollToFrag($(this).parent().parent().data('index'),'reference');return false;">Show in Reference</a> 
-             <a class="vendor" onclick="mi.scrollToFrag($(this).parent().parent().data('index'),'vendor');return false;">Show in Vendor</a>
+             <a class="reference" onclick="mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).parent().parent().data('index'),'reference');return false;">Show in Reference</a> 
+             <a class="vendor" onclick="mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).parent().parent().data('index'),'vendor');return false;">Show in Vendor</a>
            </p>
          </div>
          <div data-index='1' class="finding">
            <p>Finding: lorem ipsum middle:
-             <a class="reference" onclick="mi.scrollToFrag($(this).parent().parent().data('index'),'reference');return false;">Show in Reference</a> 
-             <a class="vendor" onclick="mi.scrollToFrag($(this).parent().parent().data('index'),'vendor');return false;">Show in Vendor</a>
+             <a class="reference" onclick="mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).parent().parent().data('index'),'reference');return false;">Show in Reference</a> 
+             <a class="vendor" onclick="mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).parent().parent().data('index'),'vendor');return false;">Show in Vendor</a>
            </p>
          </div>
          <div data-index='2' class="finding">
            <p>Finding: lorem ipsum bottom:
-             <a class="reference" onclick="mi.scrollToFrag($(this).parent().parent().data('index'),'reference');return false;">Show in Reference</a> 
-             <a class="vendor" onclick="mi.scrollToFrag($(this).parent().parent().data('index'),'vendor');return false;">Show in Vendor</a>
+             <a class="reference" onclick="mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).parent().parent().data('index'),'reference');return false;">Show in Reference</a> 
+             <a class="vendor" onclick="mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).parent().parent().data('index'),'vendor');return false;">Show in Vendor</a>
            </p>
          </div>
       </div>
