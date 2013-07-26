@@ -23,5 +23,20 @@
  * 
  */
 
-
-/* Currently just a placeholder for future extensibility */
+.highlight {
+  background-color: yellow;
+}
+[class*="span"] {
+  margin-left:10px;
+}
+.well {
+  style="margin:10px;"
+}
+.backToFindings {
+  padding: 10px;
+  background-color: #cecece;
+  position: fixed;
+  bottom: 0;
+  border-radius: 4px;
+  border: solid 1px #575757;
+}

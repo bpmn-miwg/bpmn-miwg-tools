@@ -29,25 +29,33 @@ function ModelInterchangePresenter() {
   this.reset = function() {
     $('#highlight-reference').removeClass('highlight');
     $('#highlight-vendor').removeClass('highlight');
-    if (orig.length == 2) {
+    if (orig.length == ($('code.reference').length*2)) {
       for (idx in orig) {
-        $( '#'+orig[idx].target ).empty().html( orig[idx].data );
-        $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+        $( 'div[data-test="'+orig[idx].test+'"] code.'+orig[idx].target ).empty().html( orig[idx].data );
+        $('pre code').each(function(i, e) { hljs.highlightBlock(e) });
       }
     } else {
-      console.log('waiting for both models to be loaded');
+      console.log('waiting for all models to be loaded');
     }
   };
-  this.loadBpmn = function(url,target) {
-    $.ajax({
-      url: url,
-      dataType: 'text',
-      success: function( data ) {
-        console.log('success');
-        var xml = data.replace(/</g,'&lt;');
-        orig.push({"target":target,"data":xml});
-        mi.reset();
-      }
+  this.loadBpmn = function(target) {
+    $.each($('code.'+target), function(i,d) {
+      var test = $(d).parent().parent().parent().data('test');
+      var file = $(d).data('file');
+      console.log('loading: '+file+' for '+target+', '+test);
+      $.ajax({
+        url: file,
+        dataType: 'text',
+        success: function( data ) {
+          console.log('success loading '+file+' for '+test);
+          var xml = data.replace(/</g,'&lt;');
+          orig.push({"target":target,"test":test,"data":xml});
+          mi.reset();
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.error(textStatus);
+        }
+      });
     });
   };
   this.scrollToFrag = function(idx, target) {
@@ -60,6 +68,10 @@ function ModelInterchangePresenter() {
     var fragToSeek = frags[fragIdx];
     console.log('Highlighting: '+ fragToSeek+' in '+target);
     var xml = $('#'+target).html();
+    // adjust string to seek for the code highlighting 
+    // e.g. id="11" becomes 
+    //      <span class="attribute">id</span></span>=<span class="value"><span class="value">"11
+    fragToSeek = fragToSeek.replace('id="', '<span class="attribute">id<\/span><\/span>=<span class="value"><span class="value">"');
     
     var idx = xml.indexOf(fragToSeek);
     if (idx==-1) {
