@@ -32,7 +32,9 @@ import org.w3c.dom.Node;
 
 public class NavigateXPath extends Nav {
 	
+	@SuppressWarnings("unused")
 	private String element;
+	@SuppressWarnings("unused")
 	private String name;
 	
 	public NavigateXPath(String element, String name) {

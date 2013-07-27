@@ -2,9 +2,6 @@ package org.omg.bpmn.miwg.experimental;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Stack;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -16,14 +13,9 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
-import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractTest;
-import org.omg.bpmn.miwg.xpathTestRunner.testBase.ArtifactType;
-import org.omg.bpmn.miwg.xpathTestRunner.testBase.Direction;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.NameSpaceContexts;
-import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
@@ -37,6 +29,7 @@ public class StackMachine {
 	private Document doc;
 	private XPath xpath;
 	private Stack<Node> nodeStack;
+	@SuppressWarnings("unused")
 	private TestOutput out;
 
 	public void init(TestOutput out) {
@@ -106,11 +99,13 @@ public class StackMachine {
 		return currentNode;
 	}
 
+	@SuppressWarnings("unused")
 	private int depth() {
 		return nodeStack.size();
 	}
 
 	
+	@SuppressWarnings("unused")
 	private void pushElement(Nav nav) {
 		
 	}
