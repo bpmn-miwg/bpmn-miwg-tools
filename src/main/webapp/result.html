@@ -14,6 +14,9 @@
   <div class="container">
     
     <div class="test well span12" data-test="B.1.0">
+      <h3>
+        BPMN MIWG Automated test results - Proof of concept
+      </h3>
       <p>
         There are two hand-produced test examples below. Both use a base HTML 
         structure enhanced with data-* attributes when mi.init() is called. 
@@ -22,6 +25,20 @@
       <ul>
         <li><a href=sample-result-xpath.html>Example for XPath Test Runner to emulate</a>
         <li><a href=sample-result-xml-compare.html>Example for XML Compare to emulate</a>
+      </ul>
+      <p>
+        The following is a (hopefully complete) list of enhancements to make the
+        previous (xml-compare) html work as the above examples: 
+      </p>
+      <ul>
+        <li>Add link elements to head
+        <li>Add script elements to end
+        <li>Add backToFindings named anchor and associated div
+        <li>Add mi.init() script  
+        <li>Add container class to the testresults div
+        <li>Add well and span12 to class alongside test, also add data-test="X.y.z"
+        <li>Add spans with attributes data-frag='text' or data-xpath='xpath' as child nodes of the p child of the div with class="finding"
+        <li>Add data-test='x.y.z' to the div with class='test'
       </ul>
     </div>
   
