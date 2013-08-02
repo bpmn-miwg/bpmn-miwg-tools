@@ -40,3 +40,13 @@
   border-radius: 4px;
   border: solid 1px #575757;
 }
+.messages {
+  padding: 10px;
+  background-color: #cecece;
+  position: fixed;
+  top: 20px;
+  left: auto;
+  right: auto;
+  border-radius: 4px;
+  border: solid 1px #575757;
+}
