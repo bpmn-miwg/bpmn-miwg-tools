@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.omg.bpmn.miwg.output.DetailedOutput;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
@@ -16,10 +17,12 @@ public class Output {
 
 	@Attribute(name = "class", required = true)
 	private OutputType outputType;
-	@Element(name = "p", required = true)
+	@Element(name = "p", required = false)
 	private String description;
 	@ElementList(inline = true, required = false)
 	private List<Output> suboutputs;
+	@ElementList(inline = true, required = false, empty=true)
+	private List<DetailedOutput> details;
 
 	/* Constructors */
 
@@ -29,6 +32,11 @@ public class Output {
 	public Output(OutputType outputType, String description) {
 		this.setOutputType(outputType);
 		this.setDescription(description);
+	}
+
+	public Output(OutputType outputType, DetailedOutput detail) {
+		this.setOutputType(outputType);
+		this.addDetail(detail);
 	}
 
 	/* Business methods */
@@ -78,8 +86,7 @@ public class Output {
 	}
 
 	public boolean equals(Object obj) {
-		return (obj instanceof Output)
-				&& ((Output) obj).getDescription() != null
+		return (obj instanceof Output) && ((Output) obj).getDescription() != null
 				&& ((Output) obj).getDescription().equals(this.getDescription());
 	}
 
@@ -89,5 +96,16 @@ public class Output {
 			this.suboutputs = new LinkedList<Output>();
 		}
 		return this.suboutputs;
+	}
+
+	private List<DetailedOutput> getDetail() {
+		if (this.details == null) {
+			this.details = new LinkedList<DetailedOutput>();
+		}
+		return this.details;
+	}
+
+	public void addDetail(DetailedOutput detailedOutput) {
+		this.getDetail().add(detailedOutput);
 	}
 }

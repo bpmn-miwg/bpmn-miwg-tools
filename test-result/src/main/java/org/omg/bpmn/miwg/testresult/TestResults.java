@@ -25,6 +25,7 @@
 
 package org.omg.bpmn.miwg.testresult;
 
+import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.LinkedList;
 import java.util.List;
@@ -55,6 +56,9 @@ import org.simpleframework.xml.core.Persister;
  */
 @Root(name = "div")
 public class TestResults {
+	
+	private static final String HTML_FILE = "resultspage.html";
+	private static final String RESULTS_PLACEHOLDER = "{TESTRESULTS}";
 
 	@Attribute(name = "class", required = true)
 	private String clazz = TestResults.class.getSimpleName().toLowerCase();
@@ -104,15 +108,30 @@ public class TestResults {
 	}
 
 	public String toString() {
+//		RegistryMatcher m = new RegistryMatcher();
+//		m.bind(String.class, new StringTransformer());
 		Serializer serializer = new Persister();
 		StringWriter writer = new StringWriter();
+		
 		try {
 			serializer.write(this, writer);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "Exception occurred. See stack trace in log.";
 		}
-		return writer.toString();
+		return produceSurroundingHtml(writer);
+	}
+	
+	private String produceSurroundingHtml(StringWriter writer) {
+		InputStream is = TestResults.class.getClassLoader().getResourceAsStream(HTML_FILE);
+		String html = convertStreamToString(is);
+
+		return html.replace(RESULTS_PLACEHOLDER, writer.toString());
+	}
+	
+	public static String convertStreamToString(java.io.InputStream is) {
+	    java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+	    return s.hasNext() ? s.next() : "";
 	}
 
 	/* Getter & Setter */

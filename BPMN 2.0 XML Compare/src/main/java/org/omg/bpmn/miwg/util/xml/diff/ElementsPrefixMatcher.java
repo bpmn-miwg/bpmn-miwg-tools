@@ -65,7 +65,7 @@ public class ElementsPrefixMatcher {
 	 * @return the given XPath string with namespace prefixes for all nodes
 	 */
 	public String prependNamespacePrefixesToNodes(String xpath) {
-		if (StringUtils.isBlank(xpath)) {
+		if (!StringUtils.isBlank(xpath)) {
 			for (Pair<String, String> match : elementsRegexpToPrefix) {
 				xpath = xpath.replaceAll(match.getLeft(), match.getRight());
 			}

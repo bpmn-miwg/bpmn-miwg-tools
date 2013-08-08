@@ -33,12 +33,19 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.io.FileUtils;
 import org.custommonkey.xmlunit.Difference;
+import org.custommonkey.xmlunit.NodeDetail;
 import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20ConformanceChecker;
+import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20DiffConfiguration;
+import org.omg.bpmn.miwg.configuration.BpmnCompareConfiguration;
+import org.omg.bpmn.miwg.output.Detail;
+import org.omg.bpmn.miwg.output.DetailedOutput;
+import org.omg.bpmn.miwg.output.Link;
 import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.testresult.Test;
 import org.omg.bpmn.miwg.testresult.TestResults;
 import org.xml.sax.SAXException;
+
 
 public class TestRunner {
 
@@ -54,23 +61,25 @@ public class TestRunner {
 	 * @throws SAXException
 	 * 
 	 */
-	public static void main(String[] args) throws SAXException, IOException,
-			ParserConfigurationException {
+	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
 
 		System.out.println("Runing BPMN 2.0 XML Compare Test...");
-		String result = runXmlCompareTest(args[0], args[1],
-				Variant.valueOf(args[2]));
+		String result = runXmlCompareTest(args[0], args[1], Variant.valueOf(args[2]));
 
 		if (args.length > 3) {
 			File outputFile = new File(args[3]);
 			FileUtils.writeStringToFile(outputFile, result);
-			System.out.println("Output printed to: \n"
-					+ outputFile.getAbsolutePath());
+			System.out.println("Output printed to: \n" + outputFile.getAbsolutePath());
 		} else {
 			System.out.println(result);
 		}
 
 		System.out.println("Finished BPMN 2.0 XML Compare Test");
+	}
+
+	public static String runXmlCompareTest(String refFolderPath, String testFolderPath, Variant variant)
+			throws ParserConfigurationException, SAXException, IOException {
+		return runXmlCompareTest(refFolderPath, testFolderPath, variant, null);
 	}
 
 	/**
@@ -90,8 +99,7 @@ public class TestRunner {
 	 * @throws IOException
 	 * @throws SAXException
 	 */
-	public static String runXmlCompareTest(String refFolderPath,
-			String testFolderPath, Variant variant)
+	public static String runXmlCompareTest(String refFolderPath, String testFolderPath, Variant variant, String confName)
 			throws ParserConfigurationException, SAXException, IOException {
 		File refFolder = new File(refFolderPath);
 		File testFolder = new File(testFolderPath);
@@ -100,7 +108,10 @@ public class TestRunner {
 			throw new IllegalArgumentException("Invalid path to folder");
 		}
 
+		BpmnCompareConfiguration conf = BpmnCompareConfiguration.loadConfiguration(confName);
+		Bpmn20DiffConfiguration.setConf(conf);
 		Bpmn20ConformanceChecker checker = new Bpmn20ConformanceChecker();
+
 		TestResults results = new TestResults();
 
 		for (File bpmnFile : refFolder.listFiles()) {
@@ -109,19 +120,15 @@ public class TestRunner {
 				if (compareFile.exists()) {
 
 					// Building test output structure
-					Test test = results.addTool(testFolder.getName()).addTest(
-							bpmnFile.getName());
+					Test test = results.addTool(testFolder.getName()).addTest(bpmnFile.getName());
 
-					List<Difference> diffs = checker.getSignificantDifferences(
-							bpmnFile, compareFile);
+					List<Difference> diffs = checker.getSignificantDifferences(bpmnFile, compareFile);
 					for (Difference diff : diffs) {
-						Output output = new Output(OutputType.finding,
-								describeDifference(diff));
+						Output output = new Output(OutputType.finding, describeDifference(diff));
 						test.addOutput(output);
 					}
 				} else {
-					results.addTool(testFolder.getName())
-							.addTest(bpmnFile.getName())
+					results.addTool(testFolder.getName()).addTest(bpmnFile.getName())
 							.addOutput(OutputType.info, "Missing test file!");
 				}
 			}
@@ -130,30 +137,46 @@ public class TestRunner {
 		return results.toString();
 	}
 
-	private static String describeDifference(Difference difference) {
-		StringBuffer sBuff = new StringBuffer();
-		sBuff.append(difference.getDescription() + " (id:" + difference.getId()
-				+ ")\n");
-		sBuff.append("control: "
-				+ difference.getControlNodeDetail().getXpathLocation() + ":\t");
-		sBuff.append(difference.getControlNodeDetail().getValue() + "\n");
-		sBuff.append("test:    "
-				+ difference.getTestNodeDetail().getXpathLocation() + ":\t");
-		sBuff.append(difference.getTestNodeDetail().getValue() + "\n\n");
-
-		return sBuff.toString();
+	private static DetailedOutput describeDifference(Difference difference) {
+		DetailedOutput dOut = new DetailedOutput();
+		
+		// Difference description
+		dOut.setDescription(difference.getDescription() + " (id:" + difference.getId() + ")");
+		
+		// Reference xpath/value
+		dOut.addDetail(printDifferenceDetail(difference.getControlNodeDetail(), "reference"));
+		
+		// Vendor xpath/value
+		dOut.addDetail(printDifferenceDetail(difference.getTestNodeDetail(), "vendor"));
+		
+		// Append links to highlight changes in XML
+		dOut.addLink(appendHighlightLink("reference"));
+		dOut.addLink(appendHighlightLink("vendor"));
+		
+		return dOut;
 	}
 
+	private static Detail printDifferenceDetail(NodeDetail detail, String type) {
+		Detail d = new Detail();
+		d.setMessage(type + ": " + detail.getXpathLocation() + " :\t" + detail.getValue());
+		d.setType(type);
+		d.setXpath(detail.getXpathLocation());
+		return d;
+	}
+
+	
+	private static Link appendHighlightLink(String type) {
+		return new Link(type, "Show in " + type);
+	}
+	
 	private static boolean isBpmnFile(File bpmnFile) {
 		int i = bpmnFile.getName().lastIndexOf(".");
 		return bpmnFile.getName().substring(i + 1).equals(FILE_EXTENSION);
 	}
 
-	private static File getCompareFile(File refFile, File testFolder,
-			Variant variant) {
+	private static File getCompareFile(File refFile, File testFolder, Variant variant) {
 		int i = refFile.getName().lastIndexOf(".");
-		String fName = refFile.getName().substring(0, i) + "-"
-				+ variant.toString() + "." + FILE_EXTENSION;
+		String fName = refFile.getName().substring(0, i) + "-" + variant.toString() + "." + FILE_EXTENSION;
 
 		return new File(testFolder, fName);
 	}

@@ -31,10 +31,16 @@ import org.omg.bpmn.miwg.util.xml.diff.ElementsPrefixMatcher;
 public class Bpmn20ElementsPrefixMatcher extends ElementsPrefixMatcher {
 	public Bpmn20ElementsPrefixMatcher() {
 		// the elements are ordered alphabetically; please keep it that way
-		addMatchInfo("/(collaboration|dataState|dataStore|dataStoreReference|definitions|documentation|"
+		addSimpleMatchInfo("/(collaboration|dataState|dataStore|dataStoreReference|definitions|documentation|"
 				+ "extensionElements|ioSpecification|laneSet|lane|participant|process|sequenceFlow|startEvent|"
-				+ "subProcess|task|transformation)", "/" + XmlNamespace.BPMN20.getPrefix() + ":$1");
+				+ "subProcess|task|transformation)");
 
 		addMatchInfo("/(BPMNDiagram|BPMNPlane)", "/" + XmlNamespace.BPMN20DI.getPrefix() + ":$1");
+	}
+
+	private void addSimpleMatchInfo(String expression) {
+		addMatchInfo(expression, "/" + XmlNamespace.BPMN20.getPrefix() + ":$1");
+		addMatchInfo(expression, "/" + XmlNamespace.BPMN202.getPrefix() + ":$1");
+		addMatchInfo(expression, "/" + XmlNamespace.BPMN20SEMANTIC.getPrefix() + ":$1");
 	}
 }

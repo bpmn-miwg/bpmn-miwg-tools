@@ -25,39 +25,64 @@
 
 package org.omg.bpmn.miwg.bpmn2_0.comparison;
 
+import java.io.IOException;
+
+import org.omg.bpmn.miwg.configuration.BpmnCompareConfiguration;
 import org.omg.bpmn.miwg.util.xml.diff.ElementsPrefixMatcher;
 import org.omg.bpmn.miwg.util.xml.diff.XmlDiffConfiguration;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 
 public class Bpmn20DiffConfiguration extends XmlDiffConfiguration {
 	
 	//@formatter:off
-	private static final String[] ignoredNodes = { // "/bpmn:definitions/bpmn:globalTask",
-		//"//extensionElements/signavio:signavioMetaData"
-	};
-
-	private static final String[] ignoredAttributes = {
-		"/definitions/@exporterVersion"
-	};
-	
-	private static final String[] idsAndIdRefs = {"id", "dataStoreRef", "bpmnElement"};
+	private static String[] ignoredNodes;
+	private static String[] ignoredAttributes;
+	private static String[] idsAndIdRefs;
+	private static String[] optionalAttributes;
 	
 	private static final String[][]	defaultAttributeValueRegexes = {
 		{"top", "false"},{"bottom", "false"},{"left", "false"},	{"right", "false"}
 	};
 	
-	private static final String[] optionalAttributes = {};
 	
 	//@formatter:on
+	
+	static {
+		try {
+			BpmnCompareConfiguration conf = BpmnCompareConfiguration.loadConfiguration();
+			
+			setConf(conf);
+			
+		} catch (JsonParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	/**
 	 * Keep the matchiner up to date as the XPath expressions above will not match an XML element not listed there!!!
 	 */
 	private static final ElementsPrefixMatcher	prefixMatcher					= new Bpmn20ElementsPrefixMatcher();
-
 	
 	public Bpmn20DiffConfiguration() {
 		super(ignoredNodes, ignoredAttributes, optionalAttributes,
 				idsAndIdRefs, null, null, null, prefixMatcher,
 				defaultAttributeValueRegexes);
+	}
+	
+	public static void setConf(BpmnCompareConfiguration conf) {
+		ignoredNodes = conf.getIgnoredNodes();
+		ignoredAttributes = conf.getIgnoredAttributes();
+		optionalAttributes = conf.getOptionalAttributes();
+		
+		idsAndIdRefs = conf.getIdsAndIdRefs();
 	}
 }

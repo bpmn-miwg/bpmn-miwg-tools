@@ -37,6 +37,8 @@ public enum XmlNamespace {
 
 	// @formatter:off
 	BPMN20(					"bpmn",						"http://www.omg.org/spec/BPMN/20100524/MODEL"), 
+	BPMN20SEMANTIC(			"semantic",					"http://www.omg.org/spec/BPMN/20100524/MODEL"),
+	BPMN202(				"bpmn2", 					"http://www.omg.org/spec/BPMN/20100524/MODEL"),
 	BPMN20DI(				"bpmndi",					"http://www.omg.org/spec/BPMN/20100524/DI"), 
 	BPMN20OMGDC(			"omgdc",					"http://www.omg.org/spec/DD/20100524/DC"),
 	BPMN20OMGDI( 			"omgdi",					"http://www.omg.org/spec/DD/20100524/DI"),	
