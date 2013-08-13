@@ -27,6 +27,8 @@ What pre-requisites must I install?
   Maven which is used to ensure repeatable builds on everyone's workstations.
   If you are unfamiliar with Maven please read 
   {{{http://maven.apache.org/run-maven/index.html}Running Maven}}.
+
+  <Note: I have encountered some failures to generate the site when using Maven 3.0.3 as built-in in my version of Mac OS X, 3.0.4 works fine under Linux and 3.0.5 (the latest as of writing) works on Mac.>
   
 How do I...
 

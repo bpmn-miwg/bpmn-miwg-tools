@@ -60,8 +60,8 @@ public class IndexWriter {
         try {
             out = new PrintWriter(idx);
             out.println("<!DOCTYPE html><html><head>");
-            out.println("\t<link rel=\"stylesheet\" href=\"http://twitter.github.io/bootstrap/assets/css/bootstrap.css\">");
-            out.println("\t<link rel=\"stylesheet\" href=\"http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css\">");
+			out.println("\t<link rel=\"stylesheet\" href=\"/css/bootstrap.css\">");
+			out.println("\t<link rel=\"stylesheet\" href=\"/css/bootstrap-responsive.css\">");
             out.println("\t<link rel=\"stylesheet\" href=\"/css/bpmn-miwg.css\">");
             out.println("</head><body>");
             out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");

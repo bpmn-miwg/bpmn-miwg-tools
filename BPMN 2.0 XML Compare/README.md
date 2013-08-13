@@ -11,7 +11,7 @@ Running
 The easiest way to run the test tool is via Maven as it manages all dependencies
 for you. 
 
-1. Install Maven as described here: 
+1. Install Maven as described here: http://maven.apache.org/download.html
 2. Clone the tools and test suite to the same directory as the tools, for example: 
     /Users/timstephenson/git/bpmn-miwg-tools/BPMN 2.0 XML Compare
     /Users/timstephenson/git/bpmn-miwg-test-suite

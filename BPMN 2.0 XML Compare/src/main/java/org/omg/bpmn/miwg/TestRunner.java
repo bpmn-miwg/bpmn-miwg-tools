@@ -129,7 +129,10 @@ public class TestRunner {
 					}
 				} else {
 					results.addTool(testFolder.getName()).addTest(bpmnFile.getName())
-							.addOutput(OutputType.info, "Missing test file!");
+							.addOutput(
+									OutputType.info,
+									"Missing test file: "
+											+ compareFile.getCanonicalPath());
 				}
 			}
 		}
