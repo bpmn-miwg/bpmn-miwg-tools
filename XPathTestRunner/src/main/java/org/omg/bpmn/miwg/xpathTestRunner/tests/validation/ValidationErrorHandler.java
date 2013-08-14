@@ -1,6 +1,7 @@
 package org.omg.bpmn.miwg.xpathTestRunner.tests.validation;
 
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.InfoEntry;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -18,22 +19,22 @@ public class ValidationErrorHandler extends DefaultHandler {
 
 	public void warning(SAXParseException e) {
 		numWarning++;
-		out.println("Warning Line " + e.getLineNumber() + ": " + e.getMessage()
-				+ "\n");
+		out.println(new InfoEntry("Warning Line " + e.getLineNumber() + ": " + e.getMessage()
+				+ "\n"));
 	}
 
 	public void error(SAXParseException e) {
 		numError++;
 		errMessage = new String("Error Line " + e.getLineNumber() + ": "
 				+ e.getMessage() + "\n");
-		out.println(errMessage);
+		out.println(new InfoEntry(errMessage));
 	}
 
 	public void fatalError(SAXParseException e) {
 		numFatalError++;
 		errMessage = new String("Error Line " + e.getLineNumber() + ": "
 				+ e.getMessage() + "\n");
-		out.println(errMessage);
+		out.println(new InfoEntry(errMessage));
 	}
 
 	public boolean valid() {

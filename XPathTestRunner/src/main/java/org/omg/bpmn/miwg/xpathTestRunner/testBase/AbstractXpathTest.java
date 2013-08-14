@@ -1,7 +1,6 @@
 package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -14,7 +13,9 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
-import org.omg.bpmn.miwg.xpathTestRunner.xpathAutoChecker.base.XpathAutoChecker;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.FindingAssertionEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.OKAssertionEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.PushEntry;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -30,7 +31,6 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	private Document doc;
 	private XPath xpath;
 	private Stack<Node> nodeStack;
-	private List<XpathAutoChecker> autoChecker;
 
 	@Override
 	public void init(TestOutput out) {
@@ -39,7 +39,6 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		doc = null;
 		xpath = null;
 		nodeStack = null;
-		autoChecker = null;
 		super.init(out);
 	}
 
@@ -80,23 +79,27 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		xpath.setNamespaceContext(new NameSpaceContexts());
 		nodeStack = new Stack<Node>();
 		push(doc.getDocumentElement());
-		autoChecker = new ArrayList<XpathAutoChecker>();
-		registerAutoChecker();
 		normalizeNames();
 	}
 
-	protected void registerAutoChecker() {
-
-	}
-
 	protected Node pop() {
-		out.println(generateSpaces((depth() - 1) * 2) + "> Pop");
+		out.pop();
 		Node n = nodeStack.pop();
 		currentNode = n;
 		return n;
 	}
 
+	protected String getNodeIDNoNull(Node n) {
+		String s = getAttribute(n, "id");
+		if (s == null) 
+			return "";
+		else
+			return s;
+	}
+	
 	protected void push(Node n) {
+		PushEntry e = new PushEntry(callingMethod(), getNodeIDNoNull(n));
+		out.push(e);
 		nodeStack.push(n);
 	}
 
@@ -104,29 +107,18 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return nodeStack.lastElement();
 	}
 
-	private int depth() {
-		return nodeStack.size();
+
+	protected void ok(String message) {
+		ok(new OKAssertionEntry(callingMethod(), message));
+	}
+	
+	@Override
+	protected void finding(String parameter, String message) {
+		finding(new FindingAssertionEntry(callingMethod(), message, parameter));
 	}
 
 	private void setCurrentNode(Node n, String param) throws Throwable {
 		currentNode = n;
-		for (XpathAutoChecker c : autoChecker) {
-			if (c.isApplicable(n, param)) {
-				out.println(generateSpaces(depth() * 2) + "> Auto Checker: "
-						+ c.getClass().getSimpleName());
-				push(n);
-				c.check(n, this);
-				pop();
-			}
-		}
-	}
-
-	private String generateSpaces(int n) {
-		String s = "";
-		for (int i = 0; i < n; i++) {
-			s += " ";
-		}
-		return s;
 	}
 
 	private String callingMethod() {
@@ -228,28 +220,6 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 			return l;
 		}
-	}
-
-	@Override
-	protected void printOK(String message) {
-		out.println(generateSpaces(depth() * 2) + "> Assertion OK     : "
-				+ callingMethod() + ": " + message);
-	}
-
-	@Override
-	protected void printFinding(String message, String parameter) {
-		if (parameter == null)
-			out.println(generateSpaces(depth() * 2) + "> Assertion FINDING: "
-					+ callingMethod() + ": " + message);
-		else
-			out.println(generateSpaces(depth() * 2) + "> Assertion FINDING: "
-					+ callingMethod() + ": " + parameter + ": " + message);
-	}
-
-	@Override
-	protected void printInfo(String message) {
-		out.println(generateSpaces(depth() * 2) + "> Assertion INFO : "
-				+ callingMethod() + ": " + message);
 	}
 
 	public void navigateGatewaySequenceFlow(String sequenceFlowName)

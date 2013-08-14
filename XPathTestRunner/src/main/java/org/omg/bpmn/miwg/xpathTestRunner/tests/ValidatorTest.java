@@ -92,7 +92,7 @@ public class ValidatorTest extends AbstractTest {
 		}
 
 		if (eHandler.valid()) {
-			ok("Validation succeeded");
+			ok("Validation", "Validation succeeded");
 		} else {
 			addIssues(eHandler.numError - 1); // Make sure the following issue
 												// won't be counted.

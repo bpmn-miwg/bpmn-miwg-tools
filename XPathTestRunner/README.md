@@ -91,31 +91,6 @@ The test procedure currently consists of the following steps:
 	}```
 
 
-Results
-=======
-
-Reference
----------
-The test indicates no issues. This is expected.
-
-Camunda Modeler
----------------
-The test indicates no issues.
-
-MID Innovator
--------------
-The tests confirms the already reported issues.
-
-Signavio
---------
-Signavio serializes models containing UTF-8 line breaks (```&#10;```). This irritates the XPath
-engine which cannot find the corresponding attributes.
-
-Yaoqiang
---------
-There is no participant with the name "Pool". Actually, there is only one participant
-("Participant"). Therefore, all assertions for the second pool return issues..
-
 
 Requests
 ========

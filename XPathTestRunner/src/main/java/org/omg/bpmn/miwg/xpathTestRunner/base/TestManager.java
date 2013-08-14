@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.*;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_2_0_Test;
@@ -53,46 +54,56 @@ public class TestManager {
 	}
 
 	public void printApplicableTests(File file, TestOutput out) {
-		out.println("Applicable Tests for " + file + ":");
+		out.println(new InfoEntry("Applicable Tests for " + file + ":"));
+		out.push(new EmptyEntry());
 		for (Test test : registeredTests) {
 			if (test.isApplicable(file)) {
-				out.println(" - " + test.getName());
+				out.println(new ListEntry(test.getName()));
 			}
 		}
+		out.pop();
 	}
 
-	public void executeTests(TestInstance instance, String outputFolder) throws IOException {
+	public void executeTests(TestInstance instance, String outputFolder)
+			throws IOException {
 
 		TestOutput out = new TestOutput(instance, outputFolder);
 
-		out.println(String.format("Running tests for %s:", instance.getFile()
-				.getPath()));
+		out.println(new InfoEntry(String.format("Running tests for %s:",
+				instance.getFile().getPath())));
 
 		for (Test test : registeredTests) {
 			if (test.isApplicable(instance.getFile())) {
-				out.println("> TEST " + test.getName());
+				out.push(new TestEntry(test.getName()));
 				try {
 					test.init(out);
 					test.execute(instance);
 				} catch (Throwable e) {
-					out.println("Exception during test execution of "
-							+ test.getName());
+					out.println(new ExceptionEntry(
+							"Exception during test execution of "
+									+ test.getName(), e));
 					e.printStackTrace();
 				}
+
 				out.println();
-				out.println("  TEST " + test.getName() + " results:");
-				out.println("  * OK      : " + test.resultsOK());
-				out.println("  * FINDINGS: " + test.resultsFinding());
+				out.push(new ResultsEntry(String.format("TEST %s results:",
+						test.getName())));
+				out.println(new ListKeyValueEntry("OK", Integer.toString(test.resultsOK())));
+				out.println(new ListKeyValueEntry("FINDINGS", Integer.toString(test.resultsFinding())));
+				out.pop();
+				out.pop();
 				out.println();
 			}
 		}
 
-		out.println(">> TEST RESULTS TOTAL:");
-		out.println("  * OK      : " + instance.getOKs());
-		out.println("  * FINDINGS: " + instance.getFindings());
+		out.pop();
+
+		out.push(new TotalResultsEntry());
+		out.println(new ListKeyValueEntry("OK", Integer.toString(instance.getOKs())));
+		out.println(new ListKeyValueEntry("FINDINGS ", Integer.toString(instance.getFindings())));
 		out.println();
-		out.println();
-		
+		out.pop();
+
 		out.close();
 
 	}

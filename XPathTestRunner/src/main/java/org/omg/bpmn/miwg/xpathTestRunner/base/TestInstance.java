@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.KeyValueEntry;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Test;
 
 public class TestInstance {
@@ -113,9 +114,9 @@ public class TestInstance {
 	}
 
 	public void printTestFileInfo(TestOutput out) {
-		out.println("Root       : " + root);
-		out.println("Application: " + application);
-		out.println("File       : " + testFile);
+		out.println(new KeyValueEntry("Root", root));
+		out.println(new KeyValueEntry("Application", application));
+		out.println(new KeyValueEntry("File", testFile));
 	}
 
 	@Override

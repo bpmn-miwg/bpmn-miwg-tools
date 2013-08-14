@@ -3,6 +3,7 @@ package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 import java.io.File;
 
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.*;
 
 public abstract class AbstractTest implements Test {
 
@@ -17,27 +18,32 @@ public abstract class AbstractTest implements Test {
 				|| fn.equals(getName() + ".bpmn");
 	}
 
-	protected void ok(String assertion) {
+	protected void ok(AbstractTestEntry entry) {
 		numOK++;
-		printOK(assertion);
+		out.println(entry);
+	}
+	
+	protected void ok(String assertion, String message) {
+		ok(new OKAssertionEntry(assertion, message));
 	}
 
-	protected void finding(String assertion, String message) {
+	protected void finding(AbstractTestEntry entry) {
 		numIssues++;
-		printFinding(message, assertion);
+		out.println(entry);
+	}
+	
+	protected void finding(String assertion, String message) {
+		finding(new FindingAssertionEntry(assertion, message));
 	}
 
-	protected void printOK(String assertion) {
-		out.println("  > Assertion " + assertion + ": OK");
+	protected void info(String message) {
+		info(new InfoEntry(message));
 	}
-
-	protected void printFinding(String message, String assertion) {
-		out.println("  > Assertion " + assertion + ": FINDING: " + message);
+	
+	protected void info(AbstractTestEntry entry) {
+		out.println(entry);
 	}
-
-	protected void printInfo(String assertion) {
-		out.println("  > Assertion " + assertion);
-	}
+	
 
 	@Override
 	public int resultsOK() {
