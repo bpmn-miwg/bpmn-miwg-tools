@@ -15,7 +15,8 @@ import javax.xml.xpath.XPathFactory;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.FindingAssertionEntry;
 import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.OKAssertionEntry;
-import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.PushEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.NodePopEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.NodePushEntry;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -83,7 +84,9 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	protected Node pop() {
-		out.pop();
+		NodePopEntry e = new NodePopEntry(callingMethod(),
+				getNodeIDNoNull(nodeStack.peek()));
+		out.pop(e);
 		Node n = nodeStack.pop();
 		currentNode = n;
 		return n;
@@ -91,14 +94,14 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	protected String getNodeIDNoNull(Node n) {
 		String s = getAttribute(n, "id");
-		if (s == null) 
+		if (s == null)
 			return "";
 		else
 			return s;
 	}
-	
+
 	protected void push(Node n) {
-		PushEntry e = new PushEntry(callingMethod(), getNodeIDNoNull(n));
+		NodePushEntry e = new NodePushEntry(callingMethod(), getNodeIDNoNull(n));
 		out.push(e);
 		nodeStack.push(n);
 	}
@@ -107,11 +110,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return nodeStack.lastElement();
 	}
 
-
 	protected void ok(String message) {
 		ok(new OKAssertionEntry(callingMethod(), message));
 	}
-	
+
 	@Override
 	protected void finding(String parameter, String message) {
 		finding(new FindingAssertionEntry(callingMethod(), message, parameter));

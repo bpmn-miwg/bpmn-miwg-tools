@@ -26,22 +26,14 @@
 package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 
-@XStreamAlias("Test")
-public class TestEntry extends AbstractTestEntry {
+@XStreamAlias("NodePop")
+public class NodePopEntry extends OKNavigationEntry {
 	
-	@XStreamAsAttribute
-	private String name;
-	
-	
-	public TestEntry(String name) {
-		this.name = name;
+	public NodePopEntry(String caller, String identifier) {
+		super("NodePop", caller, identifier);
 	}
+	
 
-	@Override
-	public String toLine() {
-		return String.format("TEST: %s", name);
-	}
 }

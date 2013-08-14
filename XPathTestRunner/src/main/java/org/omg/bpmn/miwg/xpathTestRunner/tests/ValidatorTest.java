@@ -84,6 +84,8 @@ public class ValidatorTest extends AbstractTest {
 		XMLReader reader = parser.getXMLReader();
 		reader.setErrorHandler(eHandler);
 
+		
+		
 		try {
 			parser.parse(instance.getFile(), (DefaultHandler) null);
 		} catch (Exception e) {

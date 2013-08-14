@@ -69,12 +69,12 @@ public class TestManager {
 
 		TestOutput out = new TestOutput(instance, outputFolder);
 
-		out.println(new InfoEntry(String.format("Running tests for %s:",
-				instance.getFile().getPath())));
+		out.println(new TestFileEntry(instance.getFile().getPath()));
 
 		for (Test test : registeredTests) {
 			if (test.isApplicable(instance.getFile())) {
-				out.push(new TestEntry(test.getName()));
+				TestEntry entry = new TestEntry(test.getName());
+				out.push(entry);
 				try {
 					test.init(out);
 					test.execute(instance);
@@ -86,24 +86,30 @@ public class TestManager {
 				}
 
 				out.println();
+				// Make sure the stack is tainted by defective tests.
+				out.popToTestEntry();
+
 				out.push(new ResultsEntry(String.format("TEST %s results:",
 						test.getName())));
-				out.println(new ListKeyValueEntry("OK", Integer.toString(test.resultsOK())));
-				out.println(new ListKeyValueEntry("FINDINGS", Integer.toString(test.resultsFinding())));
+				out.println(new ListKeyValueEntry("OK", Integer.toString(test
+						.resultsOK())));
+				out.println(new ListKeyValueEntry("FINDINGS", Integer
+						.toString(test.resultsFinding())));
 				out.pop();
-				out.pop();
+				out.forcePop();
 				out.println();
 			}
 		}
 
-		out.pop();
-
 		out.push(new TotalResultsEntry());
-		out.println(new ListKeyValueEntry("OK", Integer.toString(instance.getOKs())));
-		out.println(new ListKeyValueEntry("FINDINGS ", Integer.toString(instance.getFindings())));
+		out.println(new ListKeyValueEntry("OK", Integer.toString(instance
+				.getOKs())));
+		out.println(new ListKeyValueEntry("FINDINGS ", Integer
+				.toString(instance.getFindings())));
 		out.println();
 		out.pop();
 
+	
 		out.close();
 
 	}

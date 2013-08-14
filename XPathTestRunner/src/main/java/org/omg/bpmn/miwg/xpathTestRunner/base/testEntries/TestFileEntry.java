@@ -26,14 +26,22 @@
 package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 
-@XStreamAlias("Push")
-public class PushEntry extends OKNavigationEntry {
+@XStreamAlias("TestFile")
+public class TestFileEntry extends AbstractTestEntry {
 	
-	public PushEntry(String caller, String identifier) {
-		super("Push", caller, identifier);
+	@XStreamAsAttribute
+	private String name;
+	
+	
+	public TestFileEntry(String name) {
+		this.name = name;
 	}
-	
 
+	@Override
+	public String toLine() {
+		return String.format("Running tests for %s", name);
+	}
 }

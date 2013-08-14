@@ -28,11 +28,11 @@ package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 
-@XStreamAlias("Pop")
-public class PopEntry extends OKNavigationEntry {
+@XStreamAlias("NodePush")
+public class NodePushEntry extends OKNavigationEntry {
 	
-	public PopEntry(String caller, String identifier) {
-		super("Pop", caller, identifier);
+	public NodePushEntry(String caller, String identifier) {
+		super("Push", caller, identifier);
 	}
 	
 

@@ -29,7 +29,7 @@ public class TestOutput {
 	}
 
 	private void init(String name, String outputFolder) throws IOException {
-		KeyValueEntry entry = new KeyValueEntry("TEST RUN", name);
+		TestRunEntry entry = new TestRunEntry(name);
 		stack.push(entry);
 
 		textFile = new File(outputFolder, name + ".txt");
@@ -84,7 +84,26 @@ public class TestOutput {
 	}
 
 	public void pop() {
+		if (!stack.empty() && (!(stack.peek() instanceof TestEntry))) {
+			stack.pop();
+		}
+	}
+
+	public void pop(NodePopEntry entry) {
+		if (!stack.empty() && (!(stack.peek() instanceof TestEntry))) {
+			stack.pop();
+			println(entry);
+		}
+	}
+
+	public void forcePop() {
 		stack.pop();
+	}
+
+	public void popToTestEntry() {
+		while ((!stack.empty()) && (!(stack.peek() instanceof TestEntry))) {
+			stack.pop();
+		}
 	}
 
 	public void close() {
@@ -101,12 +120,14 @@ public class TestOutput {
 		xstream.processAnnotations(ListEntry.class);
 		xstream.processAnnotations(OKAssertionEntry.class);
 		xstream.processAnnotations(OKNavigationEntry.class);
-		xstream.processAnnotations(PushEntry.class);
+		xstream.processAnnotations(NodePushEntry.class);
 		xstream.processAnnotations(EmptyEntry.class);
-		xstream.processAnnotations(PopEntry.class);
+		xstream.processAnnotations(NodePopEntry.class);
 		xstream.processAnnotations(TestEntry.class);
 		xstream.processAnnotations(ResultsEntry.class);
 		xstream.processAnnotations(TotalResultsEntry.class);
+		xstream.processAnnotations(TestRunEntry.class);
+		xstream.processAnnotations(TestFileEntry.class);
 		String xml = xstream.toXML(stack.firstElement());
 
 		xmlFileWriter.print(xml);
