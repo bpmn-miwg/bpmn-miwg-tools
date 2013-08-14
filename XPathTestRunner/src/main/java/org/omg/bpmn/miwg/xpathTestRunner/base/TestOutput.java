@@ -29,8 +29,6 @@ public class TestOutput {
 	}
 
 	private void init(String name, String outputFolder) throws IOException {
-		TestRunEntry entry = new TestRunEntry(name);
-		stack.push(entry);
 
 		textFile = new File(outputFolder, name + ".txt");
 		if (!textFile.getParentFile().exists()) {
@@ -46,6 +44,8 @@ public class TestOutput {
 		xmlFileWriter = new PrintWriter(new BufferedWriter(new FileWriter(
 				xmlFile)));
 
+		TestRunEntry entry = new TestRunEntry(name);
+		push(entry);
 	}
 
 	public File getFile() {
@@ -61,7 +61,7 @@ public class TestOutput {
 	}
 
 	public void println(AbstractTestEntry entry) {
-		String line = generateSpaces((stack.size() - 1) * 2) + entry.toLine();
+		String line = generateSpaces(stack.size() * 2) + entry.toLine();
 
 		if (!(entry instanceof EmptyEntry))
 			stack.peek().addChild(entry);
@@ -74,12 +74,15 @@ public class TestOutput {
 	}
 
 	public void push(AbstractTestEntry entry) {
+		if (!stack.empty()) {
+			stack.peek().addChild(entry);
+		}
+
 		String line = generateSpaces(stack.size() * 2) + entry.toLine();
 
 		System.out.println(line);
 		textFileWriter.println(line);
 
-		stack.peek().addChild(entry);
 		stack.push(entry);
 	}
 
@@ -91,8 +94,8 @@ public class TestOutput {
 
 	public void pop(NodePopEntry entry) {
 		if (!stack.empty() && (!(stack.peek() instanceof TestEntry))) {
-			stack.pop();
 			println(entry);
+			stack.pop();
 		}
 	}
 

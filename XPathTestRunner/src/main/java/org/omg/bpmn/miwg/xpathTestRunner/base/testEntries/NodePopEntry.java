@@ -32,7 +32,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 public class NodePopEntry extends OKNavigationEntry {
 	
 	public NodePopEntry(String caller, String identifier) {
-		super("NodePop", caller, identifier);
+		super("Pop", caller, identifier);
 	}
 	
 

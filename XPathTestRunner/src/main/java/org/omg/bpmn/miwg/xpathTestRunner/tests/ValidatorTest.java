@@ -65,6 +65,7 @@ public class ValidatorTest extends AbstractTest {
 
 	@Override
 	public void execute(TestInstance instance) throws Throwable {
+		
 		ValidationErrorHandler eHandler = new ValidationErrorHandler();
 		eHandler.setTestOutput(out);
 
@@ -89,12 +90,12 @@ public class ValidatorTest extends AbstractTest {
 		try {
 			parser.parse(instance.getFile(), (DefaultHandler) null);
 		} catch (Exception e) {
-			finding("Validation failed", "Exception: " + e.getMessage());
+			finding("Schema validation failed", "Exception: " + e.getMessage());
 			e.printStackTrace(System.out);
 		}
 
 		if (eHandler.valid()) {
-			ok("Validation", "Validation succeeded");
+			ok("Validation", "Schema validation succeeded");
 		} else {
 			addIssues(eHandler.numError - 1); // Make sure the following issue
 												// won't be counted.
