@@ -19,6 +19,9 @@ public class Tool {
 	@Element(name = "h2", required = true)
 	private String name;
 
+	@Attribute(name = "data-vendor", required = true)
+	private String vendorName;
+
 	@ElementList(inline = true, required = true)
 	private List<Test> tests;
 
@@ -34,6 +37,7 @@ public class Tool {
 	 */
 	public Tool(String name) {
 		this.name = name;
+		this.vendorName = name;
 	}
 
 	/**

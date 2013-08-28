@@ -15,6 +15,10 @@ public class Test {
 
 	@Attribute(name = "class", required = true)
 	private String clazz = Test.class.getSimpleName().toLowerCase();
+	// + "well span12";
+
+	@Attribute(name = "data-test", required = true)
+	private String testName;
 
 	@Element(name = "h3", required = true)
 	private String name;
@@ -29,6 +33,8 @@ public class Test {
 
 	public Test(String name) {
 		this.name = name;
+		// TODO is it possible to set both h3 and data-test with a single field?
+		this.testName = name;
 	}
 
 	/**
