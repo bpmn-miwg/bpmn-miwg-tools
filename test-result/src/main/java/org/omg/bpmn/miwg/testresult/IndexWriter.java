@@ -61,7 +61,6 @@ public class IndexWriter {
             out = new PrintWriter(idx);
             out.println("<!DOCTYPE html><html><head>");
 			out.println("\t<link rel=\"stylesheet\" href=\"/css/bootstrap.css\">");
-			out.println("\t<link rel=\"stylesheet\" href=\"/css/bootstrap-responsive.css\">");
             out.println("\t<link rel=\"stylesheet\" href=\"/css/bpmn-miwg.css\">");
             out.println("</head><body>");
             out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");
@@ -70,6 +69,7 @@ public class IndexWriter {
             out.println("\t\t<li><a href=\"/xpath\">XPath</a></li>");
             out.println("\t</ul>\t</div></div>");
 
+			out.println("<div class=\"testresults\">");
             for (File f : files) {
                 out.print("\t<div class=\"test\">");
                 out.print("<a href=\"");
@@ -79,6 +79,7 @@ public class IndexWriter {
                 out.print("</a>");
                 out.println("</div>");
             }
+			out.println("</div>");
 
             out.println("\t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"><!-- required --></script>");
             out.println("\t<script src=\"/js/bpmn-miwg.js\"><!-- required --></script>");
