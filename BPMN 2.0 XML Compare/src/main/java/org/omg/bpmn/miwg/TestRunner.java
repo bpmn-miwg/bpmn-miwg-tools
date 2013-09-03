@@ -39,7 +39,6 @@ import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20DiffConfiguration;
 import org.omg.bpmn.miwg.configuration.BpmnCompareConfiguration;
 import org.omg.bpmn.miwg.output.Detail;
 import org.omg.bpmn.miwg.output.DetailedOutput;
-import org.omg.bpmn.miwg.output.Link;
 import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.testresult.Test;
@@ -125,6 +124,9 @@ public class TestRunner {
 					List<Difference> diffs = checker.getSignificantDifferences(bpmnFile, compareFile);
 					for (Difference diff : diffs) {
 						Output output = new Output(OutputType.finding, describeDifference(diff));
+						output.setDescription(String.format(
+								"Difference found in %1$s (id:%2$s)",
+								diff.getDescription(), diff.getId()));
 						test.addOutput(output);
 					}
 				} else {
@@ -143,35 +145,23 @@ public class TestRunner {
 	private static DetailedOutput describeDifference(Difference difference) {
 		DetailedOutput dOut = new DetailedOutput();
 		
-		// Difference description
-		dOut.setDescription(difference.getDescription() + " (id:" + difference.getId() + ")");
-		
 		// Reference xpath/value
 		dOut.addDetail(printDifferenceDetail(difference.getControlNodeDetail(), "reference"));
 		
 		// Vendor xpath/value
 		dOut.addDetail(printDifferenceDetail(difference.getTestNodeDetail(), "vendor"));
 		
-		// Append links to highlight changes in XML
-		dOut.addLink(appendHighlightLink("reference"));
-		dOut.addLink(appendHighlightLink("vendor"));
-		
 		return dOut;
 	}
 
 	private static Detail printDifferenceDetail(NodeDetail detail, String type) {
 		Detail d = new Detail();
-		d.setMessage(type + ": " + detail.getXpathLocation() + " :\t" + detail.getValue());
+		d.setMessage(detail.getXpathLocation() + " :\t" + detail.getValue());
 		d.setType(type);
 		d.setXpath(detail.getXpathLocation());
 		return d;
 	}
 
-	
-	private static Link appendHighlightLink(String type) {
-		return new Link(type, "Show in " + type);
-	}
-	
 	private static boolean isBpmnFile(File bpmnFile) {
 		int i = bpmnFile.getName().lastIndexOf(".");
 		return bpmnFile.getName().substring(i + 1).equals(FILE_EXTENSION);
