@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.omg.bpmn.miwg</groupId>
+    <artifactId>tools</artifactId>
+    <version>0.1</version>
+    <relativePath>..</relativePath>
+  </parent>
+  <artifactId>results-webapp</artifactId>
+  <name>BPMN 2.0 MIWG Results</name>
+  <description>
+    <![CDATA[
+      Collects and displays results produced by the various BPMN MIWG tools. 
+    ]]>
+  </description>
+  <packaging>war</packaging>
+
+  <properties>
+    <siteStagingDir>${project.build.directory}/${project.build.finalName}</siteStagingDir>
+  </properties>
+
+  <pluginRepositories>
+   <!-- currently unused, see below
+   <pluginRepository>
+     <id>cloudbees-public-release</id>
+     <url>http://repository-cloudbees.forge.cloudbees.com/public-release</url>
+     <releases>
+       <enabled>true</enabled>
+     </releases> 
+     <snapshots>
+       <enabled>false</enabled>
+     </snapshots>
+    </pluginRepository> -->
+  </pluginRepositories>
+
+  <dependencies>
+    <!-- Currently unused see scm plugin config below 
+      <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-scm-publish-plugin</artifactId>
+      <version>1.0-beta-2</version>
+      <type>maven-plugin</type>
+    </dependency>-->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>test-suite</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tools</artifactId>
+      <version>${project.version}</version>
+      <classifier>site</classifier>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>xml-compare</artifactId>
+      <version>${project.version}</version>
+      <classifier>site</classifier>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>xpath</artifactId>
+      <version>${project.version}</version>
+      <classifier>site</classifier>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    
+    <pluginManagement>
+      <!-- Currently unused see scm plugin config below 
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-scm-publish-plugin</artifactId>
+          <version>1.0-beta-2</version>
+        </plugin>
+      </plugins>-->
+    </pluginManagement>
+    
+    <plugins>
+      <!-- Use jetty:run for local testing as can find no way to specify webapp 
+      src dir dynamically for bees plugin and do not wish to copy maven site to 
+      src/main/webapp 
+      <plugin>
+        <groupId>com.cloudbees</groupId>
+        <artifactId>bees-maven-plugin</artifactId>
+        <version>1.3.2</version>
+        <configuration>
+          <port>7273</port>
+        </configuration>
+        <!- - 
+            Although I would have thought that this should be specified
+            within the bees plugin apparently it is not as debug fails 
+            without this dependency.  
+         - ->
+        <dependencies>
+          <dependency>
+            <groupId>com.cloudbees</groupId>
+            <artifactId>stax-appserver</artifactId>
+            <version>1.2.2</version>
+          </dependency>
+        </dependencies>
+      </plugin>-->
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+        <version>2.3.2</version>
+      </plugin>
+      <!-- Publishing to Cloudbees rather than github 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-publish-plugin</artifactId>
+        <version>1.0-beta-2</version>
+        <configuration>
+            <scmBranch>gh-pages</scmBranch>                
+            <pubScmUrl>scm:git:git@github.com:bpmn-miwg/bpmn-miwg-tools.git</pubScmUrl>
+          </configuration>
+      </plugin>-->
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>prepare-package</phase>
+            <configuration>
+              <target>
+
+                  <!-- 
+                  <copy todir="${project.build.directory}/${project.build.finalName}/">
+                      <fileset dir="${siteStagingDir}">
+                          <include name="**/*"/>
+                      </fileset>
+                  </copy>
+                   -->
+                <unzip src="${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}" 
+                    dest="${project.build.directory}/${project.build.finalName}/">
+                  <patternset>
+                    <exclude name="META-INF/**/*"/>
+                    <exclude name="target/**/*"/>
+                  </patternset>
+                  <!-- 
+                    Cannot seem to get this to rename the A* dir to simply A
+                    Hence use move that follows instead
+                  <regexpmapper from="([AB]) .*/(.*)\.bpmn" to="\1/\2.bpmn"/>
+                  -->
+                </unzip>
+                <move todir="${project.build.directory}/${project.build.finalName}/A">
+                  <fileset dir="${project.build.directory}/${project.build.finalName}/A - Fixed Digrams with Variations of Attributes"/>
+                </move>
+                <move todir="${project.build.directory}/${project.build.finalName}/B">
+                  <fileset dir="${project.build.directory}/${project.build.finalName}/B - Validate that tool covers conformance class set"/>
+                </move> 
+                <unzip src="${maven.dependency.org.omg.bpmn.miwg.tools.site.jar.path}" 
+                    dest="${project.build.directory}/${project.build.finalName}/">
+                  <patternset>
+                      <include name="**/*"/>
+                  </patternset>
+                </unzip>
+                <mkdir dir="${project.build.directory}/${project.build.finalName}/xml-compare"/>
+                <unzip src="${maven.dependency.org.omg.bpmn.miwg.xml-compare.site.jar.path}" 
+                    dest="${project.build.directory}/${project.build.finalName}/xml-compare">
+                  <patternset>
+                      <include name="**/*"/>
+                  </patternset>
+                </unzip>
+                <mkdir dir="${project.build.directory}/${project.build.finalName}/xpath"/>
+                <unzip src="${maven.dependency.org.omg.bpmn.miwg.xpath.site.jar.path}" 
+                    dest="${project.build.directory}/${project.build.finalName}/xpath">
+                  <patternset>
+                      <include name="**/*"/>
+                  </patternset>
+                </unzip>
+                
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>maven-jetty-plugin</artifactId>
+        <version>6.1.26</version>
+        <configuration>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <contextPath>/</contextPath>
+          <!-- <webAppSourceDirectory>${siteStagingDir}</webAppSourceDirectory>
+          <scanTargets>
+            <scanTarget>${siteStagingDir}</scanTarget>
+          </scanTargets>-->
+          <scanTargetPatterns>
+            <scanTargetPattern>
+              <includes>
+                <include>**/*.js</include>
+                <include>**/*.html</include>
+                <include>**/*.txt</include>
+              </includes>
+            </scanTargetPattern>
+          </scanTargetPatterns>
+          <connectors>
+            <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+              <port>7070</port>
+              <maxIdleTime>60000</maxIdleTime>
+            </connector>
+          </connectors>
+        </configuration>
+      </plugin>
+    </plugins>
+
+  </build>
+
+  <reporting>
+  </reporting>
+
+</project>

@@ -13,12 +13,10 @@ public class DetailedOutput {
 
 	@Attribute(name = "class", required = true)
 	private String clazz = DetailedOutput.class.getSimpleName().toLowerCase();
-	@Element(name = "p")
+	@Element(name = "p", required = false)
 	private String description;
 	@ElementList(inline = true)
 	private List<Detail> details;
-	@ElementList(inline = true)
-	private List<Link> links;
 
 	public String getDescription() {
 		return description;
@@ -40,14 +38,4 @@ public class DetailedOutput {
 		return details;
 	}
 
-	public void addLink(Link link) {
-		this.getLinks().add(link);
-	}
-
-	private List<Link> getLinks() {
-		if (links == null) {
-			links = new LinkedList<Link>();
-		}
-		return links;
-	}
 }

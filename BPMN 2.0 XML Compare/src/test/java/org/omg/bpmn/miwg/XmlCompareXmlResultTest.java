@@ -143,11 +143,11 @@ public class XmlCompareXmlResultTest {
 	}
 
 	private String getName() {
-		return getClass().getSimpleName() + "-" + getShortName();
+		return getShortName();
 	}
 
 	private String getShortName() {
-		return testCategory.toString().split(" ")[0] + "-" + tool + "-"
+		return tool + "-" + testCategory.toString().split(" ")[0] + "-"
 				+ variant;
 	}
 

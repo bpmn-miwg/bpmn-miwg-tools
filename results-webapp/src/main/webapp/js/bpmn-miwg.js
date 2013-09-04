@@ -24,52 +24,98 @@
  */
 
 var mi = new ModelInterchangePresenter();
+$(document).ready(function() {
+	console.log('ready');
+	mi.init();
+});
 
 function ModelInterchangePresenter() {
 	this.orig = [];
 	this.init = function() {
-	  var variants = ['reference','vendor'];
-	  $.each(variants, function(i,d) {
-	      mi.loadBpmn(d);
-	      // register highlight click handlers for xpath findings
-	      $('.finding span.'+d+'[data-xpath]').append('&nbsp;<a class="'+d+'">Show in '+d+'</a>').click(function(){
-	    	 console.log('finding clicked'); 
-	    	 mi.scrollToXPath($(this).parent().parent().parent().data('test'),$(this).parent().data('xpath'),d);
-	    	 return false;
-	      }); 
-	      // register highlight click handlers for string findings
-	      $('.finding span.'+d+'[data-frag]').append('&nbsp;<a class="'+d+'">Show in '+d+'</a>').click(function(){
-	    	 console.log('finding clicked'); 
-	    	 mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).data('frag'),d);
-	    	 return false;
-	      }); 
-	  });
+      console.log('Initialising ModelInterchangePresenter...');
+      
+      mi.results = [];
+      if (window.location.href.indexOf('overview')!=-1) { // overview page 
+    	  $('.testresults').addClass('hide');
+    	  $('.test > a').each(function(i,d) {
+    		  var s = d.href.substring(d.href.lastIndexOf('/')+1).split('-');
+    		  var cur = {suite: s[1],vendor:unescape(s[0]),variant:s[2],url:d.href};
+    		  var prev = mi.results[i-1];
+    		  if (prev===undefined || prev.vendor!=cur.vendor) {
+    			  $('body').append('<h2>'+cur.vendor+'</h2>');
+    		  }
+    		  $('body').append('<a href="'+cur.url+'">Test '+cur.suite+': '+cur.variant+'</a><br/>');
+    		  mi.results.push(cur);
+    	  });
+      } else {
+	      // enhance basic data with presentation classes
+	      $('.testresults').addClass('container');
+	      $('.test').addClass('well').addClass('span12');
+	      
+	      // add additional presentation structures
+	      $('body').append('<div class="hide messages"></div>');
+	      $('.testresults').prepend('<a name="top"></a>');
+	      $('body').append(
+	    		  '<div class="backToFindings"><a href="#top">Top</a></div>'); 
+	      
+	      $($('.detailedoutput .reference')).prepend('<label>Reference:</label>');
+	      $($('.detailedoutput .vendor')).prepend('<label>Vendor:</label>');
+	      
+	      var variant = 'seriously-cant-we-get-the-variant-more-easily-than-this';
+	      if (window.location.href.indexOf('export')!=-1) {
+	    	  variant = 'export';
+	      } else if (window.location.href.indexOf('roundtrip')!=-1) {
+	    	  variant = 'roundtrip';
+	      } else if (window.location.href.indexOf('import')!=-1) {
+	    	  variant = 'import';
+	      } else { 
+	    	  console.error('This is an unexpected test result file. Talk to the Tools team.');
+	      }
+	      console.log('detected test variant to be:'+variant); 
+	      
+	      $('.test').each(function(i,d) {
+	    	  var test = $(d).data('test');
+	    	  var referenceFile = '/'+test.substring(0,1)+'/Reference/'+test;
+	    	  $(d).append('<div class="span6"><h4>Reference</h4><pre><code class="xml reference" data-file="'+referenceFile+'"></code></pre></div>');
+	      
+	    	  var vendor = $(d).parent().data('vendor');
+	    	  var vendorFile = '/'+test.substring(0,1)+'/'+vendor+'/'+test.substring(0,test.indexOf('.bpmn'))+'-'+variant+'.bpmn';
+	    	  $(d).append('<div class="span6"><h4>'+vendor+'</h4><pre><code class="xml vendor" data-file="'+vendorFile+'"></code></pre></div>');
+	    
+	      });
+	      
+	      // load bpmn and enhance with links etc.
+		  var variants = ['reference','vendor'];
+		  $.each(variants, function(i,d) {
+		      mi.fetchBpmn(d);
+		      // register highlight click handlers for xpath findings
+		      /* TODO disabled this until we can get the scrollToXPath working
+		      $('.finding span.'+d+'[data-xpath]').append('&nbsp;<a class="'+d+'">Show in '+d+'</a>').click(function(){
+		    	 console.log("clicked 'finding'"); 
+		    	 mi.scrollToXPath($(this).parent().parent().parent().data('test'),$(this).parent().data('xpath'),d);
+		    	 return false;
+		      });
+		      */ 
+		      // register highlight click handlers for string findings
+		      $('.finding span.'+d+'[data-frag]').append('&nbsp;<a class="'+d+'">Show in '+d+'</a>').click(function(){
+		    	 console.log("clicked 'finding'"); 
+		    	 mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).data('frag'),d);
+		    	 return false;
+		      }); 
+		  });
+      } // else render individual results page
   }
   this.reset = function() {
     $('#highlight-reference').removeClass('highlight');
     $('#highlight-vendor').removeClass('highlight');
     if (mi.orig.length == ($('code.reference').length*2)) {
       console.log('All models fetched, now loading...');
-      for (idx in mi.orig) {
-        if (mi.orig[idx].html == null) {
-        	$( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target )
-        	.empty().html( mi.orig[idx].data );
-	        $('pre code').each(function(i, d) { 
-	        	hljs.highlightBlock(d);
-	        	mi.orig[idx].html = $( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target ).html();
-	        	console.log('added syntax highlighting: '+ mi.orig[idx].html.length);
-	        });
-        } else {
-        	console.log('Already applied syntax highlighting'); 
-        	$( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target )
-        		.empty().html( mi.orig[idx].html );
-        }
-      }
+      mi.loadBpmn();
     } else {
       console.log('Loaded '+mi.orig.length+' of '+$('code.reference').length*2+', waiting for all models to be fetched');
     }
   };
-  this.loadBpmn = function(target) {
+  this.fetchBpmn = function(target) {
     $.each($('code.'+target), function(i,d) {
       var test = $(d).parent().parent().parent().data('test');
       var file = $(d).data('file');
@@ -90,16 +136,36 @@ function ModelInterchangePresenter() {
           mi.reset();
         },
         error: function(jqXHR, textStatus, errorThrown) {
-          console.error(textStatus);
+          console.error(textStatus+':'+errorThrown);
+          $('.messages').append('<b>'+textStatus+':</b> Unable to load file: '+file+' for test: '+test
+        		  +'<button class="btn" onclick="mi.loadBpmn();$(\'.messages\').hide();">Dismiss</button>').show();
         }
       });
     });
   };
+  this.loadBpmn = function() {
+	  for (idx in mi.orig) {
+	    if (mi.orig[idx].html == null) {
+	    	$( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target )
+	    	.empty().html( mi.orig[idx].data );
+	        $('pre code').each(function(i, d) { 
+	        	hljs.highlightBlock(d);
+	        	mi.orig[idx].html = $( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target ).html();
+	        	console.log('added syntax highlighting: '+ mi.orig[idx].html.length);
+	        });
+	    } else {
+	    	console.log('Already applied syntax highlighting'); 
+	    	$( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target )
+	    		.empty().html( mi.orig[idx].html );
+	    }
+	  }
+  }
   this.scrollToXPath = function(test, idxOrFrag, target) {
+	  alert('Sorry at the moment we cannot scroll to an xpath fragment');
 	  // NOTE THAT THIS DOES NOT WORK!! SUGGESTIONS WELCOMED
 	  
 	  // make a local copy of the first xml document loaded to play with 
-	  var x = mi.orig[0].xml;
+	  /*var x = mi.orig[0].xml;
 	  
 	  // create a namespace resolver 
 	  var nsResolver = x.createNSResolver( x );
@@ -107,7 +173,10 @@ function ModelInterchangePresenter() {
 	  // both of these return root === undefined
 	  //var root = x.evaluate('//semantic:definitions',x,nsResolver ,XPathResult.ANY_TYPE,null);
 	  var root = x.evaluate('/',x,nsResolver ,XPathResult.ANY_TYPE,null);
-	 
+	  
+	  THIS LOOKS PROMISING, finds the node, but how to highlight?
+	  mi.orig[0].xml.evaluate('/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]', mi.orig[1].xml, null, XPathResult.ANY_TYPE,null);
+	  */
 	  
   };
   this.scrollToFrag = function(test, idxOrFrag, target) {

@@ -17,7 +17,7 @@ public class Output {
 
 	@Attribute(name = "class", required = true)
 	private OutputType outputType;
-	@Element(name = "p", required = false)
+	@Element(name = "h4", required = false)
 	private String description;
 	@ElementList(inline = true, required = false)
 	private List<Output> suboutputs;
