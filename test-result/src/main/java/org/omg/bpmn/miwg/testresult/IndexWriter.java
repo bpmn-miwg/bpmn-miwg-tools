@@ -113,7 +113,7 @@ public class IndexWriter {
 				out.print(f.getFile().getName());
 				out.print("\">");
 				out.print(f.getFile().getName());
-				out.print(" (" + f.getNumOK() + "," + f.getNumFindings() + ")");
+				out.print(" (" + f.getNumOK() + "; " + f.getNumFindings() + ")");
 				out.print("</a>");
 				out.println("</div>");
 			}
