@@ -23,6 +23,10 @@
  * 
  */
 
+label {
+  font-weight: bold;  
+}
+
 .highlight {
   background-color: yellow;
 }
