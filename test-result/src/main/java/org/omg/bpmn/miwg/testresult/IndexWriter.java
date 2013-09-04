@@ -36,58 +36,96 @@ import java.util.List;
  */
 public class IndexWriter {
 
-    public static void writeXml(String rptName, File idx, List<File> files) {
-        PrintWriter out = null;
-        try {
-            out = new PrintWriter(idx);
-            out.println("<menu name=\"" + rptName + "\">");
-            for (File f : files) {
-                out.print("\t<item name=\"");
-                out.print(f.getName());
-                out.print("\" href=\"");
-                out.print(f.getName());
-                out.println("\"/>");
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e.getMessage(), e);
-        } finally {
-            out.close();
-        }
-    }
+	public static void writeXml(String rptName, File idx, List<File> files) {
+		PrintWriter out = null;
+		try {
+			out = new PrintWriter(idx);
+			out.println("<menu name=\"" + rptName + "\">");
+			for (File f : files) {
+				out.print("\t<item name=\"");
+				out.print(f.getName());
+				out.print("\" href=\"");
+				out.print(f.getName());
+				out.println("\"/>");
+			}
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e.getMessage(), e);
+		} finally {
+			out.close();
+		}
+	}
 
-    public static void write(String rptName, File idx, List<File> files) {
-        PrintWriter out = null;
-        try {
-            out = new PrintWriter(idx);
-            out.println("<!DOCTYPE html><html><head>");
+	public static void write(String rptName, File idx, List<File> files) {
+		PrintWriter out = null;
+		try {
+			out = new PrintWriter(idx);
+			out.println("<!DOCTYPE html><html><head>");
 			out.println("\t<link rel=\"stylesheet\" href=\"/css/bootstrap.css\">");
-            out.println("\t<link rel=\"stylesheet\" href=\"/css/bpmn-miwg.css\">");
-            out.println("</head><body>");
-            out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");
-            out.println("\t\t<li><a href=\"/\">Home</a></li>");
-            out.println("\t\t<li><a href=\"/xml-compare/\">XML Compare</a></li>");
-            out.println("\t\t<li><a href=\"/xpath\">XPath</a></li>");
-            out.println("\t</ul>\t</div></div>");
+			out.println("\t<link rel=\"stylesheet\" href=\"/css/bpmn-miwg.css\">");
+			out.println("</head><body>");
+			out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");
+			out.println("\t\t<li><a href=\"/\">Home</a></li>");
+			out.println("\t\t<li><a href=\"/xml-compare/\">XML Compare</a></li>");
+			out.println("\t\t<li><a href=\"/xpath\">XPath</a></li>");
+			out.println("\t</ul>\t</div></div>");
 
 			out.println("<div class=\"testresults\">");
-            for (File f : files) {
-                out.print("\t<div class=\"test\">");
-                out.print("<a href=\"");
-                out.print(f.getName());
-                out.print("\">");
-                out.print(f.getName());
-                out.print("</a>");
-                out.println("</div>");
-            }
+			for (File f : files) {
+				out.print("\t<div class=\"test\">");
+				out.print("<a href=\"");
+				out.print(f.getName());
+				out.print("\">");
+				out.print(f.getName());
+				out.print("</a>");
+				out.println("</div>");
+			}
 			out.println("</div>");
 
-            out.println("\t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"><!-- required --></script>");
-            out.println("\t<script src=\"/js/bpmn-miwg.js\"><!-- required --></script>");
-            out.println("</body></html>"); 
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e.getMessage(), e);
-        } finally {
-            out.close();
-        }
-    }
+			out.println("\t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"><!-- required --></script>");
+			out.println("\t<script src=\"/js/bpmn-miwg.js\"><!-- required --></script>");
+			out.println("</body></html>");
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e.getMessage(), e);
+		} finally {
+			out.close();
+		}
+	}
+
+	public static void writeXPath(String rptName, File idx,
+			List<XPathTestRunResults> files) {
+		PrintWriter out = null;
+		try {
+			out = new PrintWriter(idx);
+			out.println("<!DOCTYPE html><html><head>");
+			out.println("\t<link rel=\"stylesheet\" href=\"/css/bootstrap.css\">");
+			out.println("\t<link rel=\"stylesheet\" href=\"/css/bpmn-miwg.css\">");
+			out.println("</head><body>");
+			out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");
+			out.println("\t\t<li><a href=\"/\">Home</a></li>");
+			out.println("\t\t<li><a href=\"/xml-compare/\">XML Compare</a></li>");
+			out.println("\t\t<li><a href=\"/xpath\">XPath</a></li>");
+			out.println("\t</ul>\t</div></div>");
+
+			out.println("<div class=\"testresults\">");
+			for (XPathTestRunResults f : files) {
+				out.print("\t<div class=\"test\">");
+				out.print("<a href=\"");
+				out.print(f.getFile().getName());
+				out.print("\">");
+				out.print(f.getFile().getName());
+				out.print(" (" + f.getNumOK() + "," + f.getNumFindings() + ")");
+				out.print("</a>");
+				out.println("</div>");
+			}
+			out.println("</div>");
+
+			out.println("\t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"><!-- required --></script>");
+			out.println("\t<script src=\"/js/bpmn-miwg.js\"><!-- required --></script>");
+			out.println("</body></html>");
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e.getMessage(), e);
+		} finally {
+			out.close();
+		}
+	}
 }

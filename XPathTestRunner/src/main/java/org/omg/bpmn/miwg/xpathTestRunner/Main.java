@@ -8,6 +8,7 @@ import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestManager;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.InfoEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.ListEntry;
 
 public class Main {
 
@@ -47,7 +48,7 @@ public class Main {
 		TestOutput out = new TestOutput("Overview", args[1]);
 		out.push(new InfoEntry("Summary:"));
 		for (TestInstance testInstance : testInstances) {
-			out.println(new InfoEntry(String.format(
+			out.println(new ListEntry(String.format(
 					"%1$-30s : %2$-20s: OK: %3$3d, Findings: %4$3d",
 					testInstance.getApplication(), testInstance.getTest(),
 					testInstance.getOKs(), testInstance.getFindings())));
