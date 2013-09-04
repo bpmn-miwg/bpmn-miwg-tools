@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1367825222287" ID="ID_408461467" MODIFIED="1374071526644" TEXT="Test Automation">
+<node CREATED="1367825222287" ID="ID_408461467" MODIFIED="1378311585819" TEXT="Test Automation">
 <icon BUILTIN="launch"/>
 <node CREATED="1367825657276" ID="ID_1735315692" MODIFIED="1374071095072" POSITION="right" TEXT="Validation &amp; Comparison Techniques">
 <icon BUILTIN="idea"/>
@@ -41,12 +41,12 @@
 <icon BUILTIN="list"/>
 <node CREATED="1372864204945" ID="ID_1120116121" MODIFIED="1375889359195" TEXT="Human-readable presentation of results until August">
 <node CREATED="1372864626890" ID="ID_253550386" MODIFIED="1372864632318" TEXT="Embedd BPMN XML"/>
-<node CREATED="1372864560671" ID="ID_795560376" MODIFIED="1372864764292" TEXT="Highlight/scroll(/cut) affected parts of BPMN XML">
+<node CREATED="1372864560671" ID="ID_795560376" MODIFIED="1378311446133" TEXT="Highlight/scroll(/cut) affected parts of BPMN XML">
 <node CREATED="1375284371413" ID="ID_228297556" MODIFIED="1375284862384" TEXT="Tim: XPath Highlighting"/>
 </node>
 </node>
 <node CREATED="1372865061893" ID="ID_970506522" MODIFIED="1375889359195" TEXT="XPath output is still plaintext"/>
-<node CREATED="1375887379168" ID="ID_469281590" MODIFIED="1375887389084" TEXT="XML Compare JSON configuration"/>
+<node CREATED="1378311646279" ID="ID_611900246" MODIFIED="1378311713617" TEXT="Matthias/Tim Improve overview with statistical information"/>
 <node CREATED="1370442814946" ID="ID_786393547" MODIFIED="1375889359195" TEXT="Sven/Falko: Articles: How Vendors can use the Test Suite">
 <node CREATED="1370442965499" FOLDED="true" ID="ID_1336561896" MODIFIED="1375889289849" TEXT="Falko: Success Story: Test Automation at camunda">
 <node CREATED="1375887882028" ID="ID_658169223" MODIFIED="1375887970551" TEXT="Roundtrip Test with camunda Modeler">
@@ -69,10 +69,13 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node CREATED="1373472074734" ID="ID_1358587161" MODIFIED="1373472091117" TEXT="Tim: Tutorial on using Test Tools inhouse">
+<node CREATED="1373472074734" ID="ID_1358587161" MODIFIED="1378311630427" TEXT="Tim: Tutorial on using Test Tools inhouse">
 <node CREATED="1370448539755" ID="ID_1093951769" MODIFIED="1375888254607" TEXT="make paths configurable"/>
 </node>
 <node CREATED="1373471405079" ID="ID_841451121" MODIFIED="1373471459955" TEXT="Plan Next Live Demo maybe in Washington in Spring 2014"/>
+</node>
+<node CREATED="1378311586374" ID="ID_102610290" MODIFIED="1378311591723" POSITION="left" TEXT="Completed">
+<node CREATED="1375887379168" ID="ID_469281590" MODIFIED="1375887389084" TEXT="XML Compare JSON configuration"/>
 </node>
 </node>
 </map>
