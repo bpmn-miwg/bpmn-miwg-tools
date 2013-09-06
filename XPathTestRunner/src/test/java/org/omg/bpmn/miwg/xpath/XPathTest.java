@@ -38,8 +38,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.testresult.FileResult;
 import org.omg.bpmn.miwg.testresult.IndexWriter;
-import org.omg.bpmn.miwg.testresult.XPathTestRunResults;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestManager;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
@@ -60,7 +60,7 @@ public class XPathTest {
 
 	private static File baseDir;
 
-    private static List<XPathTestRunResults> files = new ArrayList<XPathTestRunResults>();
+    private static List<FileResult> files = new ArrayList<FileResult>();
 
 	private TestInstance instance;
 
@@ -72,7 +72,7 @@ public class XPathTest {
     public static void tearDown() {
         File idx = new File(RPT_DIR, "overview.html");
         System.out.println("writing index to " + idx);
-        IndexWriter.writeXPath(XPathTest.class.getSimpleName(), idx,
+        IndexWriter.write2(XPathTest.class.getSimpleName(), idx,
                 files);
     }
 
@@ -95,7 +95,7 @@ public class XPathTest {
 	@Test
 	public void testRun() throws IOException {
 		TestManager manager = new TestManager();
-		TestOutput out = new TestOutput(instance, RPT_DIR);
+		final TestOutput out = new TestOutput(instance, RPT_DIR);
 		
 		manager.executeTests(instance, RPT_DIR);
 		
@@ -103,7 +103,19 @@ public class XPathTest {
 		
 		out.close();
         assertNotNull(out.getFile());
-        files.add(new XPathTestRunResults(out.getFile(), instance.getOKs(), instance.getFindings()));
+        files.add(new FileResult(){
+        	
+        	public String buildHtml() {
+        		StringBuilder builder = new StringBuilder();
+        		
+        		builder.append("\t<div class=\"test\" data-findings=\"" + instance.getFindings() + "\" data-ok=\"" + instance.getOKs()+ "\">");
+				builder.append("<a href=\"" + out.getName() + ".txt\">" + out.getName() + "</a>");
+				builder.append("</div>\n");
+				
+				return builder.toString();
+        	}
+        	
+        });
 	}
 
 }

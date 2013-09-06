@@ -55,6 +55,11 @@ public class IndexWriter {
 		}
 	}
 
+	/***
+	 * This function is deprecated and only present until it is ensured that the
+	 * new method works.
+	 */
+	@Deprecated
 	public static void write(String rptName, File idx, List<File> files) {
 		PrintWriter out = null;
 		try {
@@ -91,8 +96,18 @@ public class IndexWriter {
 		}
 	}
 
-	public static void writeXPath(String rptName, File idx,
-			List<XPathTestRunResults> results) {
+	/***
+	 * Writes the test results to an HTML document.
+	 * 
+	 * @param rptName
+	 *            Report name
+	 * @param idx
+	 *            Output file
+	 * @param results
+	 *            A list of FileResult instances which build the HTML fragments
+	 *            for each file using the buildHtml method.
+	 */
+	public static void write2(String rptName, File idx, List<FileResult> results) {
 		PrintWriter out = null;
 		try {
 			out = new PrintWriter(idx);
@@ -107,14 +122,8 @@ public class IndexWriter {
 			out.println("\t</ul>\t</div></div>");
 
 			out.println("<div class=\"testresults\">");
-			for (XPathTestRunResults result : results) {
-				out.print("\t<div class=\"test\" data-findings=\"" + result.getNumFindings() + "\" data-ok=\"" + result.getNumOK() + "\" >");
-				out.print("<a href=\"");
-				out.print(result.getFile().getName());
-				out.print("\">");
-				out.print(result.getFile().getName());
-				out.print("</a>");
-				out.println("</div>");
+			for (FileResult result : results) {
+				out.print(result.buildHtml());
 			}
 			out.println("</div>");
 

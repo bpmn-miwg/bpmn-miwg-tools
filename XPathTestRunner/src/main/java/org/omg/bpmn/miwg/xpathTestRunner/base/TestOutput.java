@@ -18,6 +18,7 @@ public class TestOutput {
 	private PrintWriter xmlFileWriter;
 
 	private Stack<AbstractTestEntry> stack = new Stack<AbstractTestEntry>();
+	private String name;
 
 	public TestOutput(String name, String outputFolder) throws IOException {
 		init(name, outputFolder);
@@ -28,7 +29,13 @@ public class TestOutput {
 		init(info.getApplication() + "-" + info.getTest(), outputFolder);
 	}
 
+	public String getName() {
+		return name;
+	}
+
 	private void init(String name, String outputFolder) throws IOException {
+
+		this.name = name;
 
 		textFile = new File(outputFolder, name + ".txt");
 		if (!textFile.getParentFile().exists()) {

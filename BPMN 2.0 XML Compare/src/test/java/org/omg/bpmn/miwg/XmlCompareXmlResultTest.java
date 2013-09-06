@@ -40,6 +40,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.testresult.FileResult;
 import org.omg.bpmn.miwg.testresult.IndexWriter;
 import org.xml.sax.SAXException;
 
@@ -59,7 +60,7 @@ public class XmlCompareXmlResultTest {
 	private static final String REFERENCE_FOLDER_NAME = "Reference";
 
 	private static File baseDir;
-	private static List<File> files = new ArrayList<File>();
+	private static List<FileResult> results = new ArrayList<FileResult>();
 
 	private String tool;
 
@@ -120,8 +121,8 @@ public class XmlCompareXmlResultTest {
     public static void tearDown() {
         File idx = new File(RPT_DIR, "overview.html");
         System.out.println("writing index to " + idx);
-        IndexWriter.write(XmlCompareXmlResultTest.class.getSimpleName(), idx,
-                files);
+        IndexWriter.write2(XmlCompareXmlResultTest.class.getSimpleName(), idx,
+                results);
 	}
 
 	/**
@@ -136,10 +137,26 @@ public class XmlCompareXmlResultTest {
 	 * @throws IOException
 	 */
 	private void reportTestResult(String result) throws IOException {
-		File f = new File(RPT_DIR, getFileName());
+		final File f = new File(RPT_DIR, getFileName());
 		System.out.println("writing report to: " + f.getAbsolutePath());
 		FileUtils.writeStringToFile(f, result);
-		files.add(f);
+		results.add(new FileResult() {
+			
+			public String buildHtml() {
+				StringBuilder builder = new StringBuilder();
+				
+				builder.append("\t<div class=\"test\">");
+				builder.append("<a href=\"");
+				builder.append(f.getName());
+				builder.append("\">");
+				builder.append(f.getName());
+				builder.append("</a>");
+				builder.append("</div>\n");
+				
+				return builder.toString();
+			}
+			
+		});
 	}
 
 	private String getName() {
