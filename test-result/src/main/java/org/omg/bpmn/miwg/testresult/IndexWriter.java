@@ -92,7 +92,7 @@ public class IndexWriter {
 	}
 
 	public static void writeXPath(String rptName, File idx,
-			List<XPathTestRunResults> files) {
+			List<XPathTestRunResults> results) {
 		PrintWriter out = null;
 		try {
 			out = new PrintWriter(idx);
@@ -107,12 +107,12 @@ public class IndexWriter {
 			out.println("\t</ul>\t</div></div>");
 
 			out.println("<div class=\"testresults\">");
-			for (XPathTestRunResults f : files) {
-				out.print("\t<div class=\"test\" data-findings=\"" + f.getNumFindings() + "\" data-ok=\"" + f.getNumOK() + "\" >");
+			for (XPathTestRunResults result : results) {
+				out.print("\t<div class=\"test\" data-findings=\"" + result.getNumFindings() + "\" data-ok=\"" + result.getNumOK() + "\" >");
 				out.print("<a href=\"");
-				out.print(f.getFile().getName());
+				out.print(result.getFile().getName());
 				out.print("\">");
-				out.print(f.getFile().getName());
+				out.print(result.getFile().getName());
 				out.print("</a>");
 				out.println("</div>");
 			}
