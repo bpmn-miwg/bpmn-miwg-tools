@@ -108,12 +108,11 @@ public class IndexWriter {
 
 			out.println("<div class=\"testresults\">");
 			for (XPathTestRunResults f : files) {
-				out.print("\t<div class=\"test\">");
+				out.print("\t<div class=\"test\" data-findings=\"" + f.getNumFindings() + "\" data-ok=\"" + f.getNumOK() + "\" >");
 				out.print("<a href=\"");
 				out.print(f.getFile().getName());
 				out.print("\">");
 				out.print(f.getFile().getName());
-				out.print(" (" + f.getNumOK() + "; " + f.getNumFindings() + ")");
 				out.print("</a>");
 				out.println("</div>");
 			}
