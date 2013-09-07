@@ -37,14 +37,43 @@ function ModelInterchangePresenter() {
       mi.results = [];
       if (window.location.href.indexOf('overview')!=-1) { // overview page 
     	  $('.testresults').addClass('hide');
+    	  var container = $('body').append('<div class="mi-table container-fluid">'
+    			  +'<div class="mi-header row-fluid">'
+  		  		  +'<h2 class="offset1 span6">Test</h2>'
+		  		  +'<h2 class="span2">Findings</h2>'
+		  		  +'<h2 class="span2">Assertions run</h2>'
+    			  +'</div>');
     	  $('.test > a').each(function(i,d) {
     		  var s = d.href.substring(d.href.lastIndexOf('/')+1).split('-');
-    		  var cur = {suite: s[1],vendor:unescape(s[0]),variant:s[2],url:d.href};
-    		  var prev = mi.results[i-1];
+    		  // workaround for itp-commerce and camunda-bpmn
+    		  if (s.length>3) {
+    			  console.log('workaround: s='+s.length);
+    			  s[0]=s[0]+'-'+s[1];
+    			  s[1]=s[2];
+    			  s[2]=s[3];
+	    	  }
+	    	  console.log('vendor'+s[0]+'s2: '+ s[2]);
+    		  var cur = {
+    			suite: s[1],
+    			vendor: unescape(s[0]),
+    			/* Reference has no variant, e.g. "Reference-A.1.0.bpmn.txt" */
+			  	variant: s[2] === undefined ? '' : s[2].substring(0,s[2].indexOf('.')),
+			  	url: d.href,
+			  	findings: $(d).parent().data('findings') === undefined ? 'N/A' : $(d).parent().data('findings'),
+			  	ok: $(d).parent().data('ok') === undefined ? 'N/A' : $(d).parent().data('ok')
+		      };
+		      var prev = mi.results[i-1];
     		  if (prev===undefined || prev.vendor!=cur.vendor) {
-    			  $('body').append('<h2>'+cur.vendor+'</h2>');
+    			  container.append('<div class="row-fluid"><h3 class="offset1 span10">'+cur.vendor+'</h3></div>');
     		  }
-    		  $('body').append('<a href="'+cur.url+'">Test '+cur.suite+': '+cur.variant+'</a><br/>');
+    		  var findingsClass = cur.findings == 0 ? 'mi-no-findings' : 'mi-findings';
+    		  container.append('<div class="row-fluid">'
+    		  		+'<span class="mi-test offset1 span6">'
+    		  		+'<a href="'+cur.url+'">'+cur.suite+': '+cur.variant+'</a>'
+    		  		+'</span>'
+    		  		+'<span class="span2 '+findingsClass+'">'+cur.findings+'</span>'
+    		  		+'<span class="span2 mi-ok">'+cur.ok+'</span>'
+    		  		+'</div>');
     		  mi.results.push(cur);
     	  });
       } else {

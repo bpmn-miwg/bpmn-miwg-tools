@@ -23,6 +23,23 @@
  * 
  */
 
+/* BOOTRSTAP OVERRIDES */
+[class*="span"] {
+  margin-left:10px;
+}
+.well {
+  style="margin:10px;"
+}
+.row, .row-fluid {
+  margin-bottom: 3px;  
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+}
+/* MIWG */
 label {
   font-weight: bold;  
 }
@@ -30,12 +47,7 @@ label {
 .highlight {
   background-color: yellow;
 }
-[class*="span"] {
-  margin-left:10px;
-}
-.well {
-  style="margin:10px;"
-}
+
 .backToFindings {
   padding: 10px;
   background-color: #cecece;
@@ -53,4 +65,36 @@ label {
   right: auto;
   border-radius: 4px;
   border: solid 1px #575757;
+}
+.mi-header {
+  background-color: #ccc;
+  border-radius: 5px;
+  padding-top: 5px;
+  font-size: 18px;
+  border: #aaa 1px solid;
+  
+}
+.mi-test, .mi-ok {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+.mi-no-findings {
+  background-color: #10a963;
+  border: #109943;
+  border-radius: 5px;
+  text-align: right;
+  padding-right: 5px;
+}
+.mi-findings {
+  background-color: #fdd04c;
+  border: #cdb03c;
+  border-radius: 5px;
+  text-align: right;
+  padding-right: 5px;
+}
+.mi-ok {
+  text-align: right;
+  padding-right: 5px;
 }
