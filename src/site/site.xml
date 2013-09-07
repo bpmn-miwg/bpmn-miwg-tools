@@ -36,8 +36,8 @@
       <item name="Team" href="team-list.html"/>
     </menu>
     <menu name="Tools">
-      <item name="XML Compare" href="xml-compare/index.html"/>
-      <item name="XPath Tests" href="xpath/index.html"/>
+      <item name="XML Compare" href="xml-compare/overview.html"/>
+      <item name="XPath Tests" href="xpath/overview.html"/>
     </menu>
     <menu ref="reports"/>
   </body>
