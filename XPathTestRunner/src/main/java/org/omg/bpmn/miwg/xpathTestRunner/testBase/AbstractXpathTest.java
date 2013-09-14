@@ -93,6 +93,9 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	protected String getNodeIDNoNull(Node n) {
+		if (n==null)
+			return "";
+		
 		String s = getAttribute(n, "id");
 		if (s == null)
 			return "";
@@ -467,6 +470,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void selectFollowingElement(String type, String name)
 			throws Throwable {
+		if (head() == null) {
+			finding(String.format("Type: %s, name: %s", type, name),
+					"Parent failed");
+			push(null);
+			return;
+		}
 		Node n = navigateFollowingElement(type, name);
 		push(n);
 	}
