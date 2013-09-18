@@ -70,8 +70,8 @@ public class IndexWriter {
 			out.println("</head><body>");
 			out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");
 			out.println("\t\t<li><a href=\"/\">Home</a></li>");
-			out.println("\t\t<li><a href=\"/xml-compare/\">XML Compare</a></li>");
-			out.println("\t\t<li><a href=\"/xpath\">XPath</a></li>");
+			out.println("\t\t<li><a href=\"/xml-compare/overview.html\">XML Compare</a></li>");
+			out.println("\t\t<li><a href=\"/xpath/overview.html\">XPath</a></li>");
 			out.println("\t</ul>\t</div></div>");
 
 			out.println("<div class=\"testresults\">");
@@ -117,8 +117,8 @@ public class IndexWriter {
 			out.println("</head><body>");
 			out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");
 			out.println("\t\t<li><a href=\"/\">Home</a></li>");
-			out.println("\t\t<li><a href=\"/xml-compare/\">XML Compare</a></li>");
-			out.println("\t\t<li><a href=\"/xpath\">XPath</a></li>");
+			out.println("\t\t<li><a href=\"/xml-compare/overview.html\">XML Compare</a></li>");
+			out.println("\t\t<li><a href=\"/xpath/overview.html\">XPath</a></li>");
 			out.println("\t</ul>\t</div></div>");
 
 			out.println("<div class=\"testresults\">");
