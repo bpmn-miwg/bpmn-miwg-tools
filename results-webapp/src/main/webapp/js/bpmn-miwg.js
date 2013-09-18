@@ -29,6 +29,8 @@ $(document).ready(function() {
 	mi.init();
 });
 
+var classifiers = [ new ExprLangClassifier(), new SchemaLocationClassifier() ];
+
 function ModelInterchangePresenter() {
 	this.orig = [];
 	this.init = function() {
@@ -132,6 +134,7 @@ function ModelInterchangePresenter() {
 		    	 return false;
 		      }); 
 		  });
+		  mi.classifyFindings();
       } // else render individual results page
   }
   this.reset = function() {
@@ -143,6 +146,19 @@ function ModelInterchangePresenter() {
     } else {
       console.log('Loaded '+mi.orig.length+' of '+$('code.reference').length*2+', waiting for all models to be fetched');
     }
+  };
+  /**
+   * @param d xml-compare finding 
+   */
+  this.classifyFindings = function() {
+	$('.finding > h4').each(function(i,d) {
+	  var indicator = $(d).prepend('<span class="mi-unknown-finding img-rounded"></span>');
+	
+	  $.each(classifiers, function(i2,d2) {
+		  console.log('i:'+i2+',d:'+d2+'p:'+$(d).parent()+',o:'+indicator); 
+		  d2.classify($(d).parent());
+	  });
+	});
   };
   this.fetchBpmn = function(target) {
     $.each($('code.'+target), function(i,d) {
@@ -258,4 +274,23 @@ function ModelInterchangePresenter() {
 	  $('.messages').addClass('hide');
 	  document.body.style.cursor='auto';  
   }
+}
+
+var tmp ; 
+function ExprLangClassifier() {
+	this.classify = function(d) {
+		$('.vendor:contains("expressionLanguage")').parent().siblings('h4')
+			.children('.mi-unknown-finding')
+			.removeClass('mi-unknown-finding')
+			.addClass('mi-equivalent-finding')
+	}
+}
+function SchemaLocationClassifier() {
+	this.classify = function(d) {
+		$('.vendor:contains("http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd")')
+			.parent().siblings('h4')
+			.children('.mi-unknown-finding')
+			.removeClass('mi-unknown-finding')
+			.addClass('mi-equivalent-finding')
+	}
 }
