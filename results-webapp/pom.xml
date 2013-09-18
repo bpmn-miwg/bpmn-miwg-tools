@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.omg.bpmn.miwg</groupId>
     <artifactId>tools</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
   <artifactId>results-webapp</artifactId>
@@ -18,6 +18,8 @@
   <packaging>war</packaging>
 
   <properties>
+    <java.version>1.6</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <siteStagingDir>${project.build.directory}/${project.build.finalName}</siteStagingDir>
   </properties>
 

@@ -6,7 +6,7 @@
   <artifactId>tools</artifactId>
   <name>BPMN 2.0 Model Interchange Tools</name>
   <packaging>pom</packaging>
-  <version>0.1</version>
+  <version>0.1-SNAPSHOT</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
   <licenses>
@@ -121,11 +121,6 @@
       <artifactId>maven-scm-publish-plugin</artifactId>
       <version>1.0-beta-2</version>
       <type>maven-plugin</type>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>test-result</artifactId>
-      <version>${project.version}</version>
     </dependency>
   </dependencies>
 
