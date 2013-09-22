@@ -85,7 +85,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	protected Node pop() {
 		NodePopEntry e = new NodePopEntry(callingMethod(),
-				getNodeIDNoNull(nodeStack.peek()));
+				getNodeIDNoNull(nodeStack.peek()),
+				TestContext.createTestContext(this));
 		out.pop(e);
 		Node n = nodeStack.pop();
 		currentNode = n;
@@ -93,9 +94,9 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	protected String getNodeIDNoNull(Node n) {
-		if (n==null)
+		if (n == null)
 			return "";
-		
+
 		String s = getAttribute(n, "id");
 		if (s == null)
 			return "";
@@ -104,17 +105,21 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	protected void push(Node n) {
-		NodePushEntry e = new NodePushEntry(callingMethod(), getNodeIDNoNull(n));
+		NodePushEntry e = new NodePushEntry(callingMethod(),
+				getNodeIDNoNull(n), TestContext.createTestContext(this));
 		out.push(e);
 		nodeStack.push(n);
 	}
 
 	protected Node head() {
+		if (nodeStack.isEmpty())
+			return null;
 		return nodeStack.lastElement();
 	}
 
 	protected void ok(String message) {
-		ok(new OKAssertionEntry(callingMethod(), message));
+		ok(new OKAssertionEntry(callingMethod(), message,
+				TestContext.createTestContext(this)));
 	}
 
 	@Override
@@ -184,8 +189,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	private String getCurrentNodeID() {
+	protected String getCurrentNodeID() {
 		return getAttribute(currentNode, "id");
+	}
+
+	protected String getStackID() {
+		return getAttribute(head(), "id");
 	}
 
 	protected String getPath(Node node) {
@@ -1203,6 +1212,10 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		ok("Message definition");
 
+	}
+
+	public Node getCurrentNode() {
+		return currentNode;
 	}
 
 }

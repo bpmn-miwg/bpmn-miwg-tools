@@ -25,6 +25,8 @@
 
 package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
 
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.TestContext;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
@@ -34,10 +36,13 @@ public class OKAssertionEntry extends AbstractTestEntry {
 	public String assertion;
 	@XStreamAsAttribute
 	public String message;
+	@XStreamAsAttribute
+	public TestContext testContext;
 	
-	public OKAssertionEntry(String assertion, String message) {
+	public OKAssertionEntry(String assertion, String message, TestContext testContext) {
 		this.assertion = assertion;
 		this.message = message;
+		this.testContext = testContext;
 	}
 	
 	@Override

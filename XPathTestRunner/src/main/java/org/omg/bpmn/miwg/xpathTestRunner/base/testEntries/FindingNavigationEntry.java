@@ -25,6 +25,8 @@
 
 package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
 
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.TestContext;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
@@ -38,13 +40,16 @@ public class FindingNavigationEntry extends AbstractTestEntry {
 	public String caller;
 	@XStreamAsAttribute
 	public String parameter;
+	@XStreamAsAttribute
+	public TestContext testContext;
 
 	public FindingNavigationEntry(String message, String caller,
-			String identifier, String parameter) {
+			String identifier, String parameter, TestContext testContext) {
 		this.message = message;
 		this.identifier = identifier;
 		this.caller = caller;
 		this.parameter = parameter;
+		this.testContext = testContext;
 	}
 
 	@Override
