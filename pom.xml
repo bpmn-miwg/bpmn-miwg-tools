@@ -74,6 +74,14 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>bpmn-miwg-snapshot-repository</id>
+      <name>BPMN MIWG Snapshot Repository</name>
+      <url>https://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
+    </repository>
+  </repositories>
+
   <modules>
     <module>test-result</module>
     <module>BPMN 2.0 XML Compare</module>
