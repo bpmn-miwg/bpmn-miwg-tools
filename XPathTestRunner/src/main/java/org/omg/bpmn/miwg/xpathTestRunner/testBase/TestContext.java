@@ -23,19 +23,57 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
+package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
-import org.omg.bpmn.miwg.xpathTestRunner.testBase.TestContext;
+import org.w3c.dom.Node;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+@XStreamAlias("TestContext")
+public class TestContext {
 
-@XStreamAlias("NodePush")
-public class NodePushEntry extends OKNavigationEntry {
-	
-	public NodePushEntry(String caller, String identifier, TestContext testContext) {
-		super("Push", caller, identifier, testContext);
+	private String stackID;
+
+	private String nodeID;
+
+	private String id;
+
+	public String getStackID() {
+		return stackID;
 	}
-	
+
+	public String getNodeID() {
+		return nodeID;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	private void selectID() {
+		if (nodeID == null)
+			id = nodeID;
+		id = stackID;
+	}
+
+	private static String getNodeID(Node n) {
+		if (n == null)
+			return null;
+		Node namedItem = n.getAttributes().getNamedItem("id");
+		if (namedItem == null) {
+			return null;
+		}
+		return namedItem.getNodeValue();
+	}
+
+	public static TestContext createTestContext(AbstractXpathTest test) {
+		TestContext ctx = new TestContext();
+
+		ctx.nodeID = getNodeID(test.getCurrentNode());
+		ctx.stackID = getNodeID(test.head());
+		ctx.selectID();
+
+		return ctx;
+	}
 
 }

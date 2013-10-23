@@ -24,7 +24,7 @@ public abstract class AbstractTest implements Test {
 	}
 	
 	protected void ok(String assertion, String message) {
-		ok(new OKAssertionEntry(assertion, message));
+		ok(new OKAssertionEntry(assertion, message, null));
 	}
 
 	protected void finding(AbstractTestEntry entry) {
@@ -33,7 +33,7 @@ public abstract class AbstractTest implements Test {
 	}
 	
 	protected void finding(String assertion, String message) {
-		finding(new FindingAssertionEntry(assertion, message));
+		finding(new FindingAssertionEntry(assertion, message, (TestContext)null));
 	}
 
 	protected void info(String message) {

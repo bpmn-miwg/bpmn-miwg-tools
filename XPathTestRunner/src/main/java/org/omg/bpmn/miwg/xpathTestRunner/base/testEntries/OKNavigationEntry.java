@@ -25,6 +25,8 @@
 
 package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
 
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.TestContext;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
@@ -36,11 +38,14 @@ public class OKNavigationEntry extends AbstractTestEntry {
 	public String identifier;
 	@XStreamAsAttribute
 	public String caller;
+	@XStreamAsAttribute
+	public TestContext testContext;
 	
-	public OKNavigationEntry(String message, String caller, String identifier) {
+	public OKNavigationEntry(String message, String caller, String identifier, TestContext testContext) {
 		this.message = message;
 		this.identifier = identifier;
 		this.caller = caller;
+		this.testContext = testContext;
 	}
 	
 	@Override

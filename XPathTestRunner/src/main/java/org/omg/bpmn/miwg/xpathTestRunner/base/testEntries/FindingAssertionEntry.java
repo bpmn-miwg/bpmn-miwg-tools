@@ -25,6 +25,8 @@
 
 package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
 
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.TestContext;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
@@ -36,11 +38,14 @@ public class FindingAssertionEntry extends AbstractTestEntry {
 	public String message;
 	@XStreamAsAttribute
 	public String parameter;
+	@XStreamAsAttribute
+	public TestContext testContext;
 	
-	public FindingAssertionEntry(String assertion, String message) {
+	public FindingAssertionEntry(String assertion, String message, TestContext testContext) {
 		this.assertion = assertion;
 		this.message = message;
 		this.parameter = "";
+		this.testContext = testContext;
 	}
 	
 	public FindingAssertionEntry(String assertion, String message, String parameter) {

@@ -5,7 +5,8 @@
   ],
   "ignoredAttributes": [
     "/definitions/@exporterVersion",
-    "/definitions/@exporter"
+    "/definitions/@exporter",
+    "/definitions/@expressionLanguage"
   ],
   "optionalAttributes": [],
   "idsAndIdRefs": [

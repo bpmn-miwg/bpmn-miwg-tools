@@ -25,14 +25,16 @@
 
 package org.omg.bpmn.miwg.xpathTestRunner.base.testEntries;
 
+import org.omg.bpmn.miwg.xpathTestRunner.testBase.TestContext;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 
 @XStreamAlias("NodePop")
 public class NodePopEntry extends OKNavigationEntry {
 	
-	public NodePopEntry(String caller, String identifier) {
-		super("Pop", caller, identifier);
+	public NodePopEntry(String caller, String identifier, TestContext testContext) {
+		super("Pop", caller, identifier, testContext);
 	}
 	
 
