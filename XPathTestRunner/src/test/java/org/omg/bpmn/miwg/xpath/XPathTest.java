@@ -53,8 +53,8 @@ import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 public class XPathTest {
 
 	private static final String S = File.separator;
-	private static final String RESOURCE_BASE_DIR = ".." + S + ".." + S
-			+ "bpmn-miwg-test-suite";
+	private static final String RESOURCE_BASE_DIR = "." + S + "target" + S
+			+ "test-suite" + S;
 
 	private static final String RPT_DIR = "target" + S + "site";
 

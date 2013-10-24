@@ -53,8 +53,8 @@ import org.xml.sax.SAXException;
 public class XmlCompareXmlResultTest {
 
 	private static final String S = File.separator;
-	private static final String RESOURCE_BASE_DIR = ".." + S + ".." + S
-			+ "bpmn-miwg-test-suite" + S;
+	private static final String RESOURCE_BASE_DIR = "." + S + "target" + S
+			+ "test-suite" + S;
 
 	private static final String RPT_DIR = "target" + S + "site";
 	private static final String REFERENCE_FOLDER_NAME = "Reference";

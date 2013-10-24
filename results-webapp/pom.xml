@@ -23,6 +23,14 @@
     <siteStagingDir>${project.build.directory}/${project.build.finalName}</siteStagingDir>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>bpmn-miwg-snapshot-repository</id>
+      <name>BPMN MIWG Snapshot Repository</name>
+      <url>https://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
+    </repository>
+  </repositories>
+
   <pluginRepositories>
    <!-- currently unused, see below
    <pluginRepository>

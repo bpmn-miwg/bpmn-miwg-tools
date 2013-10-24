@@ -46,6 +46,11 @@
 			<artifactId>xstream</artifactId>
 			<version>1.4.4</version>
 		</dependency>
+		<dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>test-suite</artifactId>
+      <version>${project.version}</version>
+    </dependency>
 	</dependencies>
 
 	<build>
@@ -61,36 +66,30 @@
 				<version>2.3.2</version>
 			</plugin>
 			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.7</version>
-				<executions>
-					<execution>
-						<phase>post-site</phase>
-						<configuration>
-							<target>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>process-test-resources</phase>
+            <configuration>
+              <target>
 
-								<echo>Install ${project.name} site into repo at
-									${settings.localRepository}</echo>
-								<exec executable="mvn">
-									<arg value="-o" />
-									<arg value="install:install-file" />
-									<arg value="-DgroupId=${project.groupId}" />
-									<arg value="-DartifactId=${project.artifactId}" />
-									<arg value="-Dversion=${project.version}" />
-									<arg value="-Dpackaging=${project.packaging}" />
-									<arg value="-Dclassifier=site" />
-									<arg
-										value="-Dfile=${project.build.directory}/${project.artifactId}-${project.version}-site.jar" />
-								</exec>
-
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+                <echo>Unzipping test suite from ${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}</echo>
+                <unzip src="${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}" 
+                    dest="${project.build.directory}/test-suite/">
+                  <patternset>
+                    <exclude name="META-INF/**/*"/>
+                    <exclude name="target/**/*"/>
+                  </patternset>
+                </unzip>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 		</plugins>
 
 	</build>
