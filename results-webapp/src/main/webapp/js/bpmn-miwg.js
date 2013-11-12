@@ -45,7 +45,7 @@ function ModelInterchangePresenter() {
 		  		  +'<h2 class="span2">Findings</h2>'
 		  		  +'<h2 class="span2">Assertions run</h2>'
     			  +'</div>');
-    	  $('.test > a').each(function(i,d) {
+    	  $('.test > a').sort().each(function(i,d) {
     		  var s = d.href.substring(d.href.lastIndexOf('/')+1).split('-');
     		  // workaround for itp-commerce and camunda-bpmn
     		  if (s.length>3) {
