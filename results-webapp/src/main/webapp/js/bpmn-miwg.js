@@ -79,6 +79,7 @@ function ModelInterchangePresenter() {
     		  mi.results.push(cur);
     	  });
       } else {
+        // individual test results page
 	      // enhance basic data with presentation classes
 	      $('.testresults').addClass('container');
 	      $('.test').addClass('well').addClass('span12');
@@ -91,6 +92,17 @@ function ModelInterchangePresenter() {
 	      
 	      $($('.detailedoutput .reference')).prepend('<label>Reference:</label>');
 	      $($('.detailedoutput .vendor')).prepend('<label>Vendor:</label>');
+	      
+	      // TODO Ideally Sven could fix this at his end
+	      $('[data-xpath]').each(function(i,d) {
+	        $(d).data('xpath', mi.fixXPath($(d).data('xpath')));
+	        console.log('check modification set: '+ $(d).data('xpath'));
+	      });
+	      
+	      mi.classifyFindings();
+	      // number findings MUST occur before we add the span6 bpmn containers
+	      $('.test').wrapInner('<ol>');
+	      $('.finding h4').wrapInner('<li>');
 	      
 	      var variant = 'seriously-cant-we-get-the-variant-more-easily-than-this';
 	      if (window.location.href.indexOf('export')!=-1) {
@@ -120,22 +132,21 @@ function ModelInterchangePresenter() {
 		  $.each(variants, function(i,d) {
 		      mi.fetchBpmn(d);
 		      // register highlight click handlers for xpath findings
-		      /* TODO disabled this until we can get the scrollToXPath working
-		      $('.finding span.'+d+'[data-xpath]').append('&nbsp;<a class="'+d+'">Show in '+d+'</a>').click(function(){
+		      $('.finding span.'+d+'[data-xpath]').append('&nbsp;<a class="'+d+'">Show</a>').click(function(){
 		    	 console.log("clicked 'finding'"); 
-		    	 mi.scrollToXPath($(this).parent().parent().parent().data('test'),$(this).parent().data('xpath'),d);
+		    	 mi.scrollToXPath($(this).parent().parent().parent().parent().data('test'),$(this).data('xpath'),d);
 		    	 return false;
 		      });
-		      */ 
+		      
 		      // register highlight click handlers for string findings
-		      $('.finding span.'+d+'[data-frag]').append('&nbsp;<a class="'+d+'">Show in '+d+'</a>').click(function(){
+		      $('.finding span.'+d+'[data-frag]').append('&nbsp;<a class="'+d+'">Show</a>').click(function(){
 		    	 console.log("clicked 'finding'"); 
-		    	 mi.scrollToFrag($(this).parent().parent().parent().data('test'),$(this).data('frag'),d);
+		    	 mi.scrollToFrag($(this).parent().parent().parent().parent().data('test'),$(this).data('frag'),d);
 		    	 return false;
 		      }); 
 		  });
-		  mi.classifyFindings();
-      } // else render individual results page
+		  
+    } // END else render individual results page
   }
   this.reset = function() {
     $('#highlight-reference').removeClass('highlight');
@@ -171,11 +182,12 @@ function ModelInterchangePresenter() {
         success: function( data ) {
           console.log('success loading '+file+' for '+test);
           var o = {
-        	  "target":target,
-        	  "test":test,
         	  "data":data.replace(/</g,'&lt;'),
+        	  "file":file,
         	  "html":null,
-        	  "xml":$.parseXML(data)
+        	  "target":target,
+            "test":test,
+            "xml":$.parseXML(data)
           };
           mi.orig.push(o);
           mi.reset();
@@ -188,41 +200,54 @@ function ModelInterchangePresenter() {
       });
     });
   };
+  this.fixXPath = function(xpath) {
+      // fix xpath expressions provided without namespace 
+      // (TODO assumption of semantic is not always right)
+      xpath = xpath.replace(/\/(?!@)/g,'/semantic:');
+      console.log('modified xpath to: '+xpath);
+      // cut off any attributes and look instead for the parent element
+      xpath = xpath.replace(/\/@.*$/g,'')
+      console.log('modified xpath to: '+xpath);
+      return xpath; 
+  };
   this.loadBpmn = function() {
-	  for (idx in mi.orig) {
-	    if (mi.orig[idx].html == null) {
-	    	$( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target )
-	    	.empty().html( mi.orig[idx].data );
-	        $('pre code').each(function(i, d) { 
-	        	hljs.highlightBlock(d);
-	        	mi.orig[idx].html = $( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target ).html();
-	        	console.log('added syntax highlighting: '+ mi.orig[idx].html.length);
-	        });
+	  $.each(mi.orig, function(idx,d) {
+	    if (mi.orig[idx].html==null) {
+	      $( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target )
+        .empty().html( mi.orig[idx].data );
+        $('pre code[data-file="'+mi.orig[idx].file+'"]').each(function(i, d) { 
+          hljs.highlightBlock(d);
+          mi.orig[idx].html = $( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target ).html();
+          console.log('added syntax highlighting for idx: '+idx+': '+ mi.orig[idx].html.length);
+          mi.orig[idx].htmlInited = true; 
+        });
 	    } else {
-	    	console.log('Already applied syntax highlighting'); 
-	    	$( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target )
-	    		.empty().html( mi.orig[idx].html );
+	      console.log('Already applied syntax highlighting'); 
+        $( 'div[data-test="'+mi.orig[idx].test+'"] code.'+mi.orig[idx].target )
+            .empty().html( mi.orig[idx].html );
 	    }
-	  }
+	  });
   }
-  this.scrollToXPath = function(test, idxOrFrag, target) {
-	  alert('Sorry at the moment we cannot scroll to an xpath fragment');
-	  // NOTE THAT THIS DOES NOT WORK!! SUGGESTIONS WELCOMED
+  this.scrollToXPath = function(test, xpath, target) {
+	  //alert('Sorry at the moment we cannot scroll to an xpath fragment');
+    console.log('Seeking xpath: '+xpath+' in test: '+test);
 	  
-	  // make a local copy of the first xml document loaded to play with 
-	  /*var x = mi.orig[0].xml;
-	  
-	  // create a namespace resolver 
-	  var nsResolver = x.createNSResolver( x );
-	  
-	  // both of these return root === undefined
-	  //var root = x.evaluate('//semantic:definitions',x,nsResolver ,XPathResult.ANY_TYPE,null);
-	  var root = x.evaluate('/',x,nsResolver ,XPathResult.ANY_TYPE,null);
-	  
-	  THIS LOOKS PROMISING, finds the node, but how to highlight?
-	  mi.orig[0].xml.evaluate('/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]', mi.orig[1].xml, null, XPathResult.ANY_TYPE,null);
-	  */
-	  
+	  // make a local copy of the xml document loaded to play with 
+    $.each(mi.orig, function(i,d) {
+      if (d.test==test) {
+        var x = mi.orig[i].xml;
+        
+    	  // create a namespace resolver 
+    	  var nsResolver = x.createNSResolver( x );
+    
+    	  var root = x.evaluate(xpath,x,nsResolver,XPathResult.ANY_TYPE,null);
+    	  
+    	  var id = root.iterateNext().getAttribute('id');
+    	  mi.scrollToFrag(test, id, target);
+      } else { 
+        console.debug('Skipping test: '+ d.test);
+      }
+    });
   };
   this.scrollToFrag = function(test, idxOrFrag, target) {
 	this.showActivityIndicator('Searching...');
