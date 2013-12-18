@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <!-- DataTables CSS -->
+<!--     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables_themeroller.css">
+    
+    <!-- Theme -->
+<!--     <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/redmond/jquery-ui-1.7.2.custom.css"> -->
+    <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/start/jquery-ui-1.7.2.custom.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+<!--     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" charset="utf8">
+      $(document).ready(function(){
+        $('#bpmn-tools').dataTable( {
+          "bProcessing": true,
+          "bJQueryUI": true,
+          "bPaginate": false,
+          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
+//           "sAjaxSource": "bpmn-tools.nice.json",
+          "sAjaxDataProp": "groups.tool",
+          "aoColumns": [
+              { "mData": "screenshot.0.value",
+                "mRender": function ( data, type, full ) {
+                  return '<img src="'+data+'" />';
+                } },
+              { "mData": "name.0.value" },
+              { "mData": "category.0.value" },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": null },
+              { "mData": "url.0.value",
+                "mRender": function ( data, type, full ) {
+                  return '<a href="'+data+'">Link</a>';
+                } },
+          ],
+//           "fnInitComplete": function () {
+//             var that = this;
+//             this.$('td').click( function () {
+//                 that.fnFilter( this.innerHTML );
+//             } );
+//           }
+        } );
+      });
+    </script>
+  </head>
+  <body>
+    <div class="">
+      <h1>BPMN Tools</h1>
+      <table id="bpmn-tools" class="display" width="100%">
+        <thead>
+          <tr>
+            <th>Screenshot</th>
+            <th>Tool Name</th>
+            <th>Category</th>
+            <th>BPMN 2.0</th>
+            <th>MIWG Member</th>
+            <th>Test Results</th>
+            <th>Import</th>
+            <th>Export</th>
+            <th>Roundtrip</th>
+            <th>BPMN Element Coverage</th>
+            <th>Positioning</th>
+            <th>Open Issues</th>
+            <th>Closed Issues</th>
+            <th>Participates in Demos</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+                
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Screenshot</th>
+            <th>Tool Name</th>
+            <th>Category</th>
+            <th>BPMN 2.0</th>
+            <th>MIWG Member</th>
+            <th>Test Results</th>
+            <th>Import</th>
+            <th>Export</th>
+            <th>Roundtrip</th>
+            <th>BPMN Element Coverage</th>
+            <th>Positioning</th>
+            <th>Open Issues</th>
+            <th>Closed Issues</th>
+            <th>Participates in Demos</th>
+            <th>Link</th>
+          </tr>
+        </tfoot>
+      </table
+    </div>
+  </body>
+</html>
