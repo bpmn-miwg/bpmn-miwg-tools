@@ -29,15 +29,18 @@
           "bProcessing": true,
           "bJQueryUI": true,
           "bPaginate": false,
-          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
-//           "sAjaxSource": "bpmn-tools.nice.json",
+//          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
+          "sAjaxSource": "bpmn-tools.json",
           "sAjaxDataProp": "groups.tool",
           "aoColumns": [
               { "mData": "screenshot.0.value",
                 "mRender": function ( data, type, full ) {
-                  return '<img src="'+data+'" />';
+                  return '<a href="'+full.url[0].value+'"><img src="'+data+'" /></a>';
                 } },
-              { "mData": "name.0.value" },
+              { "mData": "name.0.value",
+                "mRender": function ( data, type, full ) {
+                  return '<a href="'+full.url[0].value+'">'+data+'</a>';
+                } },
               { "mData": "category.0.value" },
               { "mData": null },
               { "mData": null },
@@ -52,7 +55,7 @@
               { "mData": null },
               { "mData": "url.0.value",
                 "mRender": function ( data, type, full ) {
-                  return '<a href="'+data+'">Link</a>';
+                  return '<a href="'+data+'">Info</a>';
                 } },
           ],
 //           "fnInitComplete": function () {
@@ -85,7 +88,7 @@
             <th>Open Issues</th>
             <th>Closed Issues</th>
             <th>Participates in Demos</th>
-            <th>Link</th>
+            <th>Links</th>
           </tr>
         </thead>
         <tbody>
@@ -107,7 +110,7 @@
             <th>Open Issues</th>
             <th>Closed Issues</th>
             <th>Participates in Demos</th>
-            <th>Link</th>
+            <th>Links</th>
           </tr>
         </tfoot>
       </table
