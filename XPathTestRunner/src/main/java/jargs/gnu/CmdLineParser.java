@@ -5,7 +5,6 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Hashtable;
 import java.util.Vector;
-import java.util.Enumeration;
 import java.util.Locale;
 
 /**
@@ -269,6 +268,7 @@ public class CmdLineParser {
     /**
      * Add the specified Option to the list of accepted options
      */
+	@SuppressWarnings("unchecked")
 	public final Option addOption( Option opt ) {
         if ( opt.shortForm() != null )
             this.options.put("-" + opt.shortForm(), opt);
@@ -369,7 +369,8 @@ public class CmdLineParser {
      * @return the parsed value of the given Option, or null if the
      * option was not set
      */
-    public final Object getOptionValue( Option o, Object def ) {
+    @SuppressWarnings("rawtypes")
+	public final Object getOptionValue( Option o, Object def ) {
         Vector v = (Vector)values.get(o.longForm());
 
         if (v == null) {
@@ -390,7 +391,8 @@ public class CmdLineParser {
      * @return A Vector giving the parsed values of all the occurrences of the
      * given Option, or an empty Vector if the option was not set.
      */
-    public final Vector getOptionValues( Option option ) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public final Vector getOptionValues( Option option ) {
         Vector result = new Vector();
 
         while (true) {
@@ -433,7 +435,8 @@ public class CmdLineParser {
      * list of command-line arguments. The specified locale is used for
      * parsing options whose values might be locale-specific.
      */
-    public final void parse( String[] argv, Locale locale )
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public final void parse( String[] argv, Locale locale )
         throws IllegalOptionValueException, UnknownOptionException {
 
         // It would be best if this method only threw OptionException, but for
@@ -508,7 +511,8 @@ public class CmdLineParser {
     }
 
 
-    private void addValue(Option opt, Object value) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	private void addValue(Option opt, Object value) {
         String lf = opt.longForm();
 
         Vector v = (Vector)values.get(lf);
@@ -523,6 +527,8 @@ public class CmdLineParser {
 
 
     private String[] remainingArgs = null;
-    private Hashtable options = new Hashtable(10);
-    private Hashtable values = new Hashtable(10);
+    @SuppressWarnings("rawtypes")
+	private Hashtable options = new Hashtable(10);
+    @SuppressWarnings("rawtypes")
+	private Hashtable values = new Hashtable(10);
 }
