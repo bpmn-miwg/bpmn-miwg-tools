@@ -14,7 +14,7 @@ public abstract class AbstractTest implements Test {
 	@Override
 	public boolean isApplicable(File file) {
 		String fn = file.getName();
-		return fn.equals(getName() + "-roundtrip.bpmn")
+		return fn.equals(getName() + "-roundtrip.bpmn") || fn.equals(getName() + "-export.bpmn")
 				|| fn.equals(getName() + ".bpmn");
 	}
 
