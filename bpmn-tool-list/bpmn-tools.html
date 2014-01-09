@@ -5,8 +5,10 @@
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables_themeroller.css">
     
     <!-- Theme -->
-<!--     <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/redmond/jquery-ui-1.7.2.custom.css"> -->
+<!--
     <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/start/jquery-ui-1.7.2.custom.css">
+-->
+    <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/redmond/jquery-ui-1.7.2.custom.css">
 
     <!-- jQuery -->
     <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
@@ -69,22 +71,101 @@
     </script>
   </head>
   <body>
-    <div class="">
+    <div class="page-header">
       <h1>BPMN Tools</h1>
+    </div>
+    <div style="padding: 0 15px;">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Column Definitions</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Column</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Screenshot</td>
+                <td>Snapshot of the website provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
+              </tr>
+              <tr>
+                <td>Tool Suite</td>
+                <td>Name of the tool suite to which a tool belongs</td>
+              </tr>
+              <tr>
+                <td>Category</td>
+                <td>Category provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
+              </tr>
+              <tr>
+                <td>BPMN 2.0</td>
+                <td>Tool supports BPMN version 2.0 or higher</td>
+              </tr>
+              <tr>
+                <td>MIWG Member</td>
+                <td>Vendor is member of the BPMN MIWG, i.e. at least subscribed to the mailing list</td>
+              </tr>
+              <tr>
+                <td>Test Results submitted</td>
+                <td>Test results have been submitted for the tool either by users or the vendor</td>
+              </tr>
+              <tr>
+                <td>Import</td>
+                <td>Tool has a feature to import BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Export</td>
+                <td>Tool has a feature to export BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Roundtrip</td>
+                <td>Tool can both import and export BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>BPMN Element Coverage</td>
+                <td>Percentage of BPMN elements that a tool supports (metric calculated by <a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">BPMN MIWG Test Automation Tools</a>)</td>
+              </tr>
+              <tr>
+                <td>Preserves Layout</td>
+                <td>Tool preserves positions of BPMN elements during a roundtrip (metric calculated by <a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">BPMN MIWG Test Automation Tools</a>)</td>
+              </tr>
+              <tr>
+                <td>Open Issues</td>
+                <td>Issues identified by the BPMN MIWG that are still open</td>
+              </tr>
+              <tr>
+                <td>Closed Issues</td>
+                <td>Issues identified by the BPMN MIWG that are already fixed by the vendor</td>
+              </tr>
+              <tr>
+                <td>Participates in Demos</td>
+                <td>Tool participated in one of the public BPMN MIWG demos</td>
+              </tr>
+              <tr>
+                <td>Links</td>
+                <td>Further information provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <table id="bpmn-tools" class="display" width="100%">
         <thead>
           <tr>
             <th>Screenshot</th>
-            <th>Tool Name</th>
+            <th>Tool Suite</th>
             <th>Category</th>
             <th>BPMN 2.0</th>
             <th>MIWG Member</th>
-            <th>Test Results</th>
+            <th>Test Results submitted</th>
             <th>Import</th>
             <th>Export</th>
             <th>Roundtrip</th>
             <th>BPMN Element Coverage</th>
-            <th>Positioning</th>
+            <th>Preserves Layout</th>
             <th>Open Issues</th>
             <th>Closed Issues</th>
             <th>Participates in Demos</th>
@@ -92,28 +173,10 @@
           </tr>
         </thead>
         <tbody>
-                
         </tbody>
-        <tfoot>
-          <tr>
-            <th>Screenshot</th>
-            <th>Tool Name</th>
-            <th>Category</th>
-            <th>BPMN 2.0</th>
-            <th>MIWG Member</th>
-            <th>Test Results</th>
-            <th>Import</th>
-            <th>Export</th>
-            <th>Roundtrip</th>
-            <th>BPMN Element Coverage</th>
-            <th>Positioning</th>
-            <th>Open Issues</th>
-            <th>Closed Issues</th>
-            <th>Participates in Demos</th>
-            <th>Links</th>
-          </tr>
-        </tfoot>
-      </table
+      </table>
+
+      <p>Powered by <a href="http://datatables.net/">jQuery DataTables</a>, <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://open.dapper.net/">Dapper</a></p>
     </div>
   </body>
 </html>
