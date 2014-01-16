@@ -89,6 +89,16 @@
 <node CREATED="1389815956270" ID="ID_1813178221" MODIFIED="1389815957001" TEXT="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/Scratchpad/Accessing%20Google%20Docs%20Spreadsheets"/>
 <node CREATED="1389863255147" ID="ID_1403805431" MODIFIED="1389863256537" TEXT="http://jlord.github.io/sheetsee.js/"/>
 <node CREATED="1389863286321" ID="ID_915997469" MODIFIED="1389863287040" TEXT="https://github.com/jsoma/tabletop"/>
+<node CREATED="1389893551553" ID="ID_445228314" MODIFIED="1389893556591" TEXT="Pro">
+<node CREATED="1389893557978" ID="ID_1627408323" MODIFIED="1389893563052" TEXT="Ease of use"/>
+</node>
+<node CREATED="1389893564062" ID="ID_1893639233" MODIFIED="1389893570930" TEXT="Contra">
+<node CREATED="1389893571961" ID="ID_1566009621" MODIFIED="1389894888835" TEXT="No transparency of who changed what"/>
+<node CREATED="1389893591636" ID="ID_1757548475" MODIFIED="1389893620158" TEXT="Users need to ask for access =&gt; moderators need to grant it">
+<node CREATED="1389894897282" ID="ID_1246580839" MODIFIED="1389894933863" TEXT="In GitHub anybody with a web-browser can suggest changes"/>
+</node>
+<node CREATED="1389894857665" ID="ID_223282644" MODIFIED="1389894869437" TEXT="Additional integration code"/>
+</node>
 </node>
 </node>
 <node CREATED="1389806024266" ID="ID_415034879" MODIFIED="1389806035752" TEXT="List of MIWG Members from Denis"/>
