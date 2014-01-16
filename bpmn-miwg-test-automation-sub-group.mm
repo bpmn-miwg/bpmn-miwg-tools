@@ -87,6 +87,8 @@
 <node CREATED="1389815744146" ID="ID_1899904836" LINK="https://docs.google.com/spreadsheet/ccc?key=0AmKVMP2DLhxRdHJrRTJoLXdOOWVldDY5MENhTEQ4bmc&amp;usp=sharing#gid=0" MODIFIED="1389815761756" TEXT="Google Spreadsheet">
 <node CREATED="1389815788202" ID="ID_1254116877" MODIFIED="1389815788992" TEXT="https://developers.google.com/gdata/samples/spreadsheet_sample"/>
 <node CREATED="1389815956270" ID="ID_1813178221" MODIFIED="1389815957001" TEXT="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/Scratchpad/Accessing%20Google%20Docs%20Spreadsheets"/>
+<node CREATED="1389863255147" ID="ID_1403805431" MODIFIED="1389863256537" TEXT="http://jlord.github.io/sheetsee.js/"/>
+<node CREATED="1389863286321" ID="ID_915997469" MODIFIED="1389863287040" TEXT="https://github.com/jsoma/tabletop"/>
 </node>
 </node>
 <node CREATED="1389806024266" ID="ID_415034879" MODIFIED="1389806035752" TEXT="List of MIWG Members from Denis"/>
