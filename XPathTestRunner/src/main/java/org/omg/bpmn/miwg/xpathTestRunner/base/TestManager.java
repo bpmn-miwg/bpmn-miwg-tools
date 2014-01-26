@@ -14,6 +14,7 @@ import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_1_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.RestonTechnicalSupportTest;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
 
 public class TestManager {
@@ -35,6 +36,7 @@ public class TestManager {
 		registerTest(new A_3_0_Test());
 		registerTest(new A_4_0_Test());
 		registerTest(new A_4_1_Test());
+		registerTest(new RestonTechnicalSupportTest());
 	}
 
 	private void registerTest(Test test) {
@@ -86,7 +88,8 @@ public class TestManager {
 				}
 
 				out.println();
-				// Make sure the stack is tainted by defective tests.
+				
+				// Make sure the stack is not tainted by defective tests.
 				out.popToTestEntry();
 
 				out.push(new ResultsEntry(String.format("TEST %s results:",

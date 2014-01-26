@@ -28,7 +28,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 			checkMessageDefinition();
 
 			{
-				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
+				selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
 				
 				checkXORMarkersForProcess(true);
 
@@ -46,8 +46,8 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 				{
 					selectElement("bpmn:inclusiveGateway", "Inclusive Gateway 1");
-					navigateGatewaySequenceFlow("Conditional Sequence Flow");
-					navigateGatewaySequenceFlow("Default Sequence Flow 1");
+					navigateGatewaySequenceFlowStack("Conditional Sequence Flow");
+					navigateGatewaySequenceFlowStack("Default Sequence Flow 1");
 					checkDefaultSequenceFlow();
 					n = head();
 					pop();
@@ -114,7 +114,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 			}
 
 			{
-				selectProcess("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
+				selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
 				
 				checkXORMarkersForProcess(true);
 
@@ -173,7 +173,9 @@ public class B_2_0_Test extends AbstractXpathTest {
 								"End Event 5 Terminate");
 						checkTerminateEvent();
 
-						navigateFollowingElement(n, "bpmn:serviceTask",
+						navigateElement(n);
+						
+						navigateFollowingElement("bpmn:serviceTask",
 								"Service Task 14");
 
 						navigateFollowingElement("bpmn:endEvent", "End Event 4");
@@ -213,7 +215,7 @@ public class B_2_0_Test extends AbstractXpathTest {
 
 					{
 						selectElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway 4']");
-						navigateGatewaySequenceFlow("Default Sequence Flow 2");
+						navigateGatewaySequenceFlowStack("Default Sequence Flow 2");
 						checkDefaultSequenceFlow();
 						pop();
 					}
