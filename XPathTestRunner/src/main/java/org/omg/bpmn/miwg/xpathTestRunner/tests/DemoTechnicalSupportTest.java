@@ -5,7 +5,7 @@ import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Direction;
 import org.w3c.dom.Node;
 
-public class RestonTechnicalSupportTest extends AbstractXpathTest {
+public class DemoTechnicalSupportTest extends AbstractXpathTest {
 
 	@Override
 	public String getName() {

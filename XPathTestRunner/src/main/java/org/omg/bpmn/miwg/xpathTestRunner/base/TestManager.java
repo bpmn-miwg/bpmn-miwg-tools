@@ -14,7 +14,7 @@ import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_1_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_1_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test;
-import org.omg.bpmn.miwg.xpathTestRunner.tests.RestonTechnicalSupportTest;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.DemoTechnicalSupportTest;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest;
 
 public class TestManager {
@@ -36,7 +36,7 @@ public class TestManager {
 		registerTest(new A_3_0_Test());
 		registerTest(new A_4_0_Test());
 		registerTest(new A_4_1_Test());
-		registerTest(new RestonTechnicalSupportTest());
+		registerTest(new DemoTechnicalSupportTest());
 	}
 
 	private void registerTest(Test test) {
