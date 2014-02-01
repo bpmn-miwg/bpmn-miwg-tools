@@ -400,7 +400,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			if (nSequenceFlow != null) {
 
 				String nameCondition;
-				if (name == null) {
+				if (name == null || name.equals("")) {
 					nameCondition = "";
 				} else {
 					nameCondition = String.format("@name='%s' and ", name);
@@ -1209,9 +1209,15 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 
-		String xpath = String.format(
-				"//bpmn:messageFlow[@name='%s' and @%s='%s']", name, dir,
-				getCurrentNodeID());
+		String xpathName;
+		if (name == null || name.equals("")) {
+			xpathName = "(not(@name) or @name='')"; //"string-length(@attr)=0";
+		} else {
+			xpathName = "@name='%s'";
+		}
+
+		String xpath = String.format("//bpmn:messageFlow[%s and @%s='%s']",
+				xpathName, dir, getCurrentNodeID());
 
 		Node n = findNode(xpath);
 		if (n == null) {
@@ -1232,8 +1238,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			default:
 				assert false;
 				return;
-			} 
-			
+			}
+
 			// TODO: Find target node
 
 			String targetID = getAttribute(n, partnerDirectionAttribute);
