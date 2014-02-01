@@ -1185,7 +1185,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void checkMessageFlow(String name, Direction direction,
-			String targetType, String targetName) throws Throwable {
+			String partnerType, String partnerName) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
@@ -1219,23 +1219,36 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			return;
 		}
 
-		if (targetType != null && targetName != null) {
+		if (partnerType != null && partnerName != null) {
 
+			String partnerDirectionAttribute;
+			switch (direction) {
+			case Input:
+				partnerDirectionAttribute = "sourceRef";
+				break;
+			case Output:
+				partnerDirectionAttribute = "targetRef";
+				break;
+			default:
+				assert false;
+				return;
+			} 
+			
 			// TODO: Find target node
-			
-			String targetID = getAttribute(n, "targetRef");
-			
-			String xpathTarget = String.format("%s[@name='%s' and @id='%s']", targetType,
-					targetName, targetID);
+
+			String targetID = getAttribute(n, partnerDirectionAttribute);
+
+			String xpathTarget = String.format("//%s[@name='%s' and @id='%s']",
+					partnerType, partnerName, targetID);
 
 			Node targetNode = findNode(xpathTarget);
 			if (targetNode == null) {
-				finding(xpathTarget, "Could not find messageFlow target");
+				finding(xpathTarget, "Could not find messageFlow partner");
 				return;
 			}
 
-			ok(String.format("message flow '%s' (%s) -> %s", name,
-					direction, xpathTarget));
+			ok(String.format("message flow '%s' (%s) -> %s", name, direction,
+					xpathTarget));
 		} else {
 			ok(String.format("message flow '%s' (%s)", name, direction));
 		}
