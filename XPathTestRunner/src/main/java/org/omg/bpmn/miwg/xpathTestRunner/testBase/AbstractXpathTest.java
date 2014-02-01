@@ -246,23 +246,24 @@ public abstract class AbstractXpathTest extends AbstractTest {
 				".",
 				String.format("self::node()[@name='%s']", sequenceFlowName));
 	}
-	
+
 	public void navigateGatewaySequenceFlowCurrentNode(String sequenceFlowName)
 			throws Throwable {
-		navigateReferenceX(currentNode, "bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']",
-				".",
+		navigateReferenceX(currentNode, "bpmn:outgoing",
+				"//bpmn:sequenceFlow[@id='%s']", ".",
 				String.format("self::node()[@name='%s']", sequenceFlowName));
 	}
 
 	public void navigateReferenceX(String referenceXpath, String targetXpath,
-			String targetXpathParameter, String targetCheckXpath) throws Throwable {
-		navigateReferenceX(head(), referenceXpath,  targetXpath,
-				 targetXpathParameter,  targetCheckXpath);
-	}
-	
-	public void navigateReferenceX(Node baseNode, String referenceXpath, String targetXpath,
 			String targetXpathParameter, String targetCheckXpath)
 			throws Throwable {
+		navigateReferenceX(head(), referenceXpath, targetXpath,
+				targetXpathParameter, targetCheckXpath);
+	}
+
+	public void navigateReferenceX(Node baseNode, String referenceXpath,
+			String targetXpath, String targetXpathParameter,
+			String targetCheckXpath) throws Throwable {
 
 		if (baseNode == null) {
 			finding("", "Parent failed");
@@ -297,9 +298,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			}
 
 			Node checkedNode = findNode(fn, targetCheckXpath);
-			
-			if (checkedNode != null)
-			{
+
+			if (checkedNode != null) {
 				foundNode = fn;
 			}
 		}
@@ -328,19 +328,18 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return n;
 	}
 
-	
 	public Node navigateFollowingElement(String type, String name)
 			throws Throwable {
 		return navigateFollowingElement(currentNode, type, name, null);
 	}
-	
-	public Node navigateFollowingElement(String type, String name, String sequenceFlowName)
-			throws Throwable {
-		return navigateFollowingElement(currentNode, type, name, sequenceFlowName);
+
+	public Node navigateFollowingElement(String type, String name,
+			String sequenceFlowName) throws Throwable {
+		return navigateFollowingElement(currentNode, type, name,
+				sequenceFlowName);
 	}
 
-	public Node navigateSequenceFlow(String type, String name)
-			throws Throwable {
+	public Node navigateSequenceFlow(String type, String name) throws Throwable {
 		return navigateSequenceFlow(currentNode, type, name);
 	}
 
@@ -356,8 +355,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String targetId = getAttribute(node, "targetRef");
 		String xpathTarget = String.format("%s[%s@id='%s']", type,
 				nameCondition, targetId);
-		xpathTarget = String.format("%s[@id='%s']", type,
-				targetId);
+		xpathTarget = String.format("%s[@id='%s']", type, targetId);
 		Node n = findNode(xpathTarget);
 		if (n != null) {
 			ok(xpathTarget);
@@ -370,8 +368,8 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		return null;
 	}
 
-	protected Node navigateFollowingElement(Node node, String type, String name, String sequenceFlowName)
-			throws Throwable {
+	protected Node navigateFollowingElement(Node node, String type,
+			String name, String sequenceFlowName) throws Throwable {
 		String xpathOutgoing = "bpmn:outgoing";
 
 		if (node == null) {
@@ -388,36 +386,37 @@ public abstract class AbstractXpathTest extends AbstractTest {
 			String sequenceFlowId = outgoingNode.getTextContent();
 
 			String xpathSequenceFlow;
-			
+
 			if (sequenceFlowName == null) {
 				xpathSequenceFlow = String.format(
 						"bpmn:sequenceFlow[@id='%s']", sequenceFlowId);
 			} else {
 				xpathSequenceFlow = String.format(
-						"bpmn:sequenceFlow[@id='%s' and @name='%s']", sequenceFlowId, sequenceFlowName);
+						"bpmn:sequenceFlow[@id='%s' and @name='%s']",
+						sequenceFlowId, sequenceFlowName);
 			}
 			Node nSequenceFlow = findNode(xpathSequenceFlow);
 
 			if (nSequenceFlow != null) {
 
-			String nameCondition;
-			if (name == null) {
-				nameCondition = "";
-			} else {
-				nameCondition = String.format("@name='%s' and ", name);
-			}
+				String nameCondition;
+				if (name == null) {
+					nameCondition = "";
+				} else {
+					nameCondition = String.format("@name='%s' and ", name);
+				}
 
-			String targetId = getAttribute(nSequenceFlow, "targetRef");
-			String xpathTarget = String.format("%s[%s@id='%s']", type,
-					nameCondition, targetId);
+				String targetId = getAttribute(nSequenceFlow, "targetRef");
+				String xpathTarget = String.format("%s[%s@id='%s']", type,
+						nameCondition, targetId);
 
-			Node n = findNode(xpathTarget);
-			if (n != null) {
-				ok(xpathTarget);
-				setCurrentNode(n, null);
-				return n;
-			}
-			
+				Node n = findNode(xpathTarget);
+				if (n != null) {
+					ok(xpathTarget);
+					setCurrentNode(n, null);
+					return n;
+				}
+
 			}
 		}
 
@@ -540,7 +539,7 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		String path = getPath(node);
 		ok(path);
 	}
-	
+
 	public void selectFollowingElement(String type, String name)
 			throws Throwable {
 		if (head() == null) {
@@ -628,10 +627,12 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	}
 
 	public void selectProcessByParticipant(String participant) throws Throwable {
-		String xpath = String.format("//bpmn:process[@id=//bpmn:participant[@name='%s']/@processRef]", participant);
+		String xpath = String
+				.format("//bpmn:process[@id=//bpmn:participant[@name='%s']/@processRef]",
+						participant);
 		selectProcessX(xpath);
 	}
-	
+
 	public void selectProcessOfCallActivity() throws Throwable {
 		if (head() == null) {
 			finding("selectProcessofCallActivity", "Parent failed");
@@ -1180,6 +1181,11 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	public void checkMessageFlow(String name, Direction direction)
 			throws Throwable {
+		checkMessageFlow(name, direction, null, null);
+	}
+
+	public void checkMessageFlow(String name, Direction direction,
+			String targetType, String targetName) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
@@ -1209,11 +1215,30 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		Node n = findNode(xpath);
 		if (n == null) {
-			finding(xpath, "Could not find flow");
+			finding(xpath, "Could not find messageFlow");
 			return;
 		}
 
-		ok(String.format("message flow '%s' (%s)", name, direction));
+		if (targetType != null && targetName != null) {
+
+			// TODO: Find target node
+			
+			String targetID = getAttribute(n, "targetRef");
+			
+			String xpathTarget = String.format("%s[@name='%s' and @id='%s']", targetType,
+					targetName, targetID);
+
+			Node targetNode = findNode(xpathTarget);
+			if (targetNode == null) {
+				finding(xpathTarget, "Could not find messageFlow target");
+				return;
+			}
+
+			ok(String.format("message flow '%s' (%s) -> %s", name,
+					direction, xpathTarget));
+		} else {
+			ok(String.format("message flow '%s' (%s)", name, direction));
+		}
 	}
 
 	protected void checkMultiInstance(boolean sequential) throws Throwable {
