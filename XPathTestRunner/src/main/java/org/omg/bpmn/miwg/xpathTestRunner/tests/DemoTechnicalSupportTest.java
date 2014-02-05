@@ -37,16 +37,20 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Get issue description from customer");
-				checkMessageFlow("", Direction.Input);
-				checkMessageFlow("", Direction.Output);
+				checkMessageFlow("", Direction.Input, "bpmn:participant",
+						"Customer");
+				checkMessageFlow("", Direction.Output, "bpmn:participant",
+						"Customer");
 
 				n1 = navigateFollowingElement("bpmn:exclusiveGateway", "");
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Provide solution to customer",
 						"Able to provide solution");
-				checkMessageFlow("", Direction.Input);
-				checkMessageFlow("", Direction.Output);
+				checkMessageFlow("", Direction.Input, "bpmn:participant",
+						"Customer");
+				checkMessageFlow("", Direction.Output, "bpmn:participant",
+						"Customer");
 
 				n2 = navigateFollowingElement("bpmn:exclusiveGateway", "");
 
@@ -62,15 +66,18 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Inform customer the issue is going to be escalated");
-				checkMessageFlow("", Direction.Output);
+				checkMessageFlow("", Direction.Output, "bpmn:participant",
+						"Customer");
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Request 1st level support");
-				checkMessageFlow("", Direction.Output);
+				checkMessageFlow("", Direction.Output, "bpmn:startEvent",
+						"1st level Issue");
 
 				n1 = navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Solution received from 1st level of support");
-				checkMessageFlow("", Direction.Input);
+				checkMessageFlow("", Direction.Input, "bpmn:manualTask",
+						"Provide solution to Front Office");
 				checkMessageEvent();
 
 				navigateFollowingElement("bpmn:manualTask",
@@ -88,7 +95,8 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 
 				navigateElement("bpmn:startEvent", "1st level Issue");
 				checkMessageEvent();
-				checkMessageFlow("", Direction.Input);
+				checkMessageFlow("", Direction.Input, "bpmn:manualTask",
+						"Request 1st level support");
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Find solution 1st level issue");
@@ -98,7 +106,9 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 				navigateFollowingElement("bpmn:manualTask",
 						"Provide solution to Front Office",
 						"Able to provide 1st level solution");
-				checkMessageFlow("", Direction.Output);
+				checkMessageFlow("", Direction.Output,
+						"bpmn:intermediateCatchEvent",
+						"Solution received from 1st level of support");
 
 				navigateFollowingElement("bpmn:endEvent",
 						"Issue handled by 1st level support");
@@ -112,7 +122,8 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 				navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Solution received from 2nd level of support");
 				checkMessageEvent();
-				checkMessageFlow("", Direction.Input);
+				checkMessageFlow("", Direction.Input, "bpmn:manualTask",
+						"Provide solution to 1st level support");
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Provide solution to Front Office");
@@ -125,7 +136,8 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 
 				navigateElement("bpmn:startEvent", "2nd level Issue");
 				checkMessageEvent();
-				checkMessageFlow("", Direction.Input);
+				checkMessageFlow("", Direction.Input, "bpmn:manualTask",
+						"Request 2nd level support");
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Find solution 2nd level issue");
@@ -135,7 +147,9 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 				navigateFollowingElement("bpmn:manualTask",
 						"Provide solution to 1st level support",
 						"Able to provide 2nd level solution");
-				checkMessageFlow("", Direction.Output);
+				checkMessageFlow("", Direction.Output,
+						"bpmn:intermediateCatchEvent",
+						"Solution received from 2nd level of support");
 
 				navigateFollowingElement("bpmn:endEvent",
 						"Issue handled by 2 nd level support");
@@ -149,7 +163,8 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 				navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Solution received from supplier");
 				checkMessageEvent();
-				checkMessageFlow("", Direction.Input);
+				checkMessageFlow("", Direction.Input, "bpmn:manualTask",
+						"Provide solution to 2nd level support");
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Provide solution to 1st level support");
@@ -169,7 +184,9 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Provide solution to 2nd level support");
-				checkMessageFlow("", Direction.Output);
+				checkMessageFlow("", Direction.Output,
+						"bpmn:intermediateCatchEvent",
+						"Solution received from supplier");
 
 				navigateFollowingElement("bpmn:endEvent",
 						"Issue handled by supplier");
@@ -178,7 +195,7 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 			}
 
 			pop();
-			
+
 			instance.addFindings(resultsFinding());
 			instance.addOK(resultsOK());
 
