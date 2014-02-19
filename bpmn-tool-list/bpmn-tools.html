@@ -30,11 +30,23 @@
     <script type="text/javascript" charset="utf8">
       $(document).ready(function(){
         // read data from GitHub
-        var toolsUrl = "http://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/tools-tested-by-miwg.json";
+        //var toolsUrl = "http://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/tools-tested-by-miwg.json";
+//         var toolsUrl = "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/contents/tools-tested-by-miwg.json"; // application/vnd.github.v3.raw
 //         var toolsUrl = "../../bpmn-miwg-test-suite/tools-tested-by-miwg.json";
+        var toolsUrl = "tools-tested-by-miwg.json";
+
 //         $.getJSON(toolsUrl, "tools", function (tools) {
 //           alert(tools.tools[0].tool);
 //         })
+        var renderBoolean = function(data, type, full) {
+          var icon = "remove";
+          var color = "darkred";
+          if (data) {
+            icon = "ok";
+            color = "green";
+          }
+          return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span style="display: none">' + data + '</span>';
+        }
 
         $('#bpmn-tools').dataTable( {
           "bProcessing": true,
@@ -49,12 +61,12 @@
                 "mRender": function ( data, type, full ) {
                   return '<a href="'+full.website+'">'+data+' '+full.version+'</a>';
                 } },
-              { "mData": "supportsBpmn2" },
-              { "mData": "hasImport" },
-              { "mData": "hasExport" },
-              { "mData": "hasRoundtrip" },
-              { "mData": "testResultsSubmitted" },
-              { "mData": "participatedInDemos" },
+              { "mData": "supportsBpmn2", "mRender": renderBoolean },
+              { "mData": "hasImport", "mRender": renderBoolean },
+              { "mData": "hasExport", "mRender": renderBoolean },
+              { "mData": "hasRoundtrip", "mRender": renderBoolean },
+              { "mData": "testResultsSubmitted", "mRender": renderBoolean },
+              { "mData": "participatedInDemos", "mRender": renderBoolean },
 //               { "mData": "notes" },
           ],
         } );
