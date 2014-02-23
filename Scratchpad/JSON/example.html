@@ -1,0 +1,166 @@
+<html>
+
+<head>
+<title>Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js" type="application/javascript"></script>
+<!--<script src="js/jquery.easydropdown.js"></script>-->
+
+<script>
+
+
+$(document).ready(function() {
+	$("#message").text("Ready");
+	$("#button").click(loadClicked);
+	$("#selector").change(toolSelected);
+	loadClicked();	
+});
+
+var jsonData = null;
+var resultDIVs = null;
+var referenceVariations = null;
+
+
+
+function loadClicked() {
+	$("#message").text("Loading...");
+
+
+	var url = "Test%20Results.json";
+
+	var jqxhr = $.getJSON(url)
+		.done(function(data) {
+			jsonData = data;
+			$("#message").text("Success");
+         	
+			var reference_url_pattern = data.config.reference.url_pattern;
+
+			resultDIVs = [];
+			referenceVariations = [];
+
+			$("#result3").empty();
+			var ulroot = $("#result3");
+			data.categories.forEach(function(category) {
+				$("<h3>Category " + category.category + ": " +category.name + "</h3>").appendTo(ulroot);
+				$("<div class='description'>" +  category.description + "</div>").appendTo(ulroot);
+
+				category.cases.forEach(function(case2) {
+					$("<h4>Case " + case2.case + "</h4>").appendTo(ulroot);
+					$("<div class='description'>" + case2.description + "</div>").appendTo(ulroot);
+
+					case2.variations.forEach(function(variation) {
+						$("<h5>Variation " + variation.variation + "</h5>").appendTo(ulroot);
+						$("<div class='description'>" + variation.description + "</div>").appendTo(ulroot);
+
+						$("<div class='caption'>Reference</caption>").appendTo(ulroot);
+						if (variation.png) {
+							var url = reference_url_pattern.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation);
+							$("<img src='" + url + "' />").appendTo(ulroot);
+							$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
+						} else {
+							$("<div>No image.</div>").appendTo(ulroot);
+						}
+						var temp = $("<div id='results-" + variation.variation + "' />")
+						temp.appendTo(ulroot);
+						resultDIVs[variation.variation] = temp;
+						referenceVariations.push(variation.variation);
+
+					});
+
+				});
+
+			});
+
+			var selector = $("#selector");
+			selector.empty();
+			data.results.forEach(function(result) {
+				$("<option>" + result.tool + "</option>").appendTo(selector);
+			});
+
+			toolSelected();
+
+		})
+		.fail(function() {
+			$("#message").text("Error: " + textStatus);
+		});
+
+}
+
+function toolSelected() {
+	var selectedTool = $("#selector").val();
+	var selectedToolJSON = findInList(jsonData.results, "tool", selectedTool);
+	var reference_url_pattern = jsonData.config.reference.url_pattern;
+
+	referenceVariations.forEach(function(referenceVariation) {
+		var div = resultDIVs[referenceVariation];
+		div.empty();
+
+		var resultsVariation = findInList(selectedToolJSON.variations, "variation", referenceVariation);
+
+		if (resultsVariation) {
+
+			resultsVariation.types.forEach(function(type) {
+
+				$("<div class='caption'>" + referenceVariation + " " + type.type + "</caption>").appendTo(div);
+
+				var categoryID = referenceVariation[0];
+				var categoryJSON = findInList(jsonData.categories, "category", categoryID);
+
+
+				var url = reference_url_pattern.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type.type);
+				if (type.png) {
+					$("<img src='" + url + "' />").appendTo(div);
+				} else {
+					$("<div>No image.</div>").appendTo(div);
+				}
+
+			});
+
+		}
+
+
+	});
+
+}
+
+function findInList(list, attribute, value) {
+	var ret = null;
+	list.forEach(function(v) {
+		if (v[attribute] == value) {
+			ret = v;
+		}
+	});
+	return ret;
+}
+
+
+</script>
+
+<body>
+
+<h1>Load</h1>
+
+
+<button id="button">Load</button>
+
+
+<select id="selector" class="dropdown" >
+</select>
+
+
+
+<div style="bold">Status: </div>
+<div id="message">Initializing...</div>
+
+
+<h1>Test Results</h2>
+<div id="result3">-</div>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,372 @@
+
+{
+
+
+"results"		:
+	[
+		{
+			"tool"			: "Signavio Process Editor 7.0.0",
+			"vendor"		: "Signavio",
+			"variations"	:
+				[
+					{
+						"variation"		: "A.1.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "A.2.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "A.3.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "A.4.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "B.1.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "B.2.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					}
+				]
+		},
+		{
+			"tool"			: "Yaoqiang 3.0.1",
+			"vendor"		: "Yaoquiang",
+			"variations"	:
+				[
+					{
+						"variation"		: "A.1.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "export",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "A.2.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "export",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "A.3.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "export",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "A.4.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "export",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "A.4.1",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "export",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},					{
+						"variation"		: "B.1.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "export",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					},
+					{
+						"variation"		: "B.2.0",
+						"types"			:
+							[
+								{
+									"type"		: "import",
+									"png"		: true
+								},
+								{
+									"type"		: "export",
+									"png"		: true
+								},
+								{
+									"type"		: "roundrip",
+									"png"		: false
+								}
+							]
+					}
+				]
+			}
+		],
+
+
+"config"		: 
+	{
+		"reference"		: 
+			{
+				"url_pattern"	: "https://raw2.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/{CATEGORYURL}/{TOOLURL}/{FILEURL}.png"
+			}
+	},
+
+
+"categories"	:
+	[
+		{
+			"category"		: "A",
+			"name"			: "Layout",
+			"description"	: "Validate capability to layout shares on a canvas",
+			"url_fragment"	: "A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes",
+			"cases"			: 
+				[
+					{
+						"case"			: "A.1",
+						"description"	: "Connected elements depicted linearly on the canvas",
+						"variations"	:
+							[
+								{
+									"variation"		: "A.1.0",
+									"name"			: "Base",
+									"description"	: "Depict Abstract Elements on a single Sequential Flow",
+									"png"			: true
+								}
+							]
+					},
+					{
+						"case"			: "A.2",
+						"description"	: "Connected elements depicted at specific location on the canvas",
+						"variations"	:
+							[
+								{
+									"variation"		: "A.2.0",
+									"name"			: "Base",
+									"description"	: "Depict divergence and convergence of flows with unmarked Gateways",
+									"png"			: true
+								}
+							]
+					},
+					{
+						"case"			: "A.3",
+						"description"	: "Elements Boundary Attachments",
+						"variations"	:
+							[
+								{
+									"variation"		: "A.3.0",
+									"name"			: "Base",
+									"description"	: "Depict Exception Flows associated to boundary attachments",
+									"png"			: true
+								}
+							]
+					},
+					{
+						"case"			: "A.4",
+						"description"	: "Elements Containment",
+						"variations"	:
+							[
+								{
+									"variation"		: "A.4.0",
+									"name"			: "Base",
+									"description"	: "Depict graphical elements contained in expanded Sub-Processes, Lanes and Pools",
+									"png"			: true
+								},
+								{
+									"variation"		: "A.4.1",
+									"name"			: "Vertical",
+									"description"	: "Vertical Modeling Direction",
+									"png"			: true
+								}
+							]
+					}
+				]
+		},
+		{
+			"category"		: "B",
+			"name"			: "Conformance class coverage",
+			"description"	: "Validate capability to use elements from a specific conformance sub class",
+			"url_fragment"	: "B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set",
+			"cases"			: 
+				[
+					{
+						"case"			: "B.1",
+						"description"	: "Descriptive Sub-Class",
+						"variations"	:
+							[
+								{
+									"variation"		: "B.1.0",
+									"name"			: "Base",
+									"description"	: "Validate that all the elements prescribed for the Descriptive Conformance Sub-Class in the BPMN 2.0 Specification are present.",
+									"png"			: true
+								}
+							]
+					},
+					{
+						"case"			: "B.2",
+						"description"	: "Analytic Sub-Class",
+						"variations"	:
+							[
+								{
+									"variation"		: "B.2.0",
+									"name"			: "Base",
+									"description"	: "Validate that all the elements prescribed for the Analytic Conformance Sub-Class in the BPMN 2.0 Specification are present.",
+									"png"			: true
+								}
+							]
+					},
+					{
+						"case"			: "B.3",
+						"description"	: "Common Executable Sub-Class",
+						"variations"	:
+							[
+								{
+									"variation"		: "B.3.0",
+									"name"			: "Base",
+									"description"	: "Validate that all the elements prescribed in the Common Executable Conformance Sub-Class in the BPMN 2.0 Specification are present."
+								}
+							]
+					},
+					{
+						"case"			: "B.4",
+						"description"	: "Process Modeling Class",
+						"variations"	:
+							[
+								{
+									"variation"		: "B.4.0",
+									"name"			: "Base",
+									"description"	: "Validate that all the elements prescribed in the Process Modeling Conformance Class in the BPMN 2.0 specification are present."
+								}
+							]
+					}
+				]
+		}
+	]
+}
+
