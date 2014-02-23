@@ -257,7 +257,8 @@
 									"variation"		: "A.1.0",
 									"name"			: "Base",
 									"description"	: "Depict Abstract Elements on a single Sequential Flow",
-									"png"			: true
+									"png"			: true,
+									"tool"			: "Trisotech BPMN 2.0 Modeler for Visio 4.0"
 								}
 							]
 					},
@@ -270,7 +271,8 @@
 									"variation"		: "A.2.0",
 									"name"			: "Base",
 									"description"	: "Depict divergence and convergence of flows with unmarked Gateways",
-									"png"			: true
+									"png"			: true,
+									"tool"			: "Trisotech BPMN 2.0 Modeler for Visio 4.0"
 								}
 							]
 					},
@@ -283,7 +285,8 @@
 									"variation"		: "A.3.0",
 									"name"			: "Base",
 									"description"	: "Depict Exception Flows associated to boundary attachments",
-									"png"			: true
+									"png"			: true,
+									"tool"			: "Trisotech BPMN 2.0 Modeler for Visio 4.0"
 								}
 							]
 					},
@@ -296,13 +299,15 @@
 									"variation"		: "A.4.0",
 									"name"			: "Base",
 									"description"	: "Depict graphical elements contained in expanded Sub-Processes, Lanes and Pools",
-									"png"			: true
+									"png"			: true,
+									"tool"			: "Trisotech BPMN 2.0 Modeler for Visio 4.0"
 								},
 								{
 									"variation"		: "A.4.1",
 									"name"			: "Vertical",
 									"description"	: "Vertical Modeling Direction",
-									"png"			: true
+									"png"			: true,
+									"tool"			: "Trisotech BPMN 2.0 Modeler for Visio 4.0"
 								}
 							]
 					}
@@ -324,7 +329,8 @@
 									"variation"		: "B.1.0",
 									"name"			: "Base",
 									"description"	: "Validate that all the elements prescribed for the Descriptive Conformance Sub-Class in the BPMN 2.0 Specification are present.",
-									"png"			: true
+									"png"			: true,
+									"tool"			: "Trisotech BPMN 2.0 Modeler for Visio 4.0"
 								}
 							]
 					},
@@ -337,7 +343,8 @@
 									"variation"		: "B.2.0",
 									"name"			: "Base",
 									"description"	: "Validate that all the elements prescribed for the Analytic Conformance Sub-Class in the BPMN 2.0 Specification are present.",
-									"png"			: true
+									"png"			: true,
+									"tool"			: "Trisotech BPMN 2.0 Modeler for Visio 4.0"
 								}
 							]
 					},
