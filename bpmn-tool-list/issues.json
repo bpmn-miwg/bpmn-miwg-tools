@@ -1,0 +1,1850 @@
+[
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/149",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/149/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/149/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/149/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/149",
+    "id": 27427121,
+    "number": 149,
+    "title": "BPMNEdge should use sourceElement and targetElement attributes only by exception ",
+    "user": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Adonis",
+        "name": "Tool: Adonis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2014-02-12T11:37:38Z",
+    "updated_at": "2014-02-13T09:27:02Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "The use of sourceElement and targetElement attributes on the BPMNEdge element has several different implementations: \r\n\r\n1. Activiti, Bonitasoft, ITP, Trisotech (Reference): do _not_ add source or target attributes to edge at all\r\n2. Camunda, Signavio, Yaoqiang: _do_ add attributes and they all point to the id of the bpmn element not the diagram element. \r\n3. Adonis, W4: _do_ add attributes and they point to the DI element\r\n\r\nMy first reading was that the diagram on p400 of the spec suggested that group 3 have the correct reading though of course the XSD cannot (well does not anyway) enforce this. There may be a small problem in that this sentence on p381 gives some comfort to the group 2 tools: \r\n\r\n```\r\nWhen rendering a BPMN diagram, the correct depiction of a BPMNShape or BPMNEdge\r\ndepends mainly on the referenced BPMN model element [bpmnElement] and its \r\nparticular attributes and/or references.\r\n```\r\n\r\nHowever, I think the definitive sentence is on page 410 where it states (_*my emphasis*_): \r\n```\r\nThe target [targetElement] and source [sourceElement] of a BPMNEdge _*may*_ be \r\nredefined when the depiction of the source or target of the edge is different than the \r\ntarget [targetRef] and source [sourceRef] of the referenced model element \r\n[bpmnElement] (e.g., Message flow finishing on the border of a black box Pool or a \r\ncollapsed Sub-Process rather than the actual Flow Node within the Pool or Sub-Process). \r\nIn such case, the targetElement and/or sourceElement of the BPMNEdge must point to \r\nthe appropriate BPMNShape or BPMNEdge. \r\n```\r\n\r\nAs such, I believe group 1 have the correct interpretation in the spirit of the document, though the use of 'redefined' rather than 'defined' may be read to support group 2 and as such the spec is ambiguous. Both readings tend IMO to undermine my first impression looking only at the diagram on p400, though I note that only the group 1 reading is compatible with the diagram and that is why I believe it is the correct one.  \r\n\r\n## Proposal\r\n- Endorse the reading of group 1 as correct by proposing 'defined' in place of 'redefined' on p410 of spec. \r\n- Add an enhancement request to other usages in the test automation tools. "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/148",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/148/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/148/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/148/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/148",
+    "id": 26760638,
+    "number": 148,
+    "title": "Error Message: 'Event-based gateways are not supported by the BPMN export.'",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+ARIS+Business+Architect",
+        "name": "Tool: ARIS Business Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-02-02T13:08:30Z",
+    "updated_at": "2014-02-02T13:08:30Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Screenshot of the error message:\r\n![Screenshot of the error message](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/2cbc1e6afb471d3ebdf0d3c9354caa2d6250c461/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/ARIS%20Business%20Architect%207.2.4/ARIS_Error_Exporting_B20.png)\r\n\r\nB.2.0-export.png:\r\n![B.2.0-export.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/2cbc1e6afb471d3ebdf0d3c9354caa2d6250c461/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/ARIS%20Business%20Architect%207.2.4/B.2.0.-export.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/147",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/147/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/147/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/147/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/147",
+    "id": 26760251,
+    "number": 147,
+    "title": "Lane without Pool not displayed",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+ARIS+Architect",
+        "name": "Tool: ARIS Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-02-02T12:41:04Z",
+    "updated_at": "2014-02-02T12:41:04Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "A.4.0-import.png:\r\n![A.4.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/f29cc144a920d6b679f6aa6f5965dc9aae364728/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/ARIS%20Architect%209.5.0/A.4.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/146",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/146/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/146/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/146/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/146",
+    "id": 24496639,
+    "number": 146,
+    "title": "BPMNShape points to dataObject instead of dataObjectReference",
+    "user": {
+      "login": "sringuette",
+      "id": 5009554,
+      "avatar_url": "https://gravatar.com/avatar/dfd6506b97d5afe5044600eeec49fb33?d=https%3A%2F%2Fidenticons.github.com%2F8f821b4efea714346eb34d2f892cce8d.png&r=x",
+      "gravatar_id": "dfd6506b97d5afe5044600eeec49fb33",
+      "url": "https://api.github.com/users/sringuette",
+      "html_url": "https://github.com/sringuette",
+      "followers_url": "https://api.github.com/users/sringuette/followers",
+      "following_url": "https://api.github.com/users/sringuette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sringuette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/sringuette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/sringuette/subscriptions",
+      "organizations_url": "https://api.github.com/users/sringuette/orgs",
+      "repos_url": "https://api.github.com/users/sringuette/repos",
+      "events_url": "https://api.github.com/users/sringuette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/sringuette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "svenwb",
+      "id": 3901085,
+      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
+      "url": "https://api.github.com/users/svenwb",
+      "html_url": "https://github.com/svenwb",
+      "followers_url": "https://api.github.com/users/svenwb/followers",
+      "following_url": "https://api.github.com/users/svenwb/following{/other_user}",
+      "gists_url": "https://api.github.com/users/svenwb/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/svenwb/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/svenwb/subscriptions",
+      "organizations_url": "https://api.github.com/users/svenwb/orgs",
+      "repos_url": "https://api.github.com/users/svenwb/repos",
+      "events_url": "https://api.github.com/users/svenwb/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/svenwb/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-12-18T15:29:49Z",
+    "updated_at": "2013-12-18T18:36:18Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Doing cross testing on roundtrip result on B.1.0, I saw that in Signavio Process Editor 7.0.0, the BPMNShape from the BPMN DI reference the dataObject semantic element but it should reference a dataObjectReference according to the specification:\r\n\r\nTable 12.21 – Depiction Resolution for Data on page 393 (PDF 423)\r\n\r\nFrom: https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Signavio%20Process%20Editor%207.0.0/B.1.0-roundtrip.bpmn\r\n```\r\n<bpmndi:BPMNShape bpmnElement=\"_3d35229f-2c75-4d5d-a066-2d14e46e442e\" id=\"_3d35229f-2c75-4d5d-a066-2d14e46e442e_gui\">\r\n\t<omgdc:Bounds height=\"38.0\" width=\"30.0\" x=\"397.0\" y=\"891.0\"/>\r\n</bpmndi:BPMNShape>\r\n```\r\n\r\n```\r\n<dataObject id=\"_3d35229f-2c75-4d5d-a066-2d14e46e442e\" isCollection=\"false\" name=\"Data Object\"/>\r\n```\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/145",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/145/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/145/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/145/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/145",
+    "id": 23927083,
+    "number": 145,
+    "title": "No process definition",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process",
+        "name": "Tool: iGrafx Process",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-12-08T17:37:34Z",
+    "updated_at": "2013-12-08T17:37:53Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "The B.2.0-roundtrip actually contains no process definition (i.e., no *process* element) although there are many BPMNDI elements.\r\n\r\n**Excerpt from B.2.0-roundtrip**\r\n```xml\r\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<definitions targetNamespace=\"empty\" xmlns:ix=\"http://www.igrafx.com/2007/igrafx-document\" xmlns:ixbpmn=\"http://www.igrafx.com/2011/bpmn\" xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\" xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:i=\"http://www.igrafx.com/2007/igxmldoc\" xmlns:ixtim=\"http://www.igrafx.com/2012/timext\" xmlns:tns=\"empty\">\r\n\t<itemDefinition id=\"TransactionAttributes_Item\"/>\r\n\t<itemDefinition id=\"message_IDAD20CC_Item\"/>\r\n\t<itemDefinition id=\"message_IDAF20CC_Item\"/>\r\n\t<itemDefinition id=\"NumberItem\"/>\r\n\t<itemDefinition id=\"StringItem\"/>\r\n\t<itemDefinition id=\"type_TrueFalse_Item\"/>\r\n\t<itemDefinition id=\"type_YesNo_Item\"/>\r\n\t<timerEventDefinition id=\"timer_IDAJMZCC\">\r\n\t\t<extensionElements>\r\n\t\t\t<ixbpmn:name>Every_Morning</ixbpmn:name>\r\n\t\t</extensionElements>\r\n\t</timerEventDefinition>\r\n\t<timerEventDefinition id=\"timer_IDARMZCC\">\r\n\t\t<extensionElements>\r\n\t\t\t<ixbpmn:name>Every_Afternoon</ixbpmn:name>\r\n\t\t</extensionElements>\r\n\t</timerEventDefinition>\r\n\t<timerEventDefinition id=\"timer_IDAZMZCC\">\r\n\t\t<extensionElements>\r\n\t\t\t<ixbpmn:name>Every_End_of_Day</ixbpmn:name>\r\n\t\t</extensionElements>\r\n\t</timerEventDefinition>\r\n\t<timerEventDefinition id=\"timer_IDABNZCC\">\r\n\t\t<extensionElements>\r\n\t\t\t<ixbpmn:name>Weekly</ixbpmn:name>\r\n\t\t</extensionElements>\r\n\t</timerEventDefinition>\r\n\t<timerEventDefinition id=\"timer_IDAJNZCC\">\r\n\t\t<extensionElements>\r\n\t\t\t<ixbpmn:name>First_of_Month</ixbpmn:name>\r\n\t\t</extensionElements>\r\n\t</timerEventDefinition>\r\n\t<timerEventDefinition id=\"timer_IDARNZCC\">\r\n\t\t<extensionElements>\r\n\t\t\t<ixbpmn:name>Last_of_Month</ixbpmn:name>\r\n\t\t</extensionElements>\r\n\t</timerEventDefinition>\r\n\t<message id=\"message_IDAD20CC\" name=\"Message_1373638080954\"/>\r\n\t<message id=\"message_IDAF20CC\" name=\"Message_1373638080955\"/>\r\n        <bpmndi:BPMNDiagram resolution=\"96\" name=\"B.2.0\">\r\n[...]\r\n\t</bpmndi:BPMNDiagram>\r\n\t<bpmndi:BPMNDiagram resolution=\"96\" name=\"Collapsed Call Activity\">\r\n[...]\r\n\t</bpmndi:BPMNDiagram>\r\n</definitions>\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/143",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/143/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/143/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/143/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/143",
+    "id": 23720642,
+    "number": 143,
+    "title": "Missing labels on elements",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process",
+        "name": "Tool: iGrafx Process",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-12-04T15:02:51Z",
+    "updated_at": "2013-12-08T17:30:56Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "The depiction of all imported test cases are missing the labels on the BPMN elements "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/141",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/141/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/141/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/141/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/141",
+    "id": 23596160,
+    "number": 141,
+    "title": "Connection of Throwing and Catching Link Events ambiguous",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 13,
+    "created_at": "2013-12-02T19:38:31Z",
+    "updated_at": "2014-01-29T19:39:01Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "The BPMN spec is ambiguous about the connection of throwing and catching Link Events. I see two possible interpretations:\r\n\r\n1. Throwing and Catching Link Events are correlated using the mandatory attribute **name** and the attributes **source** and **target** are just optional similar to **incoming** and **outgoing**. \r\n2. Throwing and Catching Link Events are correlated using the attributes **source** and **target**.\r\n\r\nAfter further investigation, I discovered that the BPMN 2.0 Finalization Task Force intended to introduce the attributes 'source' and 'target' to avoid the correlation via names. See also [OMG Issue 14816](http://www.omg.org/issues/issue14816.txt), [BPMN 2.0 FTF Report](http://www.omg.org/cgi-bin/doc?dtc/2010-05-01) and [BPMN 2.0 FTF Report Verification Site](http://omg-tf.appspot.com/tf/verify/BPMN-2.0/10).\r\n\r\nHere is the resolution that all FTF members accepted:\r\n![resolution-of-omg-issue-14816](https://f.cloud.github.com/assets/40038/715169/fa3f1db4-df12-11e2-8efb-fa96078199af.png)\r\n\r\nThis is what's in the final BPMN 2.0 specification:\r\n![link-event-definition-class-diagram-of-bpmn-2 0](https://f.cloud.github.com/assets/40038/715184/403a0572-df13-11e2-9815-e7a45c96f472.png)\r\n\r\nSo it looks like **source** and **target** are meant to be used for link correlation. However, this raises further questions:\r\n\r\n1. Why is the **name** attribute still there?\r\n2. Does this new mechanism break backwards compatibility with BPMN 1.x?\r\n3. How did vendors actually implement it in their current implementation?\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/140",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/140/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/140/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/140/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/140",
+    "id": 23539118,
+    "number": 140,
+    "title": "Sub process elements not placed in sub process",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test+A.4.1",
+        "name": "Test A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process",
+        "name": "Tool: iGrafx Process",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-12-01T16:42:47Z",
+    "updated_at": "2013-12-01T16:43:53Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "**Tool**: iGrafx Process 2013 for Six Sigma 15.0.4.1565\r\n\r\n**A.4.1 Reference Diagram**\r\n![image](https://f.cloud.github.com/assets/4007840/1650712/6b1c6cf2-5aa7-11e3-9858-2946c8e0e8cc.png)\r\n\r\n**Excerpt from Reference A.4.1 BPMN**\r\n```xml\r\n[...]\r\n<definitions xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:omgdc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:omgdi=\"http://www.omg.org/spec/DD/20100524/DI\" xmlns:signavio=\"http://www.signavio.com\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" exporter=\"Signavio Process Editor, http://www.signavio.com\" exporterVersion=\"7.5.0\" expressionLanguage=\"http://www.w3.org/1999/XPath\" id=\"sid-0faa53b6-794d-4268-af2e-848824b670f1\" targetNamespace=\"http://www.trisotech.com/definitions/_1365195427479\" typeLanguage=\"http://www.w3.org/2001/XMLSchema\" xsi:schemaLocation=\"http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd\">\r\n[...]\r\n   <process id=\"sid-34746A54-1D7D-46CA-B219-0C4CEAE51170\" isClosed=\"false\" isExecutable=\"false\" name=\"Pool 1\" processType=\"None\">\r\n[...]\r\n      <subProcess completionQuantity=\"1\" id=\"sid-645780CC-D61F-4715-8B58-71679305245F\" isForCompensation=\"false\" name=\"Expanded Sub-Process 2 \" startQuantity=\"1\" triggeredByEvent=\"false\">\r\n[...]\r\n         <startEvent id=\"sid-1F026F68-099F-44C9-A40E-38A6C9F83D99\" name=\"Start Event 4 \">\r\n[...]\r\n         </startEvent>\r\n         <task completionQuantity=\"1\" id=\"sid-B414AE83-11A2-4968-B4E4-45833D641928\" isForCompensation=\"false\" name=\"Task 6 \" startQuantity=\"1\">\r\n[...]\r\n            <incoming>sid-72E93035-EAF2-4445-AFFE-39C8C0143066</incoming>\r\n            <outgoing>sid-4B747910-16CA-4FFD-B92A-8894BB3D7AB6</outgoing>\r\n         </task>\r\n[...]\r\n      </subProcess>\r\n[...]\r\n   </process>\r\n[...]\r\n</definitions>\r\n```\r\n\r\n**Excerpt from iGrafx  A.4.1-roundtrip**\r\n```xml\r\n<?xml 
+version=\"1.0\" encoding=\"utf-8\"?>\r\n<definitions targetNamespace=\"empty\" xmlns:ix=\"http://www.igrafx.com/2007/igrafx-document\" xmlns:ixbpmn=\"http://www.igrafx.com/2011/bpmn\" xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\" xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\" xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:i=\"http://www.igrafx.com/2007/igxmldoc\" xmlns:ixtim=\"http://www.igrafx.com/2012/timext\" xmlns:tns=\"empty\">\r\n[...]\r\n\t<process id=\"process_IDAIQPCC\" name=\"sid-7E61DCD0-0700-4828-8A28-CD65132273D7\">\r\n[...]\r\n\t\t<subProcess triggeredByEvent=\"false\" id=\"shape_IDAUCMCC\" name=\"Expanded Sub-Process 2\">\r\n\t\t\t<extensionElements></extensionElements>\r\n\t\t\t<incoming>connector_IDANREYB</incoming>\r\n\t\t\t<outgoing>connector_IDAXYDYB</outgoing>\r\n\t\t</subProcess>\r\n[...]\r\n\t\t<endEvent id=\"shape_IDARBNCC\" name=\"End Event 5\">\r\n\t\t\t<extensionElements></extensionElements>\r\n\t\t\t<incoming>connector_IDAXYDYB</incoming>\r\n\t\t</endEvent>\r\n\t\t<startEvent id=\"shape_IDANFNCC\" name=\"Start Event 4\">\r\n\t\t\t<extensionElements></extensionElements>\r\n\t\t\t<outgoing>connector_IDAA4DYB</outgoing>\r\n\t\t</startEvent>\r\n\t\t<task id=\"shape_IDAWIPCC\" name=\"Task 6\">\r\n\t\t\t<extensionElements></extensionElements>\r\n\t\t\t<incoming>connector_IDAA4DYB</incoming>\r\n\t\t\t<outgoing>connector_IDAS1EYB</outgoing>\r\n\t\t</task>\r\n\t\t<endEvent id=\"shape_IDA1LPCC\" name=\"End Event 4\">\r\n\t\t\t<extensionElements></extensionElements>\r\n\t\t\t<incoming>connector_IDAS1EYB</incoming>\r\n\t\t</endEvent>\r\n[...]\r\n</definitions>\r\n```\r\n\r\n**Analysis**\r\nThe contents of *Sub-Process 2* are incorrectly not put into the respective *subProcess* element (although this element exists)."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/139",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/139/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/139/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/139/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/139",
+    "id": 23410363,
+    "number": 139,
+    "title": "Labels of Pools and Lanes in the center",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test+A.4.1",
+        "name": "Test A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+ARIS+Architect",
+        "name": "Tool: ARIS Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-27T19:34:57Z",
+    "updated_at": "2013-11-27T19:35:02Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "![](https://github.com/bzinchenko/bpmn-miwg-test-suite/diff_blob/f29cc144a920d6b679f6aa6f5965dc9aae364728/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/ARIS%20Architect%209.5.0/A.4.0-import.png?raw=true)\r\n\r\n![](https://github.com/bzinchenko/bpmn-miwg-test-suite/diff_blob/f29cc144a920d6b679f6aa6f5965dc9aae364728/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/ARIS%20Architect%209.5.0/A.4.1-import.png?raw=true)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/138",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/138/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/138/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/138/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/138",
+    "id": 23409106,
+    "number": 138,
+    "title": "Label position of Gateways and Events ignored",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+ARIS+Architect",
+        "name": "Tool: ARIS Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-27T19:15:09Z",
+    "updated_at": "2013-11-27T19:32:44Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "![](https://github.com/bzinchenko/bpmn-miwg-test-suite/diff_blob/f29cc144a920d6b679f6aa6f5965dc9aae364728/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/ARIS%20Architect%209.5.0/A.2.0-import.png?raw=true)\r\n\r\n![](https://github.com/bzinchenko/bpmn-miwg-test-suite/diff_blob/f29cc144a920d6b679f6aa6f5965dc9aae364728/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/ARIS%20Architect%209.5.0/A.3.0-import.png?raw=true)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/137",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/137/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/137/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/137/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/137",
+    "id": 23313051,
+    "number": 137,
+    "title": "Name attribute missing for groups",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-26T13:13:33Z",
+    "updated_at": "2013-11-27T15:32:44Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda Modeler version 2.2.0 - export test\r\n \r\n - cannot edit name for groups/ input field missing in properties field"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/136",
+    "id": 23312972,
+    "number": 136,
+    "title": "Cannot add lane to colaboration without pool",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-26T13:11:27Z",
+    "updated_at": "2013-11-27T15:33:22Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda Modeler version 2.2.0 - export test"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/134",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/134/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/134/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/134/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/134",
+    "id": 23244447,
+    "number": 134,
+    "title": "Vertical modeling not possible",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test+A.4.1",
+        "name": "Test A.4.1",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-25T14:14:02Z",
+    "updated_at": "2013-11-27T15:34:54Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda Modeler 2.2.0"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/133",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/133/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/133/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/133/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/133",
+    "id": 23242906,
+    "number": 133,
+    "title": "Lane without pool not visualized",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-11-25T13:45:36Z",
+    "updated_at": "2013-12-09T07:16:52Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda Modeler 2.2.0 \r\n\r\n![A.4.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/camunda%20Modeler%202.2.0/A.4.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/132",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/132/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/132/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/132/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/132",
+    "id": 23242673,
+    "number": 132,
+    "title": "Labels have wrong line breaks",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test+A.4.1",
+        "name": "Test A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda-bpmn.js",
+        "name": "Tool: camunda-bpmn.js",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-25T13:40:47Z",
+    "updated_at": "2013-11-27T18:16:13Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda Modeler 2.2.0 and camunda-bpmn.js renderer\r\n\r\nLine breaks in labels are not visualized according to the reference diagram"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/131",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/131/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/131/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/131/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/131",
+    "id": 23242289,
+    "number": 131,
+    "title": "Gateway Default Flow symbol not visualized",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda-bpmn.js",
+        "name": "Tool: camunda-bpmn.js",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-25T13:33:12Z",
+    "updated_at": "2013-11-27T18:17:48Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda-bpmn.js renderer\r\n\r\n![B.2.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda-bpmn.js%20c906a7c941b82dbb832ed9be62989c171c724199/B.2.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/130",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/130/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/130/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/130/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/130",
+    "id": 23241887,
+    "number": 130,
+    "title": "Call Activity: content of embedded diagram shown in parent diagram",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda-bpmn.js",
+        "name": "Tool: camunda-bpmn.js",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-25T13:24:06Z",
+    "updated_at": "2013-11-27T18:19:11Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda-bpmn.js renderer \r\n\r\n![B.1.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20Modeler%202.2.0/B.1.0-import.png)\r\n![B.2.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20Modeler%202.2.0/B.2.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/124",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/124/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/124/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/124/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/124",
+    "id": 22338063,
+    "number": 124,
+    "title": "Participant added, which was not in reference model (not depicted in DI)",
+    "user": {
+      "login": "gimbel",
+      "id": 3829733,
+      "avatar_url": "https://gravatar.com/avatar/4e4b9eea58c9e84147b5ff16c0c9bfcf?d=https%3A%2F%2Fidenticons.github.com%2Faf1b3d53d666dacca1a50b70a03cef5d.png&r=x",
+      "gravatar_id": "4e4b9eea58c9e84147b5ff16c0c9bfcf",
+      "url": "https://api.github.com/users/gimbel",
+      "html_url": "https://github.com/gimbel",
+      "followers_url": "https://api.github.com/users/gimbel/followers",
+      "following_url": "https://api.github.com/users/gimbel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gimbel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gimbel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gimbel/subscriptions",
+      "organizations_url": "https://api.github.com/users/gimbel/orgs",
+      "repos_url": "https://api.github.com/users/gimbel/repos",
+      "events_url": "https://api.github.com/users/gimbel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gimbel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+ARIS+Business+Architect",
+        "name": "Tool: ARIS Business Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 4,
+    "created_at": "2013-11-08T13:59:22Z",
+    "updated_at": "2013-11-08T16:31:49Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "These models share the same problem.\r\n\r\nhttps://github.com/bpmn-miwg/bpmn-miwg-test-suite/tree/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/ARIS%20Business%20Architect%207.2.4\r\n\r\nAll models are collaborations from an XML perspective. However the participants do not have any DI information (e.g. ID=FLOWNODE_055e9200-3bda-11e3-3329-080027000095).\r\n\r\nSo the images are actually wrong.\r\n\r\nAlso the camunda Modeler is not able to open these diagrams due to this violation of the BPMN 2.0 XML"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/123",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/123/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/123/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/123/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/123",
+    "id": 22214281,
+    "number": 123,
+    "title": "lane labels at the top of the lanes rather than at the far left side",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+ARIS+Business+Architect",
+        "name": "Tool: ARIS Business Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-06T18:21:12Z",
+    "updated_at": "2013-11-06T18:21:12Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "reported by @dgagne "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/122",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/122/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/122/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/122/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/122",
+    "id": 22214217,
+    "number": 122,
+    "title": "Extra breakpoint in some of the sequence flows",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+ARIS+Business+Architect",
+        "name": "Tool: ARIS Business Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-11-06T18:20:06Z",
+    "updated_at": "2013-11-06T18:20:06Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Reported by @dgagne"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/121",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/121/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/121/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/121/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/121",
+    "id": 21690976,
+    "number": 121,
+    "title": "Message Flow name not exported",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+ARIS+Business+Architect",
+        "name": "Tool: ARIS Business Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-10-28T14:04:32Z",
+    "updated_at": "2013-11-06T18:20:26Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "\r\n\r\n![aris_messageflow_screen](https://f.cloud.github.com/assets/40038/1420057/4c1902ae-3fd9-11e3-81a8-24059c59dcb3.png)\r\n\r\n[A.4.0-export.bpmn](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/ARIS%20Business%20Architect%207.2.4-Revised/A.4.0-export.bpmn):\r\n```xml\r\n    <semantic:messageFlow id=\"FLOW_c93eb896-3be4-11e3-3329-080027000095\" name=\"\" sourceRef=\"FLOWNODE_2a6b276a-3be2-11e3-3329-080027000095\" targetRef=\"FLOWNODE_c93eb885-3be4-11e3-3329-080027000095\" />\r\n    <semantic:messageFlow id=\"FLOW_adc427b0-3be5-11e3-3329-080027000095\" name=\"\" sourceRef=\"FLOWNODE_c93eb8ae-3be4-11e3-3329-080027000095\" targetRef=\"FLOWNODE_c93eb88c-3be4-11e3-3329-080027000095\" />\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/120",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/120/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/120/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/120/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/120",
+    "id": 21634880,
+    "number": 120,
+    "title": "Missing Compensation Marker",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-10-26T14:36:31Z",
+    "updated_at": "2014-01-06T13:35:26Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Page 303 states: “The Compensation Activity, which can be either a Task or a Sub-Process, has a marker to show that it is used for compensation only and is outside the normal flow of the Process.”\r\n \r\nHowever, in Table 7.2 on Page 35, this marker is missing in the compensation activity.\r\n\r\nThe proposal is available here: https://www.dropbox.com/s/din8lzjw5w1dnnr/Proposal.docx"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/119",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/119/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/119/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/119/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/119",
+    "id": 20751742,
+    "number": 119,
+    "title": "Sub-Process contents are not contained in Sub-Process",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Adonis",
+        "name": "Tool: Adonis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-10-09T15:57:24Z",
+    "updated_at": "2013-10-09T15:57:24Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Reference:\r\n```xml\r\n        <semantic:subProcess triggeredByEvent=\"false\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Expanded Sub-Process 1\" id=\"_ee35fa2c-dfea-40cf-a469-845b765a7b50\">\r\n            <semantic:incoming>_1873ed55-ba18-433f-8d1a-eb84d18da049</semantic:incoming>\r\n            <semantic:outgoing>_ebbaed22-6fcb-4af7-8b7a-7ebc9cc7f150</semantic:outgoing>\r\n            <semantic:startEvent name=\"Start Event 3\" id=\"_1ffaa550-3225-4c6a-a391-3aaf224723af\">\r\n                <semantic:outgoing>_3580d9ba-4f79-48c1-96da-090bd5e5172d</semantic:outgoing>\r\n            </semantic:startEvent>\r\n            <semantic:task completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Task 4\" id=\"_09532ad3-e571-4214-b580-7bebf4bb68b1\">\r\n                <semantic:incoming>_3580d9ba-4f79-48c1-96da-090bd5e5172d</semantic:incoming>\r\n                <semantic:outgoing>_f5e6dc98-8c79-4e6b-aef9-c3f3bdc09136</semantic:outgoing>\r\n            </semantic:task>\r\n            <semantic:endEvent name=\"End Event 3\" id=\"_3e5ac6ed-88d6-4f82-a647-6b253b80b004\">\r\n                <semantic:incoming>_f5e6dc98-8c79-4e6b-aef9-c3f3bdc09136</semantic:incoming>\r\n            </semantic:endEvent>\r\n            <semantic:sequenceFlow sourceRef=\"_1ffaa550-3225-4c6a-a391-3aaf224723af\" targetRef=\"_09532ad3-e571-4214-b580-7bebf4bb68b1\" name=\"\" id=\"_3580d9ba-4f79-48c1-96da-090bd5e5172d\"/>\r\n            <semantic:sequenceFlow sourceRef=\"_09532ad3-e571-4214-b580-7bebf4bb68b1\" targetRef=\"_3e5ac6ed-88d6-4f82-a647-6b253b80b004\" name=\"\" id=\"_f5e6dc98-8c79-4e6b-aef9-c3f3bdc09136\"/>\r\n        </semantic:subProcess>\r\n```\r\nActual:\r\n```xml\r\n      <subProcess id=\"_ee35fa2c-dfea-40cf-a469-845b765a7b50\" name=\"Expanded Sub-Process 1\"\r\n                  isForCompensation=\"false\">\r\n         <extensionElements/>\r\n      </subProcess>\r\n      <startEvent id=\"_1ffaa550-3225-4c6a-a391-3aaf224723af\" name=\"Start Event 3\">\r\n         <extensionElements/>\r\n      </startEvent>\r\n      <task id=\"_09532ad3-e571-4214-b580-7bebf4bb68b1\" name=\"Task 4\"\r\n            isForCompensation=\"false\">\r\n         <extensionElements/>\r\n      </task>\r\n      <endEvent id=\"_3e5ac6ed-88d6-4f82-a647-6b253b80b004\" name=\"End Event 3\">\r\n         <extensionElements/>\r\n      </endEvent>\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/117",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/117/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/117/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/117/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/117",
+    "id": 19027162,
+    "number": 117,
+    "title": "Yaoqiang's usage of /definitions/BPMNDiagram/@documentation attribute",
+    "user": {
+      "login": "krat0s",
+      "id": 1541830,
+      "avatar_url": "https://gravatar.com/avatar/8115d254a3580355da264a018cb10bbe?d=https%3A%2F%2Fidenticons.github.com%2F33c20129c3e707ecf83cb2819052c744.png&r=x",
+      "gravatar_id": "8115d254a3580355da264a018cb10bbe",
+      "url": "https://api.github.com/users/krat0s",
+      "html_url": "https://github.com/krat0s",
+      "followers_url": "https://api.github.com/users/krat0s/followers",
+      "following_url": "https://api.github.com/users/krat0s/following{/other_user}",
+      "gists_url": "https://api.github.com/users/krat0s/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/krat0s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/krat0s/subscriptions",
+      "organizations_url": "https://api.github.com/users/krat0s/orgs",
+      "repos_url": "https://api.github.com/users/krat0s/repos",
+      "events_url": "https://api.github.com/users/krat0s/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/krat0s/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-09-05T07:37:09Z",
+    "updated_at": "2013-11-23T09:57:42Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "In reference to our discussion of the 4th Sept 13 about the /definitions[1]/BPMNDiagram[1]/@documentation issue highlighted by the the xml-compare tool in the Yaoqiang example (http://tools.bpmn-miwg.cloudbees.net/xml-compare/Yaoqiang%202.2.6-A-roundtrip.html), I have come across the following information in the BPMN spec:\r\n\r\nOn page 491, the spec states that the '@documentation' attribute of the BPMNDiagram element is used for \"the documentation of the diagram\". This conflicts with Yaoqiang's usage as a storage for style information."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/115",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/115/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/115/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/115/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/115",
+    "id": 18978521,
+    "number": 115,
+    "title": "absence of default expressionLanguage attribute is not a semantic difference ",
+    "user": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/enhancement",
+        "name": "enhancement",
+        "color": "84b6eb"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Automation%3A+xml-compare",
+        "name": "Automation: xml-compare",
+        "color": "5319e7"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "svenwb",
+      "id": 3901085,
+      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
+      "url": "https://api.github.com/users/svenwb",
+      "html_url": "https://github.com/svenwb",
+      "followers_url": "https://api.github.com/users/svenwb/followers",
+      "following_url": "https://api.github.com/users/svenwb/following{/other_user}",
+      "gists_url": "https://api.github.com/users/svenwb/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/svenwb/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/svenwb/subscriptions",
+      "organizations_url": "https://api.github.com/users/svenwb/orgs",
+      "repos_url": "https://api.github.com/users/svenwb/repos",
+      "events_url": "https://api.github.com/users/svenwb/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/svenwb/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-09-04T15:31:39Z",
+    "updated_at": "2013-10-09T10:53:37Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "As may be seen here: http://tools.bpmn-miwg.cloudbees.net/xml-compare/Yaoqiang%202.2.6-A-roundtrip.html, when one tool specifies the expressionLanguage (which has a default value) but the other does not this is highlighted by the xml-compare tool. \r\n\r\nAfter discussion at the meeting 4th Sept 13 we recommend that the tool hide this difference if possible. "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/113",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/113/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/113/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/113/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/113",
+    "id": 17455005,
+    "number": 113,
+    "title": "Lanes are in the wrong pool",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+itp-commerce+Process+Modeler",
+        "name": "Tool: itp-commerce Process Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-07-31T14:39:12Z",
+    "updated_at": "2013-07-31T14:51:52Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "**Preliminaries:**\r\nThe XPath tool only returns two findings for the new version of ITP commerce.\r\n\r\n**Version:**\r\nitp-commerce Process Modeler 6.3488.15730\r\n\r\n**XPath tool output:**\r\n```\r\n> Assertion OK     : selectProcess: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]\r\n  > Assertion OK     : checkXORMarkersForProcess: All XOR markers have the expected value 'true'.\r\n  > Assertion OK     : checkXORMarkersForProcess: All XOR markers have the expected value 'true'.\r\n  > Assertion FINDING: navigateElementX: bpmn:laneSet/bpmn:lane[@name='Lane 1']: No node found\r\n  > Assertion FINDING: navigateElementX: bpmn:laneSet/bpmn:lane[@name='Lane 2']: No node found\r\n  > Assertion OK     : navigateElement: bpmn:startEvent[@name='Start Event 2']\r\n```\r\n\r\n**Excerpt from Reference B.2.0 BPMN:**\r\n```xml\r\n<semantic:process isExecutable=\"false\" id=\"WFP-6-2\">\r\n  <semantic:laneSet id=\"ls_55bb31e8-9e62-48ea-8f0e-1a748c04bbf6\">\r\n    <semantic:lane name=\"Lane 1\" id=\"_4a6df7ac-26d8-4718-ac05-90af463d5e23\">\r\n    [...]\r\n    <semantic:lane name=\"Lane 2\" id=\"_3400f56a-4565-47d1-91db-0ba17b958cb2\">\r\n```\r\n**Excerpt from itp-commerce Process Modeler B.2.0-roundtrip:**\r\n```xml\r\n<process id=\"WFP-0-\" processType=\"None\" itp:isMainProcess=\"true\">\r\n  <laneSet>\r\n    <lane id=\"_4a6df7ac-26d8-4718-ac05-90af463d5e23\" name=\"Lane 1\">\r\n    [...]\r\n    <lane id=\"_3400f56a-4565-47d1-91db-0ba17b958cb2\" name=\"Lane 2\">\r\n [...]\r\n<process id=\"WFP-6-2\" name=\"Pool\" processType=\"None\">\r\n  <subProcess id=\"_7e6ccf38-e740-4537-a439-a8e984d066de\" name=\"Expanded Sub-Process 2\" itp:isCollapsed=\"false\">\r\n```\r\n\r\n**Analysis:**\r\nThe lanes (including the laneset) appear to be in the wrong pool / process. "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/111",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/111/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/111/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/111/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/111",
+    "id": 17008354,
+    "number": 111,
+    "title": "Duplicate IDs",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-07-20T16:35:50Z",
+    "updated_at": "2013-07-28T18:09:56Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "**Version:** Signavio Process Editor 7.0.0\r\n\r\n**Xpath test tool output:**\r\n```\r\nError Line 172: cvc-id.2: There are multiple occurrences of ID value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450'.\r\n```\r\n\r\n**Excerpt from Signavio B.1.0-Roundtrip.bpmn**\r\n```xml\r\n<globalTask id=\"Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450\" name=\"Call Activity - Expanded\"/>\r\n[...]\r\n<process id=\"Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450\" isClosed=\"false\" isExecutable=\"false\" name=\"B.1.0\" processType=\"None\">\r\n```\r\n\r\n**Analysis**\r\n* The *globalTask* element has the same id as the *process* element. This is not allowed.\r\n\r\n[Reference PDF](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf?raw=true)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/110",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/110/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/110/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/110/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/110",
+    "id": 17008269,
+    "number": 110,
+    "title": "Duplicate dataOutputAssociations",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-07-20T16:26:15Z",
+    "updated_at": "2013-07-28T18:09:44Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "**Version:** Signavio Process Editor 7.0.0\r\n\r\n**Xpath test tool output:**\r\n```\r\nError Line 136: cvc-id.2: There are multiple occurrences of ID value '_73afd30d-7d54-4897-9350-1f7d301ef1b2'.\r\nError Line 136: cvc-attribute.3: The value '_73afd30d-7d54-4897-9350-1f7d301ef1b2' of attribute 'id' on element 'dataInputAssociation' is not valid with respect to its type, 'ID'.\r\nError Line 136: cvc-complex-type.3.2.2: Attribute 'name' is not allowed to appear in element 'dataInputAssociation'.\r\nError Line 144: cvc-id.2: There are multiple occurrences of ID value '_fa10ebaf-7088-4def-8cc3-d959b8876b06'.\r\nError Line 144: cvc-attribute.3: The value '_fa10ebaf-7088-4def-8cc3-d959b8876b06' of attribute 'id' on element 'dataOutputAssociation' is not valid with respect to its type, 'ID'.\r\nError Line 144: cvc-complex-type.3.2.2: Attribute 'name' is not allowed to appear in element 'dataOutputAssociation'.\r\n```\r\n\r\n**Excerpt from the Signavio B.1.0-roundtrip.bpmn file**:\r\n```xml\r\n <serviceTask completionQuantity=\"1\" id=\"_fea1c5af-6c76-403f-809e-26d476d92741\" isForCompensation=\"false\" name=\"Service Task 7\" startQuantity=\"1\">\r\n   [...]\r\n   <dataInputAssociation id=\"_73afd30d-7d54-4897-9350-1f7d301ef1b2\">\r\n      <sourceRef>_3d35229f-2c75-4d5d-a066-2d14e46e442e</sourceRef>\r\n      <targetRef>Din1368567393762</targetRef>\r\n   </dataInputAssociation>\r\n   <dataInputAssociation id=\"_73afd30d-7d54-4897-9350-1f7d301ef1b2\" name=\"\">\r\n      <sourceRef>_3d35229f-2c75-4d5d-a066-2d14e46e442e</sourceRef>\r\n      <targetRef>_fea1c5af-6c76-403f-809e-26d476d92741</targetRef>\r\n   </dataInputAssociation>\r\n   <dataOutputAssociation id=\"_fa10ebaf-7088-4def-8cc3-d959b8876b06\">\r\n      <sourceRef>Dout1368567393823</sourceRef>\r\n      <targetRef>_b9385abf-d293-40b7-848b-8add4db48415</targetRef>\r\n   </dataOutputAssociation>\r\n   <dataOutputAssociation id=\"_fa10ebaf-7088-4def-8cc3-d959b8876b06\" name=\"\">\r\n      <sourceRef>_fea1c5af-6c76-403f-809e-26d476d92741</sourceRef>\r\n      <targetRef>_b9385abf-d293-40b7-848b-8add4db48415</targetRef>\r\n   </dataOutputAssociation>\r\n</serviceTask>\r\n```\r\n\r\n**Analysis:**\r\n\r\n* Some *dataInputAssociation* and *dataOutputAssociation* elements are duplicated:\r\n  * The duplicate *dataInputAssociation* refers directly to the *Service Task 7* task instead of the *dataInput*.\r\n  * The duplicate *dataOutputAssociation* refers directly to the *Service Task 7* task instead of the *dataOutput*.\r\n* The duplicate *dataInputAssociation* and *dataOutputAssociation* elements have an (empty) *name* attribute. They should not have a *name* attribute."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/107",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/107/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/107/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/107/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/107",
+    "id": 16768863,
+    "number": 107,
+    "title": "Conflict in BPMN Import location attribute requirement",
+    "user": {
+      "login": "sringuette",
+      "id": 5009554,
+      "avatar_url": "https://gravatar.com/avatar/dfd6506b97d5afe5044600eeec49fb33?d=https%3A%2F%2Fidenticons.github.com%2F8f821b4efea714346eb34d2f892cce8d.png&r=x",
+      "gravatar_id": "dfd6506b97d5afe5044600eeec49fb33",
+      "url": "https://api.github.com/users/sringuette",
+      "html_url": "https://github.com/sringuette",
+      "followers_url": "https://api.github.com/users/sringuette/followers",
+      "following_url": "https://api.github.com/users/sringuette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sringuette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/sringuette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/sringuette/subscriptions",
+      "organizations_url": "https://api.github.com/users/sringuette/orgs",
+      "repos_url": "https://api.github.com/users/sringuette/repos",
+      "events_url": "https://api.github.com/users/sringuette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/sringuette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-07-15T18:07:57Z",
+    "updated_at": "2013-12-11T21:03:24Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "In the BPMN 2.0 specification page 54, the table 8.2 describes the attributes of the *Import* element. It describes the location attribute with a cardinality of **[0..1]**.\r\n\r\nLater in table 8.4, the same *location* attribute is the xsd schema is defined as **required**.\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/100",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/100/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/100/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/100/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/100",
+    "id": 16283572,
+    "number": 100,
+    "title": "Incoming and outgoing elements missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+BPM",
+        "name": "Tool: IBM BPM",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Adonis",
+        "name": "Tool: Adonis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 5,
+    "created_at": "2013-07-02T19:48:33Z",
+    "updated_at": "2013-10-09T15:50:41Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "**Versions:**\r\n* ~~itp-commerce Process Modeler 6.3442.15675~~\r\n* ADONIS 5.1 UL5\r\n* IBM Process Designer 8.0.1\r\n\r\n**XPath tool output:**\r\n```\r\n> TEST A.1.0\r\n  > Assertion OK     : selectElementX: /bpmn:definitions/bpmn:process\r\n    > Assertion OK     : navigateElement: bpmn:startEvent[@name='Start Event']\r\n    > Assertion FINDING: navigateFollowingElement: bpmn:task[@name='Task 1']: No outgoing reference found\r\n    > Assertion FINDING: navigateFollowingElement: bpmn:task[@name='Task 2']: No outgoing reference found\r\n    > Assertion FINDING: navigateFollowingElement: bpmn:task[@name='Task 3']: No outgoing reference found\r\n    > Assertion FINDING: navigateFollowingElement: bpmn:endEvent[@name='End Event']: No outgoing reference found\r\n  > Pop\r\n```\r\n\r\n**Excerpt from Reference A.1.0:**\r\n```xml\r\n        <semantic:startEvent name=\"Start Event\" id=\"_93c466ab-b271-4376-a427-f4c353d55ce8\">\r\n            <semantic:outgoing>_e16564d7-0c4c-413e-95f6-f668a3f851fb</semantic:outgoing>\r\n        </semantic:startEvent>\r\n        <semantic:task completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Task 1\" id=\"_ec59e164-68b4-4f94-98de-ffb1c58a84af\">\r\n            <semantic:incoming>_e16564d7-0c4c-413e-95f6-f668a3f851fb</semantic:incoming>\r\n            <semantic:outgoing>_d77dd5ec-e4e7-420e-bbe7-8ac9cd1df599</semantic:outgoing>\r\n        </semantic:task>\r\n\t\t...\r\n        <semantic:sequenceFlow sourceRef=\"_93c466ab-b271-4376-a427-f4c353d55ce8\" targetRef=\"_ec59e164-68b4-4f94-98de-ffb1c58a84af\" name=\"\" id=\"_e16564d7-0c4c-413e-95f6-f668a3f851fb\"/>\r\n```\r\n\r\n**Excerpt from itp-commerce:**\r\n```xml\r\n    <startEvent id=\"_93c466ab-b271-4376-a427-f4c353d55ce8\" name=\"Start Event\">\r\n    </startEvent>\r\n    <task id=\"_ec59e164-68b4-4f94-98de-ffb1c58a84af\" name=\"Task 1\">\r\n    </task>\r\n    ...\r\n    <sequenceFlow id=\"_e16564d7-0c4c-413e-95f6-f668a3f851fb\" sourceRef=\"_93c466ab-b271-4376-a427-f4c353d55ce8\" targetRef=\"_ec59e164-68b4-4f94-98de-ffb1c58a84af\">\r\n    </sequenceFlow>\r\n```\r\n\r\n**Interpretation:**\r\n* There are no *incoming* and *outgoing* elements within the flow nodes. Therefore, all navigational tests cause findings.\r\n* While it seems there is no semantical information missing (everything is defined in the sequence flow elements), there still is a difference to the reference file.\r\n* This affects all tests."
+  }
+]
