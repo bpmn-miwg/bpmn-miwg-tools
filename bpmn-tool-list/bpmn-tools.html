@@ -78,8 +78,14 @@
                     { "mData": "hasExport", "mRender": renderBoolean },
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
                     { "mData": "testResultsSubmitted", "mRender": renderBoolean },
-                    { "mData": "openIssues" },
-                    { "mData": "closedIssues" },
+                    { "mData": "openIssues",
+                      "mRender": function ( data, type, full ) {
+                        return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(' ', '+') + '">' + data + '</a>';
+                      } },
+                    { "mData": "closedIssues",
+                      "mRender": function ( data, type, full ) {
+                        return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=closed&labels=Tool%3A+' + full.tool.replace(' ', '+') + '">' + data + '</a>';
+                      } },
                     { "mData": "participatedInDemos", "mRender": renderBoolean },
       //               { "mData": "notes" },
                 ],
