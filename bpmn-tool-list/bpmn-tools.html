@@ -34,63 +34,67 @@
 //         var toolsUrl = "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/contents/tools-tested-by-miwg.json"; // application/vnd.github.v3.raw
 //         var toolsUrl = "../../bpmn-miwg-test-suite/tools-tested-by-miwg.json";
         var toolsUrl = "tools-tested-by-miwg.json";
-        var issuesUrl = "issues.json";
+        var openIssuesUrl = "issues-open.json";
+        var closedIssuesUrl = "issues-closed.json";
 
         $.getJSON(toolsUrl, function (toolsTestedByMIWG) {
-          $.getJSON(issuesUrl, function (issues) {
+          $.getJSON(openIssuesUrl, function (openIssues) {
+            $.getJSON(closedIssuesUrl, function (closedIssues) {
 
-            for (i = 0; i < toolsTestedByMIWG.tools.length; i++) {
-              toolsTestedByMIWG.tools[i].openIssues = 0;
-              toolsTestedByMIWG.tools[i].closedIssues = 0;
-              issues.forEach(function(issue) {
-                issue.labels.forEach(function(label) {
-                  if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
-                    if (issue.state == "open") {
+              for (i = 0; i < toolsTestedByMIWG.tools.length; i++) {
+                toolsTestedByMIWG.tools[i].openIssues = 0;
+                toolsTestedByMIWG.tools[i].closedIssues = 0;
+                openIssues.forEach(function(issue) {
+                  issue.labels.forEach(function(label) {
+                    if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
                       toolsTestedByMIWG.tools[i].openIssues++;
                     }
-                    if (issue.state == "closed") {
+                  });
+                });
+                closedIssues.forEach(function(issue) {
+                  issue.labels.forEach(function(label) {
+                    if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
                       toolsTestedByMIWG.tools[i].closedIssues++;
                     }
-                  }
+                  });
                 });
-              });
-            }
-
-            $('#bpmn-tools').dataTable( {
-              "bProcessing": true,
-              "bJQueryUI": true,
-              "bPaginate": false,
-    //          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
-    //          "sAjaxSource": toolsUrl,
-    //          "sAjaxDataProp": "tools",
-              "aaData": toolsTestedByMIWG.tools,
-              "aoColumns": [
-                  { "mData": "vendor" },
-                  { "mData": "tool",
-                    "mRender": function ( data, type, full ) {
-                      return '<a href="'+full.website+'">'+data+' '+full.version+'</a>';
-                    } },
-                  { "mData": "supportsBpmn2", "mRender": renderBoolean },
-                  { "mData": "hasImport", "mRender": renderBoolean },
-                  { "mData": "hasExport", "mRender": renderBoolean },
-                  { "mData": "hasRoundtrip", "mRender": renderBoolean },
-                  { "mData": "testResultsSubmitted", "mRender": renderBoolean },
-                  { "mData": "participatedInDemos", "mRender": renderBoolean },
-                  { "mData": "openIssues" },
-                  { "mData": "closedIssues" },
-    //               { "mData": "notes" },
-              ],
-            } );
-
-            function renderBoolean(data, type, full) {
-              var icon = "remove";
-              var color = "darkred";
-              if (data) {
-                icon = "ok";
-                color = "green";
               }
-              return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span style="display: none">' + data + '</span>';
-            }
+
+              $('#bpmn-tools').dataTable( {
+                "bJQueryUI": true,
+                "bPaginate": false,
+      //          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
+      //          "sAjaxSource": toolsUrl,
+      //          "sAjaxDataProp": "tools",
+                "aaData": toolsTestedByMIWG.tools,
+                "aoColumns": [
+                    { "mData": "vendor" },
+                    { "mData": "tool",
+                      "mRender": function ( data, type, full ) {
+                        return '<a href="'+full.website+'">'+data+' '+full.version+'</a>';
+                      } },
+                    { "mData": "supportsBpmn2", "mRender": renderBoolean },
+                    { "mData": "hasImport", "mRender": renderBoolean },
+                    { "mData": "hasExport", "mRender": renderBoolean },
+                    { "mData": "hasRoundtrip", "mRender": renderBoolean },
+                    { "mData": "testResultsSubmitted", "mRender": renderBoolean },
+                    { "mData": "openIssues" },
+                    { "mData": "closedIssues" },
+                    { "mData": "participatedInDemos", "mRender": renderBoolean },
+      //               { "mData": "notes" },
+                ],
+              } );
+
+              function renderBoolean(data, type, full) {
+                var icon = "remove";
+                var color = "darkred";
+                if (data) {
+                  icon = "ok";
+                  color = "green";
+                }
+                return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span style="display: none">' + data + '</span>';
+              }
+            })
           })
         })
 
@@ -153,9 +157,9 @@
             <th>Has Export</th>
             <th>Has Roundtrip</th>
             <th>Test Results submitted</th>
-            <th>Participates in Demos</th>
             <th>Open Issues</th>
             <th>Closed Issues</th>
+            <th>Participates in Demos</th>
 <!--             <th>Notes</th> -->
           </tr>
         </thead>
