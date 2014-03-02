@@ -232,10 +232,11 @@
 
 "config"		: 
 	{
-		"reference"		: 
-			{
-				"url_pattern"	: "https://raw2.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/{CATEGORYURL}/{TOOLURL}/{FILEURL}.png"
-			}
+		"url_pattern" :
+		{
+			"file"		: "https://raw2.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/{CATEGORYURL}/{TOOLURL}/{FILEURL}.{FILEEXT}",
+			"folder"	: "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/tree/master/{CATEGORYURL}/{TOOLURL}"
+		}
 	},
 
 
@@ -345,30 +346,6 @@
 									"description"	: "Validate that all the elements prescribed for the Analytic Conformance Sub-Class in the BPMN 2.0 Specification are present.",
 									"png"			: true,
 									"tool"			: "Trisotech BPMN 2.0 Modeler for Visio 4.0"
-								}
-							]
-					},
-					{
-						"case"			: "B.3",
-						"description"	: "Common Executable Sub-Class",
-						"variations"	:
-							[
-								{
-									"variation"		: "B.3.0",
-									"name"			: "Base",
-									"description"	: "Validate that all the elements prescribed in the Common Executable Conformance Sub-Class in the BPMN 2.0 Specification are present."
-								}
-							]
-					},
-					{
-						"case"			: "B.4",
-						"description"	: "Process Modeling Class",
-						"variations"	:
-							[
-								{
-									"variation"		: "B.4.0",
-									"name"			: "Base",
-									"description"	: "Validate that all the elements prescribed in the Process Modeling Conformance Class in the BPMN 2.0 specification are present."
 								}
 							]
 					}

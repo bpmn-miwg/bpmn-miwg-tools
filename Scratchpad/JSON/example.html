@@ -1,31 +1,31 @@
 <html>
 
 <head>
-<title>Test</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
+<title>Results comparison</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"></head>
 
 <script src="//code.jquery.com/jquery-1.10.2.min.js" type="application/javascript"></script>
-<!--<script src="js/jquery.easydropdown.js"></script>-->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="lib/jquery.imagefallback.js"></script>
 
 <script>
 
 
 $(document).ready(function() {
 	$("#message").text("Ready");
-	$("#button").click(loadClicked);
 	$("#selector").change(toolSelected);
-	loadClicked();	
+	
+	loadJSON();	
 });
 
 var jsonData = null;
 var resultDIVs = null;
 var referenceVariations = null;
 
-
-
-function loadClicked() {
+function loadJSON() {
 	$("#message").text("Loading...");
 
 
@@ -34,37 +34,65 @@ function loadClicked() {
 	var jqxhr = $.getJSON(url)
 		.done(function(data) {
 			jsonData = data;
-			$("#message").text("Success");
+			$("#message").text("Data Loalded");
          	
-			var reference_url_pattern = data.config.reference.url_pattern;
+			var url_pattern = data.config.url_pattern;
 
 			resultDIVs = [];
 			referenceVariations = [];
 
 			$("#result3").empty();
 			var ulroot = $("#result3");
+
+			var sidebar = $("#sidebar");
+
+
 			data.categories.forEach(function(category) {
-				$("<h3>Category " + category.category + ": " +category.name + "</h3>").appendTo(ulroot);
-				$("<div class='description'>" +  category.description + "</div>").appendTo(ulroot);
+				//$("<h3>Category " + category.category + ": " +category.name + "</h3>").appendTo(ulroot);
+				//$("<div class='description'>" +  category.description + "</div>").appendTo(ulroot);
 
 				category.cases.forEach(function(case2) {
-					$("<h4>Case " + case2.case + "</h4>").appendTo(ulroot);
-					$("<div class='description'>" + case2.description + "</div>").appendTo(ulroot);
+					//$("<h4>Case " + case2.case + "</h4>").appendTo(ulroot);
+					//$("<div class='description'>" + case2.description + "</div>").appendTo(ulroot);
 
 					case2.variations.forEach(function(variation) {
-						$("<h5>Variation " + variation.variation + "</h5>").appendTo(ulroot);
-						$("<div class='description'>" + variation.description + "</div>").appendTo(ulroot);
+						//$("<h5>Variation " + variation.variation + "</h5>").appendTo(ulroot);
+						//$("<div class='description'>" + variation.description + "</div>").appendTo(ulroot);
 
-						$("<div class='caption'>Reference</caption>").appendTo(ulroot);
+						//$("<div class='caption'>Reference</caption>").appendTo(ulroot);
+
+						$("<div class='page-header'><h3 id='sect-" + variation.variation + "'>" + variation.variation + " <small>" + variation.description + "</small></h3></div>").appendTo(ulroot);
+
+						$("<li><a href='#sect-" + variation.variation + "'>" + variation.variation + "</a></li>").appendTo(sidebar)
+
+						var div2 = $("<div class='row' />");
+						div2.appendTo(ulroot);
+
+
+						var refDiv = $("<div class='col-md-6'/>");
+						refDiv.appendTo(div2);
+						
+						$("<p class='caption'>" + variation.variation + " reference</p>").appendTo(refDiv);
+
 						if (variation.png) {
-							var url = reference_url_pattern.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation);
-							$("<img src='" + url + "' />").appendTo(ulroot);
-							$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
+							var png_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "png");
+							$("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' /></a>").appendTo(refDiv);
+							//$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
 						} else {
-							$("<div>No image.</div>").appendTo(ulroot);
+							$("<p>No image.</p>").appendTo(refDiv);
 						}
-						var temp = $("<div id='results-" + variation.variation + "' />")
-						temp.appendTo(ulroot);
+						var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "bpmn");
+						var folder_url = url_pattern.folder.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference");
+
+						var nav = $("<ul class='nav nav-pills'/>").appendTo(refDiv);
+
+						$("<li><a href='" + bpmn_url + "' target='_blank'>BPMN Source <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+						$("<li><a href='" + folder_url + "' target='_blank'>Reference folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+
+
+						//$("<div class='col2'>right</div>").appendTo(ulroot);
+						var temp = $("<div class='col-md-6' id='results-" + variation.variation + "' >No results available.</div>");
+						temp.appendTo(div2);
 						resultDIVs[variation.variation] = temp;
 						referenceVariations.push(variation.variation);
 
@@ -80,7 +108,11 @@ function loadClicked() {
 				$("<option>" + result.tool + "</option>").appendTo(selector);
 			});
 
+			$("#message").text("Reference processed");
+
 			toolSelected();
+
+
 
 		})
 		.fail(function() {
@@ -90,39 +122,54 @@ function loadClicked() {
 }
 
 function toolSelected() {
+
+	$("#message").text("Processing results...");
+
 	var selectedTool = $("#selector").val();
 	var selectedToolJSON = findInList(jsonData.results, "tool", selectedTool);
-	var reference_url_pattern = jsonData.config.reference.url_pattern;
+	var url_pattern = jsonData.config.url_pattern;
 
 	referenceVariations.forEach(function(referenceVariation) {
 		var div = resultDIVs[referenceVariation];
-		div.empty();
-
+		
 		var resultsVariation = findInList(selectedToolJSON.variations, "variation", referenceVariation);
 
 		if (resultsVariation) {
 
+			div.empty();
+
 			resultsVariation.types.forEach(function(type) {
 
-				$("<div class='caption'>" + referenceVariation + " " + type.type + "</caption>").appendTo(div);
+				$("<p class='caption'>" + referenceVariation + " " + type.type + "</p>").appendTo(div);
 
 				var categoryID = referenceVariation[0];
 				var categoryJSON = findInList(jsonData.categories, "category", categoryID);
 
 
-				var url = reference_url_pattern.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type.type);
-				if (type.png) {
-					$("<img src='" + url + "' />").appendTo(div);
-				} else {
-					$("<div>No image.</div>").appendTo(div);
-				}
+				var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type.type).replace("{FILEEXT}", "bpmn");
+				var png_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type.type).replace("{FILEEXT}", "png");
+				var folder_url = url_pattern.folder.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool);
+				var img_id = "'" + referenceVariation + "-" + type.type + "'"
+				//if (type.png) {
+					$("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' onerror='ImgError(this);'/></a>").appendTo(div);
+				//} else {
+				//	$("<p>No image.</p>").appendTo(div);
+				//}
+
+				var nav = $("<ul class='nav nav-pills'/>").appendTo(div);
+
+				$("<li><a href='" + bpmn_url + "' target='_blank'>BPMN Source <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+				$("<li><a href='" + folder_url + "' target='_blank'>Results folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
 
 			});
 
 		}
 
-
 	});
+
+	$('.img.result > img').fallback('img/fallback.png');
+
+	$("#message").text("Reference and results processed");
 
 }
 
@@ -136,28 +183,73 @@ function findInList(list, attribute, value) {
 	return ret;
 }
 
+function ImgError(img) {
+	img.onerror = null;
+	img.src="img/fallback.png";
+	img.width = 32;
+}
 
 </script>
 
 <body>
 
-<h1>Load</h1>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://www.omgwiki.org/bpmn-miwg/doku.php?id=start">OMG BPMN MIWG</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.omgwiki.org/bpmn-miwg/doku.php?id=start">Wiki</a></li>
+        <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/">Test Suite</a></li>
+        <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/">Tools</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--<header class="navbar navbar-bright navbar-fixed-top" role="banner">-->
 
 
-<button id="button">Load</button>
+<div class="container-fluid">
+
+	<div class="row">
+
+		<nav class="col-md-2">
+			<ul class="nav nav-stacked hidden-xs hidden-print hidden-sm hidden-xs affix" id="sidebar" role="complementary">
+				<li ><a href="#tool">Select tool</a></li>
+			</ul>
+		</nav>
+
+		<section class="col-md-10" id="content">
+
+			<div  class="page-header">
+			<h2 id="tool" >Tool selection</h2>
+			</div>
 
 
-<select id="selector" class="dropdown" >
-</select>
+			<div class="input-group">
+				<span class="input-group-addon">Tool</span>
+				<select id="selector" class="form-control" >
+				</select>
+			</div>
+
+			<p class="text-muted" id="message">Initializing...</p>
+
+			<div class="page-header">
+			<h2>Test Results</h2>
+			</div>
+			<div  id="result3">-</div>
+    	</div>
+
+	</div>
+
+</div>
 
 
 
-<div style="bold">Status: </div>
-<div id="message">Initializing...</div>
 
 
-<h1>Test Results</h2>
-<div id="result3">-</div>
 
 </body>
 
