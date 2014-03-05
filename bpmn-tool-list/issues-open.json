@@ -1845,5 +1845,3542 @@
       "patch_url": null
     },
     "body": "**Versions:**\r\n* ~~itp-commerce Process Modeler 6.3442.15675~~\r\n* ADONIS 5.1 UL5\r\n* IBM Process Designer 8.0.1\r\n\r\n**XPath tool output:**\r\n```\r\n> TEST A.1.0\r\n  > Assertion OK     : selectElementX: /bpmn:definitions/bpmn:process\r\n    > Assertion OK     : navigateElement: bpmn:startEvent[@name='Start Event']\r\n    > Assertion FINDING: navigateFollowingElement: bpmn:task[@name='Task 1']: No outgoing reference found\r\n    > Assertion FINDING: navigateFollowingElement: bpmn:task[@name='Task 2']: No outgoing reference found\r\n    > Assertion FINDING: navigateFollowingElement: bpmn:task[@name='Task 3']: No outgoing reference found\r\n    > Assertion FINDING: navigateFollowingElement: bpmn:endEvent[@name='End Event']: No outgoing reference found\r\n  > Pop\r\n```\r\n\r\n**Excerpt from Reference A.1.0:**\r\n```xml\r\n        <semantic:startEvent name=\"Start Event\" id=\"_93c466ab-b271-4376-a427-f4c353d55ce8\">\r\n            <semantic:outgoing>_e16564d7-0c4c-413e-95f6-f668a3f851fb</semantic:outgoing>\r\n        </semantic:startEvent>\r\n        <semantic:task completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Task 1\" id=\"_ec59e164-68b4-4f94-98de-ffb1c58a84af\">\r\n            <semantic:incoming>_e16564d7-0c4c-413e-95f6-f668a3f851fb</semantic:incoming>\r\n            <semantic:outgoing>_d77dd5ec-e4e7-420e-bbe7-8ac9cd1df599</semantic:outgoing>\r\n        </semantic:task>\r\n\t\t...\r\n        <semantic:sequenceFlow sourceRef=\"_93c466ab-b271-4376-a427-f4c353d55ce8\" targetRef=\"_ec59e164-68b4-4f94-98de-ffb1c58a84af\" name=\"\" id=\"_e16564d7-0c4c-413e-95f6-f668a3f851fb\"/>\r\n```\r\n\r\n**Excerpt from itp-commerce:**\r\n```xml\r\n    <startEvent id=\"_93c466ab-b271-4376-a427-f4c353d55ce8\" name=\"Start Event\">\r\n    </startEvent>\r\n    <task id=\"_ec59e164-68b4-4f94-98de-ffb1c58a84af\" name=\"Task 1\">\r\n    </task>\r\n    ...\r\n    <sequenceFlow id=\"_e16564d7-0c4c-413e-95f6-f668a3f851fb\" sourceRef=\"_93c466ab-b271-4376-a427-f4c353d55ce8\" targetRef=\"_ec59e164-68b4-4f94-98de-ffb1c58a84af\">\r\n    </sequenceFlow>\r\n```\r\n\r\n**Interpretation:**\r\n* There are no *incoming* and *outgoing* elements within the flow nodes. Therefore, all navigational tests cause findings.\r\n* While it seems there is no semantical information missing (everything is defined in the sequence flow elements), there still is a difference to the reference file.\r\n* This affects all tests."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/99",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/99/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/99/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/99/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/99",
+    "id": 16055990,
+    "number": 99,
+    "title": "Issue 18256: flowNodeRefs containment and subprocess clarification (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 5,
+    "created_at": "2013-06-26T21:03:34Z",
+    "updated_at": "2014-01-06T13:34:13Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue18256"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/98",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/98/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/98/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/98/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/98",
+    "id": 16055945,
+    "number": 98,
+    "title": "Issue 17047: Incomming sequence flow at start event (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal",
+        "name": "Proposal",
+        "color": "d4c5f9"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 7,
+    "created_at": "2013-06-26T21:02:53Z",
+    "updated_at": "2014-01-06T13:34:42Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue17047"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/96",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/96/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/96/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/96/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/96",
+    "id": 16055879,
+    "number": 96,
+    "title": "Issue 15532: Page 182. Missing Start event triggers for Event Sub-Process (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-06-26T21:01:33Z",
+    "updated_at": "2013-10-16T20:25:32Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15532"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/95",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/95/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/95/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/95/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/95",
+    "id": 16055847,
+    "number": 95,
+    "title": "Issue 15509: Left over restrictions on use of Start and End Events (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-06-26T21:00:53Z",
+    "updated_at": "2013-10-23T16:34:10Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15509"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/94",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/94/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/94/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/94/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/94",
+    "id": 16055820,
+    "number": 94,
+    "title": "Issue 15428: Definition of Association is to strict (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 10,
+    "created_at": "2013-06-26T21:00:21Z",
+    "updated_at": "2014-01-06T13:33:15Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15428"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/93",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/93/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/93/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/93/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/93",
+    "id": 16055774,
+    "number": 93,
+    "title": "Issue 15393: Activity as InteractionNode (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 5,
+    "created_at": "2013-06-26T20:59:31Z",
+    "updated_at": "2014-01-06T13:32:43Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15393"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/92",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/92/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/92/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/92/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/92",
+    "id": 16055738,
+    "number": 92,
+    "title": "Issue 15255: Define rules for placement of multiple activity markers (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 7,
+    "created_at": "2013-06-26T20:58:44Z",
+    "updated_at": "2013-12-25T14:08:46Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15255"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/91",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/91/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/91/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/91/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/91",
+    "id": 16055711,
+    "number": 91,
+    "title": "Issue 15171: Messages and User Tasks (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-06-26T20:58:02Z",
+    "updated_at": "2014-01-06T13:31:55Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15171"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/90",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/90/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/90/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/90/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/90",
+    "id": 16055655,
+    "number": 90,
+    "title": "Issue 14879: The spec should clearly state what visual features are available for extensions and which are restricted to core spec (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-06-26T20:57:16Z",
+    "updated_at": "2013-11-26T16:28:37Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14879"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/89",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/89/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/89/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/89/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/89",
+    "id": 16055612,
+    "number": 89,
+    "title": "Issue 14815: Link Events - Constraints and Usage not clearly documented (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-06-26T20:56:29Z",
+    "updated_at": "2013-11-06T17:21:50Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14815"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/88",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/88/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/88/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/88/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/88",
+    "id": 16055576,
+    "number": 88,
+    "title": "Issue 14790: Section 8.3.3 [Data] Inconsistency between usage of expressions in Sequence Flows and in Data Associations (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-06-26T20:55:39Z",
+    "updated_at": "2013-11-06T17:23:13Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14790"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/87",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/87/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/87/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/87/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/87",
+    "id": 16055535,
+    "number": 87,
+    "title": "Issue 14784: Define \"Pool\" (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 4,
+    "created_at": "2013-06-26T20:55:00Z",
+    "updated_at": "2013-11-06T17:23:43Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14784"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/86",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/86/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/86/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/86/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/86",
+    "id": 16055468,
+    "number": 86,
+    "title": "Issue 14653: Message flow to/from events in Collaboration diagrams (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-06-26T20:53:50Z",
+    "updated_at": "2013-11-06T17:24:17Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14653"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/85",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/85/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/85/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/85/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/85",
+    "id": 16055420,
+    "number": 85,
+    "title": "Issue 14333: Page 251, Start Event on the boundary of a sub-process (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-06-26T20:52:55Z",
+    "updated_at": "2013-11-27T15:08:50Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14333"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/84",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/84/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/84/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/84/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/84",
+    "id": 16055386,
+    "number": 84,
+    "title": "Issue 14709: Multiple processes per participant (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-06-26T20:52:10Z",
+    "updated_at": "2013-11-27T15:09:57Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14709"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/83",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/83/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/83/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/83/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/83",
+    "id": 16055312,
+    "number": 83,
+    "title": "Issue 14704: optional source and target refs for data association (bpmn2-rtf)",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-06-26T20:50:50Z",
+    "updated_at": "2013-12-18T15:58:41Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14704"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/82",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/82/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/82/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/82/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/82",
+    "id": 16046493,
+    "number": 82,
+    "title": "Link Event Definition: Table 10.98 inconsistent with XSD and MM",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 6,
+    "created_at": "2013-06-26T17:49:23Z",
+    "updated_at": "2013-12-04T14:46:13Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Cardinalities of source and target in Table 10.98 are inconsistent with BPMN's XML Schema and UML Meta-Model:\r\n\r\nTable 10.98 on page 270 (PDF 300) says:\r\n- sources: LinkEventDefinition [1..*]\r\n- target: LinkEventDefinition [1]\r\n\r\nXML Schema says:\r\n```xml\r\n<xsd:element name=\"source\" type=\"xsd:QName\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\r\n<xsd:element name=\"target\" type=\"xsd:QName\" minOccurs=\"0\" maxOccurs=\"1\"/>\r\n```\r\nUML Meta-Model says for both:\r\nLower Bound: 0\r\n(see also Figure 10.73 on page 262 (PDF 292))\r\n\r\n**Proposal**:\r\nChange Table 10.98 on page 270 (PDF 300) into:\r\n- sources: LinkEventDefinition [0..*]\r\n- target: LinkEventDefinition [0..1]"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/79",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/79/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/79/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/79/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/79",
+    "id": 16040105,
+    "number": 79,
+    "title": "Lanes outside Pool not displayed",
+    "user": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Oracle+12.1.3",
+        "name": "Tool: Oracle 12.1.3",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-26T15:46:26Z",
+    "updated_at": "2013-06-26T17:59:31Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "The PNG generated by the Oracle tool shows only the pool 'Pool' and not the lanes. \r\n\r\n![A.4.0-Pool-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/Oracle%20BPM%20Studio%2012.1.3/A.4.0-Pool-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/78",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/78/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/78/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/78/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/78",
+    "id": 16039493,
+    "number": 78,
+    "title": "Location of Task labels is not as expected",
+    "user": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Oracle+12.1.3",
+        "name": "Tool: Oracle 12.1.3",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-26T15:36:07Z",
+    "updated_at": "2013-06-26T18:02:12Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Oracle's tool places the task label below the task instead of within the box.\r\n\r\n![A.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/Oracle%20BPM%20Studio%2012.1.3/A.1.0-import.png)\r\n![A.2.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/Oracle%20BPM%20Studio%2012.1.3/A.2.0-import.png)\r\n![A.3.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/Oracle%20BPM%20Studio%2012.1.3/A.3.0-import.png)\r\n![A.4.0-Pool-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/Oracle%20BPM%20Studio%2012.1.3/A.4.0-Pool-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/77",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/77/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/77/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/77/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/77",
+    "id": 16036901,
+    "number": 77,
+    "title": "A dataObject element is used instead of a dataObjectReference",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-26T14:51:26Z",
+    "updated_at": "2013-06-26T18:04:17Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tool version: 7.0.0\r\n\r\nA _dataObject_ element is used instead of a _dataObjectReference_.\r\n\r\nExcerpt from B.1.0-roundtrip.bpmn of Signiavio:\r\n```xml\r\n<dataObject id=\"_3d35229f-2c75-4d5d-a066-2d14e46e442e\" isCollection=\"false\" name=\"Data Object\"/>\r\n```\r\n\r\nCorresponding excerpt from the reference BPMN:\r\n```xml\r\n<semantic:dataObjectReference dataObjectRef=\"DF1368567393605\" name=\"Data Object\" id=\"_3d35229f-2c75-4d5d-a066-2d14e46e442e\"/>\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/76",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/76/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/76/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/76/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/76",
+    "id": 16036011,
+    "number": 76,
+    "title": "processRef attribute missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-06-26T14:37:35Z",
+    "updated_at": "2013-07-20T15:57:44Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tool version: 7.0.0\r\n\r\nThe _processRef_ attribute for the participant _Participant_ is not specified in the exported BPMN file (roundtrip). Thus, the (existing) process is not linked.\r\n\r\nExcerpt from B.1.0-roundtrip.bpmn of Signiavio:\r\n```xml\r\n   <collaboration id=\"sid-d5603dbc-aaa4-46a1-9d08-1876a573732a\">\r\n      <participant id=\"_0623a9bd-fd34-462a-b09d-85cb5004be78\" name=\"Pool\" processRef=\"WFP-6-2\">\r\n         <extensionElements/>\r\n      </participant>\r\n      <participant id=\"_cde15ee4-b395-43a3-9f5e-9028446f8a52\" name=\"Participant\"/>\r\n      <messageFlow id=\"_9428f666-fc8a-41be-8a77-9b280e14e7ae\" name=\"Message  Flow 2\" sourceRef=\"_2ee553a1-cb03-41e3-b285-345c826fc88d\" targetRef=\"_ec919941-53ec-403d-97e1-6a163a063f21\"/>\r\n      <messageFlow id=\"_5d195b1c-ffea-4b53-b98f-78d9616a5038\" name=\"Message Flow 1\" sourceRef=\"_219b9ca1-d4c5-497d-a4f7-06a44a6da20e\" targetRef=\"_a38484e2-7bdb-48b1-b62e-139d51d6a147\"/>\r\n   </collaboration>\r\n```\r\n\r\nCorresponding excerpt from the reference BPMN:\r\n```xml\r\n    <semantic:collaboration id=\"C1368567393829\">\r\n        <semantic:participant name=\"Participant\" processRef=\"WFP-6-1\" id=\"_cde15ee4-b395-43a3-9f5e-9028446f8a52\"/>\r\n        <semantic:participant name=\"Pool\" processRef=\"WFP-6-2\" id=\"_0623a9bd-fd34-462a-b09d-85cb5004be78\"/>\r\n        <semantic:messageFlow messageRef=\"Message_1368567393830\" name=\"Message Flow 1\" sourceRef=\"_219b9ca1-d4c5-497d-a4f7-06a44a6da20e\" targetRef=\"_a38484e2-7bdb-48b1-b62e-139d51d6a147\" id=\"_5d195b1c-ffea-4b53-b98f-78d9616a5038\"/>\r\n        <semantic:messageFlow messageRef=\"Message_1368567393831\" name=\"Message  Flow 2\" sourceRef=\"_2ee553a1-cb03-41e3-b285-345c826fc88d\" targetRef=\"_ec919941-53ec-403d-97e1-6a163a063f21\" id=\"_9428f666-fc8a-41be-8a77-9b280e14e7ae\"/>\r\n        <semantic:group categoryValueRef=\"Value_Cat1368567393832\" id=\"_bd04180e-49f6-4cf0-a7d6-da59e2840b4b\"/>\r\n    </semantic:collaboration>\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/74",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/74/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/74/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/74/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/74",
+    "id": 15925029,
+    "number": 74,
+    "title": "Missing attribute capacity for DataStores",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:40:10Z",
+    "updated_at": "2013-06-24T13:40:10Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: B.1.0, B.2.0\r\nRoundtrip\r\n\r\n-------------------------------------\r\nAfter roundtrip the attribute ```capacity``` is missing for ```DataStores```.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/73",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/73/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/73/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/73/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/73",
+    "id": 15925010,
+    "number": 73,
+    "title": "No ioSpecification possible for SubProcesses",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:39:47Z",
+    "updated_at": "2013-06-24T13:39:47Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: B.2.0\r\nExport\r\n\r\n-------------------------------------\r\nIt is not possible to create a ```ioSpecification``` for ```SubProcesses```.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/72",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/72/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/72/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/72/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/72",
+    "id": 15924994,
+    "number": 72,
+    "title": "Creation of MultiInstance and Loop markers not possible",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:39:28Z",
+    "updated_at": "2013-06-24T13:39:28Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: B.2.0\r\nExport\r\n\r\n-------------------------------------\r\nIt is not possible to create a ```StandardLoopCharacteristics``` and ```MultiInstanceCharacteristics``` and therefore, the corresponding markers cannot be created.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/71",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/71/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/71/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/71/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/71",
+    "id": 15924980,
+    "number": 71,
+    "title": "Creation of DataObjects not possible for Collaborations",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:39:12Z",
+    "updated_at": "2013-06-24T13:39:12Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: B.1.0, B.2.0\r\nImport\r\n\r\n-------------------------------------\r\nIt is not possible to create a ```DataObject``` (therefore, the ```dataInputAssociation``` of Service Task 7 cannot be created)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/70",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/70/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/70/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/70/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/70",
+    "id": 15924970,
+    "number": 70,
+    "title": "Creation of Expanded CallActivity is not possible",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:38:55Z",
+    "updated_at": "2013-06-24T13:38:55Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: B.2.0\r\nImport\r\n\r\n-------------------------------------\r\nIt is not possible to create an expanded ```CallActivity``` referencing a process definition. The process definition is always created in a separate diagram.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/69",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/69/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/69/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/69/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/69",
+    "id": 15924950,
+    "number": 69,
+    "title": "CallActivity: task type marker not visible",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:38:29Z",
+    "updated_at": "2013-06-24T13:38:29Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: B.1.0, B.2.0\r\nImport\r\n\r\n-------------------------------------\r\nThe task type marker (User) is not visible when opening the files. After editing the CallActivity the marker appears.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/68",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/68/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/68/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/68/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/68",
+    "id": 15924931,
+    "number": 68,
+    "title": "BPMNDI attribute messageVisibleKind is missing",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:38:11Z",
+    "updated_at": "2013-06-24T13:41:22Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: B.2.0\r\nImport, Roundtrip\r\n\r\n-------------------------------------\r\nOn Import the message envelope is not shown for Message Flow 1.\r\nAfter roundtrip the BPMNEdge attribute ```messageVisibleKind``` is missing.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/67",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/67/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/67/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/67/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/67",
+    "id": 15924911,
+    "number": 67,
+    "title": "BPMNDI attribute isMarkerVisible overwritten with true",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:37:54Z",
+    "updated_at": "2013-06-24T13:37:54Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: A.2.0, B.1.0, B.2.0\r\nRoundtrip\r\n\r\n-------------------------------------\r\nAfter roundtrip all exclusive gateways are defined to be shown with the \"X\" marker as the BPMNShape attribute ```isMarkerVisible``` is set to ```true```\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/66",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/66/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/66/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/66/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/66",
+    "id": 15924890,
+    "number": 66,
+    "title": "Issues with single participant in collaboration",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:37:34Z",
+    "updated_at": "2013-06-24T13:37:34Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: A.4.0\r\nExport\r\n\r\n-------------------------------------\r\nModeling of two processes with message flows is by default only possible when two ```Participants``` are defined in the collaboration, which have to be visualized with two corresponding pools. \r\nIt is possible to recreate the model A.4.0 to some degree, but eclipse blocks the creation of a ```MessageFlow``` from Task 5 to Task 2 (only SequenceFlows are allowed). \r\nHowever using two pools (see A.4.0-export-2pools.bpmn) it is possible to model A.4.0 without issues.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/65",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/65/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/65/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/65/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/65",
+    "id": 15924873,
+    "number": 65,
+    "title": "BPMNDI attribute isExpanded is ignored",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:37:03Z",
+    "updated_at": "2013-06-24T13:37:03Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: A.3.0, B.1.0, B.2.0\r\nImport, Export, Roundtrip\r\n\r\n-------------------------------------\r\nThe ```BPMNShape``` attribute ```isExpanded``` is always interpreted and saved as ```true```. This implies that on import/opening all sub-processes are shown expanded by default.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/64",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/64/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/64/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/64/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/64",
+    "id": 15924861,
+    "number": 64,
+    "title": "Labeling of Groups is not possible",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:36:40Z",
+    "updated_at": "2013-06-24T13:36:40Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: B.1.0, B.2.0\r\nImport, Export, Roundtrip\r\n\r\n-------------------------------------\r\nIt is not possible to label a ```Group``` - a selected ```CategoryValue``` is not shown as a ```Group``` Label.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/63",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/63/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/63/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/63/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/63",
+    "id": 15924841,
+    "number": 63,
+    "title": "Labels for BoundaryEvents are not displayed",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:36:15Z",
+    "updated_at": "2013-06-24T13:36:15Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: A.3.0, B.2.0\r\nImport, Export\r\n\r\n-------------------------------------\r\neclipse BPMN2 modeler does not show the ```name``` of ```BoundaryEvents```"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/62",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/62/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/62/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/62/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/62",
+    "id": 15924824,
+    "number": 62,
+    "title": "BPMNDI: Rounding of values",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:35:49Z",
+    "updated_at": "2013-06-24T13:35:49Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: A.1.0, A.2.0, A.3.0, A.4.0, B.1.0, B.2.0\r\nRoundtrip\r\n\r\n-------------------------------------\r\n```height```, ```width```, ```x``` and ```y``` values for BPMNDI/DC elements are rounded during roundtrip.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/61",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/61/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/61/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/61/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/61",
+    "id": 15924785,
+    "number": 61,
+    "title": "dc:Font attributes deleted on roundtrip",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:35:15Z",
+    "updated_at": "2013-06-24T13:35:15Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: A.1.0, A.2.0, A.3.0, A.4.0, B.1.0, B.2.0\r\nRoundtrip\r\n\r\n-------------------------------------\r\nThe ```dc:Font``` attributes ```isBold=\"false\" isItalic=\"false\" isStrikeThrough=\"false\" isUnderline=\"false\"``` are deleted during roundtrip."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/60",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/60/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/60/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/60/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/60",
+    "id": 15924767,
+    "number": 60,
+    "title": "Label positions not saved/interpreted",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-06-24T13:34:46Z",
+    "updated_at": "2013-06-24T13:34:46Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "-------------------------------------\r\nTool: eclipse BPMN2 modeler\r\nAffected Tests: A.1.0, A.2.0, A.3.0, A.4.0, B.1.0, B.2.0\r\nImport, Export, Roundtrip\r\n\r\n-------------------------------------\r\nLabel positions are not saved when saving a (newly) created model.\r\nBPMNDI label position definitions are ignored when displaying models."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/59",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/59/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/59/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/59/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/59",
+    "id": 15912573,
+    "number": 59,
+    "title": "B.2.0 Violation of EventBasedGateway Constraint",
+    "user": {
+      "login": "matthiasgeiger",
+      "id": 676652,
+      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
+      "url": "https://api.github.com/users/matthiasgeiger",
+      "html_url": "https://github.com/matthiasgeiger",
+      "followers_url": "https://api.github.com/users/matthiasgeiger/followers",
+      "following_url": "https://api.github.com/users/matthiasgeiger/following{/other_user}",
+      "gists_url": "https://api.github.com/users/matthiasgeiger/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/matthiasgeiger/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/matthiasgeiger/subscriptions",
+      "organizations_url": "https://api.github.com/users/matthiasgeiger/orgs",
+      "repos_url": "https://api.github.com/users/matthiasgeiger/repos",
+      "events_url": "https://api.github.com/users/matthiasgeiger/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/matthiasgeiger/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 5,
+    "created_at": "2013-06-24T08:04:54Z",
+    "updated_at": "2013-07-31T14:40:09Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Hi,\r\nI'm currently evaluating the eclipse BPMN2 modeler and in doing so I spotted a spec violation in the reference model B.2.0:\r\nThe \"Event Base Gateway 3\" links to a Message Intermediate Catch Event and to a Receive Task. This is not allowed by the Spec (p. 298):\r\n\r\n    \"Event-Based Gateways are configured by having outgoing Sequence Flows target\r\n    an Intermediate Event or a Receive Task in any combination[...] except that: \r\n    If Message Intermediate Events are used in the configuration, then Receive \r\n    Tasks MUST NOT be used in that configuration and vice versa.\"\r\n\r\nKind regards,\r\nMatthias"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/56",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/56/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/56/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/56/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/56",
+    "id": 15353914,
+    "number": 56,
+    "title": "B.1.0. Pool and Lane bounds",
+    "user": {
+      "login": "krat0s",
+      "id": 1541830,
+      "avatar_url": "https://gravatar.com/avatar/8115d254a3580355da264a018cb10bbe?d=https%3A%2F%2Fidenticons.github.com%2F33c20129c3e707ecf83cb2819052c744.png&r=x",
+      "gravatar_id": "8115d254a3580355da264a018cb10bbe",
+      "url": "https://api.github.com/users/krat0s",
+      "html_url": "https://github.com/krat0s",
+      "followers_url": "https://api.github.com/users/krat0s/followers",
+      "following_url": "https://api.github.com/users/krat0s/following{/other_user}",
+      "gists_url": "https://api.github.com/users/krat0s/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/krat0s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/krat0s/subscriptions",
+      "organizations_url": "https://api.github.com/users/krat0s/orgs",
+      "repos_url": "https://api.github.com/users/krat0s/repos",
+      "events_url": "https://api.github.com/users/krat0s/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/krat0s/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/enhancement",
+        "name": "enhancement",
+        "color": "84b6eb"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-06-10T15:40:09Z",
+    "updated_at": "2013-06-11T07:58:51Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "The BPMN spec requires that a lane shape extend the full length of its enclosing pool. This, however, is hard to achieve as BPMNDI does not specify the size of the pool label box. Since tool vendors are free to define whatever size they like, pools and lanes will hardly ever be aligned.\r\n\r\nBruce Silver and I have discussed this issue a while back and we then agreed that the best thing to do would be to export the inner bounds of a pool instead. That way lanes will always be perfectly aligned and there is no risk of the separating label line crossing another shape that was drawn too close to the borders.\r\n\r\nBruce Silver also recommends this approach in his book 'BPMN Method & Style': \"...in BPMN-I the dc:Bounds/@x value of horizontal lane and pool shapes should be the same. (p. 206)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/54",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/54/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/54/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/54/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/54",
+    "id": 14527118,
+    "number": 54,
+    "title": "BPMN XML different",
+    "user": {
+      "login": "arnaiz99",
+      "id": 4087028,
+      "avatar_url": "https://gravatar.com/avatar/dce17eb94cfe766b6cf246b4b6a4fbe9?d=https%3A%2F%2Fidenticons.github.com%2F7a8b8a53c0acea575c9ca8607f211a26.png&r=x",
+      "gravatar_id": "dce17eb94cfe766b6cf246b4b6a4fbe9",
+      "url": "https://api.github.com/users/arnaiz99",
+      "html_url": "https://github.com/arnaiz99",
+      "followers_url": "https://api.github.com/users/arnaiz99/followers",
+      "following_url": "https://api.github.com/users/arnaiz99/following{/other_user}",
+      "gists_url": "https://api.github.com/users/arnaiz99/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/arnaiz99/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/arnaiz99/subscriptions",
+      "organizations_url": "https://api.github.com/users/arnaiz99/orgs",
+      "repos_url": "https://api.github.com/users/arnaiz99/repos",
+      "events_url": "https://api.github.com/users/arnaiz99/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/arnaiz99/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+BPM",
+        "name": "Tool: IBM BPM",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-05-20T16:19:38Z",
+    "updated_at": "2013-06-10T15:44:53Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Export and Roundtrip tests produce bpmn code in a very different way. The number of discrepancies is big.\r\n\r\nTested with: IBM BPM 8.0.1"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/53",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/53/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/53/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/53/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/53",
+    "id": 14527035,
+    "number": 53,
+    "title": "Boundary Escalation Event not supported",
+    "user": {
+      "login": "arnaiz99",
+      "id": 4087028,
+      "avatar_url": "https://gravatar.com/avatar/dce17eb94cfe766b6cf246b4b6a4fbe9?d=https%3A%2F%2Fidenticons.github.com%2F7a8b8a53c0acea575c9ca8607f211a26.png&r=x",
+      "gravatar_id": "dce17eb94cfe766b6cf246b4b6a4fbe9",
+      "url": "https://api.github.com/users/arnaiz99",
+      "html_url": "https://github.com/arnaiz99",
+      "followers_url": "https://api.github.com/users/arnaiz99/followers",
+      "following_url": "https://api.github.com/users/arnaiz99/following{/other_user}",
+      "gists_url": "https://api.github.com/users/arnaiz99/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/arnaiz99/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/arnaiz99/subscriptions",
+      "organizations_url": "https://api.github.com/users/arnaiz99/orgs",
+      "repos_url": "https://api.github.com/users/arnaiz99/repos",
+      "events_url": "https://api.github.com/users/arnaiz99/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/arnaiz99/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+BPM",
+        "name": "Tool: IBM BPM",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-05-20T16:17:20Z",
+    "updated_at": "2013-06-10T15:45:14Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "The boundary event \"Boundary Intermediate Event Interrupting Escalation\" is not supported.\r\n\r\nTested with: IBM BPM 8.0.1"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/52",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/52/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/52/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/52/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/52",
+    "id": 14419943,
+    "number": 52,
+    "title": "Label justification in BPMN DI",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-05-16T18:30:10Z",
+    "updated_at": "2013-12-18T17:39:41Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "BPMN MIWG recommends to the BPMN 2.1 RTF to add a justification attribute to the BPMN DI Label in order properly complete rendering within the bounds of the label."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/51",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/51/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/51/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/51/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/51",
+    "id": 14419400,
+    "number": 51,
+    "title": "gatewayDirection attribute pertinence",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-05-16T18:18:46Z",
+    "updated_at": "2013-12-04T14:42:32Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "It is proposed to the BPMN 2.1 RTF to remove gatewayDirection attribute as BPMN MIWG fail to see the value of this attribute. It seems to duplicate information already derivable from the model  (it may actually lead to conflict with the model)."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/47",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/47/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/47/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/47/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/47",
+    "id": 14349174,
+    "number": 47,
+    "title": "Unable to create a _expanded_ call activity using the tool ",
+    "user": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Yaoqiang+BPMN+Editor",
+        "name": "Tool: Yaoqiang BPMN Editor",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 6,
+    "created_at": "2013-05-15T09:00:52Z",
+    "updated_at": "2013-12-07T18:03:24Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "When created using another tool, Yaoqiang is capable of displaying the call activity expanded. Also a sub-process may be expanded and collapsed fine. "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/43",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/43/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/43/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/43/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/43",
+    "id": 13937719,
+    "number": 43,
+    "title": "Group missing",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-05-03T14:59:28Z",
+    "updated_at": "2013-12-09T07:17:30Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.1.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.1.0-import.png)\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/42",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/42/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/42/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/42/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/42",
+    "id": 13937683,
+    "number": 42,
+    "title": "Message symbol missing",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-05-03T14:58:31Z",
+    "updated_at": "2013-12-09T07:15:48Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/38",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/38/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/38/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/38/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/38",
+    "id": 13937338,
+    "number": 38,
+    "title": "Expanded Call Activity displayed without content",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-05-03T14:50:49Z",
+    "updated_at": "2013-12-09T06:58:25Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.1.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.1.0-import.png)\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/35",
+    "id": 13853852,
+    "number": 35,
+    "title": "Data associations cannot be assigned a name / label",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-05-01T16:02:59Z",
+    "updated_at": "2013-05-03T15:07:23Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Data associations cannot be assigned a name / label in the tool.\r\nTherefore, the associations cannot be imported or exported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the center left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/34",
+    "id": 13853771,
+    "number": 34,
+    "title": "Collapsed call activities display the name of the called process - not the assigned name",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-05-01T16:00:46Z",
+    "updated_at": "2013-05-03T15:07:55Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Collapsed call activities display the name of the called process. A name may be assigned but is not displayed.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy at the cennter border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/33",
+    "id": 13852084,
+    "number": 33,
+    "title": "Cameo Business Modeler lacks direct support for *.BPMN XML Import",
+    "user": {
+      "login": "lonniev",
+      "id": 2193384,
+      "avatar_url": "https://gravatar.com/avatar/49598db116dc6181e40aeef9244417d8?d=https%3A%2F%2Fidenticons.github.com%2F1a4c5e573631d10bae7be7641380ee35.png&r=x",
+      "gravatar_id": "49598db116dc6181e40aeef9244417d8",
+      "url": "https://api.github.com/users/lonniev",
+      "html_url": "https://github.com/lonniev",
+      "followers_url": "https://api.github.com/users/lonniev/followers",
+      "following_url": "https://api.github.com/users/lonniev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lonniev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lonniev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lonniev/subscriptions",
+      "organizations_url": "https://api.github.com/users/lonniev/orgs",
+      "repos_url": "https://api.github.com/users/lonniev/repos",
+      "events_url": "https://api.github.com/users/lonniev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lonniev/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Cameo+Business+Modeler",
+        "name": "Tool: Cameo Business Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-05-01T15:19:25Z",
+    "updated_at": "2013-05-06T10:48:41Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Cameo Business Modeler lacks direct support for importation of the *.BPMN XML file format. The tool provides import support for XPDL and XMI formats."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/29",
+    "id": 13733410,
+    "number": 29,
+    "title": "Data store reference names are not displayed",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-04-28T11:45:18Z",
+    "updated_at": "2013-04-30T11:37:16Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Data store references are imported, yet not displayed. The node is assigned the name correctly. Yet, data store references have a separate label which is assigned a default text. The name of the node can be retrieved when looking at the node properties.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data store reference in question is in the left center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
+    "id": 13733336,
+    "number": 28,
+    "title": "B.1.0 Data object names are ommitted",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-04-28T11:37:52Z",
+    "updated_at": "2013-04-30T11:37:50Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Data object names are not imported.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data object in question is in the center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
+    "id": 13733261,
+    "number": 27,
+    "title": "Expanded call activities and collapsed subprocesses are not supported.",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-04-28T11:29:10Z",
+    "updated_at": "2013-05-01T16:02:54Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Call activities cannot be expanded in MID Innovator. Therefore, they are not imported correctly as *expanded call activities* but as *collapsed call activities*. The elements of the expanded call activity are not supported as well.\r\nAs modeling expanded call activities is not supported by the software, the export fails as well.\r\n\r\nSimilarly, collapsed subprocesses are not supported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the lower left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
+    "id": 13594794,
+    "number": 24,
+    "title": "Text annotations are not exported",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-04-24T15:44:58Z",
+    "updated_at": "2013-04-28T11:38:21Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Text annotations are not exported in the BPMN file.\r\n\r\nExample B.1.0:\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n* [Exported BPMN](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-export.bpmn)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
+    "id": 13594240,
+    "number": 23,
+    "title": "BPMN text annotations are not imported",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-04-24T15:37:19Z",
+    "updated_at": "2013-04-28T11:38:42Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Text annotations appear not to be imported from the BPMN file in MID Innovator.\r\n\r\nExample B.1.0:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
+    "id": 13587618,
+    "number": 21,
+    "title": "Import places Events and Gateways in upper left corner",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-04-24T13:47:32Z",
+    "updated_at": "2013-04-29T09:33:45Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "In MID Innovator 11 R5 E (Version 11.5.1.30223) Events and Gateways are positioned in the upper left corner of the containing Lane.\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
+    "id": 13586218,
+    "number": 20,
+    "title": "Sequence Flows not imported",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-04-24T13:25:14Z",
+    "updated_at": "2013-04-29T09:35:08Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Matthias Kurz reported: \"The Innovator creates both a process model as well as a diagram during update (these are two different yet linked entities in Innovator). Yet the diagram misses basic basic layout information like connectors.\"\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
   }
 ]
