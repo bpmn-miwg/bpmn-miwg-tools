@@ -67,6 +67,7 @@
       //          "sAjaxSource": toolsUrl,
       //          "sAjaxDataProp": "tools",
                 "aaData": toolsTestedByMIWG.tools,
+                "aaSorting": [[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ], [ 6, "desc" ], [ 7, "desc" ], [ 8, "desc" ], [ 9, "asc" ], [10, "desc" ]],
                 "aoColumns": [
                     { "mData": "vendor" },
                     { "mData": "tool",
@@ -78,6 +79,8 @@
                     { "mData": "hasExport", "mRender": renderBoolean },
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
                     { "mData": "testResultsSubmitted", "mRender": renderBoolean },
+                    { "mData": "participatedInDemos", "mRender": renderBoolean },
+                    { "mData": "openSource", "mRender": renderBoolean },
                     { "mData": "openIssues",
                       "mRender": function ( data, type, full ) {
                         return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(' ', '+') + '">' + data + '</a>';
@@ -86,8 +89,6 @@
                       "mRender": function ( data, type, full ) {
                         return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=closed&labels=Tool%3A+' + full.tool.replace(' ', '+') + '">' + data + '</a>';
                       } },
-                    { "mData": "participatedInDemos", "mRender": renderBoolean },
-                    { "mData": "openSource", "mRender": renderBoolean },
       //               { "mData": "notes" },
                 ],
               } );
@@ -164,10 +165,10 @@
             <th>Has Export</th>
             <th>Has Roundtrip</th>
             <th>Test Results submitted</th>
-            <th>Open Issues</th>
-            <th>Closed Issues</th>
             <th>Participates in Demos</th>
             <th>Open Source</th>
+            <th>Open Issues</th>
+            <th>Closed Issues</th>
 <!--             <th>Notes</th> -->
           </tr>
         </thead>
