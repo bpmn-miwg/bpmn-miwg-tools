@@ -72,7 +72,11 @@
                     { "mData": "vendor" },
                     { "mData": "tool",
                       "mRender": function ( data, type, full ) {
-                        return '<a href="'+full.website+'">'+data+' '+full.version+'</a>';
+                        if (full.website.length == 0) {
+                          return data;
+                        } else {
+                          return '<a href="'+full.website+'">'+data+' '+full.version+'</a>';
+                        }
                       } },
                     { "mData": "supportsBpmn2", "mRender": renderBoolean },
                     { "mData": "hasImport", "mRender": renderBoolean },
