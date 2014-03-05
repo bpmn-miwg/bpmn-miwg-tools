@@ -1,0 +1,19 @@
+
+
+.description {
+	font-style: italic;
+}
+
+
+.caption {
+	font-weight: bold;
+	margin-top : 12px;
+}
+
+.caption2 {
+	font-weight: bolder;
+}
+
+.bpmn-image {
+	max-width : 100%;
+}
