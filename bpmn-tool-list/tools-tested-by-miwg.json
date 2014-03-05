@@ -1,5 +1,20 @@
 {
   "tools": [
+     {
+      "vendor": "W4 Software",
+      "tool": "W4 BPMN+ Composer",
+      "version": "9.0",
+      "website": "http://http://en.w4software.com/product/bpmn-plus.htm",
+      "bpiId": "",
+      "supportsBpmn2": true,
+      "hasImport": true,
+      "hasExport": true,
+      "hasRoundtrip": true,
+      "testResultsSubmitted": false,
+      "participatedInDemos": true,
+      "openSource": false,
+      "notes": ""
+    },
     {
       "vendor": "camunda services GmbH",
       "tool": "camunda Modeler",
@@ -169,8 +184,8 @@
       "vendor": "itp-commerce",
       "tool": "Process Modeler for Visio",
       "version": "6.3442.15675",
-      "website": "",
-      "bpiId": "",
+      "website": "http://www.itp-commerce.com/",
+      "bpiId": "itp-commerce-process-modeler-for-microsoft-visio",
       "supportsBpmn2": true,
       "hasImport": true,
       "hasExport": true,
