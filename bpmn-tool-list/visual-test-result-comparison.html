@@ -76,13 +76,10 @@ function loadJSON() {
               
               $("<p class='caption'>" + variation.variation + " reference</p>").appendTo(refDiv);
 
-              if (variation.png) {
-                var png_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "png");
-                $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' /></a>").appendTo(refDiv);
-                //$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
-              } else {
-                $("<p>No image.</p>").appendTo(refDiv);
-              }
+              var png_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "png");
+              $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' /></a>").appendTo(refDiv);
+              //$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
+
               var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "bpmn");
               var folder_url = url_pattern.folder.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference");
 
@@ -128,44 +125,38 @@ function toolSelected() {
   $("#message").text("Processing results...");
 
   var selectedTool = $("#selector").val();
-  var selectedToolJSON = findInList(jsonData.results, "tool", selectedTool);
+//   var selectedToolJSON = findInList(jsonData.results, "tool", selectedTool);
   var url_pattern = jsonData.config.url_pattern;
 
   referenceVariations.forEach(function(referenceVariation) {
     var div = resultDIVs[referenceVariation];
-    
-    var resultsVariation = findInList(selectedToolJSON.variations, "variation", referenceVariation);
+ 
+    div.empty();
 
-    if (resultsVariation) {
+    ['import', 'export', 'roundtrip'].forEach(function(type) {
 
-      div.empty();
+      $("<p class='caption'>" + referenceVariation + " " + type + "</p>").appendTo(div);
 
-      resultsVariation.types.forEach(function(type) {
-
-        $("<p class='caption'>" + referenceVariation + " " + type.type + "</p>").appendTo(div);
-
-        var categoryID = referenceVariation[0];
-        var categoryJSON = findInList(jsonData.categories, "category", categoryID);
+      var categoryID = referenceVariation[0];
+      var categoryJSON = findInList(jsonData.categories, "category", categoryID);
 
 
-        var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type.type).replace("{FILEEXT}", "bpmn");
-        var png_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type.type).replace("{FILEEXT}", "png");
-        var folder_url = url_pattern.folder.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool);
-        var img_id = "'" + referenceVariation + "-" + type.type + "'"
-        //if (type.png) {
-          $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' onerror='ImgError(this);'/></a>").appendTo(div);
-        //} else {
-        //  $("<p>No image.</p>").appendTo(div);
-        //}
+      var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type).replace("{FILEEXT}", "bpmn");
+      var png_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type).replace("{FILEEXT}", "png");
+      var folder_url = url_pattern.folder.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool);
+      var img_id = "'" + referenceVariation + "-" + type + "'"
+      //if (type.png) {
+        $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' onerror='ImgError(this);'/></a>").appendTo(div);
+      //} else {
+      //  $("<p>No image.</p>").appendTo(div);
+      //}
 
-        var nav = $("<ul class='nav nav-pills'/>").appendTo(div);
+      var nav = $("<ul class='nav nav-pills'/>").appendTo(div);
 
-        $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
-        $("<li><a href='" + folder_url + "' target='_blank'>Results folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+      $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+      $("<li><a href='" + folder_url + "' target='_blank'>Results folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
 
-      });
-
-    }
+    });
 
   });
 
@@ -185,9 +176,10 @@ function findInList(list, attribute, value) {
 }
 
 function ImgError(img) {
-  img.onerror = null;
-  img.src="img/fallback.png";
-  img.width = 32;
+  var a = img.parentElement
+  a.removeChild(img);
+  a.href = "https://github.com/bpmn-miwg/bpmn-miwg-test-suite#how-to-test-a-bpmn-tool-using-this-test-suite"
+  a.textContent = 'There is no test result available. Please submit test results.';
 }
 
 </script>

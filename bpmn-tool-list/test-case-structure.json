@@ -13,7 +13,6 @@
                         {
                             "description": "Depict Abstract Elements on a single Sequential Flow",
                             "name": "Base",
-                            "png": true,
                             "tool": "Trisotech BPMN 2.0 Modeler for Visio 4.0",
                             "variation": "A.1.0"
                         }
@@ -26,7 +25,6 @@
                         {
                             "description": "Depict divergence and convergence of flows with unmarked Gateways",
                             "name": "Base",
-                            "png": true,
                             "tool": "Trisotech BPMN 2.0 Modeler for Visio 4.0",
                             "variation": "A.2.0"
                         }
@@ -39,7 +37,6 @@
                         {
                             "description": "Depict Exception Flows associated to boundary attachments",
                             "name": "Base",
-                            "png": true,
                             "tool": "Trisotech BPMN 2.0 Modeler for Visio 4.0",
                             "variation": "A.3.0"
                         }
@@ -52,14 +49,12 @@
                         {
                             "description": "Depict graphical elements contained in expanded Sub-Processes, Lanes and Pools",
                             "name": "Base",
-                            "png": true,
                             "tool": "Trisotech BPMN 2.0 Modeler for Visio 4.0",
                             "variation": "A.4.0"
                         },
                         {
                             "description": "Vertical Modeling Direction",
                             "name": "Vertical",
-                            "png": true,
                             "tool": "Trisotech BPMN 2.0 Modeler for Visio 4.0",
                             "variation": "A.4.1"
                         }
@@ -80,7 +75,6 @@
                         {
                             "description": "Validate that all the elements prescribed for the Descriptive Conformance Sub-Class in the BPMN 2.0 Specification are present.",
                             "name": "Base",
-                            "png": true,
                             "tool": "Trisotech BPMN 2.0 Modeler for Visio 4.0",
                             "variation": "B.1.0"
                         }
@@ -93,7 +87,6 @@
                         {
                             "description": "Validate that all the elements prescribed for the Analytic Conformance Sub-Class in the BPMN 2.0 Specification are present.",
                             "name": "Base",
-                            "png": true,
                             "tool": "Trisotech BPMN 2.0 Modeler for Visio 4.0",
                             "variation": "B.2.0"
                         }
