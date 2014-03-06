@@ -28,7 +28,7 @@
       "testResultsSubmitted": true,
       "participatedInDemos": true,
       "openSource": true,
-      "notes": ""
+      "notes": "Export tested with v2.2.0"
     },
     {
       "vendor": "camunda services GmbH",
@@ -228,7 +228,7 @@
     {
       "vendor": "BOC Group",
       "tool": "ADONIS",
-      "version": "5.1 UL5 (mfb_bpmn_1.1)",
+      "version": "5.1 UL5",
       "website": "",
       "bpiId": "adonis-2",
       "supportsBpmn2": true,
@@ -238,7 +238,7 @@
       "testResultsSubmitted": true,
       "participatedInDemos": true,
       "openSource": false,
-      "notes": ""
+      "notes": "(mfb_bpmn_1.1)"
     },
     {
       "vendor": "JBoss",
