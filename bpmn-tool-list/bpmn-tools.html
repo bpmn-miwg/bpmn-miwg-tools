@@ -73,7 +73,7 @@
                     { "mData": "tool",
                       "mRender": function ( data, type, full ) {
                         if (full.website.length == 0) {
-                          return data;
+                          return data+' '+full.version;
                         } else {
                           return '<a href="'+full.website+'">'+data+' '+full.version+'</a>';
                         }
