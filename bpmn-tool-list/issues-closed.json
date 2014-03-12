@@ -204,11 +204,6 @@
     "created_at": "2013-12-04T14:26:51Z",
     "updated_at": "2014-01-23T16:35:47Z",
     "closed_at": "2014-01-23T16:35:47Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The current serialization of A.4.1 reference test case is missing the Label Style (bpmndi:BPMNLabelStyle)  definition in its serialization"
   },
   {
@@ -313,11 +308,6 @@
     "created_at": "2013-11-25T13:10:21Z",
     "updated_at": "2013-12-09T07:13:57Z",
     "closed_at": "2013-12-09T07:13:57Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "according to spec a missing isExpanded attribute is equivalent to isExpanded = false \r\n\r\nTested with camunda Modeler version 2.2.0\r\n\r\n\r\n![A.3.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/camunda%20Modeler%202.2.0/A.3.0-import.png)\r\n\r\n![B.2.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20Modeler%202.2.0/B.2.0-import.png)"
   },
   {
@@ -377,11 +367,6 @@
     "created_at": "2013-11-25T12:57:32Z",
     "updated_at": "2013-12-11T14:33:13Z",
     "closed_at": "2013-12-11T14:33:13Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Tested with camunda Modeler version 2.2.0 and camunda-bpmn.js renderer\r\n\r\n\r\n![B.1.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20Modeler%202.2.0/B.1.0-import.png)\r\n![B.2.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20Modeler%202.2.0/B.2.0-import.png)\r\n"
   },
   {
@@ -561,11 +546,6 @@
     "created_at": "2013-10-09T15:49:54Z",
     "updated_at": "2013-10-23T16:39:42Z",
     "closed_at": "2013-10-23T16:39:42Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "I got a question regarding a special modelling style. The question is how do you connect the message decorator to a message flow correctly. \r\n\r\nFirst option would be to put it directly on the message flow as shown in the BPMN 2.0 spec on page 411 (see MessageFlow_V1 below)\r\n\r\nSecond option would be to connect the Message decorator via an undirected association to the message flow (see MessageFlow_V2 below). \r\n\r\nI am wondering now if the MessageFlow_V2 example is actually valid BPMN 2.0 and interchangeable with the XML serialization.\r\n\r\nFrom my point of view it is no valid BPMN 2.0 as Message is no FlowElement and therefore cannot be referenced by the BPMNShape element in the BPMNDI part which makes it impossible to place the Message decorator to any arbitrary position as done in MessageFlow_V2.\r\n\r\nAdditionally there is no BPMNShape listed in the spec for the single message symbol (table 12.35 on page 411). Sections BPMNShape (Section 12.3.2) and BPMNEdge (Section 12.3.3) also supports this. So I would say the meta model of BPMN 2.0 does not support this.\r\n\r\nMessageFlow_V1: Message Flow with Message decorator\r\n![message association v1](https://f.cloud.github.com/assets/3901085/1296823/8604011e-30d2-11e3-9cbf-835453a08d74.png)\r\n\r\nMessageFlow_V2: Message Flow with Message decorator connected via association\r\n![message association v2](https://f.cloud.github.com/assets/3901085/1296822/860353cc-30d2-11e3-9246-fb6122b51c85.png)\r\n"
   },
   {
@@ -620,11 +600,6 @@
     "created_at": "2013-09-04T15:41:30Z",
     "updated_at": "2013-09-19T08:12:09Z",
     "closed_at": "2013-09-19T08:12:09Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "As may be seen here: http://tools.bpmn-miwg.cloudbees.net/xml-compare/Yaoqiang%202.2.6-A-roundtrip.html, when one tool specifies the schemaLocation but the other does not this is highlighted by the xml-compare tool.\r\n\r\nAfter discussion at the meeting 4th Sept 13 we recommend that the tool to continue to show this but we should indicate it is a subject of differing practice so of lesser importance. "
   },
   {
@@ -872,11 +847,6 @@
     "created_at": "2013-07-12T19:44:34Z",
     "updated_at": "2013-11-28T14:27:02Z",
     "closed_at": "2013-11-28T14:27:02Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The BPMN serialization of A.4.1 contains an extra lane without label in the left pool.\r\nIt is impossible for someone to know this when trying to reproduce the provided images. "
   },
   {
@@ -944,11 +914,6 @@
     "created_at": "2013-07-12T19:38:51Z",
     "updated_at": "2013-11-28T14:25:48Z",
     "closed_at": "2013-11-28T14:25:48Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The laneset containing \"lane 1\" and \"lane 2\" is not contained in a Pool in Reference A.4.0.  Should be in the variation"
   },
   {
@@ -1021,11 +986,6 @@
     "created_at": "2013-07-12T19:32:27Z",
     "updated_at": "2013-12-18T18:38:44Z",
     "closed_at": "2013-11-28T14:23:47Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Label Bounds are missing in BPMNDI\r\nLabel positioning information is done via proprietary extensions\r\nThus any tool that import this reference needs to resolve to default label poistion.\r\nThe reference A.4.1 image does not show labels in their default position"
   },
   {
@@ -1143,11 +1103,6 @@
     "created_at": "2013-07-03T16:19:19Z",
     "updated_at": "2013-07-12T19:18:24Z",
     "closed_at": "2013-07-12T19:18:24Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The new B.1.0 and B.2.0 tests introduced a regression: The name attribute values of elements often have odd spaces.\r\nE.g., ``` name=\"Collapsed Sub- Process 1 Multi- Instances \"``` in the following BPMN file.\r\n\r\n**Link to B.2.0.bpmn**:\r\n[Link](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.2.0.bpmn)\r\n\r\n**Excerpt from B.2.0.bpmn**:\r\n```xml\r\n        <semantic:parallelGateway gatewayDirection=\"Unspecified\" name=\"Parallel Gateway 2 \" id=\"_397c783e-ad6a-4cf3-8266-9b41962c83bd\">\r\n            <semantic:incoming>_8321494b-9c3c-483a-b4d2-79e6254211c0</semantic:incoming>\r\n            <semantic:incoming>_b41b9c86-bc41-4b6e-ac32-70e1342e6128</semantic:incoming>\r\n            <semantic:incoming>_de249cbe-d431-4e1f-bc8c-a90aec438683</semantic:incoming>\r\n            <semantic:outgoing>_2752e07c-f2e4-4384-8721-70e4abea9765</semantic:outgoing>\r\n        </semantic:parallelGateway>\r\n        <semantic:callActivity calledElement=\"\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Call Activity calling a Global User Task \" id=\"_a74c1d4d-db90-43ff-8920-139a300b39a5\">\r\n            <semantic:incoming>_be19c2da-316a-47f6-ad7b-eb6c82bf8609</semantic:incoming>\r\n            <semantic:outgoing>_ce63770e-9f4b-4bc0-a56c-88401c59f0bf</semantic:outgoing>\r\n        </semantic:callActivity>\r\n        <semantic:subProcess triggeredByEvent=\"false\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Collapsed Sub- Process 1 Multi- Instances \" id=\"_149a6e1d-0385-4d0f-a90c-c2150a291a67\">\r\n            <semantic:incoming>_e0fbb051-0e07-43cc-a8bf-158492541c0f</semantic:incoming>\r\n            <semantic:outgoing>_dbae7e12-67c2-4256-8c50-5811c207ba55</semantic:outgoing>\r\n            <semantic:multiInstanceLoopCharacteristics isSequential=\"false\"/>\r\n        </semantic:subProcess>\r\n        <semantic:dataObjectReference dataObjectRef=\"DF1372433666499\" name=\"Data Object \" id=\"_aa8c769a-276c-4589-b182-7c7bbd0a9e1e\"/>\r\n ```\r\n\r\n**Interpretation:**\r\n* It appears as if linebreaks are transformed to whitespaces by the tool exporting the BPMN files.\r\n* This is a problem for the XPATH test automation, because it cannot find the correct elements anymore.\r\n\r\n**Options:**\r\nThe following options for resolving this issue are possible:\r\n* Fix the BPMN files by removing all spaces which stem from linebreaks.\r\nE.g., ```\"Collapsed Sub- Process 1 Multi- Instances \"``` becomes ```\"Collapsed Sub-Process 1 Multi-Instances\"```.\r\n* Fix the BPMN files by removing all non-trailing spaces which from from linebreaks.\r\nE.g., ```\"Collapsed Sub- Process 1 Multi- Instances \"``` becomes ```\"Collapsed Sub-Process 1 Multi-Instances \"```.\r\n3. Adapt the XPATH tool in order to ignore spaces completely.\r\nIn this case, the tests will work with strings like ```\"CollapsedSub-Process1Multi- Instances\"```. The tests will remain unchanged.\r\n"
   },
   {
@@ -1220,11 +1175,6 @@
     "created_at": "2013-07-03T15:53:29Z",
     "updated_at": "2013-07-22T13:18:21Z",
     "closed_at": "2013-07-12T19:15:56Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "**Output from the xpath tool for B.1.0:**\r\n```\r\nRunning tests for M:\\MIWG\\bpmn-miwg-test-suite\\B - Validate that tool covers conformance class set\\Reference\\B.1.0.bpmn:\r\n> TEST BPMN Schema Validator\r\nError Line 77: cvc-datatype-valid.1.2.1: '' is not a valid value for 'QName'.\r\n\r\nError Line 77: cvc-attribute.3: The value '' of attribute 'calledElement' on element 'semantic:callActivity' is not valid with respect to its type, 'QName'.\r\n\r\n  > Assertion Validation failed: FINDING: Warnings 0, Errors: 2, Fatal Errors: 0\r\n```\r\n\r\n**Reference XML B.1.0.bpmn**\r\n```xml\r\n<semantic:callActivity calledElement=\"\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Call Activity Calling a Global Task \" id=\"_fa3a8e53-5be0-4f0b-8680-d2498e255209\">\r\n    <semantic:incoming>_eeb6812d-d182-489f-aea2-493ab8732cfd</semantic:incoming>\r\n    <semantic:outgoing>_61abe245-5604-46ba-8152-94d6e68ffda4</semantic:outgoing>\r\n</semantic:callActivity>\r\n```\r\n\r\n**Interpretation:**\r\n* The *calledElement* attribute has an empty value.\r\n* The same problem occurs in *B.2.0*."
   },
   {
@@ -1292,11 +1242,6 @@
     "created_at": "2013-06-26T21:02:12Z",
     "updated_at": "2014-01-15T15:23:18Z",
     "closed_at": "2014-01-15T15:23:18Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue16632"
   },
   {
@@ -1364,11 +1309,6 @@
     "created_at": "2013-06-26T16:59:06Z",
     "updated_at": "2013-07-03T15:30:33Z",
     "closed_at": "2013-06-28T15:55:26Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Reference model B.2.0 contains a catching and a throwing link event that have different names and are therefore disconnected. This is equivalent to having two sequence flows that are not connected and therefore represents a syntactical error.\r\n\r\n```xml\r\n        <semantic:intermediateThrowEvent name=\"Intermediate Event Link Throw\" id=\"_f27040d5-765c-493c-bbe7-9fb6ad04cbdc\">\r\n            <semantic:incoming>_78361e03-8ab9-4317-b8f6-2daa90f20f54</semantic:incoming>\r\n            <semantic:linkEventDefinition name=\"Intermediate Event Link Throw\"/>\r\n        </semantic:intermediateThrowEvent>\r\n```\r\n\r\n```xml\r\n        <semantic:intermediateCatchEvent parallelMultiple=\"false\" name=\"Intermediate Event Link Catch\" id=\"_4f5e6e50-d9d0-4f97-959a-d1b8e1e32788\">\r\n            <semantic:outgoing>_c9768243-8e1a-4b09-907b-3f27fa831a6e</semantic:outgoing>\r\n            <semantic:linkEventDefinition name=\"Intermediate Event Link Catch\"/>\r\n        </semantic:intermediateCatchEvent>\r\n```\r\n\r\nProposal:\r\nGive both Link Event Definitions the same name."
   },
   {
@@ -1423,11 +1363,6 @@
     "created_at": "2013-06-26T16:09:30Z",
     "updated_at": "2013-07-03T15:32:24Z",
     "closed_at": "2013-06-28T15:55:15Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "On page 290, the BPMN specification recommends that\r\n\r\n> A diagram SHOULD be consistent in the use of the “X” internal indicator. That is, a diagram SHOULD NOT have some Gateways with an indicator and other Gateways without an indicator.\r\n\r\nAs agreed in our last meeting, the reference files B.1.0 and B.2.0 should therefore be changed in order to honour this best practice recommendation.\r\n\r\nDisplaying the Xs in one of the two diagrams and omitting them in the other will ensure that both cases can still be tested."
   },
   {
@@ -1537,11 +1472,6 @@
     "created_at": "2013-06-11T19:58:10Z",
     "updated_at": "2013-07-15T14:27:13Z",
     "closed_at": "2013-07-15T14:27:13Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Trisotech BPMN Web Modeler does not yet support call activity calling a global task."
   },
   {
@@ -1609,11 +1539,6 @@
     "created_at": "2013-06-11T14:14:15Z",
     "updated_at": "2013-06-28T15:54:31Z",
     "closed_at": "2013-06-28T15:54:31Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "I think there is an error in either the bpmn or the pfd file.\r\n\r\nIn the bpmn file, the label for the \"Inclusive Gateway 1\" is ABOVE the gateway:\r\n\r\n\\<bpmndi:BPMNShape bpmnElement=\"_dec393e7-f182-4d31-b05f-e33ac3a5e35f\" id=\"S1368567295078__dec393e7-f182-4d31-b05f-e33ac3a5e35f\">\r\n                \\<dc:Bounds height=\"42.0\" width=\"42.0\" x=\"569.0\" y=\"67.0\"/>\r\n                \\<bpmndi:BPMNLabel labelStyle=\"LS1368567294511\">\r\n                    \\<dc:Bounds height=\"36.27136901041668\" width=\"105.60000000000001\" x=\"535.0503937007874\" y=\"30.061165888492283\"/>\r\n                \\</bpmndi:BPMNLabel>\r\n            \\</bpmndi:BPMNShape>\r\n\r\nThe label's y position is above the gateway's y location.\r\n\r\nThe pdf, however, depicts the label BELOW the gateway."
   },
   {
@@ -1663,11 +1588,6 @@
     "created_at": "2013-06-10T14:56:27Z",
     "updated_at": "2013-06-28T15:54:15Z",
     "closed_at": "2013-06-28T15:54:15Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The 'width' and 'height' values within the label bounds of lanes seem to be inverted. \"Lane 1\", for instance, defines a label with 'height=\"12.80...\"  and width=\"35.59...\", hence representing a horizontal rectangle. The label, however, is supposed to be displayed vertically.\r\n\r\nAccording to the Diagram Definition (DD) specification, the size of the rectangular described by the bounds is specified along the x-y axes. The bounds should therefore always be relative to the x-y axes, independently of the label's direction. If the label is depicted vertically, its bounds should also represent a vertical rectangle.\r\n\r\nIt could be argued whether an additional 'direction' or 'angle' attribute is needed for labels. At least for the moment the direction can be derived from the shape's 'isHorizontal' attribute.\r\n\r\nAlso see:\r\nDiagram Definition (DD) spec: Bounds, page 9\r\nBPMN spec: BPMNLabel, page 377"
   },
   {
@@ -1772,11 +1692,6 @@
     "created_at": "2013-05-15T10:15:19Z",
     "updated_at": "2013-12-01T16:04:49Z",
     "closed_at": "2013-12-01T15:43:00Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Warning that may be ignored. "
   },
   {
@@ -1836,11 +1751,6 @@
     "created_at": "2013-05-15T10:13:56Z",
     "updated_at": "2013-12-01T16:05:14Z",
     "closed_at": "2013-12-01T15:44:19Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "This validation is at the warning level, may be ignored, and all behaviour appears to be correct. "
   },
   {
@@ -1895,11 +1805,6 @@
     "created_at": "2013-05-08T10:41:32Z",
     "updated_at": "2013-05-16T15:32:26Z",
     "closed_at": "2013-05-16T15:32:26Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "When a group is imported its background color is grey and opacity 100 by default so the contents of the group are invisible. Set the background opacity lower as a workaround. "
   },
   {
@@ -1954,11 +1859,6 @@
     "created_at": "2013-05-08T08:08:03Z",
     "updated_at": "2013-12-01T16:05:23Z",
     "closed_at": "2013-12-01T15:40:25Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "On import Yaoqiang ignores the label (name attribute) for datastore reference (expects and uses the name attribute of the dataStore itself). \r\n\r\nAccording to the relevant section of the spec (p209 and following) both datastore and datastore reference may have a name. If only one has a name I would think that should be used (whichever it is) and if both have a name I suggest that the reference's name should take precedence (or display both but that will likely take up more space than is desireable)."
   },
   {
@@ -2068,11 +1968,6 @@
     "created_at": "2013-05-03T14:57:43Z",
     "updated_at": "2013-11-25T12:44:08Z",
     "closed_at": "2013-11-25T12:44:08Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.1.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.1.0-import.png)\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
   },
   {
@@ -2137,11 +2032,6 @@
     "created_at": "2013-05-03T14:57:11Z",
     "updated_at": "2013-11-25T12:44:57Z",
     "closed_at": "2013-11-25T12:44:57Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.1.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.1.0-import.png)\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
   },
   {
@@ -2206,11 +2096,6 @@
     "created_at": "2013-05-03T14:56:00Z",
     "updated_at": "2013-11-25T12:45:35Z",
     "closed_at": "2013-11-25T12:45:35Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.1.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.1.0-import.png)\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
   },
   {
@@ -2275,11 +2160,6 @@
     "created_at": "2013-05-03T14:45:42Z",
     "updated_at": "2013-11-25T12:55:03Z",
     "closed_at": "2013-11-25T12:55:03Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.1.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.1.0-import.png)\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
   },
   {
@@ -2455,11 +2335,6 @@
     "created_at": "2013-04-30T10:00:59Z",
     "updated_at": "2013-05-01T14:17:33Z",
     "closed_at": "2013-05-01T14:17:33Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Definition of object \"Boundary Intermediate Event Interrupting Error\" contains part that we find a bit misleading (since Error event needs to be interrupting and thus cancel activity):\r\n\r\nsemantic:boundaryEvent attachedToRef=\"_7e6ccf38-e740-4537-a439-a8e984d066de\" cancelActivity=\"false\" parallelMultiple=\"false\" name=\"Boundary Intermediate Event Interrupting Error\" id=\"_3c56e6dc-bc87-4d98-b499-462c5b741c5a\"\r\n\r\nwouldn't >>cancelActivity=\"true\"<< be more correct here?"
   },
   {
@@ -2527,11 +2402,6 @@
     "created_at": "2013-04-30T09:47:35Z",
     "updated_at": "2013-05-16T18:20:57Z",
     "closed_at": "2013-05-16T18:20:57Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "We have an issue with importing model B 2.0 to ADONIS. Object \"Parallel  Gateway 2\" is defined as:\r\nsemantic:parallelGateway gatewayDirection=\"Unspecified\" name=\"Parallel  Gateway 2\" id=\"_397c783e-ad6a-4cf3-8266-9b41962c83bd\"\r\n\r\nwhile it seems to us it should be:\r\nsemantic:parallelGateway gatewayDirection=\"Converging\" name=\"Parallel  Gateway 2\" id=\"_397c783e-ad6a-4cf3-8266-9b41962c83bd\""
   },
   {
@@ -2624,11 +2494,6 @@
     "created_at": "2013-04-25T20:10:24Z",
     "updated_at": "2013-05-15T11:43:41Z",
     "closed_at": "2013-05-15T11:43:41Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Testing date - 4/22/2013\r\nA.3.0 export  – Missing element Event Interrupting Escalation \r\nA.3.0 import & RT – Labels layered over elements, labels could not be moved\r\nA.4.0 export – Could not draw model as in .pdf, i.e. sequence flow element between lanes; tool only allows for message flow element.  \r\nB.1.0 import – \"BPMN 2.0 Schema Validation Error\"; label annotation not handled well \r\n\tdid not import group elements and label annotation associated with model. \r\nB.2.0 import – \"Yaoqiang BPMN Editor does not support the Sub Process defined in a separate diagram .\""
   },
   {
@@ -2691,11 +2556,6 @@
     "created_at": "2013-04-24T15:53:19Z",
     "updated_at": "2013-05-06T11:22:35Z",
     "closed_at": "2013-05-06T11:22:35Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "As according meeting of 24-04-2013, Please include in the BPMN MIWG Test Case Structure.xlsx file that:\r\n\r\nBizagi Process Modeler version 2.4 - only supports XPDL, However, this has not been tested.\r\n\r\nAris express version version 2.4 - only support Visio VDX file format import only. However, this has not been tested.\r\n\r\nBest\r\n\r\nAlberto"
   },
   {
@@ -2889,11 +2749,6 @@
     "created_at": "2013-04-15T13:01:40Z",
     "updated_at": "2013-04-23T20:57:33Z",
     "closed_at": "2013-04-23T20:57:33Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The Signavio Process Editor has issues when importing the “Expanded Call Acitivity” as Start Event 3, Start Event 4 Conditional, User Task 12 Muti-Inst. Seq., User Task 13 are wrapped by an subprocess element in the XML,\r\n\r\nbut Boundary Intermediate Event Interrupting Message, End Event 5 Terminate, End Event 4, Service Task 14 are contained in a separated process element reference by an call activity element.\r\n\r\nI guess the subprocess element needs to be merged and replaced by the process element.\r\n\r\n[DG] We caught that one.  This was a bug with our serialization that was getting lost in some particular cases.  We will correct it and provide a new serialization ASAP."
   },
   {
@@ -2938,11 +2793,6 @@
     "created_at": "2013-04-15T13:00:32Z",
     "updated_at": "2013-04-23T20:57:57Z",
     "closed_at": "2013-04-23T20:57:57Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The label of the association between “Call Activity Collapsed” and “Text Annotation” is not present in the BPMN 2.0 XML. This makes the import test failing implicitly as labels are missing on association when capturing the canvas.\r\n\r\nCorrect me if I am wrong, but from my understanding the BPMN 2.0 Spec does not want to have labels put on associations. At least there is no name attribute.\r\n\r\n<semantic:association associationDirection=\"None\" sourceRef=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\" targetRef=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\" id=\"_5362a7ef-ce7e-4a91-9c38-66c07b1b5f49\"/>\r\n\r\n[DG] You are quite correct that “Labels” of “Associations” and “DataAsssociations”  is not possible in BPMN (and cannot be imported in another, just as for the position of labels).  This raises the higher question of “Should test cases be of only what is serializable” also to be put on the agenda for discussion."
   },
   {
@@ -2987,11 +2837,6 @@
     "created_at": "2013-04-15T12:59:20Z",
     "updated_at": "2013-04-23T20:57:02Z",
     "closed_at": "2013-04-23T20:57:02Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "There are edges in the XML having 3 waypoints in a line (see example below). It actually helped me to detect issues in the import of  Signavio, but is this intended?\r\n\r\n <bpmndi:BPMNEdge bpmnElement=\"_0020ed6a-6dde-499f-9fda-36c8bde20ec6\" id=\"E1365195429527__0020ed6a-6dde-499f-9fda-36c8bde20ec6\">\r\n                <di:waypoint x=\"842.0\" y=\"400.0\"/>\r\n                <di:waypoint x=\"860.0\" y=\"400.0\"/>\r\n                <di:waypoint x=\"880.0\" y=\"400.0\"/>\r\n                <bpmndi:BPMNLabel/>\r\n            </bpmndi:BPMNEdge>\r\n\r\n\r\n[DG] Honestly, this was not intended, it is a side effect of the default waypoint (re: breakpoints in the segments) of our routing in both our tools.  One could argue that we should filter them out as they do not “add value” to the layout, but it does indeed provide a nice test case and discussion point to be brought up in the agenda.  Should the serialization be as minimal as possible (i.e. optimized) or as long as it is valid everything should go through?."
   },
   {
@@ -3036,11 +2881,6 @@
     "created_at": "2013-04-14T13:58:49Z",
     "updated_at": "2013-04-23T21:03:02Z",
     "closed_at": "2013-04-23T21:03:02Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Dear team,\r\n\r\nWe agreed upon sharing the result files for each test in files that are named in a standardized way:\r\n\r\n* B.1.0-import.{pdf,png}\r\n* B.1.0-export.bpmn\r\n* etc.\r\n\r\nYet many of the test results are not stored in the bpmn or png files:\r\n\r\n* Which model elements are not imported / exported correctly?\r\n* What kinds of errors occur?\r\n* Are there constraints of the editor that make it impossible to recreate every aspect of the reference?\r\n\r\nTherefore, I'd like to propose using a simple Markdown file for each application.\r\nIn this file, all key model elements are stored. For each model elements, the test case results are documented.\r\n\r\nLet us exemplify this for the B.1.0 export test of MID Innovator:\r\n\r\n* Participant (Pool) -- OK\r\n\t* Start Event Timer -- OK\r\n\t* Abstract Task 1 -- OK\r\n\t* User Task 2 -- OK\r\n\t* Service Task 3 -- OK\r\n\t* End Event None 1 -- OK\r\n* Lane 2 -- OK\r\n\t* Group -- ISSUE: Cannot create a group in editor\r\n\t* User Task 5 -- OK\r\n\t* Exclusive Gateway Divergence 2 -- OK\r\n\t* Collapsed Sub-Process -- ISSUE: Cannot create an collapsed sub process in editor. Instead used an call activity. \r\n\t* Service Task 7 -- OK\r\n\t\t* Data Association 1 -- ISSUE: Cannot assign a name to a data association in editor\r\n\t\t\t* Data Object -- OK \r\n\t\t* Data Association 2 -- ISSUE: Cannot assign a name to a data association in editor\r\n\t\t\t* Data Store Reference -- OK\r\n\t* Exclusive Gateway Convergence 2 -- OK\r\n\t* End Event Terminate -- OK\r\n\r\nThat way, we have a much more detailed view on the outcomes of a test case.\r\n\r\nThe entire file is available here:\r\n\r\n[https://raw.github.com/mskurz/bpmn-miwg-test-suite-fork/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator-11.5.1.30223/README.md](https://raw.github.com/mskurz/bpmn-miwg-test-suite-fork/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator-11.5.1.30223/README.md)\r\n\r\nAny comments?\r\n\r\nBest Regards,\r\n\r\nMatthias"
   },
   {
@@ -3130,11 +2970,6 @@
     "created_at": "2013-04-10T07:50:33Z",
     "updated_at": "2013-04-23T20:52:34Z",
     "closed_at": "2013-04-23T20:52:34Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The group artifact defined at line 195 does not define any label. In the Reference PDF (B.1.0.pdf) we can see this group is named \"Group\".\r\nSome information is missing in the BPMN file and seems to be stored in visio file (.vsd) only."
   },
   {
@@ -3179,11 +3014,6 @@
     "created_at": "2013-04-10T07:45:50Z",
     "updated_at": "2013-04-23T20:51:44Z",
     "closed_at": "2013-04-23T20:51:44Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "On line 267, the BPMN Share matching the \"expanded call activity\" (on line 96) should have its attribute \"isExpanded\" set to \"true\"."
   },
   {
@@ -3228,11 +3058,6 @@
     "created_at": "2013-04-10T07:40:36Z",
     "updated_at": "2013-04-23T20:51:23Z",
     "closed_at": "2013-04-23T20:51:23Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "On line 96, called element should no be \"_6\" but \"_ba16239e-181e-4b9f-bc5b-0bb2ee973450\" (ie : process defined on line 5).\r\nSee also issue #2, seems to be related."
   },
   {
@@ -3322,11 +3147,6 @@
     "created_at": "2013-04-04T20:10:33Z",
     "updated_at": "2013-04-23T21:05:07Z",
     "closed_at": "2013-04-23T21:05:07Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The file to be imported to the tool can only be bpmn format? Cannot be XPDL?"
   },
   {
@@ -3394,11 +3214,6 @@
     "created_at": "2013-04-04T15:11:17Z",
     "updated_at": "2013-05-14T21:40:07Z",
     "closed_at": "2013-05-14T21:40:07Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "The current reference models do not contain label positions. The BPMN Spec defines them as optional, but I would suggest to have them available by default for test results not to look broken immediately. In addition, we could have one test case without label positions to see if tools behave correctly in that case."
   },
   {
@@ -3659,11 +3474,6 @@
     "created_at": "2013-04-03T13:47:44Z",
     "updated_at": "2013-04-23T20:50:54Z",
     "closed_at": "2013-04-23T20:50:54Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Line 5 reads: \r\n```xml\r\n<semantic:process isExecutable=\"false\" id=\"_ba16239e-181e-4b9f-bc5b-0bb2ee973450\">\r\n```\r\n\r\nLine 96 reads\r\n```xml\r\n<semantic:callActivity calledElement=\"_6\" name=\"Call Activity - Expanded\" id=\"_ba16239e-181e-4b9f-bc5b-0bb2ee973450\">\r\n```"
   },
   {
@@ -3726,11 +3536,6 @@
     "created_at": "2013-04-03T09:15:05Z",
     "updated_at": "2013-04-05T21:18:24Z",
     "closed_at": "2013-04-05T21:18:24Z",
-    "pull_request": {
-      "html_url": null,
-      "diff_url": null,
-      "patch_url": null
-    },
     "body": "Hi Denis,\r\n\r\nit looks like [your last commit](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/commit/cad9f3ba7cd677a4b826cbdd78b9b47d93607411) left the [reference BPMN file of test case A.4.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/Reference/A.4/A.4.0.bpmn) with no contents.\r\n\r\nGit also shows that you modified the [Visio file](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/Reference/A.4/A.4.0.vsd), from which it was exportet, in the same commit.\r\n\r\nCould you please provide the correct BPMN XML file?\r\n\r\nCheers,\r\nFalko"
   }
 ]
