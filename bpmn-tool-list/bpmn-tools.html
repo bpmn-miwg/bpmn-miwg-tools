@@ -86,12 +86,6 @@
                       "mRender": function ( data, type, full ) {
                         if (data===true) {              
                           return renderBoolean(data, type, full)+'<br><a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + full.tool.replace(/ /g, '%20') + '"> xml-compare</a><br><a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + full.tool.replace(/ /g, '%20') + '"> xpath</a>';
-<<<<<<< HEAD
-=======
-                          return renderBoolean(data, type, full)+'<br><a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + full.tool.replace(/ /g, '+') + '"> xml-compare</a><br><a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + full.tool.replace(/ /g, '+') + '"> xpath</a>';
->>>>>>> 11fe57c... added link to detailed test results and fixed replace to be global
-=======
->>>>>>> faa86b9... bpmn-tools.html
                         } else { 
                           return renderBoolean(data, type, full);
                         } 
