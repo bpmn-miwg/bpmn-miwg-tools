@@ -85,7 +85,7 @@
                     { "mData": "testResultsSubmitted",
                       "mRender": function ( data, type, full ) {
                         if (data===true) {              
-                          return renderBoolean(data, type, full)+'<br><a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + full.tool.replace(/ /g, '%20') + '%20'+full.version+'"> xml-compare</a><br><a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + full.tool.replace(/ /g, '%20') + '%20'+full.version+'"> xpath</a>';
+                          return renderBoolean(data, type, full)+'<br><a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + full.tool.replace(/ /g, '%20') + '%20'+full.version.replace(/ /g, '%20')+'"> xml-compare</a><br><a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + full.tool.replace(/ /g, '%20') + '%20'+full.version.replace(/ /g, '%20')+'"> xpath</a>';
                         } else { 
                           return renderBoolean(data, type, full);
                         } 
