@@ -66,7 +66,7 @@ function ModelInterchangePresenter() {
 		      };
 		      var prev = mi.results[i-1];
     		  if (prev===undefined || prev.vendor!=cur.vendor) {
-    			  container.append('<div class="row-fluid"><h3 class="offset1 span10">'+cur.vendor+'</h3></div>');
+    			  container.append('<div class="row-fluid"><h3 class="offset1 span10" id="'+cur.vendor+'">'+cur.vendor+'</h3></div>');
     		  }
     		  var findingsClass = cur.findings == 0 ? 'mi-no-findings' : 'mi-findings';
     		  container.append('<div class="row-fluid">'
