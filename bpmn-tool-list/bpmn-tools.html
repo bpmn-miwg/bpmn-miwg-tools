@@ -84,21 +84,21 @@
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
                     { "mData": "testResultsSubmitted",
                       "mRender": function ( data, type, full ) {
-                        if (data===true) {              
-                          return renderBoolean(data, type, full)+'<br><a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + full.tool.replace(/ /g, '%20') + '%20'+full.version.replace(/ /g, '%20')+'"> xml-compare</a><br><a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + full.tool.replace(/ /g, '%20') + '%20'+full.version.replace(/ /g, '%20')+'"> xpath</a>';
-                        } else { 
+                        if (data===true) {
+                          return renderBoolean(data, type, full)+' <a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + full.tool.replace(/ /g, '%20') + '%20'+full.version.replace(/ /g, '%20')+'">xpath <span class="glyphicon glyphicon-new-window"></a> <a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + full.tool.replace(/ /g, '%20') + '%20'+full.version.replace(/ /g, '%20')+'">xmldiff <span class="glyphicon glyphicon-new-window"></span></a>';
+                        } else {
                           return renderBoolean(data, type, full);
-                        } 
+                        }
                       } },
                     { "mData": "participatedInDemos", "mRender": renderBoolean },
                     { "mData": "openSource", "mRender": renderBoolean },
                     { "mData": "openIssues",
                       "mRender": function ( data, type, full ) {
-                        return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(/ /g, '+') + '">' + data + '</a>';
+                        return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
                       } },
                     { "mData": "closedIssues",
                       "mRender": function ( data, type, full ) {
-                        return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=closed&labels=Tool%3A+' + full.tool.replace(/ /g, '+') + '">' + data + '</a>';
+                        return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=closed&labels=Tool%3A+' + full.tool.replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
                       } },
       //               { "mData": "notes" },
                 ],
