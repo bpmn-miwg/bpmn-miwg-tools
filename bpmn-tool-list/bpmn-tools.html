@@ -173,11 +173,11 @@
         <thead>
           <tr>
             <th>Vendor</th>
-            <th>Tool Name</th>
-            <th>Supports BPMN 2.0</th>
-            <th>Has Import</th>
-            <th>Has Export</th>
-            <th>Has Roundtrip</th>
+            <th>Tool Name &amp; Version</th>
+            <th>BPMN 2.0</th>
+            <th>Import</th>
+            <th>Export</th>
+            <th>Roundtrip</th>
             <th>Test Results submitted</th>
             <th>Participates in Demos</th>
             <th>Open Source</th>
@@ -189,7 +189,72 @@
         <tbody>
         </tbody>
       </table>
-      <br />
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Column Definitions</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Column</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vendor</td>
+                <td>Company that develops the tool</td>
+              </tr>
+              <tr>
+                <td>Tool Name &amp; Version</td>
+                <td>Product name of the tool and version that has been tested</td>
+              </tr>
+              <tr>
+                <td>BPMN 2.0</td>
+                <td>Tool supports BPMN version 2.0 or higher</td>
+              </tr>
+              <tr>
+                <td>Import</td>
+                <td>Tool has a feature to import BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Export</td>
+                <td>Tool has a feature to export BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Roundtrip</td>
+                <td>Tool can both import and export BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Test Results submitted</td>
+                <td>Test results have been submitted for the tool either by users or the vendor</td>
+              </tr>
+              <tr>
+                <td>Participates in Demos</td>
+                <td>Tool participated in one of the <a href="https://github.com/bpmn-miwg/bpmn-miwg-demos">public BPMN MIWG demos</a></td>
+              </tr>
+              <tr>
+                <td>Open Source</td>
+                <td>Tool </td>
+              </tr>
+              <tr>
+                <td>Open Issues</td>
+                <td>Issues identified by the BPMN MIWG that are still open</td>
+              </tr>
+              <tr>
+                <td>Closed Issues</td>
+                <td>Issues identified by the BPMN MIWG that are already fixed by the vendor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <hr />
+
       <table id="bpmn-tools-bpi" class="display" width="100%">
         <thead>
           <tr>
