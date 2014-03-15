@@ -82,20 +82,7 @@
                     { "mData": "hasImport", "mRender": renderBoolean },
                     { "mData": "hasExport", "mRender": renderBoolean },
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
-                    { "mData": "testResultsSubmitted",
-                      "mRender": function ( data, type, full ) {
-                        if (data === true && (full.hasExport === true || full.hasRoundtrip === true)) {
-                          var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
-                          // TODO trying to figure out why Firefox does not 
-                          // show the anchor encoded as expected
-                          console.debug('toolAndVersion:'+toolAndVersion);
-                          return renderBoolean(data, type, full)
-                            + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + toolAndVersion + '">xpath <span class="glyphicon glyphicon-new-window"></a>'
-                            + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + toolAndVersion + '">xmldiff <span class="glyphicon glyphicon-new-window"></span></a>';
-                        } else {
-                          return renderBoolean(data, type, full);
-                        }
-                      } },
+                    { "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },
                     { "mData": "participatedInDemos", "mRender": renderBoolean },
                     { "mData": "openSource", "mRender": renderBoolean },
                     { "mData": "openIssues",
@@ -110,15 +97,47 @@
                 ],
               } );
 
+              function renderTestResultsSubmitted(data, type, full) {
+                var result = renderTrafficLight(data, type, full);
+                if ((data === true || data === "partial") && (full.hasExport === true || full.hasRoundtrip === true)) {
+                  var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
+                  // TODO trying to figure out why Firefox does not 
+                  // show the anchor encoded as expected
+                  console.debug('toolAndVersion:'+toolAndVersion);
+                  result = result
+                    + ' <a class="btn btn-primary btn-xs" href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + toolAndVersion + '">XPath</a>'
+                    + ' <a class="btn btn-primary btn-xs" href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + toolAndVersion + '">XMLDiff</a>';
+                }
+                return result;
+              }
+
+              function renderTrafficLight(data, type, full) {
+                var icon = "minus-sign"; // ban-circle remove-sign
+                var color = "darkred";
+                if (data === true) {
+                  icon = "plus-sign"; // ok-sign
+                  color = "green";
+                } else if (data === "partial") {
+                  icon = "adjust";
+                  color = "darkorange";
+                }
+                return renderIcon(icon, color, data);
+              }
+
               function renderBoolean(data, type, full) {
-                var icon = "remove";
+                var icon = "minus-sign"; // remove
                 var color = "darkred";
                 if (data) {
-                  icon = "ok";
+                  icon = "plus-sign"; // ok
                   color = "green";
                 }
-                return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span style="display: none">' + data + '</span>';
+                return renderIcon(icon, color, data);
               }
+
+              function renderIcon(icon, color, data) {
+                return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span class="sr-only">' + data + '</span>';
+              }
+
             })
           })
         })
@@ -232,7 +251,7 @@
               </tr>
               <tr>
                 <td>Test Results submitted</td>
-                <td>Test results have been submitted for the tool either by users or the vendor</td>
+                <td>Test results have been submitted for the tool either by users or the vendor (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
               </tr>
               <tr>
                 <td>Participates in Demos</td>
@@ -244,11 +263,11 @@
               </tr>
               <tr>
                 <td>Open Issues</td>
-                <td>Issues identified by the BPMN MIWG that are still open</td>
+                <td>Issues identified by the BPMN MIWG that are still open (click on the number to see the issues)</td>
               </tr>
               <tr>
                 <td>Closed Issues</td>
-                <td>Issues identified by the BPMN MIWG that are already fixed by the vendor</td>
+                <td>Issues identified by the BPMN MIWG that are already fixed by the vendor (click on the number to see the issues)</td>
               </tr>
             </tbody>
           </table>
