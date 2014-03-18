@@ -79,23 +79,10 @@
                         }
                       } },
                     { "mData": "supportsBpmn2", "mRender": renderBoolean },
-                    { "mData": "hasImport", "mRender": renderBoolean },
-                    { "mData": "hasExport", "mRender": renderBoolean },
+                    { "mData": "hasImport", "mRender": renderImportExport },
+                    { "mData": "hasExport", "mRender": renderImportExport },
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
-                    { "mData": "testResultsSubmitted",
-                      "mRender": function ( data, type, full ) {
-                        if (data === true && (full.hasExport === true || full.hasRoundtrip === true)) {
-                          var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
-                          // TODO trying to figure out why Firefox does not 
-                          // show the anchor encoded as expected
-                          console.debug('toolAndVersion:'+toolAndVersion);
-                          return renderBoolean(data, type, full)
-                            + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + toolAndVersion + '">xpath <span class="glyphicon glyphicon-new-window"></a>'
-                            + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + toolAndVersion + '">xmldiff <span class="glyphicon glyphicon-new-window"></span></a>';
-                        } else {
-                          return renderBoolean(data, type, full);
-                        }
-                      } },
+                    { "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },
                     { "mData": "participatedInDemos", "mRender": renderBoolean },
                     { "mData": "openSource", "mRender": renderBoolean },
                     { "mData": "openIssues",
@@ -110,15 +97,59 @@
                 ],
               } );
 
+              function renderImportExport(data, type, full) {
+                var result = renderBoolean(data, type, full);
+                if ((data === true) && (full.testResultsSubmitted === true || full.testResultsSubmitted === "partial")) {
+                  var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
+                  // TODO trying to figure out why Firefox does not 
+                  // show the anchor encoded as expected
+                  console.debug('toolAndVersion:'+toolAndVersion);
+                  result = '<span class="sr-only">' + data + '</span><a href="visual-test-result-comparison.html?tool=' + toolAndVersion + '">' + result + ' Diff</a>';
+                }
+                return result;
+              }
+
+              function renderTestResultsSubmitted(data, type, full) {
+                var result = renderTrafficLight(data, type, full);
+                if ((data === true || data === "partial") && (full.hasExport === true || full.hasRoundtrip === true)) {
+                  var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
+                  // TODO trying to figure out why Firefox does not 
+                  // show the anchor encoded as expected
+                  console.debug('toolAndVersion:'+toolAndVersion);
+                  result = result
+                    + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + toolAndVersion + '">XPath</a>'
+                    + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + toolAndVersion + '">XMLDiff</a>';
+                }
+                return result;
+              }
+
+              function renderTrafficLight(data, type, full) {
+                var icon = "minus-sign"; // ban-circle remove-sign
+                var color = "darkred";
+                if (data === true) {
+                  icon = "plus-sign"; // ok-sign
+                  color = "green";
+                } else if (data === "partial") {
+                  icon = "adjust";
+                  color = "darkorange";
+                }
+                return renderIcon(icon, color, data);
+              }
+
               function renderBoolean(data, type, full) {
-                var icon = "remove";
+                var icon = "minus-sign"; // remove
                 var color = "darkred";
                 if (data) {
-                  icon = "ok";
+                  icon = "plus-sign"; // ok
                   color = "green";
                 }
-                return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span style="display: none">' + data + '</span>';
+                return renderIcon(icon, color, data);
               }
+
+              function renderIcon(icon, color, data) {
+                return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span class="sr-only">' + data + '</span>';
+              }
+
             })
           })
         })
@@ -176,11 +207,11 @@
         <thead>
           <tr>
             <th>Vendor</th>
-            <th>Tool Name</th>
-            <th>Supports BPMN 2.0</th>
-            <th>Has Import</th>
-            <th>Has Export</th>
-            <th>Has Roundtrip</th>
+            <th>Tool Name &amp; Version</th>
+            <th>BPMN 2.0</th>
+            <th>Import</th>
+            <th>Export</th>
+            <th>Roundtrip</th>
             <th>Test Results submitted</th>
             <th>Participates in Demos</th>
             <th>Open Source</th>
@@ -192,7 +223,72 @@
         <tbody>
         </tbody>
       </table>
-      <br />
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Column Definitions</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Column</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vendor</td>
+                <td>Company that develops the tool</td>
+              </tr>
+              <tr>
+                <td>Tool Name &amp; Version</td>
+                <td>Product name of the tool and version that has been tested</td>
+              </tr>
+              <tr>
+                <td>BPMN 2.0</td>
+                <td>Tool supports BPMN version 2.0 or higher</td>
+              </tr>
+              <tr>
+                <td>Import</td>
+                <td>Tool has a feature to import BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Export</td>
+                <td>Tool has a feature to export BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Roundtrip</td>
+                <td>Tool can both import and export BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Test Results submitted</td>
+                <td>Test results have been submitted for the tool either by users or the vendor (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
+              </tr>
+              <tr>
+                <td>Participates in Demos</td>
+                <td>Tool participated in one of the <a href="https://github.com/bpmn-miwg/bpmn-miwg-demos">public BPMN MIWG demos</a></td>
+              </tr>
+              <tr>
+                <td>Open Source</td>
+                <td>Tool </td>
+              </tr>
+              <tr>
+                <td>Open Issues</td>
+                <td>Issues identified by the BPMN MIWG that are still open (click on the number to see the issues)</td>
+              </tr>
+              <tr>
+                <td>Closed Issues</td>
+                <td>Issues identified by the BPMN MIWG that are already fixed by the vendor (click on the number to see the issues)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <hr />
+
       <table id="bpmn-tools-bpi" class="display" width="100%">
         <thead>
           <tr>

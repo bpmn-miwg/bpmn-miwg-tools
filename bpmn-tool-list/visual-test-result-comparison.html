@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"></head>
 
 <script src="//code.jquery.com/jquery-1.10.2.min.js" type="application/javascript"></script>
+<script src="lib/purl/purl.js" type="application/javascript"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 <script>
@@ -103,8 +104,14 @@ function loadJSON() {
 
         var selector = $("#selector");
         selector.empty();
+        var selectedTool = $.url().param('tool');
         toolsTestedByMIWG.tools.forEach(function(tool) {
-          $("<option>" + tool.tool + " " + tool.version + "</option>").appendTo(selector);
+          var toolAndVersion = tool.tool + " " + tool.version;
+          var selected = '';
+          if (selectedTool == toolAndVersion) {
+            selected = ' selected="selected"';
+          }
+          $("<option" + selected + ">" + toolAndVersion + "</option>").appendTo(selector);
         });
 
         $("#message").text("Reference processed");
