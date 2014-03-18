@@ -1,0 +1,242 @@
+<TestRun name="W4 BPMN+ Composer V.9.0-A.4.0-export.bpmn"/>  <TestFile name="/home/tstephen/GDrive/src/bpmn-miwg-w4/src/main/resources/W4 BPMN+ Composer V.9.0/A.4.0-export.bpmn"/>
+  <Test name="A.4.0">
+    <NodePush message="Push" identifier="A_4_0" caller="callingMethod">
+      <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
+        <testContext>
+          <stackID>A_4_0</stackID>
+          <id>A_4_0</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q" caller="selectCollaboration">
+        <OKAssertion assertion="selectPool" message="bpmn:participant[@name=&apos;Pool&apos;]">
+          <testContext>
+            <stackID>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</stackID>
+            <nodeID>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</nodeID>
+            <id>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q" caller="selectPool">
+          <OKAssertion assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q&apos;]">
+            <testContext>
+              <stackID>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q" caller="selectReferencedProcess">
+            <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1&apos;]">
+              <testContext>
+                <stackID>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</id>
+              </testContext>
+            </OKAssertion>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;Bpmn2_Task_nWE48JWfEeOnAPP76M9-3Q&apos;]">
+              <testContext>
+                <stackID>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_StartEvent_nWE47ZWfEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;Bpmn2_Task_nWE48JWfEeOnAPP76M9-3Q&apos;]"/>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;Bpmn2_Task_H-6MQpWgEeOnAPP76M9-3Q&apos;]">
+              <testContext>
+                <stackID>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_Task_nWE48JWfEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;Bpmn2_Task_H-6MQpWgEeOnAPP76M9-3Q&apos;]"/>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;Bpmn2_EndEvent_JsqHgpWgEeOnAPP76M9-3Q&apos;]">
+              <testContext>
+                <stackID>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_Task_H-6MQpWgEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</id>
+              </testContext>
+            </OKAssertion>
+            <NodePop message="Pop" identifier="Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q" caller="callingMethod">
+              <testContext>
+                <stackID>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_EndEvent_JsqHgpWgEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</id>
+            </testContext>
+          </NodePush>
+          <NodePop message="Pop" identifier="Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q" caller="callingMethod">
+            <testContext>
+              <stackID>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_Process_nWE45ZWfEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</stackID>
+            <nodeID>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</nodeID>
+            <id>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</id>
+          </testContext>
+        </NodePush>
+        <OKAssertion assertion="navigateElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]">
+          <testContext>
+            <stackID>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</stackID>
+            <nodeID>Bpmn2_Participant_nWE46pWfEeOnAPP76M9-3Q</nodeID>
+            <id>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]">
+          <testContext>
+            <stackID>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</stackID>
+            <nodeID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</nodeID>
+            <id>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q" caller="selectElementX">
+          <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;Bpmn2_Task_R02WopWgEeOnAPP76M9-3Q&apos;]">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_StartEvent_OEMvgpWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;Bpmn2_Task_R02WopWgEeOnAPP76M9-3Q&apos;]"/>
+          <OKAssertion assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;Bpmn2_SubProcess_gxAM4ZWgEeOnAPP76M9-3Q&apos;]">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_Task_R02WopWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="Bpmn2_SubProcess_gxAM4ZWgEeOnAPP76M9-3Q" caller="selectFollowingElement">
+            <NodePop message="Pop" identifier="Bpmn2_SubProcess_gxAM4ZWgEeOnAPP76M9-3Q" caller="callingMethod">
+              <testContext>
+                <stackID>Bpmn2_SubProcess_gxAM4ZWgEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_SubProcess_gxAM4ZWgEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_SubProcess_gxAM4ZWgEeOnAPP76M9-3Q</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_SubProcess_gxAM4ZWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </NodePush>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;Bpmn2_Task_qwG6UpWgEeOnAPP76M9-3Q&apos;]">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_SubProcess_gxAM4ZWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;Bpmn2_Task_qwG6UpWgEeOnAPP76M9-3Q&apos;]"/>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;Bpmn2_EndEvent_rs55wpWgEeOnAPP76M9-3Q&apos;]">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_Task_qwG6UpWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateElement" message="#document/bpmn2:definitions[@id=&apos;id=&quot;A_4_0&quot;&apos;]/bpmn2:process[@id=&apos;id=&quot;Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q&quot;&apos;]/bpmn2:task[@id=&apos;id=&quot;Bpmn2_Task_R02WopWgEeOnAPP76M9-3Q&quot;&apos;]/">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_Task_R02WopWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q&apos;]">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_Task_R02WopWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q" caller="selectFollowingElement">
+            <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 4&apos;]">
+              <testContext>
+                <stackID>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</id>
+              </testContext>
+            </OKAssertion>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 6&apos; and @id=&apos;Bpmn2_Task_43jWIpWgEeOnAPP76M9-3Q&apos;]">
+              <testContext>
+                <stackID>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_StartEvent_3Z9WwpWgEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</id>
+              </testContext>
+            </OKAssertion>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 4&apos; and @id=&apos;Bpmn2_EndEvent_5-Ti0pWgEeOnAPP76M9-3Q&apos;]">
+              <testContext>
+                <stackID>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_Task_43jWIpWgEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</id>
+              </testContext>
+            </OKAssertion>
+            <NodePop message="Pop" identifier="Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q" caller="callingMethod">
+              <testContext>
+                <stackID>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</stackID>
+                <nodeID>Bpmn2_EndEvent_5-Ti0pWgEeOnAPP76M9-3Q</nodeID>
+                <id>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </NodePush>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;Bpmn2_EndEvent_87o2oZWgEeOnAPP76M9-3Q&apos;]">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_SubProcess_0G2nQZWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </OKAssertion>
+          <NodePop message="Pop" identifier="Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q" caller="callingMethod">
+            <testContext>
+              <stackID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</stackID>
+              <nodeID>Bpmn2_EndEvent_87o2oZWgEeOnAPP76M9-3Q</nodeID>
+              <id>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</stackID>
+            <nodeID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</nodeID>
+            <id>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</id>
+          </testContext>
+        </NodePush>
+        <NodePop message="Pop" identifier="Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q" caller="callingMethod">
+          <testContext>
+            <stackID>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</stackID>
+            <nodeID>Bpmn2_Process_BqBt0JWgEeOnAPP76M9-3Q</nodeID>
+            <id>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>A_4_0</stackID>
+          <nodeID>Bpmn2_Collaboration_nWE445WfEeOnAPP76M9-3Q</nodeID>
+          <id>A_4_0</id>
+        </testContext>
+      </NodePush>
+      <testContext/>
+    </NodePush>
+    <Results name="TEST A.4.0 results:">
+      <ListKeyValue key="OK" value="20"/>
+      <ListKeyValue key="FINDINGS" value="4"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="20"/>
+    <ListKeyValue key="FINDINGS " value="4"/>
+  </TotalResults>
+</TestRun>

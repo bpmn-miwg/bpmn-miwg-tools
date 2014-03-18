@@ -1,0 +1,21 @@
+TESTRUN: W4 BPMN+ Composer V.9.0-A.1.0-export.bpmn
+  Running tests for /home/tstephen/GDrive/src/bpmn-miwg-w4/src/main/resources/W4 BPMN+ Composer V.9.0/A.1.0-export.bpmn
+  TEST: A.1.0
+    OK     : callingMethod: Push (id: A_1_0)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: Bpmn2_Process_GGJ0QJioEeOWGc35pCatNA)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='Bpmn2_Task_GGKbUZioEeOWGc35pCatNA']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='Bpmn2_Task_KhvOwpioEeOWGc35pCatNA']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='Bpmn2_Task_LP9mspioEeOWGc35pCatNA']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event' and @id='Bpmn2_EndEvent_MWWnApioEeOWGc35pCatNA']
+        OK     : callingMethod: Pop (id: Bpmn2_Process_GGJ0QJioEeOWGc35pCatNA)
+      
+    TEST: TEST A.1.0 results:
+      - OK: 6
+      - FINDINGS: 0
+  
+  TEST RESULTS TOTAL:
+    - OK: 6
+    - FINDINGS : 0
+    

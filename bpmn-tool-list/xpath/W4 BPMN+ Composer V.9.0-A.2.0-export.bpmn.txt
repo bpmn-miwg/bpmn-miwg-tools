@@ -1,0 +1,28 @@
+TESTRUN: W4 BPMN+ Composer V.9.0-A.2.0-export.bpmn
+  Running tests for /home/tstephen/GDrive/src/bpmn-miwg-w4/src/main/resources/W4 BPMN+ Composer V.9.0/A.2.0-export.bpmn
+  TEST: A.2.0
+    OK     : callingMethod: Push (id: A_2_0)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: Bpmn2_Process_SsNV0pioEeOWGc35pCatNA)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='Bpmn2_Task_SsNV15ioEeOWGc35pCatNA']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Split Flow)' and @id='Bpmn2_ExclusiveGateway_V5me4pioEeOWGc35pCatNA']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='Bpmn2_Task_Ye8JcpioEeOWGc35pCatNA']
+        OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="A_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_SsNV0pioEeOWGc35pCatNA"']/bpmn2:exclusiveGateway[@id='id="Bpmn2_ExclusiveGateway_V5me4pioEeOWGc35pCatNA"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='Bpmn2_Task_aur-gpioEeOWGc35pCatNA']
+        OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="A_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_SsNV0pioEeOWGc35pCatNA"']/bpmn2:exclusiveGateway[@id='id="Bpmn2_ExclusiveGateway_V5me4pioEeOWGc35pCatNA"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 4' and @id='Bpmn2_Task_huiskpioEeOWGc35pCatNA']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='Bpmn2_ExclusiveGateway_qthZwpioEeOWGc35pCatNA']
+        OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="A_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_SsNV0pioEeOWGc35pCatNA"']/bpmn2:task[@id='id="Bpmn2_Task_aur-gpioEeOWGc35pCatNA"']/
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='Bpmn2_ExclusiveGateway_qthZwpioEeOWGc35pCatNA']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event' and @id='Bpmn2_EndEvent_mxELQpioEeOWGc35pCatNA']
+        OK     : callingMethod: Pop (id: Bpmn2_Process_SsNV0pioEeOWGc35pCatNA)
+      
+    TEST: TEST A.2.0 results:
+      - OK: 13
+      - FINDINGS: 0
+  
+  TEST RESULTS TOTAL:
+    - OK: 13
+    - FINDINGS : 0
+    

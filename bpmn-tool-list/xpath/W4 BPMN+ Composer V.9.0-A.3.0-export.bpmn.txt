@@ -1,0 +1,33 @@
+TESTRUN: W4 BPMN+ Composer V.9.0-A.3.0-export.bpmn
+  Running tests for /home/tstephen/GDrive/src/bpmn-miwg-w4/src/main/resources/W4 BPMN+ Composer V.9.0/A.3.0-export.bpmn
+  TEST: A.3.0
+    OK     : callingMethod: Push (id: A_3_0)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: Bpmn2_Process_cXdrspWeEeOnAPP76M9-3Q)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='Bpmn2_Task_cXdrt5WeEeOnAPP76M9-3Q']
+        OK     : navigateFollowingElement; Message: bpmn:subProcess[@name='Collapsed Sub-Process' and @id='Bpmn2_SubProcess_ius6kZWeEeOnAPP76M9-3Q']
+        FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Message' and @attachedToRef='Bpmn2_SubProcess_ius6kZWeEeOnAPP76M9-3Q']
+        FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+        FINDING: checkCancelActivity; Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+        OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="A_3_0"']/bpmn2:process[@id='id="Bpmn2_Process_cXdrspWeEeOnAPP76M9-3Q"']/bpmn2:subProcess[@id='id="Bpmn2_SubProcess_ius6kZWeEeOnAPP76M9-3Q"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='Bpmn2_Task_AEOqIpWfEeOnAPP76M9-3Q']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 1' and @id='Bpmn2_EndEvent_Gk0CQpWfEeOnAPP76M9-3Q']
+        OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="A_3_0"']/bpmn2:process[@id='id="Bpmn2_Process_cXdrspWeEeOnAPP76M9-3Q"']/bpmn2:subProcess[@id='id="Bpmn2_SubProcess_ius6kZWeEeOnAPP76M9-3Q"']/
+        OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Interrupting Escalation' found
+        OK     : checkEscalationEvent; Message: Escalation event definition
+        OK     : checkCancelActivity; Message: Attribute cancelActivity=true
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 4' and @id='Bpmn2_Task_CkEwspWfEeOnAPP76M9-3Q']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 2' and @id='Bpmn2_EndEvent_EX43spWfEeOnAPP76M9-3Q']
+        OK     : callingMethod: Pop (id: Bpmn2_Process_cXdrspWeEeOnAPP76M9-3Q)
+      
+    TEST: TEST A.3.0 results:
+      - OK: 13
+      - FINDINGS: 5
+  
+  TEST RESULTS TOTAL:
+    - OK: 13
+    - FINDINGS : 5
+    
