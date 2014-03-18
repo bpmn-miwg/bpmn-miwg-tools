@@ -104,7 +104,7 @@
                   // TODO trying to figure out why Firefox does not 
                   // show the anchor encoded as expected
                   console.debug('toolAndVersion:'+toolAndVersion);
-                  result = '<span class="sr-only">' + data + '</span><a href="visual-test-result-comparison.html?tool=' + toolAndVersion + '">' + result + '&nbsp;<span class="glyphicon glyphicon-new-window"></span></a>';
+                  result = '<span class="sr-only">' + data + '</span><a href="visual-test-result-comparison.html?tool=' + toolAndVersion + '">' + result + ' Diff</a>';
                 }
                 return result;
               }
@@ -117,8 +117,8 @@
                   // show the anchor encoded as expected
                   console.debug('toolAndVersion:'+toolAndVersion);
                   result = result
-                    + ' <a class="btn btn-primary btn-xs" href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + toolAndVersion + '">XPath</a>'
-                    + ' <a class="btn btn-primary btn-xs" href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + toolAndVersion + '">XMLDiff</a>';
+                    + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + toolAndVersion + '">XPath</a>'
+                    + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + toolAndVersion + '">XMLDiff</a>';
                 }
                 return result;
               }
