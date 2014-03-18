@@ -27,6 +27,7 @@ package org.omg.bpmn.miwg.testresult;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -96,18 +97,18 @@ public class IndexWriter {
 		}
 	}
 
-	/***
-	 * Writes the test results to an HTML document.
-	 * 
-	 * @param rptName
-	 *            Report name
-	 * @param idx
-	 *            Output file
-	 * @param results
-	 *            A list of FileResult instances which build the HTML fragments
-	 *            for each file using the buildHtml method.
-	 */
-	public static void write2(String rptName, File idx, List<FileResult> results) {
+	    /***
+     * Writes the test results to an HTML document.
+     * 
+     * @param rptName
+     *            Report name
+     * @param idx
+     *            Output file
+     * @param collection
+     *            A list of FileResult instances which build the HTML fragments
+     *            for each file using the buildHtml method.
+     */
+    public static void write2(String rptName, File idx, Collection<FileResult> collection) {
 		PrintWriter out = null;
 		try {
 			out = new PrintWriter(idx);
@@ -122,7 +123,7 @@ public class IndexWriter {
 			out.println("\t</ul>\t</div></div>");
 
 			out.println("<div class=\"testresults\">");
-			for (FileResult result : results) {
+			for (FileResult result : collection) {
 				out.print(result.buildHtml());
 			}
 			out.println("</div>");

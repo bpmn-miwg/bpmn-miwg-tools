@@ -27,6 +27,7 @@ package org.omg.bpmn.miwg.bpmn2_0.comparison;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringReader;
 import java.util.List;
 
@@ -80,6 +81,15 @@ public class Bpmn20ConformanceChecker {
 		return xmlDiff.areDocumentsEqualReporting(expectedBpmnXmlDoc,
 				actualBpmnXmlDoc);
 	}
+
+    public List<Difference> getSignificantDifferences(
+            InputStream expectedBpmnXml, InputStream actualBpmnXml)
+            throws SAXException, IOException, ParserConfigurationException {
+        Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXml);
+        Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXml);
+        return xmlDiff.areDocumentsEqualReporting(expectedBpmnXmlDoc,
+                actualBpmnXmlDoc);
+    }
 
 	public String checkForSignificantDifferences(File expectedBpmnXmlFile,
 			File actualBpmnXmlFile) throws SAXException, IOException,

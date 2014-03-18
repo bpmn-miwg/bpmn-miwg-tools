@@ -142,7 +142,7 @@ public class TestRunner {
 		return results.toString();
 	}
 
-	private static DetailedOutput describeDifference(Difference difference) {
+    public static DetailedOutput describeDifference(Difference difference) {
 		DetailedOutput dOut = new DetailedOutput();
 		
 		// Reference xpath/value
