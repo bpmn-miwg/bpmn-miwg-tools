@@ -79,8 +79,8 @@
                         }
                       } },
                     { "mData": "supportsBpmn2", "mRender": renderBoolean },
-                    { "mData": "hasImport", "mRender": renderBoolean },
-                    { "mData": "hasExport", "mRender": renderBoolean },
+                    { "mData": "hasImport", "mRender": renderImportExport },
+                    { "mData": "hasExport", "mRender": renderImportExport },
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
                     { "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },
                     { "mData": "participatedInDemos", "mRender": renderBoolean },
@@ -96,6 +96,18 @@
       //               { "mData": "notes" },
                 ],
               } );
+
+              function renderImportExport(data, type, full) {
+                var result = renderBoolean(data, type, full);
+                if ((data === true) && (full.testResultsSubmitted === true || full.testResultsSubmitted === "partial")) {
+                  var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
+                  // TODO trying to figure out why Firefox does not 
+                  // show the anchor encoded as expected
+                  console.debug('toolAndVersion:'+toolAndVersion);
+                  result = '<span class="sr-only">' + data + '</span><a href="visual-test-result-comparison.html?tool=' + toolAndVersion + '">' + result + '&nbsp;<span class="glyphicon glyphicon-new-window"></span></a>';
+                }
+                return result;
+              }
 
               function renderTestResultsSubmitted(data, type, full) {
                 var result = renderTrafficLight(data, type, full);
