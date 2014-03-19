@@ -155,52 +155,52 @@
         })
 
         // second table with data from BPI
-        $('#bpmn-tools-bpi').dataTable( {
-          "bProcessing": true,
-          "bJQueryUI": true,
-          "bPaginate": false,
-//          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
-          "sAjaxSource": "bpmn-tools.json",
-          "sAjaxDataProp": "groups.tool",
-          "aoColumns": [
-              { "mData": "screenshot.0.value",
-                "mRender": function ( data, type, full ) {
-                  return '<a href="'+full.url[0].value+'"><img src="'+data+'" /></a>';
-                } },
-              { "mData": "name.0.value",
-                "mRender": function ( data, type, full ) {
-                  return '<a href="'+full.url[0].value+'">'+data+'</a>';
-                } },
-              { "mData": "category.0.value" },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": null },
-              { "mData": "url.0.value",
-                "mRender": function ( data, type, full ) {
-                  return '<a href="'+data+'">Info</a>';
-                } },
-          ],
-//           "fnInitComplete": function () {
-//             var that = this;
-//             this.$('td').click( function () {
-//                 that.fnFilter( this.innerHTML );
-//             } );
-//           }
-        } );
+//         $('#bpmn-tools-bpi').dataTable( {
+//           "bProcessing": true,
+//           "bJQueryUI": true,
+//           "bPaginate": false,
+// //          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
+//           "sAjaxSource": "bpmn-tools.json",
+//           "sAjaxDataProp": "groups.tool",
+//           "aoColumns": [
+//               { "mData": "screenshot.0.value",
+//                 "mRender": function ( data, type, full ) {
+//                   return '<a href="'+full.url[0].value+'"><img src="'+data+'" /></a>';
+//                 } },
+//               { "mData": "name.0.value",
+//                 "mRender": function ( data, type, full ) {
+//                   return '<a href="'+full.url[0].value+'">'+data+'</a>';
+//                 } },
+//               { "mData": "category.0.value" },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": "url.0.value",
+//                 "mRender": function ( data, type, full ) {
+//                   return '<a href="'+data+'">Info</a>';
+//                 } },
+//           ],
+// //           "fnInitComplete": function () {
+// //             var that = this;
+// //             this.$('td').click( function () {
+// //                 that.fnFilter( this.innerHTML );
+// //             } );
+// //           }
+//         } );
       });
     </script>
   </head>
   <body>
     <div class="page-header">
-      <h1>BPMN Tools</h1>
+      <h1><img style="margin: 0 15px;" src="http://omgwiki.org/bpmn-miwg/lib/exe/fetch.php?w=200&amp;media=miwg-logo-827x512.png" class="mediacenter" alt="" width="200">BPMN Tools tested for Model Interchange</h1>
     </div>
     <div style="padding: 0 15px;">
       <table id="bpmn-tools" class="display" width="100%">
@@ -223,7 +223,7 @@
         <tbody>
         </tbody>
       </table>
-
+      <br />
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Column Definitions</h3>
@@ -286,7 +286,7 @@
         </div>
       </div>
 
-
+<!--
       <hr />
 
       <table id="bpmn-tools-bpi" class="display" width="100%">
@@ -390,7 +390,7 @@
           </table>
         </div>
       </div>
-
+-->
       <p>Powered by <a href="http://datatables.net/">jQuery DataTables</a>, <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://open.dapper.net/">Dapper</a></p>
     </div>
   </body>
