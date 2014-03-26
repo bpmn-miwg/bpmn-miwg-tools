@@ -72,11 +72,13 @@
 //                     { "mData": "vendor" },
                     { "mData": "tool",
                       "mRender": function ( data, type, full ) {
+                        var result = '';
                         if (full.website.length == 0) {
-                          return data+' '+full.version;
+                          result = data.replace('Microsoft', 'MS')+' '+full.version;
                         } else {
-                          return '<a href="'+full.website+'">'+data+' '+full.version+'</a>';
+                          result = '<a href="'+full.website+'">'+data.replace('Microsoft', 'MS')+' '+full.version.replace('c906a7c941b82dbb832ed9be62989c171c724199', 'c906a7c941')+'</a>';
                         }
+                        return '<strong>' + result + '</strong>';
                       } },
                     { "mData": "supportsBpmn2", "mRender": renderBoolean },
                     { "mData": "hasImport", "mRender": renderImportExport },
@@ -214,7 +216,7 @@
         <thead>
           <tr>
 <!--            <th>Vendor</th>-->
-            <th>Tool Name &amp; Version</th>
+            <th width="100%">Tool Name &amp; Version</th>
             <th>BPMN 2.0</th>
             <th>Import</th>
             <th>Export</th>
