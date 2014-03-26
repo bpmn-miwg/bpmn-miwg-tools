@@ -84,7 +84,7 @@
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
                     { "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },
                     { "mData": "participatedInDemos", "mRender": renderBoolean },
-                    { "mData": "openSource", "mRender": renderBoolean },
+                    { "mData": "openSource", "mRender": renderLicense },
                     { "mData": "openIssues",
                       "mRender": function ( data, type, full ) {
                         return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
@@ -120,6 +120,14 @@
                     + ' <a href="overview.html#' + toolAndVersion + '">Details</a>'
                 }
                 return result;
+              }
+
+              function renderLicense(data, type, full) {
+                if (data) {
+                  return 'OpenSource';
+                } else {
+                  return 'Commercial';
+                }
               }
 
               function renderTrafficLight(data, type, full) {
@@ -213,7 +221,7 @@
             <th>Roundtrip</th>
             <th>Results Submitted</th>
             <th>Part of Demos</th>
-            <th>Open Source</th>
+            <th>License</th>
             <th>Open Issues</th>
             <th>Closed Issues</th>
 <!--             <th>Notes</th> -->
@@ -269,8 +277,8 @@
                 <td>Tool participated in one of the <a href="https://github.com/bpmn-miwg/bpmn-miwg-demos">public BPMN MIWG demos</a></td>
               </tr>
               <tr>
-                <td>Open Source</td>
-                <td>Tool </td>
+                <td>License</td>
+                <td>License of the tool</td>
               </tr>
               <tr>
                 <td>Open Issues</td>
