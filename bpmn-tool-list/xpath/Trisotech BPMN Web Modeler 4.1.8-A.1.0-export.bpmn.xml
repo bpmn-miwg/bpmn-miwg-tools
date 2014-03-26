@@ -1,0 +1,73 @@
+<TestRun name="Trisotech BPMN Web Modeler 4.1.8-A.1.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Trisotech BPMN Web Modeler 4.1.8/A.1.0-export.bpmn"/>
+  <Test name="A.1.0">
+    <NodePush message="Push" identifier="CC198841-948D-4577-B6E2-8C70BA5A145D" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <stackID>CC198841-948D-4577-B6E2-8C70BA5A145D</stackID>
+          <nodeID>_ee4f1e14-dbe8-4b92-8460-e1a2b25aee7e</nodeID>
+          <id>CC198841-948D-4577-B6E2-8C70BA5A145D</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;_360ED28D-3647-4F30-BA0A-85D9114C5AC6&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_81697ECE-3CB4-4E44-BF96-1B13739E24ED</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;_97C3869F-B23E-4BC1-A5D4-80C4DFE09284&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_360ED28D-3647-4F30-BA0A-85D9114C5AC6</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_B0D4D860-0954-4C5E-8F79-A30D7B33F82F&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_97C3869F-B23E-4BC1-A5D4-80C4DFE09284</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;_4FD63CC3-DF28-46B1-898D-C163F644FAB7&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_B0D4D860-0954-4C5E-8F79-A30D7B33F82F</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <NodePop message="Pop" identifier="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-" caller="callingMethod">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_4FD63CC3-DF28-46B1-898D-C163F644FAB7</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>CC198841-948D-4577-B6E2-8C70BA5A145D</stackID>
+          <nodeID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</nodeID>
+          <id>CC198841-948D-4577-B6E2-8C70BA5A145D</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>_ee4f1e14-dbe8-4b92-8460-e1a2b25aee7e</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.1.0 results:">
+      <ListKeyValue key="OK" value="6"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="6"/>
+    <ListKeyValue key="FINDINGS " value="0"/>
+  </TotalResults>
+</TestRun>

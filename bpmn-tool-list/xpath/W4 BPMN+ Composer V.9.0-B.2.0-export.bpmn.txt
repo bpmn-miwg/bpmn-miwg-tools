@@ -1,0 +1,202 @@
+TESTRUN: W4 BPMN+ Composer V.9.0-B.2.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/W4 BPMN+ Composer V.9.0/B.2.0-export.bpmn
+  TEST: B.2.0
+    OK     : callingMethod: Push (id: B_2_0)
+      OK     : selectElementX; Message: //bpmn:collaboration
+      OK     : selectElementX: Push (id: Bpmn2_Collaboration_mVHy45loEeOfhNpi6BxDPw)
+        OK     : navigateElementX; Message: bpmn:messageFlow[@name='Message Flow 1']
+        FINDING: checkMessageDefinition; Message: Cannot find attribute; Parameter: messageRef
+        OK     : navigateElementX; Message: bpmn:messageFlow[@name='Message Flow 2']
+        FINDING: checkMessageDefinition; Message: Cannot find attribute; Parameter: messageRef
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+        OK     : selectProcessX: Push (id: Bpmn2_Process_mVHy5ZloEeOfhNpi6BxDPw)
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 1 Timer']
+          OK     : checkTimerEvent; Message: Timer event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Abstract Task 1' and @id='Bpmn2_Task_8lpOoZloEeOfhNpi6BxDPw']
+          OK     : navigateFollowingElement; Message: bpmn:sendTask[@name='Send Task 2' and @id='Bpmn2_SendTask_AuU7QJlpEeOfhNpi6BxDPw']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='Bpmn2_SendTask_AuU7QJlpEeOfhNpi6BxDPw']
+          OK     : navigateFollowingElement; Message: bpmn:userTask[@name='User Task 3' and @id='Bpmn2_UserTask_Dv-HUZlpEeOfhNpi6BxDPw']
+          OK     : checkDataAssociation: Push (id: Bpmn2_UserTask_Dv-HUZlpEeOfhNpi6BxDPw)
+            FINDING: checkDataAssociation; Message: Cannot find artifact node; Parameter: ../bpmn:dataObjectReference[@id='Bpmn2_DataObject_GPkg0plqEeOfhNpi6BxDPw']
+            OK     : checkDataAssociation: Pop (id: Bpmn2_UserTask_Dv-HUZlpEeOfhNpi6BxDPw)
+          FINDING: selectElement; Message: No node found; Parameter: bpmn:inclusiveGateway[@name='Inclusive Gateway 1']
+          OK     : selectElement: Push (id: )
+            FINDING: navigateGatewaySequenceFlowStack; Message: Parent failed; Parameter: 
+            FINDING: navigateGatewaySequenceFlowStack; Message: Parent failed; Parameter: 
+            FINDING: checkDefaultSequenceFlow; Message: Current node is not a sequenceFlow; Parameter: userTask
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkSignalEvent; Message: Current node is null; Parameter: null
+          FINDING: selectFollowingElement; Message: The base node is null; Parameter: null
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: checkMultiInstanceParallel; Message: Current node is null; Parameter: null
+            FINDING: checkXORMarkersForProcess; Message: Current node is null; Parameter: null
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateBoundaryEvent; Message: Current node is null; Parameter: null
+          FINDING: checkCancelActivity; Message: No current node; Parameter: 
+          FINDING: checkParallelMultiple; Message: No current node; Parameter: 
+          FINDING: checkConditionalEvent; Message: Current node is null; Parameter: null
+          OK     : navigateElement; Message: bpmn:parallelGateway[@name='Parallel Gateway 2']
+          OK     : navigateElement; Message: bpmn:endEvent[@name='End Event 1 Message']
+          OK     : checkMessageEvent; Message: Message event definition
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkGlobalTask; Message: Current node is null; Parameter: null
+          OK     : selectElementX; Message: bpmn:subProcess[@name='Expanded Sub-Process 1']
+          OK     : selectElementX: Push (id: Bpmn2_SubProcess_fZnucZlqEeOfhNpi6BxDPw)
+            OK     : navigateElementX; Message: bpmn:startEvent[@name='Start Event 2']
+            OK     : selectElementX; Message: bpmn:userTask[@name='User Task 7 Standard Loop']
+            OK     : selectElementX: Push (id: Bpmn2_UserTask_Dy1twZlsEeOfhNpi6BxDPw)
+              OK     : navigateElementX; Message: bpmn:standardLoopCharacteristics
+              OK     : callingMethod: Pop (id: Bpmn2_UserTask_Dy1twZlsEeOfhNpi6BxDPw)
+            OK     : navigateElementX; Message: bpmn:endEvent[@name='End Event 2']
+            OK     : callingMethod: Pop (id: Bpmn2_SubProcess_fZnucZlqEeOfhNpi6BxDPw)
+          OK     : navigateElementX; Message: bpmn:userTask[@name='User Task 8']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'null' found
+          OK     : checkEscalationEvent; Message: Escalation event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 9' and @id='Bpmn2_Task_TT6rcplrEeOfhNpi6BxDPw']
+          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Conditional Catch' and @id='Bpmn2_IntermediateCatchEvent_X-DfUplrEeOfhNpi6BxDPw']
+          OK     : checkConditionalEvent; Message: Conditional event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 10' and @id='Bpmn2_Task_eD9GkplrEeOfhNpi6BxDPw']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='Bpmn2_Task_eD9GkplrEeOfhNpi6BxDPw']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 3 Signal' and @id='Bpmn2_EndEvent_f43ZwplrEeOfhNpi6BxDPw']
+          OK     : checkSignalEvent; Message: Signal event definition
+          OK     : callingMethod: Pop (id: Bpmn2_Process_mVHy5ZloEeOfhNpi6BxDPw)
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]
+        OK     : selectProcessX: Push (id: Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw)
+          OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value 'true'.
+          OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value 'true'.
+          OK     : navigateElementX; Message: bpmn:laneSet/bpmn:lane[@name='Lane 1']
+          OK     : navigateElementX; Message: bpmn:laneSet/bpmn:lane[@name='Lane 2']
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 2 Message']
+          OK     : checkMessageEvent; Message: Message event definition
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='Bpmn2_StartEvent_x0QEcplvEeOfhNpi6BxDPw']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 11' and @id='Bpmn2_Task_3z0aMplvEeOfhNpi6BxDPw']
+          OK     : navigateFollowingElement; Message: bpmn:eventBasedGateway[@name='Event Base Gateway 3' and @id='Bpmn2_EventBasedGateway_9errQZlvEeOfhNpi6BxDPw']
+          OK     : checkEventGatewayExclusive; Message: Attribute eventGatewayType=Exclusive
+          OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="B_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw"']/bpmn2:eventBasedGateway[@id='id="Bpmn2_EventBasedGateway_9errQZlvEeOfhNpi6BxDPw"']/
+          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Timer Catch' and @id='Bpmn2_IntermediateCatchEvent_EO0iUplwEeOfhNpi6BxDPw']
+          OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="B_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw"']/bpmn2:eventBasedGateway[@id='id="Bpmn2_EventBasedGateway_9errQZlvEeOfhNpi6BxDPw"']/
+          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch' and @id='Bpmn2_IntermediateCatchEvent_3MgtIplwEeOfhNpi6BxDPw']
+          OK     : checkMessageEvent; Message: Message event definition
+          OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="B_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw"']/bpmn2:eventBasedGateway[@id='id="Bpmn2_EventBasedGateway_9errQZlvEeOfhNpi6BxDPw"']/
+          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch 2' and @id='Bpmn2_IntermediateCatchEvent_AT3TMplxEeOfhNpi6BxDPw']
+          OK     : selectElementX; Message: bpmn:callActivity[@name='Expanded Call Activity']
+          OK     : selectElementX: Push (id: Bpmn2_CallActivity_5haVcZoUEeOWrqJY9PAsEg)
+            OK     : selectCallActivityProcess; Message: //bpmn:process[@id='Bpmn2_Process_I0IyQJoNEeOfhNpi6BxDPw']
+            OK     : selectCallActivityProcess: Push (id: Bpmn2_Process_I0IyQJoNEeOfhNpi6BxDPw)
+              OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 3']
+              OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 4 Conditional']
+              FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name='User Task 12 Muti-Inst. Seq.']
+              FINDING: checkMultiInstanceSequential; Message: Loop characteristics not set; Parameter: bpmn:multiInstanceLoopCharacteristics
+              FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name='User Task 13']
+              FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Interrupting Message' and @attachedToRef='Bpmn2_StartEvent_NiRRIpoUEeOWrqJY9PAsEg']
+              OK     : checkCancelActivity; Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)
+              FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+              FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 5 Terminate']
+              FINDING: checkTerminateEvent; Message: Cannot find terminate event definition; Parameter: bpmn:terminateEventDefinition | bpmn:eventDefinitionRef
+              OK     : navigateElement; Message: 
+              FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+              FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+              OK     : callingMethod: Pop (id: Bpmn2_Process_I0IyQJoNEeOfhNpi6BxDPw)
+            OK     : callingMethod: Pop (id: Bpmn2_CallActivity_5haVcZoUEeOWrqJY9PAsEg)
+          OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name='Service Task 15' and @id='Bpmn2_ServiceTask_TivwYZoVEeOWrqJY9PAsEg']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Interrupting Conditional' found
+          OK     : checkConditionalEvent; Message: Conditional event definition
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=true
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateThrowEvent[@name='Intermediate Event Link']
+          FINDING: checkLinkEvent; Message: Cannot find link event definition; Parameter: bpmn:linkEventDefinition | bpmn:linkDefinitionRef
+          OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="B_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw"']/bpmn2:serviceTask[@id='id="Bpmn2_ServiceTask_TivwYZoVEeOWrqJY9PAsEg"']/
+          OK     : navigateFollowingElement; Message: bpmn:receiveTask[@name='Receive Task 16' and @id='Bpmn2_ReceiveTask_r50B4ZoVEeOWrqJY9PAsEg']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 6 Message' and @id='Bpmn2_EndEvent_s7zqYpoVEeOWrqJY9PAsEg']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='Bpmn2_EndEvent_s7zqYpoVEeOWrqJY9PAsEg']
+          FINDING: navigateElementX; Message: No node found; Parameter: bpmn:subProcess[@name='Collapsed Sub-Process 2']
+          OK     : checkDataAssociation: Push (id: Bpmn2_EndEvent_s7zqYpoVEeOWrqJY9PAsEg)
+            FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataStoreReference 'Data Store Reference'; Parameter: null
+            OK     : checkDataAssociation: Pop (id: Bpmn2_EndEvent_s7zqYpoVEeOWrqJY9PAsEg)
+          FINDING: selectElementX; Message: No node found; Parameter: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
+          OK     : selectElementX: Push (id: )
+            FINDING: navigateGatewaySequenceFlowStack; Message: Parent failed; Parameter: 
+            FINDING: checkDefaultSequenceFlow; Message: Current node is not a sequenceFlow; Parameter: endEvent
+            OK     : callingMethod: Pop (id: )
+          OK     : navigateElementX; Message: bpmn:intermediateThrowEvent[@name='Intermediate Event Message Throw']
+          OK     : checkMessageEvent; Message: Message event definition
+          OK     : navigateElementX; Message: bpmn:callActivity[@name='Collapsed Call Activity']
+          FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Escalation' and @attachedToRef='Bpmn2_CallActivity_U43osaN_EeOdFsKc-0YM8w']
+          FINDING: checkEscalationEvent; Message: Cannot find escalation event definition; Parameter: bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 18']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateThrowEvent[@name='null']
+          FINDING: checkEscalationEvent; Message: Cannot find escalation event definition; Parameter: bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 23']
+          OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="B_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw"']/bpmn2:callActivity[@id='id="Bpmn2_CallActivity_U43osaN_EeOdFsKc-0YM8w"']/
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 17' and @id='Bpmn2_Task_Zy3-MqXoEeOoG-Ahtk7EEA']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Message' found
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=false
+          OK     : checkParallelMultiple; Message: Attribute parallelMultiple is not existing but the expected value (false) equals the default value (false)
+          OK     : checkMessageEvent; Message: Message event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 19' and @id='Bpmn2_Task_z8qKgqXoEeOoG-Ahtk7EEA']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 7 None' and @id='Bpmn2_EndEvent_bXkEEaXoEeOoG-Ahtk7EEA']
+          OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="B_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw"']/bpmn2:task[@id='id="Bpmn2_Task_Zy3-MqXoEeOoG-Ahtk7EEA"']/
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 7 None' and @id='Bpmn2_EndEvent_bXkEEaXoEeOoG-Ahtk7EEA']
+          OK     : navigateElementX; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch 2']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 21' and @id='Bpmn2_Task_LyxEAqXpEeOoG-Ahtk7EEA']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Interrupting Timer' found
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=true
+          OK     : checkTimerEvent; Message: Timer event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 27' and @id='Bpmn2_Task_PL9X8qXqEeOoG-Ahtk7EEA']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:inclusiveGateway[@name='Inclusive Gateway 6']
+          OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="B_2_0"']/bpmn2:process[@id='id="Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw"']/bpmn2:task[@id='id="Bpmn2_Task_LyxEAqXpEeOoG-Ahtk7EEA"']/
+          OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 2' and @id='Bpmn2_SubProcess_Y4lDsaXpEeOoG-Ahtk7EEA']
+          OK     : selectFollowingElement: Push (id: Bpmn2_SubProcess_Y4lDsaXpEeOoG-Ahtk7EEA)
+            OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 5 None']
+            OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name='Service Task 22' and @id='Bpmn2_ServiceTask_fAD_UKXpEeOoG-Ahtk7EEA']
+            OK     : checkMultiInstanceParallel; Message: Multi instance loop characteristics (sequential=false)
+            OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 8 None' and @id='Bpmn2_EndEvent_gI1lQqXpEeOoG-Ahtk7EEA']
+            OK     : callingMethod: Pop (id: Bpmn2_SubProcess_Y4lDsaXpEeOoG-Ahtk7EEA)
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 23' and @id='Bpmn2_Task_DfpXQqXpEeOoG-Ahtk7EEA']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Signal' found
+          OK     : checkSignalEvent; Message: Signal event definition
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=false
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 24' and @id='Bpmn2_Task_6FhwwqXpEeOoG-Ahtk7EEA']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 11 Escalation' and @id='Bpmn2_EndEvent_vP1usqXrEeOoG-Ahtk7EEA']
+          FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name='Start Event 6 Signal']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 25']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:parallelGateway[@name='Parallel Gateway 5']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 26']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 2']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:inclusiveGateway[@name='Inclusive Gateway 6']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 28']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:parallelGateway[@name='Parallel Gateway 7']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 11 Escalation']
+          OK     : navigateElement; Message: bpmn:parallelGateway[@name='Parallel Gateway 5']
+          OK     : navigateFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 3' and @id='Bpmn2_SubProcess_4IaHUaXqEeOoG-Ahtk7EEA']
+          OK     : navigateElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Link']
+          OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 3' and @id='Bpmn2_SubProcess_4IaHUaXqEeOoG-Ahtk7EEA']
+          OK     : selectFollowingElement: Push (id: Bpmn2_SubProcess_4IaHUaXqEeOoG-Ahtk7EEA)
+            OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 7']
+            OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Signal Catch' and @id='Bpmn2_IntermediateCatchEvent_AU4ZgqXrEeOoG-Ahtk7EEA']
+            OK     : checkSignalEvent; Message: Signal event definition
+            OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 31' and @id='Bpmn2_Task_I_hOYqXrEeOoG-Ahtk7EEA']
+            FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Exclusive Gateway 7']
+            FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 12']
+            OK     : navigateElement; Message: 
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            FINDING: checkErrorEvent; Message: Current node is null; Parameter: null
+            OK     : callingMethod: Pop (id: Bpmn2_SubProcess_4IaHUaXqEeOoG-Ahtk7EEA)
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 32' and @id='Bpmn2_Task_iPePsqXrEeOoG-Ahtk7EEA']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'null' found
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 33' and @id='Bpmn2_Task_m_IcwqXrEeOoG-Ahtk7EEA']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 14' and @id='Bpmn2_EndEvent_ooHMwqXrEeOoG-Ahtk7EEA']
+          OK     : callingMethod: Pop (id: Bpmn2_Process_r2fFgplvEeOfhNpi6BxDPw)
+        OK     : callingMethod: Pop (id: Bpmn2_Collaboration_mVHy45loEeOfhNpi6BxDPw)
+      
+    TEST: TEST B.2.0 results:
+      - OK: 101
+      - FINDINGS: 60
+  
+  TEST RESULTS TOTAL:
+    - OK: 101
+    - FINDINGS : 60
+    

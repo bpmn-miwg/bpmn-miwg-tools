@@ -1,0 +1,251 @@
+<TestRun name="itp-commerce Process Modeler for Microsoft Visio 6-B.1.0-roundtrip.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/itp-commerce Process Modeler for Microsoft Visio 6/B.1.0-roundtrip.bpmn"/>
+  <Test name="BPMN Schema Validator">
+    <OKAssertion assertion="Validation" message="Schema validation succeeded"/>
+    <Results name="TEST BPMN Schema Validator results:">
+      <ListKeyValue key="OK" value="1"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <Test name="B.1.0">
+    <NodePush message="Push" identifier="_1368567393291" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="//bpmn:collaboration">
+        <testContext>
+          <stackID>_1368567393291</stackID>
+          <nodeID>COLLABORATION_7e2f7950-4879-11e3-3329-080027000095</nodeID>
+          <id>_1368567393291</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="_67944846-654d-4b31-b23d-fa27fe2a4d68" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]">
+          <testContext>
+            <stackID>_67944846-654d-4b31-b23d-fa27fe2a4d68</stackID>
+            <nodeID>_67944846-654d-4b31-b23d-fa27fe2a4d68</nodeID>
+            <id>_67944846-654d-4b31-b23d-fa27fe2a4d68</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="bpmn:messageFlow[@name=&apos;Message Flow 2&apos;]">
+          <testContext>
+            <stackID>_67944846-654d-4b31-b23d-fa27fe2a4d68</stackID>
+            <nodeID>_5d195b1c-ffea-4b53-b98f-78d9616a5038</nodeID>
+            <id>_67944846-654d-4b31-b23d-fa27fe2a4d68</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="selectProcessX" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]">
+          <testContext>
+            <stackID>_67944846-654d-4b31-b23d-fa27fe2a4d68</stackID>
+            <nodeID>_9428f666-fc8a-41be-8a77-9b280e14e7ae</nodeID>
+            <id>_67944846-654d-4b31-b23d-fa27fe2a4d68</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="_9aa165ba-5d14-487d-ade5-edb9c51f0101" caller="selectProcessX">
+          <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event Timer&apos;]">
+            <testContext>
+              <stackID>_9aa165ba-5d14-487d-ade5-edb9c51f0101</stackID>
+              <nodeID>_9aa165ba-5d14-487d-ade5-edb9c51f0101</nodeID>
+              <id>_9aa165ba-5d14-487d-ade5-edb9c51f0101</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="checkTimerEvent" message="Timer event definition">
+            <testContext>
+              <stackID>_9aa165ba-5d14-487d-ade5-edb9c51f0101</stackID>
+              <nodeID>_e314751e-5c3a-41f2-a1ae-4cb99efa0916</nodeID>
+              <id>_9aa165ba-5d14-487d-ade5-edb9c51f0101</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Abstract Task 1&apos;]"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;_e314751e-5c3a-41f2-a1ae-4cb99efa0916&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:userTask[@name=&apos;User Task 2&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:serviceTask[@name=&apos;Service Task 3&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event None 1&apos;]"/>
+          <NodePop message="Pop" identifier="_9aa165ba-5d14-487d-ade5-edb9c51f0101" caller="callingMethod">
+            <testContext>
+              <stackID>_9aa165ba-5d14-487d-ade5-edb9c51f0101</stackID>
+              <nodeID>_e314751e-5c3a-41f2-a1ae-4cb99efa0916</nodeID>
+              <id>_9aa165ba-5d14-487d-ade5-edb9c51f0101</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>_67944846-654d-4b31-b23d-fa27fe2a4d68</stackID>
+            <nodeID>_9aa165ba-5d14-487d-ade5-edb9c51f0101</nodeID>
+            <id>_67944846-654d-4b31-b23d-fa27fe2a4d68</id>
+          </testContext>
+        </NodePush>
+        <OKAssertion assertion="selectProcessX" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]">
+          <testContext>
+            <stackID>_67944846-654d-4b31-b23d-fa27fe2a4d68</stackID>
+            <nodeID>_9aa165ba-5d14-487d-ade5-edb9c51f0101</nodeID>
+            <id>_67944846-654d-4b31-b23d-fa27fe2a4d68</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3" caller="selectProcessX">
+          <OKAssertion assertion="checkXORMarkersForProcess" message="All XOR markers have the expected value &apos;false&apos;.">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="checkXORMarkersForProcess" message="All XOR markers have the expected value &apos;false&apos;.">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="checkXORMarkersForProcess" message="All XOR markers have the expected value &apos;false&apos;.">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="checkXORMarkersForProcess" message="All XOR markers have the expected value &apos;false&apos;.">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateElementX" message=".//bpmn:lane[@name=&apos;Lane 1&apos;]">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateElementX" message=".//bpmn:lane[@name=&apos;Lane 2&apos;]">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_4a6df7ac-26d8-4718-ac05-90af463d5e23</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event Message&apos;]">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_3400f56a-4565-47d1-91db-0ba17b958cb2</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="checkMessageEvent" message="Message event definition">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_a38484e2-7bdb-48b1-b62e-139d51d6a147</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:parallelGateway[@name=&apos;Parallel Gateway Divergence&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 1&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:callActivity[@name=&apos;Call Activity Collapsed&apos;]"/>
+          <FindingAssertion assertion="checkTextAssociation" message="Text annotation &apos;Text Annotation&apos; not found" parameter="bpmn:textAnnotation[@id=../bpmn:association[@sourceRef=&apos;_a38484e2-7bdb-48b1-b62e-139d51d6a147&apos;]/@targetRef]/bpmn:text"/>
+          <FindingAssertion assertion="selectFollowingElement" message="No outgoing reference found" parameter="bpmn:callActivity[@name=&apos;Call Activity - Expanded&apos;]"/>
+          <NodePush message="Push" identifier="" caller="selectFollowingElement">
+            <FindingAssertion assertion="selectProcessOfCallActivity" message="Parent failed" parameter="selectProcessofCallActivity"/>
+            <NodePush message="Push" identifier="" caller="selectProcessOfCallActivity">
+              <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event None 1&apos;]"/>
+              <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+              <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+              <NodePop message="Pop" identifier="" caller="callingMethod">
+                <testContext>
+                  <nodeID>_a38484e2-7bdb-48b1-b62e-139d51d6a147</nodeID>
+                </testContext>
+              </NodePop>
+              <testContext>
+                <nodeID>_a38484e2-7bdb-48b1-b62e-139d51d6a147</nodeID>
+              </testContext>
+            </NodePush>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext/>
+            </NodePop>
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <nodeID>_a38484e2-7bdb-48b1-b62e-139d51d6a147</nodeID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkMessageEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Current node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkGlobalTask" message="Current node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="selectFollowingElement" message="The base node is null"/>
+          <NodePush message="Push" identifier="" caller="selectFollowingElement">
+            <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event None 2&apos;]"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext/>
+            </NodePop>
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkDataAssociation" message="Current node is null"/>
+          <FindingAssertion assertion="checkDataAssociation" message="Current node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <NodePop message="Pop" identifier="_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3" caller="callingMethod">
+            <testContext>
+              <stackID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</stackID>
+              <id>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>_67944846-654d-4b31-b23d-fa27fe2a4d68</stackID>
+            <nodeID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</nodeID>
+            <id>_67944846-654d-4b31-b23d-fa27fe2a4d68</id>
+          </testContext>
+        </NodePush>
+        <NodePop message="Pop" identifier="_67944846-654d-4b31-b23d-fa27fe2a4d68" caller="callingMethod">
+          <testContext>
+            <stackID>_67944846-654d-4b31-b23d-fa27fe2a4d68</stackID>
+            <nodeID>_c00e7ebb-7ff6-4ecd-9c12-d4ea355930a3</nodeID>
+            <id>_67944846-654d-4b31-b23d-fa27fe2a4d68</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>_1368567393291</stackID>
+          <nodeID>_67944846-654d-4b31-b23d-fa27fe2a4d68</nodeID>
+          <id>_1368567393291</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>COLLABORATION_7e2f7950-4879-11e3-3329-080027000095</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST B.1.0 results:">
+      <ListKeyValue key="OK" value="18"/>
+      <ListKeyValue key="FINDINGS" value="34"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="19"/>
+    <ListKeyValue key="FINDINGS " value="34"/>
+  </TotalResults>
+</TestRun>

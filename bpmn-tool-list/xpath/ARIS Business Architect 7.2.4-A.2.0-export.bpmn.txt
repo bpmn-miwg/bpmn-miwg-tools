@@ -1,0 +1,28 @@
+TESTRUN: ARIS Business Architect 7.2.4-A.2.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/ARIS Business Architect 7.2.4/A.2.0-export.bpmn
+  TEST: A.2.0
+    OK     : callingMethod: Push (id: ARISBPMN_d327f7f0-3bdd-11e3-3329-080027000095)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: PROCESS_d327f7f0-3bdd-11e3-3329-080027000095)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='FLOWNODE_28a18483-3bda-11e3-3329-080027000095']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Split Flow)' and @id='FLOWNODE_28a18486-3bda-11e3-3329-080027000095']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='FLOWNODE_28a18491-3bda-11e3-3329-080027000095']
+        OK     : navigateElement; Message: #document/semantic:definitions[@id='id="ARISBPMN_d327f7f0-3bdd-11e3-3329-080027000095"']/semantic:process[@id='id="PROCESS_d327f7f0-3bdd-11e3-3329-080027000095"']/semantic:exclusiveGateway[@id='id="FLOWNODE_28a18486-3bda-11e3-3329-080027000095"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='FLOWNODE_28a18493-3bda-11e3-3329-080027000095']
+        OK     : navigateElement; Message: #document/semantic:definitions[@id='id="ARISBPMN_d327f7f0-3bdd-11e3-3329-080027000095"']/semantic:process[@id='id="PROCESS_d327f7f0-3bdd-11e3-3329-080027000095"']/semantic:exclusiveGateway[@id='id="FLOWNODE_28a18486-3bda-11e3-3329-080027000095"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 4' and @id='FLOWNODE_28a1848f-3bda-11e3-3329-080027000095']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='FLOWNODE_28a18496-3bda-11e3-3329-080027000095']
+        OK     : navigateElement; Message: #document/semantic:definitions[@id='id="ARISBPMN_d327f7f0-3bdd-11e3-3329-080027000095"']/semantic:process[@id='id="PROCESS_d327f7f0-3bdd-11e3-3329-080027000095"']/semantic:task[@id='id="FLOWNODE_28a18493-3bda-11e3-3329-080027000095"']/
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='FLOWNODE_28a18496-3bda-11e3-3329-080027000095']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event' and @id='FLOWNODE_28a1849a-3bda-11e3-3329-080027000095']
+        OK     : callingMethod: Pop (id: PROCESS_d327f7f0-3bdd-11e3-3329-080027000095)
+      
+    TEST: TEST A.2.0 results:
+      - OK: 13
+      - FINDINGS: 0
+  
+  TEST RESULTS TOTAL:
+    - OK: 13
+    - FINDINGS : 0
+    

@@ -1,0 +1,34 @@
+TESTRUN: iGrafx Process 2013 for Six Sigma 15.0.4.1565-A.3.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/iGrafx Process 2013 for Six Sigma 15.0.4.1565/A.3.0-export.bpmn
+  TEST: A.3.0
+    FINDING: callingMethod; Message: Cannot find attribute; Parameter: id
+    OK     : callingMethod: Push (id: )
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: diagram_IDAZSKFF)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='shape_IDAYQIFF']
+        OK     : navigateFollowingElement; Message: bpmn:subProcess[@name='Collapsed Sub-Process' and @id='shape_IDA1TIFF']
+        FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Message' and @attachedToRef='shape_IDA1TIFF']
+        FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+        FINDING: checkCancelActivity; Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+        OK     : navigateElement; Message: #document/definitions/process[@id='id="diagram_IDAZSKFF"']/subProcess[@id='id="shape_IDA1TIFF"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='shape_IDAWK1HB']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 1' and @id='shape_IDAEI1HB']
+        OK     : navigateElement; Message: #document/definitions/process[@id='id="diagram_IDAZSKFF"']/subProcess[@id='id="shape_IDA1TIFF"']/
+        FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Interrupting Escalation' and @attachedToRef='shape_IDA1TIFF']
+        FINDING: checkEscalationEvent; Message: Cannot find escalation event definition; Parameter: bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef
+        OK     : checkCancelActivity; Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 4']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 2']
+        OK     : callingMethod: Pop (id: diagram_IDAZSKFF)
+      
+    TEST: TEST A.3.0 results:
+      - OK: 9
+      - FINDINGS: 10
+  
+  TEST RESULTS TOTAL:
+    - OK: 9
+    - FINDINGS : 10
+    

@@ -1,0 +1,49 @@
+TESTRUN: ARIS Business Architect 7.2.4-A.4.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/ARIS Business Architect 7.2.4/A.4.0-export.bpmn
+  TEST: A.4.0
+    OK     : callingMethod: Push (id: ARISBPMN_83235540-3be4-11e3-3329-080027000095)
+      OK     : selectCollaboration; Message: bpmn:collaboration
+      OK     : selectCollaboration: Push (id: COLLABORATION_83235540-3be4-11e3-3329-080027000095)
+        OK     : selectPool; Message: bpmn:participant[@name='Pool']
+        OK     : selectPool: Push (id: FLOWNODE_2a6b2762-3be2-11e3-3329-080027000095)
+          OK     : selectReferencedProcess; Message: //bpmn:process[@id='PROCESS_2a6b2761-3be2-11e3-3329-080027000095']
+          OK     : selectReferencedProcess: Push (id: PROCESS_2a6b2761-3be2-11e3-3329-080027000095)
+            FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name='Start Event 1']
+            FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+            FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='PROCESS_2a6b2761-3be2-11e3-3329-080027000095']
+            FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+            FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='PROCESS_2a6b2761-3be2-11e3-3329-080027000095']
+            FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+            OK     : callingMethod: Pop (id: PROCESS_2a6b2761-3be2-11e3-3329-080027000095)
+          OK     : callingMethod: Pop (id: FLOWNODE_2a6b2762-3be2-11e3-3329-080027000095)
+        OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+        OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+        OK     : selectElementX: Push (id: PROCESS_83235540-3be4-11e3-3329-080027000095)
+          FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name='Start Event 2']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='PROCESS_83235540-3be4-11e3-3329-080027000095']
+          FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Expanded Sub-Process 1']
+          OK     : selectFollowingElement: Push (id: )
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkMessageFlow; Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: selectFollowingElement; Message: The base node is null; Parameter: null
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 4']
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : callingMethod: Pop (id: PROCESS_83235540-3be4-11e3-3329-080027000095)
+        OK     : callingMethod: Pop (id: COLLABORATION_83235540-3be4-11e3-3329-080027000095)
+      
+    TEST: TEST A.4.0 results:
+      - OK: 6
+      - FINDINGS: 18
+  
+  TEST RESULTS TOTAL:
+    - OK: 6
+    - FINDINGS : 18
+    

@@ -1,0 +1,28 @@
+TESTRUN: IBM Process Designer 8.0.1-A.1.0-roundtrip.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/IBM Process Designer 8.0.1/A.1.0-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    OK     : Validation; Message: Schema validation succeeded
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 1
+      - FINDINGS: 0
+  
+  TEST: A.1.0
+    OK     : callingMethod: Push (id: bpmnid-e25cec90-057e-457a-91a1-35e65537a644)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event']
+        OK     : callingMethod: Pop (id: bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536)
+      
+    TEST: TEST A.1.0 results:
+      - OK: 2
+      - FINDINGS: 4
+  
+  TEST RESULTS TOTAL:
+    - OK: 3
+    - FINDINGS : 4
+    

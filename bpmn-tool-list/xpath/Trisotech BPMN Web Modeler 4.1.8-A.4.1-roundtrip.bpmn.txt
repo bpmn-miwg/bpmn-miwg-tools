@@ -1,0 +1,56 @@
+TESTRUN: Trisotech BPMN Web Modeler 4.1.8-A.4.1-roundtrip.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Trisotech BPMN Web Modeler 4.1.8/A.4.1-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    OK     : Validation; Message: Schema validation succeeded
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 1
+      - FINDINGS: 0
+  
+  TEST: A.4.1
+    OK     : callingMethod: Push (id: sid-0faa53b6-794d-4268-af2e-848824b670f1)
+      OK     : selectCollaboration; Message: bpmn:collaboration
+      OK     : selectCollaboration: Push (id: C1386684033793)
+        OK     : selectPool; Message: bpmn:participant[@name='Pool 1']
+        OK     : selectPool: Push (id: sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1)
+          OK     : selectReferencedProcess; Message: //bpmn:process[@id='WFP-Page_sid-8b127eb3-e0eb-4ed1-9a98-839fb074679a-1']
+          OK     : selectReferencedProcess: Push (id: WFP-Page_sid-8b127eb3-e0eb-4ed1-9a98-839fb074679a-1)
+            OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 1']
+            OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='sid-3D477D07-D669-4A26-9454-12AD775FDE70']
+            FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='sid-3D477D07-D669-4A26-9454-12AD775FDE70']
+            OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='sid-1208A5BA-9E1C-49D2-82E3-5DB2C0E9887D']
+            FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='sid-1208A5BA-9E1C-49D2-82E3-5DB2C0E9887D']
+            OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 1' and @id='sid-5F0F3508-96EF-4F9B-9182-64AD17334E23']
+            OK     : callingMethod: Pop (id: WFP-Page_sid-8b127eb3-e0eb-4ed1-9a98-839fb074679a-1)
+          OK     : callingMethod: Pop (id: sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1)
+        OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+        OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+        OK     : selectElementX: Push (id: WFP-Page_sid-8b127eb3-e0eb-4ed1-9a98-839fb074679a-2)
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 2']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='sid-34E8C3A5-5C2A-4593-AC67-038B737814D7']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='sid-34E8C3A5-5C2A-4593-AC67-038B737814D7']
+          OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 1' and @id='sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754']
+          OK     : selectFollowingElement: Push (id: sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754)
+            OK     : callingMethod: Pop (id: sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754)
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 5' and @id='sid-485E1184-9951-4B41-9794-A9AFD42A3249']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='sid-485E1184-9951-4B41-9794-A9AFD42A3249']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 2' and @id='sid-78073B2D-35BB-45D5-9CF1-D446602F8E59']
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="sid-0faa53b6-794d-4268-af2e-848824b670f1"']/semantic:process[@id='id="WFP-Page_sid-8b127eb3-e0eb-4ed1-9a98-839fb074679a-2"']/semantic:task[@id='id="sid-34E8C3A5-5C2A-4593-AC67-038B737814D7"']/
+          OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 2' and @id='sid-645780CC-D61F-4715-8B58-71679305245F']
+          OK     : selectFollowingElement: Push (id: sid-645780CC-D61F-4715-8B58-71679305245F)
+            OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 4']
+            OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 6' and @id='sid-B414AE83-11A2-4968-B4E4-45833D641928']
+            OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 4' and @id='sid-46E6675F-8040-45FE-B5C3-B904596F3D4F']
+            OK     : callingMethod: Pop (id: sid-645780CC-D61F-4715-8B58-71679305245F)
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 5' and @id='sid-93C83C6A-1122-4E0F-9F47-4027C9080456']
+          OK     : callingMethod: Pop (id: WFP-Page_sid-8b127eb3-e0eb-4ed1-9a98-839fb074679a-2)
+        OK     : callingMethod: Pop (id: C1386684033793)
+      
+    TEST: TEST A.4.1 results:
+      - OK: 20
+      - FINDINGS: 4
+  
+  TEST RESULTS TOTAL:
+    - OK: 21
+    - FINDINGS : 4
+    

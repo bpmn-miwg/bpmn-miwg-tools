@@ -1,0 +1,74 @@
+TESTRUN: MID Innovator 11.5.2.30413-A.2.0-roundtrip.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/MID Innovator 11.5.2.30413/A.2.0-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    Error Line 2: cvc-complex-type.4: Attribute 'targetNamespace' must appear on element 'bpmn:definitions'.
+
+    Error Line 5: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":incoming, "http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics}' is expected.
+
+    Error Line 10: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":incoming, "http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics}' is expected.
+
+    Error Line 15: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":incoming, "http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing}' is expected.
+
+    Error Line 22: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":incoming, "http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing}' is expected.
+
+    Error Line 28: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":incoming, "http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics}' is expected.
+
+    Error Line 33: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":incoming, "http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutput, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":outputSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinition, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinitionRef}' is expected.
+
+    Error Line 37: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":incoming, "http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics}' is expected.
+
+    Error Line 42: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":incoming, "http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInput, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinition, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinitionRef}' is expected.
+
+    Error Line 47: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 51: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 55: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 59: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 63: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 67: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 71: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 75: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 79: cvc-complex-type.2.4.a: Invalid content was found starting with element 'waypoint'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conditionExpression}' is expected.
+
+    Error Line 82: cvc-complex-type.2.4.a: Invalid content was found starting with element 'geometry'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":flowElement, "http://www.omg.org/spec/BPMN/20100524/MODEL":artifact, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":correlationSubscription, "http://www.omg.org/spec/BPMN/20100524/MODEL":supports}' is expected.
+
+    FINDING: Validation failed; Message: Warnings 0, Errors: 19, Fatal Errors: 0; Parameter: 
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 0
+      - FINDINGS: 19
+  
+  TEST: A.2.0
+    FINDING: callingMethod; Message: Cannot find attribute; Parameter: id
+    OK     : callingMethod: Push (id: )
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: WFP-6-)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='_5a972b87-735d-454a-b31c-f52fb3afc5c7']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Split Flow)' and @id='_35fe57a7-1302-44e2-bf58-032f11af7ecb']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='_4f7d62d7-f0e6-46bc-be00-69e02da38f65']
+        OK     : navigateElement; Message: #document/bpmn:definitions/bpmn:process[@id='id="WFP-6-"']/bpmn:exclusiveGateway[@id='id="_35fe57a7-1302-44e2-bf58-032f11af7ecb"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='_e6eb725a-34bc-45c7-aed0-9f9596cd7bee']
+        OK     : navigateElement; Message: #document/bpmn:definitions/bpmn:process[@id='id="WFP-6-"']/bpmn:exclusiveGateway[@id='id="_35fe57a7-1302-44e2-bf58-032f11af7ecb"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 4' and @id='_7d399717-1aba-47ac-8d7d-8aaa033255e0']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='_33c66216-391c-49c2-aa19-d8f0b7f5f91d']
+        OK     : navigateElement; Message: #document/bpmn:definitions/bpmn:process[@id='id="WFP-6-"']/bpmn:task[@id='id="_e6eb725a-34bc-45c7-aed0-9f9596cd7bee"']/
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='_33c66216-391c-49c2-aa19-d8f0b7f5f91d']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event' and @id='_258f51eb-b764-4a71-b681-3a01cca14143']
+        OK     : callingMethod: Pop (id: WFP-6-)
+      
+    TEST: TEST A.2.0 results:
+      - OK: 13
+      - FINDINGS: 1
+  
+  TEST RESULTS TOTAL:
+    - OK: 13
+    - FINDINGS : 20
+    

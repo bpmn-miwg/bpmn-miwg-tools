@@ -1,0 +1,40 @@
+TESTRUN: Yaoqiang BPMN Editor 3.0.1-A.3.0-roundtrip.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Yaoqiang BPMN Editor 3.0.1/A.3.0-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    OK     : Validation; Message: Schema validation succeeded
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 1
+      - FINDINGS: 0
+  
+  TEST: A.3.0
+    OK     : callingMethod: Push (id: _1373649919111)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: WFP-6-)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='_65f5459f-44ae-436d-a089-a91d6d78075b']
+        OK     : navigateFollowingElement; Message: bpmn:subProcess[@name='Collapsed Sub-Process' and @id='_1ae31d1b-2559-4f78-a3ec-47986a49db48']
+        OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Message' found
+        OK     : checkMessageEvent; Message: Message event definition
+        OK     : checkCancelActivity; Message: Attribute cancelActivity=false
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='_72204cd7-709c-4656-9554-3ae29b3844ce']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 1' and @id='_ce253897-4300-4b24-b71f-4c9535698c70']
+        OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_1373649919111"']/semantic:process[@id='id="WFP-6-"']/semantic:subProcess[@id='id="_1ae31d1b-2559-4f78-a3ec-47986a49db48"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='_2d2d0d29-896f-49f9-8109-77a7304309c5']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 1' and @id='_ce253897-4300-4b24-b71f-4c9535698c70']
+        OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_1373649919111"']/semantic:process[@id='id="WFP-6-"']/semantic:subProcess[@id='id="_1ae31d1b-2559-4f78-a3ec-47986a49db48"']/
+        OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Interrupting Escalation' found
+        OK     : checkEscalationEvent; Message: Escalation event definition
+        OK     : checkCancelActivity; Message: Attribute cancelActivity=true
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 4' and @id='_9fad8da5-a28c-4b6b-bb71-fbd5c65b9681']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 2' and @id='_10ce0b26-1b3e-46a2-85a5-62538ed2da13']
+        OK     : callingMethod: Pop (id: WFP-6-)
+      
+    TEST: TEST A.3.0 results:
+      - OK: 18
+      - FINDINGS: 0
+  
+  TEST RESULTS TOTAL:
+    - OK: 19
+    - FINDINGS : 0
+    

@@ -1,0 +1,90 @@
+<TestRun name="camunda Modeler 2.4.0-A.4.1-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/camunda Modeler 2.4.0/A.4.1-export.bpmn"/>
+  <Test name="A.4.1">
+    <NodePush message="Push" identifier="_ezsIEFXYEeOimJqO8rF3_g" caller="callingMethod">
+      <FindingAssertion assertion="selectCollaboration" message="No node found" parameter="bpmn:collaboration"/>
+      <NodePush message="Push" identifier="" caller="selectCollaboration">
+        <FindingAssertion assertion="selectPool" message="Parent failed" parameter="bpmn:participant[@name=&apos;Pool 1&apos;]"/>
+        <NodePush message="Push" identifier="" caller="selectPool">
+          <FindingAssertion assertion="selectReferencedProcess" message="Node is null" parameter=""/>
+          <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 1&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Parent failed"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Parent failed"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+          <NodePop message="Pop" identifier="" caller="callingMethod">
+            <testContext>
+              <nodeID>sid-467b00a2-7f22-4314-bd57-2f84b409dc80</nodeID>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <nodeID>sid-467b00a2-7f22-4314-bd57-2f84b409dc80</nodeID>
+          </testContext>
+        </NodePush>
+        <NodePop message="Pop" identifier="" caller="callingMethod">
+          <testContext/>
+        </NodePop>
+        <testContext>
+          <stackID>_ezsIEFXYEeOimJqO8rF3_g</stackID>
+          <nodeID>sid-467b00a2-7f22-4314-bd57-2f84b409dc80</nodeID>
+          <id>_ezsIEFXYEeOimJqO8rF3_g</id>
+        </testContext>
+      </NodePush>
+      <FindingAssertion assertion="navigateElementX" message="No node found" parameter="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]"/>
+      <FindingAssertion assertion="selectElementX" message="No node found" parameter="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]"/>
+      <NodePush message="Push" identifier="" caller="selectElementX">
+        <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 2&apos;]"/>
+        <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+        <FindingAssertion assertion="checkMessageFlow" message="Current node is null"/>
+        <FindingAssertion assertion="selectFollowingElement" message="Parent failed" parameter="Type: bpmn:subProcess, name: Expanded Sub-Process 1"/>
+        <NodePush message="Push" identifier="" caller="selectFollowingElement">
+          <NodePop message="Pop" identifier="" caller="callingMethod">
+            <testContext/>
+          </NodePop>
+          <testContext/>
+        </NodePush>
+        <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+        <FindingAssertion assertion="checkMessageFlow" message="Current node is null"/>
+        <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+        <OKAssertion assertion="navigateElement" message="">
+          <testContext/>
+        </OKAssertion>
+        <FindingAssertion assertion="selectFollowingElement" message="Parent failed" parameter="Type: bpmn:subProcess, name: Expanded Sub-Process 2"/>
+        <NodePush message="Push" identifier="" caller="selectFollowingElement">
+          <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 4&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <NodePop message="Pop" identifier="" caller="callingMethod">
+            <testContext/>
+          </NodePop>
+          <testContext/>
+        </NodePush>
+        <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+        <NodePop message="Pop" identifier="" caller="callingMethod">
+          <testContext/>
+        </NodePop>
+        <testContext>
+          <stackID>_ezsIEFXYEeOimJqO8rF3_g</stackID>
+          <id>_ezsIEFXYEeOimJqO8rF3_g</id>
+        </testContext>
+      </NodePush>
+      <NodePop message="Pop" identifier="_ezsIEFXYEeOimJqO8rF3_g" caller="callingMethod">
+        <testContext>
+          <stackID>_ezsIEFXYEeOimJqO8rF3_g</stackID>
+          <id>_ezsIEFXYEeOimJqO8rF3_g</id>
+        </testContext>
+      </NodePop>
+      <testContext>
+        <nodeID>sid-467b00a2-7f22-4314-bd57-2f84b409dc80</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.4.1 results:">
+      <ListKeyValue key="OK" value="1"/>
+      <ListKeyValue key="FINDINGS" value="23"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="1"/>
+    <ListKeyValue key="FINDINGS " value="23"/>
+  </TotalResults>
+</TestRun>

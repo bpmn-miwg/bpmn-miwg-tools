@@ -1,0 +1,122 @@
+<TestRun name="Trisotech BPMN Web Modeler 4.1.8-A.2.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Trisotech BPMN Web Modeler 4.1.8/A.2.0-export.bpmn"/>
+  <Test name="A.2.0">
+    <NodePush message="Push" identifier="C7A4D800-1476-45DF-88DF-E2FB35EF97C7" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <stackID>C7A4D800-1476-45DF-88DF-E2FB35EF97C7</stackID>
+          <nodeID>_b3fa06f0-c6d8-482f-840b-3424786459ff</nodeID>
+          <id>C7A4D800-1476-45DF-88DF-E2FB35EF97C7</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;_DBBA7F0B-6CBE-4834-A7D9-CCBF7EDAA03A&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_9838D317-A739-40FF-AF9E-5B3958993467</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Gateway (Split Flow)&apos; and @id=&apos;_92DEB621-9368-46D4-8ADF-FC4176D5F420&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_DBBA7F0B-6CBE-4834-A7D9-CCBF7EDAA03A</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;_48EAE833-0F18-46F5-96AD-A16636C1E9CB&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_92DEB621-9368-46D4-8ADF-FC4176D5F420</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="#document/semantic:definitions[@id=&apos;id=&quot;C7A4D800-1476-45DF-88DF-E2FB35EF97C7&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-&quot;&apos;]/semantic:exclusiveGateway[@id=&apos;id=&quot;_92DEB621-9368-46D4-8ADF-FC4176D5F420&quot;&apos;]/">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_92DEB621-9368-46D4-8ADF-FC4176D5F420</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_E46A5468-7ED9-4F0D-BAE9-D6B1DD06F6AC&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_92DEB621-9368-46D4-8ADF-FC4176D5F420</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="#document/semantic:definitions[@id=&apos;id=&quot;C7A4D800-1476-45DF-88DF-E2FB35EF97C7&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-&quot;&apos;]/semantic:exclusiveGateway[@id=&apos;id=&quot;_92DEB621-9368-46D4-8ADF-FC4176D5F420&quot;&apos;]/">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_92DEB621-9368-46D4-8ADF-FC4176D5F420</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;_54A9C845-9C21-4F47-A5AC-051A7291937F&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_92DEB621-9368-46D4-8ADF-FC4176D5F420</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;_131F225C-D7CE-4926-A154-4EE6AAC09AC5&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_54A9C845-9C21-4F47-A5AC-051A7291937F</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="#document/semantic:definitions[@id=&apos;id=&quot;C7A4D800-1476-45DF-88DF-E2FB35EF97C7&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-&quot;&apos;]/semantic:task[@id=&apos;id=&quot;_E46A5468-7ED9-4F0D-BAE9-D6B1DD06F6AC&quot;&apos;]/">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_E46A5468-7ED9-4F0D-BAE9-D6B1DD06F6AC</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;_131F225C-D7CE-4926-A154-4EE6AAC09AC5&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_E46A5468-7ED9-4F0D-BAE9-D6B1DD06F6AC</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;_CB535F2D-1A28-4B9B-9270-71956E81C1AE&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_131F225C-D7CE-4926-A154-4EE6AAC09AC5</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </OKAssertion>
+        <NodePop message="Pop" identifier="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-" caller="callingMethod">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</stackID>
+            <nodeID>_CB535F2D-1A28-4B9B-9270-71956E81C1AE</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>C7A4D800-1476-45DF-88DF-E2FB35EF97C7</stackID>
+          <nodeID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-</nodeID>
+          <id>C7A4D800-1476-45DF-88DF-E2FB35EF97C7</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>_b3fa06f0-c6d8-482f-840b-3424786459ff</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.2.0 results:">
+      <ListKeyValue key="OK" value="13"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="13"/>
+    <ListKeyValue key="FINDINGS " value="0"/>
+  </TotalResults>
+</TestRun>

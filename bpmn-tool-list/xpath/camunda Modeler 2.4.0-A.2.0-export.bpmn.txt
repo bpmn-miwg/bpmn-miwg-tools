@@ -1,0 +1,28 @@
+TESTRUN: camunda Modeler 2.4.0-A.2.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/camunda Modeler 2.4.0/A.2.0-export.bpmn
+  TEST: A.2.0
+    OK     : callingMethod: Push (id: _KrE0AFXYEeOimJqO8rF3_g)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: Process_1)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='Task_1']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Gateway (Split Flow)']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+        OK     : navigateElement; Message: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : navigateElement; Message: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : navigateElement; Message: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : callingMethod: Pop (id: Process_1)
+      
+    TEST: TEST A.2.0 results:
+      - OK: 6
+      - FINDINGS: 7
+  
+  TEST RESULTS TOTAL:
+    - OK: 6
+    - FINDINGS : 7
+    

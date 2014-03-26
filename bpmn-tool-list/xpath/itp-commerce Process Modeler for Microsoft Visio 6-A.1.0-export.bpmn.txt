@@ -1,0 +1,21 @@
+TESTRUN: itp-commerce Process Modeler for Microsoft Visio 6-A.1.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/itp-commerce Process Modeler for Microsoft Visio 6/A.1.0-export.bpmn
+  TEST: A.1.0
+    OK     : callingMethod: Push (id: _c08590a4-bd57-4bcb-a714-dba54eec7115)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: _22ed180a-47d2-426f-8124-436afad8e7fb)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event']
+        OK     : callingMethod: Pop (id: _22ed180a-47d2-426f-8124-436afad8e7fb)
+      
+    TEST: TEST A.1.0 results:
+      - OK: 2
+      - FINDINGS: 4
+  
+  TEST RESULTS TOTAL:
+    - OK: 2
+    - FINDINGS : 4
+    

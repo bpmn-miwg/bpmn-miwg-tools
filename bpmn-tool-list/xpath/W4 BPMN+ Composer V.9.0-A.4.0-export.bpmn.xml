@@ -1,4 +1,4 @@
-<TestRun name="W4 BPMN+ Composer V.9.0-A.4.0-export.bpmn"/>  <TestFile name="/home/tstephen/GDrive/src/bpmn-miwg-w4/src/main/resources/W4 BPMN+ Composer V.9.0/A.4.0-export.bpmn"/>
+<TestRun name="W4 BPMN+ Composer V.9.0-A.4.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/W4 BPMN+ Composer V.9.0/A.4.0-export.bpmn"/>
   <Test name="A.4.0">
     <NodePush message="Push" identifier="A_4_0" caller="callingMethod">
       <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">

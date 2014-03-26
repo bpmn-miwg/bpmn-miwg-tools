@@ -1,0 +1,33 @@
+TESTRUN: Yaoqiang BPMN Editor 3.0.1-A.3.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Yaoqiang BPMN Editor 3.0.1/A.3.0-export.bpmn
+  TEST: A.3.0
+    OK     : callingMethod: Push (id: _1385003163698)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: PROCESS_1)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='_3']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Collapsed Sub-Process']
+        FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Message' and @attachedToRef='_3']
+        FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+        FINDING: checkCancelActivity; Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+        OK     : navigateElement; Message: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : navigateElement; Message: 
+        FINDING: navigateBoundaryEvent; Message: Current node is null; Parameter: null
+        FINDING: checkEscalationEvent; Message: Current node is null; Parameter: null
+        FINDING: checkCancelActivity; Message: No current node; Parameter: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : callingMethod: Pop (id: PROCESS_1)
+      
+    TEST: TEST A.3.0 results:
+      - OK: 5
+      - FINDINGS: 13
+  
+  TEST RESULTS TOTAL:
+    - OK: 5
+    - FINDINGS : 13
+    

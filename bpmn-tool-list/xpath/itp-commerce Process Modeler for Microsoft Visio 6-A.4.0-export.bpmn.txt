@@ -1,0 +1,49 @@
+TESTRUN: itp-commerce Process Modeler for Microsoft Visio 6-A.4.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/itp-commerce Process Modeler for Microsoft Visio 6/A.4.0-export.bpmn
+  TEST: A.4.0
+    OK     : callingMethod: Push (id: _5d4c4b84-14de-4da1-a0a1-1cea337344c6)
+      OK     : selectCollaboration; Message: bpmn:collaboration
+      OK     : selectCollaboration: Push (id: _ca3c7650-4c5c-4890-a8c5-628698a8bdda)
+        OK     : selectPool; Message: bpmn:participant[@name='Pool']
+        OK     : selectPool: Push (id: _531a4604-5182-41da-b252-3d5c07dd63dc)
+          OK     : selectReferencedProcess; Message: //bpmn:process[@id='_59ab4db3-9c02-4d66-a592-37b28a671738']
+          OK     : selectReferencedProcess: Push (id: _59ab4db3-9c02-4d66-a592-37b28a671738)
+            OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 1']
+            FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+            FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='_49966fce-dba8-4776-9f48-e27e25ba43ab']
+            FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+            FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='_49966fce-dba8-4776-9f48-e27e25ba43ab']
+            FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+            OK     : callingMethod: Pop (id: _59ab4db3-9c02-4d66-a592-37b28a671738)
+          OK     : callingMethod: Pop (id: _531a4604-5182-41da-b252-3d5c07dd63dc)
+        OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+        OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+        OK     : selectElementX: Push (id: _aabf452f-ce4d-4296-a0eb-e3d219b327c6)
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 2']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='_2c2e8609-088b-4471-b8e7-6032a7d96aa0']
+          FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Expanded Sub-Process 1']
+          OK     : selectFollowingElement: Push (id: )
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkMessageFlow; Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: selectFollowingElement; Message: The base node is null; Parameter: null
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 4']
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : callingMethod: Pop (id: _aabf452f-ce4d-4296-a0eb-e3d219b327c6)
+        OK     : callingMethod: Pop (id: _ca3c7650-4c5c-4890-a8c5-628698a8bdda)
+      
+    TEST: TEST A.4.0 results:
+      - OK: 8
+      - FINDINGS: 16
+  
+  TEST RESULTS TOTAL:
+    - OK: 8
+    - FINDINGS : 16
+    

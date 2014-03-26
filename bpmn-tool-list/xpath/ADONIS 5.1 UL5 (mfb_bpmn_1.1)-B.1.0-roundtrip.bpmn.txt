@@ -1,0 +1,88 @@
+TESTRUN: ADONIS 5.1 UL5 (mfb_bpmn_1.1)-B.1.0-roundtrip.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/ADONIS 5.1 UL5 (mfb_bpmn_1.1)/B.1.0-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    Error Line 241: cvc-complex-type.2.4.a: Invalid content was found starting with element 'dataInputAssociation'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics}' is expected.
+
+    Error Line 325: cvc-complex-type.2.4.a: Invalid content was found starting with element 'dataObject'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":artifact, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":correlationSubscription, "http://www.omg.org/spec/BPMN/20100524/MODEL":supports}' is expected.
+
+    Error Line 696: cvc-id.1: There is no ID/IDREF binding for IDREF 'Dout1368567393823'.
+
+    FINDING: Validation failed; Message: Warnings 0, Errors: 3, Fatal Errors: 0; Parameter: 
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 0
+      - FINDINGS: 3
+  
+  TEST: B.1.0
+    FINDING: callingMethod; Message: Cannot find attribute; Parameter: id
+    OK     : callingMethod: Push (id: )
+      OK     : selectElementX; Message: //bpmn:collaboration
+      OK     : selectElementX: Push (id: mod.267430_Collaboration)
+        OK     : navigateElement; Message: bpmn:messageFlow[@name='Message Flow 1']
+        OK     : navigateElement; Message: bpmn:messageFlow[@name='Message Flow 2']
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+        OK     : selectProcessX: Push (id: _cde15ee4-b395-43a3-9f5e-9028446f8a52_process)
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event Timer']
+          OK     : checkTimerEvent; Message: Timer event definition
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Abstract Task 1']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='_e314751e-5c3a-41f2-a1ae-4cb99efa0916']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name='User Task 2']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:serviceTask[@name='Service Task 3']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event None 1']
+          OK     : callingMethod: Pop (id: _cde15ee4-b395-43a3-9f5e-9028446f8a52_process)
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]
+        OK     : selectProcessX: Push (id: _0623a9bd-fd34-462a-b09d-85cb5004be78_process)
+          FINDING: checkXORMarkersForProcess; Message: The XOR marker for the BPMN element with the id '_3c8c32c3-089a-4643-bf42-6c37c0dac7e0' is true although false is expected.; Parameter: null
+          FINDING: navigateElementX; Message: No node found; Parameter: .//bpmn:lane[@name='Lane 1']
+          OK     : navigateElementX; Message: .//bpmn:lane[@name='Lane 2']
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event Message']
+          OK     : checkMessageEvent; Message: Message event definition
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:parallelGateway[@name='Parallel Gateway Divergence']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 1']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name='Call Activity Collapsed']
+          FINDING: checkTextAssociation; Message: Text annotation 'Text Annotation' not found; Parameter: bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='_a38484e2-7bdb-48b1-b62e-139d51d6a147']/@targetRef]/bpmn:text
+          FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name='Call Activity - Expanded']
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: selectProcessOfCallActivity; Message: Parent failed; Parameter: selectProcessofCallActivity
+            OK     : selectProcessOfCallActivity: Push (id: )
+              FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event None 1']
+              FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+              FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+              OK     : callingMethod: Pop (id: )
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkMessageEvent; Message: Current node is null; Parameter: null
+          FINDING: checkMessageFlow; Message: Current node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkGlobalTask; Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: selectFollowingElement; Message: The base node is null; Parameter: null
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event None 2']
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkDataAssociation; Message: Current node is null; Parameter: null
+          FINDING: checkDataAssociation; Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : callingMethod: Pop (id: _0623a9bd-fd34-462a-b09d-85cb5004be78_process)
+        OK     : callingMethod: Pop (id: mod.267430_Collaboration)
+      
+    TEST: TEST B.1.0 results:
+      - OK: 13
+      - FINDINGS: 37
+  
+  TEST RESULTS TOTAL:
+    - OK: 13
+    - FINDINGS : 40
+    

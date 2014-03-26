@@ -1,0 +1,28 @@
+TESTRUN: Eclipse BPMN2 Modeler 0.2.6-A.2.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Eclipse BPMN2 Modeler 0.2.6/A.2.0-export.bpmn
+  TEST: A.2.0
+    OK     : callingMethod: Push (id: Definitions_1)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: A)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='Task_1']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Split Flow)' and @id='ExclusiveGateway_1']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='Task_2']
+        OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="Definitions_1"']/bpmn2:process[@id='id="A"']/bpmn2:exclusiveGateway[@id='id="ExclusiveGateway_1"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='Task_3']
+        OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="Definitions_1"']/bpmn2:process[@id='id="A"']/bpmn2:exclusiveGateway[@id='id="ExclusiveGateway_1"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 4' and @id='Task_4']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='ExclusiveGateway_2']
+        OK     : navigateElement; Message: #document/bpmn2:definitions[@id='id="Definitions_1"']/bpmn2:process[@id='id="A"']/bpmn2:task[@id='id="Task_3"']/
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='ExclusiveGateway_2']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event' and @id='EndEvent_2']
+        OK     : callingMethod: Pop (id: A)
+      
+    TEST: TEST A.2.0 results:
+      - OK: 13
+      - FINDINGS: 0
+  
+  TEST RESULTS TOTAL:
+    - OK: 13
+    - FINDINGS : 0
+    

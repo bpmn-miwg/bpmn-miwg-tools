@@ -1,0 +1,73 @@
+<TestRun name="ARIS Business Architect 7.2.4-A.1.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/ARIS Business Architect 7.2.4/A.1.0-export.bpmn"/>
+  <Test name="A.1.0">
+    <NodePush message="Push" identifier="ARISBPMN_055e9200-3bda-11e3-3329-080027000095" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <stackID>ARISBPMN_055e9200-3bda-11e3-3329-080027000095</stackID>
+          <nodeID>PROCESS_055e9200-3bda-11e3-3329-080027000095</nodeID>
+          <id>ARISBPMN_055e9200-3bda-11e3-3329-080027000095</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="PROCESS_055e9200-3bda-11e3-3329-080027000095" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>PROCESS_055e9200-3bda-11e3-3329-080027000095</stackID>
+            <nodeID>PROCESS_055e9200-3bda-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_055e9200-3bda-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;FLOWNODE_28a18473-3bda-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_055e9200-3bda-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_28a18471-3bda-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_055e9200-3bda-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;FLOWNODE_28a18476-3bda-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_055e9200-3bda-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_28a18473-3bda-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_055e9200-3bda-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;FLOWNODE_28a18479-3bda-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_055e9200-3bda-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_28a18476-3bda-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_055e9200-3bda-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;FLOWNODE_28a1847c-3bda-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_055e9200-3bda-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_28a18479-3bda-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_055e9200-3bda-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <NodePop message="Pop" identifier="PROCESS_055e9200-3bda-11e3-3329-080027000095" caller="callingMethod">
+          <testContext>
+            <stackID>PROCESS_055e9200-3bda-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_28a1847c-3bda-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_055e9200-3bda-11e3-3329-080027000095</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>ARISBPMN_055e9200-3bda-11e3-3329-080027000095</stackID>
+          <nodeID>PROCESS_055e9200-3bda-11e3-3329-080027000095</nodeID>
+          <id>ARISBPMN_055e9200-3bda-11e3-3329-080027000095</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>PROCESS_055e9200-3bda-11e3-3329-080027000095</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.1.0 results:">
+      <ListKeyValue key="OK" value="6"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="6"/>
+    <ListKeyValue key="FINDINGS " value="0"/>
+  </TotalResults>
+</TestRun>

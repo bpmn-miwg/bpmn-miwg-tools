@@ -1,0 +1,21 @@
+TESTRUN: camunda Modeler 2.4.0-A.1.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/camunda Modeler 2.4.0/A.1.0-export.bpmn
+  TEST: A.1.0
+    OK     : callingMethod: Push (id: _IfoQIFXYEeOimJqO8rF3_g)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: Process_1)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='Task_1']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='Task_2']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='Task_3']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event' and @id='EndEvent_1']
+        OK     : callingMethod: Pop (id: Process_1)
+      
+    TEST: TEST A.1.0 results:
+      - OK: 6
+      - FINDINGS: 0
+  
+  TEST RESULTS TOTAL:
+    - OK: 6
+    - FINDINGS : 0
+    

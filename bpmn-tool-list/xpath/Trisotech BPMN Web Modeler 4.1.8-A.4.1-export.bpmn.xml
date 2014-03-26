@@ -1,0 +1,199 @@
+<TestRun name="Trisotech BPMN Web Modeler 4.1.8-A.4.1-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Trisotech BPMN Web Modeler 4.1.8/A.4.1-export.bpmn"/>
+  <Test name="A.4.1">
+    <NodePush message="Push" identifier="_15A84127-BD9A-4260-826F-D2385063E8CE" caller="callingMethod">
+      <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
+        <testContext>
+          <stackID>_15A84127-BD9A-4260-826F-D2385063E8CE</stackID>
+          <nodeID>sid-879b0c48-1cb1-42e3-ba09-00e7db6ded66</nodeID>
+          <id>_15A84127-BD9A-4260-826F-D2385063E8CE</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="C1386683028997" caller="selectCollaboration">
+        <FindingAssertion assertion="selectPool" message="No node found" parameter="bpmn:participant[@name=&apos;Pool 1&apos;]"/>
+        <NodePush message="Push" identifier="" caller="selectPool">
+          <FindingAssertion assertion="selectReferencedProcess" message="Node is null" parameter=""/>
+          <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 1&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Parent failed"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Parent failed"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+          <NodePop message="Pop" identifier="" caller="callingMethod">
+            <testContext>
+              <nodeID>C1386683028997</nodeID>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>C1386683028997</stackID>
+            <nodeID>C1386683028997</nodeID>
+            <id>C1386683028997</id>
+          </testContext>
+        </NodePush>
+        <NodePop message="Pop" identifier="C1386683028997" caller="callingMethod">
+          <testContext>
+            <stackID>C1386683028997</stackID>
+            <id>C1386683028997</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>_15A84127-BD9A-4260-826F-D2385063E8CE</stackID>
+          <nodeID>C1386683028997</nodeID>
+          <id>_15A84127-BD9A-4260-826F-D2385063E8CE</id>
+        </testContext>
+      </NodePush>
+      <OKAssertion assertion="navigateElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]">
+        <testContext>
+          <stackID>_15A84127-BD9A-4260-826F-D2385063E8CE</stackID>
+          <nodeID>C1386683028997</nodeID>
+          <id>_15A84127-BD9A-4260-826F-D2385063E8CE</id>
+        </testContext>
+      </OKAssertion>
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]">
+        <testContext>
+          <stackID>_15A84127-BD9A-4260-826F-D2385063E8CE</stackID>
+          <nodeID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</nodeID>
+          <id>_15A84127-BD9A-4260-826F-D2385063E8CE</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_3A2922CA-90E7-4DF3-8615-354943C337FC</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA&apos;]"/>
+        <OKAssertion assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;_A01AAF9C-90E0-409E-BB95-513D9E3A8818&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="_A01AAF9C-90E0-409E-BB95-513D9E3A8818" caller="selectFollowingElement">
+          <NodePop message="Pop" identifier="_A01AAF9C-90E0-409E-BB95-513D9E3A8818" caller="callingMethod">
+            <testContext>
+              <stackID>_A01AAF9C-90E0-409E-BB95-513D9E3A8818</stackID>
+              <nodeID>_A01AAF9C-90E0-409E-BB95-513D9E3A8818</nodeID>
+              <id>_A01AAF9C-90E0-409E-BB95-513D9E3A8818</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_A01AAF9C-90E0-409E-BB95-513D9E3A8818</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </NodePush>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;_5A4098FC-7F4D-424F-BC74-D8214B285E31&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_A01AAF9C-90E0-409E-BB95-513D9E3A8818</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;_5A4098FC-7F4D-424F-BC74-D8214B285E31&apos;]"/>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;_0C88B698-FE9B-479F-838A-95CE89EF5510&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_5A4098FC-7F4D-424F-BC74-D8214B285E31</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_15A84127-BD9A-4260-826F-D2385063E8CE&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2&quot;&apos;]/semantic:task[@id=&apos;id=&quot;_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA&quot;&apos;]/">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;_95A23C5C-E0B8-4981-8902-817A1F9F412D&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="_95A23C5C-E0B8-4981-8902-817A1F9F412D" caller="selectFollowingElement">
+          <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 4&apos;]">
+            <testContext>
+              <stackID>_95A23C5C-E0B8-4981-8902-817A1F9F412D</stackID>
+              <nodeID>_95A23C5C-E0B8-4981-8902-817A1F9F412D</nodeID>
+              <id>_95A23C5C-E0B8-4981-8902-817A1F9F412D</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 6&apos; and @id=&apos;_0F9E92CB-2176-45B0-9C3A-29AD26A9DD97&apos;]">
+            <testContext>
+              <stackID>_95A23C5C-E0B8-4981-8902-817A1F9F412D</stackID>
+              <nodeID>F8FA62BD-F5D1-4116-BD04-4A41D0330DF9</nodeID>
+              <id>_95A23C5C-E0B8-4981-8902-817A1F9F412D</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 4&apos; and @id=&apos;_98B8EA45-7709-4016-8E2C-19911E62175E&apos;]">
+            <testContext>
+              <stackID>_95A23C5C-E0B8-4981-8902-817A1F9F412D</stackID>
+              <nodeID>_0F9E92CB-2176-45B0-9C3A-29AD26A9DD97</nodeID>
+              <id>_95A23C5C-E0B8-4981-8902-817A1F9F412D</id>
+            </testContext>
+          </OKAssertion>
+          <NodePop message="Pop" identifier="_95A23C5C-E0B8-4981-8902-817A1F9F412D" caller="callingMethod">
+            <testContext>
+              <stackID>_95A23C5C-E0B8-4981-8902-817A1F9F412D</stackID>
+              <nodeID>_98B8EA45-7709-4016-8E2C-19911E62175E</nodeID>
+              <id>_95A23C5C-E0B8-4981-8902-817A1F9F412D</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_95A23C5C-E0B8-4981-8902-817A1F9F412D</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </NodePush>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;_C00D4EFA-02DB-4421-BDBD-1C5FAA9DD3AF&apos;]">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_95A23C5C-E0B8-4981-8902-817A1F9F412D</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </OKAssertion>
+        <NodePop message="Pop" identifier="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2" caller="callingMethod">
+          <testContext>
+            <stackID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</stackID>
+            <nodeID>_C00D4EFA-02DB-4421-BDBD-1C5FAA9DD3AF</nodeID>
+            <id>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>_15A84127-BD9A-4260-826F-D2385063E8CE</stackID>
+          <nodeID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</nodeID>
+          <id>_15A84127-BD9A-4260-826F-D2385063E8CE</id>
+        </testContext>
+      </NodePush>
+      <NodePop message="Pop" identifier="_15A84127-BD9A-4260-826F-D2385063E8CE" caller="callingMethod">
+        <testContext>
+          <stackID>_15A84127-BD9A-4260-826F-D2385063E8CE</stackID>
+          <nodeID>WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2</nodeID>
+          <id>_15A84127-BD9A-4260-826F-D2385063E8CE</id>
+        </testContext>
+      </NodePop>
+      <testContext>
+        <nodeID>sid-879b0c48-1cb1-42e3-ba09-00e7db6ded66</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.4.1 results:">
+      <ListKeyValue key="OK" value="14"/>
+      <ListKeyValue key="FINDINGS" value="10"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="14"/>
+    <ListKeyValue key="FINDINGS " value="10"/>
+  </TotalResults>
+</TestRun>

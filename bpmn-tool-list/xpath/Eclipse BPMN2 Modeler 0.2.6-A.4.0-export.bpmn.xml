@@ -1,0 +1,245 @@
+<TestRun name="Eclipse BPMN2 Modeler 0.2.6-A.4.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Eclipse BPMN2 Modeler 0.2.6/A.4.0-export.bpmn"/>
+  <Test name="A.4.0">
+    <NodePush message="Push" identifier="Definitions_1" caller="callingMethod">
+      <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
+        <testContext>
+          <stackID>Definitions_1</stackID>
+          <nodeID>mod.267352_Collaboration</nodeID>
+          <id>Definitions_1</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="Collaboration_1" caller="selectCollaboration">
+        <OKAssertion assertion="selectPool" message="bpmn:participant[@name=&apos;Pool&apos;]">
+          <testContext>
+            <stackID>Collaboration_1</stackID>
+            <nodeID>Collaboration_1</nodeID>
+            <id>Collaboration_1</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="Participant_2" caller="selectPool">
+          <OKAssertion assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;Process_2&apos;]">
+            <testContext>
+              <stackID>Participant_2</stackID>
+              <nodeID>Participant_2</nodeID>
+              <id>Participant_2</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="Process_2" caller="selectReferencedProcess">
+            <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1&apos;]">
+              <testContext>
+                <stackID>Process_2</stackID>
+                <nodeID>Process_2</nodeID>
+                <id>Process_2</id>
+              </testContext>
+            </OKAssertion>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;Task_1&apos;]">
+              <testContext>
+                <stackID>Process_2</stackID>
+                <nodeID>StartEvent_1</nodeID>
+                <id>Process_2</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;Task_1&apos;]"/>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;Task_2&apos;]">
+              <testContext>
+                <stackID>Process_2</stackID>
+                <nodeID>Task_1</nodeID>
+                <id>Process_2</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;Task_2&apos;]"/>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;EndEvent_1&apos;]">
+              <testContext>
+                <stackID>Process_2</stackID>
+                <nodeID>Task_2</nodeID>
+                <id>Process_2</id>
+              </testContext>
+            </OKAssertion>
+            <NodePop message="Pop" identifier="Process_2" caller="callingMethod">
+              <testContext>
+                <stackID>Process_2</stackID>
+                <nodeID>EndEvent_1</nodeID>
+                <id>Process_2</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>Participant_2</stackID>
+              <nodeID>Process_2</nodeID>
+              <id>Participant_2</id>
+            </testContext>
+          </NodePush>
+          <NodePop message="Pop" identifier="Participant_2" caller="callingMethod">
+            <testContext>
+              <stackID>Participant_2</stackID>
+              <nodeID>Process_2</nodeID>
+              <id>Participant_2</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>Collaboration_1</stackID>
+            <nodeID>Participant_2</nodeID>
+            <id>Collaboration_1</id>
+          </testContext>
+        </NodePush>
+        <OKAssertion assertion="navigateElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]">
+          <testContext>
+            <stackID>Collaboration_1</stackID>
+            <nodeID>Participant_2</nodeID>
+            <id>Collaboration_1</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]">
+          <testContext>
+            <stackID>Collaboration_1</stackID>
+            <nodeID>Process_1</nodeID>
+            <id>Collaboration_1</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="Process_1" caller="selectElementX">
+          <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>Process_1</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;Task_3&apos;]">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>StartEvent_2</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;Task_3&apos;]"/>
+          <OKAssertion assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;SubProcess_1&apos;]">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>Task_3</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="SubProcess_1" caller="selectFollowingElement">
+            <NodePop message="Pop" identifier="SubProcess_1" caller="callingMethod">
+              <testContext>
+                <stackID>SubProcess_1</stackID>
+                <nodeID>SubProcess_1</nodeID>
+                <id>SubProcess_1</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>SubProcess_1</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </NodePush>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;Task_5&apos;]">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>SubProcess_1</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;Task_5&apos;]"/>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;EndEvent_3&apos;]">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>Task_5</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateElement" message="#document/bpmn2:definitions[@id=&apos;id=&quot;Definitions_1&quot;&apos;]/bpmn2:process[@id=&apos;id=&quot;Process_1&quot;&apos;]/bpmn2:task[@id=&apos;id=&quot;Task_3&quot;&apos;]/">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>Task_3</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;SubProcess_2&apos;]">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>Task_3</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="SubProcess_2" caller="selectFollowingElement">
+            <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 4&apos;]">
+              <testContext>
+                <stackID>SubProcess_2</stackID>
+                <nodeID>SubProcess_2</nodeID>
+                <id>SubProcess_2</id>
+              </testContext>
+            </OKAssertion>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 6&apos; and @id=&apos;Task_7&apos;]">
+              <testContext>
+                <stackID>SubProcess_2</stackID>
+                <nodeID>StartEvent_4</nodeID>
+                <id>SubProcess_2</id>
+              </testContext>
+            </OKAssertion>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 4&apos; and @id=&apos;EndEvent_4&apos;]">
+              <testContext>
+                <stackID>SubProcess_2</stackID>
+                <nodeID>Task_7</nodeID>
+                <id>SubProcess_2</id>
+              </testContext>
+            </OKAssertion>
+            <NodePop message="Pop" identifier="SubProcess_2" caller="callingMethod">
+              <testContext>
+                <stackID>SubProcess_2</stackID>
+                <nodeID>EndEvent_4</nodeID>
+                <id>SubProcess_2</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>SubProcess_2</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </NodePush>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;EndEvent_5&apos;]">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>SubProcess_2</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </OKAssertion>
+          <NodePop message="Pop" identifier="Process_1" caller="callingMethod">
+            <testContext>
+              <stackID>Process_1</stackID>
+              <nodeID>EndEvent_5</nodeID>
+              <id>Process_1</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>Collaboration_1</stackID>
+            <nodeID>Process_1</nodeID>
+            <id>Collaboration_1</id>
+          </testContext>
+        </NodePush>
+        <NodePop message="Pop" identifier="Collaboration_1" caller="callingMethod">
+          <testContext>
+            <stackID>Collaboration_1</stackID>
+            <nodeID>Process_1</nodeID>
+            <id>Collaboration_1</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>Definitions_1</stackID>
+          <nodeID>Collaboration_1</nodeID>
+          <id>Definitions_1</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>mod.267352_Collaboration</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.4.0 results:">
+      <ListKeyValue key="OK" value="20"/>
+      <ListKeyValue key="FINDINGS" value="4"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="20"/>
+    <ListKeyValue key="FINDINGS " value="4"/>
+  </TotalResults>
+</TestRun>

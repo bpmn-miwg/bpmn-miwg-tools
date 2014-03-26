@@ -1,0 +1,28 @@
+TESTRUN: Trisotech BPMN Web Modeler 4.1.8-A.2.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Trisotech BPMN Web Modeler 4.1.8/A.2.0-export.bpmn
+  TEST: A.2.0
+    OK     : callingMethod: Push (id: C7A4D800-1476-45DF-88DF-E2FB35EF97C7)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='_DBBA7F0B-6CBE-4834-A7D9-CCBF7EDAA03A']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Split Flow)' and @id='_92DEB621-9368-46D4-8ADF-FC4176D5F420']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='_48EAE833-0F18-46F5-96AD-A16636C1E9CB']
+        OK     : navigateElement; Message: #document/semantic:definitions[@id='id="C7A4D800-1476-45DF-88DF-E2FB35EF97C7"']/semantic:process[@id='id="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-"']/semantic:exclusiveGateway[@id='id="_92DEB621-9368-46D4-8ADF-FC4176D5F420"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='_E46A5468-7ED9-4F0D-BAE9-D6B1DD06F6AC']
+        OK     : navigateElement; Message: #document/semantic:definitions[@id='id="C7A4D800-1476-45DF-88DF-E2FB35EF97C7"']/semantic:process[@id='id="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-"']/semantic:exclusiveGateway[@id='id="_92DEB621-9368-46D4-8ADF-FC4176D5F420"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 4' and @id='_54A9C845-9C21-4F47-A5AC-051A7291937F']
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='_131F225C-D7CE-4926-A154-4EE6AAC09AC5']
+        OK     : navigateElement; Message: #document/semantic:definitions[@id='id="C7A4D800-1476-45DF-88DF-E2FB35EF97C7"']/semantic:process[@id='id="WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-"']/semantic:task[@id='id="_E46A5468-7ED9-4F0D-BAE9-D6B1DD06F6AC"']/
+        OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='_131F225C-D7CE-4926-A154-4EE6AAC09AC5']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event' and @id='_CB535F2D-1A28-4B9B-9270-71956E81C1AE']
+        OK     : callingMethod: Pop (id: WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-)
+      
+    TEST: TEST A.2.0 results:
+      - OK: 13
+      - FINDINGS: 0
+  
+  TEST RESULTS TOTAL:
+    - OK: 13
+    - FINDINGS : 0
+    

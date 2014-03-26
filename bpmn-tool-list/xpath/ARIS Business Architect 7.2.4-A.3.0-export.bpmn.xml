@@ -1,0 +1,157 @@
+<TestRun name="ARIS Business Architect 7.2.4-A.3.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/ARIS Business Architect 7.2.4/A.3.0-export.bpmn"/>
+  <Test name="A.3.0">
+    <NodePush message="Push" identifier="ARISBPMN_17cb6460-3be2-11e3-3329-080027000095" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <stackID>ARISBPMN_17cb6460-3be2-11e3-3329-080027000095</stackID>
+          <nodeID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</nodeID>
+          <id>ARISBPMN_17cb6460-3be2-11e3-3329-080027000095</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="PROCESS_17cb6460-3be2-11e3-3329-080027000095" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;FLOWNODE_2a6b2740-3be2-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_28a1849e-3bda-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos; and @id=&apos;FLOWNODE_2a6b2743-3be2-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2740-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Non-Interrupting Message&apos; found">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2746-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkMessageEvent" message="Message event definition">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2746-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkCancelActivity" message="Attribute cancelActivity=false">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2746-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;FLOWNODE_2a6b2756-3be2-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2746-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;FLOWNODE_2a6b2751-3be2-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2756-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="#document/semantic:definitions[@id=&apos;id=&quot;ARISBPMN_17cb6460-3be2-11e3-3329-080027000095&quot;&apos;]/semantic:process[@id=&apos;id=&quot;PROCESS_17cb6460-3be2-11e3-3329-080027000095&quot;&apos;]/semantic:subProcess[@id=&apos;id=&quot;FLOWNODE_2a6b2743-3be2-11e3-3329-080027000095&quot;&apos;]/">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2743-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;FLOWNODE_2a6b274e-3be2-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2743-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;FLOWNODE_2a6b2751-3be2-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b274e-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="#document/semantic:definitions[@id=&apos;id=&quot;ARISBPMN_17cb6460-3be2-11e3-3329-080027000095&quot;&apos;]/semantic:process[@id=&apos;id=&quot;PROCESS_17cb6460-3be2-11e3-3329-080027000095&quot;&apos;]/semantic:subProcess[@id=&apos;id=&quot;FLOWNODE_2a6b2743-3be2-11e3-3329-080027000095&quot;&apos;]/">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2743-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Interrupting Escalation&apos; found">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2749-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkEscalationEvent" message="Escalation event definition">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2749-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkCancelActivity" message="Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2749-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;FLOWNODE_2a6b275c-3be2-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b2749-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;FLOWNODE_2a6b275f-3be2-11e3-3329-080027000095&apos;]">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b275c-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </OKAssertion>
+        <NodePop message="Pop" identifier="PROCESS_17cb6460-3be2-11e3-3329-080027000095" caller="callingMethod">
+          <testContext>
+            <stackID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</stackID>
+            <nodeID>FLOWNODE_2a6b275f-3be2-11e3-3329-080027000095</nodeID>
+            <id>PROCESS_17cb6460-3be2-11e3-3329-080027000095</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>ARISBPMN_17cb6460-3be2-11e3-3329-080027000095</stackID>
+          <nodeID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</nodeID>
+          <id>ARISBPMN_17cb6460-3be2-11e3-3329-080027000095</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>PROCESS_17cb6460-3be2-11e3-3329-080027000095</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.3.0 results:">
+      <ListKeyValue key="OK" value="18"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="18"/>
+    <ListKeyValue key="FINDINGS " value="0"/>
+  </TotalResults>
+</TestRun>

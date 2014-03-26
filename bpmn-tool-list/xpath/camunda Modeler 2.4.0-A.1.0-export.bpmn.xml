@@ -1,0 +1,73 @@
+<TestRun name="camunda Modeler 2.4.0-A.1.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/camunda Modeler 2.4.0/A.1.0-export.bpmn"/>
+  <Test name="A.1.0">
+    <NodePush message="Push" identifier="_IfoQIFXYEeOimJqO8rF3_g" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <stackID>_IfoQIFXYEeOimJqO8rF3_g</stackID>
+          <nodeID>WFP-6-</nodeID>
+          <id>_IfoQIFXYEeOimJqO8rF3_g</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="Process_1" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>Process_1</stackID>
+            <nodeID>Process_1</nodeID>
+            <id>Process_1</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;Task_1&apos;]">
+          <testContext>
+            <stackID>Process_1</stackID>
+            <nodeID>StartEvent_1</nodeID>
+            <id>Process_1</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;Task_2&apos;]">
+          <testContext>
+            <stackID>Process_1</stackID>
+            <nodeID>Task_1</nodeID>
+            <id>Process_1</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;Task_3&apos;]">
+          <testContext>
+            <stackID>Process_1</stackID>
+            <nodeID>Task_2</nodeID>
+            <id>Process_1</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;EndEvent_1&apos;]">
+          <testContext>
+            <stackID>Process_1</stackID>
+            <nodeID>Task_3</nodeID>
+            <id>Process_1</id>
+          </testContext>
+        </OKAssertion>
+        <NodePop message="Pop" identifier="Process_1" caller="callingMethod">
+          <testContext>
+            <stackID>Process_1</stackID>
+            <nodeID>EndEvent_1</nodeID>
+            <id>Process_1</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>_IfoQIFXYEeOimJqO8rF3_g</stackID>
+          <nodeID>Process_1</nodeID>
+          <id>_IfoQIFXYEeOimJqO8rF3_g</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>WFP-6-</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.1.0 results:">
+      <ListKeyValue key="OK" value="6"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="6"/>
+    <ListKeyValue key="FINDINGS " value="0"/>
+  </TotalResults>
+</TestRun>

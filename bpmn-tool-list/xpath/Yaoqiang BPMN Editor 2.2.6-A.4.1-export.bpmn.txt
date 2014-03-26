@@ -1,0 +1,48 @@
+TESTRUN: Yaoqiang BPMN Editor 2.2.6-A.4.1-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Yaoqiang BPMN Editor 2.2.6/A.4.1-export.bpmn
+  TEST: A.4.1
+    OK     : callingMethod: Push (id: _1375427702030)
+      OK     : selectCollaboration; Message: bpmn:collaboration
+      OK     : selectCollaboration: Push (id: COLLABORATION_1)
+        FINDING: selectPool; Message: No node found; Parameter: bpmn:participant[@name='Pool 1']
+        OK     : selectPool: Push (id: )
+          FINDING: selectReferencedProcess; Message: Node is null; Parameter: 
+          FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 1']
+          FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+          FINDING: checkMessageFlow; Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+          FINDING: checkMessageFlow; Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+          OK     : callingMethod: Pop (id: )
+        OK     : callingMethod: Pop (id: COLLABORATION_1)
+      OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+      OK     : selectElementX: Push (id: PROCESS_2)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 2']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='_13']
+        FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='_13']
+        OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 1' and @id='_15']
+        OK     : selectFollowingElement: Push (id: _15)
+          OK     : callingMethod: Pop (id: _15)
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 5' and @id='_29']
+        FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='_29']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 2']
+        OK     : navigateElement; Message: #document/definitions[@id='id="_1375427702030"']/process[@id='id="PROCESS_2"']/task[@id='id="_13"']/
+        OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 2' and @id='_21']
+        OK     : selectFollowingElement: Push (id: _21)
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 4']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 6' and @id='_23']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 4' and @id='_24']
+          OK     : callingMethod: Pop (id: _21)
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 5' and @id='_33']
+        OK     : callingMethod: Pop (id: PROCESS_2)
+      OK     : callingMethod: Pop (id: _1375427702030)
+    
+    TEST: TEST A.4.1 results:
+      - OK: 13
+      - FINDINGS: 11
+  
+  TEST RESULTS TOTAL:
+    - OK: 13
+    - FINDINGS : 11
+    

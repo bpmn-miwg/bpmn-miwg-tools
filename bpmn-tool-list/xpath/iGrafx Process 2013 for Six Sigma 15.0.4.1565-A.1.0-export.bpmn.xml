@@ -1,0 +1,70 @@
+<TestRun name="iGrafx Process 2013 for Six Sigma 15.0.4.1565-A.1.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/iGrafx Process 2013 for Six Sigma 15.0.4.1565/A.1.0-export.bpmn"/>
+  <Test name="A.1.0">
+    <FindingAssertion assertion="callingMethod" message="Cannot find attribute" parameter="id"/>
+    <NodePush message="Push" identifier="" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <nodeID>WFP-6-</nodeID>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="diagram_IDASRIFF" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>diagram_IDASRIFF</stackID>
+            <nodeID>diagram_IDASRIFF</nodeID>
+            <id>diagram_IDASRIFF</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;shape_IDA5B1HB&apos;]">
+          <testContext>
+            <stackID>diagram_IDASRIFF</stackID>
+            <nodeID>shape_IDA4WYHB</nodeID>
+            <id>diagram_IDASRIFF</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;shape_IDA3E1HB&apos;]">
+          <testContext>
+            <stackID>diagram_IDASRIFF</stackID>
+            <nodeID>shape_IDA5B1HB</nodeID>
+            <id>diagram_IDASRIFF</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;shape_IDA1H1HB&apos;]">
+          <testContext>
+            <stackID>diagram_IDASRIFF</stackID>
+            <nodeID>shape_IDA3E1HB</nodeID>
+            <id>diagram_IDASRIFF</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;shape_IDAUPIFF&apos;]">
+          <testContext>
+            <stackID>diagram_IDASRIFF</stackID>
+            <nodeID>shape_IDA1H1HB</nodeID>
+            <id>diagram_IDASRIFF</id>
+          </testContext>
+        </OKAssertion>
+        <NodePop message="Pop" identifier="diagram_IDASRIFF" caller="callingMethod">
+          <testContext>
+            <stackID>diagram_IDASRIFF</stackID>
+            <nodeID>shape_IDAUPIFF</nodeID>
+            <id>diagram_IDASRIFF</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <nodeID>diagram_IDASRIFF</nodeID>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>WFP-6-</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.1.0 results:">
+      <ListKeyValue key="OK" value="6"/>
+      <ListKeyValue key="FINDINGS" value="1"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="6"/>
+    <ListKeyValue key="FINDINGS " value="1"/>
+  </TotalResults>
+</TestRun>

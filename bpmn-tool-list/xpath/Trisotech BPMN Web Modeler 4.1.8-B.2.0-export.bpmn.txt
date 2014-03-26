@@ -1,0 +1,201 @@
+TESTRUN: Trisotech BPMN Web Modeler 4.1.8-B.2.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/Trisotech BPMN Web Modeler 4.1.8/B.2.0-export.bpmn
+  TEST: B.2.0
+    OK     : callingMethod: Push (id: _3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67)
+      OK     : selectElementX; Message: //bpmn:collaboration
+      OK     : selectElementX: Push (id: C1386683547521)
+        OK     : navigateElementX; Message: bpmn:messageFlow[@name='Message Flow 1']
+        OK     : checkMessageDefinition; Message: Message definition
+        OK     : navigateElementX; Message: bpmn:messageFlow[@name='Message Flow 2']
+        OK     : checkMessageDefinition; Message: Message definition
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+        OK     : selectProcessX: Push (id: WFP-Page_Trisotech_Visio-_6-1)
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 1 Timer']
+          OK     : checkTimerEvent; Message: Timer event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Abstract Task 1' and @id='_6CD47A25-2E77-432C-B6C8-B724A6E1179D']
+          OK     : navigateFollowingElement; Message: bpmn:sendTask[@name='Send Task 2' and @id='_83C73CFA-50D8-43E7-8D1C-2D72C4708B14']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='_83C73CFA-50D8-43E7-8D1C-2D72C4708B14']
+          OK     : navigateFollowingElement; Message: bpmn:userTask[@name='User Task 3' and @id='_1F4C4A83-5EED-449B-B8FF-E57E24DECFA5']
+          OK     : checkDataAssociation: Push (id: _1F4C4A83-5EED-449B-B8FF-E57E24DECFA5)
+            OK     : checkDataAssociation; Message: Association reference dataObject 'Data Object' found
+            OK     : checkDataAssociation: Pop (id: _1F4C4A83-5EED-449B-B8FF-E57E24DECFA5)
+          OK     : selectElement; Message: bpmn:inclusiveGateway[@name='Inclusive Gateway 1']
+          OK     : selectElement: Push (id: _923211AA-87F2-49DF-A0B1-5113227710DF)
+            OK     : navigateGatewaySequenceFlowStack; Message: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id='%s']; Target parameter .; Target Check: self::node()[@name='Conditional Sequence Flow']
+            OK     : navigateGatewaySequenceFlowStack; Message: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id='%s']; Target parameter .; Target Check: self::node()[@name='Default Sequence Flow 1']
+            OK     : checkDefaultSequenceFlow; Message: Default Sequence Flow
+            OK     : callingMethod: Pop (id: _923211AA-87F2-49DF-A0B1-5113227710DF)
+          OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name='Service Task 4' and @id='_6F01236A-FAA6-4B1F-9AE3-74D9BA489295']
+          OK     : navigateFollowingElement; Message: bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1' and @id='_3CC62CA2-89E2-44D8-8921-884404202F6E']
+          OK     : checkSignalEvent; Message: Signal event definition
+          OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Collapsed Sub-Process 1 Multi-Instances' and @id='_BFD64F07-C8F1-49E5-909A-4DBF2A098510']
+          OK     : selectFollowingElement: Push (id: _BFD64F07-C8F1-49E5-909A-4DBF2A098510)
+            OK     : checkMultiInstanceParallel; Message: Multi instance loop characteristics (sequential=false)
+            OK     : callingMethod: Pop (id: _BFD64F07-C8F1-49E5-909A-4DBF2A098510)
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 5' and @id='_04145C85-9DF2-4A55-B6F1-BD95F34BAB88']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Conditional' found
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=false
+          OK     : checkParallelMultiple; Message: Attribute parallelMultiple=false
+          OK     : checkConditionalEvent; Message: Conditional event definition
+          OK     : navigateElement; Message: bpmn:parallelGateway[@name='Parallel Gateway 2']
+          OK     : navigateElement; Message: bpmn:endEvent[@name='End Event 1 Message']
+          OK     : checkMessageEvent; Message: Message event definition
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-1"']/semantic:inclusiveGateway[@id='id="_923211AA-87F2-49DF-A0B1-5113227710DF"']/
+          OK     : navigateFollowingElement; Message: bpmn:callActivity[@name='Call Activity calling a Global User Task' and @id='_91678D26-A1A0-4680-B9A9-7033F75F6007']
+          OK     : checkGlobalTask; Message: Global Task is referenced
+          OK     : selectElementX; Message: bpmn:subProcess[@name='Expanded Sub-Process 1']
+          OK     : selectElementX: Push (id: _D2A96EDF-F4F0-4EFC-AA60-8F220F61CCAF)
+            OK     : navigateElementX; Message: bpmn:startEvent[@name='Start Event 2']
+            OK     : selectElementX; Message: bpmn:userTask[@name='User Task 7 Standard Loop']
+            OK     : selectElementX: Push (id: _ABE4309A-E3DD-4C80-AA84-DFCD0EC9946A)
+              OK     : navigateElementX; Message: bpmn:standardLoopCharacteristics
+              OK     : callingMethod: Pop (id: _ABE4309A-E3DD-4C80-AA84-DFCD0EC9946A)
+            OK     : navigateElementX; Message: bpmn:endEvent[@name='End Event 2']
+            OK     : callingMethod: Pop (id: _D2A96EDF-F4F0-4EFC-AA60-8F220F61CCAF)
+          OK     : navigateElementX; Message: bpmn:userTask[@name='User Task 8']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'null' found
+          OK     : checkEscalationEvent; Message: Escalation event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 9' and @id='_A714CE19-759B-47BA-9479-24C6C29F3F4F']
+          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Conditional Catch' and @id='_FBCBB0C4-D48E-4795-835E-66E8C0EC95ED']
+          OK     : checkConditionalEvent; Message: Conditional event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 10' and @id='_B58ED679-4291-4579-BF6E-7D5D87ADE1DD']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='_B58ED679-4291-4579-BF6E-7D5D87ADE1DD']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 3 Signal' and @id='_5416D4AE-D146-4D32-8F04-771FBB9F98FF']
+          OK     : checkSignalEvent; Message: Signal event definition
+          OK     : callingMethod: Pop (id: WFP-Page_Trisotech_Visio-_6-1)
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]
+        OK     : selectProcessX: Push (id: WFP-Page_Trisotech_Visio-_6-2)
+          OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value 'true'.
+          OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value 'true'.
+          OK     : navigateElementX; Message: bpmn:laneSet/bpmn:lane[@name='Lane 1']
+          OK     : navigateElementX; Message: bpmn:laneSet/bpmn:lane[@name='Lane 2']
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 2 Message']
+          OK     : checkMessageEvent; Message: Message event definition
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='_73D0894E-3327-412F-81DF-90E7872BA03C']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 11' and @id='_644B49BB-C8E7-4ACA-B4AE-881883AB0243']
+          OK     : navigateFollowingElement; Message: bpmn:eventBasedGateway[@name='Event Base Gateway 3' and @id='_E1EDF8C5-6502-40C5-9357-CB744A2874B8']
+          OK     : checkEventGatewayExclusive; Message: Attribute eventGatewayType=Exclusive
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-2"']/semantic:eventBasedGateway[@id='id="_E1EDF8C5-6502-40C5-9357-CB744A2874B8"']/
+          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Timer Catch' and @id='_CB4B3A67-091C-45BD-8AA5-48DFD1A345FC']
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-2"']/semantic:eventBasedGateway[@id='id="_E1EDF8C5-6502-40C5-9357-CB744A2874B8"']/
+          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch' and @id='_89576D50-E1BC-439D-A6DC-BD09A9496F38']
+          OK     : checkMessageEvent; Message: Message event definition
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-2"']/semantic:eventBasedGateway[@id='id="_E1EDF8C5-6502-40C5-9357-CB744A2874B8"']/
+          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch 2' and @id='_516428A7-79DC-45D9-A590-FA7B208E236F']
+          OK     : selectElementX; Message: bpmn:callActivity[@name='Expanded Call Activity']
+          OK     : selectElementX: Push (id: _0DB18BEC-74B3-4417-8954-9CEDA4D8146D)
+            OK     : selectCallActivityProcess; Message: //bpmn:process[@id='Process_0DB18BEC-74B3-4417-8954-9CEDA4D8146D']
+            OK     : selectCallActivityProcess: Push (id: Process_0DB18BEC-74B3-4417-8954-9CEDA4D8146D)
+              OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 3']
+              OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 4 Conditional']
+              OK     : navigateFollowingElement; Message: bpmn:userTask[@name='User Task 12 Muti-Inst. Seq.' and @id='_CE3D133B-AA7F-4E98-83AC-E4180FC208D2']
+              OK     : checkMultiInstanceSequential; Message: Multi instance loop characteristics (sequential=true)
+              OK     : navigateFollowingElement; Message: bpmn:userTask[@name='User Task 13' and @id='_283046CE-57EE-48AA-81EC-DFDC093A0513']
+              OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Interrupting Message' found
+              OK     : checkCancelActivity; Message: Attribute cancelActivity=true
+              OK     : checkMessageEvent; Message: Message event definition
+              OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 5 Terminate' and @id='_EB3DB232-C73A-4260-B655-497A6F083244']
+              OK     : checkTerminateEvent; Message: Terminate event definition
+              OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="Process_0DB18BEC-74B3-4417-8954-9CEDA4D8146D"']/semantic:userTask[@id='id="_283046CE-57EE-48AA-81EC-DFDC093A0513"']/
+              OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name='Service Task 14' and @id='_1917470C-9E58-4AF9-8FAD-E949B7FE77D3']
+              OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 4' and @id='_8F16492F-8A57-419F-9FD4-5F5EC1D096C3']
+              OK     : callingMethod: Pop (id: Process_0DB18BEC-74B3-4417-8954-9CEDA4D8146D)
+            OK     : callingMethod: Pop (id: _0DB18BEC-74B3-4417-8954-9CEDA4D8146D)
+          OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name='Service Task 15' and @id='_5DEB4A9A-270F-4714-AE88-662FF0B55DD4']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Interrupting Conditional' found
+          OK     : checkConditionalEvent; Message: Conditional event definition
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=true
+          OK     : navigateFollowingElement; Message: bpmn:intermediateThrowEvent[@name='Intermediate Event Link' and @id='_E1EDF3F0-2F9A-4BC0-B1A2-C4D6E2FE9B53']
+          OK     : checkLinkEvent; Message: Link event definition
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-2"']/semantic:serviceTask[@id='id="_5DEB4A9A-270F-4714-AE88-662FF0B55DD4"']/
+          OK     : navigateFollowingElement; Message: bpmn:receiveTask[@name='Receive Task 16' and @id='_BDA39263-8152-4437-95B3-3B63B46D59D4']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 6 Message' and @id='_512650E1-0FB3-4550-A8E9-68AF04941101']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='_512650E1-0FB3-4550-A8E9-68AF04941101']
+          OK     : navigateElementX; Message: bpmn:subProcess[@name='Collapsed Sub-Process 2']
+          OK     : checkDataAssociation: Push (id: _8CD1B497-DA11-4AC1-9C35-4CCE48D90E2A)
+            OK     : checkDataAssociation; Message: Association reference dataStoreReference 'Data Store Reference' found
+            OK     : checkDataAssociation: Pop (id: _8CD1B497-DA11-4AC1-9C35-4CCE48D90E2A)
+          OK     : selectElementX; Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
+          OK     : selectElementX: Push (id: _687B315E-A829-4C58-B22C-36A73E7D8680)
+            OK     : navigateGatewaySequenceFlowStack; Message: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id='%s']; Target parameter .; Target Check: self::node()[@name='Default Sequence Flow 2']
+            OK     : checkDefaultSequenceFlow; Message: Default Sequence Flow
+            OK     : callingMethod: Pop (id: _687B315E-A829-4C58-B22C-36A73E7D8680)
+          OK     : navigateElementX; Message: bpmn:intermediateThrowEvent[@name='Intermediate Event Message Throw']
+          OK     : checkMessageEvent; Message: Message event definition
+          OK     : navigateElementX; Message: bpmn:callActivity[@name='Collapsed Call Activity']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Escalation' found
+          OK     : checkEscalationEvent; Message: Escalation event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 18' and @id='_4CECEBC2-8A97-450E-B1F1-82D66CD7D92A']
+          OK     : navigateFollowingElement; Message: bpmn:intermediateThrowEvent[@id='_02D1D824-B6A6-4BEA-967B-E1D08B687571']
+          OK     : checkEscalationEvent; Message: Escalation event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 23' and @id='_0CACE3B5-DC51-48C6-A85B-217346323BAE']
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-2"']/semantic:callActivity[@id='id="_7F27F3E2-B8FC-465C-AFFC-B2F42AD79DD1"']/
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 17' and @id='_6EBC6AD4-2B95-4DBA-831D-6AA9DB7A166E']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Message' found
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=false
+          OK     : checkParallelMultiple; Message: Attribute parallelMultiple=false
+          OK     : checkMessageEvent; Message: Message event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 19' and @id='_C176371D-43B6-45DC-905D-7866B8E7A5BB']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 7 None' and @id='_13C9D3A8-A6D1-4DDD-8979-AA76ED7B546B']
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-2"']/semantic:task[@id='id="_6EBC6AD4-2B95-4DBA-831D-6AA9DB7A166E"']/
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 7 None' and @id='_13C9D3A8-A6D1-4DDD-8979-AA76ED7B546B']
+          OK     : navigateElementX; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch 2']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 21' and @id='_3DFD05E3-24A1-47C1-A106-90CD087105BF']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Interrupting Timer' found
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=true
+          OK     : checkTimerEvent; Message: Timer event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 27' and @id='_C662610F-FF94-47D0-8B0E-33651AE45583']
+          OK     : navigateFollowingElement; Message: bpmn:inclusiveGateway[@name='Inclusive Gateway 6' and @id='_EBDA931B-D9DD-4F97-B782-21DEDEDE74EF']
+          OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-2"']/semantic:task[@id='id="_3DFD05E3-24A1-47C1-A106-90CD087105BF"']/
+          OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 2' and @id='_6C52083B-668D-4327-944F-58A11A5C0486']
+          OK     : selectFollowingElement: Push (id: _6C52083B-668D-4327-944F-58A11A5C0486)
+            OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 5 None']
+            OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name='Service Task 22' and @id='_0FB8C2D7-1E13-4A09-BDF7-9DDB0D319879']
+            OK     : checkMultiInstanceParallel; Message: Multi instance loop characteristics (sequential=false)
+            OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 8 None' and @id='_AF537E73-0D30-4D2A-B5C0-1522110CCD32']
+            OK     : callingMethod: Pop (id: _6C52083B-668D-4327-944F-58A11A5C0486)
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 23' and @id='_0CACE3B5-DC51-48C6-A85B-217346323BAE']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Signal' found
+          OK     : checkSignalEvent; Message: Signal event definition
+          OK     : checkCancelActivity; Message: Attribute cancelActivity=false
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 24' and @id='_061239E4-F95A-4A65-B8B2-F1AC7A4B647C']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 11 Escalation' and @id='_AE4F4D62-D22F-4D2E-B461-F8DB03DF236E']
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 6 Signal']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 25' and @id='_F964C8E3-A197-47CC-AAB9-DBAFC03D044E']
+          OK     : navigateFollowingElement; Message: bpmn:parallelGateway[@name='Parallel Gateway 5' and @id='_F2C66A3C-10DE-4CA9-9391-4FC2E5035253']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 26' and @id='_DD7EF5D5-BE46-4C26-A5E5-376D72509C31']
+          OK     : navigateFollowingElement; Message: bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 2' and @id='_72A7B4EB-E692-4C6A-B95E-2F33E4D92DA5']
+          OK     : navigateFollowingElement; Message: bpmn:inclusiveGateway[@name='Inclusive Gateway 6' and @id='_EBDA931B-D9DD-4F97-B782-21DEDEDE74EF']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 28' and @id='_EF71EE57-0D2A-4668-9A72-F114648ADC61']
+          OK     : navigateFollowingElement; Message: bpmn:parallelGateway[@name='Parallel Gateway 7' and @id='_4DFEACD9-8264-4573-863A-E3DFDA0AECAD']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 11 Escalation' and @id='_AE4F4D62-D22F-4D2E-B461-F8DB03DF236E']
+          OK     : navigateElement; Message: bpmn:parallelGateway[@name='Parallel Gateway 5']
+          OK     : navigateFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 3' and @id='_C329A712-4AF2-4C94-9738-138A17A5E055']
+          OK     : navigateElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Link']
+          OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 3' and @id='_C329A712-4AF2-4C94-9738-138A17A5E055']
+          OK     : selectFollowingElement: Push (id: _C329A712-4AF2-4C94-9738-138A17A5E055)
+            OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 7']
+            OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Signal Catch' and @id='_1FE2E804-9192-4D5C-98FA-DBACBB7DCAAB']
+            OK     : checkSignalEvent; Message: Signal event definition
+            OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 31' and @id='_CB3A463C-3CE3-4128-A6C2-5500BD4D013A']
+            OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 7' and @id='_58AB476C-B200-4D9D-A10F-EE60FE7F43DC']
+            OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 12' and @id='_9A9D381C-1BC6-47D8-A709-51F4A2981132']
+            OK     : navigateElement; Message: #document/semantic:definitions[@id='id="_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67"']/semantic:process[@id='id="WFP-Page_Trisotech_Visio-_6-2"']/semantic:subProcess[@id='id="_C329A712-4AF2-4C94-9738-138A17A5E055"']/semantic:exclusiveGateway[@id='id="_58AB476C-B200-4D9D-A10F-EE60FE7F43DC"']/
+            OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 13 Error' and @id='_AB0E7D4D-78C8-4C62-9E59-C917D7AF2EA0']
+            OK     : checkErrorEvent; Message: Error event definition
+            OK     : callingMethod: Pop (id: _C329A712-4AF2-4C94-9738-138A17A5E055)
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 32' and @id='_47EB54C9-C4C8-4C77-AD3E-0278418F3940']
+          OK     : navigateBoundaryEvent; Message: Boundary element 'null' found
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 33' and @id='_2135DD7E-04BE-47EB-A0E5-4258FA92A4CE']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 14' and @id='_F247845D-52C7-46DC-8E32-501F8200B2A6']
+          OK     : callingMethod: Pop (id: WFP-Page_Trisotech_Visio-_6-2)
+        OK     : callingMethod: Pop (id: C1386683547521)
+      
+    TEST: TEST B.2.0 results:
+      - OK: 156
+      - FINDINGS: 4
+  
+  TEST RESULTS TOTAL:
+    - OK: 156
+    - FINDINGS : 4
+    

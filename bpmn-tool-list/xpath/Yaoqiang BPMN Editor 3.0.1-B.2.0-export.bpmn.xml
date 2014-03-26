@@ -1,0 +1,141 @@
+<TestRun name="Yaoqiang BPMN Editor 3.0.1-B.2.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/Yaoqiang BPMN Editor 3.0.1/B.2.0-export.bpmn"/>
+  <Test name="B.2.0">
+    <NodePush message="Push" identifier="_1375493976327" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="//bpmn:collaboration">
+        <testContext>
+          <stackID>_1375493976327</stackID>
+          <nodeID>C1373638080953</nodeID>
+          <id>_1375493976327</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="COLLABORATION_1" caller="selectElementX">
+        <OKAssertion assertion="navigateElementX" message="bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]">
+          <testContext>
+            <stackID>COLLABORATION_1</stackID>
+            <nodeID>COLLABORATION_1</nodeID>
+            <id>COLLABORATION_1</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="checkMessageDefinition" message="Cannot find attribute" parameter="messageRef"/>
+        <OKAssertion assertion="navigateElementX" message="bpmn:messageFlow[@name=&apos;Message Flow 2&apos;]">
+          <testContext>
+            <stackID>COLLABORATION_1</stackID>
+            <nodeID>_173</nodeID>
+            <id>COLLABORATION_1</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="checkMessageDefinition" message="Cannot find attribute" parameter="messageRef"/>
+        <OKAssertion assertion="selectProcessX" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]">
+          <testContext>
+            <stackID>COLLABORATION_1</stackID>
+            <nodeID>_172</nodeID>
+            <id>COLLABORATION_1</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="PROCESS_2" caller="selectProcessX">
+          <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1 Timer&apos;]">
+            <testContext>
+              <stackID>PROCESS_2</stackID>
+              <nodeID>PROCESS_2</nodeID>
+              <id>PROCESS_2</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="checkTimerEvent" message="Timer event definition">
+            <testContext>
+              <stackID>PROCESS_2</stackID>
+              <nodeID>_6</nodeID>
+              <id>PROCESS_2</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;_7&apos;]">
+            <testContext>
+              <stackID>PROCESS_2</stackID>
+              <nodeID>_6</nodeID>
+              <id>PROCESS_2</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:sendTask[@name=&apos;Send Task 2&apos; and @id=&apos;_9&apos;]">
+            <testContext>
+              <stackID>PROCESS_2</stackID>
+              <nodeID>_7</nodeID>
+              <id>PROCESS_2</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;_9&apos;]"/>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;User Task 3&apos; and @id=&apos;_11&apos;]">
+            <testContext>
+              <stackID>PROCESS_2</stackID>
+              <nodeID>_9</nodeID>
+              <id>PROCESS_2</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="_11" caller="checkDataAssociation">
+            <FindingAssertion assertion="checkDataAssociation" message="Cannot find attribute" parameter="name"/>
+            <Exception message="Exception during test execution of B.2.0">
+              <exception class="java.lang.NullPointerException">
+                <stackTrace>
+                  <trace>org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest.checkDataAssociation(AbstractXpathTest.java:870)</trace>
+                  <trace>org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test.execute(B_2_0_Test.java:44)</trace>
+                  <trace>org.omg.bpmn.miwg.xpathTestRunner.base.TestManager.executeTests(TestManager.java:82)</trace>
+                  <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.runXPathTests(ModelInterchangeMojo.java:350)</trace>
+                  <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.execute(ModelInterchangeMojo.java:140)</trace>
+                  <trace>org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)</trace>
+                  <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)</trace>
+                  <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)</trace>
+                  <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)</trace>
+                  <trace>org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)</trace>
+                  <trace>org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)</trace>
+                  <trace>org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)</trace>
+                  <trace>org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)</trace>
+                  <trace>org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)</trace>
+                  <trace>org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)</trace>
+                  <trace>org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)</trace>
+                  <trace>org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)</trace>
+                  <trace>org.apache.maven.cli.MavenCli.main(MavenCli.java:157)</trace>
+                  <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
+                  <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)</trace>
+                  <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
+                  <trace>java.lang.reflect.Method.invoke(Method.java:606)</trace>
+                  <trace>org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)</trace>
+                  <trace>org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)</trace>
+                  <trace>org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)</trace>
+                  <trace>org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)</trace>
+                </stackTrace>
+                <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+                  <c class="list"/>
+                  <list reference="../c"/>
+                </suppressedExceptions>
+              </exception>
+            </Exception>
+            <testContext>
+              <stackID>PROCESS_2</stackID>
+              <nodeID>_11</nodeID>
+              <id>PROCESS_2</id>
+            </testContext>
+          </NodePush>
+          <testContext>
+            <stackID>COLLABORATION_1</stackID>
+            <nodeID>PROCESS_2</nodeID>
+            <id>COLLABORATION_1</id>
+          </testContext>
+        </NodePush>
+        <testContext>
+          <stackID>_1375493976327</stackID>
+          <nodeID>COLLABORATION_1</nodeID>
+          <id>_1375493976327</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>C1373638080953</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST B.2.0 results:">
+      <ListKeyValue key="OK" value="9"/>
+      <ListKeyValue key="FINDINGS" value="4"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="0"/>
+    <ListKeyValue key="FINDINGS " value="0"/>
+  </TotalResults>
+</TestRun>

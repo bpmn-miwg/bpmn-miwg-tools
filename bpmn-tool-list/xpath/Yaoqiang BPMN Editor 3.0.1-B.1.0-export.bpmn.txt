@@ -1,0 +1,77 @@
+TESTRUN: Yaoqiang BPMN Editor 3.0.1-B.1.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/Yaoqiang BPMN Editor 3.0.1/B.1.0-export.bpmn
+  TEST: B.1.0
+    OK     : callingMethod: Push (id: _1375435804487)
+      OK     : selectElementX; Message: //bpmn:collaboration
+      OK     : selectElementX: Push (id: COLLABORATION_1)
+        FINDING: navigateElement; Message: No node found; Parameter: bpmn:messageFlow[@name='Message Flow 1']
+        FINDING: navigateElement; Message: No node found; Parameter: bpmn:messageFlow[@name='Message Flow 2']
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+        OK     : selectProcessX: Push (id: PROCESS_1)
+          FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name='Start Event Timer']
+          FINDING: checkTimerEvent; Message: Cannot find timer event definition; Parameter: bpmn:timerEventDefinition | bpmn:eventDefinitionRef
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Abstract Task 1']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='PROCESS_1']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name='User Task 2']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:serviceTask[@name='Service Task 3']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event None 1']
+          OK     : callingMethod: Pop (id: PROCESS_1)
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]
+        OK     : selectProcessX: Push (id: PROCESS_2)
+          OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value 'false'.
+          OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value 'false'.
+          OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value 'false'.
+          OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value 'false'.
+          OK     : navigateElementX; Message: .//bpmn:lane[@name='Lane 1']
+          OK     : navigateElementX; Message: .//bpmn:lane[@name='Lane 2']
+          FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name='Start Event Message']
+          FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:parallelGateway[@name='Parallel Gateway Divergence']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 1']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name='Call Activity Collapsed']
+          FINDING: checkTextAssociation; Message: Text annotation 'Text Annotation' not found; Parameter: bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='_14']/@targetRef]/bpmn:text
+          FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name='Call Activity - Expanded']
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: selectProcessOfCallActivity; Message: Parent failed; Parameter: selectProcessofCallActivity
+            OK     : selectProcessOfCallActivity: Push (id: )
+              FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event None 1']
+              FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+              FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+              OK     : callingMethod: Pop (id: )
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkMessageEvent; Message: Current node is null; Parameter: null
+          FINDING: checkMessageFlow; Message: Current node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkGlobalTask; Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: selectFollowingElement; Message: The base node is null; Parameter: null
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event None 2']
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkDataAssociation; Message: Current node is null; Parameter: null
+          FINDING: checkDataAssociation; Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : callingMethod: Pop (id: PROCESS_2)
+        OK     : callingMethod: Pop (id: COLLABORATION_1)
+      
+    TEST: TEST B.1.0 results:
+      - OK: 12
+      - FINDINGS: 40
+  
+  TEST RESULTS TOTAL:
+    - OK: 12
+    - FINDINGS : 40
+    

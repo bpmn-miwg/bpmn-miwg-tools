@@ -1,0 +1,28 @@
+TESTRUN: Trisotech BPMN Web Modeler 4.1.8-A.1.0-roundtrip.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Trisotech BPMN Web Modeler 4.1.8/A.1.0-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    OK     : Validation; Message: Schema validation succeeded
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 1
+      - FINDINGS: 0
+  
+  TEST: A.1.0
+    OK     : callingMethod: Push (id: _1373649849716)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: WFP-Page_Trisotech_Visio-_6-)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='_ec59e164-68b4-4f94-98de-ffb1c58a84af']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='_820c21c0-45f3-473b-813f-06381cc637cd']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='_e70a6fcb-913c-4a7b-a65d-e83adc73d69c']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event' and @id='_a47df184-085b-49f7-bb82-031c84625821']
+        OK     : callingMethod: Pop (id: WFP-Page_Trisotech_Visio-_6-)
+      
+    TEST: TEST A.1.0 results:
+      - OK: 6
+      - FINDINGS: 0
+  
+  TEST RESULTS TOTAL:
+    - OK: 7
+    - FINDINGS : 0
+    

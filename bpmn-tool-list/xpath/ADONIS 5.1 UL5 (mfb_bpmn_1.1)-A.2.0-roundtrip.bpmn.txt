@@ -1,0 +1,36 @@
+TESTRUN: ADONIS 5.1 UL5 (mfb_bpmn_1.1)-A.2.0-roundtrip.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/ADONIS 5.1 UL5 (mfb_bpmn_1.1)/A.2.0-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    OK     : Validation; Message: Schema validation succeeded
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 1
+      - FINDINGS: 0
+  
+  TEST: A.2.0
+    FINDING: callingMethod; Message: Cannot find attribute; Parameter: id
+    OK     : callingMethod: Push (id: )
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: mod.267275)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Gateway (Split Flow)']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+        OK     : navigateElement; Message: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : navigateElement; Message: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : navigateElement; Message: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : callingMethod: Pop (id: mod.267275)
+      
+    TEST: TEST A.2.0 results:
+      - OK: 5
+      - FINDINGS: 9
+  
+  TEST RESULTS TOTAL:
+    - OK: 6
+    - FINDINGS : 9
+    

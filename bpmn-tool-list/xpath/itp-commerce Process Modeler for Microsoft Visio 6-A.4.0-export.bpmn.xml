@@ -1,0 +1,164 @@
+<TestRun name="itp-commerce Process Modeler for Microsoft Visio 6-A.4.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/itp-commerce Process Modeler for Microsoft Visio 6/A.4.0-export.bpmn"/>
+  <Test name="A.4.0">
+    <NodePush message="Push" identifier="_5d4c4b84-14de-4da1-a0a1-1cea337344c6" caller="callingMethod">
+      <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
+        <testContext>
+          <stackID>_5d4c4b84-14de-4da1-a0a1-1cea337344c6</stackID>
+          <nodeID>COLLABORATION_83235540-3be4-11e3-3329-080027000095</nodeID>
+          <id>_5d4c4b84-14de-4da1-a0a1-1cea337344c6</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="_ca3c7650-4c5c-4890-a8c5-628698a8bdda" caller="selectCollaboration">
+        <OKAssertion assertion="selectPool" message="bpmn:participant[@name=&apos;Pool&apos;]">
+          <testContext>
+            <stackID>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</stackID>
+            <nodeID>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</nodeID>
+            <id>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="_531a4604-5182-41da-b252-3d5c07dd63dc" caller="selectPool">
+          <OKAssertion assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;_59ab4db3-9c02-4d66-a592-37b28a671738&apos;]">
+            <testContext>
+              <stackID>_531a4604-5182-41da-b252-3d5c07dd63dc</stackID>
+              <nodeID>_531a4604-5182-41da-b252-3d5c07dd63dc</nodeID>
+              <id>_531a4604-5182-41da-b252-3d5c07dd63dc</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="_59ab4db3-9c02-4d66-a592-37b28a671738" caller="selectReferencedProcess">
+            <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1&apos;]">
+              <testContext>
+                <stackID>_59ab4db3-9c02-4d66-a592-37b28a671738</stackID>
+                <nodeID>_59ab4db3-9c02-4d66-a592-37b28a671738</nodeID>
+                <id>_59ab4db3-9c02-4d66-a592-37b28a671738</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 1&apos;]"/>
+            <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;_49966fce-dba8-4776-9f48-e27e25ba43ab&apos;]"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 2&apos;]"/>
+            <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;_49966fce-dba8-4776-9f48-e27e25ba43ab&apos;]"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event 1&apos;]"/>
+            <NodePop message="Pop" identifier="_59ab4db3-9c02-4d66-a592-37b28a671738" caller="callingMethod">
+              <testContext>
+                <stackID>_59ab4db3-9c02-4d66-a592-37b28a671738</stackID>
+                <nodeID>_49966fce-dba8-4776-9f48-e27e25ba43ab</nodeID>
+                <id>_59ab4db3-9c02-4d66-a592-37b28a671738</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>_531a4604-5182-41da-b252-3d5c07dd63dc</stackID>
+              <nodeID>_59ab4db3-9c02-4d66-a592-37b28a671738</nodeID>
+              <id>_531a4604-5182-41da-b252-3d5c07dd63dc</id>
+            </testContext>
+          </NodePush>
+          <NodePop message="Pop" identifier="_531a4604-5182-41da-b252-3d5c07dd63dc" caller="callingMethod">
+            <testContext>
+              <stackID>_531a4604-5182-41da-b252-3d5c07dd63dc</stackID>
+              <nodeID>_59ab4db3-9c02-4d66-a592-37b28a671738</nodeID>
+              <id>_531a4604-5182-41da-b252-3d5c07dd63dc</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</stackID>
+            <nodeID>_531a4604-5182-41da-b252-3d5c07dd63dc</nodeID>
+            <id>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</id>
+          </testContext>
+        </NodePush>
+        <OKAssertion assertion="navigateElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]">
+          <testContext>
+            <stackID>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</stackID>
+            <nodeID>_531a4604-5182-41da-b252-3d5c07dd63dc</nodeID>
+            <id>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]">
+          <testContext>
+            <stackID>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</stackID>
+            <nodeID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</nodeID>
+            <id>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="_aabf452f-ce4d-4296-a0eb-e3d219b327c6" caller="selectElementX">
+          <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]">
+            <testContext>
+              <stackID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</stackID>
+              <nodeID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</nodeID>
+              <id>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 3&apos;]"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;_2c2e8609-088b-4471-b8e7-6032a7d96aa0&apos;]"/>
+          <FindingAssertion assertion="selectFollowingElement" message="No outgoing reference found" parameter="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos;]"/>
+          <NodePush message="Push" identifier="" caller="selectFollowingElement">
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext>
+                <nodeID>_2c2e8609-088b-4471-b8e7-6032a7d96aa0</nodeID>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</stackID>
+              <nodeID>_2c2e8609-088b-4471-b8e7-6032a7d96aa0</nodeID>
+              <id>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</id>
+            </testContext>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Current node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext>
+              <stackID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</stackID>
+              <id>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="selectFollowingElement" message="The base node is null"/>
+          <NodePush message="Push" identifier="" caller="selectFollowingElement">
+            <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 4&apos;]"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext/>
+            </NodePop>
+            <testContext>
+              <stackID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</stackID>
+              <id>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</id>
+            </testContext>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <NodePop message="Pop" identifier="_aabf452f-ce4d-4296-a0eb-e3d219b327c6" caller="callingMethod">
+            <testContext>
+              <stackID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</stackID>
+              <id>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</stackID>
+            <nodeID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</nodeID>
+            <id>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</id>
+          </testContext>
+        </NodePush>
+        <NodePop message="Pop" identifier="_ca3c7650-4c5c-4890-a8c5-628698a8bdda" caller="callingMethod">
+          <testContext>
+            <stackID>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</stackID>
+            <nodeID>_aabf452f-ce4d-4296-a0eb-e3d219b327c6</nodeID>
+            <id>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>_5d4c4b84-14de-4da1-a0a1-1cea337344c6</stackID>
+          <nodeID>_ca3c7650-4c5c-4890-a8c5-628698a8bdda</nodeID>
+          <id>_5d4c4b84-14de-4da1-a0a1-1cea337344c6</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>COLLABORATION_83235540-3be4-11e3-3329-080027000095</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.4.0 results:">
+      <ListKeyValue key="OK" value="8"/>
+      <ListKeyValue key="FINDINGS" value="16"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="8"/>
+    <ListKeyValue key="FINDINGS " value="16"/>
+  </TotalResults>
+</TestRun>

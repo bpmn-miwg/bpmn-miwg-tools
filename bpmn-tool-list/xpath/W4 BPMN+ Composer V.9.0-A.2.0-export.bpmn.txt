@@ -1,5 +1,5 @@
 TESTRUN: W4 BPMN+ Composer V.9.0-A.2.0-export.bpmn
-  Running tests for /home/tstephen/GDrive/src/bpmn-miwg-w4/src/main/resources/W4 BPMN+ Composer V.9.0/A.2.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/W4 BPMN+ Composer V.9.0/A.2.0-export.bpmn
   TEST: A.2.0
     OK     : callingMethod: Push (id: A_2_0)
       OK     : selectElementX; Message: /bpmn:definitions/bpmn:process

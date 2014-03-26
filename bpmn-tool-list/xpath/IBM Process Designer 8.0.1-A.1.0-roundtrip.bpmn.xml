@@ -1,0 +1,56 @@
+<TestRun name="IBM Process Designer 8.0.1-A.1.0-roundtrip.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/IBM Process Designer 8.0.1/A.1.0-roundtrip.bpmn"/>
+  <Test name="BPMN Schema Validator">
+    <OKAssertion assertion="Validation" message="Schema validation succeeded"/>
+    <Results name="TEST BPMN Schema Validator results:">
+      <ListKeyValue key="OK" value="1"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <Test name="A.1.0">
+    <NodePush message="Push" identifier="bpmnid-e25cec90-057e-457a-91a1-35e65537a644" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <stackID>bpmnid-e25cec90-057e-457a-91a1-35e65537a644</stackID>
+          <nodeID>bpmnid-84fd0f3a-407b-4eec-92fa-a4e6d9c83d95</nodeID>
+          <id>bpmnid-e25cec90-057e-457a-91a1-35e65537a644</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536</stackID>
+            <nodeID>bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536</nodeID>
+            <id>bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 1&apos;]"/>
+        <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 2&apos;]"/>
+        <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 3&apos;]"/>
+        <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event&apos;]"/>
+        <NodePop message="Pop" identifier="bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536" caller="callingMethod">
+          <testContext>
+            <stackID>bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536</stackID>
+            <nodeID>bpmnid-196c656e-baa2-4306-809b-56ba006057b9</nodeID>
+            <id>bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>bpmnid-e25cec90-057e-457a-91a1-35e65537a644</stackID>
+          <nodeID>bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536</nodeID>
+          <id>bpmnid-e25cec90-057e-457a-91a1-35e65537a644</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>bpmnid-84fd0f3a-407b-4eec-92fa-a4e6d9c83d95</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.1.0 results:">
+      <ListKeyValue key="OK" value="2"/>
+      <ListKeyValue key="FINDINGS" value="4"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="3"/>
+    <ListKeyValue key="FINDINGS " value="4"/>
+  </TotalResults>
+</TestRun>

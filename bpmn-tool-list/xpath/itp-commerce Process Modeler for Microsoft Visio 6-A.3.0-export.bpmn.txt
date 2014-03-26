@@ -1,0 +1,33 @@
+TESTRUN: itp-commerce Process Modeler for Microsoft Visio 6-A.3.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/itp-commerce Process Modeler for Microsoft Visio 6/A.3.0-export.bpmn
+  TEST: A.3.0
+    OK     : callingMethod: Push (id: _d16c09f3-c56d-46ea-8fed-1fe833390e62)
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: _e1bf83e9-a2fc-4e50-bdbf-0a2f06db6954)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Collapsed Sub-Process']
+        FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Message' and @attachedToRef='_f8ac6981-eade-4f55-b640-4603db9bf19f']
+        FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+        FINDING: checkCancelActivity; Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+        OK     : navigateElement; Message: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : navigateElement; Message: 
+        FINDING: navigateBoundaryEvent; Message: Current node is null; Parameter: null
+        FINDING: checkEscalationEvent; Message: Current node is null; Parameter: null
+        FINDING: checkCancelActivity; Message: No current node; Parameter: 
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+        OK     : callingMethod: Pop (id: _e1bf83e9-a2fc-4e50-bdbf-0a2f06db6954)
+      
+    TEST: TEST A.3.0 results:
+      - OK: 4
+      - FINDINGS: 14
+  
+  TEST RESULTS TOTAL:
+    - OK: 4
+    - FINDINGS : 14
+    

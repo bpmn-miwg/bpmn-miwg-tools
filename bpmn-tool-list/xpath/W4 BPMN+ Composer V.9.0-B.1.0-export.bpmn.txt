@@ -1,0 +1,74 @@
+TESTRUN: W4 BPMN+ Composer V.9.0-B.1.0-export.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/W4 BPMN+ Composer V.9.0/B.1.0-export.bpmn
+  TEST: B.1.0
+    OK     : callingMethod: Push (id: B_1_0)
+      OK     : selectElementX; Message: //bpmn:collaboration
+      OK     : selectElementX: Push (id: Bpmn2_Collaboration_bOWgk5ipEeOWGc35pCatNA)
+        OK     : navigateElement; Message: bpmn:messageFlow[@name='Message Flow 1']
+        OK     : navigateElement; Message: bpmn:messageFlow[@name='Message Flow 2']
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+        OK     : selectProcessX: Push (id: Bpmn2_Process_bOWglZipEeOWGc35pCatNA)
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event Timer']
+          OK     : checkTimerEvent; Message: Timer event definition
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Abstract Task 1' and @id='Bpmn2_Task_bOXHqpipEeOWGc35pCatNA']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='Bpmn2_Task_bOXHqpipEeOWGc35pCatNA']
+          OK     : navigateFollowingElement; Message: bpmn:userTask[@name='User Task 2' and @id='Bpmn2_UserTask_kYNoEZipEeOWGc35pCatNA']
+          OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name='Service Task 3' and @id='Bpmn2_ServiceTask_vFN9UZipEeOWGc35pCatNA']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event None 1' and @id='Bpmn2_EndEvent_rmArgZipEeOWGc35pCatNA']
+          OK     : callingMethod: Pop (id: Bpmn2_Process_bOWglZipEeOWGc35pCatNA)
+        OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]
+        OK     : selectProcessX: Push (id: Bpmn2_Process_xKvfYJipEeOWGc35pCatNA)
+          FINDING: checkXORMarkersForProcess; Message: The XOR marker for the BPMN element with the id 'Bpmn2_ExclusiveGateway__KKAkpipEeOWGc35pCatNA' is true although false is expected.; Parameter: null
+          OK     : navigateElementX; Message: .//bpmn:lane[@name='Lane 1']
+          OK     : navigateElementX; Message: .//bpmn:lane[@name='Lane 2']
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event Message']
+          OK     : checkMessageEvent; Message: Message event definition
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:parallelGateway[@name='Parallel Gateway Divergence']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 1']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name='Call Activity Collapsed']
+          FINDING: checkTextAssociation; Message: Text annotation 'Text Annotation' not found; Parameter: bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='Bpmn2_StartEvent_122CIpipEeOWGc35pCatNA']/@targetRef]/bpmn:text
+          FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name='Call Activity - Expanded']
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: selectProcessOfCallActivity; Message: Parent failed; Parameter: selectProcessofCallActivity
+            OK     : selectProcessOfCallActivity: Push (id: )
+              FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event None 1']
+              FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+              FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null
+              OK     : callingMethod: Pop (id: )
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkMessageEvent; Message: Current node is null; Parameter: null
+          FINDING: checkMessageFlow; Message: Current node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkGlobalTask; Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: selectFollowingElement; Message: The base node is null; Parameter: null
+          OK     : selectFollowingElement: Push (id: )
+            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event None 2']
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+            OK     : callingMethod: Pop (id: )
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : navigateElement; Message: 
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          FINDING: checkDataAssociation; Message: Current node is null; Parameter: null
+          FINDING: checkDataAssociation; Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null
+          OK     : callingMethod: Pop (id: Bpmn2_Process_xKvfYJipEeOWGc35pCatNA)
+        OK     : callingMethod: Pop (id: Bpmn2_Collaboration_bOWgk5ipEeOWGc35pCatNA)
+      
+    TEST: TEST B.1.0 results:
+      - OK: 18
+      - FINDINGS: 31
+  
+  TEST RESULTS TOTAL:
+    - OK: 18
+    - FINDINGS : 31
+    
