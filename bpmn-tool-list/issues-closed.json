@@ -1,5 +1,51 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/156",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/156/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/156/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/156/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/156",
+    "id": 30102902,
+    "number": 156,
+    "title": "bpmn-js: Add test results for early access version",
+    "user": {
+      "login": "Nikku",
+      "id": 58601,
+      "avatar_url": "https://avatars.githubusercontent.com/u/58601?",
+      "gravatar_id": "815f0690e324a70bf2facd8d82815868",
+      "url": "https://api.github.com/users/Nikku",
+      "html_url": "https://github.com/Nikku",
+      "followers_url": "https://api.github.com/users/Nikku/followers",
+      "following_url": "https://api.github.com/users/Nikku/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Nikku/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Nikku/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Nikku/subscriptions",
+      "organizations_url": "https://api.github.com/users/Nikku/orgs",
+      "repos_url": "https://api.github.com/users/Nikku/repos",
+      "events_url": "https://api.github.com/users/Nikku/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Nikku/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-03-25T07:51:05Z",
+    "updated_at": "2014-03-25T22:51:03Z",
+    "closed_at": "2014-03-25T22:49:55Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/156",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/156",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/156.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/156.patch"
+    },
+    "body": "This commit adds test results for the BPMN 2.0 modeling toolkit that\r\npowers http://bpmn.io."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/155",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/155/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/155/comments",
@@ -11,7 +57,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -38,6 +84,7 @@
     "updated_at": "2014-03-14T15:47:54Z",
     "closed_at": "2014-03-14T15:47:54Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/155",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/155",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/155.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/155.patch"
@@ -56,7 +103,7 @@
     "user": {
       "login": "Francois-W4",
       "id": 6552230,
-      "avatar_url": "https://gravatar.com/avatar/b9b61a189826102c3168f02d43a909ac?d=https%3A%2F%2Fidenticons.github.com%2F59a1c16b1472f234c009c27de5327b39.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6552230?",
       "gravatar_id": "b9b61a189826102c3168f02d43a909ac",
       "url": "https://api.github.com/users/Francois-W4",
       "html_url": "https://github.com/Francois-W4",
@@ -83,6 +130,7 @@
     "updated_at": "2014-03-14T15:50:22Z",
     "closed_at": "2014-03-14T15:50:22Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/153",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/153",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/153.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/153.patch"
@@ -101,7 +149,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://gravatar.com/avatar/e6cd5b690515711d4360e7d6dee97635?d=https%3A%2F%2Fidenticons.github.com%2Fc8a696d75ebf768171dd30da88086337.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?",
       "gravatar_id": "e6cd5b690515711d4360e7d6dee97635",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -128,6 +176,7 @@
     "updated_at": "2014-03-14T16:05:18Z",
     "closed_at": "2014-03-14T16:03:43Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/152",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/152",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/152.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/152.patch"
@@ -146,7 +195,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://gravatar.com/avatar/8115d254a3580355da264a018cb10bbe?d=https%3A%2F%2Fidenticons.github.com%2F33c20129c3e707ecf83cb2819052c744.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?",
       "gravatar_id": "8115d254a3580355da264a018cb10bbe",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -173,6 +222,7 @@
     "updated_at": "2014-03-05T18:20:21Z",
     "closed_at": "2014-03-05T18:20:21Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/151",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/151",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/151.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/151.patch"
@@ -191,7 +241,7 @@
     "user": {
       "login": "Francois-W4",
       "id": 6552230,
-      "avatar_url": "https://gravatar.com/avatar/b9b61a189826102c3168f02d43a909ac?d=https%3A%2F%2Fidenticons.github.com%2F59a1c16b1472f234c009c27de5327b39.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6552230?",
       "gravatar_id": "b9b61a189826102c3168f02d43a909ac",
       "url": "https://api.github.com/users/Francois-W4",
       "html_url": "https://github.com/Francois-W4",
@@ -218,6 +268,7 @@
     "updated_at": "2014-03-05T18:19:56Z",
     "closed_at": "2014-03-05T18:19:56Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/150",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/150",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/150.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/150.patch"
@@ -236,7 +287,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -263,6 +314,7 @@
     "updated_at": "2013-12-06T15:50:29Z",
     "closed_at": "2013-12-06T15:50:29Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/144",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/144",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/144.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/144.patch"
@@ -281,7 +333,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -318,7 +370,7 @@
     "assignee": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -340,6 +392,7 @@
     "updated_at": "2014-01-23T16:35:47Z",
     "closed_at": "2014-01-23T16:35:47Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -358,7 +411,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -385,6 +438,7 @@
     "updated_at": "2013-11-27T18:57:04Z",
     "closed_at": "2013-11-27T18:57:04Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/135",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/135",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/135.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/135.patch"
@@ -403,7 +457,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -449,6 +503,7 @@
     "updated_at": "2013-12-09T07:13:57Z",
     "closed_at": "2013-12-09T07:13:57Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -467,7 +522,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -513,6 +568,7 @@
     "updated_at": "2013-12-11T14:33:13Z",
     "closed_at": "2013-12-11T14:33:13Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -531,7 +587,7 @@
     "user": {
       "login": "bzinchenko",
       "id": 5006818,
-      "avatar_url": "https://gravatar.com/avatar/7d6ef3e36277d136beaca52813ba4ed2?d=https%3A%2F%2Fidenticons.github.com%2Ff516d3d90311b50f46a0e1a8e438c76b.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5006818?",
       "gravatar_id": "7d6ef3e36277d136beaca52813ba4ed2",
       "url": "https://api.github.com/users/bzinchenko",
       "html_url": "https://github.com/bzinchenko",
@@ -558,6 +614,7 @@
     "updated_at": "2013-11-27T17:09:55Z",
     "closed_at": "2013-11-27T17:09:55Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/127",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/127",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/127.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/127.patch"
@@ -576,7 +633,7 @@
     "user": {
       "login": "Blenta",
       "id": 2486397,
-      "avatar_url": "https://gravatar.com/avatar/84e24a105d20921b8825e87cd302dbb1?d=https%3A%2F%2Fidenticons.github.com%2Fcefed9e1023d943ca8b2f4ef13c128cb.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2486397?",
       "gravatar_id": "84e24a105d20921b8825e87cd302dbb1",
       "url": "https://api.github.com/users/Blenta",
       "html_url": "https://github.com/Blenta",
@@ -603,6 +660,7 @@
     "updated_at": "2013-11-27T17:09:21Z",
     "closed_at": "2013-11-27T17:09:21Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/126",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/126",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/126.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/126.patch"
@@ -621,7 +679,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -648,6 +706,7 @@
     "updated_at": "2013-11-13T14:55:43Z",
     "closed_at": "2013-11-13T14:55:43Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/125",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/125",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/125.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/125.patch"
@@ -666,7 +725,7 @@
     "user": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -697,6 +756,7 @@
     "updated_at": "2013-10-23T16:39:42Z",
     "closed_at": "2013-10-23T16:39:42Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -715,7 +775,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -756,6 +816,7 @@
     "updated_at": "2013-09-19T08:12:09Z",
     "closed_at": "2013-09-19T08:12:09Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -774,7 +835,7 @@
     "user": {
       "login": "Blenta",
       "id": 2486397,
-      "avatar_url": "https://gravatar.com/avatar/84e24a105d20921b8825e87cd302dbb1?d=https%3A%2F%2Fidenticons.github.com%2Fcefed9e1023d943ca8b2f4ef13c128cb.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2486397?",
       "gravatar_id": "84e24a105d20921b8825e87cd302dbb1",
       "url": "https://api.github.com/users/Blenta",
       "html_url": "https://github.com/Blenta",
@@ -801,6 +862,7 @@
     "updated_at": "2013-08-25T18:46:34Z",
     "closed_at": "2013-08-25T18:46:34Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/114",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/114",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/114.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/114.patch"
@@ -819,7 +881,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://gravatar.com/avatar/8115d254a3580355da264a018cb10bbe?d=https%3A%2F%2Fidenticons.github.com%2F33c20129c3e707ecf83cb2819052c744.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?",
       "gravatar_id": "8115d254a3580355da264a018cb10bbe",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -846,6 +908,7 @@
     "updated_at": "2013-10-09T10:46:32Z",
     "closed_at": "2013-07-24T17:34:28Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/112",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/112",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/112.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/112.patch"
@@ -864,7 +927,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
       "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -891,6 +954,7 @@
     "updated_at": "2013-07-24T16:45:54Z",
     "closed_at": "2013-07-24T16:45:54Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/109",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/109",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/109.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/109.patch"
@@ -909,7 +973,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
       "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -936,6 +1000,7 @@
     "updated_at": "2013-07-20T16:54:42Z",
     "closed_at": "2013-07-20T07:53:07Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/108",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/108",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/108.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/108.patch"
@@ -954,7 +1019,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -986,7 +1051,7 @@
     "assignee": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -1008,6 +1073,7 @@
     "updated_at": "2013-11-28T14:27:02Z",
     "closed_at": "2013-11-28T14:27:02Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1026,7 +1092,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -1058,7 +1124,7 @@
     "assignee": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -1080,6 +1146,7 @@
     "updated_at": "2013-11-28T14:25:48Z",
     "closed_at": "2013-11-28T14:25:48Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1098,7 +1165,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -1135,7 +1202,7 @@
     "assignee": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -1157,6 +1224,7 @@
     "updated_at": "2013-12-18T18:38:44Z",
     "closed_at": "2013-11-28T14:23:47Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1175,7 +1243,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -1202,6 +1270,7 @@
     "updated_at": "2013-07-10T10:56:02Z",
     "closed_at": "2013-07-10T10:56:02Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/103",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/103",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/103.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/103.patch"
@@ -1220,7 +1289,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
       "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -1257,7 +1326,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -1279,6 +1348,7 @@
     "updated_at": "2013-07-12T19:18:24Z",
     "closed_at": "2013-07-12T19:18:24Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1297,7 +1367,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
       "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -1334,7 +1404,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -1356,6 +1426,7 @@
     "updated_at": "2013-07-22T13:18:21Z",
     "closed_at": "2013-07-12T19:15:56Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1374,7 +1445,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -1406,7 +1477,7 @@
     "assignee": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -1428,6 +1499,7 @@
     "updated_at": "2014-01-15T15:23:18Z",
     "closed_at": "2014-01-15T15:23:18Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1446,7 +1518,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -1478,7 +1550,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -1500,6 +1572,7 @@
     "updated_at": "2013-07-03T15:30:33Z",
     "closed_at": "2013-06-28T15:55:26Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1518,7 +1591,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://gravatar.com/avatar/8115d254a3580355da264a018cb10bbe?d=https%3A%2F%2Fidenticons.github.com%2F33c20129c3e707ecf83cb2819052c744.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?",
       "gravatar_id": "8115d254a3580355da264a018cb10bbe",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -1559,6 +1632,7 @@
     "updated_at": "2013-07-03T15:32:24Z",
     "closed_at": "2013-06-28T15:55:15Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1577,7 +1651,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://gravatar.com/avatar/ca9e7c4dead8886e2524da9b64931f79?d=https%3A%2F%2Fidenticons.github.com%2F19e2f65144a4302de1fdec3d0b4f6029.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?",
       "gravatar_id": "ca9e7c4dead8886e2524da9b64931f79",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -1604,6 +1678,7 @@
     "updated_at": "2013-06-26T10:54:58Z",
     "closed_at": "2013-06-26T10:54:58Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/75",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/75",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/75.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/75.patch"
@@ -1622,7 +1697,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -1673,6 +1748,7 @@
     "updated_at": "2013-07-15T14:27:13Z",
     "closed_at": "2013-07-15T14:27:13Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1691,7 +1767,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://gravatar.com/avatar/8115d254a3580355da264a018cb10bbe?d=https%3A%2F%2Fidenticons.github.com%2F33c20129c3e707ecf83cb2819052c744.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?",
       "gravatar_id": "8115d254a3580355da264a018cb10bbe",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -1723,7 +1799,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -1745,6 +1821,7 @@
     "updated_at": "2013-06-28T15:54:31Z",
     "closed_at": "2013-06-28T15:54:31Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1763,7 +1840,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://gravatar.com/avatar/8115d254a3580355da264a018cb10bbe?d=https%3A%2F%2Fidenticons.github.com%2F33c20129c3e707ecf83cb2819052c744.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?",
       "gravatar_id": "8115d254a3580355da264a018cb10bbe",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -1799,6 +1876,7 @@
     "updated_at": "2013-06-28T15:54:15Z",
     "closed_at": "2013-06-28T15:54:15Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1817,7 +1895,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -1844,6 +1922,7 @@
     "updated_at": "2013-07-10T09:07:18Z",
     "closed_at": "2013-05-16T13:02:17Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/50",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/50",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/50.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/50.patch"
@@ -1862,7 +1941,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -1908,6 +1987,7 @@
     "updated_at": "2013-12-01T16:04:49Z",
     "closed_at": "2013-12-01T15:43:00Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1926,7 +2006,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -1972,6 +2052,7 @@
     "updated_at": "2013-12-01T16:05:14Z",
     "closed_at": "2013-12-01T15:44:19Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -1990,7 +2071,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -2031,6 +2112,7 @@
     "updated_at": "2013-05-16T15:32:26Z",
     "closed_at": "2013-05-16T15:32:26Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2049,7 +2131,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -2090,6 +2172,7 @@
     "updated_at": "2013-12-01T16:05:23Z",
     "closed_at": "2013-12-01T15:40:25Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2108,7 +2191,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
       "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2135,6 +2218,7 @@
     "updated_at": "2013-07-20T16:54:42Z",
     "closed_at": "2013-05-06T09:24:28Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/44",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/44",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/44.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/44.patch"
@@ -2153,7 +2237,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -2204,6 +2288,7 @@
     "updated_at": "2013-11-25T12:44:08Z",
     "closed_at": "2013-11-25T12:44:08Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2222,7 +2307,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -2273,6 +2358,7 @@
     "updated_at": "2013-11-25T12:44:57Z",
     "closed_at": "2013-11-25T12:44:57Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2291,7 +2377,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -2342,6 +2428,7 @@
     "updated_at": "2013-11-25T12:45:35Z",
     "closed_at": "2013-11-25T12:45:35Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2360,7 +2447,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -2411,6 +2498,7 @@
     "updated_at": "2013-11-25T12:55:03Z",
     "closed_at": "2013-11-25T12:55:03Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2429,7 +2517,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://gravatar.com/avatar/91e023076f9d792573dcb2c83da4df31?d=https%3A%2F%2Fidenticons.github.com%2F8dfcb3bfa2291693f8bc143464639aed.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?",
       "gravatar_id": "91e023076f9d792573dcb2c83da4df31",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -2456,6 +2544,7 @@
     "updated_at": "2013-07-10T09:07:18Z",
     "closed_at": "2013-05-03T14:43:10Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/36",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/36",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/36.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/36.patch"
@@ -2474,7 +2563,7 @@
     "user": {
       "login": "lonniev",
       "id": 2193384,
-      "avatar_url": "https://gravatar.com/avatar/49598db116dc6181e40aeef9244417d8?d=https%3A%2F%2Fidenticons.github.com%2F1a4c5e573631d10bae7be7641380ee35.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2193384?",
       "gravatar_id": "49598db116dc6181e40aeef9244417d8",
       "url": "https://api.github.com/users/lonniev",
       "html_url": "https://github.com/lonniev",
@@ -2497,7 +2586,7 @@
     "assignee": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -2519,6 +2608,7 @@
     "updated_at": "2013-05-06T10:30:46Z",
     "closed_at": "2013-05-06T10:30:46Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/32",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/32",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/32.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/32.patch"
@@ -2537,7 +2627,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://gravatar.com/avatar/e6cd5b690515711d4360e7d6dee97635?d=https%3A%2F%2Fidenticons.github.com%2Fc8a696d75ebf768171dd30da88086337.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?",
       "gravatar_id": "e6cd5b690515711d4360e7d6dee97635",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -2569,7 +2659,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -2591,6 +2681,7 @@
     "updated_at": "2013-05-01T14:17:33Z",
     "closed_at": "2013-05-01T14:17:33Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2609,7 +2700,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://gravatar.com/avatar/e6cd5b690515711d4360e7d6dee97635?d=https%3A%2F%2Fidenticons.github.com%2Fc8a696d75ebf768171dd30da88086337.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?",
       "gravatar_id": "e6cd5b690515711d4360e7d6dee97635",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -2641,7 +2732,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -2663,6 +2754,7 @@
     "updated_at": "2013-05-16T18:20:57Z",
     "closed_at": "2013-05-16T18:20:57Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2681,7 +2773,7 @@
     "user": {
       "login": "squick",
       "id": 4225295,
-      "avatar_url": "https://gravatar.com/avatar/c7b8413d0a9f70cd16477af1b6fd95df?d=https%3A%2F%2Fidenticons.github.com%2F756ff3455f1a0802afa8e363e56435f0.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4225295?",
       "gravatar_id": "c7b8413d0a9f70cd16477af1b6fd95df",
       "url": "https://api.github.com/users/squick",
       "html_url": "https://github.com/squick",
@@ -2738,7 +2830,7 @@
     "assignee": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -2760,6 +2852,7 @@
     "updated_at": "2013-05-15T11:43:41Z",
     "closed_at": "2013-05-15T11:43:41Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2778,7 +2871,7 @@
     "user": {
       "login": "AlbertoManuel",
       "id": 4049262,
-      "avatar_url": "https://gravatar.com/avatar/1f81bfa2c0af1649bd4b5dd25362e90d?d=https%3A%2F%2Fidenticons.github.com%2F95e99822e1a269006bd6bd5ada4dd104.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049262?",
       "gravatar_id": "1f81bfa2c0af1649bd4b5dd25362e90d",
       "url": "https://api.github.com/users/AlbertoManuel",
       "html_url": "https://github.com/AlbertoManuel",
@@ -2805,7 +2898,7 @@
     "assignee": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -2827,6 +2920,7 @@
     "updated_at": "2013-05-06T11:22:35Z",
     "closed_at": "2013-05-06T11:22:35Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -2845,7 +2939,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -2872,6 +2966,7 @@
     "updated_at": "2013-04-24T14:33:42Z",
     "closed_at": "2013-04-24T14:33:42Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/22",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/22",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/22.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/22.patch"
@@ -2890,7 +2985,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -2917,6 +3012,7 @@
     "updated_at": "2013-04-24T12:01:56Z",
     "closed_at": "2013-04-24T12:01:56Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/19",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/19",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/19.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/19.patch"
@@ -2935,7 +3031,7 @@
     "user": {
       "login": "arnaiz99",
       "id": 4087028,
-      "avatar_url": "https://gravatar.com/avatar/dce17eb94cfe766b6cf246b4b6a4fbe9?d=https%3A%2F%2Fidenticons.github.com%2F7a8b8a53c0acea575c9ca8607f211a26.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4087028?",
       "gravatar_id": "dce17eb94cfe766b6cf246b4b6a4fbe9",
       "url": "https://api.github.com/users/arnaiz99",
       "html_url": "https://github.com/arnaiz99",
@@ -2958,7 +3054,7 @@
     "assignee": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -2980,6 +3076,7 @@
     "updated_at": "2013-05-08T13:33:17Z",
     "closed_at": "2013-04-24T16:17:23Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/18",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/18",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/18.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/18.patch"
@@ -2998,7 +3095,7 @@
     "user": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -3025,6 +3122,7 @@
     "updated_at": "2013-04-23T20:57:33Z",
     "closed_at": "2013-04-23T20:57:33Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3043,7 +3141,7 @@
     "user": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -3074,6 +3172,7 @@
     "updated_at": "2013-04-23T20:57:57Z",
     "closed_at": "2013-04-23T20:57:57Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3092,7 +3191,7 @@
     "user": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -3123,6 +3222,7 @@
     "updated_at": "2013-04-23T20:57:02Z",
     "closed_at": "2013-04-23T20:57:02Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3141,7 +3241,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
       "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -3172,6 +3272,7 @@
     "updated_at": "2013-04-23T21:03:02Z",
     "closed_at": "2013-04-23T21:03:02Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3190,7 +3291,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://gravatar.com/avatar/07c2f14327a4257c8f589eb5e38b2318?d=https%3A%2F%2Fidenticons.github.com%2F2a17b5362527531902398581112e0ebd.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
       "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -3217,6 +3318,7 @@
     "updated_at": "2013-07-20T16:54:42Z",
     "closed_at": "2013-04-16T22:14:47Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/13",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/13",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/13.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/13.patch"
@@ -3235,7 +3337,7 @@
     "user": {
       "login": "ehelmste",
       "id": 4112516,
-      "avatar_url": "https://gravatar.com/avatar/92143e516cc680e3e73e9b3e7c16f622?d=https%3A%2F%2Fidenticons.github.com%2Fadecd583ed228d5191ca7b353ebb8b05.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4112516?",
       "gravatar_id": "92143e516cc680e3e73e9b3e7c16f622",
       "url": "https://api.github.com/users/ehelmste",
       "html_url": "https://github.com/ehelmste",
@@ -3266,6 +3368,7 @@
     "updated_at": "2013-04-23T20:52:34Z",
     "closed_at": "2013-04-23T20:52:34Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3284,7 +3387,7 @@
     "user": {
       "login": "ehelmste",
       "id": 4112516,
-      "avatar_url": "https://gravatar.com/avatar/92143e516cc680e3e73e9b3e7c16f622?d=https%3A%2F%2Fidenticons.github.com%2Fadecd583ed228d5191ca7b353ebb8b05.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4112516?",
       "gravatar_id": "92143e516cc680e3e73e9b3e7c16f622",
       "url": "https://api.github.com/users/ehelmste",
       "html_url": "https://github.com/ehelmste",
@@ -3315,6 +3418,7 @@
     "updated_at": "2013-04-23T20:51:44Z",
     "closed_at": "2013-04-23T20:51:44Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3333,7 +3437,7 @@
     "user": {
       "login": "ehelmste",
       "id": 4112516,
-      "avatar_url": "https://gravatar.com/avatar/92143e516cc680e3e73e9b3e7c16f622?d=https%3A%2F%2Fidenticons.github.com%2Fadecd583ed228d5191ca7b353ebb8b05.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4112516?",
       "gravatar_id": "92143e516cc680e3e73e9b3e7c16f622",
       "url": "https://api.github.com/users/ehelmste",
       "html_url": "https://github.com/ehelmste",
@@ -3364,6 +3468,7 @@
     "updated_at": "2013-04-23T20:51:23Z",
     "closed_at": "2013-04-23T20:51:23Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3382,7 +3487,7 @@
     "user": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://gravatar.com/avatar/68ca4e46887e7be29e8e5430fcf7f7a7?d=https%3A%2F%2Fidenticons.github.com%2F4d8c2c01fe07bea38745767716dea0df.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?",
       "gravatar_id": "68ca4e46887e7be29e8e5430fcf7f7a7",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -3409,6 +3514,7 @@
     "updated_at": "2013-04-09T15:31:20Z",
     "closed_at": "2013-04-09T15:31:20Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/9",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/9",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/9.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/9.patch"
@@ -3427,7 +3533,7 @@
     "user": {
       "login": "AlbertoManuel",
       "id": 4049262,
-      "avatar_url": "https://gravatar.com/avatar/1f81bfa2c0af1649bd4b5dd25362e90d?d=https%3A%2F%2Fidenticons.github.com%2F95e99822e1a269006bd6bd5ada4dd104.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049262?",
       "gravatar_id": "1f81bfa2c0af1649bd4b5dd25362e90d",
       "url": "https://api.github.com/users/AlbertoManuel",
       "html_url": "https://github.com/AlbertoManuel",
@@ -3458,6 +3564,7 @@
     "updated_at": "2013-04-23T21:05:07Z",
     "closed_at": "2013-04-23T21:05:07Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3476,7 +3583,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -3508,7 +3615,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -3530,6 +3637,7 @@
     "updated_at": "2013-05-14T21:40:07Z",
     "closed_at": "2013-05-14T21:40:07Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3548,7 +3656,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -3575,6 +3683,7 @@
     "updated_at": "2013-04-04T11:23:12Z",
     "closed_at": "2013-04-04T11:23:12Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/6",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/6",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/6.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/6.patch"
@@ -3593,7 +3702,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3620,6 +3729,7 @@
     "updated_at": "2013-04-03T19:42:31Z",
     "closed_at": "2013-04-03T19:42:31Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/5",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/5",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/5.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/5.patch"
@@ -3638,7 +3748,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3665,6 +3775,7 @@
     "updated_at": "2013-04-03T19:22:44Z",
     "closed_at": "2013-04-03T19:22:44Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/4",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/4",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/4.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/4.patch"
@@ -3683,7 +3794,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3706,7 +3817,7 @@
     "assignee": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3728,6 +3839,7 @@
     "updated_at": "2013-04-03T16:00:33Z",
     "closed_at": "2013-04-03T16:00:33Z",
     "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/3",
       "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/3",
       "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/3.diff",
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/3.patch"
@@ -3746,7 +3858,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://gravatar.com/avatar/25e7c4d03ab9b5cff694e43fc927579d?d=https%3A%2F%2Fidenticons.github.com%2F92b04b79171279224585f6160e820c59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
       "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3773,7 +3885,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -3795,6 +3907,7 @@
     "updated_at": "2013-04-23T20:50:54Z",
     "closed_at": "2013-04-23T20:50:54Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
@@ -3813,7 +3926,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://gravatar.com/avatar/d734c05ee95ad38f3c5eb379b8bdf4bb?d=https%3A%2F%2Fidenticons.github.com%2Fb786332c6e03d22a572e2bd5c67a86c9.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
       "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -3840,7 +3953,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://gravatar.com/avatar/885e40c5b90be7c7899c43ceaf13273f?d=https%3A%2F%2Fidenticons.github.com%2F36acb1877811224296bde872c998ca59.png&r=x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
       "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -3862,6 +3975,7 @@
     "updated_at": "2013-04-05T21:18:24Z",
     "closed_at": "2013-04-05T21:18:24Z",
     "pull_request": {
+      "url": null,
       "html_url": null,
       "diff_url": null,
       "patch_url": null
