@@ -67,9 +67,9 @@
       //          "sAjaxSource": toolsUrl,
       //          "sAjaxDataProp": "tools",
                 "aaData": toolsTestedByMIWG.tools,
-                "aaSorting": [[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ], [ 6, "desc" ], [ 7, "desc" ], [ 8, "desc" ], [ 9, "asc" ], [10, "desc" ], [0, "asc" ], [1, "asc" ]],
+                "aaSorting": [[ 2-1, "desc" ], [ 5-1, "desc" ], [ 4-1, "desc" ], [ 3-1, "desc" ], [ 6-1, "desc" ], [ 7-1, "desc" ], [ 8-1, "desc" ], [ 9-1, "asc" ], [10-1, "desc" ], /*[0, "asc" ],*/ [1-1, "asc" ]],
                 "aoColumns": [
-                    { "mData": "vendor" },
+//                     { "mData": "vendor" },
                     { "mData": "tool",
                       "mRender": function ( data, type, full ) {
                         if (full.website.length == 0) {
@@ -117,8 +117,7 @@
                   // show the anchor encoded as expected
                   console.debug('toolAndVersion:'+toolAndVersion);
                   result = result
-                    + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xpath/overview.html#' + toolAndVersion + '">XPath</a>'
-                    + ' <a href="http://tools.bpmn-miwg.cloudbees.net/xml-compare/overview.html#' + toolAndVersion + '">XMLDiff</a>';
+                    + ' <a href="overview.html#' + toolAndVersion + '">Details</a>'
                 }
                 return result;
               }
@@ -206,14 +205,14 @@
       <table id="bpmn-tools" class="display" width="100%">
         <thead>
           <tr>
-            <th>Vendor</th>
+<!--            <th>Vendor</th>-->
             <th>Tool Name &amp; Version</th>
             <th>BPMN 2.0</th>
             <th>Import</th>
             <th>Export</th>
             <th>Roundtrip</th>
-            <th>Test Results submitted</th>
-            <th>Participates in Demos</th>
+            <th>Results Submitted</th>
+            <th>Part of Demos</th>
             <th>Open Source</th>
             <th>Open Issues</th>
             <th>Closed Issues</th>
@@ -262,11 +261,11 @@
                 <td>Tool can both import and export BPMN 2.0 XML files based on the XML Schema Definition (XSD) that ships with the specification</td>
               </tr>
               <tr>
-                <td>Test Results submitted</td>
+                <td>Results submitted</td>
                 <td>Test results have been submitted for the tool either by users or the vendor (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
               </tr>
               <tr>
-                <td>Participates in Demos</td>
+                <td>Part of Demos</td>
                 <td>Tool participated in one of the <a href="https://github.com/bpmn-miwg/bpmn-miwg-demos">public BPMN MIWG demos</a></td>
               </tr>
               <tr>
