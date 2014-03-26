@@ -4,7 +4,7 @@
     <NodePush message="Push" identifier="" caller="callingMethod">
       <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
         <testContext>
-          <nodeID>WFP-6-</nodeID>
+          <nodeID>diagram_IDAT1EYB</nodeID>
         </testContext>
       </OKAssertion>
       <NodePush message="Push" identifier="diagram_IDAXTKFF" caller="selectElementX">
@@ -58,7 +58,7 @@
         </testContext>
       </NodePush>
       <testContext>
-        <nodeID>WFP-6-</nodeID>
+        <nodeID>diagram_IDAT1EYB</nodeID>
       </testContext>
     </NodePush>
     <Results name="TEST A.2.0 results:">

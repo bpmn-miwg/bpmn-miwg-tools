@@ -1,0 +1,55 @@
+TESTRUN: Signavio Process Editor 7.8.1-A.4.0-roundtrip.bpmn
+  Running tests for /Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Signavio Process Editor 7.8.1/A.4.0-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    OK     : Validation; Message: Schema validation succeeded
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 1
+      - FINDINGS: 0
+  
+  TEST: A.4.0
+    OK     : callingMethod: Push (id: sid-db958ac0-89aa-4594-b27b-e00abc10f3ce)
+      OK     : selectCollaboration; Message: bpmn:collaboration
+      OK     : selectCollaboration: Push (id: sid-8a70bc1d-1333-4aa7-825d-2253eb4c8180)
+        OK     : selectPool; Message: bpmn:participant[@name='Pool']
+        OK     : selectPool: Push (id: _046bff4f-cea3-4512-a6b1-30517fb29f2c)
+          FINDING: selectReferencedProcess; Message: Cannot find attribute; Parameter: processRef
+          FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name='Start Event 1']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='_046bff4f-cea3-4512-a6b1-30517fb29f2c']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='_046bff4f-cea3-4512-a6b1-30517fb29f2c']
+          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+          OK     : callingMethod: Pop (id: _046bff4f-cea3-4512-a6b1-30517fb29f2c)
+        OK     : callingMethod: Pop (id: sid-8a70bc1d-1333-4aa7-825d-2253eb4c8180)
+      OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+      OK     : selectElementX: Push (id: sid-472c62af-f368-463a-a1bd-dbcee1b9996d)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 2']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='_6fed62c8-8241-4a1d-ae67-266fda7dcead']
+        FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @targetRef='_6fed62c8-8241-4a1d-ae67-266fda7dcead']
+        OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 1' and @id='_ee35fa2c-dfea-40cf-a469-845b765a7b50']
+        OK     : selectFollowingElement: Push (id: _ee35fa2c-dfea-40cf-a469-845b765a7b50)
+          OK     : callingMethod: Pop (id: _ee35fa2c-dfea-40cf-a469-845b765a7b50)
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 5' and @id='_1c347d0d-750b-4c09-980d-6877caae409b']
+        FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='%s' and @sourceRef='_1c347d0d-750b-4c09-980d-6877caae409b']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 2' and @id='_7c434d45-d319-457b-9fd6-853c218bc3f1']
+        OK     : navigateElement; Message: #document/definitions[@id='id="sid-db958ac0-89aa-4594-b27b-e00abc10f3ce"']/process[@id='id="sid-472c62af-f368-463a-a1bd-dbcee1b9996d"']/task[@id='id="_6fed62c8-8241-4a1d-ae67-266fda7dcead"']/
+        OK     : selectFollowingElement; Message: bpmn:subProcess[@name='Expanded Sub-Process 2' and @id='_f52b6ad0-4dcc-4053-b696-b924dda01db5']
+        OK     : selectFollowingElement: Push (id: _f52b6ad0-4dcc-4053-b696-b924dda01db5)
+          OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event 4']
+          OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 6' and @id='_15f8f2a4-5e55-4159-b349-403ac4cbdefb']
+          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 4' and @id='_bb8b7952-0991-4b7c-a851-97327832d7b8']
+          OK     : callingMethod: Pop (id: _f52b6ad0-4dcc-4053-b696-b924dda01db5)
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 5' and @id='_8e6cecb7-b247-4c43-a6b6-532fb6a89753']
+        OK     : callingMethod: Pop (id: sid-472c62af-f368-463a-a1bd-dbcee1b9996d)
+      OK     : callingMethod: Pop (id: sid-db958ac0-89aa-4594-b27b-e00abc10f3ce)
+    
+    TEST: TEST A.4.0 results:
+      - OK: 15
+      - FINDINGS: 9
+  
+  TEST RESULTS TOTAL:
+    - OK: 16
+    - FINDINGS : 9
+    

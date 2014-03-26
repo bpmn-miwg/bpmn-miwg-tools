@@ -4,7 +4,7 @@
     <NodePush message="Push" identifier="" caller="callingMethod">
       <OKAssertion assertion="selectElementX" message="//bpmn:collaboration">
         <testContext>
-          <nodeID>C1373655174958</nodeID>
+          <nodeID>diagram_IDA32PCC</nodeID>
         </testContext>
       </OKAssertion>
       <NodePush message="Push" identifier="diagram_IDAIXKIG" caller="selectElementX">
@@ -264,7 +264,7 @@
         </testContext>
       </NodePush>
       <testContext>
-        <nodeID>C1373655174958</nodeID>
+        <nodeID>diagram_IDA32PCC</nodeID>
       </testContext>
     </NodePush>
     <Results name="TEST B.1.0 results:">

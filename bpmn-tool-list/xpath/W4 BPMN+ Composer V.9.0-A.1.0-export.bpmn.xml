@@ -4,6 +4,7 @@
       <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
         <testContext>
           <stackID>A_1_0</stackID>
+          <nodeID>WFP-6-</nodeID>
           <id>A_1_0</id>
         </testContext>
       </OKAssertion>
@@ -56,7 +57,9 @@
           <id>A_1_0</id>
         </testContext>
       </NodePush>
-      <testContext/>
+      <testContext>
+        <nodeID>WFP-6-</nodeID>
+      </testContext>
     </NodePush>
     <Results name="TEST A.1.0 results:">
       <ListKeyValue key="OK" value="6"/>

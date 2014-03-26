@@ -4,7 +4,7 @@
       <OKAssertion assertion="selectElementX" message="//bpmn:collaboration">
         <testContext>
           <stackID>_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67</stackID>
-          <nodeID>_fdd19176-eb45-4ee7-8ca7-624798cc2243</nodeID>
+          <nodeID>C1386708507505</nodeID>
           <id>_3B6F3E7F-CC96-4DC7-8A45-D056D88EBE67</id>
         </testContext>
       </OKAssertion>
@@ -1293,7 +1293,7 @@
         </testContext>
       </NodePush>
       <testContext>
-        <nodeID>_fdd19176-eb45-4ee7-8ca7-624798cc2243</nodeID>
+        <nodeID>C1386708507505</nodeID>
       </testContext>
     </NodePush>
     <Results name="TEST B.2.0 results:">

@@ -4,7 +4,7 @@
       <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
         <testContext>
           <stackID>C7A4D800-1476-45DF-88DF-E2FB35EF97C7</stackID>
-          <nodeID>_b3fa06f0-c6d8-482f-840b-3424786459ff</nodeID>
+          <nodeID>WFP-Page_Trisotech_Visio-_6-</nodeID>
           <id>C7A4D800-1476-45DF-88DF-E2FB35EF97C7</id>
         </testContext>
       </OKAssertion>
@@ -107,7 +107,7 @@
         </testContext>
       </NodePush>
       <testContext>
-        <nodeID>_b3fa06f0-c6d8-482f-840b-3424786459ff</nodeID>
+        <nodeID>WFP-Page_Trisotech_Visio-_6-</nodeID>
       </testContext>
     </NodePush>
     <Results name="TEST A.2.0 results:">

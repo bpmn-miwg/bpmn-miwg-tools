@@ -1,0 +1,413 @@
+<TestRun name="Signavio Process Editor 7.8.1-B.2.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/B - Validate that tool covers conformance class set/Signavio Process Editor 7.8.1/B.2.0-export.bpmn"/>
+  <Test name="B.2.0">
+    <NodePush message="Push" identifier="sid-23781f56-524e-413c-9b06-0472b1f85700" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="//bpmn:collaboration">
+        <testContext>
+          <stackID>sid-23781f56-524e-413c-9b06-0472b1f85700</stackID>
+          <nodeID>sid-25f790d8-d9f2-4c8b-97d9-498d934b00d3</nodeID>
+          <id>sid-23781f56-524e-413c-9b06-0472b1f85700</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8" caller="selectElementX">
+        <OKAssertion assertion="navigateElementX" message="bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]">
+          <testContext>
+            <stackID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</stackID>
+            <nodeID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</nodeID>
+            <id>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkMessageDefinition" message="Message definition">
+          <testContext>
+            <stackID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</stackID>
+            <nodeID>sid-6E3AA52B-9B5A-4DC6-B178-867DFCB61F99</nodeID>
+            <id>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="navigateElementX" message="No node found" parameter="bpmn:messageFlow[@name=&apos;Message Flow 2&apos;]"/>
+        <OKAssertion assertion="checkMessageDefinition" message="Message definition">
+          <testContext>
+            <stackID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</stackID>
+            <nodeID>sid-6E3AA52B-9B5A-4DC6-B178-867DFCB61F99</nodeID>
+            <id>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="selectProcessX" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]">
+          <testContext>
+            <stackID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</stackID>
+            <nodeID>sid-6E3AA52B-9B5A-4DC6-B178-867DFCB61F99</nodeID>
+            <id>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="sid-19F468B9-B62E-4E55-B00C-99AD241E13B7" caller="selectProcessX">
+          <OKAssertion assertion="checkXORMarkersForProcess" message="All XOR markers have the expected value &apos;true&apos;.">
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateElement" message="No node found" parameter="bpmn:startEvent[@name=&apos;Start Event 1 Timer&apos;]"/>
+          <FindingAssertion assertion="checkTimerEvent" message="Cannot find timer event definition" parameter="bpmn:timerEventDefinition | bpmn:eventDefinitionRef"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Abstract Task 1&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:sendTask[@name=&apos;Send Task 2&apos;]"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;sid-19F468B9-B62E-4E55-B00C-99AD241E13B7&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:userTask[@name=&apos;User Task 3&apos;]"/>
+          <NodePush message="Push" identifier="sid-19F468B9-B62E-4E55-B00C-99AD241E13B7" caller="checkDataAssociation">
+            <FindingAssertion assertion="checkDataAssociation" message="Cannot find the associated artifact dataObject &apos;Data Object&apos;"/>
+            <NodePop message="Pop" identifier="sid-19F468B9-B62E-4E55-B00C-99AD241E13B7" caller="checkDataAssociation">
+              <testContext>
+                <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+                <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+                <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </NodePush>
+          <FindingAssertion assertion="selectElement" message="No node found" parameter="bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 1&apos;]"/>
+          <NodePush message="Push" identifier="" caller="selectElement">
+            <FindingAssertion assertion="navigateGatewaySequenceFlowStack" message="Parent failed" parameter=""/>
+            <FindingAssertion assertion="navigateGatewaySequenceFlowStack" message="Parent failed" parameter=""/>
+            <FindingAssertion assertion="checkDefaultSequenceFlow" message="Current node is not a sequenceFlow" parameter="process"/>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext>
+                <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkSignalEvent" message="Current node is null"/>
+          <FindingAssertion assertion="selectFollowingElement" message="The base node is null"/>
+          <NodePush message="Push" identifier="" caller="selectFollowingElement">
+            <FindingAssertion assertion="checkMultiInstanceParallel" message="Current node is null"/>
+            <FindingAssertion assertion="checkXORMarkersForProcess" message="Current node is null"/>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext/>
+            </NodePop>
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkCancelActivity" message="No current node" parameter=""/>
+          <FindingAssertion assertion="checkParallelMultiple" message="No current node" parameter=""/>
+          <FindingAssertion assertion="checkConditionalEvent" message="Current node is null"/>
+          <FindingAssertion assertion="navigateElement" message="No node found" parameter="bpmn:parallelGateway[@name=&apos;Parallel Gateway 2&apos;]"/>
+          <FindingAssertion assertion="navigateElement" message="No node found" parameter="bpmn:endEvent[@name=&apos;End Event 1 Message&apos;]"/>
+          <FindingAssertion assertion="checkMessageEvent" message="Current node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkGlobalTask" message="Current node is null"/>
+          <OKAssertion assertion="selectElementX" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos;]">
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="sid-FE952B94-926F-4789-8411-F3BCC350284A" caller="selectElementX">
+            <OKAssertion assertion="navigateElementX" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]">
+              <testContext>
+                <stackID>sid-FE952B94-926F-4789-8411-F3BCC350284A</stackID>
+                <nodeID>sid-FE952B94-926F-4789-8411-F3BCC350284A</nodeID>
+                <id>sid-FE952B94-926F-4789-8411-F3BCC350284A</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="selectElementX" message="No node found" parameter="bpmn:userTask[@name=&apos;User Task 7 Standard Loop&apos;]"/>
+            <NodePush message="Push" identifier="" caller="selectElementX">
+              <FindingAssertion assertion="navigateElementX" message="Parent failed" parameter="bpmn:standardLoopCharacteristics"/>
+              <NodePop message="Pop" identifier="" caller="callingMethod">
+                <testContext>
+                  <nodeID>sid-034F92FD-5095-4998-92AB-B4069FAC0059</nodeID>
+                </testContext>
+              </NodePop>
+              <testContext>
+                <stackID>sid-FE952B94-926F-4789-8411-F3BCC350284A</stackID>
+                <nodeID>sid-034F92FD-5095-4998-92AB-B4069FAC0059</nodeID>
+                <id>sid-FE952B94-926F-4789-8411-F3BCC350284A</id>
+              </testContext>
+            </NodePush>
+            <OKAssertion assertion="navigateElementX" message="bpmn:endEvent[@name=&apos;End Event 2&apos;]">
+              <testContext>
+                <stackID>sid-FE952B94-926F-4789-8411-F3BCC350284A</stackID>
+                <id>sid-FE952B94-926F-4789-8411-F3BCC350284A</id>
+              </testContext>
+            </OKAssertion>
+            <NodePop message="Pop" identifier="sid-FE952B94-926F-4789-8411-F3BCC350284A" caller="callingMethod">
+              <testContext>
+                <stackID>sid-FE952B94-926F-4789-8411-F3BCC350284A</stackID>
+                <nodeID>sid-9AE44940-5BA3-46B0-B2BB-B443CF7A83ED</nodeID>
+                <id>sid-FE952B94-926F-4789-8411-F3BCC350284A</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-FE952B94-926F-4789-8411-F3BCC350284A</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </NodePush>
+          <OKAssertion assertion="navigateElementX" message="bpmn:userTask[@name=&apos;User Task 8&apos;]">
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-FE952B94-926F-4789-8411-F3BCC350284A</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateBoundaryEvent" message="Boundary element &apos;null&apos; found">
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-AAD75D66-1AE4-49B0-8AD7-9404BA668FD3</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="checkEscalationEvent" message="Escalation event definition">
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-AAD75D66-1AE4-49B0-8AD7-9404BA668FD3</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 9&apos; and @id=&apos;sid-06DBA5C3-F5E1-4D33-9600-8AF2159F46B2&apos;]">
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-AAD75D66-1AE4-49B0-8AD7-9404BA668FD3</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Conditional Catch&apos;]"/>
+          <FindingAssertion assertion="checkConditionalEvent" message="Cannot find conditional event definition" parameter="bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 10&apos;]"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;sid-06DBA5C3-F5E1-4D33-9600-8AF2159F46B2&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event 3 Signal&apos;]"/>
+          <FindingAssertion assertion="checkSignalEvent" message="Cannot find signal event definition" parameter="bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef"/>
+          <NodePop message="Pop" identifier="sid-19F468B9-B62E-4E55-B00C-99AD241E13B7" caller="callingMethod">
+            <testContext>
+              <stackID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</stackID>
+              <nodeID>sid-06DBA5C3-F5E1-4D33-9600-8AF2159F46B2</nodeID>
+              <id>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</stackID>
+            <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+            <id>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</id>
+          </testContext>
+        </NodePush>
+        <FindingAssertion assertion="selectProcessX" message="Process node not found" parameter="//bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]"/>
+        <NodePush message="Push" identifier="" caller="selectProcessX">
+          <OKAssertion assertion="checkXORMarkersForProcess" message="All XOR markers have the expected value &apos;true&apos;.">
+            <testContext>
+              <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateElementX" message="Parent failed" parameter="bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]"/>
+          <FindingAssertion assertion="navigateElementX" message="Parent failed" parameter="bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]"/>
+          <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 2 Message&apos;]"/>
+          <FindingAssertion assertion="checkMessageEvent" message="Cannot find message event definition" parameter="bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Parent failed"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="Parent failed"/>
+          <OKAssertion assertion="checkEventGatewayExclusive" message="Attribute eventGatewayType is not existing but the expected value (Exclusive) equals the default value (Exclusive)">
+            <testContext>
+              <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext/>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext/>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkMessageEvent" message="Current node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext/>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="selectElementX" message="Parent failed" parameter="bpmn:callActivity[@name=&apos;Expanded Call Activity&apos;]"/>
+          <NodePush message="Push" identifier="" caller="selectElementX">
+            <FindingAssertion assertion="selectCallActivityProcess" message="Parent failed"/>
+            <NodePush message="Push" identifier="" caller="selectCallActivityProcess">
+              <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 3&apos;]"/>
+              <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 4 Conditional&apos;]"/>
+              <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+              <FindingAssertion assertion="checkMultiInstanceSequential" message="Current node is null"/>
+              <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+              <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+              <FindingAssertion assertion="checkCancelActivity" message="No current node" parameter=""/>
+              <FindingAssertion assertion="checkMessageEvent" message="Current node is null"/>
+              <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+              <FindingAssertion assertion="checkTerminateEvent" message="Current node is null"/>
+              <OKAssertion assertion="navigateElement" message="">
+                <testContext/>
+              </OKAssertion>
+              <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+              <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+              <NodePop message="Pop" identifier="" caller="callingMethod">
+                <testContext/>
+              </NodePop>
+              <testContext/>
+            </NodePush>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext/>
+            </NodePop>
+            <testContext/>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkConditionalEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkCancelActivity" message="No current node" parameter=""/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkLinkEvent" message="Current node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext/>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkMessageFlow" message="Current node is null"/>
+          <FindingAssertion assertion="navigateElementX" message="Parent failed" parameter="bpmn:subProcess[@name=&apos;Collapsed Sub-Process 2&apos;]"/>
+          <FindingAssertion assertion="checkDataAssociation" message="Current node is null"/>
+          <FindingAssertion assertion="selectElementX" message="Parent failed" parameter="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway 4&apos;]"/>
+          <NodePush message="Push" identifier="" caller="selectElementX">
+            <FindingAssertion assertion="navigateGatewaySequenceFlowStack" message="Parent failed" parameter=""/>
+            <FindingAssertion assertion="checkDefaultSequenceFlow" message="No current node" parameter=""/>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext/>
+            </NodePop>
+            <testContext/>
+          </NodePush>
+          <FindingAssertion assertion="navigateElementX" message="Parent failed" parameter="bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Message Throw&apos;]"/>
+          <FindingAssertion assertion="checkMessageEvent" message="Current node is null"/>
+          <FindingAssertion assertion="navigateElementX" message="Parent failed" parameter="bpmn:callActivity[@name=&apos;Collapsed Call Activity&apos;]"/>
+          <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkEscalationEvent" message="Current node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="checkEscalationEvent" message="Current node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext/>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkCancelActivity" message="No current node" parameter=""/>
+          <FindingAssertion assertion="checkParallelMultiple" message="No current node" parameter=""/>
+          <FindingAssertion assertion="checkMessageEvent" message="Current node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext/>
+          </OKAssertion>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateElementX" message="Parent failed" parameter="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch 2&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkCancelActivity" message="No current node" parameter=""/>
+          <FindingAssertion assertion="checkTimerEvent" message="Current node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <OKAssertion assertion="navigateElement" message="">
+            <testContext/>
+          </OKAssertion>
+          <FindingAssertion assertion="selectFollowingElement" message="Parent failed" parameter="Type: bpmn:subProcess, name: Expanded Sub-Process 2"/>
+          <NodePush message="Push" identifier="" caller="selectFollowingElement">
+            <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 5 None&apos;]"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <FindingAssertion assertion="checkMultiInstanceParallel" message="Current node is null"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext/>
+            </NodePop>
+            <testContext/>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkSignalEvent" message="Current node is null"/>
+          <FindingAssertion assertion="checkCancelActivity" message="No current node" parameter=""/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 6 Signal&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:parallelGateway[@name=&apos;Parallel Gateway 5&apos;]"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Link&apos;]"/>
+          <FindingAssertion assertion="selectFollowingElement" message="Parent failed" parameter="Type: bpmn:subProcess, name: Expanded Sub-Process 3"/>
+          <NodePush message="Push" identifier="" caller="selectFollowingElement">
+            <FindingAssertion assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 7&apos;]"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <FindingAssertion assertion="checkSignalEvent" message="Current node is null"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <OKAssertion assertion="navigateElement" message="">
+              <testContext/>
+            </OKAssertion>
+            <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+            <FindingAssertion assertion="checkErrorEvent" message="Current node is null"/>
+            <NodePop message="Pop" identifier="" caller="callingMethod">
+              <testContext/>
+            </NodePop>
+            <testContext/>
+          </NodePush>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+          <NodePop message="Pop" identifier="" caller="callingMethod">
+            <testContext/>
+          </NodePop>
+          <testContext>
+            <stackID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</stackID>
+            <nodeID>sid-19F468B9-B62E-4E55-B00C-99AD241E13B7</nodeID>
+            <id>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</id>
+          </testContext>
+        </NodePush>
+        <NodePop message="Pop" identifier="sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8" caller="callingMethod">
+          <testContext>
+            <stackID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</stackID>
+            <id>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>sid-23781f56-524e-413c-9b06-0472b1f85700</stackID>
+          <nodeID>sid-5c1ed472-21b7-4410-8c83-b17fdc06fde8</nodeID>
+          <id>sid-23781f56-524e-413c-9b06-0472b1f85700</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>sid-25f790d8-d9f2-4c8b-97d9-498d934b00d3</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST B.2.0 results:">
+      <ListKeyValue key="OK" value="25"/>
+      <ListKeyValue key="FINDINGS" value="136"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="25"/>
+    <ListKeyValue key="FINDINGS " value="136"/>
+  </TotalResults>
+</TestRun>

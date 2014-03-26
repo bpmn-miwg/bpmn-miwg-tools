@@ -1,0 +1,76 @@
+<TestRun name="Signavio Process Editor 7.8.1-A.3.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Signavio Process Editor 7.8.1/A.3.0-export.bpmn"/>
+  <Test name="A.3.0">
+    <NodePush message="Push" identifier="sid-d21d6267-6b87-42da-a7d3-5b121df659fe" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <stackID>sid-d21d6267-6b87-42da-a7d3-5b121df659fe</stackID>
+          <nodeID>WFP-6-</nodeID>
+          <id>sid-d21d6267-6b87-42da-a7d3-5b121df659fe</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</stackID>
+            <nodeID>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</nodeID>
+            <id>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;sid-19CFCBB4-0C35-49DF-83B9-16119F33B76E&apos;]">
+          <testContext>
+            <stackID>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</stackID>
+            <nodeID>sid-AA9E1D4A-5F48-453B-8481-9A78F3AB4FB6</nodeID>
+            <id>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos;]"/>
+        <FindingAssertion assertion="navigateBoundaryEvent" message="Cannot find boundary element" parameter="bpmn:boundaryEvent[@name=&apos;Boundary Intermediate Event Non-Interrupting Message&apos; and @attachedToRef=&apos;sid-19CFCBB4-0C35-49DF-83B9-16119F33B76E&apos;]"/>
+        <FindingAssertion assertion="checkMessageEvent" message="Cannot find message event definition" parameter="bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef"/>
+        <FindingAssertion assertion="checkCancelActivity" message="Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true)" parameter=""/>
+        <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 3&apos;]"/>
+        <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event 1&apos;]"/>
+        <OKAssertion assertion="navigateElement" message="">
+          <testContext>
+            <stackID>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</stackID>
+            <id>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+        <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+        <OKAssertion assertion="navigateElement" message="">
+          <testContext>
+            <stackID>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</stackID>
+            <id>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</id>
+          </testContext>
+        </OKAssertion>
+        <FindingAssertion assertion="navigateBoundaryEvent" message="Current node is null"/>
+        <FindingAssertion assertion="checkEscalationEvent" message="Current node is null"/>
+        <FindingAssertion assertion="checkCancelActivity" message="No current node" parameter=""/>
+        <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+        <FindingAssertion assertion="navigateFollowingElement" message="The base node is null"/>
+        <NodePop message="Pop" identifier="sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d" caller="callingMethod">
+          <testContext>
+            <stackID>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</stackID>
+            <id>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>sid-d21d6267-6b87-42da-a7d3-5b121df659fe</stackID>
+          <nodeID>sid-7ac77091-7498-4d4a-9132-3b04d4f7bd9d</nodeID>
+          <id>sid-d21d6267-6b87-42da-a7d3-5b121df659fe</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>WFP-6-</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.3.0 results:">
+      <ListKeyValue key="OK" value="5"/>
+      <ListKeyValue key="FINDINGS" value="13"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="5"/>
+    <ListKeyValue key="FINDINGS " value="13"/>
+  </TotalResults>
+</TestRun>

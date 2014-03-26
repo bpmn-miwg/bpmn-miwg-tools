@@ -1,0 +1,233 @@
+<TestRun name="Signavio Process Editor 7.8.1-A.4.0-export.bpmn"/>  <TestFile name="/Users/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Signavio Process Editor 7.8.1/A.4.0-export.bpmn"/>
+  <Test name="A.4.0">
+    <NodePush message="Push" identifier="sid-ef959fdd-e30a-45aa-b56e-612d6258b337" caller="callingMethod">
+      <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
+        <testContext>
+          <stackID>sid-ef959fdd-e30a-45aa-b56e-612d6258b337</stackID>
+          <nodeID>sid-db958ac0-89aa-4594-b27b-e00abc10f3ce</nodeID>
+          <id>sid-ef959fdd-e30a-45aa-b56e-612d6258b337</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb" caller="selectCollaboration">
+        <OKAssertion assertion="selectPool" message="bpmn:participant[@name=&apos;Pool&apos;]">
+          <testContext>
+            <stackID>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</stackID>
+            <nodeID>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</nodeID>
+            <id>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19" caller="selectPool">
+          <OKAssertion assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;sid-F6A97136-BAB1-4868-B69F-94AE6B241575&apos;]">
+            <testContext>
+              <stackID>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</stackID>
+              <nodeID>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</nodeID>
+              <id>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="sid-F6A97136-BAB1-4868-B69F-94AE6B241575" caller="selectReferencedProcess">
+            <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1&apos;]">
+              <testContext>
+                <stackID>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</stackID>
+                <nodeID>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</nodeID>
+                <id>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</id>
+              </testContext>
+            </OKAssertion>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;sid-81ED1ADC-285D-4F04-BE90-0833AE99E3FF&apos;]">
+              <testContext>
+                <stackID>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</stackID>
+                <nodeID>sid-30B91CA0-AC90-4F93-9EC6-404ABE9D119C</nodeID>
+                <id>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;sid-81ED1ADC-285D-4F04-BE90-0833AE99E3FF&apos;]"/>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;sid-ECF55919-4E5E-4A5F-B1B8-4EB5605002CD&apos;]">
+              <testContext>
+                <stackID>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</stackID>
+                <nodeID>sid-81ED1ADC-285D-4F04-BE90-0833AE99E3FF</nodeID>
+                <id>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;sid-ECF55919-4E5E-4A5F-B1B8-4EB5605002CD&apos;]"/>
+            <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;sid-43E3DEF6-A62A-4B92-BD3C-77EB0152627C&apos;]">
+              <testContext>
+                <stackID>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</stackID>
+                <nodeID>sid-ECF55919-4E5E-4A5F-B1B8-4EB5605002CD</nodeID>
+                <id>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</id>
+              </testContext>
+            </OKAssertion>
+            <NodePop message="Pop" identifier="sid-F6A97136-BAB1-4868-B69F-94AE6B241575" caller="callingMethod">
+              <testContext>
+                <stackID>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</stackID>
+                <nodeID>sid-43E3DEF6-A62A-4B92-BD3C-77EB0152627C</nodeID>
+                <id>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</stackID>
+              <nodeID>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</nodeID>
+              <id>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</id>
+            </testContext>
+          </NodePush>
+          <NodePop message="Pop" identifier="sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19" caller="callingMethod">
+            <testContext>
+              <stackID>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</stackID>
+              <nodeID>sid-F6A97136-BAB1-4868-B69F-94AE6B241575</nodeID>
+              <id>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</stackID>
+            <nodeID>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</nodeID>
+            <id>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</id>
+          </testContext>
+        </NodePush>
+        <OKAssertion assertion="navigateElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]">
+          <testContext>
+            <stackID>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</stackID>
+            <nodeID>sid-BDC7516F-4B3F-45AC-B7EF-9205E2137E19</nodeID>
+            <id>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]">
+          <testContext>
+            <stackID>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</stackID>
+            <nodeID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</nodeID>
+            <id>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</id>
+          </testContext>
+        </OKAssertion>
+        <NodePush message="Push" identifier="sid-A334A33B-07AE-4EBB-B108-AC28652ED303" caller="selectElementX">
+          <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;sid-74BF408D-85BA-499A-88BC-7B450448E62A&apos;]">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-A673264C-F79A-4944-B697-F5CB38D8D6C2</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;sid-74BF408D-85BA-499A-88BC-7B450448E62A&apos;]"/>
+          <OKAssertion assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;sid-B39C070D-E281-4876-9FD0-BE31754F0679&apos;]">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-74BF408D-85BA-499A-88BC-7B450448E62A</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="sid-B39C070D-E281-4876-9FD0-BE31754F0679" caller="selectFollowingElement">
+            <NodePop message="Pop" identifier="sid-B39C070D-E281-4876-9FD0-BE31754F0679" caller="callingMethod">
+              <testContext>
+                <stackID>sid-B39C070D-E281-4876-9FD0-BE31754F0679</stackID>
+                <nodeID>sid-B39C070D-E281-4876-9FD0-BE31754F0679</nodeID>
+                <id>sid-B39C070D-E281-4876-9FD0-BE31754F0679</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-B39C070D-E281-4876-9FD0-BE31754F0679</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </NodePush>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;sid-16A5848A-5BEE-4A0F-928A-6CAEC98C19D3&apos;]">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-B39C070D-E281-4876-9FD0-BE31754F0679</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </OKAssertion>
+          <FindingAssertion assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;sid-16A5848A-5BEE-4A0F-928A-6CAEC98C19D3&apos;]"/>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;sid-C100DF64-FF7C-413F-A239-9898C110E937&apos;]">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-16A5848A-5BEE-4A0F-928A-6CAEC98C19D3</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="navigateElement" message="#document/definitions[@id=&apos;id=&quot;sid-ef959fdd-e30a-45aa-b56e-612d6258b337&quot;&apos;]/process[@id=&apos;id=&quot;sid-A334A33B-07AE-4EBB-B108-AC28652ED303&quot;&apos;]/task[@id=&apos;id=&quot;sid-74BF408D-85BA-499A-88BC-7B450448E62A&quot;&apos;]/">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-74BF408D-85BA-499A-88BC-7B450448E62A</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </OKAssertion>
+          <OKAssertion assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;sid-2A318EF2-0359-4087-9770-592C85A19BF1&apos;]">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-74BF408D-85BA-499A-88BC-7B450448E62A</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </OKAssertion>
+          <NodePush message="Push" identifier="sid-2A318EF2-0359-4087-9770-592C85A19BF1" caller="selectFollowingElement">
+            <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 4&apos;]">
+              <testContext>
+                <stackID>sid-2A318EF2-0359-4087-9770-592C85A19BF1</stackID>
+                <nodeID>sid-2A318EF2-0359-4087-9770-592C85A19BF1</nodeID>
+                <id>sid-2A318EF2-0359-4087-9770-592C85A19BF1</id>
+              </testContext>
+            </OKAssertion>
+            <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 6&apos;]"/>
+            <FindingAssertion assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event 4&apos;]"/>
+            <NodePop message="Pop" identifier="sid-2A318EF2-0359-4087-9770-592C85A19BF1" caller="callingMethod">
+              <testContext>
+                <stackID>sid-2A318EF2-0359-4087-9770-592C85A19BF1</stackID>
+                <nodeID>sid-6E647846-E77A-4FCA-9232-7DD5DE6DF787</nodeID>
+                <id>sid-2A318EF2-0359-4087-9770-592C85A19BF1</id>
+              </testContext>
+            </NodePop>
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-2A318EF2-0359-4087-9770-592C85A19BF1</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </NodePush>
+          <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;sid-85E3C05B-B03A-4703-81B6-AAE7B3393785&apos;]">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-2A318EF2-0359-4087-9770-592C85A19BF1</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </OKAssertion>
+          <NodePop message="Pop" identifier="sid-A334A33B-07AE-4EBB-B108-AC28652ED303" caller="callingMethod">
+            <testContext>
+              <stackID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</stackID>
+              <nodeID>sid-85E3C05B-B03A-4703-81B6-AAE7B3393785</nodeID>
+              <id>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</id>
+            </testContext>
+          </NodePop>
+          <testContext>
+            <stackID>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</stackID>
+            <nodeID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</nodeID>
+            <id>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</id>
+          </testContext>
+        </NodePush>
+        <NodePop message="Pop" identifier="sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb" caller="callingMethod">
+          <testContext>
+            <stackID>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</stackID>
+            <nodeID>sid-A334A33B-07AE-4EBB-B108-AC28652ED303</nodeID>
+            <id>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>sid-ef959fdd-e30a-45aa-b56e-612d6258b337</stackID>
+          <nodeID>sid-2030dc47-fdfe-4838-bf79-4f9f7c55eddb</nodeID>
+          <id>sid-ef959fdd-e30a-45aa-b56e-612d6258b337</id>
+        </testContext>
+      </NodePush>
+      <testContext>
+        <nodeID>sid-db958ac0-89aa-4594-b27b-e00abc10f3ce</nodeID>
+      </testContext>
+    </NodePush>
+    <Results name="TEST A.4.0 results:">
+      <ListKeyValue key="OK" value="18"/>
+      <ListKeyValue key="FINDINGS" value="6"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="18"/>
+    <ListKeyValue key="FINDINGS " value="6"/>
+  </TotalResults>
+</TestRun>

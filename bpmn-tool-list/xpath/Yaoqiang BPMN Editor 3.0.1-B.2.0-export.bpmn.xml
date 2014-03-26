@@ -77,7 +77,7 @@
                   <trace>org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest.checkDataAssociation(AbstractXpathTest.java:870)</trace>
                   <trace>org.omg.bpmn.miwg.xpathTestRunner.tests.B_2_0_Test.execute(B_2_0_Test.java:44)</trace>
                   <trace>org.omg.bpmn.miwg.xpathTestRunner.base.TestManager.executeTests(TestManager.java:82)</trace>
-                  <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.runXPathTests(ModelInterchangeMojo.java:350)</trace>
+                  <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.runXPathTests(ModelInterchangeMojo.java:345)</trace>
                   <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.execute(ModelInterchangeMojo.java:140)</trace>
                   <trace>org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)</trace>
                   <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)</trace>

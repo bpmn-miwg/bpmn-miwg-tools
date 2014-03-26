@@ -4,7 +4,7 @@
       <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
         <testContext>
           <stackID>Definitions_1</stackID>
-          <nodeID>mod.267311</nodeID>
+          <nodeID>WFP-6-</nodeID>
           <id>Definitions_1</id>
         </testContext>
       </OKAssertion>
@@ -142,7 +142,7 @@
         </testContext>
       </NodePush>
       <testContext>
-        <nodeID>mod.267311</nodeID>
+        <nodeID>WFP-6-</nodeID>
       </testContext>
     </NodePush>
     <Results name="TEST A.3.0 results:">

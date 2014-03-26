@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/highlightjs/github.css">
+		<link rel="stylesheet" href="../css/bpmn-miwg.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/">BPMN-MIWG</a>
+				<ul class="nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/xml-compare/overview.html">XML Compare</a></li>
+					<li><a href="/xpath/overview.html">XPath</a></li>
+				</ul>	
+			</div>
+		</div>
+		<div class="testresults">
+   <div class="tool" data-vendor="bpmn.io 0.0.1">
+      <h2>bpmn.io 0.0.1</h2>
+      <div class="test" data-test="B.1.0.bpmn">
+         <h3>B.1.0.bpmn</h3>
+         <div class="finding">
+            <h4>Difference found in number of element attributes (id:11)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	5</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]/timerEventDefinition[1]/timeDate[1]">/definitions[1]/process[2]/startEvent[1]/timerEventDefinition[1]/timeDate[1] :	semantic:timeDate</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/participant[1]">/definitions[1]/collaboration[1]/participant[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/participant[1]">/definitions[1]/collaboration[1]/participant[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height :	180.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height :	180</span>
+            </span>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>

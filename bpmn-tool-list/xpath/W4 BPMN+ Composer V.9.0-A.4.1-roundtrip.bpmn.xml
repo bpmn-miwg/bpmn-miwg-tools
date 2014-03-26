@@ -11,6 +11,7 @@
       <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
         <testContext>
           <stackID>sid-ad44e239-e96e-4a80-b0e4-cf63b741c3cb</stackID>
+          <nodeID>sid-467b00a2-7f22-4314-bd57-2f84b409dc80</nodeID>
           <id>sid-ad44e239-e96e-4a80-b0e4-cf63b741c3cb</id>
         </testContext>
       </OKAssertion>
@@ -235,7 +236,9 @@
           <id>sid-ad44e239-e96e-4a80-b0e4-cf63b741c3cb</id>
         </testContext>
       </NodePush>
-      <testContext/>
+      <testContext>
+        <nodeID>sid-467b00a2-7f22-4314-bd57-2f84b409dc80</nodeID>
+      </testContext>
     </NodePush>
     <Results name="TEST A.4.1 results:">
       <ListKeyValue key="OK" value="20"/>

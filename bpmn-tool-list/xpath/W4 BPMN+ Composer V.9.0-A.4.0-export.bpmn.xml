@@ -4,6 +4,7 @@
       <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
         <testContext>
           <stackID>A_4_0</stackID>
+          <nodeID>C1373649949206</nodeID>
           <id>A_4_0</id>
         </testContext>
       </OKAssertion>
@@ -228,7 +229,9 @@
           <id>A_4_0</id>
         </testContext>
       </NodePush>
-      <testContext/>
+      <testContext>
+        <nodeID>C1373649949206</nodeID>
+      </testContext>
     </NodePush>
     <Results name="TEST A.4.0 results:">
       <ListKeyValue key="OK" value="20"/>

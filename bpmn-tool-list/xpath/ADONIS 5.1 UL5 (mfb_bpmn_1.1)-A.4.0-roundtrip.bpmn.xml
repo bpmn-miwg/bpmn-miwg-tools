@@ -11,7 +11,7 @@
     <NodePush message="Push" identifier="" caller="callingMethod">
       <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
         <testContext>
-          <nodeID>C1386683969490</nodeID>
+          <nodeID>mod.267352_Collaboration</nodeID>
         </testContext>
       </OKAssertion>
       <NodePush message="Push" identifier="mod.267352_Collaboration" caller="selectCollaboration">
@@ -153,7 +153,7 @@
         </testContext>
       </NodePush>
       <testContext>
-        <nodeID>C1386683969490</nodeID>
+        <nodeID>mod.267352_Collaboration</nodeID>
       </testContext>
     </NodePush>
     <Results name="TEST A.4.0 results:">

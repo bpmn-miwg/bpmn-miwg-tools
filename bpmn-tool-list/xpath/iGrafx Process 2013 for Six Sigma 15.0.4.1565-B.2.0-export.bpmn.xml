@@ -3,9 +3,7 @@
     <FindingAssertion assertion="callingMethod" message="Cannot find attribute" parameter="id"/>
     <NodePush message="Push" identifier="" caller="callingMethod">
       <OKAssertion assertion="selectElementX" message="//bpmn:collaboration">
-        <testContext>
-          <nodeID>C1373638080953</nodeID>
-        </testContext>
+        <testContext/>
       </OKAssertion>
       <NodePush message="Push" identifier="diagram_IDARLOKG" caller="selectElementX">
         <OKAssertion assertion="navigateElementX" message="bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]">
@@ -554,9 +552,7 @@
           <nodeID>diagram_IDARLOKG</nodeID>
         </testContext>
       </NodePush>
-      <testContext>
-        <nodeID>C1373638080953</nodeID>
-      </testContext>
+      <testContext/>
     </NodePush>
     <Results name="TEST B.2.0 results:">
       <ListKeyValue key="OK" value="44"/>

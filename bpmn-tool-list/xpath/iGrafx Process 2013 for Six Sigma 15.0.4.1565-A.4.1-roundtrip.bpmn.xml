@@ -10,9 +10,7 @@
     <FindingAssertion assertion="callingMethod" message="Cannot find attribute" parameter="id"/>
     <NodePush message="Push" identifier="" caller="callingMethod">
       <OKAssertion assertion="selectCollaboration" message="bpmn:collaboration">
-        <testContext>
-          <nodeID>C1386684033793</nodeID>
-        </testContext>
+        <testContext/>
       </OKAssertion>
       <NodePush message="Push" identifier="diagram_IDA01EYB" caller="selectCollaboration">
         <FindingAssertion assertion="selectPool" message="No node found" parameter="bpmn:participant[@name=&apos;Pool 1&apos;]"/>
@@ -162,9 +160,7 @@
           <nodeID>process_IDAIQPCC</nodeID>
         </testContext>
       </NodePop>
-      <testContext>
-        <nodeID>C1386684033793</nodeID>
-      </testContext>
+      <testContext/>
     </NodePush>
     <Results name="TEST A.4.1 results:">
       <ListKeyValue key="OK" value="11"/>
