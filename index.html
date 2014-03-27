@@ -1,26 +1,404 @@
 <!DOCTYPE html>
-<html>
+<html id="home" lang="en">
   <head>
-    <title>BPMN MIWG Tool Reports</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta charset=utf-8 />
+    <!-- DataTables CSS -->
+<!--     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables_themeroller.css">
+    
+    <!-- Theme -->
+<!--
+    <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/start/jquery-ui-1.7.2.custom.css">
+-->
+    <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/redmond/jquery-ui-1.7.2.custom.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+<!--     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" charset="utf8">
+      $(document).ready(function(){
+        // read data from GitHub
+        //var toolsUrl = "http://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/tools-tested-by-miwg.json";
+//         var toolsUrl = "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/contents/tools-tested-by-miwg.json"; // application/vnd.github.v3.raw
+//         var toolsUrl = "../../bpmn-miwg-test-suite/tools-tested-by-miwg.json";
+        var toolsUrl = "tools-tested-by-miwg.json";
+        var openIssuesUrl = "issues-open.json";
+        var closedIssuesUrl = "issues-closed.json";
+
+        $.getJSON(toolsUrl, function (toolsTestedByMIWG) {
+          $.getJSON(openIssuesUrl, function (openIssues) {
+            $.getJSON(closedIssuesUrl, function (closedIssues) {
+
+              for (i = 0; i < toolsTestedByMIWG.tools.length; i++) {
+                toolsTestedByMIWG.tools[i].openIssues = 0;
+                toolsTestedByMIWG.tools[i].closedIssues = 0;
+                openIssues.forEach(function(issue) {
+                  issue.labels.forEach(function(label) {
+                    if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
+                      toolsTestedByMIWG.tools[i].openIssues++;
+                    }
+                  });
+                });
+                closedIssues.forEach(function(issue) {
+                  issue.labels.forEach(function(label) {
+                    if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
+                      toolsTestedByMIWG.tools[i].closedIssues++;
+                    }
+                  });
+                });
+              }
+
+              $('#bpmn-tools').dataTable( {
+                "bJQueryUI": true,
+                "bPaginate": false,
+      //          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
+      //          "sAjaxSource": toolsUrl,
+      //          "sAjaxDataProp": "tools",
+                "aaData": toolsTestedByMIWG.tools,
+                "aaSorting": [[ 2-1, "desc" ], [ 5-1, "desc" ], [ 4-1, "desc" ], [ 3-1, "desc" ], [ 6-1, "desc" ], [ 7-1, "desc" ], [ 8-1, "desc" ], [ 9-1, "asc" ], [10-1, "desc" ], /*[0, "asc" ],*/ [1-1, "asc" ]],
+                "aoColumns": [
+//                     { "mData": "vendor" },
+                    { "mData": "tool",
+                      "mRender": function ( data, type, full ) {
+                        var result = '';
+                        if (full.website.length == 0) {
+                          result = data.replace('Microsoft', 'MS')+' '+full.version;
+                        } else {
+                          result = '<a href="'+full.website+'">'+data.replace('Microsoft', 'MS')+' '+full.version.replace('c906a7c941b82dbb832ed9be62989c171c724199', 'c906a7c941')+'</a>';
+                        }
+                        return '<strong>' + result + '</strong>';
+                      } },
+                    { "mData": "supportsBpmn2", "mRender": renderBoolean },
+                    { "mData": "hasImport", "mRender": renderImportExport },
+                    { "mData": "hasExport", "mRender": renderImportExport },
+                    { "mData": "hasRoundtrip", "mRender": renderBoolean },
+                    { "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },
+                    { "mData": "participatedInDemos", "mRender": renderBoolean },
+                    { "mData": "openSource", "mRender": renderLicense },
+                    { "mData": "openIssues",
+                      "mRender": function ( data, type, full ) {
+                        return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
+                      } },
+                    { "mData": "closedIssues",
+                      "mRender": function ( data, type, full ) {
+                        return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=closed&labels=Tool%3A+' + full.tool.replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
+                      } },
+      //               { "mData": "notes" },
+                ],
+              } );
+
+              function renderImportExport(data, type, full) {
+                var result = renderBoolean(data, type, full);
+                if ((data === true) && (full.testResultsSubmitted === true || full.testResultsSubmitted === "partial")) {
+                  var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
+                  // TODO trying to figure out why Firefox does not 
+                  // show the anchor encoded as expected
+                  console.debug('toolAndVersion:'+toolAndVersion);
+                  result = '<span class="sr-only">' + data + '</span><a href="visual-test-result-comparison.html?tool=' + toolAndVersion + '">' + result + ' Diff</a>';
+                }
+                return result;
+              }
+
+              function renderTestResultsSubmitted(data, type, full) {
+                var result = renderTrafficLight(data, type, full);
+                if ((data === true || data === "partial") && (full.hasExport === true || full.hasRoundtrip === true)) {
+                  var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
+                  // TODO trying to figure out why Firefox does not 
+                  // show the anchor encoded as expected
+                  console.debug('toolAndVersion:'+toolAndVersion);
+                  result = result
+                    + ' <a href="overview.html#' + toolAndVersion + '">Details</a>'
+                }
+                return result;
+              }
+
+              function renderLicense(data, type, full) {
+                if (data) {
+                  return 'Open&nbsp;Source';
+                } else {
+                  return 'Commercial';
+                }
+              }
+
+              function renderTrafficLight(data, type, full) {
+                var icon = "minus-sign"; // ban-circle remove-sign
+                var color = "darkred";
+                if (data === true) {
+                  icon = "plus-sign"; // ok-sign
+                  color = "green";
+                } else if (data === "partial") {
+                  icon = "adjust";
+                  color = "darkorange";
+                }
+                return renderIcon(icon, color, data);
+              }
+
+              function renderBoolean(data, type, full) {
+                var icon = "minus-sign"; // remove
+                var color = "darkred";
+                if (data) {
+                  icon = "plus-sign"; // ok
+                  color = "green";
+                }
+                return renderIcon(icon, color, data);
+              }
+
+              function renderIcon(icon, color, data) {
+                return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span class="sr-only">' + data + '</span>';
+              }
+
+            })
+          })
+        })
+
+        // second table with data from BPI
+//         $('#bpmn-tools-bpi').dataTable( {
+//           "bProcessing": true,
+//           "bJQueryUI": true,
+//           "bPaginate": false,
+// //          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
+//           "sAjaxSource": "bpmn-tools.json",
+//           "sAjaxDataProp": "groups.tool",
+//           "aoColumns": [
+//               { "mData": "screenshot.0.value",
+//                 "mRender": function ( data, type, full ) {
+//                   return '<a href="'+full.url[0].value+'"><img src="'+data+'" /></a>';
+//                 } },
+//               { "mData": "name.0.value",
+//                 "mRender": function ( data, type, full ) {
+//                   return '<a href="'+full.url[0].value+'">'+data+'</a>';
+//                 } },
+//               { "mData": "category.0.value" },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": null },
+//               { "mData": "url.0.value",
+//                 "mRender": function ( data, type, full ) {
+//                   return '<a href="'+data+'">Info</a>';
+//                 } },
+//           ],
+// //           "fnInitComplete": function () {
+// //             var that = this;
+// //             this.$('td').click( function () {
+// //                 that.fnFilter( this.innerHTML );
+// //             } );
+// //           }
+//         } );
+      });
+    </script>
   </head>
   <body>
-    <br/>
-    <div class="container">
-      <div class="hero-unit">
-        <h1>BPMN MIWG Tool Reports</h1>
-        <p>This website provides reports generated by the <a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">BPMN MIWG Tools</a>.</p>
-        
-        <ul>
-          <li><a href="bpmn-tool-list/bpmn-tools.html">BPMN tools tested by the BPMN MIWG</a></li>
-          <li><a href="http://tools.bpmn-miwg.cloudbees.net/">Detailed Test Reports</a></li>
-        </ul>
-
+    <h1><img style="margin: 0 15px;" src="http://omgwiki.org/bpmn-miwg/lib/exe/fetch.php?w=200&amp;media=miwg-logo-827x512.png" class="mediacenter" alt="" width="200">BPMN Tools tested for Model Interchange</h1>
+    <div style="padding: 0 15px;">
+      <table id="bpmn-tools" class="display" width="100%">
+        <thead>
+          <tr>
+<!--            <th>Vendor</th>-->
+            <th width="100%">Tool Name &amp; Version</th>
+            <th>BPMN 2.0</th>
+            <th>Import</th>
+            <th>Export</th>
+            <th>Roundtrip</th>
+            <th>Results Submitted</th>
+            <th>Part of Demos</th>
+            <th>License</th>
+            <th>Open Issues</th>
+            <th>Closed Issues</th>
+<!--             <th>Notes</th> -->
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <br />
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Column Definitions</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Column</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vendor</td>
+                <td>Company that develops the tool</td>
+              </tr>
+              <tr>
+                <td>Tool Name &amp; Version</td>
+                <td>Product name of the tool and version that has been tested</td>
+              </tr>
+              <tr>
+                <td>BPMN 2.0</td>
+                <td>Tool supports BPMN version 2.0 or higher</td>
+              </tr>
+              <tr>
+                <td>Import</td>
+                <td>Tool has a feature to import BPMN 2.0 XML files based on the XML Schema Definition (XSD) that ships with the specification</td>
+              </tr>
+              <tr>
+                <td>Export</td>
+                <td>Tool has a feature to export BPMN 2.0 XML files based on the XML Schema Definition (XSD) that ships with the specification</td>
+              </tr>
+              <tr>
+                <td>Roundtrip</td>
+                <td>Tool can both import and export BPMN 2.0 XML files based on the XML Schema Definition (XSD) that ships with the specification</td>
+              </tr>
+              <tr>
+                <td>Results submitted</td>
+                <td>Test results have been submitted for the tool either by users or the vendor (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
+              </tr>
+              <tr>
+                <td>Part of Demos</td>
+                <td>Tool participated in one of the <a href="https://github.com/bpmn-miwg/bpmn-miwg-demos">public BPMN MIWG demos</a></td>
+              </tr>
+              <tr>
+                <td>License</td>
+                <td>License of the tool</td>
+              </tr>
+              <tr>
+                <td>Open Issues</td>
+                <td>Issues identified by the BPMN MIWG that are still open (click on the number to see the issues)</td>
+              </tr>
+              <tr>
+                <td>Closed Issues</td>
+                <td>Issues identified by the BPMN MIWG that are already fixed by the vendor (click on the number to see the issues)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+
+<!--
+      <hr />
+
+      <table id="bpmn-tools-bpi" class="display" width="100%">
+        <thead>
+          <tr>
+            <th>Screenshot</th>
+            <th>Tool Suite</th>
+            <th>Category</th>
+            <th>BPMN 2.0</th>
+            <th>MIWG Member</th>
+            <th>Test Results submitted</th>
+            <th>Import</th>
+            <th>Export</th>
+            <th>Roundtrip</th>
+            <th>BPMN Element Coverage</th>
+            <th>Preserves Layout</th>
+            <th>Open Issues</th>
+            <th>Closed Issues</th>
+            <th>Participates in Demos</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Column Definitions</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Column</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Screenshot</td>
+                <td>Snapshot of the website provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
+              </tr>
+              <tr>
+                <td>Tool Suite</td>
+                <td>Name of the tool suite to which a tool belongs</td>
+              </tr>
+              <tr>
+                <td>Category</td>
+                <td>Category provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
+              </tr>
+              <tr>
+                <td>BPMN 2.0</td>
+                <td>Tool supports BPMN version 2.0 or higher</td>
+              </tr>
+              <tr>
+                <td>MIWG Member</td>
+                <td>Vendor is member of the BPMN MIWG, i.e. at least subscribed to the mailing list</td>
+              </tr>
+              <tr>
+                <td>Test Results submitted</td>
+                <td>Test results have been submitted for the tool either by users or the vendor</td>
+              </tr>
+              <tr>
+                <td>Import</td>
+                <td>Tool has a feature to import BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Export</td>
+                <td>Tool has a feature to export BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>Roundtrip</td>
+                <td>Tool can both import and export BPMN 2.0 XML files</td>
+              </tr>
+              <tr>
+                <td>BPMN Element Coverage</td>
+                <td>Percentage of BPMN elements that a tool supports (metric calculated by <a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">BPMN MIWG Test Automation Tools</a>)</td>
+              </tr>
+              <tr>
+                <td>Preserves Layout</td>
+                <td>Tool preserves positions of BPMN elements during a roundtrip (metric calculated by <a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">BPMN MIWG Test Automation Tools</a>)</td>
+              </tr>
+              <tr>
+                <td>Open Issues</td>
+                <td>Issues identified by the BPMN MIWG that are still open</td>
+              </tr>
+              <tr>
+                <td>Closed Issues</td>
+                <td>Issues identified by the BPMN MIWG that are already fixed by the vendor</td>
+              </tr>
+              <tr>
+                <td>Participates in Demos</td>
+                <td>Tool participated in one of the public BPMN MIWG demos</td>
+              </tr>
+              <tr>
+                <td>Links</td>
+                <td>Further information provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+-->
+      <p>Powered by <a href="http://datatables.net/">jQuery DataTables</a>, <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://open.dapper.net/">Dapper</a></p>
     </div>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
