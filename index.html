@@ -162,49 +162,22 @@
             })
           })
         })
-
-        // second table with data from BPI
-//         $('#bpmn-tools-bpi').dataTable( {
-//           "bProcessing": true,
-//           "bJQueryUI": true,
-//           "bPaginate": false,
-// //          "sAjaxSource": "http://open.dapper.net/transform.php?dappName=BPMNToolsfromBPMNorg&transformer=JSON&applyToUrl=http%3A%2F%2Fwww.businessprocessincubator.com%2Ftag%2Fproduct%2Flist%2FtagId%2F170%2F%3Fbpi-embedded%3D1%26bpi-feed%3D1%26dir%3Dasc%26layout%5B0%5D%3Dnew-window%26limit%3Dall%26mode%3Dgrid%26order%3Dname%26utm_campaign%3DFeed%26utm_medium%3Dweb%26utm_source%3DOMG",
-//           "sAjaxSource": "bpmn-tools.json",
-//           "sAjaxDataProp": "groups.tool",
-//           "aoColumns": [
-//               { "mData": "screenshot.0.value",
-//                 "mRender": function ( data, type, full ) {
-//                   return '<a href="'+full.url[0].value+'"><img src="'+data+'" /></a>';
-//                 } },
-//               { "mData": "name.0.value",
-//                 "mRender": function ( data, type, full ) {
-//                   return '<a href="'+full.url[0].value+'">'+data+'</a>';
-//                 } },
-//               { "mData": "category.0.value" },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": null },
-//               { "mData": "url.0.value",
-//                 "mRender": function ( data, type, full ) {
-//                   return '<a href="'+data+'">Info</a>';
-//                 } },
-//           ],
-// //           "fnInitComplete": function () {
-// //             var that = this;
-// //             this.$('td').click( function () {
-// //                 that.fnFilter( this.innerHTML );
-// //             } );
-// //           }
-//         } );
+                    
+        $('.panel-title').prepend('<span class="toggle-indicator btn btn-default">+</span>&nbsp;');
+        $('.panel-heading').click(function(panel) {
+          togglePanel('#'+$($('.panel-heading')[0]).parent()[0].id);
+        });
       });
+                    
+      function togglePanel(selector) { 
+        console.log('toggling panel: '+selector);
+        if ($(selector+' .panel-body').css('display')=='none') {
+          $(selector+' .toggle-indicator').empty().append('-');
+        } else { 
+          $(selector+' .toggle-indicator').empty().append('+');
+        }
+        $(selector+' .panel-body').toggle(); 
+      } 
     </script>
   </head>
   <body>
@@ -231,11 +204,11 @@
         </tbody>
       </table>
       <br />
-      <div class="panel panel-default">
+      <div class="panel panel-default" id='legend'>
         <div class="panel-heading">
-          <h3 class="panel-title">Column Definitions</h3>
+          <h3 class="panel-title">Legend</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="display:none">
           <table class="table">
             <thead>
               <tr>
@@ -293,111 +266,10 @@
         </div>
       </div>
 
-<!--
       <hr />
 
-      <table id="bpmn-tools-bpi" class="display" width="100%">
-        <thead>
-          <tr>
-            <th>Screenshot</th>
-            <th>Tool Suite</th>
-            <th>Category</th>
-            <th>BPMN 2.0</th>
-            <th>MIWG Member</th>
-            <th>Test Results submitted</th>
-            <th>Import</th>
-            <th>Export</th>
-            <th>Roundtrip</th>
-            <th>BPMN Element Coverage</th>
-            <th>Preserves Layout</th>
-            <th>Open Issues</th>
-            <th>Closed Issues</th>
-            <th>Participates in Demos</th>
-            <th>Links</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Column Definitions</h3>
-        </div>
-        <div class="panel-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Column</th>
-                <th>Definition</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Screenshot</td>
-                <td>Snapshot of the website provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
-              </tr>
-              <tr>
-                <td>Tool Suite</td>
-                <td>Name of the tool suite to which a tool belongs</td>
-              </tr>
-              <tr>
-                <td>Category</td>
-                <td>Category provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
-              </tr>
-              <tr>
-                <td>BPMN 2.0</td>
-                <td>Tool supports BPMN version 2.0 or higher</td>
-              </tr>
-              <tr>
-                <td>MIWG Member</td>
-                <td>Vendor is member of the BPMN MIWG, i.e. at least subscribed to the mailing list</td>
-              </tr>
-              <tr>
-                <td>Test Results submitted</td>
-                <td>Test results have been submitted for the tool either by users or the vendor</td>
-              </tr>
-              <tr>
-                <td>Import</td>
-                <td>Tool has a feature to import BPMN 2.0 XML files</td>
-              </tr>
-              <tr>
-                <td>Export</td>
-                <td>Tool has a feature to export BPMN 2.0 XML files</td>
-              </tr>
-              <tr>
-                <td>Roundtrip</td>
-                <td>Tool can both import and export BPMN 2.0 XML files</td>
-              </tr>
-              <tr>
-                <td>BPMN Element Coverage</td>
-                <td>Percentage of BPMN elements that a tool supports (metric calculated by <a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">BPMN MIWG Test Automation Tools</a>)</td>
-              </tr>
-              <tr>
-                <td>Preserves Layout</td>
-                <td>Tool preserves positions of BPMN elements during a roundtrip (metric calculated by <a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">BPMN MIWG Test Automation Tools</a>)</td>
-              </tr>
-              <tr>
-                <td>Open Issues</td>
-                <td>Issues identified by the BPMN MIWG that are still open</td>
-              </tr>
-              <tr>
-                <td>Closed Issues</td>
-                <td>Issues identified by the BPMN MIWG that are already fixed by the vendor</td>
-              </tr>
-              <tr>
-                <td>Participates in Demos</td>
-                <td>Tool participated in one of the public BPMN MIWG demos</td>
-              </tr>
-              <tr>
-                <td>Links</td>
-                <td>Further information provided by <a href="http://www.businessprocessincubator.com/">Business Process Incubator</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
--->
+      <hr />
+        
       <p>Powered by <a href="http://datatables.net/">jQuery DataTables</a>, <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://open.dapper.net/">Dapper</a></p>
     </div>
   </body>
