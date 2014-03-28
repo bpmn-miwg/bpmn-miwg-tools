@@ -67,9 +67,9 @@
       //          "sAjaxSource": toolsUrl,
       //          "sAjaxDataProp": "tools",
                 "aaData": toolsTestedByMIWG.tools,
-                "aaSorting": [[ 2-1, "desc" ], [ 5-1, "desc" ], [ 4-1, "desc" ], [ 3-1, "desc" ], [ 6-1, "desc" ], [ 7-1, "desc" ], [ 8-1, "desc" ], [ 9-1, "asc" ], [10-1, "desc" ], /*[0, "asc" ],*/ [1-1, "asc" ]],
+                "aaSorting": [[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ], [ 6, "desc" ], [ 7, "desc" ], [ 8, "desc" ], [ 9, "asc" ], [10, "desc" ], [0, "asc" ], [1, "asc" ]],
                 "aoColumns": [
-//                     { "mData": "vendor" },
+                    { "mData": "vendor" },
                     { "mData": "tool",
                       "mRender": function ( data, type, full ) {
                         var result = '';
@@ -187,8 +187,8 @@
       <table id="bpmn-tools" class="display" width="100%">
         <thead>
           <tr>
-<!--            <th>Vendor</th>-->
-            <th width="100%">Tool Name &amp; Version</th>
+            <th width="25%">Vendor</th>
+            <th width="25%">Tool Name &amp; Version</th>
             <th>BPMN 2.0</th>
             <th>Import</th>
             <th>Export</th>
