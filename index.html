@@ -163,8 +163,9 @@
           })
         })
                     
-        $('.panel-title').prepend('<span class="toggle-indicator btn btn-default">+</span>&nbsp;');
-        $('.panel-heading').click(function(panel) {
+        $('.panel[id="legend"] .panel-title').prepend('<span class="toggle-indicator btn btn-default">+</span>&nbsp;');
+        $('.panel[id="legend"] .panel-heading').click(function(panel) {
+          // TODO this hardcoding of index 0 will always operate on legend panel
           togglePanel('#'+$($('.panel-heading')[0]).parent()[0].id);
         });
       });
@@ -266,9 +267,51 @@
         </div>
       </div>
 
-      <hr />
-
-      <hr />
+      <div class="panel panel-default" id='callForParticipation'>
+        <div class="panel-heading">
+          <h3 class="panel-title">Call for participation</h3>
+        </div>
+        <div class="panel-body">
+          <p>If BPMN interchange is important to you: </p>
+          <ul>
+           <li>Make yourself heard with your vendor. 
+           <li>Spread the word and share this page with your peers.</li>
+           <li>Test your favorite BPMN tool. You do not have to own the tool to be a user of it.</li>
+           <li>Join the Group. Everybody can join. There is no need to be an OMG member.</li>
+          </ul>
+        </div>
+      </div>
+        
+      <div class="panel panel-default" id='contributors'>
+        <div class="panel-heading">
+          <h3 class="panel-title">Contributors</h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            This test suite was built by:   
+          </p>
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3" style="margin-top:10px;">
+              <a href="http://www.camunda.com" target="_newtab">
+                <img alt="camunda"class="img-thumbnail" src="img/camunda.png" style="margin-top:12px"/>
+              </a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3" style="margin-top:10px;">
+              <a href="http://www.knowprocess.com" target="_newtab">
+                <img alt="Know Process" class="img-thumbnail" src="img/knowprocess.png"/>
+              </a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3" style="margin-top:10px;">
+              <p style="margin-top: 26px;font-size: 20px;font-weight: bold;text-align: center;">Matthais Kurz</p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3" style="margin-top:10px;">
+              <a href="http://www.signavio.com" target="_newtab">
+                <img alt="Signavio" class="img-thumbnail" src="img/Signavio.jpg"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
         
       <p>Powered by <a href="http://datatables.net/">jQuery DataTables</a>, <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://open.dapper.net/">Dapper</a></p>
     </div>
