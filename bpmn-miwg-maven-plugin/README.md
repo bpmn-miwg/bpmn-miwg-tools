@@ -19,9 +19,20 @@ Running
   Note the 'Tool Version' folder must match either the property at step 6 below or one of the tools listed in [tools JSON file](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/tools-tested-by-miwg.json)
 1. Add the BPMN-MIWG repository to your project's pom.xml: 
 
+  ```xml
+    <pluginRepositories>
+      <pluginRepository>
+        <id>bpmn-miwg-snapshot</id>
+        <name>BPMN-MIWG Snapshot Repository</name>
+        <url>http://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
+      </pluginRepository>
+    </pluginRepositories>
+  ```
 1. Add the BPMN-MIWG plugin to your project's pom.xml: 
+  
   ```xml
     <plugins>
+      ...
       <plugin>
         <groupId>org.omg.bpmn.miwg</groupId>
         <artifactId>bpmn-miwg-maven-plugin</artifactId>
@@ -53,7 +64,7 @@ Running
 
   ```xml
     <properties>
-      <project.bpmn.application>Activiti-5.14.1</project.bpmn.application>
+      <project.bpmn.application>Activiti 5.14.1</project.bpmn.application>
       ...
     </properties>
   ```
