@@ -5,60 +5,62 @@ This Maven plugin will run the BPMN MIWG test tools for contributions from all v
 
 For more information on the tests run please see the individual test tool READMEs at: 
 
-# [xml-compare](https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare)
-# [xpath](https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner)
+- [xml-compare](https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare)
+- [xpath](https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner)
 
 Running
 =======
 
 1. Ensure you have Maven installed, for further information see [here](http://maven.apache.org/)
 1. Put your .bpmn files in the project's resourses directory (default: src/main/resources) in the following sub-directories: 
-```
-  A - Fixed Digrams with Variations of Attributes/Tool Version/
-  B - Validate that tool covers conformance class set/Too Version/
-```
+  - A - Fixed Digrams with Variations of Attributes/Tool Version/
+  - B - Validate that tool covers conformance class set/Too Version/
+  
   Note the 'Tool Version' folder must match either the property at step 6 below or one of the tools listed in [tools JSON file](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/tools-tested-by-miwg.json)
 1. Add the BPMN-MIWG repository to your project's pom.xml: 
 
 1. Add the BPMN-MIWG plugin to your project's pom.xml: 
-```
-  <plugins>
-    <plugin>
-      <groupId>org.omg.bpmn.miwg</groupId>
-      <artifactId>bpmn-miwg-maven-plugin</artifactId>
-      <version>${bpmn-miwg-version}</version>
-    </plugin>
-  </plugins>
-```
+  ```xml
+    <plugins>
+      <plugin>
+        <groupId>org.omg.bpmn.miwg</groupId>
+        <artifactId>bpmn-miwg-maven-plugin</artifactId>
+        <version>${bpmn-miwg-version}</version>
+      </plugin>
+    </plugins>
+  ```
 1. Add the test-suite as a dependency; this is where the Reference models may be found. 
-```
-  <dependencies>
-    ...
-    <dependency>
-      <groupId>org.omg.bpmn.miwg</groupId>
-      <artifactId>test-suite</artifactId>
-      <version>${bpmn-miwg-version}</version>
-    </dependency>
-  </dependencies>
-```
+
+  ```xml
+    <dependencies>
+      ...
+      <dependency>
+        <groupId>org.omg.bpmn.miwg</groupId>
+        <artifactId>test-suite</artifactId>
+        <version>${bpmn-miwg-version}</version>
+      </dependency>
+    </dependencies>
+  ```
 1. If you want to restrict the tests to just one tool, add this property to your pom.xml: 
-```
-  <properties>
-    <project.bpmn.application>Tool folder including version</project.bpmn.application>
-    ...
-  </properties>
-```
+
+  ```xml
+    <properties>
+      <project.bpmn.application>Tool folder including version</project.bpmn.application>
+      ...
+    </properties>
+  ```
   For example: 
-```
-  <properties>
-    <project.bpmn.application>Activiti-5.14.1</project.bpmn.application>
-    ...
-  </properties>
-```
+
+  ```xml
+    <properties>
+      <project.bpmn.application>Activiti-5.14.1</project.bpmn.application>
+      ...
+    </properties>
+  ```
 1. Run tests with the following Maven command: 
-```
-   mvn bpmn-miwg:test
-```
+  ```
+     mvn bpmn-miwg:test
+  ```
 4. review test output in target/site/ folder 
 5. (If part of the BPMN-MIWG test automation team). Copy target/site content to https://github.com/bpmn-miwg/bpmn-miwg-tools branch gh-pages and commit it to the Github repository. 
 
