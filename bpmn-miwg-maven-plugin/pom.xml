@@ -7,15 +7,27 @@
   <version>0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
-  <name>bpmn-miwg-maven-plugin Maven Plugin</name>
-
-  <!-- FIXME change it to the project's website -->
-  <url>http://maven.apache.org</url>
+  <name>BPMN-MIWG Maven Plugin</name>
+  <inceptionYear>2013</inceptionYear>
+  <organization>
+  	<name>BPMN Model Interchange Working Group</name>
+  	<url>http://www.omgwiki.org/bpmn-miwg/</url>
+  </organization>
+  <description>Maven plugin to invoke tests on the BPMN test cases in this project. </description>
+  <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>1.7</java.version>
+    <java.version>1.6</java.version>
   </properties>
+  
+  <distributionManagement>
+    <repository>
+      <id>bpmn-miwg-snapshot</id>
+      <name>BPMN-MIWG Snapshot Repository</name>
+      <url>http://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
+    </repository>
+  </distributionManagement>
 
   <repositories>
     <repository>
@@ -157,10 +169,5 @@
       </build>
     </profile>
   </profiles>
-  <inceptionYear>2013</inceptionYear>
-  <organization>
-  	<name>BPMN Model Interchange Working Group</name>
-  	<url>http://www.omgwiki.org/bpmn-miwg/</url>
-  </organization>
-  <description>Maven plugin to invoke tests on the BPMN test cases in this project. </description>
+  
 </project>
