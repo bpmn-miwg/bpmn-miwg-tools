@@ -1,0 +1,261 @@
+<TestRun name="Activiti 5.14.1-A.3.0-roundtrip.bpmn"/>  <TestFile name="/home/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/Activiti 5.14.1/A.3.0-roundtrip.bpmn"/>
+  <Test name="BPMN Schema Validator">
+    <Exception message="Exception during test execution of BPMN Schema Validator">
+      <exception class="org.xml.sax.SAXParseException">
+        <detailMessage>schema_reference.4: Failed to read schema document &apos;file:/home/tstephen/git/bpmn-miwg-test-suite/src/main/resources/schema/BPMN20.xsd&apos;, because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not &lt;xsd:schema&gt;.</detailMessage>
+        <cause class="org.xml.sax.SAXParseException" reference=".."/>
+        <stackTrace>
+          <trace>com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)</trace>
+          <trace>com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2479)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)</trace>
+          <trace>com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)</trace>
+          <trace>com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)</trace>
+          <trace>javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)</trace>
+          <trace>org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest.execute(ValidatorTest.java:76)</trace>
+          <trace>org.omg.bpmn.miwg.xpathTestRunner.base.TestManager.executeTests(TestManager.java:82)</trace>
+          <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.runXPathTests(ModelInterchangeMojo.java:357)</trace>
+          <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.execute(ModelInterchangeMojo.java:142)</trace>
+          <trace>org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)</trace>
+          <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)</trace>
+          <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)</trace>
+          <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)</trace>
+          <trace>org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)</trace>
+          <trace>org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)</trace>
+          <trace>org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)</trace>
+          <trace>org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)</trace>
+          <trace>org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)</trace>
+          <trace>org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)</trace>
+          <trace>org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)</trace>
+          <trace>org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)</trace>
+          <trace>org.apache.maven.cli.MavenCli.main(MavenCli.java:141)</trace>
+          <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
+          <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)</trace>
+          <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
+          <trace>java.lang.reflect.Method.invoke(Method.java:606)</trace>
+          <trace>org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)</trace>
+          <trace>org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)</trace>
+          <trace>org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)</trace>
+          <trace>org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)</trace>
+        </stackTrace>
+        <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+          <c class="list"/>
+          <list reference="../c"/>
+        </suppressedExceptions>
+        <exception class="java.io.FileNotFoundException">
+          <detailMessage>/home/tstephen/git/bpmn-miwg-test-suite/src/main/resources/schema/BPMN20.xsd (No such file or directory)</detailMessage>
+          <stackTrace>
+            <trace>java.io.FileInputStream.open(Native Method)</trace>
+            <trace>java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:146)</trace>
+            <trace>java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:101)</trace>
+            <trace>sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)</trace>
+            <trace>sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:613)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:189)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaParsingConfig.parse(SchemaParsingConfig.java:582)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaParsingConfig.parse(SchemaParsingConfig.java:685)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaDOMParser.parse(SchemaDOMParser.java:530)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2175)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)</trace>
+            <trace>com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)</trace>
+            <trace>com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)</trace>
+            <trace>javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)</trace>
+            <trace>org.omg.bpmn.miwg.xpathTestRunner.tests.ValidatorTest.execute(ValidatorTest.java:76)</trace>
+            <trace>org.omg.bpmn.miwg.xpathTestRunner.base.TestManager.executeTests(TestManager.java:82)</trace>
+            <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.runXPathTests(ModelInterchangeMojo.java:357)</trace>
+            <trace>org.omg.bpmn.miwg.mvn.ModelInterchangeMojo.execute(ModelInterchangeMojo.java:142)</trace>
+            <trace>org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)</trace>
+            <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)</trace>
+            <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)</trace>
+            <trace>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)</trace>
+            <trace>org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)</trace>
+            <trace>org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)</trace>
+            <trace>org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)</trace>
+            <trace>org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)</trace>
+            <trace>org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)</trace>
+            <trace>org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)</trace>
+            <trace>org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)</trace>
+            <trace>org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)</trace>
+            <trace>org.apache.maven.cli.MavenCli.main(MavenCli.java:141)</trace>
+            <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
+            <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)</trace>
+            <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
+            <trace>java.lang.reflect.Method.invoke(Method.java:606)</trace>
+            <trace>org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)</trace>
+            <trace>org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)</trace>
+            <trace>org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)</trace>
+            <trace>org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)</trace>
+          </stackTrace>
+          <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+        </exception>
+        <lineNumber>-1</lineNumber>
+        <columnNumber>-1</columnNumber>
+      </exception>
+    </Exception>
+    <Results name="TEST BPMN Schema Validator results:">
+      <ListKeyValue key="OK" value="0"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <Test name="A.3.0">
+    <NodePush message="Push" identifier="_1373649919111" caller="callingMethod">
+      <OKAssertion assertion="selectElementX" message="/bpmn:definitions/bpmn:process">
+        <testContext>
+          <stackID>_1373649919111</stackID>
+          <id>_1373649919111</id>
+        </testContext>
+      </OKAssertion>
+      <NodePush message="Push" identifier="WFP-6-" caller="selectElementX">
+        <OKAssertion assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>WFP-6-</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;_65f5459f-44ae-436d-a089-a91d6d78075b&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_1ac4b759-40e3-4dfb-b0e3-ad1d201d6c3d</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos; and @id=&apos;_1ae31d1b-2559-4f78-a3ec-47986a49db48&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_65f5459f-44ae-436d-a089-a91d6d78075b</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Non-Interrupting Message&apos; found">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_428dcbf5-8e5e-48e0-9c0c-d93003fa8c82</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkMessageEvent" message="Message event definition">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_428dcbf5-8e5e-48e0-9c0c-d93003fa8c82</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkCancelActivity" message="Attribute cancelActivity=false">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_428dcbf5-8e5e-48e0-9c0c-d93003fa8c82</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_72204cd7-709c-4656-9554-3ae29b3844ce&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_428dcbf5-8e5e-48e0-9c0c-d93003fa8c82</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;_ce253897-4300-4b24-b71f-4c9535698c70&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_72204cd7-709c-4656-9554-3ae29b3844ce</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373649919111&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-&quot;&apos;]/semantic:subProcess[@id=&apos;id=&quot;_1ae31d1b-2559-4f78-a3ec-47986a49db48&quot;&apos;]/">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_1ae31d1b-2559-4f78-a3ec-47986a49db48</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;_2d2d0d29-896f-49f9-8109-77a7304309c5&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_1ae31d1b-2559-4f78-a3ec-47986a49db48</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;_ce253897-4300-4b24-b71f-4c9535698c70&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_2d2d0d29-896f-49f9-8109-77a7304309c5</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373649919111&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-&quot;&apos;]/semantic:subProcess[@id=&apos;id=&quot;_1ae31d1b-2559-4f78-a3ec-47986a49db48&quot;&apos;]/">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_1ae31d1b-2559-4f78-a3ec-47986a49db48</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Interrupting Escalation&apos; found">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_178e16eb-4c9e-4ea0-9644-7c5fb2b71825</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkEscalationEvent" message="Escalation event definition">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_178e16eb-4c9e-4ea0-9644-7c5fb2b71825</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="checkCancelActivity" message="Attribute cancelActivity=true">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_178e16eb-4c9e-4ea0-9644-7c5fb2b71825</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;_9fad8da5-a28c-4b6b-bb71-fbd5c65b9681&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_178e16eb-4c9e-4ea0-9644-7c5fb2b71825</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <OKAssertion assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;_10ce0b26-1b3e-46a2-85a5-62538ed2da13&apos;]">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_9fad8da5-a28c-4b6b-bb71-fbd5c65b9681</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </OKAssertion>
+        <NodePop message="Pop" identifier="WFP-6-" caller="callingMethod">
+          <testContext>
+            <stackID>WFP-6-</stackID>
+            <nodeID>_10ce0b26-1b3e-46a2-85a5-62538ed2da13</nodeID>
+            <id>WFP-6-</id>
+          </testContext>
+        </NodePop>
+        <testContext>
+          <stackID>_1373649919111</stackID>
+          <nodeID>WFP-6-</nodeID>
+          <id>_1373649919111</id>
+        </testContext>
+      </NodePush>
+      <testContext/>
+    </NodePush>
+    <Results name="TEST A.3.0 results:">
+      <ListKeyValue key="OK" value="18"/>
+      <ListKeyValue key="FINDINGS" value="0"/>
+    </Results>
+  </Test>
+  <TotalResults>
+    <ListKeyValue key="OK" value="18"/>
+    <ListKeyValue key="FINDINGS " value="0"/>
+  </TotalResults>
+</TestRun>
