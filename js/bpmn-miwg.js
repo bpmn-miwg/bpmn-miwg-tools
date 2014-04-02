@@ -180,7 +180,7 @@ function ModelInterchangePresenter() {
   this.fetchBpmn = function(target) {
     $.each($('code.'+target), function(i,d) {
       var test = $(d).parent().parent().parent().data('test');
-      var file = '/bpmn-miwg-tools/bpmn-tool-list'+$(d).data('file');
+      var file = '/bpmn-miwg-tools'+$(d).data('file');
       console.log('loading: '+file+' for '+target+', '+test);
       $.ajax({
         url: file,
