@@ -1,7 +1,7 @@
 package org.omg.bpmn.miwg.xpathTestRunner.tests;
 
 import java.io.File;
-import java.io.FileInputStream;
+import java.io.InputStream;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.SAXParser;
@@ -36,16 +36,16 @@ public class ValidatorTest extends AbstractTest {
 					.getDOMImplementation("LS");
 			LSInput ret = domImplementationLS.createLSInput();
 
-			FileInputStream fis = null;
+                        InputStream is = null;
 			try {
-				fis = new FileInputStream("src/main/resources/schema/"
+	                        is = getClass().getResourceAsStream("schema/"
 						+ systemId);
 			} catch (Exception e) {
 				System.err.println(e.toString());
 			}
 
 			ret.setSystemId(systemId);
-			ret.setByteStream(fis);
+			ret.setByteStream(is);
 			return ret;
 		}
 	}
@@ -73,8 +73,8 @@ public class ValidatorTest extends AbstractTest {
 				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 		schemaFactory.setResourceResolver(new LocalResourcsResolver());
 
-		Schema schema = schemaFactory.newSchema(new StreamSource(new File(
-				"src/main/resources/schema/BPMN20.xsd")));
+		Schema schema = schemaFactory.newSchema(new StreamSource(
+		        getClass().getResourceAsStream("schema/BPMN20.xsd")));
 
 		SAXParserFactory parserFactory = SAXParserFactory.newInstance();
 		// parserFactory.setValidating(true);
