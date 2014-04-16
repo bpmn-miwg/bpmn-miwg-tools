@@ -1,0 +1,41 @@
+TESTRUN: ADONIS 6.0-A.3.0-roundtrip.bpmn
+  Running tests for /home/tstephen/git/bpmn-miwg-test-suite/A - Fixed Digrams with Variations of Attributes/ADONIS 6.0/A.3.0-roundtrip.bpmn
+  TEST: BPMN Schema Validator
+    EXCEPTION: Exception during test execution of BPMN Schema Validator (org.xml.sax.SAXParseException; schema_reference.4: Failed to read schema document 'file:/home/tstephen/git/bpmn-miwg-test-suite/src/main/resources/schema/BPMN20.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.)
+    
+    TEST: TEST BPMN Schema Validator results:
+      - OK: 0
+      - FINDINGS: 0
+  
+  TEST: A.3.0
+    FINDING: callingMethod; Message: Cannot find attribute; Parameter: id
+    OK     : callingMethod: Push (id: )
+      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process
+      OK     : selectElementX: Push (id: process_37259)
+        OK     : navigateElement; Message: bpmn:startEvent[@name='Start Event']
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 1' and @id='obj.37264']
+        OK     : navigateFollowingElement; Message: bpmn:subProcess[@name='Collapsed Sub-Process' and @id='obj.37267']
+        OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Message' found
+        OK     : checkMessageEvent; Message: Message event definition
+        OK     : checkCancelActivity; Message: Attribute cancelActivity=false
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 3' and @id='obj.37282']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 1' and @id='obj.37279']
+        OK     : navigateElement; Message: #document/definitions/process[@id='id="process_37259"']/subProcess[@id='id="obj.37267"']/
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 2' and @id='obj.37285']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 1' and @id='obj.37279']
+        OK     : navigateElement; Message: #document/definitions/process[@id='id="process_37259"']/subProcess[@id='id="obj.37267"']/
+        OK     : navigateBoundaryEvent; Message: Boundary element 'Boundary Intermediate Event Interrupting Escalation' found
+        OK     : checkEscalationEvent; Message: Escalation event definition
+        OK     : checkCancelActivity; Message: Attribute cancelActivity=true
+        OK     : navigateFollowingElement; Message: bpmn:task[@name='Task 4' and @id='obj.37276']
+        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name='End Event 2' and @id='obj.37288']
+        OK     : callingMethod: Pop (id: process_37259)
+      
+    TEST: TEST A.3.0 results:
+      - OK: 18
+      - FINDINGS: 1
+  
+  TEST RESULTS TOTAL:
+    - OK: 18
+    - FINDINGS : 1
+    
