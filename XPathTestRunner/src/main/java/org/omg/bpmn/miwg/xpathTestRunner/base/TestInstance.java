@@ -1,13 +1,13 @@
 package org.omg.bpmn.miwg.xpathTestRunner.base;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.omg.bpmn.miwg.input.DirFilter;
 import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.KeyValueEntry;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Test;
 
@@ -49,29 +49,22 @@ public class TestInstance {
 
 		File root = new File(rootDir);
 
-		File[] categoryFolders = root.listFiles(new FileFilter() {
-
-			@Override
-			public boolean accept(File f) {
-				return f.isDirectory();
-			}
-
-		});
+        // File[] categoryFolders = root.listFiles(new FileFilter() {
+        //
+        // @Override
+        // public boolean accept(File f) {
+        // return f.isDirectory();
+        // }
+        //
+        // });
 
 		List<File> applicationFolders = new LinkedList<File>();
 
-		for (File category : categoryFolders) {
+        // for (File category : categoryFolders) {
 
-			applicationFolders.addAll(Arrays.asList(category
-					.listFiles(new FileFilter() {
-
-						@Override
-						public boolean accept(File f) {
-							return f.isDirectory();
-						}
-
-					})));
-		}
+        applicationFolders.addAll(Arrays.asList(root
+.listFiles(new DirFilter())));
+        // }
 
 		List<TestInstance> allTestFiles = new LinkedList<TestInstance>();
 
@@ -91,7 +84,7 @@ public class TestInstance {
 				TestInstance tfi = new TestInstance();
 				tfi.root = f.getParentFile().getParentFile().getCanonicalPath();
 				tfi.application = f.getParentFile().getName();
-				tfi.category = f.getParentFile().getParentFile().getName();
+                // tfi.category = f.getParentFile().getParentFile().getName();
 				tfi.testFile = f.getName();
 
 				if (testManager.getApplication() == null
@@ -110,6 +103,8 @@ public class TestInstance {
 	public File getFile() {
 		File f1 = new File(root, application);
 		File f2 = new File(f1, testFile);
+        System.out.println("test file sought: " + f2.getPath());
+        System.out.println("... exists?: " + f2.exists());
 		return f2;
 	}
 

@@ -1,7 +1,9 @@
 package org.omg.bpmn.miwg.xpathTestRunner.tests;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.List;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.SAXParser;
@@ -10,6 +12,7 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
+import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractTest;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.validation.ValidationErrorHandler;
@@ -17,6 +20,7 @@ import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
 import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSResourceResolver;
+import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -64,7 +68,23 @@ public class ValidatorTest extends AbstractTest {
 	}
 
 	@Override
-	public void execute(TestInstance instance) throws Throwable {
+    public void execute(TestInstance instance) throws Throwable {
+        InputStream is = null;
+        try {
+            is = new FileInputStream(instance.getFile());
+            loadResource(is);
+        } finally {
+            try {
+                is.close();
+            } catch (Exception e) {
+                ;
+            }
+        }
+        instance.addFindings(resultsFinding());
+        instance.addOK(resultsOK());
+    }
+
+    public List<? extends Output> execute(InputStream is) throws Throwable {
 		
 		ValidationErrorHandler eHandler = new ValidationErrorHandler();
 		eHandler.setTestOutput(out);
@@ -88,7 +108,7 @@ public class ValidatorTest extends AbstractTest {
 		
 		
 		try {
-			parser.parse(instance.getFile(), (DefaultHandler) null);
+            parser.parse(new InputSource(is), (DefaultHandler) null);
 		} catch (Exception e) {
 			finding("Schema validation failed", "Exception: " + e.getMessage());
 			e.printStackTrace(System.out);
@@ -104,8 +124,7 @@ public class ValidatorTest extends AbstractTest {
 					+ eHandler.numFatalError);
 		}
 		
-		instance.addFindings(resultsFinding());
-		instance.addOK(resultsOK());
+        return getOutputs();
 	}
 
 }

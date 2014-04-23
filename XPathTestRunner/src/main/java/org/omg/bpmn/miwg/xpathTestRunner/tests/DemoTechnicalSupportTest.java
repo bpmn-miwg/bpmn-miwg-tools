@@ -1,6 +1,5 @@
 package org.omg.bpmn.miwg.xpathTestRunner.tests;
 
-import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.AbstractXpathTest;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Direction;
 import org.w3c.dom.Node;
@@ -13,12 +12,10 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 	}
 
 	@Override
-	public void execute(TestInstance instance) throws Throwable {
+    public void execute() throws Throwable {
 
 		{
 			Node n1, n2;
-
-			loadFile(instance.getFile());
 
 			selectElementX("//bpmn:collaboration");
 
@@ -195,9 +192,6 @@ public class DemoTechnicalSupportTest extends AbstractXpathTest {
 			}
 
 			pop();
-
-			instance.addFindings(resultsFinding());
-			instance.addOK(resultsOK());
 
 		}
 	}

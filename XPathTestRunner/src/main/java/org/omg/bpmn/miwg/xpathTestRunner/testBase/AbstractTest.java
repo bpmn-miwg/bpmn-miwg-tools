@@ -1,15 +1,34 @@
 package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.omg.bpmn.miwg.output.DetailedOutput;
+import org.omg.bpmn.miwg.testresult.Output;
+import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
-import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.*;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.AbstractTestEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.FindingAssertionEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.InfoEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.OKAssertionEntry;
+import org.w3c.dom.Document;
 
 public abstract class AbstractTest implements Test {
 
-	private int numIssues = 0;
+    private DocumentBuilderFactory factory;
+    private DocumentBuilder builder;
+    protected Document doc;
+    private int numIssues = 0;
 	private int numOK = 0;
 	protected TestOutput out;
+    protected List<Output> outputs = new ArrayList<Output>();
 
 	@Override
 	public boolean isApplicable(File file) {
@@ -22,6 +41,9 @@ public abstract class AbstractTest implements Test {
 	protected void ok(AbstractTestEntry entry) {
 		numOK++;
 		out.println(entry);
+        DetailedOutput details = new DetailedOutput();
+        details.setDescription(entry.toLine());
+        outputs.add(new Output(OutputType.ok, entry.toLine()));
 	}
 	
 	protected void ok(String assertion, String message) {
@@ -31,6 +53,9 @@ public abstract class AbstractTest implements Test {
 	protected void finding(AbstractTestEntry entry) {
 		numIssues++;
 		out.println(entry);
+        DetailedOutput details = new DetailedOutput();
+        details.setDescription(entry.toLine());
+        outputs.add(new Output(OutputType.finding, entry.toLine()));
 	}
 	
 	protected void finding(String assertion, String message) {
@@ -43,6 +68,9 @@ public abstract class AbstractTest implements Test {
 	
 	protected void info(AbstractTestEntry entry) {
 		out.println(entry);
+        DetailedOutput details = new DetailedOutput();
+        details.setDescription(entry.toLine());
+        outputs.add(new Output(OutputType.info, entry.toLine()));
 	}
 	
 
@@ -58,13 +86,41 @@ public abstract class AbstractTest implements Test {
 
 	@Override
 	public void init(TestOutput out) {
-		numIssues = 0;
+        factory = null;
+        builder = null;
+        doc = null;
+        numIssues = 0;
 		numOK = 0;
 		this.out = out;
+        this.outputs.clear();
 	}
 
-	protected void addIssues(int number) {
+    protected void loadFile(File file) throws Throwable {
+        InputStream is = null;
+        try {
+            is = new FileInputStream(file);
+            loadResource(is);
+        } finally {
+            try {
+                is.close();
+            } catch (Exception e) {
+                ;
+            }
+        }
+    }
+
+    protected void loadResource(InputStream is) throws Throwable {
+        factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
+        builder = factory.newDocumentBuilder();
+        doc = builder.parse(is);
+    }
+
+    protected void addIssues(int number) {
 		numIssues += number;
 	}
 
+    public List<? extends Output> getOutputs() {
+        return Collections.unmodifiableList(outputs);
+    }
 }

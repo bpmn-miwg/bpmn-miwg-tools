@@ -1,24 +1,23 @@
 package org.omg.bpmn.miwg.xpathTestRunner.testBase;
 
-import java.io.File;
+import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.omg.bpmn.miwg.testresult.Output;
+import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.FindingAssertionEntry;
-import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.OKAssertionEntry;
 import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.NodePopEntry;
 import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.NodePushEntry;
+import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.OKAssertionEntry;
 import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -26,19 +25,13 @@ import org.w3c.dom.Text;
 
 public abstract class AbstractXpathTest extends AbstractTest {
 
+    private XPath xpath;
 	private Node currentNode;
-	private DocumentBuilderFactory factory;
-	private DocumentBuilder builder;
-	private Document doc;
-	private XPath xpath;
 	private Stack<Node> nodeStack;
 
 	@Override
 	public void init(TestOutput out) {
-		factory = null;
-		builder = null;
-		doc = null;
-		xpath = null;
+        xpath = null;
 		nodeStack = null;
 		super.init(out);
 	}
@@ -70,18 +63,15 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-	protected void loadFile(File file) throws Throwable {
-		factory = DocumentBuilderFactory.newInstance();
-		factory.setNamespaceAware(true);
-		builder = factory.newDocumentBuilder();
-		doc = builder.parse(file);
-		XPathFactory xpathfactory = XPathFactory.newInstance();
-		xpath = xpathfactory.newXPath();
-		xpath.setNamespaceContext(new NameSpaceContexts());
-		nodeStack = new Stack<Node>();
-		push(doc.getDocumentElement());
-		normalizeNames();
-	}
+    protected void loadResource(InputStream is) throws Throwable {
+        super.loadResource(is);
+        XPathFactory xpathfactory = XPathFactory.newInstance();
+        xpath = xpathfactory.newXPath();
+        xpath.setNamespaceContext(new NameSpaceContexts());
+        nodeStack = new Stack<Node>();
+        push(doc.getDocumentElement());
+        normalizeNames();
+    }
 
 	protected Node pop() {
 		NodePopEntry e = new NodePopEntry(callingMethod(),
@@ -1345,5 +1335,26 @@ public abstract class AbstractXpathTest extends AbstractTest {
 	public Node getCurrentNode() {
 		return currentNode;
 	}
+
+    @Override
+    public void execute(TestInstance instance) throws Throwable {
+
+        {
+            loadFile(instance.getFile());
+            execute();
+            instance.addFindings(resultsFinding());
+            instance.addOK(resultsOK());
+
+        }
+    }
+
+    @Override
+    public List<? extends Output> execute(InputStream is) throws Throwable {
+        loadResource(is);
+        execute();
+        return getOutputs();
+    }
+
+    protected abstract void execute() throws Throwable;
 
 }

@@ -1,6 +1,5 @@
 package org.omg.bpmn.miwg.xpathTestRunner.tests;
 
-import org.omg.bpmn.miwg.xpathTestRunner.base.TestInstance;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Direction;
 import org.w3c.dom.Node;
 
@@ -13,9 +12,7 @@ public class A_4_1_Test extends A_4_0_Test {
 	}
 
 	@Override
-	public void execute(TestInstance instance) throws Throwable {
-		loadFile(instance.getFile());
-
+    public void execute() throws Throwable {
 		selectCollaboration();
 
 		{
@@ -79,8 +76,6 @@ public class A_4_1_Test extends A_4_0_Test {
 
 		pop();
 
-		instance.addFindings(resultsFinding());
-		instance.addOK(resultsOK());
 	}
 	
 }
