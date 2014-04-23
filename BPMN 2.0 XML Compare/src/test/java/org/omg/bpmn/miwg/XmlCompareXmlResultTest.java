@@ -52,150 +52,137 @@ import org.xml.sax.SAXException;
 @RunWith(value = Parameterized.class)
 public class XmlCompareXmlResultTest {
 
-	private static final String S = File.separator;
-	private static final String RESOURCE_BASE_DIR = "." + S + "target" + S
-			+ "test-suite" + S;
+    private static final String S = File.separator;
+    private static final String RESOURCE_BASE_DIR = "." + S + "target" + S
+            + "test-suite" + S;
 
-	private static final String RPT_DIR = "target" + S + "site";
-	private static final String REFERENCE_FOLDER_NAME = "Reference";
+    private static final String RPT_DIR = "target" + S + "site";
+    private static final String REFERENCE_FOLDER_NAME = "Reference";
 
-	private static File baseDir;
-	private static List<FileResult> results = new ArrayList<FileResult>();
+    private static File baseDir;
+    private static List<FileResult> results = new ArrayList<FileResult>();
 
-	private String tool;
+    private String tool;
 
-	/**
-	 * Several tests are run for each reference model. Valid values are
-	 * "import", "-export", "-roundtrip".
-	 */
-	private Variant variant;
-	/**
-	 * The name of the test category's folder e.g.
-	 * "A - Fixed Digrams with Variations of Attributes"
-	 */
-	private TestCategory testCategory;
+    /**
+     * Several tests are run for each reference model. Valid values are
+     * "import", "-export", "-roundtrip".
+     */
+    private Variant variant;
+    /**
+     * The name of the test category's folder e.g.
+     * "A - Fixed Digrams with Variations of Attributes"
+     */
+    private TestCategory testCategory;
 
-	public XmlCompareXmlResultTest(String tool, TestCategory testCategory,
-			Variant variant) {
-		this.tool = tool;
-		this.variant = variant;
-		this.testCategory = testCategory;
-	}
+    public XmlCompareXmlResultTest(String tool, TestCategory testCategory,
+            Variant variant) {
+        this.tool = tool;
+        this.variant = variant;
+        this.testCategory = testCategory;
+    }
 
-	@Parameters
-	public static Collection<Object[]> data() throws Exception {
-		setUp();
-		ArrayList<Object[]> tools = new ArrayList<Object[]>();
-		// Find all tools (Assume all did at least test category A)
-		for (String dir : (new File(baseDir, TestCategory.A.toString())).list()) {
-			if (!dir.equals("Reference") && !dir.startsWith(".")) {
-				for (TestCategory c : TestCategory.values()) {
-					for (Variant v : Variant.values()) {
-						tools.add(new Object[] { dir, c, v });
-					}
-				}
-			}
-		}
-		return tools;
-	}
+    @Parameters
+    public static Collection<Object[]> data() throws Exception {
+        setUp();
+        ArrayList<Object[]> tools = new ArrayList<Object[]>();
+        for (String dir : baseDir.list()) {
+            if (!dir.equals("Reference") && !dir.startsWith(".")) {
+                    for (Variant v : Variant.values()) {
+                        tools.add(new Object[] { dir, null, v });
+                    }
+            }
+        }
+        return tools;
+    }
 
-	public static void setUp() throws Exception {
-		baseDir = new File(RESOURCE_BASE_DIR);
-		System.out.println("Looking for MIWG resources in: "
-				+ baseDir.getAbsolutePath());
+    public static void setUp() throws Exception {
+        baseDir = new File(RESOURCE_BASE_DIR);
+        System.out.println("Looking for MIWG resources in: "
+                + baseDir.getAbsolutePath());
 
-		// Check resources availability
-		for (TestCategory c : TestCategory.values()) {
-			File testDir = new File(baseDir, c.toString());
-			assertTrue(
-					"Dir does not exist at "
-							+ testDir.getAbsolutePath()
-							+ ", please ensure you have checked out the MIWG resources.",
-					testDir.exists());
-		}
+        // Check resources availability
+        assertTrue("Dir does not exist at " + baseDir.getAbsolutePath()
+                + ", please ensure you have checked out the MIWG resources.",
+                baseDir.exists());
 
-		new File(RPT_DIR).mkdirs();
-	}
+        new File(RPT_DIR).mkdirs();
+    }
 
-	@AfterClass
+    @AfterClass
     public static void tearDown() {
         File idx = new File(RPT_DIR, "overview.html");
         System.out.println("writing index to " + idx);
         IndexWriter.write2(XmlCompareXmlResultTest.class.getSimpleName(), idx,
                 results);
-	}
+    }
 
-	/**
-	 * 
-	 * @param tool
-	 *            The name of the tool folder
-	 * @param testCategory
-	 *            The name test category folder e.g.
-	 *            "A - Fixed Digrams with Variations of Attributes"
-	 * @param result
-	 *            The test result xml structure
-	 * @throws IOException
-	 */
-	private void reportTestResult(String result) throws IOException {
-		final File f = new File(RPT_DIR, getFileName());
-		System.out.println("writing report to: " + f.getAbsolutePath());
-		FileUtils.writeStringToFile(f, result);
-		results.add(new FileResult() {
-			
-			public String buildHtml() {
-				StringBuilder builder = new StringBuilder();
-				
-				builder.append("\t<div class=\"test\">");
-				builder.append("<a href=\"");
-				builder.append(f.getName());
-				builder.append("\">");
-				builder.append(f.getName());
-				builder.append("</a>");
-				builder.append("</div>\n");
-				
-				return builder.toString();
-			}
-			
-		});
-	}
+    /**
+     * 
+     * @param tool
+     *            The name of the tool folder
+     * @param testCategory
+     *            The name test category folder e.g.
+     *            "A - Fixed Digrams with Variations of Attributes"
+     * @param result
+     *            The test result xml structure
+     * @throws IOException
+     */
+    private void reportTestResult(String result) throws IOException {
+        final File f = new File(RPT_DIR, getFileName());
+        System.out.println("writing report to: " + f.getAbsolutePath());
+        FileUtils.writeStringToFile(f, result);
+        results.add(new FileResult() {
 
-	private String getName() {
-		return getShortName();
-	}
+            public String buildHtml() {
+                StringBuilder builder = new StringBuilder();
 
-	private String getShortName() {
-		return tool + "-" + testCategory.toString().split(" ")[0] + "-"
-				+ variant;
-	}
+                builder.append("\t<div class=\"test\">");
+                builder.append("<a href=\"");
+                builder.append(f.getName());
+                builder.append("\">");
+                builder.append(f.getName());
+                builder.append("</a>");
+                builder.append("</div>\n");
 
-	private String getFileName() {
-		return getName() + ".html";
-	}
+                return builder.toString();
+            }
 
-	private File getReferenceFolder() {
-		return new File(new File(baseDir, testCategory.toString()),
-				REFERENCE_FOLDER_NAME);
-	}
+        });
+    }
 
-	private File getToolFolder() {
-		return new File(new File(baseDir, testCategory.toString()), tool);
-	}
+    private String getName() {
+        return getShortName();
+    }
 
-	@Test
-	public void testXmlCompare() throws ParserConfigurationException,
-			SAXException, IOException {
+    private String getShortName() {
+        return tool + "-" + variant;
+    }
 
-		try {
-			String result = TestRunner.runXmlCompareTest(getReferenceFolder()
-					.getAbsolutePath(), getToolFolder().getAbsolutePath(),
-					variant);
-			reportTestResult(result);
-//			System.out.println("<item name=\"" + getShortName() + "\" href=\""
-//					+ getFileName() + "\"/>");
+    private String getFileName() {
+        return getName() + ".html";
+    }
 
-		} catch (Exception e) {
-			reportTestResult(e.getMessage());
-		}
-	}
+    private File getReferenceFolder() {
+        return new File(baseDir, REFERENCE_FOLDER_NAME);
+    }
+
+    private File getToolFolder() {
+        return new File(baseDir, tool);
+    }
+
+    @Test
+    public void testXmlCompare() throws ParserConfigurationException,
+            SAXException, IOException {
+
+        try {
+            String result = TestRunner.runXmlCompareTest(getReferenceFolder()
+                    .getAbsolutePath(), getToolFolder().getAbsolutePath(),
+                    variant);
+            reportTestResult(result);
+        } catch (Exception e) {
+            reportTestResult(e.getMessage());
+        }
+    }
 
 }

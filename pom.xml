@@ -6,7 +6,7 @@
   <artifactId>tools</artifactId>
   <name>BPMN 2.0 Model Interchange Tools</name>
   <packaging>pom</packaging>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.2-SNAPSHOT</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
   <licenses>
@@ -86,6 +86,7 @@
     <module>test-result</module>
     <module>BPMN 2.0 XML Compare</module>
     <module>XPathTestRunner</module>
+    <module>bpmn-miwg-maven-plugin</module>
   </modules>
 
   <dependencies>

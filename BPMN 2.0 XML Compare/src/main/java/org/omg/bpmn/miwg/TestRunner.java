@@ -26,7 +26,12 @@
 package org.omg.bpmn.miwg;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FilenameFilter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -34,9 +39,11 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.apache.commons.io.FileUtils;
 import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.NodeDetail;
+import org.omg.bpmn.miwg.api.TestTool;
 import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20ConformanceChecker;
 import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20DiffConfiguration;
 import org.omg.bpmn.miwg.configuration.BpmnCompareConfiguration;
+import org.omg.bpmn.miwg.input.BpmnFileFilter;
 import org.omg.bpmn.miwg.output.Detail;
 import org.omg.bpmn.miwg.output.DetailedOutput;
 import org.omg.bpmn.miwg.testresult.Output;
@@ -45,132 +52,189 @@ import org.omg.bpmn.miwg.testresult.Test;
 import org.omg.bpmn.miwg.testresult.TestResults;
 import org.xml.sax.SAXException;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 
-public class TestRunner {
+public class TestRunner implements TestTool {
 
-	private static final String FILE_EXTENSION = "bpmn";
+    private static final String FILE_EXTENSION = "bpmn";
+    private static Bpmn20ConformanceChecker checker;
+    private static FilenameFilter bpmnFileFilter = new BpmnFileFilter();
 
-	/**
-	 * First argument path to folder containing the reference bpmn xml files
-	 * Second argument path to folder containing the bpmn files to compare with
-	 * 
-	 * @param args
-	 * @throws ParserConfigurationException
-	 * @throws IOException
-	 * @throws SAXException
-	 * 
-	 */
-	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
+    /**
+     * First argument path to folder containing the reference bpmn xml files
+     * Second argument path to folder containing the bpmn files to compare with
+     * 
+     * @param args
+     * @throws ParserConfigurationException
+     * @throws IOException
+     * @throws SAXException
+     * 
+     */
+    public static void main(String[] args) throws SAXException, IOException,
+            ParserConfigurationException {
 
-		System.out.println("Runing BPMN 2.0 XML Compare Test...");
-		String result = runXmlCompareTest(args[0], args[1], Variant.valueOf(args[2]));
+        System.out.println("Running BPMN 2.0 XML Compare Test...");
+        String result = runXmlCompareTest(args[0], args[1],
+                Variant.valueOf(args[2]));
 
-		if (args.length > 3) {
-			File outputFile = new File(args[3]);
-			FileUtils.writeStringToFile(outputFile, result);
-			System.out.println("Output printed to: \n" + outputFile.getAbsolutePath());
-		} else {
-			System.out.println(result);
-		}
+        if (args.length > 3) {
+            File outputFile = new File(args[3]);
+            FileUtils.writeStringToFile(outputFile, result);
+            System.out.println("Output printed to: \n"
+                    + outputFile.getAbsolutePath());
+        } else {
+            System.out.println(result);
+        }
 
-		System.out.println("Finished BPMN 2.0 XML Compare Test");
-	}
+        System.out.println("Finished BPMN 2.0 XML Compare Test");
+    }
 
-	public static String runXmlCompareTest(String refFolderPath, String testFolderPath, Variant variant)
-			throws ParserConfigurationException, SAXException, IOException {
-		return runXmlCompareTest(refFolderPath, testFolderPath, variant, null);
-	}
+    public static String runXmlCompareTest(String refFolderPath,
+            String testFolderPath, Variant variant)
+            throws ParserConfigurationException, SAXException, IOException {
+        return runXmlCompareTest(refFolderPath, testFolderPath, variant, null);
+    }
 
-	/**
-	 * Performs the BPMN 2.0 XML Compare test and prints out the resulting XML
-	 * structure
-	 * 
-	 * @param referenceFolderPath
-	 *            Path to the folder containing the reference files
-	 * @param testFolderPath
-	 *            Path to the folder containing the test file of a specific tool
-	 * 
-	 * @param variant
-	 *            Test variant either export or roundtrip
-	 * 
-	 * @return Outputs the XML structure
-	 * @throws ParserConfigurationException
-	 * @throws IOException
-	 * @throws SAXException
-	 */
-	public static String runXmlCompareTest(String refFolderPath, String testFolderPath, Variant variant, String confName)
-			throws ParserConfigurationException, SAXException, IOException {
-		File refFolder = new File(refFolderPath);
-		File testFolder = new File(testFolderPath);
+    /**
+     * Performs the BPMN 2.0 XML Compare test and prints out the resulting XML
+     * structure
+     * 
+     * @param referenceFolderPath
+     *            Path to the folder containing the reference files
+     * @param testFolderPath
+     *            Path to the folder containing the test file of a specific tool
+     * @param variant
+     *            Test variant either export or roundtrip
+     * @param confName
+     *            configuration of what differences to ignore (denote same
+     *            semantic)
+     * 
+     * @return Outputs the XML structure
+     * @throws ParserConfigurationException
+     * @throws IOException
+     * @throws SAXException
+     */
+    public static String runXmlCompareTest(String refFolderPath,
+            String testFolderPath, Variant variant, String confName)
+            throws ParserConfigurationException, SAXException, IOException {
+        File refFolder = new File(refFolderPath);
+        File testFolder = new File(testFolderPath);
 
-		if (!refFolder.isDirectory() || !testFolder.isDirectory()) {
-			throw new IllegalArgumentException("Invalid path to folder");
-		}
+        if (!refFolder.isDirectory() || !testFolder.isDirectory()) {
+            throw new IllegalArgumentException("Invalid path to folder");
+        }
+        TestRunner runnner = new TestRunner();
+        initChecker(confName);
 
-		BpmnCompareConfiguration conf = BpmnCompareConfiguration.loadConfiguration(confName);
-		Bpmn20DiffConfiguration.setConf(conf);
-		Bpmn20ConformanceChecker checker = new Bpmn20ConformanceChecker();
+        TestResults results = new TestResults();
 
-		TestResults results = new TestResults();
+        for (File bpmnFile : refFolder.listFiles(bpmnFileFilter)) {
+            File compareFile = getCompareFile(bpmnFile, testFolder, variant);
+            if (compareFile.exists()) {
+                // Building test output structure
+                FileInputStream bpmnStream = null;
+                FileInputStream compareStream = null;
+                try {
+                    bpmnStream = new FileInputStream(bpmnFile);
+                    compareStream = new FileInputStream(compareFile);
+                    Test test = results.addTool(testFolder.getName()).addTest(
+                            bpmnFile.getName(), variant.name());
+                    test.addAll(runnner.getSignificantDifferences(bpmnStream,
+                            compareStream));
+                } finally {
+                    try {
+                        bpmnStream.close();
+                    } catch (Exception e) {
+                        ;
+                    }
+                    try {
+                        compareStream.close();
+                    } catch (Exception e) {
+                        ;
+                    }
+                }
+            } else {
+                results.addTool(testFolder.getName())
+                        .addTest(bpmnFile.getName(), variant.name())
+                        .addOutput(
+                                OutputType.info,
+                                "Missing reference file: "
+                                        + compareFile.getCanonicalPath());
+            }
+        }
 
-		for (File bpmnFile : refFolder.listFiles()) {
-			if (isBpmnFile(bpmnFile)) {
-				File compareFile = getCompareFile(bpmnFile, testFolder, variant);
-				if (compareFile.exists()) {
+        return results.toString();
+    }
 
-					// Building test output structure
-					Test test = results.addTool(testFolder.getName()).addTest(bpmnFile.getName());
+    private static void initChecker(String confName) throws JsonParseException,
+            JsonMappingException, IOException, ParserConfigurationException {
+        BpmnCompareConfiguration conf = BpmnCompareConfiguration
+                .loadConfiguration(confName);
+        Bpmn20DiffConfiguration.setConf(conf);
+        checker = new Bpmn20ConformanceChecker();
+    }
 
-					List<Difference> diffs = checker.getSignificantDifferences(bpmnFile, compareFile);
-					for (Difference diff : diffs) {
-						Output output = new Output(OutputType.finding, describeDifference(diff));
-						output.setDescription(String.format(
-								"Difference found in %1$s (id:%2$s)",
-								diff.getDescription(), diff.getId()));
-						test.addOutput(output);
-					}
-				} else {
-					results.addTool(testFolder.getName()).addTest(bpmnFile.getName())
-							.addOutput(
-									OutputType.info,
-									"Missing test file: "
-											+ compareFile.getCanonicalPath());
-				}
-			}
-		}
-
-		return results.toString();
-	}
+    private static Bpmn20ConformanceChecker getChecker()
+            throws JsonParseException, JsonMappingException, IOException,
+            ParserConfigurationException {
+        if (checker == null) {
+            initChecker(null/* rely on default configuration */);
+        }
+        return checker;
+    }
 
     public static DetailedOutput describeDifference(Difference difference) {
-		DetailedOutput dOut = new DetailedOutput();
-		
-		// Reference xpath/value
-		dOut.addDetail(printDifferenceDetail(difference.getControlNodeDetail(), "reference"));
-		
-		// Vendor xpath/value
-		dOut.addDetail(printDifferenceDetail(difference.getTestNodeDetail(), "vendor"));
-		
-		return dOut;
-	}
+        DetailedOutput dOut = new DetailedOutput();
 
-	private static Detail printDifferenceDetail(NodeDetail detail, String type) {
-		Detail d = new Detail();
-		d.setMessage(detail.getXpathLocation() + " :\t" + detail.getValue());
-		d.setType(type);
-		d.setXpath(detail.getXpathLocation());
-		return d;
-	}
+        // Reference xpath/value
+        dOut.addDetail(printDifferenceDetail(difference.getControlNodeDetail(),
+                "reference"));
 
-	private static boolean isBpmnFile(File bpmnFile) {
-		int i = bpmnFile.getName().lastIndexOf(".");
-		return bpmnFile.getName().substring(i + 1).equals(FILE_EXTENSION);
-	}
+        // Vendor xpath/value
+        dOut.addDetail(printDifferenceDetail(difference.getTestNodeDetail(),
+                "vendor"));
 
-	private static File getCompareFile(File refFile, File testFolder, Variant variant) {
-		int i = refFile.getName().lastIndexOf(".");
-		String fName = refFile.getName().substring(0, i) + "-" + variant.toString() + "." + FILE_EXTENSION;
+        return dOut;
+    }
 
-		return new File(testFolder, fName);
-	}
+    private static Detail printDifferenceDetail(NodeDetail detail, String type) {
+        Detail d = new Detail();
+        d.setMessage(detail.getXpathLocation() + " :\t" + detail.getValue());
+        d.setType(type);
+        d.setXpath(detail.getXpathLocation());
+        return d;
+    }
+
+    private static File getCompareFile(File refFile, File testFolder,
+            Variant variant) {
+        int i = refFile.getName().lastIndexOf(".");
+        String fName = refFile.getName().substring(0, i) + "-"
+                + variant.toString() + "." + FILE_EXTENSION;
+
+        return new File(testFolder, fName);
+    }
+
+    @Override
+    public Collection<? extends Output> getSignificantDifferences(
+            InputStream expectedBpmnXml, InputStream actualBpmnXml)
+            throws JsonParseException, JsonMappingException,
+            IOException, ParserConfigurationException {
+        List<Difference> diffs = getChecker().getSignificantDifferences(
+                actualBpmnXml, expectedBpmnXml);
+        List<Output> outputs = new ArrayList<Output>();
+        for (Difference diff : diffs) {
+            Output output = new Output(OutputType.finding,
+                    describeDifference(diff));
+            output.setDescription(String.format(
+                    "Difference found in %1$s (id:%2$s)",
+                    diff.getDescription(), diff.getId()));
+            outputs.add(output);
+        }
+        return outputs;
+    }
+
+    public String getName() {
+        return "xml-compare";
+    }
 }

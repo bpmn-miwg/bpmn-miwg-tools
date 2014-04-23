@@ -71,8 +71,8 @@ public class Tool {
 		return t;
 	}
 	
-	public Test addTest(String name) {
-		return addTest(new Test(name));
+	public Test addTest(String name, String variant) {
+		return addTest(new Test(name, variant));
 	}
 
 	/**

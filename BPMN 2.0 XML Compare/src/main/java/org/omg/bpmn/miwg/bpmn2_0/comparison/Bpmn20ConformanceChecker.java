@@ -53,85 +53,92 @@ import com.fasterxml.jackson.databind.JsonMappingException;
  */
 public class Bpmn20ConformanceChecker {
 
-	private XmlDiffUtil xmlDiff;
-	private DocumentBuilder docBuilder;
+    private XmlDiffUtil xmlDiff;
+    private DocumentBuilder docBuilder;
 
-	public Bpmn20ConformanceChecker() throws ParserConfigurationException, JsonParseException, JsonMappingException, IOException {
-		this(new Bpmn20DiffConfiguration());
-	}
+    public Bpmn20ConformanceChecker() throws ParserConfigurationException,
+            JsonParseException, JsonMappingException, IOException {
+        this(new Bpmn20DiffConfiguration());
+    }
 
-	public Bpmn20ConformanceChecker(XmlDiffConfiguration config)
-			throws ParserConfigurationException, JsonParseException, JsonMappingException, IOException {
-		ElementQualifier qualifier = new BPMN20ElementQualifier(
-				BpmnCompareConfiguration.loadConfiguration().getGeneratedNodeIds());
-		xmlDiff = new XmlDiffUtil(config, qualifier,
-				new Bpmn20DifferenceListener());
+    public Bpmn20ConformanceChecker(XmlDiffConfiguration config)
+            throws ParserConfigurationException, JsonParseException,
+            JsonMappingException, IOException {
+        ElementQualifier qualifier = new BPMN20ElementQualifier(
+                BpmnCompareConfiguration.loadConfiguration()
+                        .getGeneratedNodeIds());
+        xmlDiff = new XmlDiffUtil(config, qualifier,
+                new Bpmn20DifferenceListener());
 
-		DocumentBuilderFactory domFactory = DocumentBuilderFactory
-				.newInstance();
-		domFactory.setNamespaceAware(true);
-		docBuilder = domFactory.newDocumentBuilder();
-	}
+        DocumentBuilderFactory domFactory = DocumentBuilderFactory
+                .newInstance();
+        domFactory.setNamespaceAware(true);
+        docBuilder = domFactory.newDocumentBuilder();
+    }
 
-	public List<Difference> getSignificantDifferences(File expectedBpmnXmlFile,
-			File actualBpmnXmlFile) throws SAXException, IOException,
-			ParserConfigurationException {
-		Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXmlFile);
-		Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXmlFile);
-		return xmlDiff.areDocumentsEqualReporting(expectedBpmnXmlDoc,
-				actualBpmnXmlDoc);
-	}
-
-    public List<Difference> getSignificantDifferences(
-            InputStream expectedBpmnXml, InputStream actualBpmnXml)
-            throws SAXException, IOException, ParserConfigurationException {
-        Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXml);
-        Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXml);
+    public List<Difference> getSignificantDifferences(File expectedBpmnXmlFile,
+            File actualBpmnXmlFile) throws SAXException, IOException,
+            ParserConfigurationException {
+        Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXmlFile);
+        Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXmlFile);
         return xmlDiff.areDocumentsEqualReporting(expectedBpmnXmlDoc,
                 actualBpmnXmlDoc);
     }
 
-	public String checkForSignificantDifferences(File expectedBpmnXmlFile,
-			File actualBpmnXmlFile) throws SAXException, IOException,
-			ParserConfigurationException {
-		Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXmlFile);
-		Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXmlFile);
-		return checkForSignificantDifferences(expectedBpmnXmlDoc,
-				actualBpmnXmlDoc);
-	}
+    public List<Difference> getSignificantDifferences(
+            InputStream expectedBpmnXml, InputStream actualBpmnXml)
+            throws IOException, ParserConfigurationException {
+        try {
+            Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXml);
+            Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXml);
+            return xmlDiff.areDocumentsEqualReporting(expectedBpmnXmlDoc,
+                    actualBpmnXmlDoc);
+        } catch (SAXException e) {
+            throw new IOException(e.getMessage(), e.getCause());
+        }
+    }
 
-	public String checkForSignificantDifferences(File expectedBpmnXmlFile,
-			String actualBpmnXml) throws SAXException, IOException,
-			ParserConfigurationException {
-		Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXmlFile);
-		Document actualBpmnXmlDoc = docBuilder.parse(new InputSource(
-				new StringReader(actualBpmnXml)));
-		return checkForSignificantDifferences(expectedBpmnXmlDoc,
-				actualBpmnXmlDoc);
-	}
+    public String checkForSignificantDifferences(File expectedBpmnXmlFile,
+            File actualBpmnXmlFile) throws SAXException, IOException,
+            ParserConfigurationException {
+        Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXmlFile);
+        Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXmlFile);
+        return checkForSignificantDifferences(expectedBpmnXmlDoc,
+                actualBpmnXmlDoc);
+    }
 
-	public String checkForSignificantDifferences(String expectedBpmnXml,
-			String actualBpmnXml) throws SAXException, IOException,
-			ParserConfigurationException {
-		Document expectedBpmnXmlDoc = docBuilder.parse(new InputSource(
-				new StringReader(expectedBpmnXml)));
-		Document actualBpmnXmlDoc = docBuilder.parse(new InputSource(
-				new StringReader(actualBpmnXml)));
-		return checkForSignificantDifferences(expectedBpmnXmlDoc,
-				actualBpmnXmlDoc);
-	}
+    public String checkForSignificantDifferences(File expectedBpmnXmlFile,
+            String actualBpmnXml) throws SAXException, IOException,
+            ParserConfigurationException {
+        Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXmlFile);
+        Document actualBpmnXmlDoc = docBuilder.parse(new InputSource(
+                new StringReader(actualBpmnXml)));
+        return checkForSignificantDifferences(expectedBpmnXmlDoc,
+                actualBpmnXmlDoc);
+    }
 
-	public String checkForSignificantDifferences(Document expectedBpmnXml,
-			Document actualBpmnXml) throws SAXException, IOException,
-			ParserConfigurationException {
-		List<Difference> diffs = xmlDiff.areDocumentsEqualReporting(
-				expectedBpmnXml, actualBpmnXml);
+    public String checkForSignificantDifferences(String expectedBpmnXml,
+            String actualBpmnXml) throws SAXException, IOException,
+            ParserConfigurationException {
+        Document expectedBpmnXmlDoc = docBuilder.parse(new InputSource(
+                new StringReader(expectedBpmnXml)));
+        Document actualBpmnXmlDoc = docBuilder.parse(new InputSource(
+                new StringReader(actualBpmnXml)));
+        return checkForSignificantDifferences(expectedBpmnXmlDoc,
+                actualBpmnXmlDoc);
+    }
 
-		if (diffs != null && diffs.size() > 0) {
-			return xmlDiff.getDifferencesString(diffs);
-		} else {
-			return null;
-		}
-	}
+    public String checkForSignificantDifferences(Document expectedBpmnXml,
+            Document actualBpmnXml) throws SAXException, IOException,
+            ParserConfigurationException {
+        List<Difference> diffs = xmlDiff.areDocumentsEqualReporting(
+                expectedBpmnXml, actualBpmnXml);
+
+        if (diffs != null && diffs.size() > 0) {
+            return xmlDiff.getDifferencesString(diffs);
+        } else {
+            return null;
+        }
+    }
 
 }

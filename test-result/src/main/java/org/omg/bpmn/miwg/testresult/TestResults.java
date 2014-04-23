@@ -25,11 +25,14 @@
 
 package org.omg.bpmn.miwg.testresult;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
@@ -56,97 +59,107 @@ import org.simpleframework.xml.core.Persister;
  */
 @Root(name = "div")
 public class TestResults {
-	
-	private static final String HTML_FILE = "resultspage.html";
-	private static final String RESULTS_PLACEHOLDER = "{TESTRESULTS}";
 
-	@Attribute(name = "class", required = true)
-	private String clazz = TestResults.class.getSimpleName().toLowerCase();
+    private static final String HTML_FILE = "resultspage.html";
+    private static final String RESULTS_PLACEHOLDER = "{TESTRESULTS}";
 
-	@ElementList(inline = true, required = false, empty = true)
-	private List<Tool> tools;
+    @Attribute(name = "class", required = true)
+    private String clazz = TestResults.class.getSimpleName().toLowerCase();
 
-	/**
-	 * Adds a child {@link Tool} element to the results structure.
-	 * 
-	 * @param tool
-	 * 
-	 * @return The tool added or the existing
-	 */
-	public Tool addTool(Tool tool) {
-		Tool t = tool;
-		if (this.getTools().contains(tool)) {
-			t = this.getTools().get(this.getTools().indexOf(tool));
-		} else {
-			this.getTools().add(t);
-		}
+    @ElementList(inline = true, required = false, empty = true)
+    private List<Tool> tools;
 
-		return t;
-	}
+    /**
+     * Adds a child {@link Tool} element to the results structure.
+     * 
+     * @param tool
+     * 
+     * @return The tool added or the existing
+     */
+    public Tool addTool(Tool tool) {
+        Tool t = tool;
+        if (this.getTools().contains(tool)) {
+            t = this.getTools().get(this.getTools().indexOf(tool));
+        } else {
+            this.getTools().add(t);
+        }
 
-	/**
-	 * Adds a tool by name or returns the existing.
-	 * 
-	 * @param toolName
-	 * @return
-	 */
-	public Tool addTool(String toolName) {
-		Tool tool = new Tool(toolName);
+        return t;
+    }
 
-		return this.addTool(tool);
-	}
+    /**
+     * Adds a tool by name or returns the existing.
+     * 
+     * @param toolName
+     * @return
+     */
+    public Tool addTool(String toolName) {
+        Tool tool = new Tool(toolName);
 
-	/**
-	 * Returns a shadow copy of all tool results.
-	 * 
-	 * @return {@link List} of {@link Tool}
-	 */
-	public List<Tool> getToolsCopy() {
-		List<Tool> t = new LinkedList<Tool>();
-		t.addAll(getTools());
-		return t;
-	}
+        return this.addTool(tool);
+    }
 
-	public String toString() {
-//		RegistryMatcher m = new RegistryMatcher();
-//		m.bind(String.class, new StringTransformer());
-		Serializer serializer = new Persister();
-		StringWriter writer = new StringWriter();
-		
-		try {
-			serializer.write(this, writer);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "Exception occurred. See stack trace in log.";
-		}
-		return produceSurroundingHtml(writer);
-	}
-	
-	private String produceSurroundingHtml(StringWriter writer) {
-		InputStream is = TestResults.class.getClassLoader().getResourceAsStream(HTML_FILE);
-		String html = convertStreamToString(is);
+    /**
+     * Returns a shadow copy of all tool results.
+     * 
+     * @return {@link List} of {@link Tool}
+     */
+    public List<Tool> getToolsCopy() {
+        List<Tool> t = new LinkedList<Tool>();
+        t.addAll(getTools());
+        return t;
+    }
 
-		return html.replace(RESULTS_PLACEHOLDER, writer.toString());
-	}
-	
-	public static String convertStreamToString(java.io.InputStream is) {
-	    java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-	    return s.hasNext() ? s.next() : "";
-	}
+    public String toString() {
+        // RegistryMatcher m = new RegistryMatcher();
+        // m.bind(String.class, new StringTransformer());
+        Serializer serializer = new Persister();
+        StringWriter writer = new StringWriter();
 
-	/* Getter & Setter */
+        try {
+            serializer.write(this, writer);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Exception occurred. See stack trace in log.";
+        }
+        return produceSurroundingHtml(writer);
+    }
 
-	/**
-	 * Initializes the list of {@link Tool}
-	 * 
-	 * @return List of {@link Tool}s
-	 */
-	private List<Tool> getTools() {
-		if (tools == null) {
-			tools = new LinkedList<Tool>();
-		}
+    private String produceSurroundingHtml(StringWriter writer) {
+        InputStream is = TestResults.class.getClassLoader()
+                .getResourceAsStream(HTML_FILE);
+        String html = convertStreamToString(is);
 
-		return tools;
-	}
+        return html.replace(RESULTS_PLACEHOLDER, writer.toString());
+    }
+
+    public static String convertStreamToString(java.io.InputStream is) {
+        java.util.Scanner s = null;
+        try {
+            s = new java.util.Scanner(is).useDelimiter("\\A");
+            return s.hasNext() ? s.next() : "";
+        } finally {
+            s.close();
+        }
+    }
+
+    /* Getter & Setter */
+
+    /**
+     * Initializes the list of {@link Tool}
+     * 
+     * @return List of {@link Tool}s
+     */
+    private List<Tool> getTools() {
+        if (tools == null) {
+            tools = new LinkedList<Tool>();
+        }
+
+        return tools;
+    }
+
+    public void writeResultFile(File f) throws IOException {
+        FileUtils.writeStringToFile(f, toString());
+    }
 
 }

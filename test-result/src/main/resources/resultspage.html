@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/highlightjs/github.css">
-		<link rel="stylesheet" href="../css/bpmn-miwg.css">
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
 	</head>
 	<body>
 		<div class="navbar">
 			<div class="navbar-inner">
-				<a class="brand" href="/">BPMN-MIWG</a>
-				<ul class="nav">
-					<li><a href="/">Home</a></li>
-					<li><a href="/xml-compare/overview.html">XML Compare</a></li>
-					<li><a href="/xpath/overview.html">XPath</a></li>
-				</ul>	
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
 			</div>
 		</div>
 		{TESTRESULTS}

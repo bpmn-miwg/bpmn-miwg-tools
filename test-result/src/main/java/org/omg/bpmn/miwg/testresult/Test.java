@@ -20,6 +20,9 @@ public class Test {
 	@Attribute(name = "data-test", required = true)
 	private String testName;
 
+    @Attribute(name = "data-variant", required = true)
+    private String testVariant;
+
 	@Element(name = "h3", required = true)
 	private String name;
 
@@ -31,10 +34,11 @@ public class Test {
 	public Test() {
 	}
 
-	public Test(String name) {
+	public Test(String name, String variant) {
 		this.name = name;
 		// TODO is it possible to set both h3 and data-test with a single field?
 		this.testName = name;
+        this.testVariant = variant;
 	}
 
 	/**
@@ -112,4 +116,8 @@ public class Test {
 		}
 		return this.output;
 	}
+
+    public void addAll(Collection<? extends Output> significantDifferences) {
+        getOutputs().addAll(significantDifferences);
+    }
 }

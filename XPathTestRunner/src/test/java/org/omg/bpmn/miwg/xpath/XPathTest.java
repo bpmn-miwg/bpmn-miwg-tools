@@ -52,70 +52,74 @@ import org.omg.bpmn.miwg.xpathTestRunner.base.TestOutput;
 @RunWith(value = Parameterized.class)
 public class XPathTest {
 
-	private static final String S = File.separator;
-	private static final String RESOURCE_BASE_DIR = "." + S + "target" + S
-			+ "test-suite" + S;
+    private static final String S = File.separator;
+    private static final String RESOURCE_BASE_DIR = "." + S + "target" + S
+            + "test-suite" + S;
 
-	private static final String RPT_DIR = "target" + S + "site";
+    private static final String RPT_DIR = "target" + S + "site";
 
-	private static File baseDir;
+    private static File baseDir;
 
     private static List<FileResult> files = new ArrayList<FileResult>();
 
-	private TestInstance instance;
+    private TestInstance instance;
 
-	public XPathTest(TestInstance instance) {
-		this.instance = instance;
-	}
+    public XPathTest(TestInstance instance) {
+        this.instance = instance;
+    }
 
     @AfterClass
     public static void tearDown() {
+        new File(RPT_DIR).mkdirs();
         File idx = new File(RPT_DIR, "overview.html");
         System.out.println("writing index to " + idx.getAbsolutePath());
-        IndexWriter.write2(XPathTest.class.getSimpleName(), idx,
-                files);
+        IndexWriter.write2(XPathTest.class.getSimpleName(), idx, files);
     }
 
-	@Parameters //(name= "{index}: {0}")
-	public static Collection<Object[]> data() throws Throwable {
-		baseDir = new File(RESOURCE_BASE_DIR).getCanonicalFile();
-		TestManager manager = new TestManager();
-		List<TestInstance> testInstances = TestInstance.buildTestInstances(
-				manager, baseDir.getCanonicalPath());
+    @Parameters
+    // (name= "{index}: {0}")
+    public static Collection<Object[]> data() throws Throwable {
+        baseDir = new File(RESOURCE_BASE_DIR).getCanonicalFile();
+        TestManager manager = new TestManager();
+        List<TestInstance> testInstances = TestInstance.buildTestInstances(
+                manager, baseDir.getCanonicalPath());
 
-		List<Object[]> l = new LinkedList<Object[]>();
+        List<Object[]> l = new LinkedList<Object[]>();
 
-		for (TestInstance ti : testInstances) {
-			l.add(new Object[] { ti });
-		}
+        for (TestInstance ti : testInstances) {
+            l.add(new Object[] { ti });
+        }
 
-		return l;
-	}
+        return l;
+    }
 
-	@Test
-	public void testRun() throws IOException {
-		TestManager manager = new TestManager();
-		final TestOutput out = new TestOutput(instance, RPT_DIR);
-		
-		manager.executeTests(instance, RPT_DIR);
-		
-		//Assert.assertEquals(0, instance.getFindings());
-		
-		out.close();
+    @Test
+    public void testRun() throws IOException {
+        TestManager manager = new TestManager();
+        final TestOutput out = new TestOutput(instance, RPT_DIR);
+
+        manager.executeTests(instance, RPT_DIR);
+
+        // Assert.assertEquals(0, instance.getFindings());
+
+        out.close();
         assertNotNull(out.getFile());
-        files.add(new FileResult(){
-        	
-        	public String buildHtml() {
-        		StringBuilder builder = new StringBuilder();
-        		
-        		builder.append("\t<div class=\"test\" data-findings=\"" + instance.getFindings() + "\" data-ok=\"" + instance.getOKs()+ "\">");
-				builder.append("<a href=\"" + out.getName() + ".txt\">" + out.getName() + "</a>");
-				builder.append("</div>\n");
-				
-				return builder.toString();
-        	}
-        	
+        files.add(new FileResult() {
+
+            public String buildHtml() {
+                StringBuilder builder = new StringBuilder();
+
+                builder.append("\t<div class=\"test\" data-findings=\""
+                        + instance.getFindings() + "\" data-ok=\""
+                        + instance.getOKs() + "\">");
+                builder.append("<a href=\"" + out.getName() + ".txt\">"
+                        + out.getName() + "</a>");
+                builder.append("</div>\n");
+
+                return builder.toString();
+            }
+
         });
-	}
+    }
 
 }

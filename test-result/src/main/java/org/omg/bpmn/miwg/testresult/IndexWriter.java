@@ -60,70 +60,30 @@ public class IndexWriter {
     }
 
     /***
-     * This function is deprecated and only present until it is ensured that the
-     * new method works.
-     */
-    @Deprecated
-    public static void write(String rptName, File idx, List<File> files) {
-        PrintWriter out = null;
-        try {
-            out = new PrintWriter(idx);
-            out.println("<!DOCTYPE html><html><head>");
-            out.println("\t<link rel=\"stylesheet\" href=\"/css/bootstrap.css\">");
-            out.println("\t<link rel=\"stylesheet\" href=\"/css/bpmn-miwg.css\">");
-            out.println("</head><body>");
-            out.println("\t<div class=\"navbar\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"/\">BPMN-MIWG</a><ul class=\"nav\">");
-            out.println("\t\t<li><a href=\"/\">Home</a></li>");
-            out.println("\t\t<li><a href=\"/xml-compare/overview.html\">XML Compare</a></li>");
-            out.println("\t\t<li><a href=\"/xpath/overview.html\">XPath</a></li>");
-            out.println("\t</ul>\t</div></div>");
-
-            out.println("<div class=\"testresults\">");
-            for (File f : files) {
-                out.print("\t<div class=\"test\">");
-                out.print("<a href=\"");
-                out.print(f.getName());
-                out.print("\">");
-                out.print(f.getName());
-                out.print("</a>");
-                out.println("</div>");
-            }
-            out.println("</div>");
-
-            out.println("\t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js\"><!-- required --></script>");
-            out.println("\t<script src=\"/js/bpmn-miwg.js\"><!-- required --></script>");
-            out.println("</body></html>");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e.getMessage(), e);
-        } finally {
-            out.close();
-        }
-    }
-
-    /***
      * Writes the test results to an HTML document.
      * 
      * @param rptName
      *            Report name
-     * @param idx
+     * @param resultsOverview
      *            Output file
      * @param collection
      *            A list of FileResult instances which build the HTML fragments
      *            for each file using the buildHtml method.
      */
-    public static void write2(String rptName, File idx,
+    public static void write2(String rptName, File resultsOverview,
             Collection<FileResult> collection) {
         PrintWriter out = null;
         InputStream templateStream = null;
-        Scanner scanner = new Scanner(templateStream, "UTF-8");
+        Scanner scanner = null;
         try {
             templateStream = IndexWriter.class
                     .getResourceAsStream("/resultspage.html");
+            scanner = new Scanner(templateStream, "UTF-8");
             String template = scanner
                     .useDelimiter("\\A").next();
             // individual results are in sub-dir so need to fix links
             template = template.replace("../css", "css").replace("../js", "js");
-            out = new PrintWriter(idx);
+            out = new PrintWriter(resultsOverview);
 
             StringBuilder sb = new StringBuilder();
             sb.append("<div class=\"testresults\">");
@@ -136,7 +96,11 @@ public class IndexWriter {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e.getMessage(), e);
         } finally {
-            out.close();
+            try {
+                out.close();
+            } catch (Exception e) {
+                ;
+            }
             try {
                 templateStream.close();
             } catch (IOException e) {

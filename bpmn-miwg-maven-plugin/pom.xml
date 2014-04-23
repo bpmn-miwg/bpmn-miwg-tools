@@ -4,7 +4,7 @@
 
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>bpmn-miwg-maven-plugin</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.2-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>BPMN-MIWG Maven Plugin</name>
@@ -18,7 +18,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>1.6</java.version>
+    <java.version>1.7</java.version>
+    <bpmn.miwg.tools.version>0.2-SNAPSHOT</bpmn.miwg.tools.version>
   </properties>
   
   <distributionManagement>
@@ -73,17 +74,17 @@
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>xpath</artifactId>
-      <version>0.1-SNAPSHOT</version>
+      <version>${bpmn.miwg.tools.version}</version>
     </dependency>
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>xml-compare</artifactId>
-      <version>0.1-SNAPSHOT</version>
+      <version>${bpmn.miwg.tools.version}</version>
     </dependency>
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>test-suite</artifactId>
-      <version>0.1-SNAPSHOT</version>
+      <version>${bpmn.miwg.tools.version}</version>
     </dependency>
     <dependency>
       <groupId>org.glassfish</groupId>
@@ -169,5 +170,4 @@
       </build>
     </profile>
   </profiles>
-  
 </project>
