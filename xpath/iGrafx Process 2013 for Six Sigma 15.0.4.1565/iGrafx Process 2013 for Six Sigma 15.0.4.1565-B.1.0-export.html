@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+		<div class="testresults">
+   <div class="tool" data-vendor="iGrafx Process 2013 for Six Sigma 15.0.4.1565">
+      <h2>iGrafx Process 2013 for Six Sigma 15.0.4.1565</h2>
+      <div class="test" data-test="B.1.0" data-variant="export">
+         <h3>B.1.0</h3>
+         <div class="finding">
+            <h4>FINDING: callingMethod; Message: Cannot find attribute; Parameter: id</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectElementX; Message: //bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:messageFlow[@name=&apos;Message Flow 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name=&apos;Start Event Timer&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkTimerEvent; Message: Cannot find timer event definition; Parameter: bpmn:timerEventDefinition | bpmn:eventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Abstract Task 1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;process_IDAAJ0HB&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name=&apos;User Task 2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:serviceTask[@name=&apos;Service Task 3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event None 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkXORMarkersForProcess; Message: The XOR marker for the BPMN element with the id &apos;shape_IDAANVIG&apos; is true although false is expected.; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElementX; Message: .//bpmn:lane[@name=&apos;Lane 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElementX; Message: .//bpmn:lane[@name=&apos;Lane 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event Message&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway Divergence&apos; and @id=&apos;shape_IDAQHVIG&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 1&apos; and @id=&apos;shape_IDAANVIG&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name=&apos;Call Activity Collapsed&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkTextAssociation; Message: Text annotation &apos;Text Annotation&apos; not found; Parameter: bpmn:textAnnotation[@id=../bpmn:association[@sourceRef=&apos;shape_IDAANVIG&apos;]/@targetRef]/bpmn:text</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name=&apos;Call Activity - Expanded&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectProcessOfCallActivity; Message: Parent failed; Parameter: selectProcessofCallActivity</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event None 1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/definitions/process[@id=&apos;id=&quot;process_IDAPH0HB&quot;&apos;]/exclusiveGateway[@id=&apos;id=&quot;shape_IDAANVIG&quot;&apos;]/</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name=&apos;Call Activity Calling a Global Task&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkGlobalTask; Message: Attibute &apos;calledElement&apos; does not exist (as expected)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/definitions/process[@id=&apos;id=&quot;process_IDAPH0HB&quot;&apos;]/parallelGateway[@id=&apos;id=&quot;shape_IDAQHVIG&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;User Task 5&apos; and @id=&apos;shape_IDAXZVIG&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 2&apos; and @id=&apos;shape_IDACBWIG&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:subProcess[@name=&apos;Sub Process - Expanded&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event None 2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/definitions/process[@id=&apos;id=&quot;process_IDAPH0HB&quot;&apos;]/exclusiveGateway[@id=&apos;id=&quot;shape_IDACBWIG&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Service Task 7&apos; and @id=&apos;shape_IDAWZJIG&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataObject &apos;Data Object&apos;; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataStoreReference &apos;Data Store Reference&apos;; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;shape_IDACPKIG&apos;]</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>

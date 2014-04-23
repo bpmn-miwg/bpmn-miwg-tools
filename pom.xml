@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.omg.bpmn.miwg</groupId>
+  <artifactId>test-suite</artifactId>
+  <version>0.2-SNAPSHOT</version>
+  <name>BPMN 2.0 MIWG Test Suite</name>
+  <description>
+    <![CDATA[
+      Reference BPMN files and various vendor's implementations of the same. 
+    ]]>
+  </description>
+  <packaging>jar</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <repositories>
+    <repository>
+      <id>bpmn-miwg-snapshot</id>
+      <name>BPMN-MIWG Snapshot Repository</name>
+      <url>http://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>test-suite</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>test-suite</artifactId>
+      <version>${project.version}</version>
+      <classifier>site</classifier>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <filtering>false</filtering>
+        <directory>${basedir}</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+        <excludes>
+          <exclude>target/**/*</exclude>
+          <exclude>**/*.bak</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>process-resources</phase>
+            <configuration>
+              <target>
+                <echo>Unzipping test suite from ${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}</echo>
+                <unzip src="${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}" 
+                    dest="${basedir}/">
+                  <patternset>
+                    <exclude name="META-INF/**/*"/>
+                    <exclude name="target/**/*"/>
+                    <exclude name="pom.xml"/>
+                  </patternset>
+                </unzip>
+                <echo>Unzipping test results from ${maven.dependency.org.omg.bpmn.miwg.test-suite.site.jar.path}</echo>
+                <unzip src="${maven.dependency.org.omg.bpmn.miwg.test-suite.site.jar.path}" 
+                    dest="${basedir}/">
+                  <patternset>
+                    <exclude name="images/**"/>
+                    <exclude name="index.html"/>
+                    <exclude name="META-INF/**/*"/>
+                    <exclude name="pom.xml"/>
+                    <exclude name="target/**/*"/>
+                    <exclude name="*.sh"/>
+                  </patternset>
+                </unzip>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+</project>
+

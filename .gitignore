@@ -1,0 +1,8 @@
+*.~vsd
+Thumbs.db
+~$*.xlsx
+.DS_Store
+.project
+.classpath
+.settings
+/target

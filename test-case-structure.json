@@ -4,7 +4,7 @@
             "category": "A",
             "name": "Layout",
             "description": "Validate capability to layout shares on a canvas",
-            "url_fragment": "A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes",
+            "url_fragment": "",
             "cases": [
                 {
                     "case": "A.1",
@@ -66,7 +66,7 @@
             "category": "B",
             "name": "Conformance class coverage",
             "description": "Validate capability to use elements from a specific conformance sub class",
-            "url_fragment": "B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set",
+            "url_fragment": "",
             "cases": [
                 {
                     "case": "B.1",
@@ -97,8 +97,8 @@
     ],
     "config": {
         "url_pattern": {
-            "file": "https://raw2.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/{CATEGORYURL}/{TOOLURL}/{FILEURL}.{FILEEXT}",
-            "folder": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/tree/master/{CATEGORYURL}/{TOOLURL}"
+            "file": "https://raw2.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/{TOOLURL}/{FILEURL}.{FILEEXT}",
+            "folder": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/tree/master/{TOOLURL}"
         }
     },
     "results": [

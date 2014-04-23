@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+		<div class="testresults">
+   <div class="tool" data-vendor="Signavio Process Editor 7.8.1">
+      <h2>Signavio Process Editor 7.8.1</h2>
+      <div class="test" data-test="A.4.0" data-variant="export">
+         <h3>A.4.0</h3>
+         <div class="ok">
+            <h4>OK     : selectCollaboration; Message: bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectPool; Message: bpmn:participant[@name=&apos;Pool&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectReferencedProcess; Message: //bpmn:process[@id=&apos;sid-F6A97136-BAB1-4868-B69F-94AE6B241575&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;sid-81ED1ADC-285D-4F04-BE90-0833AE99E3FF&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;sid-81ED1ADC-285D-4F04-BE90-0833AE99E3FF&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;sid-ECF55919-4E5E-4A5F-B1B8-4EB5605002CD&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;sid-ECF55919-4E5E-4A5F-B1B8-4EB5605002CD&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;sid-43E3DEF6-A62A-4B92-BD3C-77EB0152627C&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;sid-74BF408D-85BA-499A-88BC-7B450448E62A&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;sid-74BF408D-85BA-499A-88BC-7B450448E62A&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;sid-B39C070D-E281-4876-9FD0-BE31754F0679&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;sid-16A5848A-5BEE-4A0F-928A-6CAEC98C19D3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;sid-16A5848A-5BEE-4A0F-928A-6CAEC98C19D3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;sid-C100DF64-FF7C-413F-A239-9898C110E937&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;sid-ef959fdd-e30a-45aa-b56e-612d6258b337&quot;&apos;]/process[@id=&apos;id=&quot;sid-A334A33B-07AE-4EBB-B108-AC28652ED303&quot;&apos;]/task[@id=&apos;id=&quot;sid-74BF408D-85BA-499A-88BC-7B450448E62A&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;sid-2A318EF2-0359-4087-9770-592C85A19BF1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 4&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 6&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event 4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;sid-85E3C05B-B03A-4703-81B6-AAE7B3393785&apos;]</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>

@@ -56,15 +56,15 @@ function ModelInterchangePresenter() {
                   s[1]=s[2];
                   s[2]=s[3];
               }
-              console.log('vendor'+s[0]+'s2: '+ s[2]);
+              console.log('tool version: '+s[0]+', variant.html: '+ s[2]);
               var cur = {
                 suite: s[1],
                 vendor: unescape(s[0]),
                 /* Reference has no variant, e.g. "Reference-A.1.0.bpmn.txt" */
                   variant: s[2] === undefined ? '' : s[2].substring(0,s[2].indexOf('.')),
                   url: d.href,
-                  xpathUrl: baseUrl+'/xpath/'+d.href.substring(d.href.lastIndexOf('/')+1),
-                  xmlCompareUrl: baseUrl+'/xml-compare/'+d.href.substring(d.href.lastIndexOf('/')+1,d.href.length-9)+'.html',
+                  xpathUrl: baseUrl+'/xpath/'+s[0]+'/'+d.href.substring(d.href.lastIndexOf('/')+1),
+                  xmlCompareUrl: baseUrl+'/xml-compare/'+s[0]+'/'+d.href.substring(d.href.lastIndexOf('/')+1,d.href.length),
                   findings: $(d).parent().data('findings') === undefined ? 'N/A' : $(d).parent().data('findings'),
                   ok: $(d).parent().data('ok') === undefined ? 'N/A' : $(d).parent().data('ok'),
                   diffs: $(d).parent().data('diffs') === undefined ? 'N/A' : $(d).parent().data('diffs')
@@ -124,11 +124,11 @@ function ModelInterchangePresenter() {
           
           $('.test').each(function(i,d) {
               var test = $(d).data('test');
-              var referenceFile = '/'+test.substring(0,1)+'/Reference/'+test;
+              var referenceFile = '/Reference/'+test+'.bpmn';
               $(d).append('<div class="span6"><h4>Reference</h4><pre><code class="xml reference" data-file="'+referenceFile+'"></code></pre></div>');
           
               var vendor = $(d).parent().data('vendor');
-              var vendorFile = '/'+test.substring(0,1)+'/'+vendor+'/'+test.substring(0,test.indexOf('.bpmn'))+'-'+variant+'.bpmn';
+              var vendorFile = '/'+vendor+'/'+test+'-'+variant+'.bpmn';
               $(d).append('<div class="span6"><h4>'+vendor+'</h4><pre><code class="xml vendor" data-file="'+vendorFile+'"></code></pre></div>');
         
           });
@@ -180,7 +180,7 @@ function ModelInterchangePresenter() {
   this.fetchBpmn = function(target) {
     $.each($('code.'+target), function(i,d) {
       var test = $(d).parent().parent().parent().data('test');
-      var file = '/bpmn-miwg-tools'+$(d).data('file');
+      var file = ''+$(d).data('file');
       console.log('loading: '+file+' for '+target+', '+test);
       $.ajax({
         url: file,

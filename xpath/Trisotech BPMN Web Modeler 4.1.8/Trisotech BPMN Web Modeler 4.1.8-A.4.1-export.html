@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+		<div class="testresults">
+   <div class="tool" data-vendor="Trisotech BPMN Web Modeler 4.1.8">
+      <h2>Trisotech BPMN Web Modeler 4.1.8</h2>
+      <div class="test" data-test="A.4.1" data-variant="export">
+         <h3>A.4.1</h3>
+         <div class="ok">
+            <h4>OK     : selectCollaboration; Message: bpmn:collaboration</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectPool; Message: No node found; Parameter: bpmn:participant[@name=&apos;Pool 1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectReferencedProcess; Message: Node is null; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;%s&apos; and @targetRef=&apos;_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;_A01AAF9C-90E0-409E-BB95-513D9E3A8818&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;_5A4098FC-7F4D-424F-BC74-D8214B285E31&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;%s&apos; and @sourceRef=&apos;_5A4098FC-7F4D-424F-BC74-D8214B285E31&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;_0C88B698-FE9B-479F-838A-95CE89EF5510&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/semantic:definitions[@id=&apos;id=&quot;_15A84127-BD9A-4260-826F-D2385063E8CE&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-2&quot;&apos;]/semantic:task[@id=&apos;id=&quot;_F0305A7F-0498-40A0-AA0D-2E3E1A3C7CDA&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;_95A23C5C-E0B8-4981-8902-817A1F9F412D&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 6&apos; and @id=&apos;_0F9E92CB-2176-45B0-9C3A-29AD26A9DD97&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 4&apos; and @id=&apos;_98B8EA45-7709-4016-8E2C-19911E62175E&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;_C00D4EFA-02DB-4421-BDBD-1C5FAA9DD3AF&apos;]</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>

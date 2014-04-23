@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+		<div class="testresults">
+   <div class="tool" data-vendor="Trisotech BPMN Web Modeler 4.1.8">
+      <h2>Trisotech BPMN Web Modeler 4.1.8</h2>
+      <div class="test" data-test="A.2.0" data-variant="export">
+         <h3>A.2.0</h3>
+         <div class="ok">
+            <h4>OK     : selectElementX; Message: /bpmn:definitions/bpmn:process</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;_DBBA7F0B-6CBE-4834-A7D9-CCBF7EDAA03A&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Split Flow)&apos; and @id=&apos;_92DEB621-9368-46D4-8ADF-FC4176D5F420&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;_48EAE833-0F18-46F5-96AD-A16636C1E9CB&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/semantic:definitions[@id=&apos;id=&quot;C7A4D800-1476-45DF-88DF-E2FB35EF97C7&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-&quot;&apos;]/semantic:exclusiveGateway[@id=&apos;id=&quot;_92DEB621-9368-46D4-8ADF-FC4176D5F420&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_E46A5468-7ED9-4F0D-BAE9-D6B1DD06F6AC&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/semantic:definitions[@id=&apos;id=&quot;C7A4D800-1476-45DF-88DF-E2FB35EF97C7&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-&quot;&apos;]/semantic:exclusiveGateway[@id=&apos;id=&quot;_92DEB621-9368-46D4-8ADF-FC4176D5F420&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;_54A9C845-9C21-4F47-A5AC-051A7291937F&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;_131F225C-D7CE-4926-A154-4EE6AAC09AC5&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/semantic:definitions[@id=&apos;id=&quot;C7A4D800-1476-45DF-88DF-E2FB35EF97C7&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-Page_sid-9d8bc1e2-52b1-4b39-ba7d-7bb10d663194-&quot;&apos;]/semantic:task[@id=&apos;id=&quot;_E46A5468-7ED9-4F0D-BAE9-D6B1DD06F6AC&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;_131F225C-D7CE-4926-A154-4EE6AAC09AC5&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;_CB535F2D-1A28-4B9B-9270-71956E81C1AE&apos;]</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>
