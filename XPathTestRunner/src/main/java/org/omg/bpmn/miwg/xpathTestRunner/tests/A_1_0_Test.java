@@ -16,7 +16,7 @@ public class A_1_0_Test extends AbstractXpathTest {
         navigateElement("bpmn:startEvent", "Start Event");
 
         navigateFollowingElement("bpmn:task", "Task 1");
-
+       
         navigateFollowingElement("bpmn:task", "Task 2");
 
         navigateFollowingElement("bpmn:task", "Task 3");

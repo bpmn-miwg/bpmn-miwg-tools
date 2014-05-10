@@ -8,6 +8,8 @@ import java.util.List;
 import org.omg.bpmn.miwg.xpathTestRunner.base.testEntries.*;
 import org.omg.bpmn.miwg.xpathTestRunner.testBase.Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_0_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_1_Test;
+import org.omg.bpmn.miwg.xpathTestRunner.tests.A_1_2_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_2_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_3_0_Test;
 import org.omg.bpmn.miwg.xpathTestRunner.tests.A_4_0_Test;
@@ -32,6 +34,8 @@ public class TestManager {
 		registerTest(new B_1_0_Test());
 		registerTest(new B_2_0_Test());
 		registerTest(new A_1_0_Test());
+		registerTest(new A_1_1_Test());
+		registerTest(new A_1_2_Test());
 		registerTest(new A_2_0_Test());
 		registerTest(new A_3_0_Test());
 		registerTest(new A_4_0_Test());

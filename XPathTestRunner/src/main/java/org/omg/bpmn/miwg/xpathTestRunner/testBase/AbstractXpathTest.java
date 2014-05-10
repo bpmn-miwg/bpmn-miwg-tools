@@ -25,13 +25,13 @@ import org.w3c.dom.Text;
 
 public abstract class AbstractXpathTest extends AbstractTest {
 
-    private XPath xpath;
+	private XPath xpath;
 	private Node currentNode;
 	private Stack<Node> nodeStack;
 
 	@Override
 	public void init(TestOutput out) {
-        xpath = null;
+		xpath = null;
 		nodeStack = null;
 		super.init(out);
 	}
@@ -63,15 +63,15 @@ public abstract class AbstractXpathTest extends AbstractTest {
 		}
 	}
 
-    protected void loadResource(InputStream is) throws Throwable {
-        super.loadResource(is);
-        XPathFactory xpathfactory = XPathFactory.newInstance();
-        xpath = xpathfactory.newXPath();
-        xpath.setNamespaceContext(new NameSpaceContexts());
-        nodeStack = new Stack<Node>();
-        push(doc.getDocumentElement());
-        normalizeNames();
-    }
+	protected void loadResource(InputStream is) throws Throwable {
+		super.loadResource(is);
+		XPathFactory xpathfactory = XPathFactory.newInstance();
+		xpath = xpathfactory.newXPath();
+		xpath.setNamespaceContext(new NameSpaceContexts());
+		nodeStack = new Stack<Node>();
+		push(doc.getDocumentElement());
+		normalizeNames();
+	}
 
 	protected Node pop() {
 		NodePopEntry e = new NodePopEntry(callingMethod(),
@@ -706,6 +706,34 @@ public abstract class AbstractXpathTest extends AbstractTest {
 				Boolean.toString(defaultValue));
 	}
 
+	protected void checkAttributeValue(Node n, String attribute, String value)
+			throws Throwable {
+		if (n == null) {
+			finding("", "Null node");
+			return;
+		}
+
+		Node attr = n.getAttributes().getNamedItem(attribute);
+
+		if (attr == null) {
+			finding("",
+					String.format("Attribute %s is not existing.", attribute));
+			return;
+
+		}
+
+		String s = attr.getTextContent();
+
+		if (!s.equals(value)) {
+			finding(attribute, String.format(
+					"Attribute %s does not have the expected value '%s'",
+					attribute, value));
+			return;
+		}
+
+		ok("Attribute " + attribute + "=" + value);
+	}
+
 	protected void checkAttributeValue(String attribute, String value,
 			String defaultValue) throws Throwable {
 		if (currentNode == null) {
@@ -1201,9 +1229,9 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 		String xpathName;
 		if (name == null || name.equals("")) {
-			xpathName = "(not(@name) or @name='')"; //"string-length(@attr)=0";
+			xpathName = "(not(@name) or @name='')"; // "string-length(@attr)=0";
 		} else {
-			xpathName = "@name='%s'";
+			xpathName = String.format("@name='%s'", name);
 		}
 
 		String xpath = String.format("//bpmn:messageFlow[%s and @%s='%s']",
@@ -1332,29 +1360,82 @@ public abstract class AbstractXpathTest extends AbstractTest {
 
 	}
 
+	public void checkOwner(OwnerType ownerType, String potentialOwner)
+			throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String xpath;
+		if (ownerType == OwnerType.PotentialOwner)
+			xpath = "bpmn:potentialOwner/bpmn:resourceRef";
+		else
+			xpath = "bpmn:performer/bpmn:resourceRef";
+
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			finding(xpath, "Cannot find resource reference");
+			return;
+		}
+
+		String ref = n.getTextContent();
+
+		String xpath2 = String.format(
+				"/bpmn:definitions/bpmn:resource[@id='%s']", ref);
+		Node n2 = findNode(currentNode, xpath2);
+		if (n2 == null) {
+			finding(xpath, "Cannot find resource");
+			return;
+		}
+
+		checkAttributeValue(n2, "name", potentialOwner);
+	}
+
+	public void checkOperation(String operation) throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String ref = getAttribute(currentNode, "operationRef");
+		String xpath = String.format(
+				"/bpmn:definitions/bpmn:interface/bpmn:operation[@id='%s']",
+				ref);
+
+		Node n = findNode(currentNode, xpath);
+		if (n == null) {
+			finding(xpath, "Cannot find operation");
+			return;
+		}
+
+		checkAttributeValue(n, "name", operation);
+	}
+
 	public Node getCurrentNode() {
 		return currentNode;
 	}
 
-    @Override
-    public void execute(TestInstance instance) throws Throwable {
+	@Override
+	public void execute(TestInstance instance) throws Throwable {
 
-        {
-            loadFile(instance.getFile());
-            execute();
-            instance.addFindings(resultsFinding());
-            instance.addOK(resultsOK());
+		{
+			loadFile(instance.getFile());
+			execute();
+			instance.addFindings(resultsFinding());
+			instance.addOK(resultsOK());
 
-        }
-    }
+		}
+	}
 
-    @Override
-    public List<? extends Output> execute(InputStream is) throws Throwable {
-        loadResource(is);
-        execute();
-        return getOutputs();
-    }
+	@Override
+	public List<? extends Output> execute(InputStream is) throws Throwable {
+		loadResource(is);
+		execute();
+		return getOutputs();
+	}
 
-    protected abstract void execute() throws Throwable;
+	protected abstract void execute() throws Throwable;
 
 }
