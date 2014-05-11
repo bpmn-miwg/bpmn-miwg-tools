@@ -1,5 +1,670 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/176",
+    "id": 33009331,
+    "number": 176,
+    "title": "Clarifications required on the usage of Human Performer",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?",
+      "gravatar_id": "885e40c5b90be7c7899c43ceaf13273f",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
+        "name": "Test: A.1.1",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-05-07T18:02:33Z",
+    "updated_at": "2014-05-07T18:02:33Z",
+    "closed_at": null,
+    "body": "In the context of preparing test case A.1.1 we were not able to obtain a clear consensus on the proper usage of Human Performer vs Potential Performer for User Tasks"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/175",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/175/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/175/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/175/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/175",
+    "id": 32969607,
+    "number": 175,
+    "title": "Cannot create a vertical pool/lane set",
+    "user": {
+      "login": "Francois-W4",
+      "id": 6552230,
+      "avatar_url": "https://avatars.githubusercontent.com/u/6552230?",
+      "gravatar_id": "b9b61a189826102c3168f02d43a909ac",
+      "url": "https://api.github.com/users/Francois-W4",
+      "html_url": "https://github.com/Francois-W4",
+      "followers_url": "https://api.github.com/users/Francois-W4/followers",
+      "following_url": "https://api.github.com/users/Francois-W4/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Francois-W4/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Francois-W4/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Francois-W4/subscriptions",
+      "organizations_url": "https://api.github.com/users/Francois-W4/orgs",
+      "repos_url": "https://api.github.com/users/Francois-W4/repos",
+      "events_url": "https://api.github.com/users/Francois-W4/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Francois-W4/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test+A.4.1",
+        "name": "Test A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+W4+BPMN%2B+Composer",
+        "name": "Tool: W4 BPMN+ Composer",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-05-07T09:37:45Z",
+    "updated_at": "2014-05-07T09:37:45Z",
+    "closed_at": null,
+    "body": "Ergonomics of the W4 BPMN+ Composer does not allow the creation of vertical lanes/pools\r\nProduct needs to be improved."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/174",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/174/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/174/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/174/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/174",
+    "id": 32969213,
+    "number": 174,
+    "title": "Can't position lanes below a pool",
+    "user": {
+      "login": "Francois-W4",
+      "id": 6552230,
+      "avatar_url": "https://avatars.githubusercontent.com/u/6552230?",
+      "gravatar_id": "b9b61a189826102c3168f02d43a909ac",
+      "url": "https://api.github.com/users/Francois-W4",
+      "html_url": "https://github.com/Francois-W4",
+      "followers_url": "https://api.github.com/users/Francois-W4/followers",
+      "following_url": "https://api.github.com/users/Francois-W4/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Francois-W4/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Francois-W4/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Francois-W4/subscriptions",
+      "organizations_url": "https://api.github.com/users/Francois-W4/orgs",
+      "repos_url": "https://api.github.com/users/Francois-W4/repos",
+      "events_url": "https://api.github.com/users/Francois-W4/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Francois-W4/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+W4+BPMN%2B+Composer",
+        "name": "Tool: W4 BPMN+ Composer",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-05-07T09:32:10Z",
+    "updated_at": "2014-05-07T09:32:10Z",
+    "closed_at": null,
+    "body": "Due to ergonomics considerations, a pool cannot be positionned above an \"isolated\" set of lanes (out of a pool). Product has to be improved."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/173",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/173/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/173/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/173/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/173",
+    "id": 32746870,
+    "number": 173,
+    "title": "Misaligned elements",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test+A.4.1",
+        "name": "Test A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process+2013+for+Six+Sigma",
+        "name": "Tool: iGrafx Process 2013 for Six Sigma",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-05-03T13:25:01Z",
+    "updated_at": "2014-05-03T13:32:06Z",
+    "closed_at": null,
+    "body": "In the A.4.0 import tests, several elements are completely misaligned:\r\n\r\n1. *Message Flow 1* (from *Task 1* to *Task 3*)\r\n2. The sequence flow from *Expanded Sub-Process 1* to *Task 5*\r\n3. The contents of *Expanded Sub-Process 1*\r\n4. The contents of *\"Expanded Sub-Process 2*\r\n\r\n*Note*: The missing labels are already reported in https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/143.\r\n\r\n**A.4.0-reference**\r\n\r\n![a 4 0](https://cloud.githubusercontent.com/assets/4007840/2870421/bb1ef62a-d2c5-11e3-8985-e8b7359dd0f9.png)\r\n\r\n**A.4.0-import**\r\n\r\n![a 4 0-import](https://cloud.githubusercontent.com/assets/4007840/2870422/c2579c30-d2c5-11e3-828f-b78cc5474918.png)\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/172",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/172/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/172/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/172/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/172",
+    "id": 32746648,
+    "number": 172,
+    "title": "Collapsed sub process indicator missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process+2013+for+Six+Sigma",
+        "name": "Tool: iGrafx Process 2013 for Six Sigma",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-05-03T13:10:04Z",
+    "updated_at": "2014-05-03T13:10:04Z",
+    "closed_at": null,
+    "body": "When importing the reference A.3.0 BPMN file, the collapsed sub process indicator is missing.\r\n\r\n**A.3.0 reference**:\r\n\r\n![a 3 0](https://cloud.githubusercontent.com/assets/4007840/2870399/b1d708c0-d2c3-11e3-84ee-d7a8f3d78893.png)\r\n\r\n\r\n**A.3.0 import**:\r\n\r\n![a 3 0-import](https://cloud.githubusercontent.com/assets/4007840/2870400/b5b98f8a-d2c3-11e3-8908-9d9a4aba71ff.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/170",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/170/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/170/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/170/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/170",
+    "id": 32625934,
+    "number": 170,
+    "title": "Potential BPMN issue surfaced by testing of Blueworks Live (April 2014 Release)",
+    "user": {
+      "login": "ldugan",
+      "id": 4049289,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?",
+      "gravatar_id": "336e8cf6e6ed5260d1d41f5e9377e24c",
+      "url": "https://api.github.com/users/ldugan",
+      "html_url": "https://github.com/ldugan",
+      "followers_url": "https://api.github.com/users/ldugan/followers",
+      "following_url": "https://api.github.com/users/ldugan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ldugan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ldugan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ldugan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ldugan/orgs",
+      "repos_url": "https://api.github.com/users/ldugan/repos",
+      "events_url": "https://api.github.com/users/ldugan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ldugan/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-05-01T16:21:12Z",
+    "updated_at": "2014-05-07T17:59:08Z",
+    "closed_at": null,
+    "body": "In the testing, it was shown that the \"name\" of the test file, residing in the name attribute of the definitions element of the reference model's BPMN XML, was moved to the name attribute of process element in the BPMN XML generated by the tool.  The use of \"name\" for a process in tooling is not consistently realized across vendors, even though the attribute inherits from the callableElement class per the meta model - see Figure 10.3 for Process Details and Table 10.1 for Process Attributes and Model Associations in pp. 147-148 in the spec document (pp. 177-178 in the PDF document).  While I suspect that this can give rise to interchange issues as it did here, the comparison revealed an error in the spec that should be corrected - namely, the schema for definitions, which is missing the name attribute, per Table 8.3 Definition of XML Schema on p. 54 of the spec document (p. 84 of the PDF document), even though the meta model requires it, per Figure 8.4 for Definitions on p. 51 in the spec document (p. 81 in the PDF document), as does the associated table, per Table 8.1 for Definitions Attributes and Model Associations on p. 52 in the spec document (p. 82 in the PDF document).  A minor point, but I wonder if this contributes to the confusion over process name, file name, and definitions name, which seems to be left to the tooling community to resolve."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/169",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/169/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/169/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/169/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/169",
+    "id": 32593084,
+    "number": 169,
+    "title": "Limits on BPMN elements supported - Blueworks Live (April 2014 Release)_Test All Other Test Cases_Import+Export+Roundtrip",
+    "user": {
+      "login": "ldugan",
+      "id": 4049289,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?",
+      "gravatar_id": "336e8cf6e6ed5260d1d41f5e9377e24c",
+      "url": "https://api.github.com/users/ldugan",
+      "html_url": "https://github.com/ldugan",
+      "followers_url": "https://api.github.com/users/ldugan/followers",
+      "following_url": "https://api.github.com/users/ldugan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ldugan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ldugan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ldugan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ldugan/orgs",
+      "repos_url": "https://api.github.com/users/ldugan/repos",
+      "events_url": "https://api.github.com/users/ldugan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ldugan/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test+A.4.1",
+        "name": "Test A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+Blueworks+Live",
+        "name": "Tool: IBM Blueworks Live",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-05-01T04:02:27Z",
+    "updated_at": "2014-05-06T21:50:00Z",
+    "closed_at": null,
+    "body": "Here is the URL documenting the April 2014 Release of the Blueworks Live service (the only version identifier I could find):  https://www.blueworkslive.com/#!search:q=whats+new&o=0&mr=100&t=tag&sp=true&ops=true (see the link to the referenced release).  Note that this is not the version used in the March Interchange Demo (that would be the January 2014 Release).\r\nThe supported elements for import and for export are provided below.  Note that further testing (past A.2.0) is not possible since elements in subsequent test cases are not supported (most notably boundary events, pools, and message flows).\r\n![blueworks live import support](https://cloud.githubusercontent.com/assets/4049289/2853906/28b0e202-d14a-11e3-8ef1-cf94ce89ae1a.png)\r\n![blueworks live export support](https://cloud.githubusercontent.com/assets/4049289/2853907/28b468be-d14a-11e3-9ebe-e55d7dd47135.png)\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/168",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/168/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/168/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/168/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/168",
+    "id": 32577957,
+    "number": 168,
+    "title": "No incoming and outgoing sequence flows in BPMN XML - Blueworks Live (April 2014 Release)_Test A.1.0+A.2.0_Import+Export+Roundtrip",
+    "user": {
+      "login": "ldugan",
+      "id": 4049289,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?",
+      "gravatar_id": "336e8cf6e6ed5260d1d41f5e9377e24c",
+      "url": "https://api.github.com/users/ldugan",
+      "html_url": "https://github.com/ldugan",
+      "followers_url": "https://api.github.com/users/ldugan/followers",
+      "following_url": "https://api.github.com/users/ldugan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ldugan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ldugan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ldugan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ldugan/orgs",
+      "repos_url": "https://api.github.com/users/ldugan/repos",
+      "events_url": "https://api.github.com/users/ldugan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ldugan/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+Blueworks+Live",
+        "name": "Tool: IBM Blueworks Live",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-04-30T22:06:56Z",
+    "updated_at": "2014-05-06T21:48:44Z",
+    "closed_at": null,
+    "body": "This IBM tool can be added to the list that do not recognize or generate those nested elements within a flowNode (he roundtrip and export files did not contain them), instead relying on sourceRef or targetRef in the associated sequenceFlow elements to construct/interpret sequence behavior in a process."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/167",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/167/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/167/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/167/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/167",
+    "id": 32571573,
+    "number": 167,
+    "title": "Changes to definitions and process elements in BPMN XML file - Blueworks Live (April 2014 Release)_Test A.1.0+A.2.0_Import+Export+Roundtrip",
+    "user": {
+      "login": "ldugan",
+      "id": 4049289,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?",
+      "gravatar_id": "336e8cf6e6ed5260d1d41f5e9377e24c",
+      "url": "https://api.github.com/users/ldugan",
+      "html_url": "https://github.com/ldugan",
+      "followers_url": "https://api.github.com/users/ldugan/followers",
+      "following_url": "https://api.github.com/users/ldugan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ldugan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ldugan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ldugan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ldugan/orgs",
+      "repos_url": "https://api.github.com/users/ldugan/repos",
+      "events_url": "https://api.github.com/users/ldugan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ldugan/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+Blueworks+Live",
+        "name": "Tool: IBM Blueworks Live",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-04-30T20:44:29Z",
+    "updated_at": "2014-05-06T21:47:18Z",
+    "closed_at": null,
+    "body": "Changes that are interchange issues are the addition of processType (set to \"Private\") and name (set to the name of the process, which is the same as the file name) attributes of the process element.  These attributes are not in the reference import file, and the processType attribute is set to something other than its default (which is \"None\" and would otherwise be presumably understood) while name is not consistently included in BPMN XML serializations by modeling tools (even though it is inherited from CallableElement).  The main distinction here is that the reference model file has the \"name\" used present in the definitions for the reference model (semantic:definitions id=\"_1373649849716\" name=\"A.1.0\"), while the roundtrip and export files have the \"name\" used present in the process name attribute (process isExecutable=\"false\" processType=\"Private\" name=\"A.1.0\" id=\"bpmn-4a8d7768-b5ec-49c1-b3eb-b0281b85afdf\").  There is no name attribute in the definitions element of the roundtrip and export files (definitions xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\" id=\"bpmn-922d8a9f-83c6-48eb-896d-463ae1888c73\"), which is also a change from the reference model.  Finally, there are imports in the roundtrip and export files for \"Resources\" and \"Glossaries\" that presumably allow links to entries in those lists (if populated in the tool), and are included along with the BPMN XML file in a zip file."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/166",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/166/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/166/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/166/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/166",
+    "id": 32570271,
+    "number": 166,
+    "title": "Representation of lanes and related extensions in the BPMN XML file - Blueworks Live (April 2014 Release)_Test A.1.0+A.2.0_Import+Export+Roundtrip",
+    "user": {
+      "login": "ldugan",
+      "id": 4049289,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?",
+      "gravatar_id": "336e8cf6e6ed5260d1d41f5e9377e24c",
+      "url": "https://api.github.com/users/ldugan",
+      "html_url": "https://github.com/ldugan",
+      "followers_url": "https://api.github.com/users/ldugan/followers",
+      "following_url": "https://api.github.com/users/ldugan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ldugan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ldugan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ldugan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ldugan/orgs",
+      "repos_url": "https://api.github.com/users/ldugan/repos",
+      "events_url": "https://api.github.com/users/ldugan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ldugan/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+Blueworks+Live",
+        "name": "Tool: IBM Blueworks Live",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-04-30T20:27:44Z",
+    "updated_at": "2014-05-06T21:46:34Z",
+    "closed_at": null,
+    "body": "This is a known feature of this IBM tool for modeling processes in BPMN.  Some aspects are not interchange problems while others are.\r\n\r\nOne aspect that is not an interchange issue is the addition of the \"Milestone\" concept in the tool as a means of sectioning the process into meaningful segments.  While seemingly done as a legitimate extension (xmlns:ns2=\"http://www.ibm.com/bpm/Extensions\"), it is nonetheless essentially a vertically-oriented lane, each one of which can be named separately.  One \"Milestone\" must be present in the model, though - at least according to what the tool allows the user to do.  The XML for this addition as its own flow container is presented below.\r\n![ibmmilestoneextensions](https://cloud.githubusercontent.com/assets/4049289/2847520/6b149562-d0af-11e3-9a8e-e8b336eedc45.png)\r\n\r\nThe aspect that is an interchange issue is the introduction of a laneSet but no lane into the BPMN XML, which happens in the roundtrip and export files.  However, it is represented with only a single tag and no flowNodeRefs are included, so it is unclear how the tool knows to associate flowNodes with the lane container as shown below (laneSet id=\"bpmn-885268d8-28d6-4bde-a20d-93568e1effce\"/).  In addition, the name for this lane is shown in the tool as \"Unassigned\" (the default value) but is not shown anywhere in the BPMN XML.  However, none of this is the case if an actual name is entered for the lane in the tool, so this structure seems a placeholder until the lane is actually named, which then creates the expected XML structures.  This quirk of the tool may create problems for other tools to exchange simple models without lanes (and pools can't be done anyway)."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/165",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/165/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/165/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/165/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/165",
+    "id": 32565868,
+    "number": 165,
+    "title": "Lack of DI component in BPMN XML file - Blueworks Live (April 2014 Release)_Test A.1.0+A.2.0_Import+Export+Roundtrip",
+    "user": {
+      "login": "ldugan",
+      "id": 4049289,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?",
+      "gravatar_id": "336e8cf6e6ed5260d1d41f5e9377e24c",
+      "url": "https://api.github.com/users/ldugan",
+      "html_url": "https://github.com/ldugan",
+      "followers_url": "https://api.github.com/users/ldugan/followers",
+      "following_url": "https://api.github.com/users/ldugan/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ldugan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ldugan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ldugan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ldugan/orgs",
+      "repos_url": "https://api.github.com/users/ldugan/repos",
+      "events_url": "https://api.github.com/users/ldugan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ldugan/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+Blueworks+Live",
+        "name": "Tool: IBM Blueworks Live",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-04-30T19:29:07Z",
+    "updated_at": "2014-05-06T21:45:44Z",
+    "closed_at": null,
+    "body": "This is a known feature of IBM products for modeling processes in BPMN - namely that these tools have their own auto-layout feature that constructs the diagram from the semantic elements, their intended behaviors, and some internal heuristics for drawing the diagram.  Any DI component is ignored on import, and is not created on export.  However, the A.1.0 file is simple enough so that the generated diagram matched the reference model.  It is unclear if more complicated models will yield similar results, especially because this tool (Blueworks Live) supports only a subset of elements (e.g., not all event types, no boundary events, etc.).  However, an unnamed horizontal lane is added along with a vertically-oriented lane-like item called a Milestone, as shown below in the two pairs of results for A.1.0 and A.2.0:\r\nA.1.0\r\n![a 1 0-import](https://cloud.githubusercontent.com/assets/4049289/2847603/83b1ead8-d0b0-11e3-9e00-6cc6bfb3f410.png)\r\nversus what is true for the reference model\r\n![a 1 0](https://cloud.githubusercontent.com/assets/4049289/2847620/be9c8dd8-d0b0-11e3-8172-f36944161161.png)\r\nA.2.0\r\n\r\n\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/163",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/163/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/163/comments",
@@ -607,8 +1272,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process",
-        "name": "Tool: iGrafx Process",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process+2013+for+Six+Sigma",
+        "name": "Tool: iGrafx Process 2013 for Six Sigma",
         "color": "009800"
       }
     ],
@@ -691,17 +1356,17 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process",
-        "name": "Tool: iGrafx Process",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process+2013+for+Six+Sigma",
+        "name": "Tool: iGrafx Process 2013 for Six Sigma",
         "color": "009800"
       }
     ],
     "state": "open",
     "assignee": null,
     "milestone": null,
-    "comments": 1,
+    "comments": 2,
     "created_at": "2013-12-04T15:02:51Z",
-    "updated_at": "2013-12-08T17:30:56Z",
+    "updated_at": "2014-05-03T13:25:01Z",
     "closed_at": null,
     "body": "The depiction of all imported test cases are missing the labels on the BPMN elements "
   },
@@ -735,17 +1400,17 @@
     },
     "labels": [
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
-        "name": "BPMN RTF",
-        "color": "fbca04"
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
       }
     ],
     "state": "open",
     "assignee": null,
     "milestone": null,
-    "comments": 13,
+    "comments": 14,
     "created_at": "2013-12-02T19:38:31Z",
-    "updated_at": "2014-01-29T19:39:01Z",
+    "updated_at": "2014-05-07T17:58:33Z",
     "closed_at": null,
     "body": "The BPMN spec is ambiguous about the connection of throwing and catching Link Events. I see two possible interpretations:\r\n\r\n1. Throwing and Catching Link Events are correlated using the mandatory attribute **name** and the attributes **source** and **target** are just optional similar to **incoming** and **outgoing**. \r\n2. Throwing and Catching Link Events are correlated using the attributes **source** and **target**.\r\n\r\nAfter further investigation, I discovered that the BPMN 2.0 Finalization Task Force intended to introduce the attributes 'source' and 'target' to avoid the correlation via names. See also [OMG Issue 14816](http://www.omg.org/issues/issue14816.txt), [BPMN 2.0 FTF Report](http://www.omg.org/cgi-bin/doc?dtc/2010-05-01) and [BPMN 2.0 FTF Report Verification Site](http://omg-tf.appspot.com/tf/verify/BPMN-2.0/10).\r\n\r\nHere is the resolution that all FTF members accepted:\r\n![resolution-of-omg-issue-14816](https://f.cloud.github.com/assets/40038/715169/fa3f1db4-df12-11e2-8efb-fa96078199af.png)\r\n\r\nThis is what's in the final BPMN 2.0 specification:\r\n![link-event-definition-class-diagram-of-bpmn-2 0](https://f.cloud.github.com/assets/40038/715184/403a0572-df13-11e2-9815-e7a45c96f472.png)\r\n\r\nSo it looks like **source** and **target** are meant to be used for link correlation. However, this raises further questions:\r\n\r\n1. Why is the **name** attribute still there?\r\n2. Does this new mechanism break backwards compatibility with BPMN 1.x?\r\n3. How did vendors actually implement it in their current implementation?\r\n"
   },
@@ -789,8 +1454,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process",
-        "name": "Tool: iGrafx Process",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process+2013+for+Six+Sigma",
+        "name": "Tool: iGrafx Process 2013 for Six Sigma",
         "color": "009800"
       }
     ],
@@ -5060,231 +5725,5 @@
     "updated_at": "2013-05-01T16:02:54Z",
     "closed_at": null,
     "body": "Call activities cannot be expanded in MID Innovator. Therefore, they are not imported correctly as *expanded call activities* but as *collapsed call activities*. The elements of the expanded call activity are not supported as well.\r\nAs modeling expanded call activities is not supported by the software, the export fails as well.\r\n\r\nSimilarly, collapsed subprocesses are not supported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the lower left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
-    "id": 13594794,
-    "number": 24,
-    "title": "Text annotations are not exported",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
-      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-24T15:44:58Z",
-    "updated_at": "2013-04-28T11:38:21Z",
-    "closed_at": null,
-    "body": "Text annotations are not exported in the BPMN file.\r\n\r\nExample B.1.0:\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n* [Exported BPMN](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-export.bpmn)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
-    "id": 13594240,
-    "number": 23,
-    "title": "BPMN text annotations are not imported",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
-      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-24T15:37:19Z",
-    "updated_at": "2013-04-28T11:38:42Z",
-    "closed_at": null,
-    "body": "Text annotations appear not to be imported from the BPMN file in MID Innovator.\r\n\r\nExample B.1.0:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
-    "id": 13587618,
-    "number": 21,
-    "title": "Import places Events and Gateways in upper left corner",
-    "user": {
-      "login": "falko",
-      "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
-      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
-      "url": "https://api.github.com/users/falko",
-      "html_url": "https://github.com/falko",
-      "followers_url": "https://api.github.com/users/falko/followers",
-      "following_url": "https://api.github.com/users/falko/following{/other_user}",
-      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
-      "organizations_url": "https://api.github.com/users/falko/orgs",
-      "repos_url": "https://api.github.com/users/falko/repos",
-      "events_url": "https://api.github.com/users/falko/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/falko/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
-        "name": "Test: A.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
-        "name": "Test: A.2.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2013-04-24T13:47:32Z",
-    "updated_at": "2013-04-29T09:33:45Z",
-    "closed_at": null,
-    "body": "In MID Innovator 11 R5 E (Version 11.5.1.30223) Events and Gateways are positioned in the upper left corner of the containing Lane.\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
-    "id": 13586218,
-    "number": 20,
-    "title": "Sequence Flows not imported",
-    "user": {
-      "login": "falko",
-      "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
-      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
-      "url": "https://api.github.com/users/falko",
-      "html_url": "https://github.com/falko",
-      "followers_url": "https://api.github.com/users/falko/followers",
-      "following_url": "https://api.github.com/users/falko/following{/other_user}",
-      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
-      "organizations_url": "https://api.github.com/users/falko/orgs",
-      "repos_url": "https://api.github.com/users/falko/repos",
-      "events_url": "https://api.github.com/users/falko/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/falko/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
-        "name": "Test: A.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
-        "name": "Test: A.2.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2013-04-24T13:25:14Z",
-    "updated_at": "2013-04-29T09:35:08Z",
-    "closed_at": null,
-    "body": "Matthias Kurz reported: \"The Innovator creates both a process model as well as a diagram during update (these are two different yet linked entities in Innovator). Yet the diagram misses basic basic layout information like connectors.\"\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
   }
 ]

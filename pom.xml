@@ -66,6 +66,7 @@
                 <unzip src="${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}" 
                     dest="${basedir}/">
                   <patternset>
+                    <exclude name=".git/**/*"/>
                     <exclude name="META-INF/**/*"/>
                     <exclude name="target/**/*"/>
                     <exclude name="pom.xml"/>
@@ -75,6 +76,7 @@
                 <unzip src="${maven.dependency.org.omg.bpmn.miwg.test-suite.site.jar.path}" 
                     dest="${basedir}/">
                   <patternset>
+                    <exclude name=".git/**/*"/>
                     <exclude name="images/**"/>
                     <exclude name="index.html"/>
                     <exclude name="META-INF/**/*"/>

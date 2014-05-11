@@ -1,5 +1,135 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/171",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/171/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/171/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/171/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/171",
+    "id": 32746549,
+    "number": 171,
+    "title": "Labels are missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/duplicate",
+        "name": "duplicate",
+        "color": "cccccc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process+2013+for+Six+Sigma",
+        "name": "Tool: iGrafx Process 2013 for Six Sigma",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-05-03T13:03:40Z",
+    "updated_at": "2014-05-03T13:14:26Z",
+    "closed_at": "2014-05-03T13:14:26Z",
+    "body": "After an import, all labels are missing (cf. the following image).\r\n\r\n![a 1 0-import](https://cloud.githubusercontent.com/assets/4007840/2870395/029021da-d2c3-11e3-951e-4754a7fe2c9c.png)\r\n\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/164",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/164/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/164/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/164/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/164",
+    "id": 32534719,
+    "number": 164,
+    "title": "Update A.1.1.bpmn",
+    "user": {
+      "login": "apupier",
+      "id": 1105127,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1105127?",
+      "gravatar_id": "79c9602fbf0ae08b716037e3381976d3",
+      "url": "https://api.github.com/users/apupier",
+      "html_url": "https://github.com/apupier",
+      "followers_url": "https://api.github.com/users/apupier/followers",
+      "following_url": "https://api.github.com/users/apupier/following{/other_user}",
+      "gists_url": "https://api.github.com/users/apupier/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/apupier/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/apupier/subscriptions",
+      "organizations_url": "https://api.github.com/users/apupier/orgs",
+      "repos_url": "https://api.github.com/users/apupier/repos",
+      "events_url": "https://api.github.com/users/apupier/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/apupier/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-04-30T13:33:37Z",
+    "updated_at": "2014-04-30T14:22:09Z",
+    "closed_at": "2014-04-30T14:22:09Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/164",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/164",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/164.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/164.patch"
+    },
+    "body": "remove not closed tag \"${\""
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/157",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/157/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/157/comments",
