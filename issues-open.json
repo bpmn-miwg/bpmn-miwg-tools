@@ -1,5 +1,54 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/177",
+    "id": 33504751,
+    "number": 177,
+    "title": "targetRef referencing a dataOutput instead of a dataInput",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
+      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.2",
+        "name": "Test: A.1.2",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-05-14T15:45:16Z",
+    "updated_at": "2014-05-14T15:46:26Z",
+    "closed_at": null,
+    "body": "### A.1.2 reference visualization\r\n\r\n![image](https://cloud.githubusercontent.com/assets/4007840/2973472/15cb0d1e-db7e-11e3-8de3-aff1969b665e.png)\r\n\r\n\r\n### A.1.2 reference serialization\r\n\r\n```xml\r\n<semantic:userTask implementation=\"##unspecified\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Task 3\" id=\"task3\">\r\n\t<semantic:incoming>_725826e9-0e8b-4cb4-842b-e0279515d821</semantic:incoming>\r\n\t<semantic:outgoing>_737085c4-8771-41e9-b30e-fa2668d0a481</semantic:outgoing>\r\n\t<semantic:ioSpecification>\r\n\t\t<semantic:dataInput id=\"dataInputTask3\" name=\"Data Input Task 3\" itemSubjectRef=\"serviceOutput\"/>\r\n\t\t<semantic:dataOutput id=\"dataOutputTask3\" name=\"Data Output Task 3\" itemSubjectRef=\"serviceOutput\"/>\r\n\t\t<semantic:inputSet>\r\n\t\t\t<semantic:dataInputRefs>dataInputTask3</semantic:dataInputRefs>\r\n\t\t</semantic:inputSet>\r\n\t\t<semantic:outputSet>\r\n\t\t\t<semantic:dataOutputRefs>dataOutputTask3</semantic:dataOutputRefs>\r\n\t\t</semantic:outputSet>\r\n\t</semantic:ioSpecification>\r\n\t<semantic:dataInputAssociation id=\"dataInputAssociationTask3\">\r\n\t\t<semantic:sourceRef>dataObjectRef2</semantic:sourceRef>\r\n\t\t<semantic:targetRef>dataOutputTask3</semantic:targetRef>\r\n\t</semantic:dataInputAssociation>\r\n\t<semantic:dataOutputAssociation id=\"dataOutputAssociationTask3\">\r\n\t\t<semantic:sourceRef>dataOutputTask3</semantic:sourceRef>\r\n\t\t<semantic:targetRef>endEventDataInput</semantic:targetRef>\t\t\t\r\n\t</semantic:dataOutputAssociation>\r\n\t<semantic:performer>\r\n\t\t<semantic:resourceRef>resource_Performer_2</semantic:resourceRef>\r\n\t</semantic:performer>\r\n</semantic:userTask>\r\n```\r\n\r\n\r\n### Problem\r\n\r\nThe *targetRef* of *dataInputAssociationTask3* points to *dataOutputTask*. This is surprising, as **DataInputAssociations** are used to populate **DataInputs** (cf. table 10.3 on page 152 of the spec). Yet the *dataInputAssociationTask3* targets a **DataOutput**.\r\n\r\n### Proposed resolution\r\n\r\nReplace the value *dataOutputTask3* of the *targetRef* element with *dataInputTask3*.\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176/comments",
@@ -5666,64 +5715,5 @@
     "updated_at": "2013-04-30T11:37:50Z",
     "closed_at": null,
     "body": "Data object names are not imported.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data object in question is in the center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
-    "id": 13733261,
-    "number": 27,
-    "title": "Expanded call activities and collapsed subprocesses are not supported.",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
-      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-28T11:29:10Z",
-    "updated_at": "2013-05-01T16:02:54Z",
-    "closed_at": null,
-    "body": "Call activities cannot be expanded in MID Innovator. Therefore, they are not imported correctly as *expanded call activities* but as *collapsed call activities*. The elements of the expanded call activity are not supported as well.\r\nAs modeling expanded call activities is not supported by the software, the export fails as well.\r\n\r\nSimilarly, collapsed subprocesses are not supported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the lower left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n\r\n"
   }
 ]
