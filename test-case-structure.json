@@ -97,7 +97,7 @@
     ],
     "config": {
         "url_pattern": {
-            "file": "https://raw2.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/{TOOLURL}/{FILEURL}.{FILEEXT}",
+            "file": "https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/{TOOLURL}/{FILEURL}.{FILEEXT}",
             "folder": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/tree/master/{TOOLURL}"
         }
     },
