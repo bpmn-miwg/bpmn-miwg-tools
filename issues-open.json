@@ -1,52 +1,97 @@
 [
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/177",
-    "id": 33504751,
-    "number": 177,
-    "title": "targetRef referencing a dataOutput instead of a dataInput",
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/179",
+    "id": 34100445,
+    "number": 179,
+    "title": "Unable to import provided .bpmn files into IBM BPM 8.5 Process Designer",
     "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
-      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "login": "ajay-",
+      "id": 7671480,
+      "avatar_url": "https://avatars.githubusercontent.com/u/7671480?",
+      "gravatar_id": "48422f385ae25ebd644e095d91aa55d1",
+      "url": "https://api.github.com/users/ajay-",
+      "html_url": "https://github.com/ajay-",
+      "followers_url": "https://api.github.com/users/ajay-/followers",
+      "following_url": "https://api.github.com/users/ajay-/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ajay-/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ajay-/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ajay-/subscriptions",
+      "organizations_url": "https://api.github.com/users/ajay-/orgs",
+      "repos_url": "https://api.github.com/users/ajay-/repos",
+      "events_url": "https://api.github.com/users/ajay-/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ajay-/received_events",
       "type": "User",
       "site_admin": false
     },
     "labels": [
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
-        "name": "bug",
-        "color": "fc2929"
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.2",
-        "name": "Test: A.1.2",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "name": "Test: A.1.0",
         "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+BPM",
+        "name": "Tool: IBM BPM",
+        "color": "009800"
       }
     ],
     "state": "open",
     "assignee": null,
     "milestone": null,
-    "comments": 0,
-    "created_at": "2014-05-14T15:45:16Z",
-    "updated_at": "2014-05-14T15:46:26Z",
+    "comments": 1,
+    "created_at": "2014-05-22T16:47:09Z",
+    "updated_at": "2014-05-23T08:36:10Z",
     "closed_at": null,
-    "body": "### A.1.2 reference visualization\r\n\r\n![image](https://cloud.githubusercontent.com/assets/4007840/2973472/15cb0d1e-db7e-11e3-8de3-aff1969b665e.png)\r\n\r\n\r\n### A.1.2 reference serialization\r\n\r\n```xml\r\n<semantic:userTask implementation=\"##unspecified\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Task 3\" id=\"task3\">\r\n\t<semantic:incoming>_725826e9-0e8b-4cb4-842b-e0279515d821</semantic:incoming>\r\n\t<semantic:outgoing>_737085c4-8771-41e9-b30e-fa2668d0a481</semantic:outgoing>\r\n\t<semantic:ioSpecification>\r\n\t\t<semantic:dataInput id=\"dataInputTask3\" name=\"Data Input Task 3\" itemSubjectRef=\"serviceOutput\"/>\r\n\t\t<semantic:dataOutput id=\"dataOutputTask3\" name=\"Data Output Task 3\" itemSubjectRef=\"serviceOutput\"/>\r\n\t\t<semantic:inputSet>\r\n\t\t\t<semantic:dataInputRefs>dataInputTask3</semantic:dataInputRefs>\r\n\t\t</semantic:inputSet>\r\n\t\t<semantic:outputSet>\r\n\t\t\t<semantic:dataOutputRefs>dataOutputTask3</semantic:dataOutputRefs>\r\n\t\t</semantic:outputSet>\r\n\t</semantic:ioSpecification>\r\n\t<semantic:dataInputAssociation id=\"dataInputAssociationTask3\">\r\n\t\t<semantic:sourceRef>dataObjectRef2</semantic:sourceRef>\r\n\t\t<semantic:targetRef>dataOutputTask3</semantic:targetRef>\r\n\t</semantic:dataInputAssociation>\r\n\t<semantic:dataOutputAssociation id=\"dataOutputAssociationTask3\">\r\n\t\t<semantic:sourceRef>dataOutputTask3</semantic:sourceRef>\r\n\t\t<semantic:targetRef>endEventDataInput</semantic:targetRef>\t\t\t\r\n\t</semantic:dataOutputAssociation>\r\n\t<semantic:performer>\r\n\t\t<semantic:resourceRef>resource_Performer_2</semantic:resourceRef>\r\n\t</semantic:performer>\r\n</semantic:userTask>\r\n```\r\n\r\n\r\n### Problem\r\n\r\nThe *targetRef* of *dataInputAssociationTask3* points to *dataOutputTask*. This is surprising, as **DataInputAssociations** are used to populate **DataInputs** (cf. table 10.3 on page 152 of the spec). Yet the *dataInputAssociationTask3* targets a **DataOutput**.\r\n\r\n### Proposed resolution\r\n\r\nReplace the value *dataOutputTask3* of the *targetRef* element with *dataInputTask3*.\r\n"
+    "body": "Unable to import provided .bpmn files into IBM BPM 8.5 Process Designer. \r\nError image attached:\r\n![image](https://cloud.githubusercontent.com/assets/7671480/3056969/ad3b067e-e1d0-11e3-94fd-c6561062a9db.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/178",
+    "id": 33906315,
+    "number": 178,
+    "title": "dataOutputAssociation from startDataOutput to taskDataInput",
+    "user": {
+      "login": "mpetozzi",
+      "id": 5450234,
+      "avatar_url": "https://avatars.githubusercontent.com/u/5450234?",
+      "gravatar_id": "ade36d68d9357a172f56a65813da2740",
+      "url": "https://api.github.com/users/mpetozzi",
+      "html_url": "https://github.com/mpetozzi",
+      "followers_url": "https://api.github.com/users/mpetozzi/followers",
+      "following_url": "https://api.github.com/users/mpetozzi/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mpetozzi/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mpetozzi/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mpetozzi/subscriptions",
+      "organizations_url": "https://api.github.com/users/mpetozzi/orgs",
+      "repos_url": "https://api.github.com/users/mpetozzi/repos",
+      "events_url": "https://api.github.com/users/mpetozzi/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mpetozzi/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-05-20T16:39:39Z",
+    "updated_at": "2014-05-20T21:47:26Z",
+    "closed_at": null,
+    "body": "### A.1.2 reference visualization\r\n![15cb0d1e-db7e-11e3-8de3-aff1969b665e](https://cloud.githubusercontent.com/assets/5450234/3029638/867caf8c-e037-11e3-8242-5493208d08c8.png)\r\n\r\n### A.1.2 reference serialization\r\nStartEvent (I omitted parts, just to focus on the problem)\r\n```xml\r\n<semantic:startEvent name=\"Start Event\" id=\"startEvent\">\r\n    ...\r\n    <semantic:dataOutput name=\"Start Event Data Output\" id=\"startEventDataOutput\" itemSubjectRef=\"serviceInput\" />\r\n    <semantic:dataOutputAssociation id=\"startEventDataOutputAssociation\">\r\n        <semantic:sourceRef>startEventDataOutput</semantic:sourceRef>\r\n        <semantic:targetRef>dataInputTask1</semantic:targetRef>\r\n    </semantic:dataOutputAssociation>\r\n    <semantic:outputSet>\r\n        <semantic:dataOutputRefs>startEventDataOutput</semantic:dataOutputRefs>\r\n    </semantic:outputSet>\r\n    ...\r\n</semantic:startEvent>\r\n```\r\nUserTask (I omitted parts, only to solve one problem at a time)\r\n```xml\r\n<semantic:userTask implementation=\"##unspecified\" name=\"Task 1\" id=\"task1\" startQuantity=\"1\" isForCompensation=\"false\" completionQuantity=\"1\">\r\n    ...\r\n    <semantic:ioSpecification>\r\n        <semantic:dataInput name=\"Data Input Task 1\" id=\"dataInputTask1\" itemSubjectRef=\"serviceInput\" />\r\n        ...\r\n        <semantic:inputSet>\r\n            <semantic:dataInputRefs>dataInputTask1</semantic:dataInputRefs>\r\n        </semantic:inputSet>\r\n        ...\r\n    </semantic:ioSpecification>\r\n    ...\r\n</semantic:userTask>\r\n```\r\n\r\n### Problem\r\nPlease correct me if I am wrong. In a DataOutputAssociation the targetRef has to reference to an itemAwareElement in the current scope of the process. The *dataInputTask1* is the dataInput of the UserTask. During the execution of the *startEventDataOutputAssociation* the UserTask is not in the current scope of the process, it has not yet received the execution token. So it is not possible to have the dataInput of the task as targetRef of the dataOutputAssociation of the startEvent.\r\n\r\n### Proposed solution\r\nAdd a dataObject in the process to transfer the content of the message from the startEvent to the task.\r\n*Technically*\r\n- add a dataObject in the process\r\n- edit the current startDataOutputAssociation targetRef to reference the dataObject\r\n- add a userTaskDataInputAssociation with sourceRef referencing the dataObject and targetRef referencing the userTaskDataInput.\r\n\r\n### Correlated Problem\r\nThe same issue is present for the second UserTask that connects to the endEvent, but symmetrically."
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176",
@@ -78,6 +123,11 @@
     },
     "labels": [
       {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
         "name": "Test: A.1.1",
         "color": "006b75"
@@ -86,11 +136,11 @@
     "state": "open",
     "assignee": null,
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2014-05-07T18:02:33Z",
-    "updated_at": "2014-05-07T18:02:33Z",
+    "updated_at": "2014-05-21T19:22:52Z",
     "closed_at": null,
-    "body": "In the context of preparing test case A.1.1 we were not able to obtain a clear consensus on the proper usage of Human Performer vs Potential Performer for User Tasks"
+    "body": "In the context of preparing test case A.1.1 we were not able to obtain a clear consensus on the proper usage of Human Performer vs Potential Owner for User Tasks"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/175",
@@ -5661,59 +5711,5 @@
     "updated_at": "2013-04-30T11:37:16Z",
     "closed_at": null,
     "body": "Data store references are imported, yet not displayed. The node is assigned the name correctly. Yet, data store references have a separate label which is assigned a default text. The name of the node can be retrieved when looking at the node properties.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data store reference in question is in the left center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
-    "id": 13733336,
-    "number": 28,
-    "title": "B.1.0 Data object names are ommitted",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
-      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-28T11:37:52Z",
-    "updated_at": "2013-04-30T11:37:50Z",
-    "closed_at": null,
-    "body": "Data object names are not imported.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data object in question is in the center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
   }
 ]
