@@ -6,3 +6,4 @@ wget "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues?state=c
 echo 'If one of the following numbers equals to 100, we are not displaying all issues:'
 grep -o '"body":' issues-open.json | wc -l
 grep -o '"body":' issues-closed.json | wc -l
+# once the limit is reached read: http://developer.github.com/guides/traversing-with-pagination/
