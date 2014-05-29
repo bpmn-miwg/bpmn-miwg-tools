@@ -40,10 +40,9 @@ public class ValidatorTest extends AbstractTest {
 					.getDOMImplementation("LS");
 			LSInput ret = domImplementationLS.createLSInput();
 
-                        InputStream is = null;
+			InputStream is = null;
 			try {
-	                        is = getClass().getResourceAsStream("schema/"
-						+ systemId);
+				is = getRessourceAsStreamWrapper("schema/" + systemId);
 			} catch (Exception e) {
 				System.err.println(e.toString());
 			}
@@ -68,24 +67,31 @@ public class ValidatorTest extends AbstractTest {
 	}
 
 	@Override
-    public void execute(TestInstance instance) throws Throwable {
-        InputStream is = null;
-        try {
-            is = new FileInputStream(instance.getFile());
-            loadResource(is);
-        } finally {
-            try {
-                is.close();
-            } catch (Exception e) {
-                ;
-            }
-        }
-        instance.addFindings(resultsFinding());
-        instance.addOK(resultsOK());
-    }
+	public void execute(TestInstance instance) throws Throwable {
+		InputStream is = null;
+		try {
+			is = new FileInputStream(instance.getFile());
+			execute(is);
+		} finally {
+			try {
+				is.close();
+			} catch (Exception e) {
+				;
+			}
+		}
+		instance.addFindings(resultsFinding());
+		instance.addOK(resultsOK());
+	}
 
-    public List<? extends Output> execute(InputStream is) throws Throwable {
-		
+	private InputStream getRessourceAsStreamWrapper(String name) {
+		InputStream is = getClass().getResourceAsStream(name);
+		if (is == null)
+			is = getClass().getResourceAsStream("/" + name);
+		return is;
+	}
+
+	public List<? extends Output> execute(InputStream is) throws Throwable {
+
 		ValidationErrorHandler eHandler = new ValidationErrorHandler();
 		eHandler.setTestOutput(out);
 
@@ -93,8 +99,7 @@ public class ValidatorTest extends AbstractTest {
 				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 		schemaFactory.setResourceResolver(new LocalResourcsResolver());
 
-		Schema schema = schemaFactory.newSchema(new StreamSource(
-		        getClass().getResourceAsStream("schema/BPMN20.xsd")));
+			Schema schema = schemaFactory.newSchema(new StreamSource(getRessourceAsStreamWrapper("schema/BPMN20.xsd")));
 
 		SAXParserFactory parserFactory = SAXParserFactory.newInstance();
 		// parserFactory.setValidating(true);
@@ -105,10 +110,8 @@ public class ValidatorTest extends AbstractTest {
 		XMLReader reader = parser.getXMLReader();
 		reader.setErrorHandler(eHandler);
 
-		
-		
 		try {
-            parser.parse(new InputSource(is), (DefaultHandler) null);
+			parser.parse(new InputSource(is), (DefaultHandler) null);
 		} catch (Exception e) {
 			finding("Schema validation failed", "Exception: " + e.getMessage());
 			e.printStackTrace(System.out);
@@ -123,8 +126,7 @@ public class ValidatorTest extends AbstractTest {
 					+ ", Errors: " + eHandler.numError + ", Fatal Errors: "
 					+ eHandler.numFatalError);
 		}
-		
-        return getOutputs();
-	}
 
+		return getOutputs();
+	}
 }
