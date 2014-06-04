@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+		<div class="testresults">
+   <div class="tool" data-vendor="Sparx Enterprise Architect 11.1">
+      <h2>Sparx Enterprise Architect 11.1</h2>
+      <div class="test" data-test="B.1.0" data-variant="roundtrip">
+         <h3>B.1.0</h3>
+         <div class="ok">
+            <h4>OK     : selectElementX; Message: //bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:messageFlow[@name=&apos;Message Flow 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event Timer&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkTimerEvent; Message: Timer event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;EAID_F8AB9F9E_4DDB_47e6_ACC7_10604DF361BE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;User Task 2&apos; and @id=&apos;EAID_E80E8D5A_166E_4847_AFC5_7F4B9182CE29&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Service Task 3&apos; and @id=&apos;EAID_944B773A_5D14_4020_AC7D_61BAB719D804&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event None 1&apos; and @id=&apos;EAID_9EB27997_9B31_47f3_9649_49AAB1B35777&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value &apos;false&apos;.</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value &apos;false&apos;.</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value &apos;false&apos;.</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkXORMarkersForProcess; Message: All XOR markers have the expected value &apos;false&apos;.</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElementX; Message: .//bpmn:lane[@name=&apos;Lane 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElementX; Message: .//bpmn:lane[@name=&apos;Lane 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event Message&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway Divergence&apos; and @id=&apos;EAID_132C7243_57CD_4419_BEDC_C95D64D7D0D5&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 1&apos; and @id=&apos;EAID_69B22610_36FB_434a_80E3_DFFFE3EC9120&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:callActivity[@name=&apos;Call Activity Collapsed&apos; and @id=&apos;EAID_6C8B5417_9C30_4fbf_BF29_6676CC13B367&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkTextAssociation; Message: Text annotation &apos;Text Annotation&apos; not found; Parameter: bpmn:textAnnotation[@id=../bpmn:association[@sourceRef=&apos;EAID_6C8B5417_9C30_4fbf_BF29_6676CC13B367&apos;]/@targetRef]/bpmn:text</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement; Message: bpmn:callActivity[@name=&apos;Call Activity - Expanded&apos; and @id=&apos;EAID_1EC0F32A_1E96_47dd_94FD_74B49EB11B78&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessOfCallActivity; Message: //bpmn:process[@id=&apos;EAID_CF925775_BCF4_4a9c_BFF4_652A899EEA21&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event None 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Abstract Task 4&apos; and @id=&apos;EAID_8C951791_3B71_4d44_819C_2AAB122A11BE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event None 2&apos; and @id=&apos;EAID_7E28D1E0_FE5E_4803_91ED_8E88C6041A9A&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 1&apos; and @id=&apos;EAID_2C9C75AF_E33F_48cd_9F0E_E07DD20ADB04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event Message&apos; and @id=&apos;EAID_B625A5FB_561C_4a82_9596_BC819E293DAB&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 2&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/bpmn:definitions[@id=&apos;id=&quot;EAPK_233A203F_DCAE_4b44_8F7E_4D31C966E59E&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;EAID_6FB30CD8_FF40_4ce2_8587_2DDA087ECE8A&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;EAID_69B22610_36FB_434a_80E3_DFFFE3EC9120&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:callActivity[@name=&apos;Call Activity Calling a Global Task&apos; and @id=&apos;EAID_0A7855FA_8478_470f_8317_BFAF360CBC52&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkGlobalTask; Message: Attibute &apos;calledElement&apos; does not exist (as expected)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 1&apos; and @id=&apos;EAID_2C9C75AF_E33F_48cd_9F0E_E07DD20ADB04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/bpmn:definitions[@id=&apos;id=&quot;EAPK_233A203F_DCAE_4b44_8F7E_4D31C966E59E&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;EAID_6FB30CD8_FF40_4ce2_8587_2DDA087ECE8A&quot;&apos;]/bpmn:parallelGateway[@id=&apos;id=&quot;EAID_132C7243_57CD_4419_BEDC_C95D64D7D0D5&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;User Task 5&apos; and @id=&apos;EAID_50A668A7_CB0F_4d0f_BF4C_EB9F3B7FD726&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 2&apos; and @id=&apos;EAID_EA6E515D_9DC5_424c_8A0F_4A99A6B4618D&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos; and @id=&apos;EAID_07D9D2A7_F20A_4e6d_B41A_9D1EAC3E58A5&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Sub Process - Expanded&apos; and @id=&apos;EAID_50B9FD7F_A5A6_46ee_B2E2_1EBC639F6BBD&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event None 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Abstract Task 6&apos; and @id=&apos;EAID_9492D301_1641_40cd_8F35_906854D7E084&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event None 3&apos; and @id=&apos;EAID_A4C9E217_58C6_41ac_97F9_939AA73B7AFF&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;EAID_CD86672F_26E6_4679_B12C_3C1A9781C09A&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event Terminate&apos; and @id=&apos;EAID_C1AA28DD_DE23_42be_B432_7D94C3EB59FD&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/bpmn:definitions[@id=&apos;id=&quot;EAPK_233A203F_DCAE_4b44_8F7E_4D31C966E59E&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;EAID_6FB30CD8_FF40_4ce2_8587_2DDA087ECE8A&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;EAID_EA6E515D_9DC5_424c_8A0F_4A99A6B4618D&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Service Task 7&apos; and @id=&apos;EAID_AECC15CD_FA54_4b6f_B988_6375249107CA&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkDataAssociation; Message: Association reference dataObject &apos;Data Object&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkDataAssociation; Message: Association reference dataStoreReference &apos;Data Store Reference&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;EAID_CD86672F_26E6_4679_B12C_3C1A9781C09A&apos;]</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>

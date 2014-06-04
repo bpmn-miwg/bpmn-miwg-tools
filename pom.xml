@@ -68,6 +68,7 @@
                   <patternset>
                     <exclude name=".git/**/*"/>
                     <exclude name="META-INF/**/*"/>
+                    <exclude name="README*"/>
                     <exclude name="target/**/*"/>
                     <exclude name="pom.xml"/>
                   </patternset>
@@ -81,10 +82,17 @@
                     <exclude name="index.html"/>
                     <exclude name="META-INF/**/*"/>
                     <exclude name="pom.xml"/>
+                    <exclude name="README*"/>
                     <exclude name="target/**/*"/>
                     <exclude name="*.sh"/>
                   </patternset>
                 </unzip>
+                <!-- 
+                  Fix path in overview.html. This is needed because overview
+                  uses same template as individual tests that run in xpath or 
+                  xml-compare sub-dirs.
+                -->
+                <replace file="${basedir}/overview.html" token="/testtool/" value="/"/>
               </target>
             </configuration>
             <goals>
