@@ -1,5 +1,94 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/182",
+    "id": 34484303,
+    "number": 182,
+    "title": "Proposal for relaxed data constraint in non WS-* serviceTask",
+    "user": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-05-28T16:40:23Z",
+    "updated_at": "2014-06-04T12:30:09Z",
+    "closed_at": null,
+    "body": "This statement is made for service tasks on p158 (PDF p.188): \r\n\r\n```\r\n         \"In addition the following constraints are introduced \r\n         when the Service Task references an Operation: The Service Task has \r\n         exactly one inputSet and at most one outputSet. It has a single Data \r\n         Input with an ItemDefinition equivalent to the one defined by the \r\n         Message referenced by the inMessageRef attribute of the associated \r\n         Operation. If the Operation defines output Messages, the Service Task \r\n         has a single Data Output that has an ItemDefinition equivalent to the \r\n         one defined by the Message referenced by the outMessageRef attribute \r\n         of the associated Operation.\"\r\n```\r\n\r\nFor RESTful implementations it turns out this is an unnecessary constraint so in order to minimise the burden for such implementations we propose the following change to the text: \r\n\r\nAfter \r\n```   \r\n         \"...when the Service Task references an Operation: ...\" \r\n```\r\nadd \r\n```\r\n         \" and when the implementation attribute of the Service Task is set to '##WebService'\"\r\n```\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/181",
+    "id": 34466032,
+    "number": 181,
+    "title": "Minimal specification of serviceTask for 'ping' style use case",
+    "user": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal",
+        "name": "Proposal",
+        "color": "d4c5f9"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
+        "name": "Test: A.1.1",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2014-05-28T13:30:17Z",
+    "updated_at": "2014-05-30T12:20:28Z",
+    "closed_at": null,
+    "body": "In light of the following quote: \r\n```\r\n    p213 (PDF p243) [An ioSpec contains] An optional reference to \r\n    the Data Inputs of the InputOutputSpecification. If the \r\n    InputOutputSpecification defines no Data Input, it means no \r\n    data is REQUIRED to start the Activity. This is an ordered set.\r\n```\r\nI propose removal of the dataInput which is consistent with the WSDL I produced. As well as the matching inputSet/dataInputRef  \r\n\r\nThat would leave the serviceTask in test A.1.1 like this: \r\n```\r\n        <semantic:serviceTask implementation=\"##WebService\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Task 2\" id=\"task2\" operationRef=\"operation1\">\r\n            <semantic:incoming>_1a66ccd9-a80c-44bc-a06f-a684b8370443</semantic:incoming>\r\n            <semantic:outgoing>_725826e9-0e8b-4cb4-842b-e0279515d821</semantic:outgoing>\r\n            <semantic:ioSpecification>\r\n              <semantic:inputSet/>\r\n              <semantic:outputSet/>\r\n            </semantic:ioSpecification>\r\n        </semantic:serviceTask>\r\n```\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/comments",
@@ -123,9 +212,9 @@
     },
     "labels": [
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
-        "name": "BPMN RTF",
-        "color": "fbca04"
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal",
+        "name": "Proposal",
+        "color": "d4c5f9"
       },
       {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
@@ -136,9 +225,9 @@
     "state": "open",
     "assignee": null,
     "milestone": null,
-    "comments": 1,
+    "comments": 2,
     "created_at": "2014-05-07T18:02:33Z",
-    "updated_at": "2014-05-21T19:22:52Z",
+    "updated_at": "2014-06-04T12:18:58Z",
     "closed_at": null,
     "body": "In the context of preparing test case A.1.1 we were not able to obtain a clear consensus on the proper usage of Human Performer vs Potential Owner for User Tasks"
   },
@@ -371,7 +460,7 @@
     "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/170",
     "id": 32625934,
     "number": 170,
-    "title": "Potential BPMN issue surfaced by testing of Blueworks Live (April 2014 Release)",
+    "title": "XML Schema of 'Definition' element on page 54 lacks name attribute",
     "user": {
       "login": "ldugan",
       "id": 4049289,
@@ -392,14 +481,18 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
     ],
     "state": "open",
     "assignee": null,
     "milestone": null,
-    "comments": 0,
+    "comments": 2,
     "created_at": "2014-05-01T16:21:12Z",
-    "updated_at": "2014-05-07T17:59:08Z",
+    "updated_at": "2014-05-28T18:45:32Z",
     "closed_at": null,
     "body": "In the testing, it was shown that the \"name\" of the test file, residing in the name attribute of the definitions element of the reference model's BPMN XML, was moved to the name attribute of process element in the BPMN XML generated by the tool.  The use of \"name\" for a process in tooling is not consistently realized across vendors, even though the attribute inherits from the callableElement class per the meta model - see Figure 10.3 for Process Details and Table 10.1 for Process Attributes and Model Associations in pp. 147-148 in the spec document (pp. 177-178 in the PDF document).  While I suspect that this can give rise to interchange issues as it did here, the comparison revealed an error in the spec that should be corrected - namely, the schema for definitions, which is missing the name attribute, per Table 8.3 Definition of XML Schema on p. 54 of the spec document (p. 84 of the PDF document), even though the meta model requires it, per Figure 8.4 for Definitions on p. 51 in the spec document (p. 81 in the PDF document), as does the associated table, per Table 8.1 for Definitions Attributes and Model Associations on p. 52 in the spec document (p. 82 in the PDF document).  A minor point, but I wonder if this contributes to the confusion over process name, file name, and definitions name, which seems to be left to the tooling community to resolve."
   },
@@ -5608,108 +5701,5 @@
     "updated_at": "2013-05-03T15:07:55Z",
     "closed_at": null,
     "body": "Collapsed call activities display the name of the called process. A name may be assigned but is not displayed.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy at the cennter border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/33",
-    "id": 13852084,
-    "number": 33,
-    "title": "Cameo Business Modeler lacks direct support for *.BPMN XML Import",
-    "user": {
-      "login": "lonniev",
-      "id": 2193384,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2193384?",
-      "gravatar_id": "49598db116dc6181e40aeef9244417d8",
-      "url": "https://api.github.com/users/lonniev",
-      "html_url": "https://github.com/lonniev",
-      "followers_url": "https://api.github.com/users/lonniev/followers",
-      "following_url": "https://api.github.com/users/lonniev/following{/other_user}",
-      "gists_url": "https://api.github.com/users/lonniev/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/lonniev/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/lonniev/subscriptions",
-      "organizations_url": "https://api.github.com/users/lonniev/orgs",
-      "repos_url": "https://api.github.com/users/lonniev/repos",
-      "events_url": "https://api.github.com/users/lonniev/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/lonniev/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Cameo+Business+Modeler",
-        "name": "Tool: Cameo Business Modeler",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-05-01T15:19:25Z",
-    "updated_at": "2013-05-06T10:48:41Z",
-    "closed_at": null,
-    "body": "Cameo Business Modeler lacks direct support for importation of the *.BPMN XML file format. The tool provides import support for XPDL and XMI formats."
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/29",
-    "id": 13733410,
-    "number": 29,
-    "title": "Data store reference names are not displayed",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?",
-      "gravatar_id": "07c2f14327a4257c8f589eb5e38b2318",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+MID+Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-28T11:45:18Z",
-    "updated_at": "2013-04-30T11:37:16Z",
-    "closed_at": null,
-    "body": "Data store references are imported, yet not displayed. The node is assigned the name correctly. Yet, data store references have a separate label which is assigned a default text. The name of the node can be retrieved when looking at the node properties.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data store reference in question is in the left center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
   }
 ]

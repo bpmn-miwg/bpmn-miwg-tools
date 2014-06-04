@@ -51,9 +51,9 @@
       "site_admin": false
     },
     "milestone": null,
-    "comments": 1,
+    "comments": 2,
     "created_at": "2014-05-26T09:10:53Z",
-    "updated_at": "2014-05-26T15:45:44Z",
+    "updated_at": "2014-06-04T12:37:44Z",
     "closed_at": "2014-05-26T15:45:35Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/180",
