@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/comments",
@@ -97,60 +98,154 @@
     "id": 34100445,
     "number": 179,
     "title": "Unable to import provided .bpmn files into IBM BPM 8.5 Process Designer",
+=======
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
+    "id": 36060863,
+    "number": 187,
+    "title": "Provide test case with different kinds of Sequence Flows",
+>>>>>>> Update data
     "user": {
-      "login": "ajay-",
-      "id": 7671480,
-      "avatar_url": "https://avatars.githubusercontent.com/u/7671480?",
-      "gravatar_id": "48422f385ae25ebd644e095d91aa55d1",
-      "url": "https://api.github.com/users/ajay-",
-      "html_url": "https://github.com/ajay-",
-      "followers_url": "https://api.github.com/users/ajay-/followers",
-      "following_url": "https://api.github.com/users/ajay-/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ajay-/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ajay-/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ajay-/subscriptions",
-      "organizations_url": "https://api.github.com/users/ajay-/orgs",
-      "repos_url": "https://api.github.com/users/ajay-/repos",
-      "events_url": "https://api.github.com/users/ajay-/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ajay-/received_events",
+      "login": "apupier",
+      "id": 1105127,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1105127?",
+      "gravatar_id": "79c9602fbf0ae08b716037e3381976d3",
+      "url": "https://api.github.com/users/apupier",
+      "html_url": "https://github.com/apupier",
+      "followers_url": "https://api.github.com/users/apupier/followers",
+      "following_url": "https://api.github.com/users/apupier/following{/other_user}",
+      "gists_url": "https://api.github.com/users/apupier/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/apupier/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/apupier/subscriptions",
+      "organizations_url": "https://api.github.com/users/apupier/orgs",
+      "repos_url": "https://api.github.com/users/apupier/repos",
+      "events_url": "https://api.github.com/users/apupier/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/apupier/received_events",
       "type": "User",
       "site_admin": false
     },
     "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
-        "name": "Test: A.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+BPM",
-        "name": "Tool: IBM BPM",
-        "color": "009800"
-      }
+
     ],
     "state": "open",
     "assignee": null,
     "milestone": null,
     "comments": 1,
-    "created_at": "2014-05-22T16:47:09Z",
-    "updated_at": "2014-05-23T08:36:10Z",
+    "created_at": "2014-06-19T09:02:48Z",
+    "updated_at": "2014-06-25T15:58:43Z",
     "closed_at": null,
-    "body": "Unable to import provided .bpmn files into IBM BPM 8.5 Process Designer. \r\nError image attached:\r\n![image](https://cloud.githubusercontent.com/assets/7671480/3056969/ad3b067e-e1d0-11e3-94fd-c6561062a9db.png)\r\n"
+    "body": "As mentioned in Table 12.35, we could provide sample for:\r\n- (\"normal\") Sequence Flow\r\n- Default Sequence Flow\r\n- Conditional Sequence Flow\r\n\r\nUse case where I detected an interchange incompatibility:\r\nIf no conditionExpression set on a Sequence Flow and the Sequence Flow is not marked as default on outgoing reference of Task/Gateways, the Sequence Flow is  a \"normal\" Sequence Flow. It seems that some tools are considering it as \"Default Sequence Flow\" (itp Commerce, Trisotech and Signavio... I'm feeling alone :s). I think that the *default* attribute on preceding Task/Gateway is missing.\r\nWhy I want to make the difference? I want to keep the condition defined by user even if it is ignored in order that if he is not sure between default and a condition he can switch easily from one to another as we kept the conditionExpression.\r\n\r\nBased on the specification the right behavior seems to ignore the conditionExpression and be based only on the default attribute to detect Default Sequence Flow:\r\nTable 10.3, 10.123, 10.124, 10.125 on default attribute:\r\n> The Sequence Flow that will receive a token when none of the conditionExpressions on  other outgoing Sequence Flows evaluate to true. The default Sequence Flow should not have a conditionExpression. Any such Expression SHALL be ignored.\r\n\r\nI\r\n![diagramtotestdefaultsequenceflowwithcondition-1 0](https://cloud.githubusercontent.com/assets/1105127/3325776/c7c3b756-f793-11e3-84fb-cfe92abb727d.png)\r\n\r\n>     <model:exclusiveGateway id=\"_jDY8EPeREeO2W5WJKwzkfQ\" name=\"Gateway1\" default=\"_7WRGkPeQEeO2W5WJKwzkfQ\"/><model:sequenceFlow id=\"_7WRGkPeQEeO2W5WJKwzkfQ\" name=\"\" sourceRef=\"_jDY8EPeREeO2W5WJKwzkfQ\" targetRef=\"_7TL9YPeQEeO2W5WJKwzkfQ\">      <model:conditionExpression xsi:type=\"model:tFormalExpression\" id=\"_kZ1xofeREeO2W5WJKwzkfQ\" evaluatesToTypeRef=\"java:java.lang.Boolean\">true</model:conditionExpression>    </model:sequenceFlow>\r\n\r\nThe litigious case is in green and I put my understanding of the right value:\r\n![issue187bpmn-sequenceflowdefaultconditional](https://cloud.githubusercontent.com/assets/1105127/3384803/0732240a-fc61-11e3-925a-a91e1cd3905a.png)\r\n"
   },
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/178",
-    "id": 33906315,
-    "number": 178,
-    "title": "dataOutputAssociation from startDataOutput to taskDataInput",
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/186",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/186/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/186/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/186/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/186",
+    "id": 36019288,
+    "number": 186,
+    "title": "BoundaryEvents not contained in Lanes",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?",
+      "gravatar_id": "d734c05ee95ad38f3c5eb379b8bdf4bb",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 5,
+    "created_at": "2014-06-18T19:30:28Z",
+    "updated_at": "2014-06-25T16:07:33Z",
+    "closed_at": null,
+    "body": "Model B.2.0 contains no FlowNodeRefs for Boundary Events. That raises two questions:\r\n\r\n1. Are the Boundary Events visible?\r\na) yes, because they are attached to Flow Nodes that are assigned to Lanes\r\nb) no, because they is not assigned to Lanes\r\nc) It depends solely on the DI\r\n\r\n2. Is the test case valid with respect to the BPMN 2.0 spec?\r\na) yes, because a Boundary Event can not be used without the Flow Node to which it is attached and it would be redundant to add an extra FlowNodeRefs.\r\nb) no, because if a Process contains Lanes, then all Flow Nodes must be assigned to Lanes."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/184",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/184/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/184/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/184/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/184",
+    "id": 35420927,
+    "number": 184,
+    "title": "Specification of 'ping' type service task",
+    "user": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
+      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal",
+        "name": "Proposal",
+        "color": "d4c5f9"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
+        "name": "Test: A.1.1",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 7,
+    "created_at": "2014-06-10T20:19:35Z",
+    "updated_at": "2014-06-25T15:59:31Z",
+    "closed_at": null,
+    "body": "Background \r\n---------------\r\nThis is an attempt to merge #181 and #182 including feedback thus far received into a single problem definition and alternative possible solutions. \r\n\r\nA 'ping' type service arose in discussions of serviceTask interchange in an attempt to simplify the many challenges to just those where no data is involved. \r\n\r\nIn common with the wider approach of the working group we also want to start from simple examples to maximise the amount of interchange that can be achieved and then use that as a beach-head from which to build. \r\n\r\nRelevant references to the spec\r\n----------------------------------------\r\n* From p213 (PDF p243): \r\n    \r\n```\r\n    [An ioSpec contains] An optional reference to \r\n    the Data Inputs of the InputOutputSpecification. If the \r\n    InputOutputSpecification defines no Data Input, it means no \r\n    data is REQUIRED to start the Activity. This is an ordered set.  \r\n```\r\n\r\n* This statement is made for service tasks on p158 (PDF p.188):\r\n\r\n```\r\n    In addition the following constraints are introduced \r\n    when the Service Task references an Operation: The Service Task has \r\n    exactly one inputSet and at most one outputSet. It has a single Data \r\n    Input with an ItemDefinition equivalent to the one defined by the \r\n    Message referenced by the inMessageRef attribute of the associated \r\n    Operation. If the Operation defines output Messages, the Service Task \r\n    has a single Data Output that has an ItemDefinition equivalent to the \r\n    one defined by the Message referenced by the outMessageRef attribute \r\n    of the associated Operation.\r\n```\r\n\r\nSummary of discussion \r\n-----------------------------\r\n* The first quote suggested that it would be possible to fully specify the serviceTask in [A.1.1](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/Reference/A.1.1.bpmn) by the following snippet. Note that it omits not only the current ioSpecification/inputset/dataInputRefs that repeat the dataInput but the ioSpecification in its entirety:\r\n```\r\n        <semantic:serviceTask implementation=\"##WebService\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Task 2\" id=\"task2\" operationRef=\"operation1\">\r\n            <semantic:incoming>_1a66ccd9-a80c-44bc-a06f-a684b8370443</semantic:incoming>\r\n            <semantic:outgoing>_725826e9-0e8b-4cb4-842b-e0279515d821</semantic:outgoing>\r\n        </semantic:serviceTask>\r\n```\r\n\r\n* However the second quote appears to block that approach, but thus far no one has spoken in defence of the constraint. Therefore the proposal is to 'correct' (relax) this constraint in some way. \r\n\r\nPossible solutions\r\n-------------------------\r\nThe following alternatives are offered for discussion with the view that one be selected as the proposal of the group:\r\n\r\n1. Do nothing, the constraint is needed (presumably by some fact not yet raised). \r\n1. Make the constraint apply only to ##WebServices. \r\n1. Remove the constraint altogether for all values of the implementation attribute since currently legitimate web services cannot be called (both the ping-type and also Out-Only message exchange patterns).  "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/183",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/183/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/183/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/183/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/183",
+    "id": 35370009,
+    "number": 183,
+    "title": "Outputset inside StartMessageEvent",
     "user": {
       "login": "mpetozzi",
       "id": 5450234,
@@ -177,10 +272,10 @@
     "assignee": null,
     "milestone": null,
     "comments": 1,
-    "created_at": "2014-05-20T16:39:39Z",
-    "updated_at": "2014-05-20T21:47:26Z",
+    "created_at": "2014-06-10T10:44:24Z",
+    "updated_at": "2014-06-12T06:47:38Z",
     "closed_at": null,
-    "body": "### A.1.2 reference visualization\r\n![15cb0d1e-db7e-11e3-8de3-aff1969b665e](https://cloud.githubusercontent.com/assets/5450234/3029638/867caf8c-e037-11e3-8242-5493208d08c8.png)\r\n\r\n### A.1.2 reference serialization\r\nStartEvent (I omitted parts, just to focus on the problem)\r\n```xml\r\n<semantic:startEvent name=\"Start Event\" id=\"startEvent\">\r\n    ...\r\n    <semantic:dataOutput name=\"Start Event Data Output\" id=\"startEventDataOutput\" itemSubjectRef=\"serviceInput\" />\r\n    <semantic:dataOutputAssociation id=\"startEventDataOutputAssociation\">\r\n        <semantic:sourceRef>startEventDataOutput</semantic:sourceRef>\r\n        <semantic:targetRef>dataInputTask1</semantic:targetRef>\r\n    </semantic:dataOutputAssociation>\r\n    <semantic:outputSet>\r\n        <semantic:dataOutputRefs>startEventDataOutput</semantic:dataOutputRefs>\r\n    </semantic:outputSet>\r\n    ...\r\n</semantic:startEvent>\r\n```\r\nUserTask (I omitted parts, only to solve one problem at a time)\r\n```xml\r\n<semantic:userTask implementation=\"##unspecified\" name=\"Task 1\" id=\"task1\" startQuantity=\"1\" isForCompensation=\"false\" completionQuantity=\"1\">\r\n    ...\r\n    <semantic:ioSpecification>\r\n        <semantic:dataInput name=\"Data Input Task 1\" id=\"dataInputTask1\" itemSubjectRef=\"serviceInput\" />\r\n        ...\r\n        <semantic:inputSet>\r\n            <semantic:dataInputRefs>dataInputTask1</semantic:dataInputRefs>\r\n        </semantic:inputSet>\r\n        ...\r\n    </semantic:ioSpecification>\r\n    ...\r\n</semantic:userTask>\r\n```\r\n\r\n### Problem\r\nPlease correct me if I am wrong. In a DataOutputAssociation the targetRef has to reference to an itemAwareElement in the current scope of the process. The *dataInputTask1* is the dataInput of the UserTask. During the execution of the *startEventDataOutputAssociation* the UserTask is not in the current scope of the process, it has not yet received the execution token. So it is not possible to have the dataInput of the task as targetRef of the dataOutputAssociation of the startEvent.\r\n\r\n### Proposed solution\r\nAdd a dataObject in the process to transfer the content of the message from the startEvent to the task.\r\n*Technically*\r\n- add a dataObject in the process\r\n- edit the current startDataOutputAssociation targetRef to reference the dataObject\r\n- add a userTaskDataInputAssociation with sourceRef referencing the dataObject and targetRef referencing the userTaskDataInput.\r\n\r\n### Correlated Problem\r\nThe same issue is present for the second UserTask that connects to the endEvent, but symmetrically."
+    "body": "### A.1.2 Reference Visualization\r\n![15cb0d1e-db7e-11e3-8de3-aff1969b665e](https://cloud.githubusercontent.com/assets/5450234/3029638/867caf8c-e037-11e3-8242-5493208d08c8.png)\r\n\r\n### A.1.2 Reference Serialization\r\nhttps://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/19995f37bb5e190e5f4c5dd73796707950660037/Reference/A.1.2.bpmn#L36-L38\r\n\r\nStartEvent\r\n```xml\r\n<semantic:startEvent name=\"Start Event\" id=\"startEvent\">\r\n    ...\r\n    <semantic:dataOutput name=\"Start Event Data Output\" id=\"startEventDataOutput\" itemSubjectRef=\"serviceInput\" />\r\n    ...\r\n    <semantic:outputSet>\r\n        <semantic:dataOutputRefs>startEventDataOutput</semantic:dataOutputRefs>\r\n    </semantic:outputSet>\r\n    ...\r\n</semantic:startEvent>\r\n```\r\n### Problem\r\nOutputset inside Catch Event.\r\n\r\n### BPMN Specification Reference\r\nBPMN 2.0.2 page 224 (PDF page 254)\r\n> \"When a catch Event is activated, Data Outputs of the event are filled with the element that triggered the Event. Then all DataOutputAssociations of the Event are executed. There are no OutputSets defined for Events.\"\r\n\r\n![image](https://cloud.githubusercontent.com/assets/5450234/3228758/d2c8f2fc-f08a-11e3-95c0-b573cd71d5f5.png)\r\n\r\n\r\n### Correlated Problem\r\nSymmetrically, this issue affect also the endEvent.\r\nhttps://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/19995f37bb5e190e5f4c5dd73796707950660037/Reference/A.1.2.bpmn#L114-L116\r\n\r\n[Edited: removed the proposal due to inconsistencies in the specification]"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/176",
@@ -212,9 +307,15 @@
     },
     "labels": [
       {
+<<<<<<< HEAD
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal",
         "name": "Proposal",
         "color": "d4c5f9"
+=======
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+>>>>>>> Update data
       },
       {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
@@ -225,9 +326,15 @@
     "state": "open",
     "assignee": null,
     "milestone": null,
+<<<<<<< HEAD
     "comments": 2,
     "created_at": "2014-05-07T18:02:33Z",
     "updated_at": "2014-06-04T12:18:58Z",
+=======
+    "comments": 8,
+    "created_at": "2014-05-07T18:02:33Z",
+    "updated_at": "2014-06-11T19:11:13Z",
+>>>>>>> Update data
     "closed_at": null,
     "body": "In the context of preparing test case A.1.1 we were not able to obtain a clear consensus on the proper usage of Human Performer vs Potential Owner for User Tasks"
   },

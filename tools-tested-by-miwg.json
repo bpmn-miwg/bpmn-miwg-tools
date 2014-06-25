@@ -243,7 +243,7 @@
     {
       "vendor": "Trisotech",
       "tool": "Trisotech BPMN Modeler for Microsoft Visio",
-      "version": "4.0",
+      "version": "4.2",
       "website": "http://www.businessprocessincubator.com",
       "bpiId": "bpmn-2-0-modeler-for-visio",
       "supportsBpmn2": true,
@@ -357,6 +357,21 @@
       "hasRoundtrip": false,
       "testResultsSubmitted": "partial",
       "participatedInDemos": true,
+      "openSource": false,
+      "notes": ""
+    },
+    {
+      "vendor": "Sparx",
+      "tool": "Sparx Enterprise Architect",
+      "version": "11.1",
+      "website": "http://www.sparxsystems.com/",
+      "bpiId": "",
+      "supportsBpmn2": true,
+      "hasImport": true,
+      "hasExport": true,
+      "hasRoundtrip": true,
+      "testResultsSubmitted": false,
+      "participatedInDemos": false,
       "openSource": false,
       "notes": ""
     }
