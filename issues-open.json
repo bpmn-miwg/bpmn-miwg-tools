@@ -1,104 +1,5 @@
 [
   {
-<<<<<<< HEAD
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/182",
-    "id": 34484303,
-    "number": 182,
-    "title": "Proposal for relaxed data constraint in non WS-* serviceTask",
-    "user": {
-      "login": "tstephen",
-      "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
-      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
-      "url": "https://api.github.com/users/tstephen",
-      "html_url": "https://github.com/tstephen",
-      "followers_url": "https://api.github.com/users/tstephen/followers",
-      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
-      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
-      "organizations_url": "https://api.github.com/users/tstephen/orgs",
-      "repos_url": "https://api.github.com/users/tstephen/repos",
-      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/tstephen/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 1,
-    "created_at": "2014-05-28T16:40:23Z",
-    "updated_at": "2014-06-04T12:30:09Z",
-    "closed_at": null,
-    "body": "This statement is made for service tasks on p158 (PDF p.188): \r\n\r\n```\r\n         \"In addition the following constraints are introduced \r\n         when the Service Task references an Operation: The Service Task has \r\n         exactly one inputSet and at most one outputSet. It has a single Data \r\n         Input with an ItemDefinition equivalent to the one defined by the \r\n         Message referenced by the inMessageRef attribute of the associated \r\n         Operation. If the Operation defines output Messages, the Service Task \r\n         has a single Data Output that has an ItemDefinition equivalent to the \r\n         one defined by the Message referenced by the outMessageRef attribute \r\n         of the associated Operation.\"\r\n```\r\n\r\nFor RESTful implementations it turns out this is an unnecessary constraint so in order to minimise the burden for such implementations we propose the following change to the text: \r\n\r\nAfter \r\n```   \r\n         \"...when the Service Task references an Operation: ...\" \r\n```\r\nadd \r\n```\r\n         \" and when the implementation attribute of the Service Task is set to '##WebService'\"\r\n```\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/181",
-    "id": 34466032,
-    "number": 181,
-    "title": "Minimal specification of serviceTask for 'ping' style use case",
-    "user": {
-      "login": "tstephen",
-      "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?",
-      "gravatar_id": "25e7c4d03ab9b5cff694e43fc927579d",
-      "url": "https://api.github.com/users/tstephen",
-      "html_url": "https://github.com/tstephen",
-      "followers_url": "https://api.github.com/users/tstephen/followers",
-      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
-      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
-      "organizations_url": "https://api.github.com/users/tstephen/orgs",
-      "repos_url": "https://api.github.com/users/tstephen/repos",
-      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/tstephen/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal",
-        "name": "Proposal",
-        "color": "d4c5f9"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
-        "name": "Test: A.1.1",
-        "color": "006b75"
-      }
-    ],
-    "state": "open",
-    "assignee": null,
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2014-05-28T13:30:17Z",
-    "updated_at": "2014-05-30T12:20:28Z",
-    "closed_at": null,
-    "body": "In light of the following quote: \r\n```\r\n    p213 (PDF p243) [An ioSpec contains] An optional reference to \r\n    the Data Inputs of the InputOutputSpecification. If the \r\n    InputOutputSpecification defines no Data Input, it means no \r\n    data is REQUIRED to start the Activity. This is an ordered set.\r\n```\r\nI propose removal of the dataInput which is consistent with the WSDL I produced. As well as the matching inputSet/dataInputRef  \r\n\r\nThat would leave the serviceTask in test A.1.1 like this: \r\n```\r\n        <semantic:serviceTask implementation=\"##WebService\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Task 2\" id=\"task2\" operationRef=\"operation1\">\r\n            <semantic:incoming>_1a66ccd9-a80c-44bc-a06f-a684b8370443</semantic:incoming>\r\n            <semantic:outgoing>_725826e9-0e8b-4cb4-842b-e0279515d821</semantic:outgoing>\r\n            <semantic:ioSpecification>\r\n              <semantic:inputSet/>\r\n              <semantic:outputSet/>\r\n            </semantic:ioSpecification>\r\n        </semantic:serviceTask>\r\n```\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/179",
-    "id": 34100445,
-    "number": 179,
-    "title": "Unable to import provided .bpmn files into IBM BPM 8.5 Process Designer",
-=======
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/comments",
@@ -107,7 +8,6 @@
     "id": 36060863,
     "number": 187,
     "title": "Provide test case with different kinds of Sequence Flows",
->>>>>>> Update data
     "user": {
       "login": "apupier",
       "id": 1105127,
@@ -307,15 +207,9 @@
     },
     "labels": [
       {
-<<<<<<< HEAD
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal",
-        "name": "Proposal",
-        "color": "d4c5f9"
-=======
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
         "name": "Proposal for RTF",
         "color": "fef2c0"
->>>>>>> Update data
       },
       {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
@@ -326,15 +220,9 @@
     "state": "open",
     "assignee": null,
     "milestone": null,
-<<<<<<< HEAD
-    "comments": 2,
-    "created_at": "2014-05-07T18:02:33Z",
-    "updated_at": "2014-06-04T12:18:58Z",
-=======
     "comments": 8,
     "created_at": "2014-05-07T18:02:33Z",
     "updated_at": "2014-06-11T19:11:13Z",
->>>>>>> Update data
     "closed_at": null,
     "body": "In the context of preparing test case A.1.1 we were not able to obtain a clear consensus on the proper usage of Human Performer vs Potential Owner for User Tasks"
   },
