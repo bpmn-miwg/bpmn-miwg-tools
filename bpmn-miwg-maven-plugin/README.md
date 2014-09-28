@@ -12,7 +12,7 @@ Running
 =======
 
 1. Ensure you have Maven installed, for further information see [here](http://maven.apache.org/)
-1. Put your .bpmn files in the project's resourses directory (default: src/main/resources) in the following sub-directories: 
+1. Put your .bpmn files in the project's resources directory (default: src/main/resources) in the following sub-directories: 
   - A - Fixed Digrams with Variations of Attributes/Tool Version/
   - B - Validate that tool covers conformance class set/Tool Version/
   
