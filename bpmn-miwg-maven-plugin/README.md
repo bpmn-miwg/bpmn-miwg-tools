@@ -14,7 +14,7 @@ Running
 1. Ensure you have Maven installed, for further information see [here](http://maven.apache.org/)
 1. Put your .bpmn files in the project's resourses directory (default: src/main/resources) in the following sub-directories: 
   - A - Fixed Digrams with Variations of Attributes/Tool Version/
-  - B - Validate that tool covers conformance class set/Too Version/
+  - B - Validate that tool covers conformance class set/Tool Version/
   
   Note the 'Tool Version' folder must match either the property at step 6 below or one of the tools listed in [tools JSON file](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/tools-tested-by-miwg.json)
 1. Add the BPMN-MIWG repository to your project's pom.xml: 
