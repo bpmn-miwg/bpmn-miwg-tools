@@ -25,7 +25,6 @@
 
 package org.omg.bpmn.miwg.xpathTestRunner.experimental.runners.standard;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
@@ -43,8 +42,6 @@ import org.omg.bpmn.miwg.xpathTestRunner.experimental.ScanUtil;
 
 @RunWith(Parameterized.class)
 public class StandardTestCase {
-
-	private int i, j;
 
 	private InstanceParameter param;
 	
@@ -64,7 +61,6 @@ public class StandardTestCase {
 
 	@Test
 	public void test() {
-		assertEquals(i, j);
 		fail("Not yet implemented");
 	}
 	
