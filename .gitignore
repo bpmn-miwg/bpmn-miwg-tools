@@ -3,10 +3,11 @@ bin/
 .DS_Store
 .project
 *.prefs
-/BPMN 2.0 XML Compare/lib
+bpmn-miwg-maven-plugin/.classpath
 test-result/.classpath
 BPMN 2.0 XML Compare/.classpath
 BPMN 2.0 XML Compare/.project
+BPMN 2.0 XML Compare/lib
 XPathTestRunner/.classpath
 XPathTestRunner/.project
 XPathTestRunner/.*

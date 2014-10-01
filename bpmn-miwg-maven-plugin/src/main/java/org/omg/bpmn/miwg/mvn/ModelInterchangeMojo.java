@@ -190,7 +190,8 @@ public class ModelInterchangeMojo extends AbstractMojo {
      * @param b
      *            BPMN file.
      * @return The BPMN-MIWG test this file is a submission for based on naming
-     *         convention.
+     *         convention. For example the export results file for the A.1.0
+     *         test will be called A.1.0-export.bpmn.
      */
     protected String inferTestName(File b) {
         return b.getName()
@@ -198,6 +199,14 @@ public class ModelInterchangeMojo extends AbstractMojo {
                 .replace("-export", "").replace("-roundtrip", "");
     }
 
+    /**
+     * 
+     * @param testName
+     *            Test name in the form Suite.Test.Variation, for example A.1.0.
+     * @param b
+     *            The vendor BPMN file to compare to the reference.
+     * @return Stream of the reference file.
+     */
     protected InputStream findReference(String testName, File b) {
         getLog().info("Checking for reference file to match: " + b);
         StringBuilder ref = new StringBuilder();
@@ -224,8 +233,9 @@ public class ModelInterchangeMojo extends AbstractMojo {
             final String testName, final String toolPath, final File b,
             final InputStream refStream) {
         getLog().info(
-                String.format("Running xml-compare test %2$s for %1$s on %3$s",
-                        app, testName, b));
+                String.format(
+                        "Running %1$s test %2$s for %3$s on %4$s. Base of test directory: %5$s",
+                        testTool.getName(), app, testName, b, toolPath));
 
         InputStream testStream = null;
         final TestResults results = new TestResults();
@@ -236,31 +246,33 @@ public class ModelInterchangeMojo extends AbstractMojo {
         try {
             String testFile = toolPath + File.separator + app + File.separator
                     + b.getName();
-            getLog().debug("xml-compare testing: " + testFile);
+            getLog().debug(String.format(
+                    "%1$s testing: %2$s", testTool.getName(), testFile));
             testStream = new FileInputStream(testFile);
             Test test = results.addTool(app).addTest(testName, variant.name());
             Collection<? extends Output> diffs = testTool
                     .getSignificantDifferences(refStream, testStream);
             test.addAll(diffs);
             getLog().debug(
-"writing test report to: " + f.getAbsolutePath());
+                    "writing test report to: " + f.getAbsolutePath());
             results.writeResultFile(f);
 
             String resultKey = app + "-" + testName + "-" + variant;
             FileResult result = (FileResult) testsRun.get(resultKey);
             if (result == null) {
-                getLog().info(
-                        "Cannot find result for '" + app + "-" + testName
-                                + "' in " + testsRun + ", add new");
+                getLog().debug(String.format(
+                        "Cannot find result for '%1$s %2$s' in %3$s, adding...",
+                        app, testName, testsRun));
 
                 result = new FileResult(resultKey);
                 testsRun.put(resultKey, result);
             }
+            // TODO make each tool this itself so MOJO can be agnostic
             switch (testTool.getName()) {
-            case "xml-compare":
+            case XML_COMPARE_TOOL_ID:
                 result.diffs = diffs.size();
                 break;
-            case "xpath":
+            case XPATH_TOOL_ID:
                 result.oks = match(OutputType.ok, diffs);
                 result.findings = match(OutputType.finding, diffs);
                 break;
@@ -269,7 +281,6 @@ public class ModelInterchangeMojo extends AbstractMojo {
                         "Don't know how to report results of "
                                 + testTool.getName());
             }
-
         } catch (Exception e) {
             getLog().error(e.getMessage());
             try {

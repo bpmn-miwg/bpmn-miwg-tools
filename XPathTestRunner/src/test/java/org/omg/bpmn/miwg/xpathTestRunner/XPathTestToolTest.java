@@ -40,7 +40,32 @@ public class XPathTestToolTest {
     private static final String RPT_FOLDER = "target";
 
     @Test
-    public void test() {
+    public void testSchemaInvalidBpmn() {
+        XPathTestTool schemaValidator = new XPathTestTool(
+                "BPMN Schema Validator", RPT_FOLDER);
+        InputStream actualBpmnXml = null;
+        try {
+            actualBpmnXml = getClass().getResourceAsStream(
+                    "/SchemaInvalid/A.1.0-roundtrip.bpmn");
+            assertNotNull("Cannot find resource to test", actualBpmnXml);
+            Collection<? extends Output> outputs = schemaValidator
+                    .getSignificantDifferences(null, actualBpmnXml);
+            // Any number of validation errors are reported as a single finding
+            assertEquals(1, outputs.size());
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        } finally {
+            try {
+                actualBpmnXml.close();
+            } catch (Exception e) {
+                ;
+            }
+        }
+    }
+
+    @Test
+    public void testYaoqiang3_with_A_1_0_roundtrip() {
         XPathTestTool xPathTestTool = new XPathTestTool("A.1.0", RPT_FOLDER);
         InputStream actualBpmnXml = null;
         try {
