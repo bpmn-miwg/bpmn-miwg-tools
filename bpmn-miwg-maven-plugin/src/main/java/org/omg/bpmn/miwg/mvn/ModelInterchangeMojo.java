@@ -78,6 +78,8 @@ public class ModelInterchangeMojo extends AbstractMojo {
 	private static final String XML_COMPARE_TOOL_ID = "xml-compare";
 
 	private static final String XPATH_TOOL_ID = "xpath";
+	
+	private static final String XSD_TOOL_ID = "xsd";
 
 	/**
 	 * Project instance, needed for attaching the buildinfo file. Used to add
@@ -274,6 +276,10 @@ public class ModelInterchangeMojo extends AbstractMojo {
 				result.setDiffs(diffs.size());
 				break;
 			case XPATH_TOOL_ID:
+				// The results are already passed as constructor parameters.
+				break;
+			case XSD_TOOL_ID:
+				// The results are already passed as constructor parameters.
 				break;
 			default:
 				getLog().error(
