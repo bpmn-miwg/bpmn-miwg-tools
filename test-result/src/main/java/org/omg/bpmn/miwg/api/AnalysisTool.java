@@ -48,6 +48,6 @@ public interface AnalysisTool {
     String getName(); 
     
     AnalysisResult runAnalysis(
-            File testResult, InputStream referenceBpmnXml, InputStream actualBpmnXml, String reportFolder)
+            File testResult, InputStream referenceBpmnXml, InputStream actualBpmnXml, File reportFolder)
             throws IOException, ParserConfigurationException;
 }
