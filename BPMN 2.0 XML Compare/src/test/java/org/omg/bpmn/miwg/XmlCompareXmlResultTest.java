@@ -176,9 +176,9 @@ public class XmlCompareXmlResultTest {
             SAXException, IOException {
 
         try {
-            String result = TestRunner.runXmlCompareTest(getReferenceFolder()
+            String result = XmlCompareAnalysisTool.runXmlCompareTest(getReferenceFolder()
                     .getAbsolutePath(), getToolFolder().getAbsolutePath(),
-                    variant);
+                    variant, null);
             reportTestResult(result);
         } catch (Exception e) {
             reportTestResult(e.getMessage());

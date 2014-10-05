@@ -27,9 +27,9 @@ public class TestRunnerTest {
         String testFolderPath = "target" + File.separator + "test-suite"
                 + File.separator + TOOL_ID;
         try {
-            String results = TestRunner.runXmlCompareTest(refFolderPath,
+            String results = XmlCompareAnalysisTool.runXmlCompareTest(refFolderPath,
                     testFolderPath,
-                    Variant.roundtrip);
+                    Variant.roundtrip, null);
             assertTrue(results.contains("data-test=\"A.1.0.bpmn\""));
             assertTrue(results.contains("data-test=\"A.2.0.bpmn\""));
             assertTrue(results.contains("data-test=\"A.3.0.bpmn\""));
@@ -55,8 +55,8 @@ public class TestRunnerTest {
             compareStream = getClass().getResourceAsStream(
                     "/" + TOOL_ID + "/" + TEST_ID + "-" + VARIANT + ".bpmn");
             assertNotNull(compareStream);
-            Collection<? extends Output> significantDifferences = new TestRunner()
-                    .getSignificantDifferences(bpmnStream, compareStream);
+            Collection<? extends Output> significantDifferences = new XmlCompareAnalysisTool()
+                    .runAnalysis(null, bpmnStream, compareStream, null).output;
             System.out.println(significantDifferences);
             assertEquals(33, significantDifferences.size());
 
