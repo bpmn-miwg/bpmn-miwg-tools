@@ -62,6 +62,7 @@ import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.testresult.Test;
 import org.omg.bpmn.miwg.testresult.TestResults;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
+import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 
 import edu.emory.mathcs.backport.java.util.Collections;
 
@@ -136,6 +137,8 @@ public class ModelInterchangeMojo extends AbstractMojo {
 						InputStream refStream = findReference(testName, b);
 						if (refStream != null) {
 							runTestTool(new XPathAnalysisTool(), app, testName,
+									dir.getAbsolutePath(), b, refStream);
+							runTestTool(new XSDAnalysisTool(), app, testName,
 									dir.getAbsolutePath(), b, refStream);
 							// TODO optimise to not read file twice
 							refStream = findReference(testName, b);
