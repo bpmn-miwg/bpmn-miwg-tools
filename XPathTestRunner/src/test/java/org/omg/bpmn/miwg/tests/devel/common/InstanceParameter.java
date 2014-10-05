@@ -23,18 +23,34 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.common;
+package org.omg.bpmn.miwg.tests.devel.common;
 
 import java.io.File;
 
-public class TestResult {
+public class InstanceParameter implements Cloneable {
 
-	public TestResult(File testResultFile) {
-		this.name = testResultFile.getName();
-		this.file = testResultFile;
+	public File outputRoot;
+
+	public File inputRoot;
+
+	public Application application;
+
+	public TestResult testResult;
+
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+
+		sb.append(" Input root : " + inputRoot + "\n");
+		sb.append(" Output root: " + outputRoot + "\n");
+		sb.append(" Application: " + application + "\n");
+		sb.append(" Test result: " + testResult.name + "\n");
+
+		return sb.toString();
 	}
 
-	public String name;
-	public File file;
-	
+	@Override
+	public InstanceParameter clone() {
+		return (InstanceParameter)CloneUtil.clone(this);
+	}
+
 }

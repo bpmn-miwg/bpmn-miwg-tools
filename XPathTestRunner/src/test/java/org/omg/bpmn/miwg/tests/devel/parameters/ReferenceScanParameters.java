@@ -23,34 +23,34 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.common;
+package org.omg.bpmn.miwg.tests.devel.parameters;
 
 import java.io.File;
+import java.io.IOException;
 
-public class InstanceParameter implements Cloneable {
+import org.omg.bpmn.miwg.tests.devel.common.Application;
+import org.omg.bpmn.miwg.tests.devel.common.ScanParameters;
+import org.omg.bpmn.miwg.tests.devel.common.TestResult;
 
-	public File outputRoot;
-
-	public File inputRoot;
-
-	public Application application;
-
-	public TestResult testResult;
-
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-
-		sb.append(" Input root : " + inputRoot + "\n");
-		sb.append(" Output root: " + outputRoot + "\n");
-		sb.append(" Application: " + application + "\n");
-		sb.append(" Test result: " + testResult.name + "\n");
-
-		return sb.toString();
+public class ReferenceScanParameters implements ScanParameters {
+	
+	public File getInputRoot() throws IOException {
+		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
+		return new File(s);
 	}
 
-	@Override
-	public InstanceParameter clone() {
-		return (InstanceParameter)CloneUtil.clone(this);
+	public File getOutputRoot() throws IOException {
+		String s = new File("../../XPathOutput").getCanonicalPath();
+		return new File(s);
+	}
+	
+	
+	public boolean acceptApplication(Application application) {
+		return application.name.toLowerCase().equals("reference");
+	}
+	
+	public boolean acceptTestResult(TestResult testResult) {
+		return true;
 	}
 
 }

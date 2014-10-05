@@ -25,26 +25,13 @@
 
 package org.omg.bpmn.miwg.tests;
 
-import java.io.IOException;
-import java.util.List;
+import org.omg.bpmn.miwg.tests.devel.ReferenceOnlyTestCase;
+import org.omg.bpmn.miwg.tests.devel.common.InstanceParameter;
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-import org.omg.bpmn.miwg.tests.common.InstanceParameter;
-import org.omg.bpmn.miwg.tests.common.ScanUtil;
-import org.omg.bpmn.miwig.tests.parameters.ReferenceScanParameters;
+public class CompleteReferenceTest extends ReferenceOnlyTestCase {
 
-@RunWith(Parameterized.class)
-public class ReferenceOnlyTestCase extends AbstractTestCase {
-	
-	public ReferenceOnlyTestCase(InstanceParameter parameter) {
+	public CompleteReferenceTest(InstanceParameter parameter) {
 		super(parameter);
-	}
-	
-	@Parameters
-	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new ReferenceScanParameters());
 	}
 
 }

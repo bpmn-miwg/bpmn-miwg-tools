@@ -23,38 +23,19 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.common;
+package org.omg.bpmn.miwg.tests.devel.common;
 
-import java.lang.reflect.Field;
+import java.io.File;
+import java.io.IOException;
 
-public class CloneUtil {
-	@SuppressWarnings("rawtypes")
-	public static Object clone(Object o) {
-		Object clone = null;
+public interface ScanParameters {
 
-		try {
-			clone = o.getClass().newInstance();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		}
+	public File getInputRoot() throws IOException;
 
-		// Walk up the superclass hierarchy
-		for (Class obj = o.getClass(); !obj.equals(Object.class); obj = obj
-				.getSuperclass()) {
-			Field[] fields = obj.getDeclaredFields();
-			for (int i = 0; i < fields.length; i++) {
-				fields[i].setAccessible(true);
-				try {
-					// for each class/suerclass, copy all fields
-					// from this object to the clone
-					fields[i].set(clone, fields[i].get(o));
-				} catch (IllegalArgumentException e) {
-				} catch (IllegalAccessException e) {
-				}
-			}
-		}
-		return clone;
-	}
+	public File getOutputRoot() throws IOException;
+
+	public boolean acceptApplication(Application application);
+
+	public boolean acceptTestResult(TestResult testResult);
+
 }

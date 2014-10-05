@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests;
+package org.omg.bpmn.miwg.tests.devel;
 
 import static org.junit.Assert.assertEquals;
 
@@ -36,7 +36,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.tests.common.InstanceParameter;
+import org.omg.bpmn.miwg.tests.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 
@@ -67,9 +67,9 @@ public abstract class AbstractTestCase {
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		try {
 			AnalysisResult result = tool.runAnalysis(param.testResult.file, null, bpmnXmlStream,
-					param.outputRoot.getAbsolutePath());
+					param.outputRoot);
 
-			assertEquals(result.numFindings, 0);
+			assertEquals(0, result.numFindings);
 		} finally {
 			bpmnXmlStream.close();
 		}
@@ -82,9 +82,9 @@ public abstract class AbstractTestCase {
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		try {
 			AnalysisResult result = tool.runAnalysis(null, null, bpmnXmlStream,
-					param.outputRoot.getAbsolutePath());
+					param.outputRoot);
 
-			assertEquals(result.numFindings, 0);
+			assertEquals(0, result.numFindings);
 		} finally {
 			bpmnXmlStream.close();
 		}

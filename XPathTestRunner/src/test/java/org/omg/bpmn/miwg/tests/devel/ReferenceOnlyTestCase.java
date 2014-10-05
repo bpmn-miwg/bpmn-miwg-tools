@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests;
+package org.omg.bpmn.miwg.tests.devel;
 
 import java.io.IOException;
 import java.util.List;
@@ -31,20 +31,20 @@ import java.util.List;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.omg.bpmn.miwg.tests.common.InstanceParameter;
-import org.omg.bpmn.miwg.tests.common.ScanUtil;
-import org.omg.bpmn.miwig.tests.parameters.StandardScanParameters;
+import org.omg.bpmn.miwg.tests.devel.common.InstanceParameter;
+import org.omg.bpmn.miwg.tests.devel.common.ScanUtil;
+import org.omg.bpmn.miwg.tests.devel.parameters.ReferenceScanParameters;
 
 @RunWith(Parameterized.class)
-public class StandardTestCase extends AbstractTestCase {
-
-	public StandardTestCase(InstanceParameter parameter) {
+public class ReferenceOnlyTestCase extends AbstractTestCase {
+	
+	public ReferenceOnlyTestCase(InstanceParameter parameter) {
 		super(parameter);
 	}
-
+	
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new StandardScanParameters());
+		return ScanUtil.data(new ReferenceScanParameters());
 	}
 
 }

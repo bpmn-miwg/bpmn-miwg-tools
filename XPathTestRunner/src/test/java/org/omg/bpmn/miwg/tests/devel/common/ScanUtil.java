@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.common;
+package org.omg.bpmn.miwg.tests.devel.common;
 
 import java.io.File;
 import java.io.FileFilter;

@@ -23,34 +23,43 @@
  * 
  */
 
-package org.omg.bpmn.miwig.tests.parameters;
+package org.omg.bpmn.miwg.tests.devel.common;
 
 import java.io.File;
-import java.io.IOException;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
-import org.omg.bpmn.miwg.tests.common.Application;
-import org.omg.bpmn.miwg.tests.common.ScanParameters;
-import org.omg.bpmn.miwg.tests.common.TestResult;
+public class Application {
 
-public class StandardScanParameters implements ScanParameters {
+	private static Pattern twopart = Pattern.compile("(.*)\\s(\\S+)"); 
 	
-	public File getInputRoot() throws IOException {
-		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
-		return new File(s);
+	public String application;
+	public File folder;
+	public String name;
+	public String version;
+	
+	public Application(File folder) {
+		this.folder = folder;
+		this.application = folder.getName();
+		
+		Matcher m = twopart.matcher(application);
+		
+		if (m.matches()) {
+			this.name = m.group(1);
+			this.version = m.group(2);
+		} else {
+			this.name = application;
+			this.version = "";
+		}
+		
+		
 	}
 
-	public File getOutputRoot() throws IOException {
-		String s = new File("../../XPathOutput").getCanonicalPath();
-		return new File(s);
-	}
 	
-	
-	public boolean acceptApplication(Application application) {
-		return true;
+
+	public String toString() {
+		return name + "//" + version;
 	}
-	
-	public boolean acceptTestResult(TestResult testResult) {
-		return true;
-	}
+
 
 }

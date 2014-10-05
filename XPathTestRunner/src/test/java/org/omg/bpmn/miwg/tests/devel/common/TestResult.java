@@ -23,43 +23,18 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.common;
+package org.omg.bpmn.miwg.tests.devel.common;
 
 import java.io.File;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 
-public class Application {
+public class TestResult {
 
-	private static Pattern twopart = Pattern.compile("(.*)\\s(\\S+)"); 
-	
-	public String application;
-	public File folder;
+	public TestResult(File testResultFile) {
+		this.name = testResultFile.getName();
+		this.file = testResultFile;
+	}
+
 	public String name;
-	public String version;
+	public File file;
 	
-	public Application(File folder) {
-		this.folder = folder;
-		this.application = folder.getName();
-		
-		Matcher m = twopart.matcher(application);
-		
-		if (m.matches()) {
-			this.name = m.group(1);
-			this.version = m.group(2);
-		} else {
-			this.name = application;
-			this.version = "";
-		}
-		
-		
-	}
-
-	
-
-	public String toString() {
-		return name + "//" + version;
-	}
-
-
 }

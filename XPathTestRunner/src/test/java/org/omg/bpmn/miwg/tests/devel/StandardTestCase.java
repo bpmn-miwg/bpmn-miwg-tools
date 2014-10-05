@@ -23,34 +23,28 @@
  * 
  */
 
-package org.omg.bpmn.miwig.tests.parameters;
+package org.omg.bpmn.miwg.tests.devel;
 
-import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
-import org.omg.bpmn.miwg.tests.common.Application;
-import org.omg.bpmn.miwg.tests.common.ScanParameters;
-import org.omg.bpmn.miwg.tests.common.TestResult;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.tests.devel.common.InstanceParameter;
+import org.omg.bpmn.miwg.tests.devel.common.ScanUtil;
+import org.omg.bpmn.miwg.tests.devel.parameters.StandardScanParameters;
 
-public class ReferenceScanParameters implements ScanParameters {
-	
-	public File getInputRoot() throws IOException {
-		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
-		return new File(s);
+@RunWith(Parameterized.class)
+public class StandardTestCase extends AbstractTestCase {
+
+	public StandardTestCase(InstanceParameter parameter) {
+		super(parameter);
 	}
 
-	public File getOutputRoot() throws IOException {
-		String s = new File("../../XPathOutput").getCanonicalPath();
-		return new File(s);
-	}
-	
-	
-	public boolean acceptApplication(Application application) {
-		return application.name.toLowerCase().equals("reference");
-	}
-	
-	public boolean acceptTestResult(TestResult testResult) {
-		return true;
+	@Parameters
+	public static List<Object[]> data() throws IOException {
+		return ScanUtil.data(new StandardScanParameters());
 	}
 
 }

@@ -79,7 +79,7 @@ public class XPathAnalysisTool implements AnalysisTool {
     @Override
     public AnalysisResult runAnalysis(File testResult, 
             InputStream expectedBpmnXml, InputStream actualBpmnXml,
-            String reportFolder)
+            File reportFolder)
             throws IOException, ParserConfigurationException {
         Check check = getCheck(testResult);
         check.init(new CheckOutput(check.getName(), reportFolder));

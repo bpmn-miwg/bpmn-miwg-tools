@@ -20,7 +20,7 @@ public class CheckOutput {
 	private Stack<AbstractCheckEntry> stack = new Stack<AbstractCheckEntry>();
 	private String name;
 
-	public CheckOutput(String name, String outputFolder) throws IOException {
+	public CheckOutput(String name, File outputFolder) throws IOException {
 		init(name, outputFolder);
 	}
 
@@ -28,7 +28,7 @@ public class CheckOutput {
 		return name;
 	}
 
-	private void init(String name, String outputFolder) throws IOException {
+	private void init(String name, File outputFolder) throws IOException {
 
 		this.name = name;
 
