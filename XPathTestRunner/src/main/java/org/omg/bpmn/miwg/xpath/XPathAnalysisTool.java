@@ -49,6 +49,7 @@ import org.omg.bpmn.miwg.xpath.checks.B_2_0_Check;
 import org.omg.bpmn.miwg.xpath.checks.C_1_0_Check;
 import org.omg.bpmn.miwg.xpath.checks.DemoTechnicalSupportCheck;
 import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.omg.bpmn.miwg.xsd.checks.SchemaCheck;
 
 public class XPathAnalysisTool implements AnalysisTool {
 
@@ -81,14 +82,22 @@ public class XPathAnalysisTool implements AnalysisTool {
             InputStream expectedBpmnXml, InputStream actualBpmnXml,
             File reportFolder)
             throws IOException, ParserConfigurationException {
-        Check check = getCheck(testResult);
-        check.init(new CheckOutput(check.getName(), reportFolder));
+        
+		Check check = getCheck(testResult);
+		CheckOutput checkOutput = new CheckOutput("xpath-" + testResult.getParentFile().getName() + "-" + testResult.getName(), reportFolder);
+		check.init(checkOutput);
 
-        try {
-           return check.execute(actualBpmnXml);
-        } catch (Throwable e) {
-            throw new IOException(e.getMessage(), e);
-        }
+		AnalysisResult result;
+		
+		try {
+			 result = check.execute(actualBpmnXml);
+		} catch (Throwable e) {
+			throw new IOException(e.getMessage(), e);
+		} finally {
+			checkOutput.close();
+		}
+		
+		return result;    	
     }
 
     private Check getCheck(File testResult) {

@@ -49,13 +49,20 @@ public class XSDAnalysisTool implements AnalysisTool {
 			ParserConfigurationException {
 
 		SchemaCheck check = new SchemaCheck();
-		check.init(new CheckOutput(getName(), reportFolder));
+		CheckOutput checkOutput = new CheckOutput("xsd-" + testResult.getParentFile().getName() + "-" + testResult.getName(), reportFolder);
+		check.init(checkOutput);
 
+		AnalysisResult result;
+		
 		try {
-			return check.execute(actualBpmnXml);
+			 result = check.execute(actualBpmnXml);
 		} catch (Throwable e) {
 			throw new IOException(e.getMessage(), e);
+		} finally {
+			checkOutput.close();
 		}
+		
+		return result;
 		
 	}
 

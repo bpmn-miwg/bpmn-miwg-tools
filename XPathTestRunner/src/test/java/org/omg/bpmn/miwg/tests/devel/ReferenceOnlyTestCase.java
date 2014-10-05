@@ -31,6 +31,7 @@ import java.util.List;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.tests.devel.common.AbstractTestCase;
 import org.omg.bpmn.miwg.tests.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.tests.devel.common.ScanUtil;
 import org.omg.bpmn.miwg.tests.devel.parameters.ReferenceScanParameters;
