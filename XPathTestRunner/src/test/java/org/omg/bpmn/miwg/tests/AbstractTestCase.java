@@ -62,7 +62,7 @@ public abstract class AbstractTestCase {
 
 	@Test
 	public void testXpath() throws Exception {
-		XPathAnalysisTool tool = new XPathAnalysisTool(param.testResult.name);
+		XPathAnalysisTool tool = new XPathAnalysisTool();
 
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		try {

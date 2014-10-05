@@ -52,10 +52,9 @@ import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
 
 public class XPathAnalysisTool implements AnalysisTool {
 
-    private String checkName;
     private List<AbstractXpathCheck> registeredChecks = new LinkedList<AbstractXpathCheck>();
 
-    public XPathAnalysisTool(String testName) {
+    public XPathAnalysisTool() {
         registerCheck(new A_1_0_Check());
         registerCheck(new A_1_1_Check());
         registerCheck(new A_1_2_Check());
@@ -67,7 +66,6 @@ public class XPathAnalysisTool implements AnalysisTool {
         registerCheck(new B_2_0_Check());
         registerCheck(new C_1_0_Check());
         registerCheck(new DemoTechnicalSupportCheck());
-        this.checkName = testName;
     }
 
     public String getName() {
@@ -83,11 +81,11 @@ public class XPathAnalysisTool implements AnalysisTool {
             InputStream expectedBpmnXml, InputStream actualBpmnXml,
             String reportFolder)
             throws IOException, ParserConfigurationException {
-        Check test = getCheck(testResult);
-        test.init(new CheckOutput(checkName, reportFolder));
+        Check check = getCheck(testResult);
+        check.init(new CheckOutput(check.getName(), reportFolder));
 
         try {
-           return test.execute(actualBpmnXml);
+           return check.execute(actualBpmnXml);
         } catch (Throwable e) {
             throw new IOException(e.getMessage(), e);
         }
