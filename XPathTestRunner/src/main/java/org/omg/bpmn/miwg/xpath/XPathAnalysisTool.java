@@ -49,7 +49,6 @@ import org.omg.bpmn.miwg.xpath.checks.B_2_0_Check;
 import org.omg.bpmn.miwg.xpath.checks.C_1_0_Check;
 import org.omg.bpmn.miwg.xpath.checks.DemoTechnicalSupportCheck;
 import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
-import org.omg.bpmn.miwg.xsd.checks.SchemaCheck;
 
 public class XPathAnalysisTool implements AnalysisTool {
 
