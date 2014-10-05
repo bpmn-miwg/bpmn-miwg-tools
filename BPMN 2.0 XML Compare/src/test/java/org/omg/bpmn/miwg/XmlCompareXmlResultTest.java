@@ -69,17 +69,11 @@ public class XmlCompareXmlResultTest {
      * "import", "-export", "-roundtrip".
      */
     private Variant variant;
-    /**
-     * The name of the test category's folder e.g.
-     * "A - Fixed Digrams with Variations of Attributes"
-     */
-    private TestCategory testCategory;
-
+    
     public XmlCompareXmlResultTest(String tool, TestCategory testCategory,
             Variant variant) {
         this.tool = tool;
         this.variant = variant;
-        this.testCategory = testCategory;
     }
 
     @Parameters

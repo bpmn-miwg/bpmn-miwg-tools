@@ -31,7 +31,6 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -92,7 +91,7 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 	}
 
 	public static String runXmlCompareTest(String refFolderPath,
-			String testFolderPath, Variant variant, String reportFolder)
+			String testFolderPath, Variant variant, File reportFolder)
 			throws ParserConfigurationException, SAXException, IOException {
 		return runXmlCompareTest(refFolderPath, testFolderPath, variant, null, reportFolder);
 	}
@@ -118,7 +117,7 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 	 */
 	public static String runXmlCompareTest(String refFolderPath,
 			String testFolderPath, Variant variant, String confName,
-			String reportFolder) throws ParserConfigurationException,
+			File reportFolder) throws ParserConfigurationException,
 			SAXException, IOException {
 		File refFolder = new File(refFolderPath);
 		File testFolder = new File(testFolderPath);
@@ -220,7 +219,7 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 	@Override
 	public AnalysisResult runAnalysis(File testResult,
 			InputStream expectedBpmnXml, InputStream actualBpmnXml,
-			String reportFolder) throws JsonParseException,
+			File reportFolder) throws JsonParseException,
 			JsonMappingException, IOException, ParserConfigurationException {
 		
 		List<Difference> diffs = getChecker().getSignificantDifferences(
