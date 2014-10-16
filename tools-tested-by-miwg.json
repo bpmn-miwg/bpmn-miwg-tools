@@ -48,7 +48,7 @@
     {
       "vendor": "camunda services GmbH",
       "tool": "camunda-bpmn.js",
-      "version": "c906a7c941b82dbb832ed9be62989c171c724199",
+      "version": "8428718423920dfceae63f03c3b521a00e134fe9",
       "website": "https://github.com/camunda/camunda-bpmn.js",
       "bpiId": "camunda-fox-bpm-plaform",
       "supportsBpmn2": true,
@@ -371,6 +371,21 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "testResultsSubmitted": false,
+      "participatedInDemos": false,
+      "openSource": false,
+      "notes": ""
+    },
+    {
+      "vendor": "ibo",
+      "tool": "ibo Prometheus",
+      "version": "3.6.0.0",
+      "website": "https://www.ibo.de/prozessmanagement/prozessmanagement-software.html",
+      "bpiId": "",
+      "supportsBpmn2": true,
+      "hasImport": true,
+      "hasExport": true,
+      "hasRoundtrip": true,
+      "testResultsSubmitted": "partial",
       "participatedInDemos": false,
       "openSource": false,
       "notes": ""
