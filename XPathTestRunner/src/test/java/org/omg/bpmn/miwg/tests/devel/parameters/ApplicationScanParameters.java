@@ -32,8 +32,14 @@ import org.omg.bpmn.miwg.tests.devel.common.Application;
 import org.omg.bpmn.miwg.tests.devel.common.ScanParameters;
 import org.omg.bpmn.miwg.tests.devel.common.TestResult;
 
-public class ReferenceScanParameters implements ScanParameters {
-	
+public class ApplicationScanParameters implements ScanParameters {
+
+	protected String applicationName;
+
+	public ApplicationScanParameters(String application) {
+		this.applicationName = application;
+	}
+
 	public File getInputRoot() throws IOException {
 		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
 		return new File(s);
@@ -43,12 +49,12 @@ public class ReferenceScanParameters implements ScanParameters {
 		String s = new File("../../XPathOutput").getCanonicalPath();
 		return new File(s);
 	}
-	
-	
+
 	public boolean acceptApplication(Application application) {
-		return application.name.toLowerCase().equals("reference");
+		return application.name.toLowerCase().equals(
+				applicationName.toLowerCase());
 	}
-	
+
 	public boolean acceptTestResult(TestResult testResult) {
 		return true;
 	}
