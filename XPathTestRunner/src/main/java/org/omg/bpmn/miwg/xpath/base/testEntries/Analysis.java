@@ -29,19 +29,19 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 
-@XStreamAlias("TestRun")
-public class TestRunEntry extends AbstractCheckEntry {
+@XStreamAlias("Analysis")
+public class Analysis extends AbstractCheckEntry {
 	
 	@XStreamAsAttribute
 	private String name;
 	
 	
-	public TestRunEntry(String name) {
+	public Analysis(String name) {
 		this.name = name;
 	}
 
 	@Override
 	public String toLine() {
-		return String.format("TESTRUN: %s", name);
+		return String.format("ANALYSIS: %s", name);
 	}
 }

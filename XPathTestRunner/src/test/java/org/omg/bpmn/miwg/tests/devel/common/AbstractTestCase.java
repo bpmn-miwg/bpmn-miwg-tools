@@ -50,6 +50,8 @@ public abstract class AbstractTestCase {
 
 	@Before
 	public void setUp() throws Exception {
+		System.out.println();
+		System.out.println("=============================");
 		System.out.println("Running test:");
 		System.out.println(param);
 	}

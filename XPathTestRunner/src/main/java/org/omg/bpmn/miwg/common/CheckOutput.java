@@ -46,7 +46,7 @@ public class CheckOutput {
 		xmlFileWriter = new PrintWriter(new BufferedWriter(new FileWriter(
 				xmlFile)));
 
-		TestRunEntry entry = new TestRunEntry(name);
+		Analysis entry = new Analysis(name);
 		push(entry);
 	}
 
@@ -131,7 +131,7 @@ public class CheckOutput {
 		xstream.processAnnotations(TestEntry.class);
 		xstream.processAnnotations(ResultsEntry.class);
 		xstream.processAnnotations(TotalResultsEntry.class);
-		xstream.processAnnotations(TestRunEntry.class);
+		xstream.processAnnotations(Analysis.class);
 		xstream.processAnnotations(TestFileEntry.class);
 		String xml = xstream.toXML(stack.firstElement());
 
