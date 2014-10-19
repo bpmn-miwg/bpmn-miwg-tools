@@ -27,5 +27,16 @@ public class AnalysisResult {
 		this.numFindings = numFindings;
 		this.output = output;
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("OK      : ");
+		sb.append(numOK);
+		sb.append("\n");
+		sb.append("Findings: ");
+		sb.append(numFindings);
+		sb.append("\n");
+		return sb.toString();
+	}
 
 }

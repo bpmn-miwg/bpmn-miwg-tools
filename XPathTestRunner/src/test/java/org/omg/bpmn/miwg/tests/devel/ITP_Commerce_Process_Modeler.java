@@ -37,15 +37,15 @@ import org.omg.bpmn.miwg.tests.devel.common.ScanUtil;
 import org.omg.bpmn.miwg.tests.devel.parameters.ApplicationScanParameters;
 
 @RunWith(Parameterized.class)
-public class Signavio_8_3_0TestCase extends AbstractTestCase {
+public class ITP_Commerce_Process_Modeler extends AbstractTestCase {
 	
-	public Signavio_8_3_0TestCase(InstanceParameter parameter) {
+	public ITP_Commerce_Process_Modeler(InstanceParameter parameter) {
 		super(parameter);
 	}
 	
-	@Parameters(name="sn{0}")
+	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new ApplicationScanParameters("Signavio Process Editor"));
+		return ScanUtil.data(new ApplicationScanParameters("itp-commerce Process Modeler for Microsoft Visio"));
 	}
 
 }

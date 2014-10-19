@@ -71,6 +71,9 @@ public abstract class AbstractTestCase {
 					param.outputRoot);
 
 			assertEquals(0, result.numFindings);
+			
+			System.out.println();
+			System.out.println(result);
 		} finally {
 			bpmnXmlStream.close();
 		}
@@ -86,6 +89,9 @@ public abstract class AbstractTestCase {
 					param.outputRoot);
 
 			assertEquals(0, result.numFindings);
+			
+			System.out.println();
+			System.out.println(result);
 		} finally {
 			bpmnXmlStream.close();
 		}
