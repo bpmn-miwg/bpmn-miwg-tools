@@ -6,7 +6,7 @@
   <artifactId>tools</artifactId>
   <name>BPMN 2.0 Model Interchange Tools</name>
   <packaging>pom</packaging>
-  <version>0.2-SNAPSHOT</version>
+  <version>0.3-SNAPSHOT</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
   <licenses>
@@ -83,9 +83,9 @@
   </repositories>
 
   <modules>
-    <module>test-result</module>
-    <module>BPMN 2.0 XML Compare</module>
-    <module>XPathTestRunner</module>
+    <module>analysis-tool-api</module>
+    <module>xml-compare-tool</module>
+    <module>xpath-tool</module>
     <module>bpmn-miwg-maven-plugin</module>
   </modules>
 
@@ -108,6 +108,11 @@
           <artifactId>jmxri</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>test-suite</artifactId>
+      <version>0.2-SNAPSHOT</version>
     </dependency>
     <!-- TODO required only by xml-compare so should prob not be here
     <dependency>

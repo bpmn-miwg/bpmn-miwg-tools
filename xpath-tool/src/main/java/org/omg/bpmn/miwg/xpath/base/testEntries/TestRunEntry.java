@@ -23,15 +23,25 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests;
+package org.omg.bpmn.miwg.xpath.base.testEntries;
 
-import org.omg.bpmn.miwg.tests.devel.ReferenceOnlyTestCase;
-import org.omg.bpmn.miwg.tests.devel.common.InstanceParameter;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-public class CompleteReferenceTest extends ReferenceOnlyTestCase {
 
-	public CompleteReferenceTest(InstanceParameter parameter) {
-		super(parameter);
+@XStreamAlias("TestRun")
+public class TestRunEntry extends AbstractCheckEntry {
+	
+	@XStreamAsAttribute
+	private String name;
+	
+	
+	public TestRunEntry(String name) {
+		this.name = name;
 	}
 
+	@Override
+	public String toLine() {
+		return String.format("TESTRUN: %s", name);
+	}
 }

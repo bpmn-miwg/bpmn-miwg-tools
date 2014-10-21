@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>org.omg.bpmn.miwg</groupId>
 		<artifactId>tools</artifactId>
-		<version>0.2-SNAPSHOT</version>
+		<version>0.3-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
-	<artifactId>xpath</artifactId>
+	<artifactId>xpath-tool</artifactId>
 	<name>BPMN 2.0 XPath Test Runner</name>
 	<description>
     <![CDATA[
@@ -32,7 +32,7 @@
 	<dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>test-result</artifactId>
+      <artifactId>analysis-tool-api</artifactId>
       <version>${project.version}</version>
     </dependency>
 		<dependency>
@@ -46,11 +46,6 @@
 			<artifactId>xstream</artifactId>
 			<version>1.4.4</version>
 		</dependency>
-		<dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>test-suite</artifactId>
-      <version>${project.version}</version>
-    </dependency>
 	</dependencies>
 
 	<build>

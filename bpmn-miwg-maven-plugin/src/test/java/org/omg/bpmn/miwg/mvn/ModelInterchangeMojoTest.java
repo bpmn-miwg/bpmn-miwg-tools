@@ -20,7 +20,7 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.maven.model.Resource;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
+import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -124,11 +124,11 @@ public class ModelInterchangeMojoTest {
     @Test 
     public void testSingleSchemaInvalidBpmnFile() throws Exception {
         final String testName = "A.1.0";
-        XPathAnalysisTool xpathTool = new XPathAnalysisTool(); 
+        XSDAnalysisTool xsdTool = new XSDAnalysisTool();
         String baseDir = "src" + File.separator + "test" + File.separator
                 + "invalid-resources";
         mojo.runTestTool(
-                xpathTool,
+xsdTool,
                 YAOQIANG_2_MODELER_ID,
                 testName,
                 baseDir,

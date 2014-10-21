@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>org.omg.bpmn.miwg</groupId>
 		<artifactId>tools</artifactId>
-		<version>0.2-SNAPSHOT</version>
+		<version>0.3-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
-	<artifactId>xml-compare</artifactId>
+	<artifactId>xml-compare-tool</artifactId>
 	<name>BPMN 2.0 XML Compare</name>
 	<description>
     <![CDATA[
@@ -32,7 +32,7 @@
 	<dependencies>
 		<dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>test-result</artifactId>
+      <artifactId>analysis-tool-api</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -74,11 +74,6 @@
 			<artifactId>junit</artifactId>
 			<version>4.8.2</version>
 		</dependency>
-		<dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>test-suite</artifactId>
-      <version>${project.version}</version>
-    </dependency>
 	</dependencies>
 
 	<build>

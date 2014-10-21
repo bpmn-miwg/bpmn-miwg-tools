@@ -1,7 +1,9 @@
 target/
 bin/
+.classpath
 .DS_Store
 .project
+.settings/
 *.prefs
 bpmn-miwg-maven-plugin/.classpath
 test-result/.classpath
