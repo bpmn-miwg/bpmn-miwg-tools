@@ -25,6 +25,78 @@
       <h2>camunda Modeler 2.4.0</h2>
       <div class="test" data-test="A.4.0" data-variant="export">
          <h3>A.4.0</h3>
+         <div class="ok">
+            <h4>OK     : selectCollaboration; Message: bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectPool; Message: bpmn:participant[@name=&apos;Pool&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectReferencedProcess; Message: //bpmn:process[@id=&apos;Process_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;Task_1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;Message Flow 1&apos; and @sourceRef=&apos;Task_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;Task_2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;Message Flow 2&apos; and @targetRef=&apos;Task_2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;EndEvent_1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElementX; Message: No node found; Parameter: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectElementX; Message: No node found; Parameter: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectFollowingElement; Message: Parent failed; Parameter: Type: bpmn:subProcess, name: Expanded Sub-Process 1</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectFollowingElement; Message: Parent failed; Parameter: Type: bpmn:subProcess, name: Expanded Sub-Process 2</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 4&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
       </div>
    </div>
 </div>

@@ -25,6 +25,45 @@
       <h2>Signavio Process Editor 8.3.0</h2>
       <div class="test" data-test="A.2.0" data-variant="export">
          <h3>A.2.0</h3>
+         <div class="ok">
+            <h4>OK     : selectElementX; Message: /bpmn:definitions/bpmn:process</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;sid-4644E4BF-18AE-4328-9EE4-DB3CE7FE763C&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name=&apos;Gateway (Split Flow)&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
       </div>
    </div>
 </div>

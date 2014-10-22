@@ -25,6 +25,153 @@
       <h2>Eclipse BPMN2 Modeler 0.2.6</h2>
       <div class="test" data-test="B.1.0" data-variant="export">
          <h3>B.1.0</h3>
+         <div class="ok">
+            <h4>OK     : selectElementX; Message: //bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:messageFlow[@name=&apos;Message Flow 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event Timer&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkTimerEvent; Message: Timer event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;Task_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;User Task 2&apos; and @id=&apos;UserTask_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Service Task 3&apos; and @id=&apos;ServiceTask_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event None 1&apos; and @id=&apos;EndEvent_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkXORMarkersForProcess; Message: The XOR marker for the BPMN element with the id &apos;ExclusiveGateway_1&apos; is true although false is expected.; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElementX; Message: .//bpmn:lane[@name=&apos;Lane 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElementX; Message: .//bpmn:lane[@name=&apos;Lane 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event Message&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway Divergence&apos; and @id=&apos;ParallelGateway_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 1&apos; and @id=&apos;ExclusiveGateway_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:callActivity[@name=&apos;Call Activity Collapsed&apos; and @id=&apos;CallActivity_1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkTextAssociation; Message: Text annotation &apos;Text Annotation&apos; not found; Parameter: bpmn:textAnnotation[@id=../bpmn:association[@sourceRef=&apos;CallActivity_1&apos;]/@targetRef]/bpmn:text</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name=&apos;Call Activity - Expanded&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectProcessOfCallActivity; Message: Parent failed; Parameter: selectProcessofCallActivity</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event None 1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/bpmn2:definitions[@id=&apos;id=&quot;Definitions_1&quot;&apos;]/bpmn2:process[@id=&apos;id=&quot;Process_2&quot;&apos;]/bpmn2:exclusiveGateway[@id=&apos;id=&quot;ExclusiveGateway_1&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:callActivity[@name=&apos;Call Activity Calling a Global Task&apos; and @id=&apos;CallActivity_3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkGlobalTask; Message: Attribute &apos;calledElement&apos; exists although the test expects that this element does not exist; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 1&apos; and @id=&apos;ExclusiveGateway_2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/bpmn2:definitions[@id=&apos;id=&quot;Definitions_1&quot;&apos;]/bpmn2:process[@id=&apos;id=&quot;Process_2&quot;&apos;]/bpmn2:parallelGateway[@id=&apos;id=&quot;ParallelGateway_1&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;User Task 5&apos; and @id=&apos;UserTask_2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 2&apos; and @id=&apos;ExclusiveGateway_3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos; and @id=&apos;SubProcess_1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Sub Process - Expanded&apos; and @id=&apos;SubProcess_2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event None 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Abstract Task 6&apos; and @id=&apos;Task_3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event None 3&apos; and @id=&apos;EndEvent_5&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;ExclusiveGateway_4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event Terminate&apos; and @id=&apos;EndEvent_4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/bpmn2:definitions[@id=&apos;id=&quot;Definitions_1&quot;&apos;]/bpmn2:process[@id=&apos;id=&quot;Process_2&quot;&apos;]/bpmn2:exclusiveGateway[@id=&apos;id=&quot;ExclusiveGateway_3&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Service Task 7&apos; and @id=&apos;ServiceTask_2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataObject &apos;Data Object&apos;; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkDataAssociation; Message: Association reference dataStoreReference &apos;Data Store Reference&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;ExclusiveGateway_4&apos;]</h4>
+         </div>
       </div>
    </div>
 </div>
