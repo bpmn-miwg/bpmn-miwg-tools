@@ -21,6 +21,7 @@ import org.apache.maven.model.Resource;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
+import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -109,16 +110,30 @@ public class ModelInterchangeMojoTest {
             NodeList nodes = (NodeList) testOverviewExpr.evaluate(document,
                     XPathConstants.NODESET);
 
-            assertEquals(1 /* count of .bpmn in Yaoqiang dir */,
-                    nodes.getLength());
-            Node node = nodes.item(0);
-            // There should be 1 finding: that the file is schema invalid
-            assertEquals("1", node.getAttributes()
+            Node invalidNode = findSchemaInvalidResultsNode(nodes);
+
+            // There should be 2 findings: an invalid element and an invalid
+            // attribute
+            assertEquals("2", invalidNode.getAttributes()
                     .getNamedItem("data-findings").getNodeValue());
         } catch (Exception e) {
             e.printStackTrace();
             fail(e.getClass() + ":" + e.getMessage());
         }
+    }
+
+    private Node findSchemaInvalidResultsNode(NodeList nodes) {
+        Node yaoqiangNode = null;
+        for (int i = 0; i < nodes.getLength(); i++) {
+            Node node = nodes.item(i);
+            if (((Attr) node.getAttributes().getNamedItem("data-name"))
+                    .getValue().startsWith(YAOQIANG_2_MODELER_ID)) {
+                yaoqiangNode = node;
+            }
+        }
+        assertNotNull("Cannot find results for invalid BPMN file",
+                yaoqiangNode);
+        return yaoqiangNode;
     }
 
     @Test 
@@ -127,8 +142,7 @@ public class ModelInterchangeMojoTest {
         XSDAnalysisTool xsdTool = new XSDAnalysisTool();
         String baseDir = "src" + File.separator + "test" + File.separator
                 + "invalid-resources";
-        mojo.runTestTool(
-xsdTool,
+        mojo.runTestTool(xsdTool,
                 YAOQIANG_2_MODELER_ID,
                 testName,
                 baseDir,
@@ -141,10 +155,12 @@ xsdTool,
         NodeList nodes = (NodeList) testOverviewExpr.evaluate(document,
                 XPathConstants.NODESET);
 
-        assertEquals(1 /* count of .bpmn in Yaoqiang dir */, nodes.getLength());
-        Node node = nodes.item(0);
-        // There should be 1 finding: that the file is schema invalid
-        assertEquals("1", node.getAttributes().getNamedItem("data-findings")
+        Node invalidNode = findSchemaInvalidResultsNode(nodes);
+
+        // There should be 2 findings: an invalid element and an invalid
+        // attribute
+        assertEquals("2",
+                invalidNode.getAttributes().getNamedItem("data-findings")
                 .getNodeValue());
     }
     

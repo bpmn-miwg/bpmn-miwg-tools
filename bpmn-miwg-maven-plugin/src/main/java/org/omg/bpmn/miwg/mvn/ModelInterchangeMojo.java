@@ -58,8 +58,6 @@ import org.omg.bpmn.miwg.input.BpmnFileFilter;
 import org.omg.bpmn.miwg.input.DirFilter;
 import org.omg.bpmn.miwg.testresult.IndexWriter;
 import org.omg.bpmn.miwg.testresult.Output;
-import org.omg.bpmn.miwg.testresult.OutputType;
-import org.omg.bpmn.miwg.testresult.Test;
 import org.omg.bpmn.miwg.testresult.TestResults;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
@@ -250,12 +248,10 @@ public class ModelInterchangeMojo extends AbstractMojo {
 					String.format("%1$s testing: %2$s", testTool.getName(),
 							testFile));
 			testStream = new FileInputStream(testFile);
-			Test test = results.addTool(app).addTest(testName, variant.name());
+            results.addTool(app).addTest(testName, variant.name());
 			AnalysisResult analysisResult = testTool.runAnalysis(new File(
 					testFile), refStream, testStream, outputDirectory);
-			Collection<? extends Output> diffs = analysisResult.output;
 
-			test.addAll(diffs);
 			getLog().debug("writing test report to: " + f.getAbsolutePath());
 			results.writeResultFile(f);
 
@@ -269,22 +265,8 @@ public class ModelInterchangeMojo extends AbstractMojo {
 
 				result = new FileResult(resultKey, analysisResult);
 				testsRun.put(resultKey, result);
-			}
-			// TODO make each tool this itself so MOJO can be agnostic
-			switch (testTool.getName()) {
-			case XML_COMPARE_TOOL_ID:
-				result.setDiffs(diffs.size());
-				break;
-			case XPATH_TOOL_ID:
-				// The results are already passed as constructor parameters.
-				break;
-			case XSD_TOOL_ID:
-				// The results are already passed as constructor parameters.
-				break;
-			default:
-				getLog().error(
-						"Don't know how to report results of "
-								+ testTool.getName());
+            } else {
+                result.setAnalysisResult(analysisResult);
 			}
 		} catch (Exception e) {
 			getLog().error(e.getMessage());
@@ -352,22 +334,28 @@ public class ModelInterchangeMojo extends AbstractMojo {
 
 		protected String name;
 		protected AnalysisResult result;
-		protected int diffs;
 
 		public FileResult(String name, AnalysisResult result) {
 			this.name = name;
 			this.result = result;
 		}
 
-		public void setDiffs(int diffs) {
-			this.diffs = diffs;
-		}
+        public void setAnalysisResult(AnalysisResult result) {
+            Collection<? extends Output> tmp = new ArrayList<Output>();
+            Collections.addAll(tmp, this.result.output.toArray());
+            Collections.addAll(tmp, result.output.toArray());
+            this.result.output = tmp;
+            this.result.numFindings += result.numFindings;
+            this.result.numOK += result.numOK;
+        }
 
 		public String buildHtml() {
 			StringBuilder builder = new StringBuilder();
 
-			builder.append("\t<div class=\"test\" data-diffs=\"" + diffs
+            builder.append("\t<div class=\"test\" data-diffs=\""
+                    + result.output.size()
 					+ "\" data-findings=\"" + result.numFindings
+					+ "\" data-name=\"" + name
 					+ "\" data-ok=\"" + result.numOK + "\">");
 			builder.append("<a href=\"" + name + ".html\">" + name + "</a>");
 			builder.append("</div>\n");
