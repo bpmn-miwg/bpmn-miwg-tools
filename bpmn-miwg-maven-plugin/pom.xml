@@ -4,7 +4,7 @@
 
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>bpmn-miwg-maven-plugin</artifactId>
-  <version>0.2-SNAPSHOT</version>
+  <version>0.2</version>
   <packaging>maven-plugin</packaging>
 
   <name>BPMN-MIWG Maven Plugin</name>

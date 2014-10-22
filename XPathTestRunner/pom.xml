@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.omg.bpmn.miwg</groupId>
 		<artifactId>tools</artifactId>
-		<version>0.2-SNAPSHOT</version>
+		<version>0.2</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>xpath</artifactId>
@@ -49,7 +49,7 @@
 		<dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>test-suite</artifactId>
-      <version>${project.version}</version>
+      <version>0.2-SNAPSHOT</version>
     </dependency>
 	</dependencies>
 
