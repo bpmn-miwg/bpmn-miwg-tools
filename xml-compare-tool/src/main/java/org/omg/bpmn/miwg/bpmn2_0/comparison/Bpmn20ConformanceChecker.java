@@ -91,11 +91,18 @@ public class Bpmn20ConformanceChecker {
         try {
             Document expectedBpmnXmlDoc = docBuilder.parse(expectedBpmnXml);
             Document actualBpmnXmlDoc = docBuilder.parse(actualBpmnXml);
-            return xmlDiff.areDocumentsEqualReporting(expectedBpmnXmlDoc,
-                    actualBpmnXmlDoc);
+            return getSignificantDifferences(actualBpmnXmlDoc,
+                    expectedBpmnXmlDoc);
         } catch (SAXException e) {
             throw new IOException(e.getMessage(), e.getCause());
         }
+    }
+
+    public List<Difference> getSignificantDifferences(
+            Document actualBpmnXmlDoc, Document expectedBpmnXmlDoc)
+            throws SAXException, IOException {
+        return xmlDiff.areDocumentsEqualReporting(expectedBpmnXmlDoc,
+                actualBpmnXmlDoc);
     }
 
     public String checkForSignificantDifferences(File expectedBpmnXmlFile,

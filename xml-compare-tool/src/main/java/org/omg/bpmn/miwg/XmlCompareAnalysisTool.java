@@ -31,6 +31,7 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -50,6 +51,7 @@ import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.testresult.Test;
 import org.omg.bpmn.miwg.testresult.TestResults;
+import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -224,18 +226,34 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 		
 		List<Difference> diffs = getChecker().getSignificantDifferences(
 				actualBpmnXml, expectedBpmnXml);
-		List<Output> outputs = new ArrayList<Output>();
-		for (Difference diff : diffs) {
-			Output output = new Output(OutputType.finding,
-					describeDifference(diff));
-			output.setDescription(String.format(
-					"Difference found in %1$s (id:%2$s)",
-					diff.getDescription(), diff.getId()));
-			outputs.add(output);
-		}
 		
-		return new AnalysisResult(0, 0, outputs);
+        return new AnalysisResult(0, 0, adapt(diffs));
 	}
+
+    private Collection<? extends Output> adapt(List<Difference> diffs) {
+        List<Output> outputs = new ArrayList<Output>();
+        for (Difference diff : diffs) {
+            Output output = new Output(OutputType.finding,
+                    describeDifference(diff));
+            output.setDescription(String.format(
+                    "Difference found in %1$s (id:%2$s)",
+                    diff.getDescription(), diff.getId()));
+            outputs.add(output);
+        }
+
+        return outputs;
+    }
+
+    public AnalysisResult runAnalysis(Document expectedBpmnXml,
+            Document actualBpmnXml) throws JsonParseException,
+            JsonMappingException, IOException, ParserConfigurationException,
+            SAXException {
+
+        List<Difference> diffs = getChecker().getSignificantDifferences(
+                actualBpmnXml, expectedBpmnXml);
+
+        return new AnalysisResult(0, 0, adapt(diffs));
+    }
 
 	public String getName() {
 		return "xml-compare";
