@@ -246,7 +246,7 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 		List<Difference> diffs = getChecker().getSignificantDifferences(
 				actualDocument, referenceDocument);
 
-		return new AnalysisResult(0, 0, adapt(diffs));
+		return new AnalysisResult(0, diffs.size(), adapt(diffs));
 	}
 
 	private Collection<? extends Output> adapt(List<Difference> diffs) {

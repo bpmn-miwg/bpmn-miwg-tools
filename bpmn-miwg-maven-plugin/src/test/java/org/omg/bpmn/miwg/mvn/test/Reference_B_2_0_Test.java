@@ -26,6 +26,7 @@
 package org.omg.bpmn.miwg.mvn.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -57,6 +58,7 @@ public class Reference_B_2_0_Test {
 	private static final String TESTRESULTS_FOLDER = "../../bpmn-miwg-test-suite";
 	private static final String REFERENCE_FILE = TESTRESULTS_FOLDER
 			+ "/Reference/B.2.0.bpmn";
+	private static final String CAMMUNDA_FILE = TESTRESULTS_FOLDER + "/camunda Modeler 2.4.0/B.2.0-roundtrip.bpmn";
 
 	private InputStream referenceStream;
 	private Document referenceDOM;
@@ -114,4 +116,17 @@ public class Reference_B_2_0_Test {
 		assertEquals(0, compareTool.analyzeDOM(job, referenceDOM, referenceDOM, null).numFindings);
 	}
 
+	@Test
+	public void test_B_2_0_XMLCompare() throws Exception {
+		DOMAnalysisTool compareTool = new XmlCompareAnalysisTool();
+
+		AnalysisJob job = new AnalysisJob();
+		job.FullApplicationName = "Reference";
+		job.MIWGTestCase = "B.2.0";
+		job.Variant = MIWGVariant.Reference;
+
+		assertFalse(0 == compareTool.analyzeDOM(job, DOMFactory.getDocument(CAMMUNDA_FILE), referenceDOM, null).numFindings);
+	}
+
+	
 }
