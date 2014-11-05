@@ -32,52 +32,52 @@
             <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;Bpmn2_Task_cXdrt5WeEeOnAPP76M9-3Q&apos;]</h4>
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;Bpmn_Task_ZXX_F0JWEeSJCOc9q6nqlg&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos; and @id=&apos;Bpmn2_SubProcess_ius6kZWeEeOnAPP76M9-3Q&apos;]</h4>
+            <h4>OK     : navigateFollowingElement; Message: bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos; and @id=&apos;Bpmn_SubProcess_ZxEKEkJZEeSJCOc9q6nqlg&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBoundaryEvent; Message: Boundary element &apos;Boundary Intermediate Event Non-Interrupting Message&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageEvent; Message: Message event definition</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name=&apos;Boundary Intermediate Event Non-Interrupting Message&apos; and @attachedToRef=&apos;Bpmn2_SubProcess_ius6kZWeEeOnAPP76M9-3Q&apos;]</h4>
+            <h4>FINDING: checkCancelActivity; Message: Attribute cancelActivity does not have the expected value &apos;false&apos;; Parameter: cancelActivity</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;Bpmn_Task_QXfdg0JXEeSJCOc9q6nqlg&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;Bpmn_EndEvent_W8_K00JXEeSJCOc9q6nqlg&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/bpmn:definitions[@id=&apos;id=&quot;A_3_0_new&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;Bpmn_Process_ZXX_EkJWEeSJCOc9q6nqlg&quot;&apos;]/bpmn:subProcess[@id=&apos;id=&quot;Bpmn_SubProcess_ZxEKEkJZEeSJCOc9q6nqlg&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;Bpmn_Task_TIF840JXEeSJCOc9q6nqlg&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;Bpmn_EndEvent_W8_K00JXEeSJCOc9q6nqlg&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement; Message: #document/bpmn:definitions[@id=&apos;id=&quot;A_3_0_new&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;Bpmn_Process_ZXX_EkJWEeSJCOc9q6nqlg&quot;&apos;]/bpmn:subProcess[@id=&apos;id=&quot;Bpmn_SubProcess_ZxEKEkJZEeSJCOc9q6nqlg&quot;&apos;]/</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef</h4>
+            <h4>FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name=&apos;Boundary Intermediate Event Interrupting Escalation&apos; and @attachedToRef=&apos;Bpmn_SubProcess_ZxEKEkJZEeSJCOc9q6nqlg&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: checkCancelActivity; Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: </h4>
+            <h4>FINDING: checkEscalationEvent; Message: Cannot find escalation event definition; Parameter: bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkCancelActivity; Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 3&apos;]</h4>
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 4&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event 1&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : navigateElement; Message: #document/bpmn2:definitions[@id=&apos;id=&quot;A_3_0&quot;&apos;]/bpmn2:process[@id=&apos;id=&quot;Bpmn2_Process_cXdrspWeEeOnAPP76M9-3Q&quot;&apos;]/bpmn2:subProcess[@id=&apos;id=&quot;Bpmn2_SubProcess_ius6kZWeEeOnAPP76M9-3Q&quot;&apos;]/</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;Bpmn2_Task_AEOqIpWfEeOnAPP76M9-3Q&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;Bpmn2_EndEvent_Gk0CQpWfEeOnAPP76M9-3Q&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : navigateElement; Message: #document/bpmn2:definitions[@id=&apos;id=&quot;A_3_0&quot;&apos;]/bpmn2:process[@id=&apos;id=&quot;Bpmn2_Process_cXdrspWeEeOnAPP76M9-3Q&quot;&apos;]/bpmn2:subProcess[@id=&apos;id=&quot;Bpmn2_SubProcess_ius6kZWeEeOnAPP76M9-3Q&quot;&apos;]/</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : navigateBoundaryEvent; Message: Boundary element &apos;Boundary Intermediate Event Interrupting Escalation&apos; found</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : checkEscalationEvent; Message: Escalation event definition</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : checkCancelActivity; Message: Attribute cancelActivity=true</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;Bpmn2_Task_CkEwspWfEeOnAPP76M9-3Q&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;Bpmn2_EndEvent_EX43spWfEeOnAPP76M9-3Q&apos;]</h4>
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event 2&apos;]</h4>
          </div>
       </div>
    </div>

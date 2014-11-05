@@ -37,26 +37,26 @@
          <div class="ok">
             <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event Timer&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name=&apos;Start Event Timer&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : checkTimerEvent; Message: Timer event definition</h4>
+         <div class="finding">
+            <h4>FINDING: checkTimerEvent; Message: Cannot find timer event definition; Parameter: bpmn:timerEventDefinition | bpmn:eventDefinitionRef</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;_219b9ca1-d4c5-497d-a4f7-06a44a6da20e&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Abstract Task 1&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;Message Flow 1&apos; and @sourceRef=&apos;WFP-6-1&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;User Task 2&apos; and @id=&apos;_f7eade87-bb98-47d3-85c7-66033a62b124&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name=&apos;User Task 2&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Service Task 3&apos; and @id=&apos;_ec919941-53ec-403d-97e1-6a163a063f21&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:serviceTask[@name=&apos;Service Task 3&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event None 1&apos; and @id=&apos;_94efa7e0-2322-4fc3-a5bf-6c6296488927&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event None 1&apos;]</h4>
          </div>
          <div class="ok">
             <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>

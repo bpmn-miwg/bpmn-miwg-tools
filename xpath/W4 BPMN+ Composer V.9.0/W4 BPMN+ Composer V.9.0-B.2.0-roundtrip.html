@@ -43,26 +43,26 @@
          <div class="ok">
             <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 1 Timer&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name=&apos;Start Event 1 Timer&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : checkTimerEvent; Message: Timer event definition</h4>
+         <div class="finding">
+            <h4>FINDING: checkTimerEvent; Message: Cannot find timer event definition; Parameter: bpmn:timerEventDefinition | bpmn:eventDefinitionRef</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;_d84e5824-7bb7-4057-9dba-6c8794f7948c&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Abstract Task 1&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:sendTask[@name=&apos;Send Task 2&apos; and @id=&apos;_76ee26df-2c95-495b-9d9a-cb806aea6baf&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:sendTask[@name=&apos;Send Task 2&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;Message Flow 1&apos; and @sourceRef=&apos;WFP-6-1&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;User Task 3&apos; and @id=&apos;_0e87da16-736e-45b2-95e5-8f45940f3adf&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name=&apos;User Task 3&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : checkDataAssociation; Message: Association reference dataObject &apos;Data Object&apos; found</h4>
+         <div class="finding">
+            <h4>FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataObject &apos;Data Object&apos;; Parameter: null</h4>
          </div>
          <div class="ok">
             <h4>OK     : selectElement; Message: bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 1&apos;]</h4>
@@ -109,11 +109,11 @@
          <div class="ok">
             <h4>OK     : navigateElement; Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway 2&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateElement; Message: bpmn:endEvent[@name=&apos;End Event 1 Message&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateElement; Message: No node found; Parameter: bpmn:endEvent[@name=&apos;End Event 1 Message&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : checkMessageEvent; Message: Message event definition</h4>
+         <div class="finding">
+            <h4>FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef</h4>
          </div>
          <div class="ok">
             <h4>OK     : navigateElement; Message: #document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-1&quot;&apos;]/semantic:inclusiveGateway[@id=&apos;id=&quot;_dec393e7-f182-4d31-b05f-e33ac3a5e35f&quot;&apos;]/</h4>
@@ -127,8 +127,8 @@
          <div class="ok">
             <h4>OK     : selectElementX; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateElementX; Message: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateElementX; Message: No node found; Parameter: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
          </div>
          <div class="ok">
             <h4>OK     : selectElementX; Message: bpmn:userTask[@name=&apos;User Task 7 Standard Loop&apos;]</h4>
@@ -136,8 +136,8 @@
          <div class="ok">
             <h4>OK     : navigateElementX; Message: bpmn:standardLoopCharacteristics</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateElementX; Message: bpmn:endEvent[@name=&apos;End Event 2&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateElementX; Message: No node found; Parameter: bpmn:endEvent[@name=&apos;End Event 2&apos;]</h4>
          </div>
          <div class="ok">
             <h4>OK     : navigateElementX; Message: bpmn:userTask[@name=&apos;User Task 8&apos;]</h4>
@@ -163,11 +163,11 @@
          <div class="ok">
             <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 2&apos; (Input)</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 3 Signal&apos; and @id=&apos;_5cc02d0f-c090-4e48-8da3-f32cbbca9565&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event 3 Signal&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : checkSignalEvent; Message: Signal event definition</h4>
+         <div class="finding">
+            <h4>FINDING: checkSignalEvent; Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef</h4>
          </div>
          <div class="ok">
             <h4>OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>
