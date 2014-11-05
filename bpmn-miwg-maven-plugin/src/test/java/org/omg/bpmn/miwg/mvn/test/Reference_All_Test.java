@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.mvn.devel;
+package org.omg.bpmn.miwg.mvn.test;
 
 import static org.junit.Assert.assertEquals;
 
