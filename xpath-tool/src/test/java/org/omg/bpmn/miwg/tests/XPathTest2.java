@@ -124,5 +124,40 @@ public class XPathTest2 {
 		}
 	}
 	
+	
+	@Test
+	public void testYaoqiang3_with_A_1_0_roundtrip_Correct_NoLog() {
+		XPathAnalysisTool2 xPathTestTool = new XPathAnalysisTool2();
+		InputStream inputStream = null;
+		try {
+			inputStream = getClass().getResourceAsStream(
+					"/Yaoqiang BPMN Editor 3.0.1 Correct/A.1.0-roundtrip.bpmn");
+			assertNotNull("Cannot find resource to test", inputStream);
+			
+			
+			Document document = getDocument(inputStream);
+			
+			AnalysisJob2 job = new AnalysisJob2();
+			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
+			job.MIWGTestCase = "A.1.0";
+			job.Variant = MIWGVariant.Roundtrip;
+			
+					
+					
+			AnalysisResult result = xPathTestTool
+					.runAnalysis2(job,  null, document, null);
+			assertEquals(0, result.numFindings);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail();
+		} finally {
+			try {
+				inputStream.close();
+			} catch (Exception e) {
+				;
+			}
+		}
+	}
 
 }
