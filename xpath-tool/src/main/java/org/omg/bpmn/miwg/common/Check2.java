@@ -1,10 +1,9 @@
 package org.omg.bpmn.miwg.common;
 
-import java.io.InputStream;
-
 import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.w3c.dom.Document;
 
-public interface Check {
+public interface Check2 {
 
 	void init(CheckOutput out);
 
@@ -14,6 +13,7 @@ public interface Check {
 
 	int resultsFinding();
 
-    AnalysisResult execute(InputStream actualBpmnXml) throws Throwable;
-    
+   
+    AnalysisResult execute2(Document actualBpmnXml) throws Throwable;
+
 }

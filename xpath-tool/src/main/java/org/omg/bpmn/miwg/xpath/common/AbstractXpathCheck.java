@@ -12,18 +12,20 @@ import javax.xml.xpath.XPathFactory;
 
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.common.AbstractCheck;
+import org.omg.bpmn.miwg.common.Check2;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.xpath.base.testEntries.FindingAssertionEntry;
 import org.omg.bpmn.miwg.xpath.base.testEntries.NodePopEntry;
 import org.omg.bpmn.miwg.xpath.base.testEntries.NodePushEntry;
 import org.omg.bpmn.miwg.xpath.base.testEntries.OKAssertionEntry;
 import org.w3c.dom.Attr;
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-public abstract class AbstractXpathCheck extends AbstractCheck {
+public abstract class AbstractXpathCheck extends AbstractCheck implements Check2 {
 
 	private XPath xpath;
 	private Node currentNode;
@@ -1429,6 +1431,19 @@ public abstract class AbstractXpathCheck extends AbstractCheck {
 		return new AnalysisResult(resultsOK(), resultsFinding(), getOutputs());
 	}
 
+	@Override
+	public AnalysisResult execute2(Document actualDocument) throws Throwable {
+		this.doc = actualDocument;
+		XPathFactory xpathfactory = XPathFactory.newInstance();
+		xpath = xpathfactory.newXPath();
+		xpath.setNamespaceContext(new NameSpaceContexts());
+		nodeStack = new Stack<Node>();
+		push(doc.getDocumentElement());
+		normalizeNames();
+		doExecute();
+		return new AnalysisResult(resultsOK(), resultsFinding(), getOutputs());
+	}
+	
 	protected abstract void doExecute() throws Throwable;
 
 }

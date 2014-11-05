@@ -99,4 +99,6 @@ public class SchemaCheck extends AbstractCheck {
 
 		return new AnalysisResult(resultsOK(), resultsFinding(), getOutputs());
 	}
+
+
 }

@@ -19,6 +19,7 @@ public class CheckOutput {
 
 	private Stack<AbstractCheckEntry> stack = new Stack<AbstractCheckEntry>();
 	private String name;
+	private boolean logToFile;
 
 	public CheckOutput(String name, File outputFolder) throws IOException {
 		init(name, outputFolder);
@@ -32,19 +33,23 @@ public class CheckOutput {
 
 		this.name = name;
 
-		textFile = new File(outputFolder, name + ".txt");
-		if (!textFile.getParentFile().exists()) {
-			textFile.getParentFile().mkdirs();
-		}
-		textFileWriter = new PrintWriter(new BufferedWriter(new FileWriter(
-				textFile)));
+		logToFile = outputFolder != null;
 
-		xmlFile = new File(outputFolder, name + ".xml");
-		if (!xmlFile.getParentFile().exists()) {
-			xmlFile.getParentFile().mkdirs();
+		if (logToFile) {
+			textFile = new File(outputFolder, name + ".txt");
+			if (!textFile.getParentFile().exists()) {
+				textFile.getParentFile().mkdirs();
+			}
+			textFileWriter = new PrintWriter(new BufferedWriter(new FileWriter(
+					textFile)));
+
+			xmlFile = new File(outputFolder, name + ".xml");
+			if (!xmlFile.getParentFile().exists()) {
+				xmlFile.getParentFile().mkdirs();
+			}
+			xmlFileWriter = new PrintWriter(new BufferedWriter(new FileWriter(
+					xmlFile)));
 		}
-		xmlFileWriter = new PrintWriter(new BufferedWriter(new FileWriter(
-				xmlFile)));
 
 		Analysis entry = new Analysis(name);
 		push(entry);
@@ -68,7 +73,8 @@ public class CheckOutput {
 		if (!(entry instanceof EmptyEntry))
 			stack.peek().addChild(entry);
 		System.out.println(line);
-		textFileWriter.println(line);
+		if (logToFile)
+			textFileWriter.println(line);
 	}
 
 	public void println() {
@@ -83,7 +89,8 @@ public class CheckOutput {
 		String line = generateSpaces(stack.size() * 2) + entry.toLine();
 
 		System.out.println(line);
-		textFileWriter.println(line);
+		if (logToFile)
+			textFileWriter.println(line);
 
 		stack.push(entry);
 	}
@@ -112,32 +119,36 @@ public class CheckOutput {
 	}
 
 	public void close() {
-		if (textFileWriter != null)
-			textFileWriter.close();
 
-		XStream xstream = new XStream();
-		xstream.processAnnotations(ExceptionEntry.class);
-		xstream.processAnnotations(FindingAssertionEntry.class);
-		xstream.processAnnotations(FindingNavigationEntry.class);
-		xstream.processAnnotations(KeyValueEntry.class);
-		xstream.processAnnotations(ListKeyValueEntry.class);
-		xstream.processAnnotations(InfoEntry.class);
-		xstream.processAnnotations(ListEntry.class);
-		xstream.processAnnotations(OKAssertionEntry.class);
-		xstream.processAnnotations(OKNavigationEntry.class);
-		xstream.processAnnotations(NodePushEntry.class);
-		xstream.processAnnotations(EmptyEntry.class);
-		xstream.processAnnotations(NodePopEntry.class);
-		xstream.processAnnotations(TestEntry.class);
-		xstream.processAnnotations(ResultsEntry.class);
-		xstream.processAnnotations(TotalResultsEntry.class);
-		xstream.processAnnotations(Analysis.class);
-		xstream.processAnnotations(TestFileEntry.class);
-		String xml = xstream.toXML(stack.firstElement());
+		if (logToFile) {
+			if (textFileWriter != null)
+				textFileWriter.close();
 
-		xmlFileWriter.print(xml);
+			XStream xstream = new XStream();
+			xstream.processAnnotations(ExceptionEntry.class);
+			xstream.processAnnotations(FindingAssertionEntry.class);
+			xstream.processAnnotations(FindingNavigationEntry.class);
+			xstream.processAnnotations(KeyValueEntry.class);
+			xstream.processAnnotations(ListKeyValueEntry.class);
+			xstream.processAnnotations(InfoEntry.class);
+			xstream.processAnnotations(ListEntry.class);
+			xstream.processAnnotations(OKAssertionEntry.class);
+			xstream.processAnnotations(OKNavigationEntry.class);
+			xstream.processAnnotations(NodePushEntry.class);
+			xstream.processAnnotations(EmptyEntry.class);
+			xstream.processAnnotations(NodePopEntry.class);
+			xstream.processAnnotations(TestEntry.class);
+			xstream.processAnnotations(ResultsEntry.class);
+			xstream.processAnnotations(TotalResultsEntry.class);
+			xstream.processAnnotations(Analysis.class);
+			xstream.processAnnotations(TestFileEntry.class);
+			String xml = xstream.toXML(stack.firstElement());
 
-		if (xmlFileWriter != null)
-			xmlFileWriter.close();
+			xmlFileWriter.print(xml);
+
+			if (xmlFileWriter != null)
+				xmlFileWriter.close();
+
+		}
 	}
 }
