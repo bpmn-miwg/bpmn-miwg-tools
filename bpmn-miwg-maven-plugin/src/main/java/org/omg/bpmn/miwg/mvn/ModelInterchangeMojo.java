@@ -46,20 +46,24 @@ import javax.json.JsonValue;
 import org.apache.maven.model.Resource;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
+import org.omg.bpm.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.Variant;
 import org.omg.bpmn.miwg.XmlCompareAnalysisTool;
+import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.AnalysisTool;
+import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.StreamAnalysisTool;
 import org.omg.bpmn.miwg.input.BpmnFileFilter;
 import org.omg.bpmn.miwg.input.DirFilter;
 import org.omg.bpmn.miwg.testresult.IndexWriter;
 import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.TestResults;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 
 import edu.emory.mathcs.backport.java.util.Collections;
@@ -76,7 +80,7 @@ public class ModelInterchangeMojo extends AbstractMojo {
 	private static final String XML_COMPARE_TOOL_ID = "xml-compare";
 
 	private static final String XPATH_TOOL_ID = "xpath";
-	
+
 	private static final String XSD_TOOL_ID = "xsd";
 
 	/**
@@ -136,24 +140,53 @@ public class ModelInterchangeMojo extends AbstractMojo {
 						String testName = inferTestName(b);
 						InputStream refStream = findReference(testName, b);
 						if (refStream != null) {
-							runTestTool(new XPathAnalysisTool(), app, testName,
-									dir.getAbsolutePath(), b, refStream);
-							runTestTool(new XSDAnalysisTool(), app, testName,
-									dir.getAbsolutePath(), b, refStream);
-							// TODO optimise to not read file twice
+
+							AnalysisJob job = new AnalysisJob();
+							job.FullApplicationName = app;
+							job.MIWGTestCase = testName;
+							job.Variant = inferVariant2(b);
+
+							AnalysisResult analysisResult = null;
+
+							XSDAnalysisTool xsdTool = new XSDAnalysisTool();
+							try {
+								analysisResult = xsdTool.analyzeStream(job, null,
+										new FileInputStream(b), null);
+							} catch (Exception e) {
+								getLog().error(e);
+							}
+							writeTestResult(analysisResult, xsdTool.getName(),
+									job, dir.getAbsolutePath(), b);
+
+							XPathAnalysisTool2 xpathTool = new XPathAnalysisTool2();
+							try {
+								analysisResult = xpathTool.analyzeDOM(job,
+										null, DOMFactory.getDocument(b), null);
+							} catch (Exception e) {
+								getLog().error(e);
+							}
+							writeTestResult(analysisResult,
+									xpathTool.getName(), job,
+									dir.getAbsolutePath(), b);
+
 							refStream = findReference(testName, b);
-							runTestTool(new XmlCompareAnalysisTool(), app,
-									testName, dir.getAbsolutePath(), b,
-									refStream);
+							XmlCompareAnalysisTool compareTool = new XmlCompareAnalysisTool();
+							try {
+								analysisResult = compareTool
+										.analyzeDOM(job, DOMFactory.getDocument(refStream),
+												DOMFactory.getDocument(b), null);
+							} catch (Exception e) {
+								getLog().error(e);
+							}
+							writeTestResult(analysisResult,
+									compareTool.getName(), job,
+									dir.getAbsolutePath(), b);
+
 						}
 					}
 				}
 			}
 		}
-
-		File idx = new File(outputDirectory, "overview.html");
-		getLog().info("writing test overview to " + idx.getAbsolutePath());
-		IndexWriter.write2("ignored", idx, testsRun.values());
 	}
 
 	protected List<String> getApplications() {
@@ -227,30 +260,25 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		}
 	}
 
-	protected void runTestTool(AnalysisTool testTool, final String app,
-			final String testName, final String toolPath, final File b,
-			final InputStream refStream) {
-		getLog().info(
-				String.format(
-						"Running %1$s test %2$s for %3$s on %4$s. Base of test directory: %5$s",
-						testTool.getName(), app, testName, b, toolPath));
+	protected void writeTestResult(AnalysisResult analysisResult,
+			String analysisToolName, AnalysisJob job, String toolPath,
+			File bpmnFile) {
 
-		InputStream testStream = null;
 		final TestResults results = new TestResults();
-		final Variant variant = inferVariant(b);
+
+		String app = job.FullApplicationName;
+		String testName = job.MIWGTestCase;
+		String variant = job.Variant.toString().toLowerCase();
+
 		final File f = new File(new File(new File(outputDirectory,
-				testTool.getName()), app), app + "-" + testName + "-"
-				+ variant.name() + ".html");
+				analysisToolName), app), app + "-" + testName + "-" + variant
+				+ ".html");
+
 		try {
 			String testFile = toolPath + File.separator + app + File.separator
-					+ b.getName();
-			getLog().debug(
-					String.format("%1$s testing: %2$s", testTool.getName(),
-							testFile));
-			testStream = new FileInputStream(testFile);
-            results.addTool(app).addTest(testName, variant.name());
-			AnalysisResult analysisResult = testTool.runAnalysis(new File(
-					testFile), refStream, testStream, outputDirectory);
+					+ bpmnFile.getName();
+
+			results.addTool(app).addTest(testName, variant);
 
 			getLog().debug("writing test report to: " + f.getAbsolutePath());
 			results.writeResultFile(f);
@@ -265,8 +293,8 @@ public class ModelInterchangeMojo extends AbstractMojo {
 
 				result = new FileResult(resultKey, analysisResult);
 				testsRun.put(resultKey, result);
-            } else {
-                result.setAnalysisResult(analysisResult);
+			} else {
+				result.setAnalysisResult(analysisResult);
 			}
 		} catch (Exception e) {
 			getLog().error(e.getMessage());
@@ -275,19 +303,22 @@ public class ModelInterchangeMojo extends AbstractMojo {
 			} catch (IOException e1) {
 				getLog().error(e1);
 			}
-		} finally {
-			try {
-				testStream.close();
-			} catch (Exception e) {
-				;
-			}
-			try {
-				refStream.close();
-			} catch (Exception e) {
-				;
-			}
 		}
 
+	}
+
+	protected MIWGVariant inferVariant2(File b) {
+		MIWGVariant variant = null;
+		if (b.getName().contains(Variant.roundtrip.toString())) {
+			variant = MIWGVariant.Roundtrip;
+		} else if (b.getName().contains(Variant.export.toString())) {
+			variant = MIWGVariant.Export;
+		} else {
+			getLog().error(
+					"Looks like this BPMN does not have the expected naming convention: "
+							+ b);
+		}
+		return variant;
 	}
 
 	protected Variant inferVariant(final File b) {
@@ -340,22 +371,21 @@ public class ModelInterchangeMojo extends AbstractMojo {
 			this.result = result;
 		}
 
-        public void setAnalysisResult(AnalysisResult result) {
-            Collection<? extends Output> tmp = new ArrayList<Output>();
-            Collections.addAll(tmp, this.result.output.toArray());
-            Collections.addAll(tmp, result.output.toArray());
-            this.result.output = tmp;
-            this.result.numFindings += result.numFindings;
-            this.result.numOK += result.numOK;
-        }
+		public void setAnalysisResult(AnalysisResult result) {
+			Collection<? extends Output> tmp = new ArrayList<Output>();
+			Collections.addAll(tmp, this.result.output.toArray());
+			Collections.addAll(tmp, result.output.toArray());
+			this.result.output = tmp;
+			this.result.numFindings += result.numFindings;
+			this.result.numOK += result.numOK;
+		}
 
 		public String buildHtml() {
 			StringBuilder builder = new StringBuilder();
 
-            builder.append("\t<div class=\"test\" data-diffs=\""
-                    + result.output.size()
-					+ "\" data-findings=\"" + result.numFindings
-					+ "\" data-name=\"" + name
+			builder.append("\t<div class=\"test\" data-diffs=\""
+					+ result.output.size() + "\" data-findings=\""
+					+ result.numFindings + "\" data-name=\"" + name
 					+ "\" data-ok=\"" + result.numOK + "\">");
 			builder.append("<a href=\"" + name + ".html\">" + name + "</a>");
 			builder.append("</div>\n");
