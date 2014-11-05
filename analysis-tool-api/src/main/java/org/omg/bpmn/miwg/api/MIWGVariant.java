@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.api2;
+package org.omg.bpmn.miwg.api;
 
 public enum MIWGVariant {
 	Import, Export, Roundtrip, Reference, Undefined;

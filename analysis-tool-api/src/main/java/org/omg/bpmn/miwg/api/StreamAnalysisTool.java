@@ -25,10 +25,7 @@
 package org.omg.bpmn.miwg.api;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
-
-import javax.xml.parsers.ParserConfigurationException;
 
 /**
  * <b>Experimental</b> interface attempting to allow both current test tools to
@@ -43,11 +40,11 @@ import javax.xml.parsers.ParserConfigurationException;
  * @author Tim Stephenson
  * 
  */
-public interface AnalysisTool {
+public interface StreamAnalysisTool {
 
     String getName(); 
     
-    AnalysisResult runAnalysis(
-            File testResult, InputStream referenceBpmnXml, InputStream actualBpmnXml, File reportFolder)
-            throws IOException, ParserConfigurationException;
+    AnalysisResult analyzeStream(
+            AnalysisJob job, InputStream referenceBpmnXml, InputStream actualBpmnXml, File reportFolder)
+            throws Exception;
 }
