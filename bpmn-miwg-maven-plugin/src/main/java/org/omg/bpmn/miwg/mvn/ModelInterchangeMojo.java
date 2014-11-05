@@ -52,8 +52,6 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.omg.bpm.miwg.util.DOMFactory;
-import org.omg.bpmn.miwg.Variant;
-import org.omg.bpmn.miwg.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.MIWGVariant;
@@ -63,6 +61,8 @@ import org.omg.bpmn.miwg.input.DirFilter;
 import org.omg.bpmn.miwg.testresult.IndexWriter;
 import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.TestResults;
+import org.omg.bpmn.miwg.xmlCompare.Variant;
+import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 

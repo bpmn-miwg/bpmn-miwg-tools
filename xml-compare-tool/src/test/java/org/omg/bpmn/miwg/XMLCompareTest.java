@@ -16,6 +16,8 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.TestResults;
+import org.omg.bpmn.miwg.xmlCompare.Variant;
+import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.w3c.dom.Document;
 
 public class XMLCompareTest {

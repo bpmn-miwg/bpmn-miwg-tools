@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.util.xml.diff;
+package org.omg.bpmn.miwg.xmlCompare.util.xml.diff;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -36,7 +36,7 @@ import org.custommonkey.xmlunit.Diff;
 import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.ElementQualifier;
 import org.custommonkey.xmlunit.XMLUnit;
-import org.omg.bpmn.miwg.util.xml.SignavioNamespaceContext;
+import org.omg.bpmn.miwg.xmlCompare.util.xml.SignavioNamespaceContext;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 

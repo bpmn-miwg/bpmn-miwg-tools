@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg;
+package org.omg.bpmn.miwg.xmlCompare;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -45,9 +45,6 @@ import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.DOMAnalysisTool;
 import org.omg.bpmn.miwg.api.MIWGVariant;
-import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20ConformanceChecker;
-import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20DiffConfiguration;
-import org.omg.bpmn.miwg.configuration.BpmnCompareConfiguration;
 import org.omg.bpmn.miwg.input.BpmnFileFilter;
 import org.omg.bpmn.miwg.output.Detail;
 import org.omg.bpmn.miwg.output.DetailedOutput;
@@ -55,6 +52,9 @@ import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.testresult.Test;
 import org.omg.bpmn.miwg.testresult.TestResults;
+import org.omg.bpmn.miwg.xmlCompare.bpmn2_0.comparison.Bpmn20ConformanceChecker;
+import org.omg.bpmn.miwg.xmlCompare.bpmn2_0.comparison.Bpmn20DiffConfiguration;
+import org.omg.bpmn.miwg.xmlCompare.configuration.BpmnCompareConfiguration;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 

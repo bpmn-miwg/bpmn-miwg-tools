@@ -42,6 +42,9 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.testresult.FileResult;
 import org.omg.bpmn.miwg.testresult.IndexWriter;
+import org.omg.bpmn.miwg.xmlCompare.TestCategory;
+import org.omg.bpmn.miwg.xmlCompare.Variant;
+import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.xml.sax.SAXException;
 
 /**

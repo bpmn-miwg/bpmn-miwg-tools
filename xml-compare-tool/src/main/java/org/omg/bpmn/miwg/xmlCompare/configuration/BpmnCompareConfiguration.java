@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  * 
  */
-package org.omg.bpmn.miwg.configuration;
+package org.omg.bpmn.miwg.xmlCompare.configuration;
 
 import java.io.IOException;
 import java.io.InputStream;
