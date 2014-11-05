@@ -42,7 +42,6 @@ import org.apache.commons.io.FileUtils;
 import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.NodeDetail;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.AnalysisTool;
 import org.omg.bpmn.miwg.api2.AnalysisJob2;
 import org.omg.bpmn.miwg.api2.AnalysisTool2;
 import org.omg.bpmn.miwg.api2.MIWGVariant;
