@@ -32,24 +32,41 @@ import static org.junit.Assert.fail;
 import java.io.File;
 import java.io.InputStream;
 
+
 import org.junit.Test;
+import org.omg.bpm.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
+import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
+import org.w3c.dom.Document;
 
 public class XPathTest {
 
 	private static final String RPT_FOLDER = "target";
 
+
 	@Test
 	public void testYaoqiang3_with_A_1_0_roundtrip_Error() {
-		XPathAnalysisTool xPathTestTool = new XPathAnalysisTool();
-		InputStream actualBpmnXml = null;
+		XPathAnalysisTool2 xPathTestTool = new XPathAnalysisTool2();
+		InputStream inputStream = null;
 		try {
-			actualBpmnXml = getClass().getResourceAsStream(
+			inputStream = getClass().getResourceAsStream(
 					"/Yaoqiang BPMN Editor 3.0.1 Error/A.1.0-roundtrip.bpmn");
-			assertNotNull("Cannot find resource to test", actualBpmnXml);
+			assertNotNull("Cannot find resource to test", inputStream);
+			
+			
+			Document document = DOMFactory.getDocument(inputStream);
+			
+			AnalysisJob job = new AnalysisJob();
+			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
+			job.MIWGTestCase = "A.1.0";
+			job.Variant = MIWGVariant.Roundtrip;
+			
+					
+					
 			AnalysisResult result = xPathTestTool
-					.runAnalysis(new File("/Yaoqiang BPMN Editor 3.0.1 Error/A.1.0-roundtrip.bpmn"), null, actualBpmnXml, new File(RPT_FOLDER));
+					.analyzeDOM(job,  null, document, new File(RPT_FOLDER));
 			assertEquals(1, result.numFindings);
 
 		} catch (Exception e) {
@@ -57,7 +74,7 @@ public class XPathTest {
 			fail();
 		} finally {
 			try {
-				actualBpmnXml.close();
+				inputStream.close();
 			} catch (Exception e) {
 				;
 			}
@@ -66,21 +83,33 @@ public class XPathTest {
 	
 	@Test
 	public void testYaoqiang3_with_A_1_0_roundtrip_Correct() {
-		XPathAnalysisTool xPathTestTool = new XPathAnalysisTool();
-		InputStream actualBpmnXml = null;
+		XPathAnalysisTool2 xPathTestTool = new XPathAnalysisTool2();
+		InputStream inputStream = null;
 		try {
-			actualBpmnXml = getClass().getResourceAsStream(
+			inputStream = getClass().getResourceAsStream(
 					"/Yaoqiang BPMN Editor 3.0.1 Correct/A.1.0-roundtrip.bpmn");
-			assertNotNull("Cannot find resource to test", actualBpmnXml);
+			assertNotNull("Cannot find resource to test", inputStream);
+			
+			
+			Document document = DOMFactory.getDocument(inputStream);
+			
+			AnalysisJob job = new AnalysisJob();
+			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
+			job.MIWGTestCase = "A.1.0";
+			job.Variant = MIWGVariant.Roundtrip;
+			
+					
+					
 			AnalysisResult result = xPathTestTool
-					.runAnalysis(new File("/Yaoqiang BPMN Editor 3.0.1 Correct/A.1.0-roundtrip.bpmn"), null, actualBpmnXml, new File(RPT_FOLDER));
+					.analyzeDOM(job,  null, document, new File(RPT_FOLDER));
 			assertEquals(0, result.numFindings);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			fail();
 		} finally {
 			try {
-				actualBpmnXml.close();
+				inputStream.close();
 			} catch (Exception e) {
 				;
 			}
@@ -88,5 +117,39 @@ public class XPathTest {
 	}
 	
 	
-	
+	@Test
+	public void testYaoqiang3_with_A_1_0_roundtrip_Correct_NoLog() {
+		XPathAnalysisTool2 xPathTestTool = new XPathAnalysisTool2();
+		InputStream inputStream = null;
+		try {
+			inputStream = getClass().getResourceAsStream(
+					"/Yaoqiang BPMN Editor 3.0.1 Correct/A.1.0-roundtrip.bpmn");
+			assertNotNull("Cannot find resource to test", inputStream);
+			
+			
+			Document document = DOMFactory.getDocument(inputStream);
+			
+			AnalysisJob job = new AnalysisJob();
+			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
+			job.MIWGTestCase = "A.1.0";
+			job.Variant = MIWGVariant.Roundtrip;
+			
+					
+					
+			AnalysisResult result = xPathTestTool
+					.analyzeDOM(job,  null, document, null);
+			assertEquals(0, result.numFindings);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail();
+		} finally {
+			try {
+				inputStream.close();
+			} catch (Exception e) {
+				;
+			}
+		}
+	}
+
 }

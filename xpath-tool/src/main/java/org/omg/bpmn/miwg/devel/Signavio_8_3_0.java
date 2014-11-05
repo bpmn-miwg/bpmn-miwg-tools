@@ -23,38 +23,29 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.devel.common;
+package org.omg.bpmn.miwg.devel;
 
-import java.lang.reflect.Field;
+import java.io.IOException;
+import java.util.List;
 
-public class CloneUtil {
-	@SuppressWarnings("rawtypes")
-	public static Object clone(Object o) {
-		Object clone = null;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.test.common.AbstractTestCase;
+import org.omg.bpmn.miwg.test.common.InstanceParameter;
+import org.omg.bpmn.miwg.test.common.ScanUtil;
+import org.omg.bpmn.miwg.test.parameters.ApplicationScanParameters;
 
-		try {
-			clone = o.getClass().newInstance();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		}
-
-		// Walk up the superclass hierarchy
-		for (Class obj = o.getClass(); !obj.equals(Object.class); obj = obj
-				.getSuperclass()) {
-			Field[] fields = obj.getDeclaredFields();
-			for (int i = 0; i < fields.length; i++) {
-				fields[i].setAccessible(true);
-				try {
-					// for each class/suerclass, copy all fields
-					// from this object to the clone
-					fields[i].set(clone, fields[i].get(o));
-				} catch (IllegalArgumentException e) {
-				} catch (IllegalAccessException e) {
-				}
-			}
-		}
-		return clone;
+@RunWith(Parameterized.class)
+public class Signavio_8_3_0 extends AbstractTestCase {
+	
+	public Signavio_8_3_0(InstanceParameter parameter) {
+		super(parameter);
 	}
+	
+	@Parameters
+	public static List<Object[]> data() throws IOException {
+		return ScanUtil.data(new ApplicationScanParameters("Signavio Process Editor"));
+	}
+
 }

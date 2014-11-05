@@ -23,34 +23,43 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.devel.common;
+package org.omg.bpmn.miwg.test.common;
 
 import java.io.File;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
-public class InstanceParameter implements Cloneable {
+public class Application {
 
-	public File outputRoot;
+	private static Pattern twopart = Pattern.compile("(.*)\\s(\\S+)"); 
+	
+	public String application;
+	public File folder;
+	public String name;
+	public String version;
+	
+	public Application(File folder) {
+		this.folder = folder;
+		this.application = folder.getName();
+		
+		Matcher m = twopart.matcher(application);
+		
+		if (m.matches()) {
+			this.name = m.group(1);
+			this.version = m.group(2);
+		} else {
+			this.name = application;
+			this.version = "";
+		}
+		
+		
+	}
 
-	public File inputRoot;
-
-	public Application application;
-
-	public TestResult testResult;
+	
 
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-
-		sb.append(" Input root : " + inputRoot + "\n");
-		sb.append(" Output root: " + outputRoot + "\n");
-		sb.append(" Application: " + application + "\n");
-		sb.append(" Test result: " + testResult.name + "\n");
-
-		return sb.toString();
+		return name + "//" + version;
 	}
 
-	@Override
-	public InstanceParameter clone() {
-		return (InstanceParameter)CloneUtil.clone(this);
-	}
 
 }

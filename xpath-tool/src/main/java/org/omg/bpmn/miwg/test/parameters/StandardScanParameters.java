@@ -23,16 +23,16 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.devel.parameters;
+package org.omg.bpmn.miwg.test.parameters;
 
 import java.io.File;
 import java.io.IOException;
 
-import org.omg.bpmn.miwg.tests.devel.common.Application;
-import org.omg.bpmn.miwg.tests.devel.common.ScanParameters;
-import org.omg.bpmn.miwg.tests.devel.common.TestResult;
+import org.omg.bpmn.miwg.test.common.Application;
+import org.omg.bpmn.miwg.test.common.ScanParameters;
+import org.omg.bpmn.miwg.test.common.TestResult;
 
-public class ReferenceScanParameters implements ScanParameters {
+public class StandardScanParameters implements ScanParameters {
 	
 	public File getInputRoot() throws IOException {
 		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
@@ -46,7 +46,7 @@ public class ReferenceScanParameters implements ScanParameters {
 	
 	
 	public boolean acceptApplication(Application application) {
-		return application.name.toLowerCase().equals("reference");
+		return true;
 	}
 	
 	public boolean acceptTestResult(TestResult testResult) {

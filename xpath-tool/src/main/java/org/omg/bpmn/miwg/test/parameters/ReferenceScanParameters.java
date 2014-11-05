@@ -23,45 +23,34 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xsd;
+package org.omg.bpmn.miwg.test.parameters;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 
-import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.StreamAnalysisTool;
-import org.omg.bpmn.miwg.common.CheckOutput;
-import org.omg.bpmn.miwg.xsd.checks.SchemaCheck;
+import org.omg.bpmn.miwg.test.common.Application;
+import org.omg.bpmn.miwg.test.common.ScanParameters;
+import org.omg.bpmn.miwg.test.common.TestResult;
 
-public class XSDAnalysisTool implements StreamAnalysisTool {
-
-	public String getName() {
-		return "xsd";
+public class ReferenceScanParameters implements ScanParameters {
+	
+	public File getInputRoot() throws IOException {
+		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
+		return new File(s);
 	}
 
-	@Override
-	public AnalysisResult analyzeStream(
-			AnalysisJob job, InputStream referenceBpmnXml, InputStream actualBpmnXml,
-			File reportFolder) throws Exception {
-
-		SchemaCheck check = new SchemaCheck();
-		CheckOutput checkOutput = new CheckOutput("xsd-" + job.getName() + "-" + job.MIWGTestCase, reportFolder);
-		check.init(checkOutput);
-
-		AnalysisResult result;
-		
-		try {
-			 result = check.execute(actualBpmnXml);
-		} catch (Throwable e) {
-			throw new IOException(e.getMessage(), e);
-		} finally {
-			checkOutput.close();
-		}
-		
-		return result;
-		
+	public File getOutputRoot() throws IOException {
+		String s = new File("../../XPathOutput").getCanonicalPath();
+		return new File(s);
+	}
+	
+	
+	public boolean acceptApplication(Application application) {
+		return application.name.toLowerCase().equals("reference");
+	}
+	
+	public boolean acceptTestResult(TestResult testResult) {
+		return true;
 	}
 
 }

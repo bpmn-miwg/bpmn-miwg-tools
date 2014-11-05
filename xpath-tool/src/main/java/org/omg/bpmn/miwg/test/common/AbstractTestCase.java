@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.devel.common;
+package org.omg.bpmn.miwg.test.common;
 
 import static org.junit.Assert.assertEquals;
 
@@ -35,9 +35,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.omg.bpm.miwg.util.DOMFactory;
+import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
+import org.w3c.dom.Document;
 
 @RunWith(Parameterized.class)
 public abstract class AbstractTestCase {
@@ -58,44 +61,52 @@ public abstract class AbstractTestCase {
 
 	@After
 	public void tearDown() throws Exception {
-		
+
 	}
 
 	@Test
 	public void testXpath() throws Exception {
-		XPathAnalysisTool tool = new XPathAnalysisTool();
+		XPathAnalysisTool2 tool = new XPathAnalysisTool2();
 
+		AnalysisJob job = new AnalysisJob();
+		job.FullApplicationName = param.application.toString();
+		job.MIWGTestCase = param.testResult.name;
+		
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
+		Document bpmnXmlDOM = DOMFactory.getDocument(bpmnXmlStream);
 		try {
-			AnalysisResult result = tool.runAnalysis(param.testResult.file, null, bpmnXmlStream,
-					param.outputRoot);
+			AnalysisResult result = tool.analyzeDOM(job, null,
+					bpmnXmlDOM, param.outputRoot);
 
 			assertEquals(0, result.numFindings);
-			
+
 			System.out.println();
 			System.out.println(result);
 		} finally {
 			bpmnXmlStream.close();
 		}
 	}
-	
+
 	@Test
 	public void testSchema() throws Exception {
 		XSDAnalysisTool tool = new XSDAnalysisTool();
 
+		AnalysisJob job = new AnalysisJob();
+		job.FullApplicationName = param.application.toString();
+		job.MIWGTestCase = param.testResult.name;
+
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		try {
-			AnalysisResult result = tool.runAnalysis(param.testResult.file, null, bpmnXmlStream,
+			AnalysisResult result = tool.analyzeStream(job, null, bpmnXmlStream,
 					param.outputRoot);
 
 			assertEquals(0, result.numFindings);
-			
+
 			System.out.println();
 			System.out.println(result);
 		} finally {
 			bpmnXmlStream.close();
 		}
 	}
-
 
 }

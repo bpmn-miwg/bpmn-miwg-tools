@@ -23,18 +23,29 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.devel.common;
+package org.omg.bpmn.miwg.devel;
 
-import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
-public class TestResult {
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.test.common.AbstractTestCase;
+import org.omg.bpmn.miwg.test.common.InstanceParameter;
+import org.omg.bpmn.miwg.test.common.ScanUtil;
+import org.omg.bpmn.miwg.test.parameters.ReferenceScanParameters;
 
-	public TestResult(File testResultFile) {
-		this.name = testResultFile.getName();
-		this.file = testResultFile;
+@RunWith(Parameterized.class)
+public class Reference extends AbstractTestCase {
+	
+	public Reference(InstanceParameter parameter) {
+		super(parameter);
+	}
+	
+	@Parameters
+	public static List<Object[]> data() throws IOException {
+		return ScanUtil.data(new ReferenceScanParameters());
 	}
 
-	public String name;
-	public File file;
-	
 }

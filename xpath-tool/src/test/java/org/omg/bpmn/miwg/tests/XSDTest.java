@@ -33,7 +33,9 @@ import java.io.File;
 import java.io.InputStream;
 
 import org.junit.Test;
+import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 
 public class XSDTest {
@@ -44,13 +46,16 @@ public class XSDTest {
 	public void testSchemaInvalidBpmn() {
 		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
 		InputStream actualBpmnXml = null;
+		AnalysisJob job = new AnalysisJob();
+		job.FullApplicationName = "Custom";
+		job.MIWGTestCase = "A.1.0";
+		job.Variant = MIWGVariant.Roundtrip;
 		try {
 			actualBpmnXml = getClass().getResourceAsStream(
 					"/Schema Invalid/A.1.0-roundtrip.bpmn");
 			assertNotNull("Cannot find resource to test", actualBpmnXml);
 
-			AnalysisResult result = schemaValidator.runAnalysis(new File(
-					"/Schema Invalid/A.1.0-roundtrip.bpmn"), null,
+			AnalysisResult result = schemaValidator.analyzeStream(job, null,
 					actualBpmnXml, new File(RPT_FOLDER));
 			// Any number of validation errors are reported as a single finding
 			assertEquals(2, result.numFindings);
@@ -66,19 +71,21 @@ public class XSDTest {
 		}
 	}
 
-
 	@Test
 	public void testSchemaValidBpmn() {
 		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
 		InputStream actualBpmnXml = null;
+		AnalysisJob job = new AnalysisJob();
+		job.FullApplicationName = "Custom";
+		job.MIWGTestCase = "A.1.0";
+		job.Variant = MIWGVariant.Roundtrip;
 		try {
 			actualBpmnXml = getClass().getResourceAsStream(
 					"/Schema Valid/A.1.0-roundtrip.bpmn");
 			assertNotNull("Cannot find resource to test", actualBpmnXml);
 
-			AnalysisResult result = schemaValidator.runAnalysis(new File(
-					"/Schema Valid/A.1.0-roundtrip.bpmn"), null,
-					actualBpmnXml, new File(RPT_FOLDER));
+			AnalysisResult result = schemaValidator.analyzeStream(job, null,
+					actualBpmnXml, null);
 			// Any number of validation errors are reported as a single finding
 			assertEquals(0, result.numFindings);
 		} catch (Exception e) {
@@ -92,5 +99,5 @@ public class XSDTest {
 			}
 		}
 	}
-	
+
 }

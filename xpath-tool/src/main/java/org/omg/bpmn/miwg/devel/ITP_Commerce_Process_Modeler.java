@@ -23,34 +23,29 @@
  * 
  */
 
-package org.omg.bpmn.miwg.tests.devel.parameters;
+package org.omg.bpmn.miwg.devel;
 
-import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
-import org.omg.bpmn.miwg.tests.devel.common.Application;
-import org.omg.bpmn.miwg.tests.devel.common.ScanParameters;
-import org.omg.bpmn.miwg.tests.devel.common.TestResult;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.test.common.AbstractTestCase;
+import org.omg.bpmn.miwg.test.common.InstanceParameter;
+import org.omg.bpmn.miwg.test.common.ScanUtil;
+import org.omg.bpmn.miwg.test.parameters.ApplicationScanParameters;
 
-public class StandardScanParameters implements ScanParameters {
+@RunWith(Parameterized.class)
+public class ITP_Commerce_Process_Modeler extends AbstractTestCase {
 	
-	public File getInputRoot() throws IOException {
-		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
-		return new File(s);
-	}
-
-	public File getOutputRoot() throws IOException {
-		String s = new File("../../XPathOutput").getCanonicalPath();
-		return new File(s);
-	}
-	
-	
-	public boolean acceptApplication(Application application) {
-		return true;
+	public ITP_Commerce_Process_Modeler(InstanceParameter parameter) {
+		super(parameter);
 	}
 	
-	public boolean acceptTestResult(TestResult testResult) {
-		return true;
+	@Parameters
+	public static List<Object[]> data() throws IOException {
+		return ScanUtil.data(new ApplicationScanParameters("itp-commerce Process Modeler for Microsoft Visio"));
 	}
 
 }

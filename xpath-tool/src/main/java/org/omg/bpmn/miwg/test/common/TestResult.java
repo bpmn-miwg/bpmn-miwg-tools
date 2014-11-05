@@ -23,45 +23,18 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xsd;
+package org.omg.bpmn.miwg.test.common;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 
-import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.StreamAnalysisTool;
-import org.omg.bpmn.miwg.common.CheckOutput;
-import org.omg.bpmn.miwg.xsd.checks.SchemaCheck;
+public class TestResult {
 
-public class XSDAnalysisTool implements StreamAnalysisTool {
-
-	public String getName() {
-		return "xsd";
+	public TestResult(File testResultFile) {
+		this.name = testResultFile.getName();
+		this.file = testResultFile;
 	}
 
-	@Override
-	public AnalysisResult analyzeStream(
-			AnalysisJob job, InputStream referenceBpmnXml, InputStream actualBpmnXml,
-			File reportFolder) throws Exception {
-
-		SchemaCheck check = new SchemaCheck();
-		CheckOutput checkOutput = new CheckOutput("xsd-" + job.getName() + "-" + job.MIWGTestCase, reportFolder);
-		check.init(checkOutput);
-
-		AnalysisResult result;
-		
-		try {
-			 result = check.execute(actualBpmnXml);
-		} catch (Throwable e) {
-			throw new IOException(e.getMessage(), e);
-		} finally {
-			checkOutput.close();
-		}
-		
-		return result;
-		
-	}
-
+	public String name;
+	public File file;
+	
 }

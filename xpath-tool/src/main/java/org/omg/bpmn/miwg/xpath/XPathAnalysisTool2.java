@@ -31,8 +31,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api2.AnalysisJob2;
-import org.omg.bpmn.miwg.api2.AnalysisTool2;
+import org.omg.bpmn.miwg.api.DOMAnalysisTool;
+import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.common.Check2;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.xpath.checks.A_1_0_Check;
@@ -49,7 +49,7 @@ import org.omg.bpmn.miwg.xpath.checks.DemoTechnicalSupportCheck;
 import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
 import org.w3c.dom.Document;
 
-public class XPathAnalysisTool2 implements AnalysisTool2 {
+public class XPathAnalysisTool2 implements DOMAnalysisTool {
 
 	private List<AbstractXpathCheck> registeredChecks = new LinkedList<AbstractXpathCheck>();
 
@@ -75,7 +75,7 @@ public class XPathAnalysisTool2 implements AnalysisTool2 {
 		registeredChecks.add(check);
 	}
 
-	private Check2 getCheck(AnalysisJob2 job) {
+	private Check2 getCheck(AnalysisJob job) {
 		for (AbstractXpathCheck check : registeredChecks) {
 			if (check.isApplicable(job.MIWGTestCase)) {
 				return check;
@@ -86,7 +86,7 @@ public class XPathAnalysisTool2 implements AnalysisTool2 {
 	}
 
 	@Override
-	public AnalysisResult runAnalysis2(AnalysisJob2 job,
+	public AnalysisResult analyzeDOM(AnalysisJob job,
 			Document referenceDocument, Document actualDocument, File logDir)
 			throws Exception {
 		Check2 check = getCheck(job);
