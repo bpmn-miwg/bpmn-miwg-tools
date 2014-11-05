@@ -34,13 +34,18 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.io.FileUtils;
 import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.NodeDetail;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.AnalysisTool;
+import org.omg.bpmn.miwg.api.DOMAnalysisTool;
+import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.StreamAnalysisTool;
 import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20ConformanceChecker;
 import org.omg.bpmn.miwg.bpmn2_0.comparison.Bpmn20DiffConfiguration;
 import org.omg.bpmn.miwg.configuration.BpmnCompareConfiguration;
@@ -57,7 +62,7 @@ import org.xml.sax.SAXException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-public class XmlCompareAnalysisTool implements AnalysisTool {
+public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 
 	private static final String FILE_EXTENSION = "bpmn";
 	private static Bpmn20ConformanceChecker checker;
@@ -73,8 +78,7 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 	 * @throws SAXException
 	 * 
 	 */
-	public static void main(String[] args) throws SAXException, IOException,
-			ParserConfigurationException {
+	public static void main(String[] args) throws Exception {
 
 		System.out.println("Running BPMN 2.0 XML Compare Test...");
 		String result = runXmlCompareTest(args[0], args[1],
@@ -94,8 +98,18 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 
 	public static String runXmlCompareTest(String refFolderPath,
 			String testFolderPath, Variant variant, File reportFolder)
-			throws ParserConfigurationException, SAXException, IOException {
-		return runXmlCompareTest(refFolderPath, testFolderPath, variant, null, reportFolder);
+			throws Exception {
+		return runXmlCompareTest(refFolderPath, testFolderPath, variant, null,
+				reportFolder);
+	}
+
+	protected static Document getDocument(InputStream inputStream)
+			throws SAXException, ParserConfigurationException, IOException {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		factory.setNamespaceAware(true);
+		DocumentBuilder builder = factory.newDocumentBuilder();
+		Document document = builder.parse(inputStream);
+		return document;
 	}
 
 	/**
@@ -119,8 +133,7 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 	 */
 	public static String runXmlCompareTest(String refFolderPath,
 			String testFolderPath, Variant variant, String confName,
-			File reportFolder) throws ParserConfigurationException,
-			SAXException, IOException {
+			File reportFolder) throws Exception {
 		File refFolder = new File(refFolderPath);
 		File testFolder = new File(testFolderPath);
 
@@ -143,8 +156,17 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 					compareStream = new FileInputStream(compareFile);
 					Test test = results.addTool(testFolder.getName()).addTest(
 							bpmnFile.getName(), variant.name());
-					test.addAll(runnner.runAnalysis(bpmnFile, bpmnStream,
-							compareStream, reportFolder).output);
+
+					Document bpmnDoc = getDocument(bpmnStream);
+					Document compareDoc = getDocument(compareStream);
+
+					AnalysisJob job = new AnalysisJob();
+					job.FullApplicationName = testFolder.getName();
+					job.MIWGTestCase = bpmnFile.getName();
+					job.Variant = MIWGVariant.Undefined;
+
+					test.addAll(runnner.analyzeDOM(job, bpmnDoc, compareDoc,
+							reportFolder).output);
 				} finally {
 					try {
 						bpmnStream.close();
@@ -219,41 +241,28 @@ public class XmlCompareAnalysisTool implements AnalysisTool {
 	}
 
 	@Override
-	public AnalysisResult runAnalysis(File testResult,
-			InputStream expectedBpmnXml, InputStream actualBpmnXml,
-			File reportFolder) throws JsonParseException,
-			JsonMappingException, IOException, ParserConfigurationException {
-		
+	public AnalysisResult analyzeDOM(AnalysisJob job,
+			Document referenceDocument, Document actualDocument, File logDir)
+			throws Exception {
 		List<Difference> diffs = getChecker().getSignificantDifferences(
-				actualBpmnXml, expectedBpmnXml);
-		
-        return new AnalysisResult(0, 0, adapt(diffs));
+				actualDocument, referenceDocument);
+
+		return new AnalysisResult(0, 0, adapt(diffs));
 	}
 
-    private Collection<? extends Output> adapt(List<Difference> diffs) {
-        List<Output> outputs = new ArrayList<Output>();
-        for (Difference diff : diffs) {
-            Output output = new Output(OutputType.finding,
-                    describeDifference(diff));
-            output.setDescription(String.format(
-                    "Difference found in %1$s (id:%2$s)",
-                    diff.getDescription(), diff.getId()));
-            outputs.add(output);
-        }
+	private Collection<? extends Output> adapt(List<Difference> diffs) {
+		List<Output> outputs = new ArrayList<Output>();
+		for (Difference diff : diffs) {
+			Output output = new Output(OutputType.finding,
+					describeDifference(diff));
+			output.setDescription(String.format(
+					"Difference found in %1$s (id:%2$s)",
+					diff.getDescription(), diff.getId()));
+			outputs.add(output);
+		}
 
-        return outputs;
-    }
-
-    public AnalysisResult runAnalysis(Document expectedBpmnXml,
-            Document actualBpmnXml) throws JsonParseException,
-            JsonMappingException, IOException, ParserConfigurationException,
-            SAXException {
-
-        List<Difference> diffs = getChecker().getSignificantDifferences(
-                actualBpmnXml, expectedBpmnXml);
-
-        return new AnalysisResult(0, 0, adapt(diffs));
-    }
+		return outputs;
+	}
 
 	public String getName() {
 		return "xml-compare";

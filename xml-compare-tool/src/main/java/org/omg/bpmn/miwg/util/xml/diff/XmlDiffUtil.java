@@ -138,7 +138,7 @@ public class XmlDiffUtil {
 				((AbstractXmlDifferenceListener)listener).getNumberOfIgnoredDifferences() + "; accepted: " + 
 				((AbstractXmlDifferenceListener)listener).getNumberOfAcceptedDifferences());
 		
-		if (diffList != null && diffList.size() > 0)
+		if (diffList != null)
 			return diffList;
 		else
 			return null;
