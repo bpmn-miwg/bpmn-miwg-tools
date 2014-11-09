@@ -12,7 +12,7 @@ import javax.xml.xpath.XPathFactory;
 
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.common.AbstractCheck;
-import org.omg.bpmn.miwg.common.Check2;
+import org.omg.bpmn.miwg.common.DOMCheck;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.xpath.base.testEntries.FindingAssertionEntry;
 import org.omg.bpmn.miwg.xpath.base.testEntries.NodePopEntry;
@@ -25,7 +25,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-public abstract class AbstractXpathCheck extends AbstractCheck implements Check2 {
+public abstract class AbstractXpathCheck extends AbstractCheck implements DOMCheck {
 
 	private XPath xpath;
 	private Node currentNode;
@@ -1428,7 +1428,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements Check2
 	public AnalysisResult execute(InputStream is) throws Throwable {
 		loadResource(is);
 		doExecute();
-		return new AnalysisResult(resultsOK(), resultsFinding(), getOutputs());
+		return new AnalysisResult(resultsOK(), resultsFinding(), out.getMiwgOutput());
 	}
 
 	@Override
@@ -1441,7 +1441,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements Check2
 		push(doc.getDocumentElement());
 		normalizeNames();
 		doExecute();
-		return new AnalysisResult(resultsOK(), resultsFinding(), getOutputs());
+		return new AnalysisResult(resultsOK(), resultsFinding(), out.getMiwgOutput());
 	}
 	
 	protected abstract void doExecute() throws Throwable;

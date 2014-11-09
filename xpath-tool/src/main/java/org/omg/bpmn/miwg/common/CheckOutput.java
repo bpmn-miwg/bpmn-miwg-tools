@@ -5,8 +5,12 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.Stack;
 
+import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.xpath.base.testEntries.*;
 
 import com.thoughtworks.xstream.XStream;
@@ -20,6 +24,8 @@ public class CheckOutput {
 	private Stack<AbstractCheckEntry> stack = new Stack<AbstractCheckEntry>();
 	private String name;
 	private boolean logToFile;
+    protected List<Output> miwgOutputs = new ArrayList<Output>();
+
 
 	public CheckOutput(String name, File outputFolder) throws IOException {
 		init(name, outputFolder);
@@ -72,7 +78,9 @@ public class CheckOutput {
 
 		if (!(entry instanceof EmptyEntry))
 			stack.peek().addChild(entry);
+
 		System.out.println(line);
+
 		if (logToFile)
 			textFileWriter.println(line);
 	}
@@ -89,6 +97,7 @@ public class CheckOutput {
 		String line = generateSpaces(stack.size() * 2) + entry.toLine();
 
 		System.out.println(line);
+
 		if (logToFile)
 			textFileWriter.println(line);
 
@@ -151,4 +160,9 @@ public class CheckOutput {
 
 		}
 	}
+	
+	public Collection<? extends Output> getMiwgOutput() {
+		return miwgOutputs;
+	}
+
 }

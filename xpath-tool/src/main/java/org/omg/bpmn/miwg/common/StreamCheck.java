@@ -4,7 +4,7 @@ import java.io.InputStream;
 
 import org.omg.bpmn.miwg.api.AnalysisResult;
 
-public interface Check {
+public interface StreamCheck {
 
 	void init(CheckOutput out);
 

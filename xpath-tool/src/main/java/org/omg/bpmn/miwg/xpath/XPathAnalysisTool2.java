@@ -33,7 +33,7 @@ import java.util.List;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.DOMAnalysisTool;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.common.Check2;
+import org.omg.bpmn.miwg.common.DOMCheck;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.xpath.checks.A_1_0_Check;
 import org.omg.bpmn.miwg.xpath.checks.A_1_1_Check;
@@ -75,7 +75,7 @@ public class XPathAnalysisTool2 implements DOMAnalysisTool {
 		registeredChecks.add(check);
 	}
 
-	private Check2 getCheck(AnalysisJob job) {
+	private DOMCheck getCheck(AnalysisJob job) {
 		for (AbstractXpathCheck check : registeredChecks) {
 			if (check.isApplicable(job.MIWGTestCase)) {
 				return check;
@@ -89,7 +89,7 @@ public class XPathAnalysisTool2 implements DOMAnalysisTool {
 	public AnalysisResult analyzeDOM(AnalysisJob job,
 			Document referenceDocument, Document actualDocument, File logDir)
 			throws Exception {
-		Check2 check = getCheck(job);
+		DOMCheck check = getCheck(job);
 		CheckOutput checkOutput = new CheckOutput(job.getName(), logDir);
 		check.init(checkOutput);
 

@@ -97,7 +97,7 @@ public class SchemaCheck extends AbstractCheck {
 					+ eHandler.numFatalError);
 		}
 
-		return new AnalysisResult(resultsOK(), resultsFinding(), getOutputs());
+		return new AnalysisResult(resultsOK(), resultsFinding(), out.getMiwgOutput());
 	}
 
 
