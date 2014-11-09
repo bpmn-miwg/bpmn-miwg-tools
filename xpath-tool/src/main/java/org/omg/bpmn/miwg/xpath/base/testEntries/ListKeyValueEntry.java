@@ -25,18 +25,19 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-
 @XStreamAlias("ListKeyValue")
 public class ListKeyValueEntry extends AbstractCheckEntry {
-	
+
 	public ListKeyValueEntry(String key, String value) {
 		this.key = key;
 		this.value = value;
 	}
-	
+
 	@XStreamAsAttribute
 	public String key;
 	@XStreamAsAttribute
@@ -46,7 +47,10 @@ public class ListKeyValueEntry extends AbstractCheckEntry {
 	public String toLine() {
 		return String.format("- %s: %s", key, value);
 	}
-	
-	
+
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.info;
+	}
 
 }

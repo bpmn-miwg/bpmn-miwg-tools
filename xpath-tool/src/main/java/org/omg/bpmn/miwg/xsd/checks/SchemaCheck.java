@@ -70,7 +70,8 @@ public class SchemaCheck extends AbstractCheck implements StreamCheck {
 				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 		schemaFactory.setResourceResolver(new LocalResourcsResolver());
 
-			Schema schema = schemaFactory.newSchema(new StreamSource(getRessourceAsStreamWrapper("schema/BPMN20.xsd")));
+		Schema schema = schemaFactory.newSchema(new StreamSource(
+				getRessourceAsStreamWrapper("schema/BPMN20.xsd")));
 
 		SAXParserFactory parserFactory = SAXParserFactory.newInstance();
 		// parserFactory.setValidating(true);
@@ -98,8 +99,8 @@ public class SchemaCheck extends AbstractCheck implements StreamCheck {
 					+ eHandler.numFatalError);
 		}
 
-		return new AnalysisResult(resultsOK(), resultsFinding(), out.getMiwgOutput());
+		return new AnalysisResult(resultsOK(), resultsFinding(),
+				out.getMiwgOutput());
 	}
-
 
 }

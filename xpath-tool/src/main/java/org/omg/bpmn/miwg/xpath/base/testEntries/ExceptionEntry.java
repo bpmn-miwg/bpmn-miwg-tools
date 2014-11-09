@@ -25,6 +25,8 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
@@ -47,6 +49,10 @@ public class ExceptionEntry extends AbstractCheckEntry {
 		return String.format("EXCEPTION: %s (%s)", message, exception);
 	}
 	
-	
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.exception;
+	}
+
 
 }

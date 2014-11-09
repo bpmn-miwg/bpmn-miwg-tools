@@ -25,6 +25,7 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -51,5 +52,9 @@ public class OKAssertionEntry extends AbstractCheckEntry {
 	}
 	
 	
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.ok;
+	}
 
 }

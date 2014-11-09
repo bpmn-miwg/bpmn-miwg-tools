@@ -25,17 +25,17 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-
 @XStreamAlias("TestRun")
 public class TestRunEntry extends AbstractCheckEntry {
-	
+
 	@XStreamAsAttribute
 	private String name;
-	
-	
+
 	public TestRunEntry(String name) {
 		this.name = name;
 	}
@@ -43,5 +43,10 @@ public class TestRunEntry extends AbstractCheckEntry {
 	@Override
 	public String toLine() {
 		return String.format("TESTRUN: %s", name);
+	}
+
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.info;
 	}
 }

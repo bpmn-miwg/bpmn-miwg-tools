@@ -28,6 +28,8 @@ package org.omg.bpmn.miwg.xpath.base.testEntries;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
+
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 public abstract class AbstractCheckEntry {
@@ -40,5 +42,7 @@ public abstract class AbstractCheckEntry {
 	}
 
 	public abstract String toLine();
+	
+	public abstract OutputType getOutputType();
 
 }

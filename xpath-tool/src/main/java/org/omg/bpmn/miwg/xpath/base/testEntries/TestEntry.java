@@ -25,6 +25,8 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
@@ -43,5 +45,9 @@ public class TestEntry extends AbstractCheckEntry {
 	@Override
 	public String toLine() {
 		return String.format("TEST: %s", name);
+	}
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.info;
 	}
 }

@@ -25,18 +25,23 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
+import org.omg.bpmn.miwg.testresult.OutputType;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 @XStreamAlias("TotalResults")
 public class TotalResultsEntry extends AbstractCheckEntry {
-	
-	
+
 	public TotalResultsEntry() {
 	}
 
 	@Override
 	public String toLine() {
 		return String.format("TEST RESULTS TOTAL:");
+	}
+
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.info;
 	}
 }

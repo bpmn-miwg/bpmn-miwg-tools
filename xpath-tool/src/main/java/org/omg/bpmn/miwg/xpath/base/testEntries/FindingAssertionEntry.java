@@ -25,6 +25,7 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -60,4 +61,10 @@ public class FindingAssertionEntry extends AbstractCheckEntry {
 		return String.format("FINDING: %s; Message: %s; Parameter: %s", assertion, message, parameter);
 	}
 
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.finding;
+	}
+	
+	
 }

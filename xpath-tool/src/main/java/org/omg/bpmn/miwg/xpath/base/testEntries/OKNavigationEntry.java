@@ -25,6 +25,7 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -53,6 +54,10 @@ public class OKNavigationEntry extends AbstractCheckEntry {
 		return String.format("OK     : %s: %s (id: %s)", caller, message, identifier);
 	}
 	
-	
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.ok;
+	}
+
 
 }

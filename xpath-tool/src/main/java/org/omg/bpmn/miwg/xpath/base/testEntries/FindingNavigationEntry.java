@@ -25,6 +25,7 @@
 
 package org.omg.bpmn.miwg.xpath.base.testEntries;
 
+import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -57,6 +58,11 @@ public class FindingNavigationEntry extends AbstractCheckEntry {
 		return String.format(
 				"FINDING: %s; Message: %s; Parameter:%s (caller: id: %s)",
 				caller, message, parameter, identifier);
+	}
+
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.finding;
 	}
 
 }

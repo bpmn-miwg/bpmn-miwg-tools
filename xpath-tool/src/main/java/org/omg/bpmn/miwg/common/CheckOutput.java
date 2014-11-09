@@ -24,8 +24,7 @@ public class CheckOutput {
 	private Stack<AbstractCheckEntry> stack = new Stack<AbstractCheckEntry>();
 	private String name;
 	private boolean logToFile;
-    protected List<Output> miwgOutputs = new ArrayList<Output>();
-
+	protected List<Output> miwgOutputs = new ArrayList<Output>();
 
 	public CheckOutput(String name, File outputFolder) throws IOException {
 		init(name, outputFolder);
@@ -81,6 +80,9 @@ public class CheckOutput {
 
 		System.out.println(line);
 
+		Output miwgOutput = new Output(entry.getOutputType(), line);
+		miwgOutputs.add(miwgOutput);
+
 		if (logToFile)
 			textFileWriter.println(line);
 	}
@@ -96,6 +98,9 @@ public class CheckOutput {
 
 		String line = generateSpaces(stack.size() * 2) + entry.toLine();
 
+		Output miwgOutput = new Output(entry.getOutputType(), line);
+		miwgOutputs.add(miwgOutput);
+		
 		System.out.println(line);
 
 		if (logToFile)
@@ -160,7 +165,7 @@ public class CheckOutput {
 
 		}
 	}
-	
+
 	public Collection<? extends Output> getMiwgOutput() {
 		return miwgOutputs;
 	}
