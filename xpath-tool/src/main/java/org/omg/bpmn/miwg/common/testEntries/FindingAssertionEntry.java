@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
@@ -31,38 +31,40 @@ import org.omg.bpmn.miwg.xpath.common.CheckContext;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-@XStreamAlias("Navigation")
-public class FindingNavigationEntry extends AbstractCheckEntry {
+@XStreamAlias("FindingAssertion")
+public class FindingAssertionEntry extends AbstractCheckEntry {
+	@XStreamAsAttribute
+	public String assertion;
 	@XStreamAsAttribute
 	public String message;
-	@XStreamAsAttribute
-	public String identifier;
-	@XStreamAsAttribute
-	public String caller;
 	@XStreamAsAttribute
 	public String parameter;
 	@XStreamAsAttribute
 	public CheckContext testContext;
-
-	public FindingNavigationEntry(String message, String caller,
-			String identifier, String parameter, CheckContext testContext) {
+	
+	public FindingAssertionEntry(String assertion, String message, CheckContext testContext) {
+		this.assertion = assertion;
 		this.message = message;
-		this.identifier = identifier;
-		this.caller = caller;
-		this.parameter = parameter;
+		this.parameter = "";
 		this.testContext = testContext;
 	}
-
+	
+	public FindingAssertionEntry(String assertion, String message, String parameter) {
+		this.assertion = assertion;
+		this.message = message;
+		this.parameter = parameter;
+	}
+	
+	
 	@Override
 	public String toLine() {
-		return String.format(
-				"FINDING: %s; Message: %s; Parameter:%s (caller: id: %s)",
-				caller, message, parameter, identifier);
+		return String.format("FINDING: %s; Message: %s; Parameter: %s", assertion, message, parameter);
 	}
 
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.finding;
 	}
-
+	
+	
 }

@@ -23,36 +23,38 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
+import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-
-@XStreamAlias("Exception")
-public class ExceptionEntry extends AbstractCheckEntry {
-	
-	public ExceptionEntry(String message, Throwable e) {
-		this.message = message;
-		this.exception = e;
-	}
-	
-	public Throwable exception;
-	
+@XStreamAlias("OKAssertion")
+public class OKAssertionEntry extends AbstractCheckEntry {
+	@XStreamAsAttribute
+	public String assertion;
 	@XStreamAsAttribute
 	public String message;
-
+	@XStreamAsAttribute
+	public CheckContext testContext;
+	
+	public OKAssertionEntry(String assertion, String message, CheckContext testContext) {
+		this.assertion = assertion;
+		this.message = message;
+		this.testContext = testContext;
+	}
+	
 	@Override
 	public String toLine() {
-		return String.format("EXCEPTION: %s (%s)", message, exception);
+		return String.format("OK     : %s; Message: %s", assertion, message);
 	}
+	
 	
 	@Override
 	public OutputType getOutputType() {
-		return OutputType.exception;
+		return OutputType.ok;
 	}
-
 
 }

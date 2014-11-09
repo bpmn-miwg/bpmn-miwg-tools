@@ -23,26 +23,46 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
-
-import java.util.LinkedList;
-import java.util.List;
+package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
+import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-public abstract class AbstractCheckEntry {
+@XStreamAlias("Navigation")
+public class FindingNavigationEntry extends AbstractCheckEntry {
+	@XStreamAsAttribute
+	public String message;
+	@XStreamAsAttribute
+	public String identifier;
+	@XStreamAsAttribute
+	public String caller;
+	@XStreamAsAttribute
+	public String parameter;
+	@XStreamAsAttribute
+	public CheckContext testContext;
 
-	@XStreamImplicit
-	public List<AbstractCheckEntry> children = new LinkedList<AbstractCheckEntry>();
-
-	public void addChild(AbstractCheckEntry entry) {
-		children.add(entry);
+	public FindingNavigationEntry(String message, String caller,
+			String identifier, String parameter, CheckContext testContext) {
+		this.message = message;
+		this.identifier = identifier;
+		this.caller = caller;
+		this.parameter = parameter;
+		this.testContext = testContext;
 	}
 
-	public abstract String toLine();
-	
-	public abstract OutputType getOutputType();
+	@Override
+	public String toLine() {
+		return String.format(
+				"FINDING: %s; Message: %s; Parameter:%s (caller: id: %s)",
+				caller, message, parameter, identifier);
+	}
+
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.finding;
+	}
 
 }

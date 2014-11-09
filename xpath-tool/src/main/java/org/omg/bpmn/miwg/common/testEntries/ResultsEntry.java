@@ -23,19 +23,30 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
-import org.omg.bpmn.miwg.xpath.common.CheckContext;
+import org.omg.bpmn.miwg.testresult.OutputType;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
+@XStreamAlias("Results")
+public class ResultsEntry extends AbstractCheckEntry {
 
-@XStreamAlias("NodePop")
-public class NodePopEntry extends OKNavigationEntry {
-	
-	public NodePopEntry(String caller, String identifier, CheckContext testContext) {
-		super("Pop", caller, identifier, testContext);
+	@XStreamAsAttribute
+	private String name;
+
+	public ResultsEntry(String test) {
+		this.name = test;
 	}
-	
 
+	@Override
+	public String toLine() {
+		return String.format("TEST: %s", name);
+	}
+
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.info;
+	}
 }

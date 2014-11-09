@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
 
@@ -31,25 +31,28 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 
-@XStreamAlias("Analysis")
-public class Analysis extends AbstractCheckEntry {
+@XStreamAlias("Exception")
+public class ExceptionEntry extends AbstractCheckEntry {
+	
+	public ExceptionEntry(String message, Throwable e) {
+		this.message = message;
+		this.exception = e;
+	}
+	
+	public Throwable exception;
 	
 	@XStreamAsAttribute
-	private String name;
-	
-	
-	public Analysis(String name) {
-		this.name = name;
-	}
+	public String message;
 
 	@Override
 	public String toLine() {
-		return String.format("ANALYSIS: %s", name);
-	}
-
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
+		return String.format("EXCEPTION: %s (%s)", message, exception);
 	}
 	
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.exception;
+	}
+
+
 }

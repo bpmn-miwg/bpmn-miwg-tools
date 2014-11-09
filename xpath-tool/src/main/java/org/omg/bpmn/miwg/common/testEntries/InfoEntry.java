@@ -23,31 +23,33 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-@XStreamAlias("ListItem")
-public class ListEntry extends AbstractCheckEntry {
 
-	public ListEntry(String message) {
+@XStreamAlias("Info")
+public class InfoEntry extends AbstractCheckEntry {
+	
+	public InfoEntry(String message) {
 		this.message = message;
 	}
-
+	
 	@XStreamAsAttribute
 	public String message;
 
 	@Override
 	public String toLine() {
-		return "- " + message;
+		return message;
 	}
-
+	
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.info;
 	}
+
 
 }

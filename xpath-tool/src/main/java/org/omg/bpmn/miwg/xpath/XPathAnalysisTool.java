@@ -96,7 +96,7 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 		AnalysisResult result;
 
 		try {
-			result = check.execute2(actualDocument);
+			result = check.execute(actualDocument);
 		} catch (Throwable e) {
 			throw new IOException(e.getMessage(), e);
 		} finally {

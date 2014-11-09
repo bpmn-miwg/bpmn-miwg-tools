@@ -23,26 +23,26 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-@XStreamAlias("Results")
-public class ResultsEntry extends AbstractCheckEntry {
+@XStreamAlias("TestFile")
+public class TestFileEntry extends AbstractCheckEntry {
 
 	@XStreamAsAttribute
 	private String name;
 
-	public ResultsEntry(String test) {
-		this.name = test;
+	public TestFileEntry(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toLine() {
-		return String.format("TEST: %s", name);
+		return String.format("Running tests for %s", name);
 	}
 
 	@Override

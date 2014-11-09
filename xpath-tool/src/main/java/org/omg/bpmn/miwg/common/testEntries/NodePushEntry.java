@@ -23,41 +23,19 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
-import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-@XStreamAlias("Navigation")
-public class OKNavigationEntry extends AbstractCheckEntry {
-	@XStreamAsAttribute
-	public String message;
-	@XStreamAsAttribute
-	public String identifier;
-	@XStreamAsAttribute
-	public String caller;
-	@XStreamAsAttribute
-	public CheckContext testContext;
-	
-	public OKNavigationEntry(String message, String caller, String identifier, CheckContext testContext) {
-		this.message = message;
-		this.identifier = identifier;
-		this.caller = caller;
-		this.testContext = testContext;
-	}
-	
-	@Override
-	public String toLine() {
-		return String.format("OK     : %s: %s (id: %s)", caller, message, identifier);
-	}
-	
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.ok;
-	}
 
+@XStreamAlias("NodePush")
+public class NodePushEntry extends OKNavigationEntry {
+	
+	public NodePushEntry(String caller, String identifier, CheckContext testContext) {
+		super("Push", caller, identifier, testContext);
+	}
+	
 
 }

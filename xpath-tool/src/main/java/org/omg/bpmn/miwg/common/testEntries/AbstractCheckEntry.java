@@ -23,33 +23,26 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
+
+import java.util.LinkedList;
+import java.util.List;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
+public abstract class AbstractCheckEntry {
 
-@XStreamAlias("Info")
-public class InfoEntry extends AbstractCheckEntry {
-	
-	public InfoEntry(String message) {
-		this.message = message;
-	}
-	
-	@XStreamAsAttribute
-	public String message;
+	@XStreamImplicit
+	public List<AbstractCheckEntry> children = new LinkedList<AbstractCheckEntry>();
 
-	@Override
-	public String toLine() {
-		return message;
-	}
-	
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
+	public void addChild(AbstractCheckEntry entry) {
+		children.add(entry);
 	}
 
+	public abstract String toLine();
+	
+	public abstract OutputType getOutputType();
 
 }

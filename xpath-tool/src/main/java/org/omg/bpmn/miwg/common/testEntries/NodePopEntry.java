@@ -23,48 +23,19 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
-import org.omg.bpmn.miwg.testresult.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-@XStreamAlias("FindingAssertion")
-public class FindingAssertionEntry extends AbstractCheckEntry {
-	@XStreamAsAttribute
-	public String assertion;
-	@XStreamAsAttribute
-	public String message;
-	@XStreamAsAttribute
-	public String parameter;
-	@XStreamAsAttribute
-	public CheckContext testContext;
-	
-	public FindingAssertionEntry(String assertion, String message, CheckContext testContext) {
-		this.assertion = assertion;
-		this.message = message;
-		this.parameter = "";
-		this.testContext = testContext;
-	}
-	
-	public FindingAssertionEntry(String assertion, String message, String parameter) {
-		this.assertion = assertion;
-		this.message = message;
-		this.parameter = parameter;
-	}
-	
-	
-	@Override
-	public String toLine() {
-		return String.format("FINDING: %s; Message: %s; Parameter: %s", assertion, message, parameter);
-	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.finding;
+@XStreamAlias("NodePop")
+public class NodePopEntry extends OKNavigationEntry {
+	
+	public NodePopEntry(String caller, String identifier, CheckContext testContext) {
+		super("Pop", caller, identifier, testContext);
 	}
 	
-	
+
 }

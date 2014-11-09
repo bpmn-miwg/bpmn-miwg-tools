@@ -1,7 +1,7 @@
 package org.omg.bpmn.miwg.xsd.checks;
 
 import org.omg.bpmn.miwg.common.CheckOutput;
-import org.omg.bpmn.miwg.xpath.base.testEntries.InfoEntry;
+import org.omg.bpmn.miwg.common.testEntries.InfoEntry;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 

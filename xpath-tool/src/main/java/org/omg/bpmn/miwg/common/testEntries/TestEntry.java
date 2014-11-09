@@ -23,19 +23,31 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
-import org.omg.bpmn.miwg.xpath.common.CheckContext;
+import org.omg.bpmn.miwg.testresult.OutputType;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 
-@XStreamAlias("NodePush")
-public class NodePushEntry extends OKNavigationEntry {
+@XStreamAlias("Test")
+public class TestEntry extends AbstractCheckEntry {
 	
-	public NodePushEntry(String caller, String identifier, CheckContext testContext) {
-		super("Push", caller, identifier, testContext);
+	@XStreamAsAttribute
+	private String name;
+	
+	
+	public TestEntry(String name) {
+		this.name = name;
 	}
-	
 
+	@Override
+	public String toLine() {
+		return String.format("TEST: %s", name);
+	}
+	@Override
+	public OutputType getOutputType() {
+		return OutputType.info;
+	}
 }

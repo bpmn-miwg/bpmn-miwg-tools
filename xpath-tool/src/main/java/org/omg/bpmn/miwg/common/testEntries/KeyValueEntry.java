@@ -23,21 +23,22 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-@XStreamAlias("ListKeyValue")
-public class ListKeyValueEntry extends AbstractCheckEntry {
 
-	public ListKeyValueEntry(String key, String value) {
+@XStreamAlias("KeyValue")
+public class KeyValueEntry extends AbstractCheckEntry {
+	
+	public KeyValueEntry(String key, String value) {
 		this.key = key;
 		this.value = value;
 	}
-
+	
 	@XStreamAsAttribute
 	public String key;
 	@XStreamAsAttribute
@@ -45,12 +46,13 @@ public class ListKeyValueEntry extends AbstractCheckEntry {
 
 	@Override
 	public String toLine() {
-		return String.format("- %s: %s", key, value);
+		return String.format("%s: %s", key, value);
 	}
-
+	
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.info;
 	}
+
 
 }

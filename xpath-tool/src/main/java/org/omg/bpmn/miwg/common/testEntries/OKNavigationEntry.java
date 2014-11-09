@@ -23,31 +23,41 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.base.testEntries;
+package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.testresult.OutputType;
+import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-
-@XStreamAlias("Test")
-public class TestEntry extends AbstractCheckEntry {
-	
+@XStreamAlias("Navigation")
+public class OKNavigationEntry extends AbstractCheckEntry {
 	@XStreamAsAttribute
-	private String name;
+	public String message;
+	@XStreamAsAttribute
+	public String identifier;
+	@XStreamAsAttribute
+	public String caller;
+	@XStreamAsAttribute
+	public CheckContext testContext;
 	
-	
-	public TestEntry(String name) {
-		this.name = name;
+	public OKNavigationEntry(String message, String caller, String identifier, CheckContext testContext) {
+		this.message = message;
+		this.identifier = identifier;
+		this.caller = caller;
+		this.testContext = testContext;
 	}
-
+	
 	@Override
 	public String toLine() {
-		return String.format("TEST: %s", name);
+		return String.format("OK     : %s: %s (id: %s)", caller, message, identifier);
 	}
+	
 	@Override
 	public OutputType getOutputType() {
-		return OutputType.info;
+		return OutputType.ok;
 	}
+
+
 }

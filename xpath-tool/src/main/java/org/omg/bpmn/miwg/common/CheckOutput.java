@@ -10,8 +10,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Stack;
 
+import org.omg.bpmn.miwg.common.testEntries.*;
 import org.omg.bpmn.miwg.testresult.Output;
-import org.omg.bpmn.miwg.xpath.base.testEntries.*;
 
 import com.thoughtworks.xstream.XStream;
 

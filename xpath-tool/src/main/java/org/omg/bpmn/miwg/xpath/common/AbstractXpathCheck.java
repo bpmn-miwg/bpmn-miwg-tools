@@ -14,10 +14,10 @@ import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.common.AbstractCheck;
 import org.omg.bpmn.miwg.common.DOMCheck;
 import org.omg.bpmn.miwg.common.CheckOutput;
-import org.omg.bpmn.miwg.xpath.base.testEntries.FindingAssertionEntry;
-import org.omg.bpmn.miwg.xpath.base.testEntries.NodePopEntry;
-import org.omg.bpmn.miwg.xpath.base.testEntries.NodePushEntry;
-import org.omg.bpmn.miwg.xpath.base.testEntries.OKAssertionEntry;
+import org.omg.bpmn.miwg.common.testEntries.FindingAssertionEntry;
+import org.omg.bpmn.miwg.common.testEntries.NodePopEntry;
+import org.omg.bpmn.miwg.common.testEntries.NodePushEntry;
+import org.omg.bpmn.miwg.common.testEntries.OKAssertionEntry;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -1425,7 +1425,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 	}
 
 	@Override
-	public AnalysisResult execute2(Document actualDocument) throws Throwable {
+	public AnalysisResult execute(Document actualDocument) throws Throwable {
 		this.doc = actualDocument;
 		XPathFactory xpathfactory = XPathFactory.newInstance();
 		xpath = xpathfactory.newXPath();
