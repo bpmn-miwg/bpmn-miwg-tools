@@ -31,26 +31,8 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.omg.bpmn.miwg.common.StreamCheck;
-import org.omg.bpmn.miwg.xpath.checks.A_1_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_1_1_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_1_2_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_2_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_3_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_4_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_4_1_Check;
-import org.omg.bpmn.miwg.xpath.checks.B_1_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.B_2_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.DemoTechnicalSupportCheck;
-import org.omg.bpmn.miwg.xsd.checks.SchemaCheck;
-
 public class ScanUtil {
 
-	public final static StreamCheck[] availableTests = new StreamCheck[] {
-			new SchemaCheck(), new B_1_0_Check(), new B_2_0_Check(),
-			new A_1_0_Check(), new A_1_1_Check(), new A_1_2_Check(),
-			new A_2_0_Check(), new A_3_0_Check(), new A_4_0_Check(),
-			new A_4_1_Check(), new DemoTechnicalSupportCheck() };
 
 	public static List<Object[]> data(ScanParameters conf) throws IOException {
 

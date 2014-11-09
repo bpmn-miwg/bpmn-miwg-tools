@@ -15,7 +15,7 @@ import org.omg.bpmn.miwg.xpath.base.testEntries.OKAssertionEntry;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 import org.w3c.dom.Document;
 
-public abstract class AbstractCheck implements StreamCheck {
+public abstract class AbstractCheck {
 
     private DocumentBuilderFactory factory;
     private DocumentBuilder builder;
@@ -56,18 +56,14 @@ public abstract class AbstractCheck implements StreamCheck {
         details.setDescription(entry.toLine());
 	}
 	
-
-	@Override
-	public int resultsOK() {
+	protected int resultsOK() {
 		return numOK;
 	}
 
-	@Override
-	public int resultsFinding() {
+	protected int resultsFinding() {
 		return numIssues;
 	}
 
-	@Override
 	public void init(CheckOutput out) {
         factory = null;
         builder = null;

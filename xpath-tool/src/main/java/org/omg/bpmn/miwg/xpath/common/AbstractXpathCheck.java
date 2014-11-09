@@ -1425,13 +1425,6 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 	}
 
 	@Override
-	public AnalysisResult execute(InputStream is) throws Throwable {
-		loadResource(is);
-		doExecute();
-		return new AnalysisResult(resultsOK(), resultsFinding(), out.getMiwgOutput());
-	}
-
-	@Override
 	public AnalysisResult execute2(Document actualDocument) throws Throwable {
 		this.doc = actualDocument;
 		XPathFactory xpathfactory = XPathFactory.newInstance();

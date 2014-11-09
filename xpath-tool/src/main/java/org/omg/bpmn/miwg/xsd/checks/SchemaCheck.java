@@ -11,6 +11,7 @@ import javax.xml.validation.SchemaFactory;
 
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.common.AbstractCheck;
+import org.omg.bpmn.miwg.common.StreamCheck;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
 import org.w3c.dom.ls.LSInput;
@@ -19,7 +20,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class SchemaCheck extends AbstractCheck {
+public class SchemaCheck extends AbstractCheck implements StreamCheck {
 
 	class LocalResourcsResolver implements LSResourceResolver {
 		@Override

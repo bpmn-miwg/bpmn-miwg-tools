@@ -10,10 +10,6 @@ public interface StreamCheck {
 
 	String getName();
 
-	int resultsOK();
-
-	int resultsFinding();
-
     AnalysisResult execute(InputStream actualBpmnXml) throws Throwable;
     
 }

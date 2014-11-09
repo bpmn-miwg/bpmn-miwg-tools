@@ -9,11 +9,6 @@ public interface DOMCheck {
 
 	String getName();
 
-	int resultsOK();
-
-	int resultsFinding();
-
-   
     AnalysisResult execute2(Document actualBpmnXml) throws Throwable;
 
 }
