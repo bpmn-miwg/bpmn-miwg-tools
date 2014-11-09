@@ -44,7 +44,7 @@ public class BpmnCompareConfiguration {
 		ObjectMapper mapper = new ObjectMapper();
 
 		if (confName == null) {
-			confName = "conf.json";
+			confName = "/org/omg/bpmn/miwg/configuration/conf.json";
 		}
 		InputStream is = BpmnCompareConfiguration.class
 				.getResourceAsStream(confName);
