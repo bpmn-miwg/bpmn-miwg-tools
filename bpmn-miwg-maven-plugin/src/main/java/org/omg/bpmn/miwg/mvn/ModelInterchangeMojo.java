@@ -63,7 +63,7 @@ import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.TestResults;
 import org.omg.bpmn.miwg.xmlCompare.Variant;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 
 import edu.emory.mathcs.backport.java.util.Collections;
@@ -158,7 +158,7 @@ public class ModelInterchangeMojo extends AbstractMojo {
 							writeTestResult(analysisResult, xsdTool.getName(),
 									job, dir.getAbsolutePath(), b);
 
-							XPathAnalysisTool2 xpathTool = new XPathAnalysisTool2();
+							XPathAnalysisTool xpathTool = new XPathAnalysisTool();
 							try {
 								analysisResult = xpathTool.analyzeDOM(job,
 										null, DOMFactory.getDocument(b), null);

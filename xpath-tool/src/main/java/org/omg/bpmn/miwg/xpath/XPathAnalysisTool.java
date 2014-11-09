@@ -49,11 +49,11 @@ import org.omg.bpmn.miwg.xpath.checks.DemoTechnicalSupportCheck;
 import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
 import org.w3c.dom.Document;
 
-public class XPathAnalysisTool2 implements DOMAnalysisTool {
+public class XPathAnalysisTool implements DOMAnalysisTool {
 
 	private List<AbstractXpathCheck> registeredChecks = new LinkedList<AbstractXpathCheck>();
 
-	public XPathAnalysisTool2() {
+	public XPathAnalysisTool() {
 		registerCheck(new A_1_0_Check());
 		registerCheck(new A_1_1_Check());
 		registerCheck(new A_1_2_Check());

@@ -20,7 +20,7 @@ import org.omg.bpmn.miwg.test.common.InstanceParameter;
 import org.omg.bpmn.miwg.test.common.ScanUtil;
 import org.omg.bpmn.miwg.test.parameters.ReferenceScanParameters;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 import org.w3c.dom.Document;
 
@@ -53,7 +53,7 @@ public class Reference_All_Test {
 
 	@Test
 	public void testXpath() throws Exception {
-		XPathAnalysisTool2 tool = new XPathAnalysisTool2();
+		XPathAnalysisTool tool = new XPathAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob();
 		job.FullApplicationName = param.application.toString();

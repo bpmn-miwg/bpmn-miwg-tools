@@ -42,7 +42,7 @@ import org.omg.bpmn.miwg.api.DOMAnalysisTool;
 import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.StreamAnalysisTool;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 import org.w3c.dom.Document;
 
@@ -94,7 +94,7 @@ public class Reference_B_2_0_Test {
 
 	@Test
 	public void testReference_XPath() throws Exception {
-		DOMAnalysisTool xpathTool = new XPathAnalysisTool2();
+		DOMAnalysisTool xpathTool = new XPathAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob();
 		job.FullApplicationName = "Reference";

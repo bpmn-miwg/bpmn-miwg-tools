@@ -38,7 +38,7 @@ import org.junit.runners.Parameterized;
 import org.omg.bpm.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 import org.w3c.dom.Document;
 
@@ -66,7 +66,7 @@ public abstract class AbstractTestCase {
 
 	@Test
 	public void testXpath() throws Exception {
-		XPathAnalysisTool2 tool = new XPathAnalysisTool2();
+		XPathAnalysisTool tool = new XPathAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob();
 		job.FullApplicationName = param.application.toString();

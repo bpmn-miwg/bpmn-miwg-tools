@@ -38,7 +38,7 @@ import org.omg.bpm.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool2;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.w3c.dom.Document;
 
 public class XPathTest {
@@ -48,7 +48,7 @@ public class XPathTest {
 
 	@Test
 	public void testYaoqiang3_with_A_1_0_roundtrip_Error() {
-		XPathAnalysisTool2 xPathTestTool = new XPathAnalysisTool2();
+		XPathAnalysisTool xPathTestTool = new XPathAnalysisTool();
 		InputStream inputStream = null;
 		try {
 			inputStream = getClass().getResourceAsStream(
@@ -83,7 +83,7 @@ public class XPathTest {
 	
 	@Test
 	public void testYaoqiang3_with_A_1_0_roundtrip_Correct() {
-		XPathAnalysisTool2 xPathTestTool = new XPathAnalysisTool2();
+		XPathAnalysisTool xPathTestTool = new XPathAnalysisTool();
 		InputStream inputStream = null;
 		try {
 			inputStream = getClass().getResourceAsStream(
@@ -119,7 +119,7 @@ public class XPathTest {
 	
 	@Test
 	public void testYaoqiang3_with_A_1_0_roundtrip_Correct_NoLog() {
-		XPathAnalysisTool2 xPathTestTool = new XPathAnalysisTool2();
+		XPathAnalysisTool xPathTestTool = new XPathAnalysisTool();
 		InputStream inputStream = null;
 		try {
 			inputStream = getClass().getResourceAsStream(
