@@ -35,11 +35,12 @@ import java.io.InputStream;
 
 
 
+
 import org.junit.Test;
-import org.omg.bpm.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.w3c.dom.Document;
 

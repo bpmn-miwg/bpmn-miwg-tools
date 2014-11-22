@@ -1,4 +1,4 @@
-package org.omg.bpm.miwg.util;
+package org.omg.bpmn.miwg.util;
 
 import java.io.File;
 import java.io.FileInputStream;
