@@ -26,6 +26,7 @@
 package org.omg.bpmn.miwg.tests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 
@@ -88,6 +89,36 @@ public class XSDTest {
 					actualBpmnXml, null);
 			// Any number of validation errors are reported as a single finding
 			assertEquals(0, result.numFindings);
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail();
+		} finally {
+			try {
+				actualBpmnXml.close();
+			} catch (Exception e) {
+				;
+			}
+		}
+	}
+	
+	@Test
+	public void testOutputPOJOs() {
+		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
+		InputStream actualBpmnXml = null;
+		AnalysisJob job = new AnalysisJob();
+		job.FullApplicationName = "Custom";
+		job.MIWGTestCase = "A.1.0";
+		job.Variant = MIWGVariant.Roundtrip;
+		try {
+			actualBpmnXml = getClass().getResourceAsStream(
+					"/Schema Valid/A.1.0-roundtrip.bpmn");
+			assertNotNull("Cannot find resource to test", actualBpmnXml);
+
+			AnalysisResult result = schemaValidator.analyzeStream(job, null,
+					actualBpmnXml, null);
+
+			// Ensure there are output POJOs
+			assertFalse(result.output.isEmpty());
 		} catch (Exception e) {
 			e.printStackTrace();
 			fail();

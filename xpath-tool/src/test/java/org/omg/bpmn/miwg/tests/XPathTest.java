@@ -26,11 +26,13 @@
 package org.omg.bpmn.miwg.tests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.io.InputStream;
+
 
 
 import org.junit.Test;
@@ -151,5 +153,44 @@ public class XPathTest {
 			}
 		}
 	}
+	
+	
+	@Test
+	public void testOutputPOJOs() {
+		XPathAnalysisTool xPathTestTool = new XPathAnalysisTool();
+		InputStream inputStream = null;
+		try {
+			inputStream = getClass().getResourceAsStream(
+					"/Yaoqiang BPMN Editor 3.0.1 Correct/A.1.0-roundtrip.bpmn");
+			assertNotNull("Cannot find resource to test", inputStream);
+			
+			
+			Document document = DOMFactory.getDocument(inputStream);
+			
+			AnalysisJob job = new AnalysisJob();
+			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
+			job.MIWGTestCase = "A.1.0";
+			job.Variant = MIWGVariant.Roundtrip;
+			
+					
+					
+			AnalysisResult result = xPathTestTool
+					.analyzeDOM(job,  null, document, null);
+
+
+			assertFalse(result.output.isEmpty());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail();
+		} finally {
+			try {
+				inputStream.close();
+			} catch (Exception e) {
+				;
+			}
+		}
+	}
+	
 
 }
