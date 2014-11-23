@@ -49,7 +49,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 							"7 days");
 					checkTimerEvent();
 
-					navigateFollowingElement("bpmn:endEvent", "");
+					navigateFollowingElement("bpmn:endEvent", null);
 
 					navigateElement(n1);
 

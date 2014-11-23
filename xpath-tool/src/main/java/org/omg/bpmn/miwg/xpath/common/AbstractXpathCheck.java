@@ -425,7 +425,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			if (nSequenceFlow != null) {
 
 				String nameCondition;
-				if (name == null || name.equals("")) {
+				
+				
+				if (name == null) {
+					nameCondition = "not(@name) and ";
+				} else if (name.equals("")) {
 					nameCondition = "";
 				} else {
 					nameCondition = String.format("@name='%s' and ", name);

@@ -71,19 +71,20 @@ public abstract class AbstractTestCase {
 		AnalysisJob job = new AnalysisJob();
 		job.FullApplicationName = param.application.toString();
 		job.MIWGTestCase = param.testResult.name;
-		
+
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		Document bpmnXmlDOM = DOMFactory.getDocument(bpmnXmlStream);
+		AnalysisResult result = null;
 		try {
-			AnalysisResult result = tool.analyzeDOM(job, null,
-					bpmnXmlDOM, param.outputRoot);
+			result = tool.analyzeDOM(job, null, bpmnXmlDOM,
+					param.outputRoot);
 
 			assertEquals(0, result.numFindings);
-
-			System.out.println();
-			System.out.println(result);
 		} finally {
 			bpmnXmlStream.close();
+			
+			System.out.println();
+			System.out.println(result);
 		}
 	}
 
@@ -96,16 +97,17 @@ public abstract class AbstractTestCase {
 		job.MIWGTestCase = param.testResult.name;
 
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
+		AnalysisResult result = null;
 		try {
-			AnalysisResult result = tool.analyzeStream(job, null, bpmnXmlStream,
+			result = tool.analyzeStream(job, null, bpmnXmlStream,
 					param.outputRoot);
 
 			assertEquals(0, result.numFindings);
+		} finally {
+			bpmnXmlStream.close();
 
 			System.out.println();
 			System.out.println(result);
-		} finally {
-			bpmnXmlStream.close();
 		}
 	}
 
