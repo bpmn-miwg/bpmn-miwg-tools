@@ -25,7 +25,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-public abstract class AbstractXpathCheck extends AbstractCheck implements DOMCheck {
+public abstract class AbstractXpathCheck extends AbstractCheck implements
+		DOMCheck {
 
 	private XPath xpath;
 	private Node currentNode;
@@ -42,7 +43,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 		nodeStack = null;
 		super.init(out);
 	}
-	
+
 	private void normalizeNames() throws XPathExpressionException {
 		Object o = xpath.evaluate("//bpmn:*[@name]", head(),
 				XPathConstants.NODESET);
@@ -54,7 +55,12 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 			s = s.trim();
 			// out.println(">>>  " + s);
 			s = s.replaceAll("&#10;", " ");
-			s = s.replaceAll("  ", " ");
+			s = s.replaceAll("\n", " ");
+			s = s.replaceAll("\r", " ");
+
+			while (s.contains("  "))
+				s = s.replaceAll("  ", " ");
+			
 			s = s.trim();
 			// out.println(">>>>>" + s);
 			attr.setTextContent(s);
@@ -237,10 +243,20 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 		}
 	}
 
+	/***
+	 * This works only if the gateway is on the stack
+	 */
 	public void navigateGatewaySequenceFlowStack(String sequenceFlowName)
 			throws Throwable {
 		navigateReferenceX("bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']",
 				".",
+				String.format("self::node()[@name='%s']", sequenceFlowName));
+	}
+
+	public void navigateGatewaySequenceFlow(String sequenceFlowName)
+			throws Throwable {
+		navigateReferenceX(currentNode, "bpmn:outgoing",
+				"//bpmn:sequenceFlow[@id='%s']", ".",
 				String.format("self::node()[@name='%s']", sequenceFlowName));
 	}
 
@@ -320,9 +336,15 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 	}
 
 	public Node navigateElement(String type, String name) throws Throwable {
-		String xpath = String.format("%s[@name='%s']", type, name);
-		Node n = navigateElementX(xpath);
-		return n;
+		if (name != null) {
+			String xpath = String.format("%s[@name='%s']", type, name);
+			Node n = navigateElementX(xpath);
+			return n;
+		} else {
+			String xpath = String.format("%s[not(@name)]", type);
+			Node n = navigateElementX(xpath);
+			return n;
+		}
 	}
 
 	public Node navigateFollowingElement(String type, String name)
@@ -338,6 +360,12 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 
 	public Node navigateSequenceFlow(String type, String name) throws Throwable {
 		return navigateSequenceFlow(currentNode, type, name);
+	}
+
+	public Node navigateLane(String name) throws Throwable {
+		String xPath = String
+				.format("bpmn:laneSet/bpmn:lane[@name='%s']", name);
+		return navigateElementX(xPath);
 	}
 
 	protected Node navigateSequenceFlow(Node node, String type, String name)
@@ -1434,9 +1462,10 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 		push(doc.getDocumentElement());
 		normalizeNames();
 		doExecute();
-		return new AnalysisResult(resultsOK(), resultsFinding(), out.getMiwgOutput());
+		return new AnalysisResult(resultsOK(), resultsFinding(),
+				out.getMiwgOutput());
 	}
-	
+
 	protected abstract void doExecute() throws Throwable;
 
 }
