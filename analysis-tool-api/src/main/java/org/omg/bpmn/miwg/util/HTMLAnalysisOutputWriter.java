@@ -9,18 +9,20 @@ import java.util.Scanner;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.AnalysisTool;
 import org.omg.bpmn.miwg.testresult.AnalysisOutputFragment;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
 public class HTMLAnalysisOutputWriter {
 
-	public static File getOutputFile(File folder, AnalysisJob job) {
-		return new File(folder, job.getName() + ".html");
+	public static File getOutputFile(File folder, AnalysisJob job,
+			AnalysisTool tool) {
+		return new File(folder, tool.getName() + "-" + job.getName() + ".html");
 	}
 
 	public static void writeOutput(File folder, AnalysisJob job,
-			AnalysisResult result) throws Exception {
+			AnalysisTool tool, AnalysisResult result) throws Exception {
 		PrintWriter htmlOutputWriter = null;
 		InputStream templateStream = null;
 		Scanner scanner = null;
@@ -45,7 +47,7 @@ public class HTMLAnalysisOutputWriter {
 			String completeString = template.replace("{ANALYSISRESULTS}",
 					outputString);
 
-			htmlOutputWriter = new PrintWriter(getOutputFile(folder, job));
+			htmlOutputWriter = new PrintWriter(getOutputFile(folder, job, tool));
 
 			htmlOutputWriter.println(completeString);
 		} finally {

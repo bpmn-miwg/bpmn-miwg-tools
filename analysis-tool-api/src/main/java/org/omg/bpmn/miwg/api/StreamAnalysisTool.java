@@ -40,7 +40,7 @@ import java.io.InputStream;
  * @author Tim Stephenson
  * 
  */
-public interface StreamAnalysisTool {
+public interface StreamAnalysisTool extends AnalysisTool {
 
     String getName(); 
     

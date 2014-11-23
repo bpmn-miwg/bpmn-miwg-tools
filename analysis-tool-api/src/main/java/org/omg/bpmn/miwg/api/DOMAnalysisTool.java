@@ -4,10 +4,10 @@ import java.io.File;
 
 import org.w3c.dom.Document;
 
-public interface DOMAnalysisTool {
+public interface DOMAnalysisTool extends AnalysisTool {
 
 	String getName();
-	
-    AnalysisResult analyzeDOM(AnalysisJob job, Document referenceDocument, 
-            Document actualDocument, File logDir) throws Exception; 
+
+	AnalysisResult analyzeDOM(AnalysisJob job, Document referenceDocument,
+			Document actualDocument, File logDir) throws Exception;
 }
