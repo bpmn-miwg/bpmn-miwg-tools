@@ -1,6 +1,7 @@
 package org.omg.bpmn.miwg.mvn.test;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -71,28 +72,36 @@ public class HTMLOutputTest {
 					.analyzeStream(job, null, inputStream, null);
 			HTMLAnalysisOutputWriter.writeOutput(new File(RPT_FOLDER), job,
 					xsdAnalysisTool, result);
+			File xsdFile = HTMLAnalysisOutputWriter.getOutputFile(new File(
+					RPT_FOLDER), job, xsdAnalysisTool);
 			System.out.println("Created output file: "
-					+ HTMLAnalysisOutputWriter.getOutputFile(new File(
-							RPT_FOLDER), job, xsdAnalysisTool));
+					+ xsdFile);
 
 			result = xpathAnalysisTool.analyzeDOM(job, null, dom, null);
 			HTMLAnalysisOutputWriter.writeOutput(new File(RPT_FOLDER), job,
 					xpathAnalysisTool, result);
+			File xpathFile = HTMLAnalysisOutputWriter.getOutputFile(new File(
+					RPT_FOLDER), job, xpathAnalysisTool);
 			System.out.println("Created output file: "
-					+ HTMLAnalysisOutputWriter.getOutputFile(new File(
-							RPT_FOLDER), job, xpathAnalysisTool));
+					+ xpathFile);
 
 			result = xmlCompareAnalysisTool.analyzeDOM(job, referenceDom, dom, null);
 			HTMLAnalysisOutputWriter.writeOutput(new File(RPT_FOLDER), job,
 					xmlCompareAnalysisTool, result);
+			File xmlCompareFile = HTMLAnalysisOutputWriter.getOutputFile(new File(
+					RPT_FOLDER), job, xmlCompareAnalysisTool);
 			System.out.println("Created output file: "
-					+ HTMLAnalysisOutputWriter.getOutputFile(new File(
-							RPT_FOLDER), job, xmlCompareAnalysisTool));
+					+ xmlCompareFile);
 
-			/*
-			 * } catch (Exception e) { throw new
-			 * RuntimeException(e.getMessage(), e);
-			 */
+			assertTrue(xsdFile.exists());
+			assertTrue(xpathFile.exists());
+			assertTrue(xmlCompareFile.exists());
+			
+			assertTrue(xsdFile.length() > 0);
+			assertTrue(xpathFile.length() > 0);
+			assertTrue(xmlCompareFile.length() > 0);
+			
+			
 		} finally {
 			try {
 				inputStream.close();
