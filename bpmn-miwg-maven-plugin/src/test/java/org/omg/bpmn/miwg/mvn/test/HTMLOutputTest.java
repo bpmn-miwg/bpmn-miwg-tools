@@ -50,7 +50,7 @@ public class HTMLOutputTest {
 
 			AnalysisResult result;
 			Document dom;
-			Document dom2;
+			Document referenceDom;
 
 			inputStream = getClass().getResourceAsStream(
 					"/HTMLOutputTest/A.1.0-roundtrip.bpmn");
@@ -61,7 +61,7 @@ public class HTMLOutputTest {
 			inputStream2 = getClass().getResourceAsStream(
 					"/HTMLOutputTest/A.1.0-roundtrip-minor-change.bpmn");
 			assertNotNull("Cannot find resource to test", inputStream2);
-			dom2 = DOMFactory.getDocument(inputStream2);
+			referenceDom = DOMFactory.getDocument(inputStream2);
 			inputStream2.close();
 
 			// We need to re-open stream for a second run
@@ -82,7 +82,7 @@ public class HTMLOutputTest {
 					+ HTMLAnalysisOutputWriter.getOutputFile(new File(
 							RPT_FOLDER), job, xpathAnalysisTool));
 
-			result = xmlCompareAnalysisTool.analyzeDOM(job, dom2, dom, null);
+			result = xmlCompareAnalysisTool.analyzeDOM(job, referenceDom, dom, null);
 			HTMLAnalysisOutputWriter.writeOutput(new File(RPT_FOLDER), job,
 					xmlCompareAnalysisTool, result);
 			System.out.println("Created output file: "
