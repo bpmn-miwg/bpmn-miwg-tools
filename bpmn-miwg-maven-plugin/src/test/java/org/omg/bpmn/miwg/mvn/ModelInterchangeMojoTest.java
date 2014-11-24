@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.File;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +19,6 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.maven.model.Resource;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -63,7 +61,8 @@ public class ModelInterchangeMojoTest {
         File dir = new File("src" + File.separator + "test" + File.separator
                 + "resources");
         mojo.scanForBpmn(dir, bpmnFiles);
-        assertEquals(11, bpmnFiles.size());
+        // 13 = the total number of BPMN files in src/test/resources
+        assertEquals(13, bpmnFiles.size());
     }
 
     @Test

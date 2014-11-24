@@ -46,7 +46,6 @@ import javax.json.JsonValue;
 import org.apache.maven.model.Resource;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
@@ -54,13 +53,12 @@ import org.apache.maven.project.MavenProject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.MIWGVariant;
-import org.omg.bpmn.miwg.api.StreamAnalysisTool;
 import org.omg.bpmn.miwg.input.BpmnFileFilter;
 import org.omg.bpmn.miwg.input.DirFilter;
-import org.omg.bpmn.miwg.testresult.IndexWriter;
 import org.omg.bpmn.miwg.testresult.Output;
 import org.omg.bpmn.miwg.testresult.TestResults;
 import org.omg.bpmn.miwg.util.DOMFactory;
+import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.xmlCompare.Variant;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
@@ -152,22 +150,29 @@ public class ModelInterchangeMojo extends AbstractMojo {
 							try {
 								analysisResult = xsdTool.analyzeStream(job, null,
 										new FileInputStream(b), null);
+                                File fldr = new File(new File(outputDirectory,
+                                        xsdTool.getName()),
+                                        job.FullApplicationName);
+                                fldr.mkdirs();
+                                HTMLAnalysisOutputWriter.writeOutput(fldr, job,
+                                        xsdTool, analysisResult);
 							} catch (Exception e) {
 								getLog().error(e);
 							}
-							writeTestResult(analysisResult, xsdTool.getName(),
-									job, dir.getAbsolutePath(), b);
 
 							XPathAnalysisTool xpathTool = new XPathAnalysisTool();
 							try {
 								analysisResult = xpathTool.analyzeDOM(job,
 										null, DOMFactory.getDocument(b), null);
+                                File fldr = new File(new File(outputDirectory,
+                                        xpathTool.getName()),
+                                        job.FullApplicationName);
+                                fldr.mkdirs();
+                                HTMLAnalysisOutputWriter.writeOutput(fldr, job,
+                                        xpathTool, analysisResult);
 							} catch (Exception e) {
 								getLog().error(e);
 							}
-							writeTestResult(analysisResult,
-									xpathTool.getName(), job,
-									dir.getAbsolutePath(), b);
 
 							refStream = findReference(testName, b);
 							XmlCompareAnalysisTool compareTool = new XmlCompareAnalysisTool();
@@ -175,13 +180,15 @@ public class ModelInterchangeMojo extends AbstractMojo {
 								analysisResult = compareTool
 										.analyzeDOM(job, DOMFactory.getDocument(refStream),
 												DOMFactory.getDocument(b), null);
+                                File fldr = new File(new File(outputDirectory,
+                                        compareTool.getName()),
+                                        job.FullApplicationName);
+                                fldr.mkdirs();
+                                HTMLAnalysisOutputWriter.writeOutput(fldr, job,
+                                        compareTool, analysisResult);
 							} catch (Exception e) {
 								getLog().error(e);
 							}
-							writeTestResult(analysisResult,
-									compareTool.getName(), job,
-									dir.getAbsolutePath(), b);
-
 						}
 					}
 				}
