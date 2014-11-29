@@ -14,8 +14,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
-import org.omg.bpmn.miwg.testresult.Output;
-import org.omg.bpmn.miwg.testresult.TestResults;
+import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.Output;
+import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.TestResults;
 import org.omg.bpmn.miwg.xmlCompare.Variant;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.w3c.dom.Document;
@@ -72,7 +72,7 @@ public class XMLCompareTest {
             assertEquals(33, significantDifferences.size());
 
             TestResults results = new TestResults();
-            org.omg.bpmn.miwg.testresult.Test test = results.addTool(TOOL_ID)
+            org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.Test test = results.addTool(TOOL_ID)
                     .addTest(TEST_ID, VARIANT);
             test.addAll(significantDifferences);
             final File f = new File(new File(new File("target", "xml-compare"),

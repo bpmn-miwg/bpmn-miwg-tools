@@ -10,8 +10,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Stack;
 
+import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.Output;
 import org.omg.bpmn.miwg.common.testEntries.*;
-import org.omg.bpmn.miwg.testresult.Output;
 
 import com.thoughtworks.xstream.XStream;
 

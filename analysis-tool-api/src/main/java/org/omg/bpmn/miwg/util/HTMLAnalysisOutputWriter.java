@@ -8,11 +8,11 @@ import java.io.PrintWriter;
 import java.util.Collection;
 import java.util.Scanner;
 
+import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.AnalysisOutputFragment;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.tools.AnalysisTool;
-import org.omg.bpmn.miwg.testresult.AnalysisOutputFragment;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 

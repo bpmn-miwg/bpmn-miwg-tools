@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.testresult;
+package org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos;
 
 public enum OutputType {
     finding, info, ok, exception

@@ -25,7 +25,7 @@
 
 package org.omg.bpmn.miwg.common.testEntries;
 
-import org.omg.bpmn.miwg.testresult.OutputType;
+import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.OutputType;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;

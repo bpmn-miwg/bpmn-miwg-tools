@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.testresult;
+package org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos;
 
 import java.util.Collection;
 

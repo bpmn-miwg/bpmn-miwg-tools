@@ -2,7 +2,7 @@ package org.omg.bpmn.miwg.api;
 
 import java.util.Collection;
 
-import org.omg.bpmn.miwg.testresult.Output;
+import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.Output;
 
 
 /***
