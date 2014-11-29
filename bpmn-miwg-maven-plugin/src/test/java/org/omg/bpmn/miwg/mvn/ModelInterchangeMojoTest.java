@@ -7,6 +7,8 @@ import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -19,6 +21,11 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.maven.model.Resource;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.AnalysisRun;
+import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
+import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;

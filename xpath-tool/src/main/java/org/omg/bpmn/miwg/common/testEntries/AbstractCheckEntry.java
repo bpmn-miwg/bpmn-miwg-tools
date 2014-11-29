@@ -28,7 +28,7 @@ package org.omg.bpmn.miwg.common.testEntries;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.OutputType;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 

@@ -2,10 +2,9 @@ package org.omg.bpmn.miwg.api;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.Collection;
 
-import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.Output;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
 import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 
 /***
@@ -55,7 +54,7 @@ public class AnalysisResult {
 			throws UnsupportedEncodingException {
 		String fileName = job.getName() + "-"+ analysisTool.getName()
 				+ ".html";
-		fileName = URLEncoder.encode(fileName, "UTF-8");
+		//fileName = URLEncoder.encode(fileName, "UTF-8");
 		return fileName;
 	}
 

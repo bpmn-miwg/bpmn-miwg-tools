@@ -74,7 +74,7 @@ public class Reference_B_2_0_Test {
 	}
 
 	@After
-	public void dearDown() throws Exception {
+	public void tearDown() throws Exception {
 		if (referenceStream == null)
 			referenceStream.close();
 		referenceDOM = null;

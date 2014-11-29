@@ -16,11 +16,11 @@ import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 import org.w3c.dom.Document;
 
-public class AnalysisFaccade {
+public class AnalysisFacade {
 
 	private File outputFolder;
 
-	public AnalysisFaccade(File outputFolder) {
+	public AnalysisFacade(File outputFolder) {
 		this.outputFolder = outputFolder;
 	}
 

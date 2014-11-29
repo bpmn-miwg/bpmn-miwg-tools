@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos;
+package org.omg.bpmn.miwg.HtmlOutput.Pojos;
 
 import java.io.File;
 import java.io.IOException;

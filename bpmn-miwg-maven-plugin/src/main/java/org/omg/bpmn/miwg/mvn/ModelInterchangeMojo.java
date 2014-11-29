@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -50,11 +51,12 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
-import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.Output;
-import org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos.TestResults;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.TestResults;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
 import org.omg.bpmn.miwg.input.BpmnFileFilter;
 import org.omg.bpmn.miwg.input.DirFilter;
 import org.omg.bpmn.miwg.util.DOMFactory;
@@ -122,7 +124,10 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		if (!outputDirectory.exists()) {
 			outputDirectory.mkdirs();
 		}
-
+		
+		AnalysisFacade analysisFacade = new AnalysisFacade(outputDirectory);
+		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
+		
 		for (String app : getApplications()) {
 			getLog().info("Running test suite for " + app);
 			if (resources != null && !resources.isEmpty()) {
@@ -134,6 +139,13 @@ public class ModelInterchangeMojo extends AbstractMojo {
 							"Scanning for BPMN files in " + r.getDirectory());
 					scanForBpmn(dir, bpmnFiles, app);
 
+					
+					/*jobs.add(new AnalysisJob("HTML Output Test 1", "A.1.0",
+							MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
+									BPMN_RESOURCE), new ResourceAnalysisInput(getClass(),
+									BPMN_RESOURCE_REFERENCE)));
+					*/
+					
 					for (File b : bpmnFiles) {
 						String testName = inferTestName(b);
 						InputStream refStream = findReference(testName, b);

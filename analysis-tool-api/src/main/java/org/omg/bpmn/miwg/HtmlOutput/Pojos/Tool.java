@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.AnalysisResultSimpleXmlPojos;
+package org.omg.bpmn.miwg.HtmlOutput.Pojos;
 
 import java.util.Collection;
 import java.util.LinkedList;

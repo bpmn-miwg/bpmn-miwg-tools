@@ -14,20 +14,20 @@ import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
-import org.omg.bpmn.miwg.mvn.AnalysisFaccade;
+import org.omg.bpmn.miwg.mvn.AnalysisFacade;
 import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 
 public class AnalysisFaccadeTest {
 
-	private static final String RPT_FOLDER = "target";
+	private static final String RPT_FOLDER = "test-temp";
 
 	private static final String BPMN_RESOURCE = "/HTMLOutputTest/A.1.0-roundtrip.bpmn";
 
 	private static final String BPMN_RESOURCE_REFERENCE = "/HTMLOutputTest/A.1.0-roundtrip-minor-change.bpmn";
 
 	@Before
-	public void setUp() {
+	public void cleanGeneratedHTMLFiles() {
 		File reportFolder = new File(RPT_FOLDER);
 		reportFolder.mkdirs();
 		
@@ -46,7 +46,7 @@ public class AnalysisFaccadeTest {
 	}
 
 	@Test
-	public void testMultipleToolOutputs() throws Exception {
+	public void testMultipleResources() throws Exception {
 		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
 		jobs.add(new AnalysisJob("HTML Output Test 1", "A.1.0",
 				MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
@@ -58,7 +58,7 @@ public class AnalysisFaccadeTest {
 						BPMN_RESOURCE_REFERENCE), new ResourceAnalysisInput(
 						getClass(), BPMN_RESOURCE_REFERENCE)));
 
-		AnalysisFaccade faccade = new AnalysisFaccade(new File(RPT_FOLDER));
+		AnalysisFacade faccade = new AnalysisFacade(new File(RPT_FOLDER));
 
 		Collection<AnalysisRun> runs = faccade.executeAnalysisJobs(jobs);
 		assertEquals(2, runs.size());
@@ -70,7 +70,7 @@ public class AnalysisFaccadeTest {
 	}
 
 	@Test
-	public void testSingleToolOutput() throws Exception {
+	public void testSingleResource() throws Exception {
 		try {
 			// Collect information about the analysis
 			AnalysisJob job = new AnalysisJob(
@@ -80,7 +80,7 @@ public class AnalysisFaccadeTest {
 					new ResourceAnalysisInput(getClass(),
 							BPMN_RESOURCE_REFERENCE));
 
-			AnalysisFaccade faccade = new AnalysisFaccade(new File(RPT_FOLDER));
+			AnalysisFacade faccade = new AnalysisFacade(new File(RPT_FOLDER));
 			AnalysisRun run = faccade.executeAnalysisJob(job);
 
 			File xsdFile = run.getResult(XsdAnalysisTool.NAME)
@@ -100,6 +100,16 @@ public class AnalysisFaccadeTest {
 		} finally {
 		}
 
+	}
+	
+	@Test
+	public void testMultipleFiles() throws Exception {
+		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
+		jobs.add(new AnalysisJob("src/test/resources/W4 BPMN+ Composer V.9.0/A.1.0-roundtrip.bpmn"));
+		jobs.add(new AnalysisJob("src/test/resources/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"));
+
+		AnalysisFacade facade = new AnalysisFacade(new File(RPT_FOLDER));
+		facade.executeAnalysisJobs(jobs);
 	}
 
 }
