@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.api;
+package org.omg.bpmn.miwg.api.tools;
 
 public interface AnalysisTool {
 

@@ -43,8 +43,8 @@ import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.NodeDetail;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.DOMAnalysisTool;
 import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
 import org.omg.bpmn.miwg.input.BpmnFileFilter;
 import org.omg.bpmn.miwg.output.Detail;
 import org.omg.bpmn.miwg.output.DetailedOutput;
@@ -159,10 +159,8 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 					Document bpmnDoc = getDocument(bpmnStream);
 					Document compareDoc = getDocument(compareStream);
 
-					AnalysisJob job = new AnalysisJob();
-					job.FullApplicationName = testFolder.getName();
-					job.MIWGTestCase = bpmnFile.getName();
-					job.Variant = MIWGVariant.Undefined;
+					AnalysisJob job = new AnalysisJob(testFolder.getName(),
+							bpmnFile.getName(), MIWGVariant.Undefined, null, null);
 
 					test.addAll(runnner.analyzeDOM(job, bpmnDoc, compareDoc,
 							reportFolder).output);

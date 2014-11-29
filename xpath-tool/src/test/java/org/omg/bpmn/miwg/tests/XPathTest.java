@@ -61,12 +61,7 @@ public class XPathTest {
 			
 			Document document = DOMFactory.getDocument(inputStream);
 			
-			AnalysisJob job = new AnalysisJob();
-			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
-			job.MIWGTestCase = "A.1.0";
-			job.Variant = MIWGVariant.Roundtrip;
-			
-					
+			AnalysisJob job = new AnalysisJob("Yaoqiang BPMN Editor 3.0.1 Error", "A.1.0", MIWGVariant.Roundtrip, null, null);
 					
 			AnalysisResult result = xPathTestTool
 					.analyzeDOM(job,  null, document, new File(RPT_FOLDER));
@@ -96,11 +91,7 @@ public class XPathTest {
 			
 			Document document = DOMFactory.getDocument(inputStream);
 			
-			AnalysisJob job = new AnalysisJob();
-			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
-			job.MIWGTestCase = "A.1.0";
-			job.Variant = MIWGVariant.Roundtrip;
-			
+			AnalysisJob job = new AnalysisJob("Yaoqiang BPMN Editor 3.0.1 Error", "A.1.0", MIWGVariant.Roundtrip, null, null);
 					
 					
 			AnalysisResult result = xPathTestTool
@@ -132,12 +123,7 @@ public class XPathTest {
 			
 			Document document = DOMFactory.getDocument(inputStream);
 			
-			AnalysisJob job = new AnalysisJob();
-			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
-			job.MIWGTestCase = "A.1.0";
-			job.Variant = MIWGVariant.Roundtrip;
-			
-					
+			AnalysisJob job = new AnalysisJob("Yaoqiang BPMN Editor 3.0.1 Error", "A.1.0", MIWGVariant.Roundtrip, null, null);
 					
 			AnalysisResult result = xPathTestTool
 					.analyzeDOM(job,  null, document, null);
@@ -168,12 +154,7 @@ public class XPathTest {
 			
 			Document document = DOMFactory.getDocument(inputStream);
 			
-			AnalysisJob job = new AnalysisJob();
-			job.FullApplicationName = "Yaoqiang BPMN Editor 3.0.1 Error";
-			job.MIWGTestCase = "A.1.0";
-			job.Variant = MIWGVariant.Roundtrip;
-			
-					
+			AnalysisJob job = new AnalysisJob("Yaoqiang BPMN Editor 3.0.1 Error", "A.1.0", MIWGVariant.Roundtrip, null, null);
 					
 			AnalysisResult result = xPathTestTool
 					.analyzeDOM(job,  null, document, null);

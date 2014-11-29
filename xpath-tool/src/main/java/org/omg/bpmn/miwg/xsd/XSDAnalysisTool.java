@@ -31,7 +31,7 @@ import java.io.InputStream;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.StreamAnalysisTool;
+import org.omg.bpmn.miwg.api.tools.StreamAnalysisTool;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.xsd.checks.SchemaCheck;
 
@@ -47,7 +47,7 @@ public class XSDAnalysisTool implements StreamAnalysisTool {
 			File reportFolder) throws Exception {
 
 		SchemaCheck check = new SchemaCheck();
-		CheckOutput checkOutput = new CheckOutput("xsd-" + job.getName() + "-" + job.MIWGTestCase, reportFolder);
+		CheckOutput checkOutput = new CheckOutput("xsd-" + job.getName() + "-" + job.getMIWGTestCase(), reportFolder);
 		check.init(checkOutput);
 
 		AnalysisResult result;

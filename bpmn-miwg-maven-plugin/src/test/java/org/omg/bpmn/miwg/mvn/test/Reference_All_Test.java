@@ -55,9 +55,8 @@ public class Reference_All_Test {
 	public void testXpath() throws Exception {
 		XPathAnalysisTool tool = new XPathAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob();
-		job.FullApplicationName = param.application.toString();
-		job.MIWGTestCase = param.testResult.name;
+		AnalysisJob job = new AnalysisJob(param.application.toString(),
+				param.testResult.name, null, null, null);
 
 		Document bpmnXmlDOM = DOMFactory.getDocument(param.testResult.file);
 		AnalysisResult result = tool.analyzeDOM(job, null, bpmnXmlDOM,
@@ -73,14 +72,13 @@ public class Reference_All_Test {
 	public void testSchema() throws Exception {
 		XSDAnalysisTool tool = new XSDAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob();
-		job.FullApplicationName = param.application.toString();
-		job.MIWGTestCase = param.testResult.name;
+		AnalysisJob job = new AnalysisJob(param.application.toString(),
+				param.testResult.name, null, null, null);
 
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		try {
-			AnalysisResult result = tool.analyzeStream(job, null, bpmnXmlStream,
-					param.outputRoot);
+			AnalysisResult result = tool.analyzeStream(job, null,
+					bpmnXmlStream, param.outputRoot);
 
 			assertEquals(0, result.numFindings);
 
@@ -99,15 +97,14 @@ public class Reference_All_Test {
 	public void testXmlCompare() throws Exception {
 		XmlCompareAnalysisTool tool = new XmlCompareAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob();
-		job.FullApplicationName = param.application.toString();
-		job.MIWGTestCase = param.testResult.name;
+		AnalysisJob job = new AnalysisJob(param.application.toString(),
+				param.testResult.name, null, null, null);
 
 		Document bpmnXmlDOM1 = DOMFactory.getDocument(param.testResult.file);
 		Document bpmnXmlDOM2 = DOMFactory.getDocument(param.testResult.file);
 
-		AnalysisResult result = tool.analyzeDOM(job, bpmnXmlDOM1,
-				bpmnXmlDOM2, param.outputRoot);
+		AnalysisResult result = tool.analyzeDOM(job, bpmnXmlDOM1, bpmnXmlDOM2,
+				param.outputRoot);
 
 		assertEquals(0, result.numFindings);
 

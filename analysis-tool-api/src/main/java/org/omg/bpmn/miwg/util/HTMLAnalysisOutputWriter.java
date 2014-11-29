@@ -5,24 +5,31 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.util.Collection;
 import java.util.Scanner;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.AnalysisTool;
+import org.omg.bpmn.miwg.api.AnalysisRun;
+import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 import org.omg.bpmn.miwg.testresult.AnalysisOutputFragment;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
 public class HTMLAnalysisOutputWriter {
 
-	public static File getOutputFile(File folder, AnalysisJob job,
-			AnalysisTool tool) {
-		return new File(folder, tool.getName() + "-" + job.getName() + ".html");
+	public static File getAnalysisResultsFile(File folder,
+			AnalysisJob job) {
+		return new File(folder, job.getName() + ".html");
 	}
 
-	public static void writeOutput(File folder, AnalysisJob job,
-			AnalysisTool tool, AnalysisResult result) throws Exception {
+	public static File getOverviewFile(File folder) {
+		return new File(folder, "overview.html");
+	}
+
+	public static void writeAnalysisResults(File folder,
+			AnalysisJob job, AnalysisTool tool, AnalysisResult result)
+			throws Exception {
 		PrintWriter htmlOutputWriter = null;
 		InputStream templateStream = null;
 		Scanner scanner = null;
@@ -39,7 +46,7 @@ public class HTMLAnalysisOutputWriter {
 			String outputString = outputStream.toString();
 
 			templateStream = HTMLAnalysisOutputWriter.class
-					.getResourceAsStream("/AnalysisTool.HTMLOutput.Template.html");
+					.getResourceAsStream("/AnalysisResult.SingleJob.Template.html");
 
 			scanner = new Scanner(templateStream, "UTF-8");
 			String template = scanner.useDelimiter("\\A").next();
@@ -47,7 +54,8 @@ public class HTMLAnalysisOutputWriter {
 			String completeString = template.replace("{ANALYSISRESULTS}",
 					outputString);
 
-			htmlOutputWriter = new PrintWriter(getOutputFile(folder, job, tool));
+			htmlOutputWriter = new PrintWriter(getAnalysisResultsFile(
+					folder, job));
 
 			htmlOutputWriter.println(completeString);
 		} finally {
@@ -63,6 +71,51 @@ public class HTMLAnalysisOutputWriter {
 			}
 			scanner.close();
 		}
+	}
+
+	public static void writeOverview(File folder,
+			Collection<AnalysisRun> runs) throws Exception {
+		PrintWriter htmlOutputWriter = null;
+		InputStream templateStream = null;
+		Scanner scanner = null;
+		try {
+
+			templateStream = HTMLAnalysisOutputWriter.class
+					.getResourceAsStream("/AnalysisResult.Overview.Template.html");
+
+			scanner = new Scanner(templateStream, "UTF-8");
+			String template = scanner.useDelimiter("\\A").next();
+
+			StringBuilder sb = new StringBuilder();
+
+			
+			for (AnalysisRun run : runs) {
+				sb.append(run.buildOverviewHTML(folder));
+			}
+
+			String overviewString = sb.toString();
+			
+			String completeString = template.replace("{OVERVIEW}",
+					overviewString);
+
+			htmlOutputWriter = new PrintWriter(
+					getOverviewFile(folder));
+
+			htmlOutputWriter.println(completeString);
+		} finally {
+			try {
+				htmlOutputWriter.close();
+			} catch (Exception e) {
+				;
+			}
+			try {
+				templateStream.close();
+			} catch (IOException e) {
+				;
+			}
+			scanner.close();
+		}
+
 	}
 
 }

@@ -114,7 +114,7 @@ public class ModelInterchangeMojo extends AbstractMojo {
 
 	protected FileFilter dirFilter = new DirFilter();
 
-	private static Map<String, org.omg.bpmn.miwg.testresult.FileResult> testsRun = new HashMap<String, org.omg.bpmn.miwg.testresult.FileResult>();
+	private static Map<String, ATTIC.FileResult> testsRun = new HashMap<String, ATTIC.FileResult>();
 
 	public void execute() throws MojoExecutionException {
 		getLog().info("Running BPMN-MIWG test suite...");
@@ -139,10 +139,7 @@ public class ModelInterchangeMojo extends AbstractMojo {
 						InputStream refStream = findReference(testName, b);
 						if (refStream != null) {
 
-							AnalysisJob job = new AnalysisJob();
-							job.FullApplicationName = app;
-							job.MIWGTestCase = testName;
-							job.Variant = inferVariant2(b);
+							AnalysisJob job = new AnalysisJob(app, testName, inferVariant2(b), null, null);
 
 							AnalysisResult analysisResult = null;
 
@@ -152,9 +149,9 @@ public class ModelInterchangeMojo extends AbstractMojo {
 										new FileInputStream(b), null);
                                 File fldr = new File(new File(outputDirectory,
                                         xsdTool.getName()),
-                                        job.FullApplicationName);
+                                        job.getFullApplicationName());
                                 fldr.mkdirs();
-                                HTMLAnalysisOutputWriter.writeOutput(fldr, job,
+                                HTMLAnalysisOutputWriter.writeAnalysisResults(fldr, job,
                                         xsdTool, analysisResult);
 							} catch (Exception e) {
 								getLog().error(e);
@@ -166,9 +163,9 @@ public class ModelInterchangeMojo extends AbstractMojo {
 										null, DOMFactory.getDocument(b), null);
                                 File fldr = new File(new File(outputDirectory,
                                         xpathTool.getName()),
-                                        job.FullApplicationName);
+                                        job.getFullApplicationName());
                                 fldr.mkdirs();
-                                HTMLAnalysisOutputWriter.writeOutput(fldr, job,
+                                HTMLAnalysisOutputWriter.writeAnalysisResults(fldr, job,
                                         xpathTool, analysisResult);
 							} catch (Exception e) {
 								getLog().error(e);
@@ -182,9 +179,9 @@ public class ModelInterchangeMojo extends AbstractMojo {
 												DOMFactory.getDocument(b), null);
                                 File fldr = new File(new File(outputDirectory,
                                         compareTool.getName()),
-                                        job.FullApplicationName);
+                                        job.getFullApplicationName());
                                 fldr.mkdirs();
-                                HTMLAnalysisOutputWriter.writeOutput(fldr, job,
+                                HTMLAnalysisOutputWriter.writeAnalysisResults(fldr, job,
                                         compareTool, analysisResult);
 							} catch (Exception e) {
 								getLog().error(e);
@@ -273,9 +270,9 @@ public class ModelInterchangeMojo extends AbstractMojo {
 
 		final TestResults results = new TestResults();
 
-		String app = job.FullApplicationName;
-		String testName = job.MIWGTestCase;
-		String variant = job.Variant.toString().toLowerCase();
+		String app = job.getFullApplicationName();
+		String testName = job.getMIWGTestCase();
+		String variant = job.getVariant().toString().toLowerCase();
 
 		final File f = new File(new File(new File(outputDirectory,
 				analysisToolName), app), app + "-" + testName + "-" + variant
@@ -368,7 +365,7 @@ public class ModelInterchangeMojo extends AbstractMojo {
 	}
 
 	protected class FileResult implements
-			org.omg.bpmn.miwg.testresult.FileResult {
+			ATTIC.FileResult {
 
 		protected String name;
 		protected AnalysisResult result;

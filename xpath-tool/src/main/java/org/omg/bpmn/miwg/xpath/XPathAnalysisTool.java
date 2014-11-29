@@ -31,8 +31,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.DOMAnalysisTool;
 import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
 import org.omg.bpmn.miwg.common.DOMCheck;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.xpath.checks.A_1_0_Check;
@@ -77,7 +77,7 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 
 	private DOMCheck getCheck(AnalysisJob job) {
 		for (AbstractXpathCheck check : registeredChecks) {
-			if (check.isApplicable(job.MIWGTestCase)) {
+			if (check.isApplicable(job.getMIWGTestCase())) {
 				return check;
 			}
 		}

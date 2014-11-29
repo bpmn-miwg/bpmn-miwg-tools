@@ -22,10 +22,13 @@
  * THE SOFTWARE.
  * 
  */
-package org.omg.bpmn.miwg.api;
+package org.omg.bpmn.miwg.api.tools;
 
 import java.io.File;
 import java.io.InputStream;
+
+import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.AnalysisResult;
 
 /**
  * <b>Experimental</b> interface attempting to allow both current test tools to

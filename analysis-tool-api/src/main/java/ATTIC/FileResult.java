@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.testresult;
+package ATTIC;
 
 public interface FileResult {
 

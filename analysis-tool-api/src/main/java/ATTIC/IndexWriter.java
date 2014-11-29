@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  * 
  */
-package org.omg.bpmn.miwg.testresult;
+package ATTIC;
 
 import java.io.File;
 import java.io.FileNotFoundException;

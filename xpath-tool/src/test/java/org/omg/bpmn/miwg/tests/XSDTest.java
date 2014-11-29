@@ -47,10 +47,9 @@ public class XSDTest {
 	public void testSchemaInvalidBpmn() {
 		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
 		InputStream actualBpmnXml = null;
-		AnalysisJob job = new AnalysisJob();
-		job.FullApplicationName = "Custom";
-		job.MIWGTestCase = "A.1.0";
-		job.Variant = MIWGVariant.Roundtrip;
+		
+		AnalysisJob job = new AnalysisJob("Custom", "A.1.0", MIWGVariant.Roundtrip, null, null);
+		
 		try {
 			actualBpmnXml = getClass().getResourceAsStream(
 					"/Schema Invalid/A.1.0-roundtrip.bpmn");
@@ -76,10 +75,7 @@ public class XSDTest {
 	public void testSchemaValidBpmn() {
 		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
 		InputStream actualBpmnXml = null;
-		AnalysisJob job = new AnalysisJob();
-		job.FullApplicationName = "Custom";
-		job.MIWGTestCase = "A.1.0";
-		job.Variant = MIWGVariant.Roundtrip;
+		AnalysisJob job = new AnalysisJob("Custom", "A.1.0", MIWGVariant.Roundtrip, null, null);
 		try {
 			actualBpmnXml = getClass().getResourceAsStream(
 					"/Schema Valid/A.1.0-roundtrip.bpmn");
@@ -105,10 +101,8 @@ public class XSDTest {
 	public void testOutputPOJOs() {
 		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
 		InputStream actualBpmnXml = null;
-		AnalysisJob job = new AnalysisJob();
-		job.FullApplicationName = "Custom";
-		job.MIWGTestCase = "A.1.0";
-		job.Variant = MIWGVariant.Roundtrip;
+		AnalysisJob job = new AnalysisJob("Custom", "A.1.0", MIWGVariant.Roundtrip, null, null);
+
 		try {
 			actualBpmnXml = getClass().getResourceAsStream(
 					"/Schema Valid/A.1.0-roundtrip.bpmn");

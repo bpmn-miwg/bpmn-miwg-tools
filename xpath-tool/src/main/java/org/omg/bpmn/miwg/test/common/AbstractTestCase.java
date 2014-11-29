@@ -68,9 +68,7 @@ public abstract class AbstractTestCase {
 	public void testXpath() throws Exception {
 		XPathAnalysisTool tool = new XPathAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob();
-		job.FullApplicationName = param.application.toString();
-		job.MIWGTestCase = param.testResult.name;
+		AnalysisJob job = new AnalysisJob(param.application.toString(), param.testResult.name, null, null, null);
 
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		Document bpmnXmlDOM = DOMFactory.getDocument(bpmnXmlStream);
@@ -92,9 +90,7 @@ public abstract class AbstractTestCase {
 	public void testSchema() throws Exception {
 		XSDAnalysisTool tool = new XSDAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob();
-		job.FullApplicationName = param.application.toString();
-		job.MIWGTestCase = param.testResult.name;
+		AnalysisJob job = new AnalysisJob(param.application.toString(), param.testResult.name, null, null, null);
 
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		AnalysisResult result = null;
