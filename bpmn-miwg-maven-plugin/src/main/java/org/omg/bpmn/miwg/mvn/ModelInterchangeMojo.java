@@ -26,17 +26,12 @@ package org.omg.bpmn.miwg.mvn;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.io.FileInputStream;
 import java.io.FilenameFilter;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -51,20 +46,10 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.TestResults;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.MIWGVariant;
-import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
+import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.input.BpmnFileFilter;
 import org.omg.bpmn.miwg.input.DirFilter;
-import org.omg.bpmn.miwg.util.DOMFactory;
-import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
-import org.omg.bpmn.miwg.xmlCompare.Variant;
-import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
-import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
-import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 
 import edu.emory.mathcs.backport.java.util.Collections;
 
@@ -76,12 +61,6 @@ public class ModelInterchangeMojo extends AbstractMojo {
 	protected static final String SUITE_B_PATH = "/";
 
 	protected static final String SUITE_A_PATH = "/";
-
-	private static final String XML_COMPARE_TOOL_ID = "xml-compare";
-
-	private static final String XPATH_TOOL_ID = "xpath";
-
-	private static final String XSD_TOOL_ID = "xsd";
 
 	/**
 	 * Project instance, needed for attaching the buildinfo file. Used to add
@@ -115,8 +94,8 @@ public class ModelInterchangeMojo extends AbstractMojo {
 	protected FilenameFilter bpmnFileFilter = new BpmnFileFilter();
 
 	protected FileFilter dirFilter = new DirFilter();
-
-	private static Map<String, ATTIC.FileResult> testsRun = new HashMap<String, ATTIC.FileResult>();
+	
+	private Collection<AnalysisRun> analysisRuns;
 
 	public void execute() throws MojoExecutionException {
 		getLog().info("Running BPMN-MIWG test suite...");
@@ -124,87 +103,40 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		if (!outputDirectory.exists()) {
 			outputDirectory.mkdirs();
 		}
-		
+
 		AnalysisFacade analysisFacade = new AnalysisFacade(outputDirectory);
 		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
-		
-		for (String app : getApplications()) {
-			getLog().info("Running test suite for " + app);
-			if (resources != null && !resources.isEmpty()) {
-				for (Resource r : resources) {
-					File dir = new File(r.getDirectory());
-					List<File> bpmnFiles = new ArrayList<File>();
+		try {
+			for (String app : getApplications()) {
+				getLog().info("Running test suite for " + app);
+				if (resources != null && !resources.isEmpty()) {
+					for (Resource r : resources) {
+						File dir = new File(r.getDirectory());
+						List<File> bpmnFiles = new ArrayList<File>();
 
-					getLog().debug(
-							"Scanning for BPMN files in " + r.getDirectory());
-					scanForBpmn(dir, bpmnFiles, app);
+						getLog().debug(
+								"Scanning for BPMN files in "
+										+ r.getDirectory());
+						scanForBpmn(dir, bpmnFiles, app);
 
-					
-					/*jobs.add(new AnalysisJob("HTML Output Test 1", "A.1.0",
-							MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
-									BPMN_RESOURCE), new ResourceAnalysisInput(getClass(),
-									BPMN_RESOURCE_REFERENCE)));
-					*/
-					
-					for (File b : bpmnFiles) {
-						String testName = inferTestName(b);
-						InputStream refStream = findReference(testName, b);
-						if (refStream != null) {
+						for (File b : bpmnFiles) {
+							AnalysisJob job;
 
-							AnalysisJob job = new AnalysisJob(app, testName, inferVariant2(b), null, null);
+							job = new AnalysisJob(b.getCanonicalPath());
 
-							AnalysisResult analysisResult = null;
-
-							XsdAnalysisTool xsdTool = new XsdAnalysisTool();
-							try {
-								analysisResult = xsdTool.analyzeStream(job, null,
-										new FileInputStream(b), null);
-                                File fldr = new File(new File(outputDirectory,
-                                        xsdTool.getName()),
-                                        job.getFullApplicationName());
-                                fldr.mkdirs();
-                                HTMLAnalysisOutputWriter.writeAnalysisResults(fldr, job,
-                                        xsdTool, analysisResult);
-							} catch (Exception e) {
-								getLog().error(e);
-							}
-
-							XPathAnalysisTool xpathTool = new XPathAnalysisTool();
-							try {
-								analysisResult = xpathTool.analyzeDOM(job,
-										null, DOMFactory.getDocument(b), null);
-                                File fldr = new File(new File(outputDirectory,
-                                        xpathTool.getName()),
-                                        job.getFullApplicationName());
-                                fldr.mkdirs();
-                                HTMLAnalysisOutputWriter.writeAnalysisResults(fldr, job,
-                                        xpathTool, analysisResult);
-							} catch (Exception e) {
-								getLog().error(e);
-							}
-
-							refStream = findReference(testName, b);
-							XmlCompareAnalysisTool compareTool = new XmlCompareAnalysisTool();
-							try {
-								analysisResult = compareTool
-										.analyzeDOM(job, DOMFactory.getDocument(refStream),
-												DOMFactory.getDocument(b), null);
-                                File fldr = new File(new File(outputDirectory,
-                                        compareTool.getName()),
-                                        job.getFullApplicationName());
-                                fldr.mkdirs();
-                                HTMLAnalysisOutputWriter.writeAnalysisResults(fldr, job,
-                                        compareTool, analysisResult);
-							} catch (Exception e) {
-								getLog().error(e);
-							}
+							jobs.add(job);
 						}
 					}
 				}
 			}
+
+			analysisRuns = analysisFacade.executeAnalysisJobs(jobs);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	protected List<String> getApplications() {
 		if (application == null) {
 			JsonReader jsonReader = Json.createReader(getClass()
@@ -232,125 +164,6 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		}
 	}
 
-	/**
-	 * 
-	 * @param b
-	 *            BPMN file.
-	 * @return The BPMN-MIWG test this file is a submission for based on naming
-	 *         convention. For example the export results file for the A.1.0
-	 *         test will be called A.1.0-export.bpmn.
-	 */
-	protected String inferTestName(File b) {
-		return b.getName()
-				.substring(0, b.getName().toLowerCase().indexOf(".bpmn"))
-				.replace("-export", "").replace("-roundtrip", "");
-	}
-
-	/**
-	 * 
-	 * @param testName
-	 *            Test name in the form Suite.Test.Variation, for example A.1.0.
-	 * @param b
-	 *            The vendor BPMN file to compare to the reference.
-	 * @return Stream of the reference file.
-	 */
-	protected InputStream findReference(String testName, File b) {
-		getLog().info("Checking for reference file to match: " + b);
-		StringBuilder ref = new StringBuilder();
-		String refDir = inferSuitePath(b) + "Reference/";
-		ref.append(refDir).append(testName).append(".bpmn");
-		getLog().info("... seeking resource: " + ref.toString());
-		InputStream refStream = getClass().getResourceAsStream(ref.toString());
-		getLog().info("... found? " + (refStream != null));
-		return refStream;
-	}
-
-	protected String inferSuitePath(File b) {
-		if (b.getName().startsWith("A")) {
-			return SUITE_A_PATH;
-		} else if (b.getName().startsWith("B")) {
-			return SUITE_B_PATH;
-		} else {
-			getLog().warn("File is not part of the BPMN MIWG test suite: " + b);
-			return "";
-		}
-	}
-
-	protected void writeTestResult(AnalysisResult analysisResult,
-			String analysisToolName, AnalysisJob job, String toolPath,
-			File bpmnFile) {
-
-		final TestResults results = new TestResults();
-
-		String app = job.getFullApplicationName();
-		String testName = job.getMIWGTestCase();
-		String variant = job.getVariant().toString().toLowerCase();
-
-		final File f = new File(new File(new File(outputDirectory,
-				analysisToolName), app), app + "-" + testName + "-" + variant
-				+ ".html");
-
-		try {
-			String testFile = toolPath + File.separator + app + File.separator
-					+ bpmnFile.getName();
-
-			results.addTool(app).addTest(testName, variant);
-
-			getLog().debug("writing test report to: " + f.getAbsolutePath());
-			results.writeResultFile(f);
-
-			String resultKey = app + "-" + testName + "-" + variant;
-			FileResult result = (FileResult) testsRun.get(resultKey);
-			if (result == null) {
-				getLog().debug(
-						String.format(
-								"Cannot find result for '%1$s %2$s' in %3$s, adding...",
-								app, testName, testsRun));
-
-				result = new FileResult(resultKey, analysisResult);
-				testsRun.put(resultKey, result);
-			} else {
-				result.setAnalysisResult(analysisResult);
-			}
-		} catch (Exception e) {
-			getLog().error(e.getMessage());
-			try {
-				results.writeResultFile(f);
-			} catch (IOException e1) {
-				getLog().error(e1);
-			}
-		}
-
-	}
-
-	protected MIWGVariant inferVariant2(File b) {
-		MIWGVariant variant = null;
-		if (b.getName().contains(Variant.roundtrip.toString())) {
-			variant = MIWGVariant.Roundtrip;
-		} else if (b.getName().contains(Variant.export.toString())) {
-			variant = MIWGVariant.Export;
-		} else {
-			getLog().error(
-					"Looks like this BPMN does not have the expected naming convention: "
-							+ b);
-		}
-		return variant;
-	}
-
-	protected Variant inferVariant(final File b) {
-		Variant variant = null;
-		if (b.getName().contains(Variant.roundtrip.toString())) {
-			variant = Variant.roundtrip;
-		} else if (b.getName().contains(Variant.export.toString())) {
-			variant = Variant.export;
-		} else {
-			getLog().error(
-					"Looks like this BPMN does not have the expected naming convention: "
-							+ b);
-		}
-		return variant;
-	}
-
 	protected void scanForBpmn(final File dir, final List<File> bpmnFiles) {
 		// first search for bpmn files in this dir...
 		bpmnFiles.addAll(Arrays.asList(dir.listFiles(bpmnFileFilter)));
@@ -376,39 +189,8 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		}
 	}
 
-	protected class FileResult implements
-			ATTIC.FileResult {
-
-		protected String name;
-		protected AnalysisResult result;
-
-		public FileResult(String name, AnalysisResult result) {
-			this.name = name;
-			this.result = result;
-		}
-
-		public void setAnalysisResult(AnalysisResult result) {
-			Collection<? extends Output> tmp = new ArrayList<Output>();
-			Collections.addAll(tmp, this.result.output.toArray());
-			Collections.addAll(tmp, result.output.toArray());
-			this.result.output = tmp;
-			this.result.numFindings += result.numFindings;
-			this.result.numOK += result.numOK;
-		}
-
-		public String buildHtml() {
-			StringBuilder builder = new StringBuilder();
-
-			builder.append("\t<div class=\"test\" data-diffs=\""
-					+ result.output.size() + "\" data-findings=\""
-					+ result.numFindings + "\" data-name=\"" + name
-					+ "\" data-ok=\"" + result.numOK + "\">");
-			builder.append("<a href=\"" + name + ".html\">" + name + "</a>");
-			builder.append("</div>\n");
-
-			return builder.toString();
-		}
-
+	public Collection<AnalysisRun> getAnalysisRuns() {
+		return analysisRuns;
 	}
 
 }

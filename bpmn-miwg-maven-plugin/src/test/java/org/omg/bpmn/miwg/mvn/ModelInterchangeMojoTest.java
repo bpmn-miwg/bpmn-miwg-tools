@@ -1,14 +1,11 @@
 package org.omg.bpmn.miwg.mvn;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -21,12 +18,7 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.maven.model.Resource;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisRun;
-import org.omg.bpmn.miwg.api.MIWGVariant;
-import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
 import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
-import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -50,10 +42,10 @@ public class ModelInterchangeMojoTest {
     @BeforeClass
     public static void setUpClass() throws Exception {
         mojo = new ModelInterchangeMojo();
-        mojo.outputDirectory = new File("target");
+        mojo.outputDirectory = new File("test-temp");
         mojo.resources = new ArrayList<Resource>();
 
-        overview = new File(mojo.outputDirectory, "overview.html");
+        overview = HTMLAnalysisOutputWriter.getOverviewFile(mojo.outputDirectory);
 
         docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 
@@ -65,11 +57,10 @@ public class ModelInterchangeMojoTest {
     @Test
     public void testScanResourcesForAllBpmnFiles() {
         List<File> bpmnFiles = new ArrayList<File>();
-        File dir = new File("src" + File.separator + "test" + File.separator
-                + "resources");
+        File dir = new File("src/test/resources");
         mojo.scanForBpmn(dir, bpmnFiles);
-        // 13 = the total number of BPMN files in src/test/resources
-        assertEquals(13, bpmnFiles.size());
+        // 15 = the total number of BPMN files in src/test/resources
+        assertEquals(15, bpmnFiles.size());
     }
 
     @Test
@@ -85,8 +76,7 @@ public class ModelInterchangeMojoTest {
     public void testMojo() {
         try {
             Resource res = new Resource();
-            res.setDirectory("src" + File.separator + "test" + File.separator
-                    + "resources" + File.separator);
+            res.setDirectory("src/test/resources");
             mojo.resources.add(res);
             mojo.execute();
 
@@ -106,8 +96,7 @@ public class ModelInterchangeMojoTest {
     public void testMojoHandlingSchemaInvalidBpmn() {
         try {
             Resource res = new Resource();
-            res.setDirectory("src" + File.separator + "test" + File.separator
-                    + "invalid-resources" + File.separator);
+            res.setDirectory("src/test/invalid-resources");
             mojo.resources.add(res);
             mojo.execute();
 
@@ -116,81 +105,16 @@ public class ModelInterchangeMojoTest {
             NodeList nodes = (NodeList) testOverviewExpr.evaluate(document,
                     XPathConstants.NODESET);
 
-            Node invalidNode = findSchemaInvalidResultsNode(nodes);
-
+            Node invalidNode = nodes.item(0);
+            
             // There should be 2 findings: an invalid element and an invalid
             // attribute
             assertEquals("2", invalidNode.getAttributes()
-                    .getNamedItem("data-findings").getNodeValue());
+                    .getNamedItem("xsd-finding").getNodeValue());
         } catch (Exception e) {
             e.printStackTrace();
             fail(e.getClass() + ":" + e.getMessage());
         }
-    }
-
-    private Node findSchemaInvalidResultsNode(NodeList nodes) {
-        Node yaoqiangNode = null;
-        for (int i = 0; i < nodes.getLength(); i++) {
-            Node node = nodes.item(i);
-            if (((Attr) node.getAttributes().getNamedItem("data-name"))
-                    .getValue().startsWith(YAOQIANG_2_MODELER_ID)) {
-                yaoqiangNode = node;
-            }
-        }
-        assertNotNull("Cannot find results for invalid BPMN file",
-                yaoqiangNode);
-        return yaoqiangNode;
-    }
-
-    /*@Test 
-    public void testSingleSchemaInvalidBpmnFile() throws Exception {
-        final String testName = "A.1.0";
-        XSDAnalysisTool xsdTool = new XSDAnalysisTool();
-        String baseDir = "src" + File.separator + "test" + File.separator
-                + "invalid-resources";
-        mojo.runTestTool(xsdTool,
-                YAOQIANG_2_MODELER_ID,
-                testName,
-                baseDir,
-                new File(new File(baseDir, YAOQIANG_2_MODELER_ID), testName
-                        + "-roundtrip.bpmn"),
-                (InputStream) null);
-
-        assertTrue(overview.exists());
-        Document document = docBuilder.parse(overview);
-        NodeList nodes = (NodeList) testOverviewExpr.evaluate(document,
-                XPathConstants.NODESET);
-
-        Node invalidNode = findSchemaInvalidResultsNode(nodes);
-
-        // There should be 2 findings: an invalid element and an invalid
-        // attribute
-        assertEquals("2",
-                invalidNode.getAttributes().getNamedItem("data-findings")
-                .getNodeValue());
-    }*/
-    
-    @Test
-    public void testInferTestNames() {
-        assertEquals("A.1.0",
-                mojo.inferTestName(new File("A.1.0-export.bpmn")));
-        assertEquals("B.1.0",
-                mojo.inferTestName(new File("B.1.0-export.bpmn")));
-        assertEquals("A.1.0", mojo.inferTestName(new File(W4_MODELER_ID,
-                "A.1.0-export.bpmn")));
-        assertEquals(
-                "A.1.0",
-                mojo.inferTestName(new File(ModelInterchangeMojo.SUITE_A_PATH
-                        + File.separator + W4_MODELER_ID, "A.1.0-export.bpmn")));
-    }
-
-    @Test
-    public void testFindReference() {
-        File b = new File("A.1.0-export.bpmn");
-        assertNotNull(mojo.findReference("A.1.0", b));
-        b = new File("src" + File.separator + "test" + File.separator
-                + "resources" + File.separator + "A.1.0-export.bpmn");
-        assertNotNull(mojo.findReference("A.1.0", b));
     }
 
     @Test

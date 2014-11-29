@@ -25,33 +25,33 @@ public class AnalysisRun {
 			throws UnsupportedEncodingException {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("<div class=\"analysisRun\"");
+		sb.append("<div class=\"test\" ");
 
 		for (AnalysisTool tool : results.keySet()) {
 			AnalysisResult result = results.get(tool);
 			assert result != null;
 
-			sb.append(" " + tool.getName() + "-ok=\"" + result.numOK + "\" ");
-			sb.append(" " + tool.getName() + "-finding=\"" + result.numFindings
+			sb.append(tool.getName() + "-ok=\"" + result.numOK + "\" ");
+			sb.append(tool.getName() + "-finding=\"" + result.numFindings
 					+ "\" ");
 		}
 
-		sb.append(">");
+		sb.append(">\n");
 		
-		sb.append("<ul>");
+		sb.append("<ul>\n");
 
 		for (AnalysisTool tool : results.keySet()) {
 			AnalysisResult result = results.get(tool);
 			assert result != null;
 
-			sb.append("<li>\n");
+			sb.append("<li>");
 			sb.append("<a href=\"" + result.getHTMLResultsLink(job) + "\">");
 			sb.append(result.getResultsFileName(job));
 			sb.append("</a>");
 			sb.append("</li>\n");
 		}
 
-		sb.append("</ul>");
+		sb.append("</ul>\n");
 		
 		
 		sb.append("</div>\n");
