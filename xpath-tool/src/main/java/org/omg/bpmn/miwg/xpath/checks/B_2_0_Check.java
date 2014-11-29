@@ -229,7 +229,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 					navigateFollowingElement("bpmn:task", "Task 18");
 
 					navigateFollowingElement("bpmn:intermediateThrowEvent",
-							null);
+							"");
 					checkEscalationEvent();
 
 					navigateFollowingElement("bpmn:task", "Task 23");
