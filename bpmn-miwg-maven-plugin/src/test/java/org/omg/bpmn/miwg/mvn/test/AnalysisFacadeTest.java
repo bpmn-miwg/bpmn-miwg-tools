@@ -18,7 +18,7 @@ import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.util.TestUtil;
 import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 
-public class AnalysisFaccadeTest {
+public class AnalysisFacadeTest {
 
 	private static final String BPMN_RESOURCE = "/HTMLOutputTest/A.1.0-roundtrip.bpmn";
 
