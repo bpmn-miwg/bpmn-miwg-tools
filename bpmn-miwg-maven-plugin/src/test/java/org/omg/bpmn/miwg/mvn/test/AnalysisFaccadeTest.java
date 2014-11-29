@@ -48,12 +48,12 @@ public class AnalysisFaccadeTest {
 	@Test
 	public void testMultipleToolOutputs() throws Exception {
 		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
-		jobs.add(new AnalysisJob("HTML Output Test", "A.1.0",
+		jobs.add(new AnalysisJob("HTML Output Test 1", "A.1.0",
 				MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
 						BPMN_RESOURCE), new ResourceAnalysisInput(getClass(),
 						BPMN_RESOURCE_REFERENCE)));
 
-		jobs.add(new AnalysisJob("HTML Output Test", "A.1.0",
+		jobs.add(new AnalysisJob("HTML Output Test 2", "A.1.0",
 				MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
 						BPMN_RESOURCE_REFERENCE), new ResourceAnalysisInput(
 						getClass(), BPMN_RESOURCE_REFERENCE)));
