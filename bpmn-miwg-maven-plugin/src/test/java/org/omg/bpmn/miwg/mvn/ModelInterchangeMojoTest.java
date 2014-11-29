@@ -17,7 +17,6 @@ import javax.xml.xpath.XPathFactory;
 
 import org.apache.maven.model.Resource;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.util.TestUtil;
@@ -42,12 +41,9 @@ public class ModelInterchangeMojoTest {
 	private static DocumentBuilder docBuilder;
 
 	@Before
-	public void cleanGeneratedHTMLFiles() {
+	public void setUp() throws Exception {
 		TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_FOLDER);
-	}
-
-	@BeforeClass
-	public static void setUpClass() throws Exception {
+		
 		mojo = new ModelInterchangeMojo();
 		mojo.outputDirectory = new File(TestUtil.REPORT_FOLDER);
 		mojo.resources = new ArrayList<Resource>();
