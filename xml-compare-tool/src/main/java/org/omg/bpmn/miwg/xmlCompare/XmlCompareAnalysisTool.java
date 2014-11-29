@@ -26,8 +26,6 @@
 package org.omg.bpmn.miwg.xmlCompare;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -38,20 +36,15 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.apache.commons.io.FileUtils;
 import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.NodeDetail;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.Detail;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.DetailedOutput;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.Test;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.TestResults;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
-import org.omg.bpmn.miwg.input.BpmnFileFilter;
-import org.omg.bpmn.miwg.output.Detail;
-import org.omg.bpmn.miwg.output.DetailedOutput;
 import org.omg.bpmn.miwg.xmlCompare.bpmn2_0.comparison.Bpmn20ConformanceChecker;
 import org.omg.bpmn.miwg.xmlCompare.bpmn2_0.comparison.Bpmn20DiffConfiguration;
 import org.omg.bpmn.miwg.xmlCompare.configuration.BpmnCompareConfiguration;
@@ -65,44 +58,8 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 
 	public static final String NAME = "compare";
 	
-	private static final String FILE_EXTENSION = "bpmn";
 	private static Bpmn20ConformanceChecker checker;
-	private static FilenameFilter bpmnFileFilter = new BpmnFileFilter();
 
-	/**
-	 * First argument path to folder containing the reference bpmn xml files
-	 * Second argument path to folder containing the bpmn files to compare with
-	 * 
-	 * @param args
-	 * @throws ParserConfigurationException
-	 * @throws IOException
-	 * @throws SAXException
-	 * 
-	 */
-	public static void main(String[] args) throws Exception {
-
-		System.out.println("Running BPMN 2.0 XML Compare Test...");
-		String result = runXmlCompareTest(args[0], args[1],
-				Variant.valueOf(args[2]), null);
-
-		if (args.length > 3) {
-			File outputFile = new File(args[3]);
-			FileUtils.writeStringToFile(outputFile, result);
-			System.out.println("Output printed to: \n"
-					+ outputFile.getAbsolutePath());
-		} else {
-			System.out.println(result);
-		}
-
-		System.out.println("Finished BPMN 2.0 XML Compare Test");
-	}
-
-	public static String runXmlCompareTest(String refFolderPath,
-			String testFolderPath, Variant variant, File reportFolder)
-			throws Exception {
-		return runXmlCompareTest(refFolderPath, testFolderPath, variant, null,
-				reportFolder);
-	}
 
 	protected static Document getDocument(InputStream inputStream)
 			throws SAXException, ParserConfigurationException, IOException {
@@ -111,84 +68,6 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse(inputStream);
 		return document;
-	}
-
-	/**
-	 * Performs the BPMN 2.0 XML Compare test and prints out the resulting XML
-	 * structure
-	 * 
-	 * @param referenceFolderPath
-	 *            Path to the folder containing the reference files
-	 * @param testFolderPath
-	 *            Path to the folder containing the test file of a specific tool
-	 * @param variant
-	 *            Test variant either export or roundtrip
-	 * @param confName
-	 *            configuration of what differences to ignore (denote same
-	 *            semantic)
-	 * 
-	 * @return Outputs the XML structure
-	 * @throws ParserConfigurationException
-	 * @throws IOException
-	 * @throws SAXException
-	 */
-	public static String runXmlCompareTest(String refFolderPath,
-			String testFolderPath, Variant variant, String confName,
-			File reportFolder) throws Exception {
-		File refFolder = new File(refFolderPath);
-		File testFolder = new File(testFolderPath);
-
-		if (!refFolder.isDirectory() || !testFolder.isDirectory()) {
-			throw new IllegalArgumentException("Invalid path to folder");
-		}
-		XmlCompareAnalysisTool runnner = new XmlCompareAnalysisTool();
-		initChecker(confName);
-
-		TestResults results = new TestResults();
-
-		for (File bpmnFile : refFolder.listFiles(bpmnFileFilter)) {
-			File compareFile = getCompareFile(bpmnFile, testFolder, variant);
-			if (compareFile.exists()) {
-				// Building test output structure
-				FileInputStream bpmnStream = null;
-				FileInputStream compareStream = null;
-				try {
-					bpmnStream = new FileInputStream(bpmnFile);
-					compareStream = new FileInputStream(compareFile);
-					Test test = results.addTool(testFolder.getName()).addTest(
-							bpmnFile.getName(), variant.name());
-
-					Document bpmnDoc = getDocument(bpmnStream);
-					Document compareDoc = getDocument(compareStream);
-
-					AnalysisJob job = new AnalysisJob(testFolder.getName(),
-							bpmnFile.getName(), MIWGVariant.Undefined, null, null);
-
-					test.addAll(runnner.analyzeDOM(job, bpmnDoc, compareDoc,
-							reportFolder).output);
-				} finally {
-					try {
-						bpmnStream.close();
-					} catch (Exception e) {
-						;
-					}
-					try {
-						compareStream.close();
-					} catch (Exception e) {
-						;
-					}
-				}
-			} else {
-				results.addTool(testFolder.getName())
-						.addTest(bpmnFile.getName(), variant.name())
-						.addOutput(
-								OutputType.info,
-								"Missing reference file: "
-										+ compareFile.getCanonicalPath());
-			}
-		}
-
-		return results.toString();
 	}
 
 	private static void initChecker(String confName) throws JsonParseException,
@@ -228,15 +107,6 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 		d.setType(type);
 		d.setXpath(detail.getXpathLocation());
 		return d;
-	}
-
-	private static File getCompareFile(File refFile, File testFolder,
-			Variant variant) {
-		int i = refFile.getName().lastIndexOf(".");
-		String fName = refFile.getName().substring(0, i) + "-"
-				+ variant.toString() + "." + FILE_EXTENSION;
-
-		return new File(testFolder, fName);
 	}
 
 	@Override

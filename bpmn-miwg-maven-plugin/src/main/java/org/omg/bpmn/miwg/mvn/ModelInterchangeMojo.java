@@ -48,8 +48,8 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisRun;
-import org.omg.bpmn.miwg.input.BpmnFileFilter;
-import org.omg.bpmn.miwg.input.DirFilter;
+import org.omg.bpmn.miwg.mvn.filter.BpmnFileFilter;
+import org.omg.bpmn.miwg.mvn.filter.DirFilter;
 
 import edu.emory.mathcs.backport.java.util.Collections;
 

@@ -7,11 +7,11 @@ import java.io.InputStream;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.DetailedOutput;
 import org.omg.bpmn.miwg.common.testEntries.AbstractCheckEntry;
 import org.omg.bpmn.miwg.common.testEntries.FindingAssertionEntry;
 import org.omg.bpmn.miwg.common.testEntries.InfoEntry;
 import org.omg.bpmn.miwg.common.testEntries.OKAssertionEntry;
-import org.omg.bpmn.miwg.output.DetailedOutput;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 import org.w3c.dom.Document;
 

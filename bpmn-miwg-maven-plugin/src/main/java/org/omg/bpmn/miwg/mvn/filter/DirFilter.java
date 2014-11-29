@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.input;
+package org.omg.bpmn.miwg.mvn.filter;
 
 import java.io.File;
 import java.io.FileFilter;

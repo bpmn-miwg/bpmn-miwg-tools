@@ -2,7 +2,6 @@ package org.omg.bpmn.miwg;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.File;
@@ -12,11 +11,9 @@ import java.util.Collection;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.TestResults;
-import org.omg.bpmn.miwg.xmlCompare.Variant;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.w3c.dom.Document;
 
@@ -25,30 +22,6 @@ public class XMLCompareTest {
     private static final String TOOL_ID = "Yaoqiang BPMN Editor 2.2.18";
     private static final String TEST_ID = "A.1.0";
     private static final String VARIANT = "roundtrip";
-
-    @Test
-    public void testFolderInput() {
-        String refFolderPath = "target" + File.separator + "test-suite"
-                + File.separator + "Reference";
-        String testFolderPath = "target" + File.separator + "test-suite"
-                + File.separator + TOOL_ID;
-        try {
-            String results = XmlCompareAnalysisTool.runXmlCompareTest(refFolderPath,
-                    testFolderPath,
-                    Variant.roundtrip, null);
-            assertTrue(results.contains("data-test=\"A.1.0.bpmn\""));
-            assertTrue(results.contains("data-test=\"A.2.0.bpmn\""));
-            assertTrue(results.contains("data-test=\"A.3.0.bpmn\""));
-            assertTrue(results.contains("data-test=\"A.4.0.bpmn\""));
-            assertTrue(results.contains("data-test=\"B.1.0.bpmn\""));
-            assertTrue(results.contains("data-test=\"B.2.0.bpmn\""));
-            FileUtils.writeStringToFile(new File("target",
-                    "testFolderInput.testOutput.html"), results);
-        } catch (Exception e) {
-            e.printStackTrace();
-            fail(e.getClass() + ":" + e.getMessage());
-        }
-    }
 
     @Test
     public void testDomInputs() {
