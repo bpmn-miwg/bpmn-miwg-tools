@@ -88,14 +88,29 @@ public class AnalysisFacadeTest {
 
 	}
 
+    @Test
+    public void testMultipleFilesFromOneApplication() throws Exception {
+          Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
+          jobs.add(new AnalysisJob(
+                        "src/test/resources/W4 BPMN+ Composer V.9.0/A.1.0-roundtrip.bpmn"));
+          jobs.add(new AnalysisJob(
+                        "src/test/resources/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"));
+
+          AnalysisFacade facade = new AnalysisFacade(new File(
+                        TestUtil.REPORT_FOLDER));
+          facade.executeAnalysisJobs(jobs);
+    }
+
+	
 	@Test
-	public void testMultipleFiles() throws Exception {
+	public void testMultipleFilesFromTwoApplications() throws Exception {
 		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
 		jobs.add(new AnalysisJob(
 				"src/test/resources/W4 BPMN+ Composer V.9.0/A.1.0-roundtrip.bpmn"));
 		jobs.add(new AnalysisJob(
 				"src/test/resources/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"));
-
+		jobs.add(new AnalysisJob("src/test/resources/bpmn.io 0.5.0/B.2.0-roundtrip.bpmn"));
+		
 		AnalysisFacade facade = new AnalysisFacade(new File(
 				TestUtil.REPORT_FOLDER));
 		facade.executeAnalysisJobs(jobs);
