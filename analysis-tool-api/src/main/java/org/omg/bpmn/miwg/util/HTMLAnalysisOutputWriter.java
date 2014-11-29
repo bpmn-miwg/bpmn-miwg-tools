@@ -18,16 +18,16 @@ import org.simpleframework.xml.core.Persister;
 
 public class HTMLAnalysisOutputWriter {
 
-	public static File getAnalysisResultsFile(File folder,
+	public static File getAnalysisResultsFile(File rootFolder,
 			AnalysisJob job) {
-		return new File(folder, job.getName() + ".html");
+		return new File(rootFolder, job.getName() + ".html");
 	}
 
-	public static File getOverviewFile(File folder) {
-		return new File(folder, "overview.html");
+	public static File getOverviewFile(File rootFolder) {
+		return new File(rootFolder, "overview.html");
 	}
 
-	public static void writeAnalysisResults(File folder,
+	public static void writeAnalysisResults(File rootFolder,
 			AnalysisJob job, AnalysisTool tool, AnalysisResult result)
 			throws Exception {
 		PrintWriter htmlOutputWriter = null;
@@ -55,7 +55,7 @@ public class HTMLAnalysisOutputWriter {
 					outputString);
 
 			htmlOutputWriter = new PrintWriter(getAnalysisResultsFile(
-					folder, job));
+					rootFolder, job));
 
 			htmlOutputWriter.println(completeString);
 		} finally {
