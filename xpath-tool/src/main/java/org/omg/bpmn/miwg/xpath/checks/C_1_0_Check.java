@@ -33,12 +33,10 @@ public class C_1_0_Check extends AbstractXpathCheck {
 
 				navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Approver to be assigned");
-				checkMessageFlow("", Direction.Input, "bpmn:userTask",
-						"Assign Approver");
+				//checkMessageFlow("", Direction.Input, "bpmn:userTask", "Assign Approver");
 
 				navigateFollowingElement("bpmn:task", "Assign approver");
-				checkMessageFlow("", Direction.Output, "bpmn:userTask",
-						"Assign Approver");
+				//checkMessageFlow("", Direction.Output, "bpmn:userTask", "Assign Approver");
 
 				{
 
@@ -53,8 +51,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 
 					navigateElement(n1);
 
-					navigateFollowingElement("bpmn:intermediateCatchEvent",
-							"Invoice review needed");
+					navigateFollowingElement("bpmn:intermediateCatchEvent",	"Invoice review needed");
 					checkMessageEvent();
 
 					navigateElement("bpmn:task", "Review and document result");
@@ -77,15 +74,11 @@ public class C_1_0_Check extends AbstractXpathCheck {
 
 				navigateElement("bpmn:startEvent", "Invoice received");
 				checkMessageEvent();
-				checkMessageFlow("", Direction.Input, "bpmn:task",
-						"Scan camunda-invoice-en");
+				checkMessageFlow("", Direction.Input, "bpmn:task", "Scan camunda-invoice-en");
 
 				navigateFollowingElement("bpmn:userTask", "Assign Approver");
-				checkMessageFlow("", Direction.Output,
-						"bpmn:intermediateCatchEvent",
-						"Approver to be assigned");
-				checkMessageFlow("", Direction.Input, "bpmn:task",
-						"Assign approver");
+				//checkMessageFlow("", Direction.Output,	"bpmn:intermediateCatchEvent",	"Approver to be assigned");
+				//checkMessageFlow("", Direction.Input, "bpmn:task", "Assign approver");
 
 				navigateFollowingElement("bpmn:userTask", "Approve Invoice");
 
@@ -94,11 +87,8 @@ public class C_1_0_Check extends AbstractXpathCheck {
 
 				{
 					navigateFollowingElement("bpmn:userTask", "Rechnung klären", "no");
-					checkMessageFlow("", Direction.Output,
-							"bpmn:intermediateCatchEvent",
-							"Invoice review needed");
-					checkMessageFlow("", Direction.Input, "bpmn:task",
-							"Review and document result");
+					//checkMessageFlow("", Direction.Output, "bpmn:intermediateCatchEvent", "Invoice review needed");
+					//checkMessageFlow("", Direction.Input, "bpmn:task", "Review and document result");
 
 					Node n2 = navigateFollowingElement("bpmn:exclusiveGateway",
 							"Review successful?");
