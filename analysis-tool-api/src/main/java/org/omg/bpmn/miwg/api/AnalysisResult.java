@@ -51,9 +51,9 @@ public class AnalysisResult {
 		return analysisTool;
 	}
 
-	private String getResultsFileName(AnalysisJob job)
+	public String getResultsFileName(AnalysisJob job)
 			throws UnsupportedEncodingException {
-		String fileName = analysisTool.getName() + "-" + job.getName()
+		String fileName = job.getName() + "-"+ analysisTool.getName()
 				+ ".html";
 		fileName = URLEncoder.encode(fileName, "UTF-8");
 		return fileName;

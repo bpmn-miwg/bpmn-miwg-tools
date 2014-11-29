@@ -37,16 +37,23 @@ public class AnalysisRun {
 		}
 
 		sb.append(">");
+		
+		sb.append("<ul>");
 
 		for (AnalysisTool tool : results.keySet()) {
 			AnalysisResult result = results.get(tool);
 			assert result != null;
 
+			sb.append("<li>\n");
 			sb.append("<a href=\"" + result.getHTMLResultsLink(job) + "\">");
-			sb.append(tool.getName() + "-" + job.getName());
+			sb.append(result.getResultsFileName(job));
 			sb.append("</a>");
+			sb.append("</li>\n");
 		}
 
+		sb.append("</ul>");
+		
+		
 		sb.append("</div>\n");
 
 		String html = sb.toString();
