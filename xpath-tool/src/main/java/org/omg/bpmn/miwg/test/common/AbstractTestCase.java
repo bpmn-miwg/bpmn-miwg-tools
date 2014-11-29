@@ -39,7 +39,7 @@ import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
-import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
+import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 import org.w3c.dom.Document;
 
 @RunWith(Parameterized.class)
@@ -88,7 +88,7 @@ public abstract class AbstractTestCase {
 
 	@Test
 	public void testSchema() throws Exception {
-		XSDAnalysisTool tool = new XSDAnalysisTool();
+		XsdAnalysisTool tool = new XsdAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob(param.application.toString(), param.testResult.name, null, null, null);
 

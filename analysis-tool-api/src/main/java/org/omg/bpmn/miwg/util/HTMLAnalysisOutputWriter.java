@@ -18,18 +18,12 @@ import org.simpleframework.xml.core.Persister;
 
 public class HTMLAnalysisOutputWriter {
 
-	public static File getAnalysisResultsFile(File rootFolder,
-			AnalysisJob job) {
-		return new File(rootFolder, job.getName() + ".html");
-	}
-
 	public static File getOverviewFile(File rootFolder) {
 		return new File(rootFolder, "overview.html");
 	}
 
-	public static void writeAnalysisResults(File rootFolder,
-			AnalysisJob job, AnalysisTool tool, AnalysisResult result)
-			throws Exception {
+	public static void writeAnalysisResults(File rootFolder, AnalysisJob job,
+			AnalysisTool tool, AnalysisResult result) throws Exception {
 		PrintWriter htmlOutputWriter = null;
 		InputStream templateStream = null;
 		Scanner scanner = null;
@@ -54,9 +48,7 @@ public class HTMLAnalysisOutputWriter {
 			String completeString = template.replace("{ANALYSISRESULTS}",
 					outputString);
 
-			htmlOutputWriter = new PrintWriter(getAnalysisResultsFile(
-					rootFolder, job));
-
+			htmlOutputWriter = new PrintWriter(result.getHTMLResultsFile(rootFolder, job));
 			htmlOutputWriter.println(completeString);
 		} finally {
 			try {
@@ -73,8 +65,8 @@ public class HTMLAnalysisOutputWriter {
 		}
 	}
 
-	public static void writeOverview(File folder,
-			Collection<AnalysisRun> runs) throws Exception {
+	public static void writeOverview(File folder, Collection<AnalysisRun> runs)
+			throws Exception {
 		PrintWriter htmlOutputWriter = null;
 		InputStream templateStream = null;
 		Scanner scanner = null;
@@ -88,18 +80,16 @@ public class HTMLAnalysisOutputWriter {
 
 			StringBuilder sb = new StringBuilder();
 
-			
 			for (AnalysisRun run : runs) {
 				sb.append(run.buildOverviewHTML(folder));
 			}
 
 			String overviewString = sb.toString();
-			
+
 			String completeString = template.replace("{OVERVIEW}",
 					overviewString);
 
-			htmlOutputWriter = new PrintWriter(
-					getOverviewFile(folder));
+			htmlOutputWriter = new PrintWriter(getOverviewFile(folder));
 
 			htmlOutputWriter.println(completeString);
 		} finally {

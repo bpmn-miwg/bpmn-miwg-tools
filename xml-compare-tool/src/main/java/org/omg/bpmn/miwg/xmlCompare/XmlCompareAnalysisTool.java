@@ -63,6 +63,8 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 
+	public static final String NAME = "compare";
+	
 	private static final String FILE_EXTENSION = "bpmn";
 	private static Bpmn20ConformanceChecker checker;
 	private static FilenameFilter bpmnFileFilter = new BpmnFileFilter();
@@ -244,7 +246,7 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 		List<Difference> diffs = getChecker().getSignificantDifferences(
 				actualDocument, referenceDocument);
 
-		return new AnalysisResult(0, diffs.size(), adapt(diffs));
+		return new AnalysisResult(0, diffs.size(), adapt(diffs), this);
 	}
 
 	private Collection<? extends Output> adapt(List<Difference> diffs) {
@@ -262,6 +264,6 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 	}
 
 	public String getName() {
-		return "xml-compare";
+		return NAME;
 	}
 }

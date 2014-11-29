@@ -11,6 +11,7 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 import org.omg.bpmn.miwg.common.AbstractCheck;
 import org.omg.bpmn.miwg.common.DOMCheck;
 import org.omg.bpmn.miwg.common.CheckOutput;
@@ -1457,7 +1458,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	@Override
-	public AnalysisResult execute(Document actualDocument) throws Throwable {
+	public AnalysisResult execute(Document actualDocument, AnalysisTool tool) throws Throwable {
 		this.doc = actualDocument;
 		XPathFactory xpathfactory = XPathFactory.newInstance();
 		xpath = xpathfactory.newXPath();
@@ -1467,7 +1468,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		normalizeNames();
 		doExecute();
 		return new AnalysisResult(resultsOK(), resultsFinding(),
-				out.getMiwgOutput());
+				out.getMiwgOutput(), tool);
 	}
 
 	protected abstract void doExecute() throws Throwable;

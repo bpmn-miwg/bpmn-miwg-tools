@@ -42,5 +42,5 @@ public class AnalysisJob {
 	public AnalysisInput getReferenceInput() {
 		return referenceInput;
 	}
-
+	
 }

@@ -15,6 +15,7 @@ import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
 import org.omg.bpmn.miwg.mvn.AnalysisFaccade;
 import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
+import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 
 public class AnalysisFaccadeTest {
 
@@ -36,20 +37,19 @@ public class AnalysisFaccadeTest {
 				MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
 						BPMN_RESOURCE), new ResourceAnalysisInput(getClass(),
 						BPMN_RESOURCE_REFERENCE)));
-		
+
 		jobs.add(new AnalysisJob("HTML Output Test", "A.1.0",
 				MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
-						BPMN_RESOURCE_REFERENCE), new ResourceAnalysisInput(getClass(),
-						BPMN_RESOURCE_REFERENCE)));
+						BPMN_RESOURCE_REFERENCE), new ResourceAnalysisInput(
+						getClass(), BPMN_RESOURCE_REFERENCE)));
 
-
-		AnalysisFaccade faccade = new AnalysisFaccade(
-				new File(RPT_FOLDER));
+		AnalysisFaccade faccade = new AnalysisFaccade(new File(RPT_FOLDER));
 
 		Collection<AnalysisRun> runs = faccade.executeAnalysisJobs(jobs);
 		assertEquals(2, runs.size());
-		
-		File overviewFile = HTMLAnalysisOutputWriter.getOverviewFile(new File(RPT_FOLDER));
+
+		File overviewFile = HTMLAnalysisOutputWriter.getOverviewFile(new File(
+				RPT_FOLDER));
 		assertTrue(overviewFile.exists());
 		assertTrue(overviewFile.length() > 0);
 	}
@@ -65,18 +65,15 @@ public class AnalysisFaccadeTest {
 					new ResourceAnalysisInput(getClass(),
 							BPMN_RESOURCE_REFERENCE));
 
-			AnalysisFaccade faccade = new AnalysisFaccade(new File(
-					RPT_FOLDER));
-			faccade.executeAnalysisJob(job);
+			AnalysisFaccade faccade = new AnalysisFaccade(new File(RPT_FOLDER));
+			AnalysisRun run = faccade.executeAnalysisJob(job);
 
-			File xsdFile = HTMLAnalysisOutputWriter
-					.getAnalysisResultsFile(new File(RPT_FOLDER), job);
-
-			File xpathFile = HTMLAnalysisOutputWriter
-					.getAnalysisResultsFile(new File(RPT_FOLDER), job);
-
-			File xmlCompareFile = HTMLAnalysisOutputWriter
-					.getAnalysisResultsFile(new File(RPT_FOLDER), job);
+			File xsdFile = run.getResult(XsdAnalysisTool.NAME)
+					.getHTMLResultsFile(new File(RPT_FOLDER), job);
+			File xpathFile = run.getResult(XsdAnalysisTool.NAME)
+					.getHTMLResultsFile(new File(RPT_FOLDER), job);
+			File xmlCompareFile = run.getResult(XsdAnalysisTool.NAME)
+					.getHTMLResultsFile(new File(RPT_FOLDER), job);
 
 			assertTrue(xsdFile.exists());
 			assertTrue(xpathFile.exists());

@@ -21,7 +21,7 @@ import org.omg.bpmn.miwg.test.parameters.ReferenceScanParameters;
 import org.omg.bpmn.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
-import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
+import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 import org.w3c.dom.Document;
 
 @RunWith(Parameterized.class)
@@ -70,7 +70,7 @@ public class Reference_All_Test {
 
 	@Test
 	public void testSchema() throws Exception {
-		XSDAnalysisTool tool = new XSDAnalysisTool();
+		XsdAnalysisTool tool = new XsdAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob(param.application.toString(),
 				param.testResult.name, null, null, null);

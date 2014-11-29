@@ -50,7 +50,8 @@ import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
 import org.w3c.dom.Document;
 
 public class XPathAnalysisTool implements DOMAnalysisTool {
-
+	public final static String NAME="xpath";
+	
 	private List<AbstractXpathCheck> registeredChecks = new LinkedList<AbstractXpathCheck>();
 
 	public XPathAnalysisTool() {
@@ -68,7 +69,7 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 	}
 
 	public String getName() {
-		return "xpath";
+		return NAME;
 	}
 
 	private void registerCheck(AbstractXpathCheck check) {
@@ -96,7 +97,7 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 		AnalysisResult result;
 
 		try {
-			result = check.execute(actualDocument);
+			result = check.execute(actualDocument, this);
 		} catch (Throwable e) {
 			throw new IOException(e.getMessage(), e);
 		} finally {

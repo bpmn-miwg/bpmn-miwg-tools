@@ -43,7 +43,7 @@ import org.omg.bpmn.miwg.api.tools.StreamAnalysisTool;
 import org.omg.bpmn.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
-import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
+import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 import org.w3c.dom.Document;
 
 /**
@@ -82,7 +82,7 @@ public class Reference_B_2_0_Test {
 
 	@Test
 	public void testReference_XSD() throws Exception {
-		StreamAnalysisTool xsdTool = new XSDAnalysisTool();
+		StreamAnalysisTool xsdTool = new XsdAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob("Reference",
 				"B.2.0", MIWGVariant.Reference, null, null);

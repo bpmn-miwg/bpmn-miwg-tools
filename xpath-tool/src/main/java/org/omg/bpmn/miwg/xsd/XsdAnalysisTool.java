@@ -35,10 +35,12 @@ import org.omg.bpmn.miwg.api.tools.StreamAnalysisTool;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.xsd.checks.SchemaCheck;
 
-public class XSDAnalysisTool implements StreamAnalysisTool {
+public class XsdAnalysisTool implements StreamAnalysisTool {
 
+	public final static String NAME="xsd";
+	
 	public String getName() {
-		return "xsd";
+		return NAME;
 	}
 
 	@Override
@@ -47,13 +49,13 @@ public class XSDAnalysisTool implements StreamAnalysisTool {
 			File reportFolder) throws Exception {
 
 		SchemaCheck check = new SchemaCheck();
-		CheckOutput checkOutput = new CheckOutput("xsd-" + job.getName() + "-" + job.getMIWGTestCase(), reportFolder);
+		CheckOutput checkOutput = new CheckOutput(NAME + job.getName() + "-" + job.getMIWGTestCase(), reportFolder);
 		check.init(checkOutput);
 
 		AnalysisResult result;
 		
 		try {
-			 result = check.execute(actualBpmnXml);
+			 result = check.execute(actualBpmnXml, this);
 		} catch (Throwable e) {
 			throw new IOException(e.getMessage(), e);
 		} finally {

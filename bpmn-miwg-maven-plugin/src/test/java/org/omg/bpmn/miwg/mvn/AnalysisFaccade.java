@@ -13,7 +13,7 @@ import org.omg.bpmn.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
-import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
+import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 import org.w3c.dom.Document;
 
 public class AnalysisFaccade {
@@ -24,24 +24,23 @@ public class AnalysisFaccade {
 		this.outputFolder = outputFolder;
 	}
 
-	public Collection<AnalysisRun> executeAnalysisJobs(Collection<AnalysisJob> jobs) throws Exception {
+	public Collection<AnalysisRun> executeAnalysisJobs(
+			Collection<AnalysisJob> jobs) throws Exception {
 		Collection<AnalysisRun> runs = new LinkedList<AnalysisRun>();
 
 		for (AnalysisJob job : jobs) {
 			AnalysisRun run = executeAnalysisJob(job);
 			runs.add(run);
 		}
-		
+
 		HTMLAnalysisOutputWriter.writeOverview(outputFolder, runs);
-		
+
 		return runs;
 	}
-	
-	
-	public AnalysisRun executeAnalysisJob(AnalysisJob job)
-			throws Exception {
+
+	public AnalysisRun executeAnalysisJob(AnalysisJob job) throws Exception {
 		XPathAnalysisTool xpathAnalysisTool = new XPathAnalysisTool();
-		XSDAnalysisTool xsdAnalysisTool = new XSDAnalysisTool();
+		XsdAnalysisTool xsdAnalysisTool = new XsdAnalysisTool();
 		XmlCompareAnalysisTool compareAnalysisTool = new XmlCompareAnalysisTool();
 
 		InputStream referenceInputStream = null;
@@ -74,19 +73,25 @@ public class AnalysisFaccade {
 			AnalysisResult xsdResult = xsdAnalysisTool.analyzeStream(job, null,
 					actualInputStream, null);
 
-			AnalysisResult compareResult = compareAnalysisTool.analyzeDOM(
-					job, referenceDom, actualDom, null);
+			AnalysisResult compareResult = compareAnalysisTool.analyzeDOM(job,
+					referenceDom, actualDom, null);
 
 			AnalysisResult xpathResult = xpathAnalysisTool.analyzeDOM(job,
 					null, actualDom, null);
 
-			AnalysisRun run = new AnalysisRun(xsdResult, compareResult,
-					xpathResult, job);
-			
-			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job, xsdAnalysisTool, xsdResult);
-			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job, compareAnalysisTool, compareResult);
-			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job, xpathAnalysisTool, xpathResult);
-			
+			AnalysisRun run = new AnalysisRun(job);
+
+			run.addResult(xsdAnalysisTool, xsdResult);
+			run.addResult(compareAnalysisTool, compareResult);
+			run.addResult(xpathAnalysisTool, xpathResult);
+
+			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
+					xsdAnalysisTool, xsdResult);
+			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
+					compareAnalysisTool, compareResult);
+			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
+					xpathAnalysisTool, xpathResult);
+
 			return run;
 		} finally {
 			try {
@@ -103,5 +108,5 @@ public class AnalysisFaccade {
 			}
 		}
 	}
-	
+
 }

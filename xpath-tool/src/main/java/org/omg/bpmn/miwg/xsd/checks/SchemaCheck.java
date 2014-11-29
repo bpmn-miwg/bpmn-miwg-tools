@@ -10,6 +10,7 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
 import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 import org.omg.bpmn.miwg.common.AbstractCheck;
 import org.omg.bpmn.miwg.common.StreamCheck;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
@@ -61,7 +62,7 @@ public class SchemaCheck extends AbstractCheck implements StreamCheck {
 		return is;
 	}
 
-	public AnalysisResult execute(InputStream is) throws Throwable {
+	public AnalysisResult execute(InputStream is, AnalysisTool analysisTool) throws Throwable {
 
 		ValidationErrorHandler eHandler = new ValidationErrorHandler();
 		eHandler.setTestOutput(out);
@@ -100,7 +101,7 @@ public class SchemaCheck extends AbstractCheck implements StreamCheck {
 		}
 
 		return new AnalysisResult(resultsOK(), resultsFinding(),
-				out.getMiwgOutput());
+				out.getMiwgOutput(), analysisTool);
 	}
 
 }

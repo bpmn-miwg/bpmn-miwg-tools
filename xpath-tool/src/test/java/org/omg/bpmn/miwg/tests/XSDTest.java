@@ -37,7 +37,7 @@ import org.junit.Test;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.MIWGVariant;
-import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
+import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 
 public class XSDTest {
 
@@ -45,7 +45,7 @@ public class XSDTest {
 
 	@Test
 	public void testSchemaInvalidBpmn() {
-		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
+		XsdAnalysisTool schemaValidator = new XsdAnalysisTool();
 		InputStream actualBpmnXml = null;
 		
 		AnalysisJob job = new AnalysisJob("Custom", "A.1.0", MIWGVariant.Roundtrip, null, null);
@@ -73,7 +73,7 @@ public class XSDTest {
 
 	@Test
 	public void testSchemaValidBpmn() {
-		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
+		XsdAnalysisTool schemaValidator = new XsdAnalysisTool();
 		InputStream actualBpmnXml = null;
 		AnalysisJob job = new AnalysisJob("Custom", "A.1.0", MIWGVariant.Roundtrip, null, null);
 		try {
@@ -99,7 +99,7 @@ public class XSDTest {
 	
 	@Test
 	public void testOutputPOJOs() {
-		XSDAnalysisTool schemaValidator = new XSDAnalysisTool();
+		XsdAnalysisTool schemaValidator = new XsdAnalysisTool();
 		InputStream actualBpmnXml = null;
 		AnalysisJob job = new AnalysisJob("Custom", "A.1.0", MIWGVariant.Roundtrip, null, null);
 

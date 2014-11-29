@@ -62,7 +62,7 @@ import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.xmlCompare.Variant;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
-import org.omg.bpmn.miwg.xsd.XSDAnalysisTool;
+import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 
 import edu.emory.mathcs.backport.java.util.Collections;
 
@@ -143,7 +143,7 @@ public class ModelInterchangeMojo extends AbstractMojo {
 
 							AnalysisResult analysisResult = null;
 
-							XSDAnalysisTool xsdTool = new XSDAnalysisTool();
+							XsdAnalysisTool xsdTool = new XsdAnalysisTool();
 							try {
 								analysisResult = xsdTool.analyzeStream(job, null,
 										new FileInputStream(b), null);
