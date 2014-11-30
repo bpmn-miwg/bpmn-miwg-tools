@@ -56,7 +56,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 
-	public static final String NAME = "compare";
+    public static final String NAME = "xml-compare";
 	
 	private static Bpmn20ConformanceChecker checker;
 

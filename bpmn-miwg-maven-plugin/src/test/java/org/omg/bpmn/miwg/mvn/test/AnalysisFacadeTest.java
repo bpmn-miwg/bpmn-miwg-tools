@@ -26,7 +26,7 @@ public class AnalysisFacadeTest {
 
 	@Before
 	public void cleanGeneratedHTMLFiles() {
-		TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_FOLDER);
+		TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_BASE_FOLDER);
 	}
 
 	@Test
@@ -43,13 +43,13 @@ public class AnalysisFacadeTest {
 						getClass(), BPMN_RESOURCE_REFERENCE)));
 
 		AnalysisFacade faccade = new AnalysisFacade(new File(
-				TestUtil.REPORT_FOLDER));
+				TestUtil.REPORT_BASE_FOLDER));
 
 		Collection<AnalysisRun> runs = faccade.executeAnalysisJobs(jobs);
 		assertEquals(2, runs.size());
 
 		File overviewFile = HTMLAnalysisOutputWriter.getOverviewFile(new File(
-				TestUtil.REPORT_FOLDER));
+				TestUtil.REPORT_BASE_FOLDER));
 		assertTrue(overviewFile.exists());
 		assertTrue(overviewFile.length() > 0);
 	}
@@ -66,15 +66,15 @@ public class AnalysisFacadeTest {
 							BPMN_RESOURCE_REFERENCE));
 
 			AnalysisFacade faccade = new AnalysisFacade(new File(
-					TestUtil.REPORT_FOLDER));
+					TestUtil.REPORT_BASE_FOLDER));
 			AnalysisRun run = faccade.executeAnalysisJob(job);
 
 			File xsdFile = run.getResult(XsdAnalysisTool.NAME)
-					.getHTMLResultsFile(new File(TestUtil.REPORT_FOLDER), job);
+					.getHTMLResultsFile(new File(TestUtil.REPORT_BASE_FOLDER), job);
 			File xpathFile = run.getResult(XsdAnalysisTool.NAME)
-					.getHTMLResultsFile(new File(TestUtil.REPORT_FOLDER), job);
+					.getHTMLResultsFile(new File(TestUtil.REPORT_BASE_FOLDER), job);
 			File xmlCompareFile = run.getResult(XsdAnalysisTool.NAME)
-					.getHTMLResultsFile(new File(TestUtil.REPORT_FOLDER), job);
+					.getHTMLResultsFile(new File(TestUtil.REPORT_BASE_FOLDER), job);
 
 			assertTrue(xsdFile.exists());
 			assertTrue(xpathFile.exists());
@@ -97,7 +97,7 @@ public class AnalysisFacadeTest {
                         "src/test/resources/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"));
 
           AnalysisFacade facade = new AnalysisFacade(new File(
-                        TestUtil.REPORT_FOLDER));
+                        TestUtil.REPORT_BASE_FOLDER));
           facade.executeAnalysisJobs(jobs);
     }
 
@@ -112,7 +112,7 @@ public class AnalysisFacadeTest {
 		jobs.add(new AnalysisJob("src/test/resources/bpmn.io 0.5.0/B.2.0-roundtrip.bpmn"));
 		
 		AnalysisFacade facade = new AnalysisFacade(new File(
-				TestUtil.REPORT_FOLDER));
+				TestUtil.REPORT_BASE_FOLDER));
 		facade.executeAnalysisJobs(jobs);
 	}
 
