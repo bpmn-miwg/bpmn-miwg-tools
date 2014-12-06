@@ -31,8 +31,10 @@ public class AnalysisRun {
 			AnalysisResult result = results.get(tool);
 			assert result != null;
 
-			sb.append(tool.getName() + "-ok=\"" + result.numOK + "\" ");
-			sb.append(tool.getName() + "-finding=\"" + result.numFindings
+            sb.append("data-" + tool.getName() + "-ok=\"" + result.numOK
+                    + "\" ");
+            sb.append("data-" + tool.getName() + "-finding=\""
+                    + result.numFindings
 					+ "\" ");
 		}
 
