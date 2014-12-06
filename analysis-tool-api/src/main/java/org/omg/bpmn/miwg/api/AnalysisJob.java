@@ -70,8 +70,13 @@ public class AnalysisJob {
 			throw new FileNotFoundException(referenceFolder.getCanonicalPath());
 
 		File referenceBpmnFile = new File(referenceFolder, miwgTestCase + ".bpmn");
+		// TODO This is not a safe assumption. Not only in theory but in 
+		// actuality (bpmn.io 0.5.0) a vendor folder may contain files for 
+		// which there is no reference and this should not stop the entire 
+		// analysis
 		if (!referenceBpmnFile.exists())
-			throw new FileNotFoundException(referenceFolder.getCanonicalPath());
+            throw new FileNotFoundException(
+                    referenceBpmnFile.getCanonicalPath());
 		referenceInput = new FileAnalysisInput(referenceBpmnFile);
 	}
 
