@@ -153,7 +153,8 @@ public class ModelInterchangeMojoTest {
 			// There should be 2 findings: an invalid element and an invalid
 			// attribute
 			assertEquals("2",
-					invalidNode.getAttributes().getNamedItem("xsd-finding")
+                    invalidNode.getAttributes()
+                            .getNamedItem("data-xsd-finding")
 							.getNodeValue());
 		} catch (Exception e) {
 			e.printStackTrace();
