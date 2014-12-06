@@ -45,10 +45,10 @@ public class ModelInterchangeMojoTest {
 
 	@Before
 	public void setUp() throws Exception {
-        TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_BASE_FOLDER);
-		
+		TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_BASE_FOLDER);
+
 		mojo = new ModelInterchangeMojo();
-        mojo.outputDirectory = new File(TestUtil.REPORT_BASE_FOLDER);
+		mojo.outputDirectory = new File(TestUtil.REPORT_BASE_FOLDER);
 		mojo.resources = new ArrayList<Resource>();
 
 		overview = HTMLAnalysisOutputWriter
@@ -87,55 +87,53 @@ public class ModelInterchangeMojoTest {
 			mojo.resources.add(res);
 			mojo.execute();
 
-            System.out
-                    .println("Checking expected output exists with base folder: "
-                            + TestUtil.REPORT_BASE_FOLDER);
+			System.out
+					.println("Checking expected output exists with base folder: "
+							+ TestUtil.REPORT_BASE_FOLDER);
 
-            // overview file
+			// overview file
 			assertTrue(overview.exists());
 			Document document = docBuilder.parse(overview);
 			NodeList nodes = (NodeList) testOverviewExpr.evaluate(document,
 					XPathConstants.NODESET);
 			assertEquals(9 /* count of .bpmn in W4 dir */, nodes.getLength());
 
-            // report files for each tool
-            assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
-                    XmlCompareAnalysisTool.NAME));
-            assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
-                    XsdAnalysisTool.NAME));
-            assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
-                    XPathAnalysisTool.NAME));
+			// report files for each tool
+			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
+					XmlCompareAnalysisTool.NAME));
+			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
+					XsdAnalysisTool.NAME));
+			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
+					XPathAnalysisTool.NAME));
 		} catch (Exception e) {
 			e.printStackTrace();
 			fail(e.getClass() + ":" + e.getMessage());
 		}
 	}
 
-    private void assertHtmlReportsExist(File toolFldr) {
-        File w4Fldr = new File(toolFldr, W4_MODELER_ID);
-        assertTrue("Tool folder " + toolFldr.getAbsolutePath() + " not found",
-                toolFldr.exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.1.0-export.html").exists());
-        assertTrue("Tool report for W4 A.1.0 roundtrip not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.1.0-roundtrip.html").exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.2.0-export.html").exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.2.0-roundtrip.html").exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.3.0-export.html").exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.3.0-roundtrip.html").exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.4.0-export.html").exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.4.0-roundtrip.html").exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.4.1-export.html").exists());
-        assertTrue("Tool report for W4 A.1.0 export not found", new File(
-                w4Fldr, W4_MODELER_ID + "-A.4.1-roundtrip.html").exists());
-    }
+	private void assertHtmlReportsExist(File toolFldr) {
+		File w4Fldr = new File(toolFldr, W4_MODELER_ID);
+		assertTrue("Tool folder " + toolFldr.getAbsolutePath() + " not found",
+				toolFldr.exists());
+		assertTrue("Tool report for W4 A.1.0 export not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.1.0-export.html").exists());
+		assertTrue("Tool report for W4 A.1.0 roundtrip not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.1.0-roundtrip.html").exists());
+		assertTrue("Tool report for W4 A.2.0 export not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.2.0-export.html").exists());
+		assertTrue("Tool report for W4 A.2.0 roundtrip not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.2.0-roundtrip.html").exists());
+		assertTrue("Tool report for W4 A.3.0 export not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.3.0-export.html").exists());
+		assertTrue("Tool report for W4 A.3.0 roundtrip not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.3.0-roundtrip.html").exists());
+		assertTrue("Tool report for W4 A.4.0 export not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.4.0-export.html").exists());
+		assertTrue("Tool report for W4 A.4.0 roundtrip not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.4.0-roundtrip.html").exists());
+		assertTrue("Tool report for W4 A.4.1 roundtrip not found", new File(
+				w4Fldr, W4_MODELER_ID + "-A.4.1-roundtrip.html").exists());
+	}
 
 	@Test
 	public void testMojoHandlingSchemaInvalidBpmn() {
