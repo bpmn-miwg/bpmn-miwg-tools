@@ -76,7 +76,7 @@ public class AnalysisJob {
 	}
 
 	public String getName() {
-		return fullApplicationName + "-" + miwgTestCase + "-" + variant;
+		return fullApplicationName + "-" + miwgTestCase + "-" + variant.toString().toLowerCase();
 	}
 
 	public String getFullApplicationName() {

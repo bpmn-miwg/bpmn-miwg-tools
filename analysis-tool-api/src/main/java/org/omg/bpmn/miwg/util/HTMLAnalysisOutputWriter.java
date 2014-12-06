@@ -48,7 +48,11 @@ public class HTMLAnalysisOutputWriter {
 			String completeString = template.replace("{ANALYSISRESULTS}",
 					outputString);
 
-			htmlOutputWriter = new PrintWriter(result.getHTMLResultsFile(rootFolder, job));
+			File resultsFile = result.getHTMLResultsFile(rootFolder, job);
+			
+			resultsFile.getParentFile().mkdirs();
+			
+			htmlOutputWriter = new PrintWriter(resultsFile);
 			htmlOutputWriter.println(completeString);
 		} finally {
 			try {

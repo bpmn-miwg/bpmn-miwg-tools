@@ -52,9 +52,9 @@ public class AnalysisResult {
 
 	public String getResultsFileName(AnalysisJob job)
 			throws UnsupportedEncodingException {
-		String fileName = job.getName() + "-"+ analysisTool.getName()
+		String fileName = analysisTool.getName() + "/" + job.getFullApplicationName() + "/" + job.getName()
 				+ ".html";
-		//fileName = URLEncoder.encode(fileName, "UTF-8");
+		// fileName = URLEncoder.encode(fileName, "UTF-8");
 		return fileName;
 	}
 
