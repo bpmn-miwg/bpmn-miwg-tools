@@ -1,70 +1,194 @@
 [
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/327",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/327/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/327/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/327/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/327",
-    "id": 48070378,
-    "number": 327,
-    "title": "Wrong encoding of '+' for tool \"W4 BPMN+ Composer\"",
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/333",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/333/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/333/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/333/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/333",
+    "id": 49837777,
+    "number": 333,
+    "title": "Incorrect sourceRef reference",
     "user": {
-      "login": "benmichel",
-      "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/benmichel",
-      "html_url": "https://github.com/benmichel",
-      "followers_url": "https://api.github.com/users/benmichel/followers",
-      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
-      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
-      "organizations_url": "https://api.github.com/users/benmichel/orgs",
-      "repos_url": "https://api.github.com/users/benmichel/repos",
-      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/benmichel/received_events",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
       "type": "User",
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
     "assignee": null,
     "milestone": null,
     "comments": 0,
-    "created_at": "2014-11-07T10:58:45Z",
-    "updated_at": "2014-11-07T10:58:45Z",
+    "created_at": "2014-11-23T20:25:27Z",
+    "updated_at": "2014-11-23T20:28:26Z",
     "closed_at": null,
-    "body": "Hello,\r\n\r\nIn the table presenting all vendors http://bpmn-miwg.github.io/bpmn-miwg-tools/ open and closed issues for tool W4 BPMN+ Composer V.9.1 are equal to zero. I think this is due to the fact that the \"+\" is wrongly interpreted since when you clic on \"0\" for open issues, the filter used is 'is:open label:\"Tool: W4 BPMN  Composer\" ' where it should be 'is:open is:issue label:\"Tool: W4 BPMN+ Composer\" '. The \"+\" has been replaced with a blank.\r\n\r\nAs seen during the last meeting, it seams to be an encoding problem for the \"+\"\r\nIf it is to much trouble to correctly encode the \"+\", we at W4 are confortable with the solution of replacing it with \"Plus\", only in the label if possible (if not, also in the tool name)."
+    "body": "**Reference diagram**\r\n![b 1 0](https://cloud.githubusercontent.com/assets/4007840/5159065/fccbb8d8-7356-11e4-8445-fbbb5d118b47.png)\r\n\r\n**Location of the finding**\r\n*Service Task 7* association with *Data Store Reference*\r\n\r\n**Reference BPMN**\r\n```xml\r\n<semantic:serviceTask implementation=\"##WebService\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Service Task 7\" id=\"_fea1c5af-6c76-403f-809e-26d476d92741\">\r\n    <semantic:incoming>_6a248585-952e-40ff-82ec-b6d8f410b73a</semantic:incoming>\r\n    <semantic:outgoing>_657f30ba-0690-4a14-8b8e-d8939efcc7bd</semantic:outgoing>\r\n    <semantic:ioSpecification>\r\n        <semantic:dataInput id=\"Din1373655174951\"/>\r\n        <semantic:dataOutput id=\"Dout1373655174952\"/>\r\n        <semantic:inputSet>\r\n            <semantic:dataInputRefs>Din1373655174951</semantic:dataInputRefs>\r\n        </semantic:inputSet>\r\n        <semantic:outputSet>\r\n            <semantic:dataOutputRefs>Dout1373655174952</semantic:dataOutputRefs>\r\n        </semantic:outputSet>\r\n    </semantic:ioSpecification>\r\n    <semantic:dataInputAssociation id=\"_73afd30d-7d54-4897-9350-1f7d301ef1b2\">\r\n        <semantic:sourceRef>_3d35229f-2c75-4d5d-a066-2d14e46e442e</semantic:sourceRef>\r\n        <semantic:targetRef>Din1373655174951</semantic:targetRef>\r\n    </semantic:dataInputAssociation>\r\n    <semantic:dataOutputAssociation id=\"_fa10ebaf-7088-4def-8cc3-d959b8876b06\">\r\n        <semantic:sourceRef>Dout1373655174952</semantic:sourceRef>\r\n        <semantic:targetRef>_b9385abf-d293-40b7-848b-8add4db48415</semantic:targetRef>\r\n    </semantic:dataOutputAssociation>\r\n</semantic:serviceTask>\r\n```\r\n**Tool BPMN**\r\n```xml\r\n<serviceTask completionQuantity=\"1\" id=\"_fea1c5af-6c76-403f-809e-26d476d92741\" implementation=\"##WebService\" isForCompensation=\"false\" name=\"Service Task 7\" startQuantity=\"1\">\r\n <incoming>_6a248585-952e-40ff-82ec-b6d8f410b73a</incoming>\r\n <outgoing>_657f30ba-0690-4a14-8b8e-d8939efcc7bd</outgoing>\r\n <ioSpecification id=\"sid-44bab402-6fa1-4aac-9742-014e12934c43\">\r\n    <dataInput id=\"Din1373655174951\" isCollection=\"false\"/>\r\n    <dataOutput id=\"Dout1373655174952\" isCollection=\"false\"/>\r\n    <inputSet id=\"sid-771efd1f-c64c-4d25-9322-192583345b27\">\r\n       <dataInputRefs>Din1373655174951</dataInputRefs>\r\n       <outputSetRefs>sid-71dc9ed6-930a-44b7-b8ed-09fd68cc3fed</outputSetRefs>\r\n    </inputSet>\r\n    <outputSet id=\"sid-71dc9ed6-930a-44b7-b8ed-09fd68cc3fed\">\r\n       <dataOutputRefs>Dout1373655174952</dataOutputRefs>\r\n       <inputSetRefs>sid-771efd1f-c64c-4d25-9322-192583345b27</inputSetRefs>\r\n    </outputSet>\r\n </ioSpecification>\r\n <dataInputAssociation id=\"_73afd30d-7d54-4897-9350-1f7d301ef1b2\">\r\n    <sourceRef>_3d35229f-2c75-4d5d-a066-2d14e46e442e</sourceRef>\r\n    <targetRef>Din1373655174951</targetRef>\r\n </dataInputAssociation>\r\n <dataOutputAssociation id=\"_fa10ebaf-7088-4def-8cc3-d959b8876b06\">\r\n    <sourceRef>_fea1c5af-6c76-403f-809e-26d476d92741</sourceRef>\r\n    <targetRef>_b9385abf-d293-40b7-848b-8add4db48415</targetRef>\r\n </dataOutputAssociation>\r\n</serviceTask>\r\n```\r\n\r\n**Analysis**\r\n* The reference BPMN has the **sourceRef** attribute pointing to the **dataOutput** element.\r\n* The tool BPMN has the **sourceRef** attribute pointing to the **serviceTask** containing the **dataOutput**.\r\n"
   },
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/326",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/326/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/326/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/326/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/326",
-    "id": 47844807,
-    "number": 326,
-    "title": "Data store does not appear",
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/332",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/332/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/332/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/332/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/332",
+    "id": 49837052,
+    "number": 332,
+    "title": "Global task is added an referenced although not existing in the reference",
     "user": {
-      "login": "benmichel",
-      "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/benmichel",
-      "html_url": "https://github.com/benmichel",
-      "followers_url": "https://api.github.com/users/benmichel/followers",
-      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
-      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
-      "organizations_url": "https://api.github.com/users/benmichel/orgs",
-      "repos_url": "https://api.github.com/users/benmichel/repos",
-      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/benmichel/received_events",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-11-23T20:03:48Z",
+    "updated_at": "2014-11-23T20:03:48Z",
+    "closed_at": null,
+    "body": "A global task and the correspondig calledElement reference are added although no such nodes exist in the reference.\r\n\r\n**Reference**\r\n```xml\r\n<semantic:callActivity completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Call Activity Calling a Global Task\" id=\"_fa3a8e53-5be0-4f0b-8680-d2498e255209\">\r\n    <semantic:incoming>_eeb6812d-d182-489f-aea2-493ab8732cfd</semantic:incoming>\r\n    <semantic:outgoing>_61abe245-5604-46ba-8152-94d6e68ffda4</semantic:outgoing>\r\n</semantic:callActivity>\r\n```\r\n\r\n**Tool output**\r\n```xml\r\n<globalTask id=\"sid-ab1573b4-5dad-46c7-ad5b-f65d0646f82a\" name=\"Call Activity Calling a Global Task\"/>\r\n[...]\r\n<callActivity calledElement=\"sid-ab1573b4-5dad-46c7-ad5b-f65d0646f82a\" completionQuantity=\"1\" id=\"_fa3a8e53-5be0-4f0b-8680-d2498e255209\" isForCompensation=\"false\" name=\"Call Activity Calling a Global Task\" startQuantity=\"1\">\r\n   <extensionElements>\r\n     <signavio:signavioStencil id=\"Task\"/>\r\n   </extensionElements>\r\n   <incoming>_eeb6812d-d182-489f-aea2-493ab8732cfd</incoming>\r\n   <outgoing>_61abe245-5604-46ba-8152-94d6e68ffda4</outgoing>\r\n</callActivity>\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/331",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/331/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/331/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/331/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/331",
+    "id": 49827305,
+    "number": 331,
+    "title": "Non-existing name attribute is replaced by empty name attribute",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "name": "Tool: Signavio Process Editor",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2014-11-23T14:40:06Z",
+    "updated_at": "2014-11-26T16:23:22Z",
+    "closed_at": null,
+    "body": "\r\n\r\n\r\n**Excerpt from reference BPMN**\r\n```xml\r\n<endEvent id=\"sid-BC9AC0B6-1785-4E35-A974-7FEF1A586B9D\">\r\n...\r\n<endEvent id=\"sid-282524E6-660F-431D-8F19-1C3E9E9DE817\">\r\n```\r\n\r\n**Excerpt from Signavio BPMN**\r\n```xml\r\n<endEvent id=\"sid-BC9AC0B6-1785-4E35-A974-7FEF1A586B9D\" name=\"\">\r\n...\r\n<endEvent id=\"sid-282524E6-660F-431D-8F19-1C3E9E9DE817\" name=\"\">\r\n```\r\n\r\n**Excerpt from the XPATH tool**\r\n```\r\n          OK     : navigateElement; Message: bpmn:task[@name='Review and document result']\r\n          FINDING: navigateElement; Message: No node found; Parameter: bpmn:endEvent[not(@name)]\r\n```\r\n\r\n**Analysis**\r\nNULL values and empty strings have different meanings in IT. As a notation commonly used in IT, these name attributes should not exist in the BPMN file generated by BPMN tools."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/330",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/330/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/330/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/330/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/330",
+    "id": 49363945,
+    "number": 330,
+    "title": "Reference C.1.0: Label position missing for most elements",
+    "user": {
+      "login": "krat0s",
+      "id": 1541830,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/krat0s",
+      "html_url": "https://github.com/krat0s",
+      "followers_url": "https://api.github.com/users/krat0s/followers",
+      "following_url": "https://api.github.com/users/krat0s/following{/other_user}",
+      "gists_url": "https://api.github.com/users/krat0s/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/krat0s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/krat0s/subscriptions",
+      "organizations_url": "https://api.github.com/users/krat0s/orgs",
+      "repos_url": "https://api.github.com/users/krat0s/repos",
+      "events_url": "https://api.github.com/users/krat0s/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/krat0s/received_events",
       "type": "User",
       "site_admin": false
     },
@@ -75,19 +199,9 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+W4+BPMN%2B+Composer",
-        "name": "Tool: W4 BPMN+ Composer",
-        "color": "009800"
       }
     ],
     "state": "open",
@@ -95,10 +209,10 @@
     "assignee": null,
     "milestone": null,
     "comments": 0,
-    "created_at": "2014-11-05T15:00:35Z",
-    "updated_at": "2014-11-05T15:13:36Z",
+    "created_at": "2014-11-19T10:30:14Z",
+    "updated_at": "2014-11-19T15:52:39Z",
     "closed_at": null,
-    "body": "In a collaboration if the bounds of an element place it outside of its container bounds (in this case the bounds of the DataStore place it outside the bounds of the participant) it will not show on the diagram. But this is only a display issue, the element and its shape are present in the bpmn .\r\n\r\nsee also http://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=W4%20BPMN%2B%20Composer%20V.9.1"
+    "body": "The label position is missing for tasks, lanes and pools. Consequently, the import results will look differently between tools that place the label at their default position."
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/325",
@@ -112,7 +226,7 @@
     "user": {
       "login": "benmichel",
       "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/benmichel",
       "html_url": "https://github.com/benmichel",
@@ -129,11 +243,6 @@
       "site_admin": false
     },
     "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
-        "name": "bug",
-        "color": "fc2929"
-      },
       {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
         "name": "Import",
@@ -161,7 +270,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-05T14:55:35Z",
-    "updated_at": "2014-11-05T15:13:05Z",
+    "updated_at": "2014-11-07T13:15:40Z",
     "closed_at": null,
     "body": "see also http://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=W4%20BPMN%2B%20Composer%20V.9.1"
   },
@@ -177,7 +286,7 @@
     "user": {
       "login": "benmichel",
       "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/benmichel",
       "html_url": "https://github.com/benmichel",
@@ -194,11 +303,6 @@
       "site_admin": false
     },
     "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
-        "name": "bug",
-        "color": "fc2929"
-      },
       {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
         "name": "Import",
@@ -221,7 +325,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-05T14:53:57Z",
-    "updated_at": "2014-11-05T15:11:39Z",
+    "updated_at": "2014-11-07T13:16:51Z",
     "closed_at": null,
     "body": "see also http://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=W4%20BPMN%2B%20Composer%20V.9.1"
   },
@@ -237,7 +341,7 @@
     "user": {
       "login": "benmichel",
       "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/benmichel",
       "html_url": "https://github.com/benmichel",
@@ -302,7 +406,7 @@
     "user": {
       "login": "benmichel",
       "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/benmichel",
       "html_url": "https://github.com/benmichel",
@@ -362,7 +466,7 @@
     "user": {
       "login": "benmichel",
       "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/benmichel",
       "html_url": "https://github.com/benmichel",
@@ -437,7 +541,7 @@
     "user": {
       "login": "benmichel",
       "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/benmichel",
       "html_url": "https://github.com/benmichel",
@@ -507,7 +611,7 @@
     "user": {
       "login": "benmichel",
       "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/benmichel",
       "html_url": "https://github.com/benmichel",
@@ -597,7 +701,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -614,7 +718,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -622,7 +740,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:45:00Z",
-    "updated_at": "2014-11-03T19:45:00Z",
+    "updated_at": "2014-11-12T16:36:34Z",
     "closed_at": null,
     "body": "Missing association to data store"
   },
@@ -638,7 +756,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -655,7 +773,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -663,7 +795,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:42:01Z",
-    "updated_at": "2014-11-03T19:42:01Z",
+    "updated_at": "2014-11-12T16:36:05Z",
     "closed_at": null,
     "body": "Sequence Flow connections into Expanded sub-process 2 incorrect positions"
   },
@@ -679,7 +811,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -696,7 +828,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -704,7 +850,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:39:34Z",
-    "updated_at": "2014-11-03T19:39:34Z",
+    "updated_at": "2014-11-12T16:35:43Z",
     "closed_at": null,
     "body": "Sequence Flow label positions incorrect - flows out of inclusive gateway"
   },
@@ -720,7 +866,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -737,7 +883,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -745,7 +905,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:36:01Z",
-    "updated_at": "2014-11-03T19:36:01Z",
+    "updated_at": "2014-11-12T16:35:15Z",
     "closed_at": null,
     "body": "Data Association paths incorrect"
   },
@@ -761,7 +921,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -778,7 +938,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -786,7 +960,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:30:46Z",
-    "updated_at": "2014-11-03T19:30:46Z",
+    "updated_at": "2014-11-12T16:34:54Z",
     "closed_at": null,
     "body": "Call Activity Collapsed missing + symbol."
   },
@@ -802,7 +976,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -819,7 +993,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -827,7 +1015,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:30:11Z",
-    "updated_at": "2014-11-03T19:30:11Z",
+    "updated_at": "2014-11-12T16:34:35Z",
     "closed_at": null,
     "body": "All gateway label positions incorrect\r\nEvent labels on single line, rather than 2"
   },
@@ -843,7 +1031,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -860,7 +1048,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -868,7 +1070,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:29:24Z",
-    "updated_at": "2014-11-03T19:29:24Z",
+    "updated_at": "2014-11-12T16:33:50Z",
     "closed_at": null,
     "body": "Message Flow 1 start position incorrect.  Message flow 2 end position incorrect.  Both have Envelope symbol"
   },
@@ -884,7 +1086,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -901,7 +1103,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -909,7 +1125,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:25:28Z",
-    "updated_at": "2014-11-03T19:25:28Z",
+    "updated_at": "2014-11-12T16:33:28Z",
     "closed_at": null,
     "body": "Most of the same issues as A.4.0"
   },
@@ -925,7 +1141,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -942,7 +1158,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -950,7 +1180,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:23:43Z",
-    "updated_at": "2014-11-03T19:23:43Z",
+    "updated_at": "2014-11-12T16:32:36Z",
     "closed_at": null,
     "body": "Circle at start of message flow outside of task, not on boundary"
   },
@@ -966,7 +1196,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -983,7 +1213,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -991,7 +1235,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:22:38Z",
-    "updated_at": "2014-11-03T19:22:38Z",
+    "updated_at": "2014-11-12T16:32:13Z",
     "closed_at": null,
     "body": "Missing sequence flows in xpanded sub-process"
   },
@@ -1007,7 +1251,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -1024,7 +1268,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -1032,7 +1290,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:22:15Z",
-    "updated_at": "2014-11-03T19:22:15Z",
+    "updated_at": "2014-11-12T16:31:50Z",
     "closed_at": null,
     "body": "Expanded sub-process label position incorrect"
   },
@@ -1048,7 +1306,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -1065,7 +1323,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -1073,7 +1345,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:21:23Z",
-    "updated_at": "2014-11-03T19:21:23Z",
+    "updated_at": "2014-11-12T16:31:18Z",
     "closed_at": null,
     "body": "Messages have \"Envelope\" symbol.  Label position on message flows incorrect"
   },
@@ -1089,7 +1361,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -1106,7 +1378,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -1114,7 +1400,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:19:12Z",
-    "updated_at": "2014-11-03T19:19:12Z",
+    "updated_at": "2014-11-12T16:30:33Z",
     "closed_at": null,
     "body": "Missing labels for boundary events"
   },
@@ -1130,7 +1416,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -1147,7 +1433,26 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -1155,7 +1460,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2014-11-03T19:18:28Z",
-    "updated_at": "2014-11-03T19:32:19Z",
+    "updated_at": "2014-11-12T16:30:01Z",
     "closed_at": null,
     "body": "Size and position of Collapsed sub-process incorrect"
   },
@@ -1171,7 +1476,7 @@
     "user": {
       "login": "gcsm1th",
       "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gcsm1th",
       "html_url": "https://github.com/gcsm1th",
@@ -1188,7 +1493,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Eclipse+BPMN2+Modeler",
+        "name": "Tool: Eclipse BPMN2 Modeler",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -1196,7 +1515,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-03T19:17:02Z",
-    "updated_at": "2014-11-03T19:17:02Z",
+    "updated_at": "2014-11-12T16:28:51Z",
     "closed_at": null,
     "body": "Model A.2.0, label positions incorrect for both gateways and End Event"
   },
@@ -1212,7 +1531,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -1272,7 +1591,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -1342,7 +1661,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -1397,7 +1716,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -1482,7 +1801,7 @@
     "user": {
       "login": "tkauth",
       "id": 8965332,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8965332?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8965332?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tkauth",
       "html_url": "https://github.com/tkauth",
@@ -1537,7 +1856,7 @@
     "user": {
       "login": "tkauth",
       "id": 8965332,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8965332?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8965332?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tkauth",
       "html_url": "https://github.com/tkauth",
@@ -1592,7 +1911,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -1647,7 +1966,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -1717,7 +2036,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -1772,7 +2091,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -1832,7 +2151,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -1912,7 +2231,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -1972,7 +2291,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2032,7 +2351,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2092,7 +2411,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2147,7 +2466,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2202,7 +2521,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2257,7 +2576,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2327,7 +2646,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2387,7 +2706,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2442,7 +2761,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2502,7 +2821,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2562,7 +2881,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2632,7 +2951,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2706,74 +3025,6 @@
     "body": "Labels on the events are slightly shifted to the right.\r\n\r\nThis issue was identified during the BPMN MIWG call 2014-10-23.\r\n\r\nA visual comparison between the reference and imported diagrams can be found here: http://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=ibo%20Prometheus%203.6.0.0\r\n"
   },
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/273",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/273/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/273/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/273/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/273",
-    "id": 46506011,
-    "number": 273,
-    "title": "Test Case C.1.0: User Tasks with incoming/outgoing Message Flows",
-    "user": {
-      "login": "Trickovic",
-      "id": 9351505,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9351505?v=2",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Trickovic",
-      "html_url": "https://github.com/Trickovic",
-      "followers_url": "https://api.github.com/users/Trickovic/followers",
-      "following_url": "https://api.github.com/users/Trickovic/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Trickovic/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Trickovic/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Trickovic/subscriptions",
-      "organizations_url": "https://api.github.com/users/Trickovic/orgs",
-      "repos_url": "https://api.github.com/users/Trickovic/repos",
-      "events_url": "https://api.github.com/users/Trickovic/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Trickovic/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
-        "name": "bug",
-        "color": "fc2929"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
-        "name": "Test: C.1.0",
-        "color": "006b75"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": {
-      "login": "falko",
-      "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/falko",
-      "html_url": "https://github.com/falko",
-      "followers_url": "https://api.github.com/users/falko/followers",
-      "following_url": "https://api.github.com/users/falko/following{/other_user}",
-      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
-      "organizations_url": "https://api.github.com/users/falko/orgs",
-      "repos_url": "https://api.github.com/users/falko/repos",
-      "events_url": "https://api.github.com/users/falko/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/falko/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2014-10-22T12:54:49Z",
-    "updated_at": "2014-11-05T17:13:08Z",
-    "closed_at": null,
-    "body": "In the process model there is a user task with one outgoing message flow and one outgoing message flow.\r\nI believe this is not conform with the BPMN specification (and in particular, the execution semantics part). The BPMN2 specification says:\r\n\"User Task: Upon activation, the User Task is distributed to the assigned person or group of people. When the work has been done, the User Task completes.\"\r\nAlthough the BPMN metamodel allows such a constellation - Message Flows can theoretically be connected to any type of Tasks - still the (execution) semantics of incoming and outgoing Message Flows for User Tasks is not defined.\r\nSo I would argue that the adopted process model is not a valid BPMN model.\r\n"
-  },
-  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/271",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/271/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/271/comments",
@@ -2785,7 +3036,7 @@
     "user": {
       "login": "bzinchenko",
       "id": 5006818,
-      "avatar_url": "https://avatars.githubusercontent.com/u/5006818?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5006818?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/bzinchenko",
       "html_url": "https://github.com/bzinchenko",
@@ -2840,7 +3091,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2895,7 +3146,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -2950,7 +3201,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -3010,7 +3261,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -3065,7 +3316,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -3120,7 +3371,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -3180,7 +3431,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -3240,7 +3491,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -3300,7 +3551,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3355,7 +3606,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3415,7 +3666,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3480,7 +3731,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3535,7 +3786,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3600,7 +3851,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3665,7 +3916,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3730,7 +3981,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3795,7 +4046,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3860,7 +4111,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -3915,7 +4166,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -3957,9 +4208,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2014-10-15T10:13:04Z",
-    "updated_at": "2014-10-15T10:13:47Z",
+    "updated_at": "2014-11-19T10:10:07Z",
     "closed_at": null,
     "body": "The current version uses a DataOutputAssociation to connect to the Data Store Reference"
   },
@@ -3975,7 +4226,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4013,7 +4264,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4048,7 +4299,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4091,7 +4342,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4126,7 +4377,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4169,7 +4420,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4204,7 +4455,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4247,7 +4498,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4282,7 +4533,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4325,7 +4576,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4360,7 +4611,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4413,7 +4664,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4448,7 +4699,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4486,7 +4737,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4521,7 +4772,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4559,7 +4810,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4594,7 +4845,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4632,7 +4883,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4667,7 +4918,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4705,7 +4956,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4740,7 +4991,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4793,7 +5044,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4828,7 +5079,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -4881,7 +5132,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -4916,7 +5167,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -4971,7 +5222,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5026,7 +5277,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5086,7 +5337,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5141,7 +5392,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5201,7 +5452,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5261,7 +5512,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5321,7 +5572,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5376,7 +5627,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5431,7 +5682,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5491,7 +5742,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5546,7 +5797,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5601,7 +5852,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5666,7 +5917,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5726,7 +5977,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5786,7 +6037,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5866,7 +6117,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5936,7 +6187,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -5996,7 +6247,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -6051,7 +6302,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -6111,7 +6362,7 @@
     "user": {
       "login": "SimonRinguette",
       "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/SimonRinguette",
       "html_url": "https://github.com/SimonRinguette",
@@ -6191,7 +6442,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -6246,7 +6497,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -6301,7 +6552,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -6356,7 +6607,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -6414,7 +6665,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -6449,7 +6700,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -6502,7 +6753,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -6537,7 +6788,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -6590,7 +6841,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -6625,7 +6876,7 @@
     "user": {
       "login": "tkauth",
       "id": 8965332,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8965332?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8965332?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tkauth",
       "html_url": "https://github.com/tkauth",
@@ -6680,7 +6931,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -6707,9 +6958,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 10,
+    "comments": 11,
     "created_at": "2014-09-24T18:29:57Z",
-    "updated_at": "2014-10-17T13:32:46Z",
+    "updated_at": "2014-11-19T21:57:51Z",
     "closed_at": null,
     "body": "This is a place holder for the discussion regarding the BPMN Color proposal.\r\nPlease add your comments, issues. enhancement proposals below.\r\n"
   },
@@ -6725,7 +6976,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -6780,7 +7031,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -6835,7 +7086,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -6890,7 +7141,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -6950,7 +7201,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -6983,7 +7234,7 @@
     "assignee": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -7018,7 +7269,7 @@
     "user": {
       "login": "apupier",
       "id": 1105127,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1105127?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1105127?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/apupier",
       "html_url": "https://github.com/apupier",
@@ -7051,7 +7302,7 @@
     "assignee": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -7086,7 +7337,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -7104,6 +7355,11 @@
     },
     "labels": [
       {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
@@ -7114,7 +7370,7 @@
     "assignee": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -7133,7 +7389,7 @@
     "milestone": null,
     "comments": 6,
     "created_at": "2014-06-18T19:30:28Z",
-    "updated_at": "2014-09-24T17:52:03Z",
+    "updated_at": "2014-11-07T13:59:58Z",
     "closed_at": null,
     "body": "Model B.2.0 contains no FlowNodeRefs for Boundary Events. That raises two questions:\r\n\r\n1. Are the Boundary Events visible?\r\na) yes, because they are attached to Flow Nodes that are assigned to Lanes\r\nb) no, because they is not assigned to Lanes\r\nc) It depends solely on the DI\r\n\r\n2. Is the test case valid with respect to the BPMN 2.0 spec?\r\na) yes, because a Boundary Event can not be used without the Flow Node to which it is attached and it would be redundant to add an extra FlowNodeRefs.\r\nb) no, because if a Process contains Lanes, then all Flow Nodes must be assigned to Lanes."
   },
@@ -7149,7 +7405,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -7199,7 +7455,7 @@
     "user": {
       "login": "mpetozzi",
       "id": 5450234,
-      "avatar_url": "https://avatars.githubusercontent.com/u/5450234?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5450234?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mpetozzi",
       "html_url": "https://github.com/mpetozzi",
@@ -7240,7 +7496,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -7290,7 +7546,7 @@
     "user": {
       "login": "Francois-W4",
       "id": 6552230,
-      "avatar_url": "https://avatars.githubusercontent.com/u/6552230?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6552230?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/Francois-W4",
       "html_url": "https://github.com/Francois-W4",
@@ -7345,7 +7601,7 @@
     "user": {
       "login": "Francois-W4",
       "id": 6552230,
-      "avatar_url": "https://avatars.githubusercontent.com/u/6552230?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6552230?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/Francois-W4",
       "html_url": "https://github.com/Francois-W4",
@@ -7400,7 +7656,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -7460,7 +7716,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -7515,7 +7771,7 @@
     "user": {
       "login": "ldugan",
       "id": 4049289,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/ldugan",
       "html_url": "https://github.com/ldugan",
@@ -7560,7 +7816,7 @@
     "user": {
       "login": "ldugan",
       "id": 4049289,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/ldugan",
       "html_url": "https://github.com/ldugan",
@@ -7645,7 +7901,7 @@
     "user": {
       "login": "ldugan",
       "id": 4049289,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/ldugan",
       "html_url": "https://github.com/ldugan",
@@ -7715,7 +7971,7 @@
     "user": {
       "login": "ldugan",
       "id": 4049289,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/ldugan",
       "html_url": "https://github.com/ldugan",
@@ -7785,7 +8041,7 @@
     "user": {
       "login": "ldugan",
       "id": 4049289,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/ldugan",
       "html_url": "https://github.com/ldugan",
@@ -7855,7 +8111,7 @@
     "user": {
       "login": "ldugan",
       "id": 4049289,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4049289?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/ldugan",
       "html_url": "https://github.com/ldugan",
@@ -7925,7 +8181,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -7980,7 +8236,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -8035,7 +8291,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -8090,7 +8346,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -8155,7 +8411,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -8210,7 +8466,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -8275,7 +8531,7 @@
     "user": {
       "login": "zmisiak",
       "id": 4265164,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/zmisiak",
       "html_url": "https://github.com/zmisiak",
@@ -8316,7 +8572,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -8354,7 +8610,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -8389,7 +8645,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -8444,7 +8700,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -8499,7 +8755,7 @@
     "user": {
       "login": "sringuette",
       "id": 5009554,
-      "avatar_url": "https://avatars.githubusercontent.com/u/5009554?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5009554?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/sringuette",
       "html_url": "https://github.com/sringuette",
@@ -8537,7 +8793,7 @@
     "assignee": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -8572,7 +8828,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -8627,7 +8883,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -8712,7 +8968,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -8757,7 +9013,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -8812,7 +9068,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -8872,7 +9128,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -8932,7 +9188,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -8975,7 +9231,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9010,7 +9266,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9048,7 +9304,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9083,7 +9339,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9121,7 +9377,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9156,7 +9412,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9194,7 +9450,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9229,7 +9485,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9304,7 +9560,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9359,7 +9615,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -9414,7 +9670,7 @@
     "user": {
       "login": "gimbel",
       "id": 3829733,
-      "avatar_url": "https://avatars.githubusercontent.com/u/3829733?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3829733?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/gimbel",
       "html_url": "https://github.com/gimbel",
@@ -9484,7 +9740,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -9539,7 +9795,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -9594,7 +9850,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -9649,7 +9905,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -9699,7 +9955,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -9754,7 +10010,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -9795,7 +10051,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -9828,7 +10084,7 @@
     "assignee": {
       "login": "svenwb",
       "id": 3901085,
-      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3901085?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/svenwb",
       "html_url": "https://github.com/svenwb",
@@ -9863,7 +10119,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -9918,7 +10174,7 @@
     "user": {
       "login": "sringuette",
       "id": 5009554,
-      "avatar_url": "https://avatars.githubusercontent.com/u/5009554?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5009554?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/sringuette",
       "html_url": "https://github.com/sringuette",
@@ -9963,7 +10219,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -10023,7 +10279,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10056,7 +10312,7 @@
     "assignee": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -10091,7 +10347,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10141,7 +10397,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10191,7 +10447,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10241,7 +10497,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10274,7 +10530,7 @@
     "assignee": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -10309,7 +10565,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10342,7 +10598,7 @@
     "assignee": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -10377,7 +10633,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10422,7 +10678,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10455,7 +10711,7 @@
     "assignee": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -10490,7 +10746,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10540,7 +10796,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10590,7 +10846,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10640,7 +10896,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10690,7 +10946,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10740,7 +10996,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10790,7 +11046,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10840,7 +11096,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -10868,7 +11124,7 @@
     "assignee": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -10903,7 +11159,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -10953,7 +11209,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -11008,7 +11264,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -11078,7 +11334,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11138,7 +11394,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11193,7 +11449,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11248,7 +11504,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11308,7 +11564,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11363,7 +11619,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11423,7 +11679,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11483,7 +11739,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11548,7 +11804,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11603,7 +11859,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11678,7 +11934,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11748,7 +12004,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11813,7 +12069,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11893,7 +12149,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -11973,7 +12229,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -12063,7 +12319,7 @@
     "user": {
       "login": "matthiasgeiger",
       "id": 676652,
-      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/676652?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/matthiasgeiger",
       "html_url": "https://github.com/matthiasgeiger",
@@ -12086,11 +12342,6 @@
         "color": "fbca04"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
-        "name": "bug",
-        "color": "fc2929"
-      },
-      {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
@@ -12101,7 +12352,7 @@
     "assignee": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -12118,9 +12369,9 @@
       "site_admin": false
     },
     "milestone": null,
-    "comments": 5,
+    "comments": 6,
     "created_at": "2013-06-24T08:04:54Z",
-    "updated_at": "2013-07-31T14:40:09Z",
+    "updated_at": "2014-11-07T13:23:38Z",
     "closed_at": null,
     "body": "Hi,\r\nI'm currently evaluating the eclipse BPMN2 modeler and in doing so I spotted a spec violation in the reference model B.2.0:\r\nThe \"Event Base Gateway 3\" links to a Message Intermediate Catch Event and to a Receive Task. This is not allowed by the Spec (p. 298):\r\n\r\n    \"Event-Based Gateways are configured by having outgoing Sequence Flows target\r\n    an Intermediate Event or a Receive Task in any combination[...] except that: \r\n    If Message Intermediate Events are used in the configuration, then Receive \r\n    Tasks MUST NOT be used in that configuration and vice versa.\"\r\n\r\nKind regards,\r\nMatthias"
   },
@@ -12136,7 +12387,7 @@
     "user": {
       "login": "krat0s",
       "id": 1541830,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/krat0s",
       "html_url": "https://github.com/krat0s",
@@ -12186,7 +12437,7 @@
     "user": {
       "login": "arnaiz99",
       "id": 4087028,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4087028?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4087028?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/arnaiz99",
       "html_url": "https://github.com/arnaiz99",
@@ -12261,7 +12512,7 @@
     "user": {
       "login": "arnaiz99",
       "id": 4087028,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4087028?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4087028?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/arnaiz99",
       "html_url": "https://github.com/arnaiz99",
@@ -12326,7 +12577,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -12371,7 +12622,7 @@
     "user": {
       "login": "dgagne",
       "id": 553249,
-      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/dgagne",
       "html_url": "https://github.com/dgagne",
@@ -12416,7 +12667,7 @@
     "user": {
       "login": "tstephen",
       "id": 1498508,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/tstephen",
       "html_url": "https://github.com/tstephen",
@@ -12476,7 +12727,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -12524,7 +12775,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -12559,7 +12810,7 @@
     "user": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -12597,7 +12848,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -12632,7 +12883,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -12680,7 +12931,7 @@
     "assignee": {
       "login": "mschoe",
       "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mschoe",
       "html_url": "https://github.com/mschoe",
@@ -12715,7 +12966,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -12775,7 +13026,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -12830,7 +13081,7 @@
     "user": {
       "login": "lonniev",
       "id": 2193384,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2193384?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2193384?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/lonniev",
       "html_url": "https://github.com/lonniev",
@@ -12880,7 +13131,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -12935,7 +13186,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -12990,7 +13241,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -13050,7 +13301,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -13105,7 +13356,7 @@
     "user": {
       "login": "mskurz",
       "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/mskurz",
       "html_url": "https://github.com/mskurz",
@@ -13160,7 +13411,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
@@ -13220,7 +13471,7 @@
     "user": {
       "login": "falko",
       "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
       "gravatar_id": "",
       "url": "https://api.github.com/users/falko",
       "html_url": "https://github.com/falko",
