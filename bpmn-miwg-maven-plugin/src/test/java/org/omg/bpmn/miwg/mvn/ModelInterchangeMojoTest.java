@@ -42,6 +42,7 @@ public class ModelInterchangeMojoTest {
 	private static XPathExpression testOverviewExpr;
 	private static File overview;
 	private static DocumentBuilder docBuilder;
+    private XPath xPath;
 
 	@Before
 	public void setUp() throws Exception {
@@ -57,7 +58,7 @@ public class ModelInterchangeMojoTest {
 		docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 
 		XPathFactory xPathFactory = XPathFactory.newInstance();
-		XPath xPath = xPathFactory.newXPath();
+        xPath = xPathFactory.newXPath();
 		testOverviewExpr = xPath.compile("//div[@class=\"test\"]");
 	}
 
@@ -91,7 +92,7 @@ public class ModelInterchangeMojoTest {
 					.println("Checking expected output exists with base folder: "
 							+ TestUtil.REPORT_BASE_FOLDER);
 
-			// overview file
+            // assert structure and content of overview file
 			assertTrue(overview.exists());
 			Document document = docBuilder.parse(overview);
 			NodeList nodes = (NodeList) testOverviewExpr.evaluate(document,
@@ -105,6 +106,28 @@ public class ModelInterchangeMojoTest {
 					XsdAnalysisTool.NAME));
 			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
 					XPathAnalysisTool.NAME));
+
+            // assert structure of individual results file
+            File xpathResult = new File(TestUtil.REPORT_BASE_FOLDER
+                    + File.separator + XPathAnalysisTool.NAME + File.separator
+                    + YAOQIANG_2_MODELER_ID + File.separator
+                    + YAOQIANG_2_MODELER_ID + "-A.1.0-roundtrip.html");
+            System.out.println("Checking file: " + xpathResult);
+            assertTrue(xpathResult.exists());
+            document = docBuilder.parse(xpathResult);
+            nodes = (NodeList) xPath.compile(
+                    "//body/div[class=\"testresults\"]")
+                    .evaluate(document, XPathConstants.NODESET);
+            assertTrue("Did not find result element", nodes.getLength() == 1);
+            nodes = (NodeList) xPath.compile(
+                    "//body/div[class=\"results\"]/div[class=\"tool\"]")
+                    .evaluate(document, XPathConstants.NODESET);
+            assertTrue("Did not find tool element", nodes.getLength() == 1);
+            nodes = (NodeList) xPath
+                    .compile(
+                            "//body/div[class=\"results\"]/div[class=\"tool\"]/div[class=\"test\"]")
+                    .evaluate(document, XPathConstants.NODESET);
+            assertTrue("Did not find test element", nodes.getLength() >= 1);
 		} catch (Exception e) {
 			e.printStackTrace();
 			fail(e.getClass() + ":" + e.getMessage());
