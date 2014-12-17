@@ -1072,8 +1072,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+Process+Designer+%28part+of+BPM+Suite%29",
-        "name": "Tool: IBM Process Designer (part of BPM Suite)",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+Process+Designer",
+        "name": "Tool: IBM Process Designer",
         "color": "009800"
       }
     ],
