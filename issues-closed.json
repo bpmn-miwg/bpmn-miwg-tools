@@ -34,9 +34,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 1,
+    "comments": 3,
     "created_at": "2014-12-13T12:22:56Z",
-    "updated_at": "2014-12-17T16:06:08Z",
+    "updated_at": "2014-12-17T16:18:46Z",
     "closed_at": "2014-12-17T16:06:08Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/337",
