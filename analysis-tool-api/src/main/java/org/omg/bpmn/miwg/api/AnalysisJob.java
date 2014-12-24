@@ -81,7 +81,10 @@ public class AnalysisJob {
 	}
 
 	public String getName() {
-		return fullApplicationName + "-" + miwgTestCase + "-" + variant.toString().toLowerCase();
+		if (variant == MIWGVariant.Reference)
+			return fullApplicationName + "-" + miwgTestCase;
+		else 
+			return fullApplicationName + "-" + miwgTestCase + "-" + variant.toString().toLowerCase();
 	}
 
 	public String getFullApplicationName() {

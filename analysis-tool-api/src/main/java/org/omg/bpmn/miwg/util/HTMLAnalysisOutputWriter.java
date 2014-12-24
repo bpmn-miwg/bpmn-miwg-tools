@@ -8,7 +8,9 @@ import java.io.PrintWriter;
 import java.util.Collection;
 import java.util.Scanner;
 
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.AnalysisOutputFragment;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.Test;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.TestResults;
+import org.omg.bpmn.miwg.HtmlOutput.Pojos.Tool;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.AnalysisRun;
@@ -23,20 +25,26 @@ public class HTMLAnalysisOutputWriter {
 	}
 
 	public static void writeAnalysisResults(File rootFolder, AnalysisJob job,
-			AnalysisTool tool, AnalysisResult result) throws Exception {
+			AnalysisTool aTool, AnalysisResult result) throws Exception {
 		PrintWriter htmlOutputWriter = null;
 		InputStream templateStream = null;
 		Scanner scanner = null;
 		try {
 			// Build Simple XML POJO
-			AnalysisOutputFragment root = new AnalysisOutputFragment();
-			root.output = result.output;
+			//AnalysisOutputFragment root = new AnalysisOutputFragment();
+			//root.output = result.output;
+			
+			TestResults testResults_root = new TestResults();
+			Tool tool = testResults_root.addTool(job.getFullApplicationName());
+			Test test = tool.addTest(job.getMIWGTestCase(), job.getVariant().toString());
+			test.addAll(result.output);
+			
 
 			// Build a string containing the HTML fragment representing the
 			// analysis results
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 			Serializer serializer = new Persister();
-			serializer.write(root, outputStream);
+			serializer.write(testResults_root, outputStream);
 			String outputString = outputStream.toString();
 
 			templateStream = HTMLAnalysisOutputWriter.class
