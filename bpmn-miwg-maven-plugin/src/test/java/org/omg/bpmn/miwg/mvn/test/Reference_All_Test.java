@@ -15,6 +15,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.test.common.InstanceParameter;
 import org.omg.bpmn.miwg.test.common.ScanUtil;
 import org.omg.bpmn.miwg.test.parameters.ReferenceScanParameters;
@@ -56,7 +57,7 @@ public class Reference_All_Test {
 		XPathAnalysisTool tool = new XPathAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob(param.application.toString(),
-				param.testResult.name, null, null, null);
+				param.testResult.name, MIWGVariant.Reference, null, null);
 
 		Document bpmnXmlDOM = DOMFactory.getDocument(param.testResult.file);
 		AnalysisResult result = tool.analyzeDOM(job, null, bpmnXmlDOM,
@@ -73,7 +74,7 @@ public class Reference_All_Test {
 		XsdAnalysisTool tool = new XsdAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob(param.application.toString(),
-				param.testResult.name, null, null, null);
+				param.testResult.name, MIWGVariant.Reference, null, null);
 
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		try {
@@ -98,7 +99,7 @@ public class Reference_All_Test {
 		XmlCompareAnalysisTool tool = new XmlCompareAnalysisTool();
 
 		AnalysisJob job = new AnalysisJob(param.application.toString(),
-				param.testResult.name, null, null, null);
+				param.testResult.name, MIWGVariant.Reference, null, null);
 
 		Document bpmnXmlDOM1 = DOMFactory.getDocument(param.testResult.file);
 		Document bpmnXmlDOM2 = DOMFactory.getDocument(param.testResult.file);
