@@ -1,66 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.omg.bpmn.miwg</groupId>
-		<artifactId>tools</artifactId>
-		<version>0.3-SNAPSHOT</version>
-		<relativePath>..</relativePath>
-	</parent>
-	<artifactId>xpath-tool</artifactId>
-	<name>BPMN 2.0 XPath Test Runner</name>
-	<description>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.omg.bpmn.miwg</groupId>
+    <artifactId>tools</artifactId>
+    <version>0.3-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+  <artifactId>xpath-tool</artifactId>
+  <name>BPMN 2.0 XPath Test Runner</name>
+  <description>
     <![CDATA[
        Asserts that expected content from the reference model exists in each vendor model. Read more 
       at: https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner
     ]]>
   </description>
-	<packaging>jar</packaging>
+  <packaging>jar</packaging>
 
-	<inceptionYear>2013</inceptionYear>
-	<organization>
-		<name>BPMN-MIWG</name>
-		<url>https://github.com/bpmn-miwg</url>
-	</organization>
+  <inceptionYear>2013</inceptionYear>
+  <organization>
+    <name>BPMN-MIWG</name>
+    <url>https://github.com/bpmn-miwg</url>
+  </organization>
 
-	<properties>
-		<java.version>1.6</java.version>
+  <properties>
+    <java.version>1.6</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+  </properties>
 
-	<dependencies>
+  <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>analysis-tool-api</artifactId>
       <version>${project.version}</version>
     </dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.thoughtworks.xstream</groupId>
-			<artifactId>xstream</artifactId>
-			<version>1.4.4</version>
-		</dependency>
-	</dependencies>
+  <dependency>
+    <groupId>com.thoughtworks.xstream</groupId>
+    <artifactId>xstream</artifactId>
+    <version>1.4.4</version>
+  </dependency>
+  </dependencies>
 
-	<build>
+  <build>
 
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<inherited>true</inherited>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-				<version>2.3.2</version>
-			</plugin>
-			<plugin>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+        <version>2.3.2</version>
+      </plugin>
+      <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
         <version>1.7</version>
         <executions>
@@ -85,47 +79,47 @@
           </execution>
         </executions>
       </plugin>
-		</plugins>
+    </plugins>
 
-		<pluginManagement>
-		  <plugins>
-		    <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-		    <plugin>
-		      <groupId>org.eclipse.m2e</groupId>
-		      <artifactId>lifecycle-mapping</artifactId>
-		      <version>1.0.0</version>
-		      <configuration>
-		        <lifecycleMappingMetadata>
-		          <pluginExecutions>
-		            <pluginExecution>
-		              <pluginExecutionFilter>
-		                <groupId>org.apache.maven.plugins</groupId>
-		                <artifactId>maven-antrun-plugin</artifactId>
-		                <versionRange>[1.7,)</versionRange>
-		                <goals>
-		                  <goal>run</goal>
-		                </goals>
-		              </pluginExecutionFilter>
-		              <action>
-		                <ignore></ignore>
-		              </action>
-		            </pluginExecution>
-		          </pluginExecutions>
-		        </lifecycleMappingMetadata>
-		      </configuration>
-		    </plugin>
-		  </plugins>
-		</pluginManagement>
-	</build>
+    <pluginManagement>
+      <plugins>
+        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <versionRange>[1.7,)</versionRange>
+                    <goals>
+                      <goal>run</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore></ignore>
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.14.1</version>
-			</plugin>
-		</plugins>
-	</reporting>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.14.1</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
