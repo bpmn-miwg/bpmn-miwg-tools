@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="Trisotech BPMN Web Modeler 4.1.8">
+      <h2>Trisotech BPMN Web Modeler 4.1.8</h2>
+      <div class="test" data-test="C.1.0" data-variant="Export">
+         <h3>C.1.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: Trisotech BPMN Web Modeler 4.1.8-C.1.0-export</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : callingMethod: Push (id: _174d9cb4-7f2e-4fb5-87b1-3a172e98ae41)</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectCollaboration; Message: bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectCollaboration: Push (id: _03ec80ec-9fe3-4ec7-9af3-40d1cb74baca)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectPool; Message: bpmn:participant[@name=&apos;Team-Assistant&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectPool: Push (id: _28d5f86b-4ccf-46cc-b1cd-6860004910c4)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectReferencedProcess; Message: //bpmn:process[@id=&apos;_93a10ece-50b3-4e85-aa6c-768bec0aa40f&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectReferencedProcess: Push (id: _93a10ece-50b3-4e85-aa6c-768bec0aa40f)</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name=&apos;Invoice received&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Scan camunda-invoice-en&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name=&apos;&apos;) and @sourceRef=&apos;_93a10ece-50b3-4e85-aa6c-768bec0aa40f&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Archive original&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateCatchEvent[@name=&apos;Approver to be assigned&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Assign approver&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:eventBasedGateway[@name=&apos;&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateCatchEvent[@name=&apos;7 days&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkTimerEvent; Message: Cannot find timer event definition; Parameter: bpmn:timerEventDefinition | bpmn:eventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;null&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkMessageEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: bpmn:task[@name=&apos;Review and document result&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: bpmn:endEvent[not(@name)]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: _93a10ece-50b3-4e85-aa6c-768bec0aa40f)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : callingMethod: Pop (id: _28d5f86b-4ccf-46cc-b1cd-6860004910c4)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectPool; Message: bpmn:participant[@name=&apos;Process Engine - Invoice Receipt&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectPool: Push (id: _30ea2ba6-e496-44d7-9528-deff02dab537)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectReferencedProcess; Message: //bpmn:process[@id=&apos;_1bf32878-f4ac-4ee2-b5b0-0c3e61282ad0&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectReferencedProcess: Push (id: _1bf32878-f4ac-4ee2-b5b0-0c3e61282ad0)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateLane; Message: bpmn:laneSet/bpmn:lane[@name=&apos;Team Assistant&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateLane; Message: bpmn:laneSet/bpmn:lane[@name=&apos;Approver&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateLane; Message: bpmn:laneSet/bpmn:lane[@name=&apos;Accountant&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateElement; Message: No node found; Parameter: bpmn:startEvent[@name=&apos;Invoice received&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name=&apos;&apos;) and @targetRef=&apos;_6897c3da-5cbe-4e7c-973d-58eb8d5c6bb0&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name=&apos;Assign Approver&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name=&apos;Approve Invoice&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name=&apos;Invoice approved?&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:userTask[@name=&apos;Rechnung klären&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name=&apos;Review successful?&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;Invoice not processed&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: _1bf32878-f4ac-4ee2-b5b0-0c3e61282ad0)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : callingMethod: Pop (id: _30ea2ba6-e496-44d7-9528-deff02dab537)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : callingMethod: Pop (id: _03ec80ec-9fe3-4ec7-9af3-40d1cb74baca)</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : callingMethod: Pop (id: _174d9cb4-7f2e-4fb5-87b1-3a172e98ae41)</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>

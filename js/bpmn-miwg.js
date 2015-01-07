@@ -43,11 +43,12 @@ function ModelInterchangePresenter() {
           $('.testresults').addClass('hide');
           var container = $('body').append('<div class="mi-table container-fluid">'
                   +'<div class="mi-header row-fluid">'
-                    +'<h2 class="offset1 span6">Test</h2>'
+                    +'<h2 class="offset1 span4">Test</h2>'
+                    +'<h2 class="span2">Schema Valid?</h2>'
                     +'<h2 class="span2">Assertions (findings/total)</h2>'
                     +'<h2 class="span2">Differences detected</h2>'
                   +'</div>');
-          $('.test > a').sort().each(function(i,d) {
+          $('.test a').sort().each(function(i,d) {
               var s = d.href.substring(d.href.lastIndexOf('/')+1).split('-');
               // workaround for itp-commerce and camunda-bpmn
               if (s.length>3) {
@@ -63,22 +64,29 @@ function ModelInterchangePresenter() {
                 /* Reference has no variant, e.g. "Reference-A.1.0.bpmn.txt" */
                   variant: s[2] === undefined ? '' : s[2].substring(0,s[2].indexOf('.')),
                   url: d.href,
+                  xsdUrl: baseUrl+'/xsd/'+s[0]+'/'+d.href.substring(d.href.lastIndexOf('/')+1),
                   xpathUrl: baseUrl+'/xpath/'+s[0]+'/'+d.href.substring(d.href.lastIndexOf('/')+1),
                   xmlCompareUrl: baseUrl+'/xml-compare/'+s[0]+'/'+d.href.substring(d.href.lastIndexOf('/')+1,d.href.length),
-                  findings: $(d).parent().data('findings') === undefined ? 'N/A' : $(d).parent().data('findings'),
-                  ok: $(d).parent().data('ok') === undefined ? 'N/A' : $(d).parent().data('ok'),
-                  diffs: $(d).parent().data('diffs') === undefined ? 'N/A' : $(d).parent().data('diffs')
+                  schemaValid: $(d).closest('.test').data('xsd-ok') === 1 ? true : false,
+                  findings: $(d).closest('.test').data('xpath-finding') === undefined ? 'N/A' : $(d).closest('.test').data('xpath-finding'),
+                  ok: $(d).closest('.test').data('xpath-ok') === undefined ? 'N/A' : $(d).closest('.test').data('xpath-ok'),
+                  diffs: $(d).closest('.test').data('xml-compare-finding') === undefined ? 'N/A' : $(d).closest('.test').data('xml-compare-finding')
               };
               var prev = mi.results[i-1];
               if (prev===undefined || prev.vendor!=cur.vendor) {
+                  console.log('new tool vendor....'+cur.vendor);
                   container.append('<div class="row-fluid"><h3 class="offset1 span10" id="'+cur.vendor+'">'+cur.vendor+'</h3></div>');
+              } else { 
+                  console.log('continuing with vendor: '+cur.vendor);
               }
+              var xsdClass = cur.schemaValid ? 'mi-no-findings' : 'mi-error';
               var findingsClass = cur.findings == 0 ? 'mi-no-findings' : 'mi-findings';
               var diffsClass = cur.diffs == 0 ? 'mi-no-findings' : 'mi-findings';
               container.append('<div class="row-fluid">'
-                      +'<span class="mi-test offset1 span6">'
+                      +'<span class="mi-test offset1 span4">'
                       +cur.suite+': '+cur.variant
                       +'</span>'
+                      +'<span class="span2 '+xsdClass+'"><a href="'+cur.xsdUrl+'">'+cur.schemaValid+'</a></span>'
                       +'<span class="span2 '+findingsClass+'"><a href="'+cur.xpathUrl+'">'+cur.findings+'/'+(cur.findings+cur.ok)+'</a></span>'
                       +'<span class="span2 '+diffsClass+'"><a href="'+cur.xmlCompareUrl+'">'+cur.diffs+'</span>'
                       +'</div>');
@@ -87,8 +95,8 @@ function ModelInterchangePresenter() {
       } else {
         // individual test results page
           // enhance basic data with presentation classes
-          $('.testresults').addClass('container');
-          $('.test').addClass('well').addClass('span12');
+          $('.testresults','.analysisresult').addClass('container');
+          $('.test','.info').addClass('well').addClass('span12');
           
           // add additional presentation structures
           $('body').append('<div class="hide messages"></div>');

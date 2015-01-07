@@ -20,49 +20,61 @@
         </ul>
 			</div>
 		</div>
-		<div class="testresults">
+<div class="testresults">
    <div class="tool" data-vendor="bpmn.io 0.5.0">
       <h2>bpmn.io 0.5.0</h2>
-      <div class="test" data-test="A.2.0" data-variant="export">
+      <div class="test" data-test="A.2.0" data-variant="Export">
          <h3>A.2.0</h3>
-         <div class="ok">
-            <h4>OK     : selectElementX; Message: /bpmn:definitions/bpmn:process</h4>
+         <div class="info">
+            <h4>ANALYSIS: bpmn.io 0.5.0-A.2.0-export</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
+            <h4>  OK     : callingMethod: Push (id: Definitions_1)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;Task_0qrckvo&apos;]</h4>
-         </div>
-         <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name=&apos;Gateway (Split Flow)&apos;]</h4>
-         </div>
-         <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 2&apos;]</h4>
+            <h4>    OK     : selectElementX; Message: /bpmn:definitions/bpmn:process</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElement; Message: </h4>
-         </div>
-         <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>    OK     : selectElementX: Push (id: Process_1)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElement; Message: </h4>
-         </div>
-         <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>      OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElement; Message: </h4>
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;Task_0qrckvo&apos;]</h4>
          </div>
-         <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Split Flow)&apos; and @id=&apos;ExclusiveGateway_13vn7qs&apos;]</h4>
          </div>
-         <div class="finding">
-            <h4>FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;Task_083dibb&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElement; Message: #document/bpmn:definitions[@id=&apos;id=&quot;Definitions_1&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;Process_1&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;ExclusiveGateway_13vn7qs&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;Task_0tgrn3k&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElement; Message: #document/bpmn:definitions[@id=&apos;id=&quot;Definitions_1&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;Process_1&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;ExclusiveGateway_13vn7qs&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;Task_0rl6inp&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;ExclusiveGateway_1aasx8u&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElement; Message: #document/bpmn:definitions[@id=&apos;id=&quot;Definitions_1&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;Process_1&quot;&apos;]/bpmn:task[@id=&apos;id=&quot;Task_0tgrn3k&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;ExclusiveGateway_1aasx8u&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;EndEvent_1e9k0u7&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : callingMethod: Pop (id: Process_1)</h4>
          </div>
       </div>
    </div>

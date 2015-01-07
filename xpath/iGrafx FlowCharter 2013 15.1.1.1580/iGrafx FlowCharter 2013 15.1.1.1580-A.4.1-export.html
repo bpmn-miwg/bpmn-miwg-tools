@@ -20,85 +20,127 @@
         </ul>
 			</div>
 		</div>
-		<div class="testresults">
+<div class="testresults">
    <div class="tool" data-vendor="iGrafx FlowCharter 2013 15.1.1.1580">
       <h2>iGrafx FlowCharter 2013 15.1.1.1580</h2>
-      <div class="test" data-test="A.4.1" data-variant="export">
+      <div class="test" data-test="A.4.1" data-variant="Export">
          <h3>A.4.1</h3>
+         <div class="info">
+            <h4>ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-A.4.1-export</h4>
+         </div>
          <div class="finding">
-            <h4>FINDING: callingMethod; Message: Cannot find attribute; Parameter: id</h4>
+            <h4>  FINDING: callingMethod; Message: Cannot find attribute; Parameter: id</h4>
          </div>
          <div class="ok">
-            <h4>OK     : selectCollaboration; Message: bpmn:collaboration</h4>
+            <h4>  OK     : callingMethod: Push (id: )</h4>
          </div>
          <div class="ok">
-            <h4>OK     : selectPool; Message: bpmn:participant[@name=&apos;Pool 1&apos;]</h4>
+            <h4>    OK     : selectCollaboration; Message: bpmn:collaboration</h4>
          </div>
          <div class="ok">
-            <h4>OK     : selectReferencedProcess; Message: //bpmn:process[@id=&apos;process_IDAPSTJB&apos;]</h4>
+            <h4>    OK     : selectCollaboration: Push (id: diagram_IDARXPGE)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 1&apos;]</h4>
+            <h4>      OK     : selectPool; Message: bpmn:participant[@name=&apos;Pool 1&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;shape_IDALPMJB&apos;]</h4>
+            <h4>      OK     : selectPool: Push (id: dept_IDAPSTJB)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
+            <h4>        OK     : selectReferencedProcess; Message: //bpmn:process[@id=&apos;process_IDAPSTJB&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;shape_IDASJPGE&apos;]</h4>
+            <h4>        OK     : selectReferencedProcess: Push (id: process_IDAPSTJB)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 2&apos; (Input)</h4>
+            <h4>          OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 1&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;shape_IDAKOPGE&apos;]</h4>
+            <h4>          OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;shape_IDALPMJB&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]</h4>
+            <h4>          OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]</h4>
+            <h4>          OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;shape_IDASJPGE&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
+            <h4>          OK     : checkMessageFlow; Message: message flow &apos;Message Flow 2&apos; (Input)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;shape_IDAHUNGE&apos;]</h4>
+            <h4>          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;shape_IDAKOPGE&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Input)</h4>
+            <h4>          OK     : callingMethod: Pop (id: process_IDAPSTJB)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;shape_IDAWVTJB&apos;]</h4>
+            <h4>        OK     : callingMethod: Pop (id: dept_IDAPSTJB)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;shape_IDAD1OGE&apos;]</h4>
+            <h4>      OK     : navigateElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : checkMessageFlow; Message: message flow &apos;Message Flow 2&apos; (Output)</h4>
+            <h4>      OK     : selectElementX; Message: /bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;shape_IDA15OGE&apos;]</h4>
+            <h4>      OK     : selectElementX: Push (id: process_IDAPPTJB)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElement; Message: #document/definitions/process[@id=&apos;id=&quot;process_IDAPPTJB&quot;&apos;]/task[@id=&apos;id=&quot;shape_IDAHUNGE&quot;&apos;]/</h4>
+            <h4>        OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;shape_IDAAJMJB&apos;]</h4>
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;shape_IDAHUNGE&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 4&apos;]</h4>
+            <h4>        OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Input)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 6&apos; and @id=&apos;shape_IDABOOGE&apos;]</h4>
+            <h4>        OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;shape_IDAWVTJB&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 4&apos; and @id=&apos;shape_IDAQUOGE&apos;]</h4>
+            <h4>        OK     : selectFollowingElement: Push (id: shape_IDAWVTJB)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;shape_IDAWEPGE&apos;]</h4>
+            <h4>          OK     : callingMethod: Pop (id: shape_IDAWVTJB)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;shape_IDAD1OGE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageFlow; Message: message flow &apos;Message Flow 2&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;shape_IDA15OGE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: #document/definitions/process[@id=&apos;id=&quot;process_IDAPPTJB&quot;&apos;]/task[@id=&apos;id=&quot;shape_IDAHUNGE&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;shape_IDAAJMJB&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement: Push (id: shape_IDAAJMJB)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 6&apos; and @id=&apos;shape_IDABOOGE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 4&apos; and @id=&apos;shape_IDAQUOGE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: shape_IDAAJMJB)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;shape_IDAWEPGE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : callingMethod: Pop (id: process_IDAPPTJB)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : callingMethod: Pop (id: diagram_IDARXPGE)</h4>
          </div>
       </div>
    </div>
