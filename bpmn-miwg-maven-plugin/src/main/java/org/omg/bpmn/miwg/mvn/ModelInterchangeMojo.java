@@ -121,10 +121,18 @@ public class ModelInterchangeMojo extends AbstractMojo {
 
 						for (File b : bpmnFiles) {
 							AnalysisJob job;
-
-							job = new AnalysisJob(b.getCanonicalPath());
-
-							jobs.add(job);
+                            try {
+                                job = new AnalysisJob(b.getCanonicalPath());
+                                jobs.add(job);
+                            } catch (Throwable t) {
+                                getLog().error(
+                                        String.format("ERROR: %1$s, %2$s", app,
+                                                b.getCanonicalPath()));
+                                getLog().error(
+                                        String.format("     : %1$s, %2$s", t
+                                                .getClass().getName(), t
+                                                .getMessage()));
+                            }
 						}
 					}
 				}

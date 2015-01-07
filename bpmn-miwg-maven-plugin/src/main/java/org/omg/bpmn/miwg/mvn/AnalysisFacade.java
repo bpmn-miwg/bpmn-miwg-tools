@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.Collection;
 import java.util.LinkedList;
 
+import org.apache.log4j.Logger;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.AnalysisRun;
@@ -18,6 +19,8 @@ import org.w3c.dom.Document;
 
 public class AnalysisFacade {
 
+    private Logger LOGGER = Logger.getLogger(AnalysisFacade.class);
+
 	private File outputFolder;
 
 	public AnalysisFacade(File outputFolder) {
@@ -29,8 +32,15 @@ public class AnalysisFacade {
 		Collection<AnalysisRun> runs = new LinkedList<AnalysisRun>();
 
 		for (AnalysisJob job : jobs) {
-			AnalysisRun run = executeAnalysisJob(job);
-			runs.add(run);
+            try {
+                AnalysisRun run = executeAnalysisJob(job);
+                runs.add(run);
+            } catch (Throwable t) {
+                LOGGER.error(String.format("ERROR: %1$s, %2$s",
+                        job.getFullApplicationName(), job.getMIWGTestCase()));
+                LOGGER.error(String.format("     : %1$s, %2$s", t
+                        .getClass().getName(), t.getMessage()));
+            }
 		}
 
 		HTMLAnalysisOutputWriter.writeOverview(outputFolder, runs);
