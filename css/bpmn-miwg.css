@@ -74,10 +74,18 @@ label {
   border: #aaa 1px solid;
   
 }
+.mi-error {
+  background-color: #f44;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-right: 5px;
+  text-align: right;
+}
 .mi-test, .mi-ok {
   background-color: #eee;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: #333333;
   padding-left: 5px;
 }
 .mi-no-findings {
