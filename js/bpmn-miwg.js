@@ -86,7 +86,7 @@ function ModelInterchangePresenter() {
                       +'<span class="mi-test offset1 span4">'
                       +cur.suite+': '+cur.variant
                       +'</span>'
-                      +'<span class="span2 '+xsdClass+'">'+cur.schemaValid+'</span>'
+                      +'<span class="span2 '+xsdClass+'"><a href="'+cur.xsdUrl+'">'+cur.schemaValid+'</a></span>'
                       +'<span class="span2 '+findingsClass+'"><a href="'+cur.xpathUrl+'">'+cur.findings+'/'+(cur.findings+cur.ok)+'</a></span>'
                       +'<span class="span2 '+diffsClass+'"><a href="'+cur.xmlCompareUrl+'">'+cur.diffs+'</span>'
                       +'</div>');
