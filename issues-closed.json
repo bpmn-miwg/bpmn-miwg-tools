@@ -398,12 +398,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+W4+BPMN%2B+Composer",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20W4%20BPMN+%20Composer",
         "name": "Tool: W4 BPMN+ Composer",
         "color": "009800"
       }
@@ -458,12 +458,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+W4+BPMN%2B+Composer",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20W4%20BPMN+%20Composer",
         "name": "Tool: W4 BPMN+ Composer",
         "color": "009800"
       }
@@ -560,7 +560,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
       }
@@ -628,7 +628,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
       }
@@ -696,7 +696,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
       }
@@ -811,7 +811,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
       }
@@ -1114,12 +1114,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
         "name": "Test: A.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+IBM+Process+Designer",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20IBM%20Process%20Designer",
         "name": "Tool: IBM Process Designer",
         "color": "009800"
       }
@@ -1263,7 +1263,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
       }
@@ -1466,7 +1466,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+C.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
       }
@@ -1534,7 +1534,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       }
@@ -1584,7 +1584,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.2",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.2",
         "name": "Test: A.1.2",
         "color": "006b75"
       }
@@ -1940,7 +1940,7 @@
         "color": "d4c5f9"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.1",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.1",
         "name": "Test: A.1.1",
         "color": "006b75"
       }
@@ -2105,7 +2105,7 @@
         "color": "d4c5f9"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.2",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.2",
         "name": "Test: A.1.2",
         "color": "006b75"
       }
@@ -2173,7 +2173,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.2",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.2",
         "name": "Test: A.1.2",
         "color": "006b75"
       }
@@ -2228,37 +2228,37 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
         "name": "Test: A.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
         "name": "Test: A.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
         "name": "Test: A.3.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
         "name": "Test: A.4.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+iGrafx+Process+2013+for+Six+Sigma",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20iGrafx%20Process%202013%20for%20Six%20Sigma",
         "name": "Tool: iGrafx Process 2013 for Six Sigma",
         "color": "009800"
       }
@@ -2731,12 +2731,12 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.1",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
         "name": "Test: A.4.1",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Signavio%20Process%20Editor",
         "name": "Tool: Signavio Process Editor",
         "color": "009800"
       }
@@ -2851,17 +2851,17 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
         "name": "Test: A.3.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
         "name": "Tool: camunda Modeler",
         "color": "009800"
       }
@@ -2911,17 +2911,17 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda-bpmn.js",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda-bpmn.js",
         "name": "Tool: camunda-bpmn.js",
         "color": "009800"
       }
@@ -3152,12 +3152,12 @@
     },
     "labels": [
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Automation%3A+results+site",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Automation:%20results%20site",
         "name": "Automation: results site",
         "color": "5319e7"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Automation%3A+xml-compare",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Automation:%20xml-compare",
         "name": "Automation: xml-compare",
         "color": "5319e7"
       },
@@ -3259,12 +3259,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+itp-commerce+Process+Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20itp-commerce%20Process%20Modeler",
         "name": "Tool: itp-commerce Process Modeler",
         "color": "009800"
       }
@@ -3361,12 +3361,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Signavio%20Process%20Editor",
         "name": "Tool: Signavio Process Editor",
         "color": "009800"
       }
@@ -3510,7 +3510,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.1",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
         "name": "Test: A.4.1",
         "color": "006b75"
       }
@@ -3578,7 +3578,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.1",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
         "name": "Test: A.4.1",
         "color": "006b75"
       }
@@ -3646,12 +3646,12 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.1",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
         "name": "Test: A.4.1",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Signavio%20Process%20Editor",
         "name": "Tool: Signavio Process Editor",
         "color": "009800"
       }
@@ -3766,12 +3766,12 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       }
@@ -3839,12 +3839,12 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       }
@@ -3907,12 +3907,12 @@
     },
     "labels": [
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN+RTF",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN%20RTF",
         "name": "BPMN RTF",
         "color": "fbca04"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal+for+RTF",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal%20for%20RTF",
         "name": "Proposal for RTF",
         "color": "fef2c0"
       }
@@ -3980,7 +3980,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       }
@@ -4048,12 +4048,12 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       }
@@ -4103,12 +4103,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Signavio%20Process%20Editor",
         "name": "Tool: Signavio Process Editor",
         "color": "009800"
       }
@@ -4158,12 +4158,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Signavio+Process+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Signavio%20Process%20Editor",
         "name": "Tool: Signavio Process Editor",
         "color": "009800"
       }
@@ -4270,12 +4270,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Trisotech+BPMN+Web+Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Web%20Modeler",
         "name": "Tool: Trisotech BPMN Web Modeler",
         "color": "009800"
       }
@@ -4325,7 +4325,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       }
@@ -4393,7 +4393,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
         "name": "Test: A.4.0",
         "color": "006b75"
       }
@@ -4495,12 +4495,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Yaoqiang+BPMN+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
         "name": "Tool: Yaoqiang BPMN Editor",
         "color": "009800"
       }
@@ -4555,12 +4555,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Yaoqiang+BPMN+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
         "name": "Tool: Yaoqiang BPMN Editor",
         "color": "009800"
       }
@@ -4610,12 +4610,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Yaoqiang+BPMN+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
         "name": "Tool: Yaoqiang BPMN Editor",
         "color": "009800"
       }
@@ -4665,12 +4665,12 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Yaoqiang+BPMN+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
         "name": "Tool: Yaoqiang BPMN Editor",
         "color": "009800"
       }
@@ -4772,17 +4772,17 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
         "name": "Tool: camunda Modeler",
         "color": "009800"
       }
@@ -4837,17 +4837,17 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
         "name": "Tool: camunda Modeler",
         "color": "009800"
       }
@@ -4902,17 +4902,17 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
         "name": "Tool: camunda Modeler",
         "color": "009800"
       }
@@ -4962,22 +4962,22 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
         "name": "Test: A.3.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+camunda+Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
         "name": "Tool: camunda Modeler",
         "color": "009800"
       }
@@ -5139,7 +5139,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       }
@@ -5207,7 +5207,7 @@
         "color": "fc2929"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       }
@@ -5280,27 +5280,27 @@
         "color": "0052cc"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
         "name": "Test: A.3.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.4.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
         "name": "Test: A.4.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.1.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
         "name": "Test: B.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+B.2.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
         "name": "Test: B.2.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool%3A+Yaoqiang+BPMN+Editor",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
         "name": "Tool: Yaoqiang BPMN Editor",
         "color": "009800"
       }
@@ -6040,7 +6040,7 @@
         "color": "84b6eb"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test%3A+A.3.0",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
         "name": "Test: A.3.0",
         "color": "006b75"
       }
