@@ -19,7 +19,7 @@ import org.w3c.dom.Document;
 
 public class AnalysisFacade {
 
-    private Logger LOGGER = Logger.getLogger(AnalysisFacade.class);
+	private Logger LOGGER = Logger.getLogger(AnalysisFacade.class);
 
 	private File outputFolder;
 
@@ -32,15 +32,15 @@ public class AnalysisFacade {
 		Collection<AnalysisRun> runs = new LinkedList<AnalysisRun>();
 
 		for (AnalysisJob job : jobs) {
-            try {
-                AnalysisRun run = executeAnalysisJob(job);
-                runs.add(run);
-            } catch (Throwable t) {
-                LOGGER.error(String.format("ERROR: %1$s, %2$s",
-                        job.getFullApplicationName(), job.getMIWGTestCase()));
-                LOGGER.error(String.format("     : %1$s, %2$s", t
-                        .getClass().getName(), t.getMessage()));
-            }
+			try {
+				AnalysisRun run = executeAnalysisJob(job);
+				runs.add(run);
+			} catch (Throwable t) {
+				LOGGER.error(String.format("ERROR: %1$s, %2$s",
+						job.getFullApplicationName(), job.getMIWGTestCase()));
+				LOGGER.error(String.format("     : %1$s, %2$s", t.getClass()
+						.getName(), t.getMessage()));
+			}
 		}
 
 		HTMLAnalysisOutputWriter.writeOverview(outputFolder, runs);
@@ -61,21 +61,34 @@ public class AnalysisFacade {
 			Document referenceDom;
 
 			// Build the DOMs for the DOMAnalysisTools
-			referenceInputStream = job.getReferenceInput().getInputStream();
-			actualInputStream = job.getActualInput().getInputStream();
-			assert referenceInputStream != null;
-			assert actualInputStream != null;
+			{
+				actualInputStream = job.getActualInput().getInputStream();
+				assert referenceInputStream != null;
+				assert actualInputStream != null;
 
-			referenceDom = DOMFactory.getDocument(referenceInputStream);
-			actualDom = DOMFactory.getDocument(actualInputStream);
-			assert referenceDom != null;
-			assert actualDom != null;
+				actualDom = DOMFactory.getDocument(actualInputStream);
 
-			if (referenceInputStream != null)
-				referenceInputStream.close();
-			if (actualInputStream != null)
-				actualInputStream.close();
+				assert actualDom != null;
+				if (actualInputStream != null)
+					actualInputStream.close();
+			}
 
+			boolean hasReference;
+			{
+				hasReference = job.hasReference();
+				if (hasReference) {
+					referenceInputStream = job.getReferenceInput()
+							.getInputStream();
+					referenceDom = DOMFactory.getDocument(referenceInputStream);
+					assert referenceDom != null;
+					if (referenceInputStream != null)
+						referenceInputStream.close();
+				} else {
+					referenceInputStream = null;
+					referenceDom = null;
+				}
+			}
+			
 			// Build the InputStream for the XSD tool using the input stream
 			actualInputStream = job.getActualInput().getInputStream();
 			assert actualInputStream != null;

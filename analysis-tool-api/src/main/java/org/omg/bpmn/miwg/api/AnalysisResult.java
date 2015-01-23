@@ -71,4 +71,8 @@ public class AnalysisResult {
 		File file = new File(rootFolder, fileName);
 		return file;
 	}
+
+	public Collection<? extends Output> getOutput() {
+		return output;
+	}
 }

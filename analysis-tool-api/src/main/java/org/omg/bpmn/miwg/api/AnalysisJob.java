@@ -59,7 +59,6 @@ public class AnalysisJob {
 			miwgTestCase = bpmnFile.getName();
 		}
 
-		
 		if (!bpmnFile.exists())
 			throw new FileNotFoundException(bpmnFile.getCanonicalPath());
 		actualInput = new FileAnalysisInput(bpmnFile);
@@ -69,22 +68,25 @@ public class AnalysisJob {
 		if (!referenceFolder.exists())
 			throw new FileNotFoundException(referenceFolder.getCanonicalPath());
 
-		File referenceBpmnFile = new File(referenceFolder, miwgTestCase + ".bpmn");
-		// TODO This is not a safe assumption. Not only in theory but in 
-		// actuality (bpmn.io 0.5.0) a vendor folder may contain files for 
-		// which there is no reference and this should not stop the entire 
-		// analysis
-		if (!referenceBpmnFile.exists())
-            throw new FileNotFoundException(
-                    referenceBpmnFile.getCanonicalPath());
-		referenceInput = new FileAnalysisInput(referenceBpmnFile);
+		File referenceBpmnFile = new File(referenceFolder, miwgTestCase
+				+ ".bpmn");
+
+		/**
+		 * In some cases, the reference file might be missing.
+		 * This is problematic for the XmlCompareTool.
+		 */
+		if (referenceBpmnFile.exists())
+			referenceInput = new FileAnalysisInput(referenceBpmnFile);
+		else
+			referenceInput = null;
 	}
 
 	public String getName() {
 		if (variant == MIWGVariant.Reference)
 			return fullApplicationName + "-" + miwgTestCase;
-		else 
-			return fullApplicationName + "-" + miwgTestCase + "-" + variant.toString().toLowerCase();
+		else
+			return fullApplicationName + "-" + miwgTestCase + "-"
+					+ variant.toString().toLowerCase();
 	}
 
 	public String getFullApplicationName() {
@@ -101,6 +103,10 @@ public class AnalysisJob {
 
 	public AnalysisInput getActualInput() {
 		return actualInput;
+	}
+
+	public boolean hasReference() {
+		return referenceInput != null;
 	}
 
 	public AnalysisInput getReferenceInput() {

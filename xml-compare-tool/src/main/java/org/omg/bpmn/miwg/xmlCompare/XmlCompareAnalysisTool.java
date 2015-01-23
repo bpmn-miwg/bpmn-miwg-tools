@@ -30,6 +30,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -56,10 +57,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 
-    public static final String NAME = "xml-compare";
-	
-	private static Bpmn20ConformanceChecker checker;
+	public static final String NAME = "xml-compare";
 
+	private static Bpmn20ConformanceChecker checker;
 
 	protected static Document getDocument(InputStream inputStream)
 			throws SAXException, ParserConfigurationException, IOException {
@@ -113,10 +113,21 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 	public AnalysisResult analyzeDOM(AnalysisJob job,
 			Document referenceDocument, Document actualDocument, File logDir)
 			throws Exception {
-		List<Difference> diffs = getChecker().getSignificantDifferences(
-				actualDocument, referenceDocument);
-
-		return new AnalysisResult(0, diffs.size(), adapt(diffs), this);
+		if (job.hasReference()) {
+			List<Difference> diffs = getChecker().getSignificantDifferences(
+					actualDocument, referenceDocument);
+			return new AnalysisResult(0, diffs.size(), adapt(diffs), this);
+		} else {
+			Collection<Output> infoCollection = new LinkedList<Output>();
+			
+			Output info = new Output();
+			info.setOutputType(OutputType.info);
+			info.setDescription("Reference not found. Therefore, we cannot compare with the reference");
+			
+			infoCollection.add(info);
+			
+			return new AnalysisResult(0, 0, infoCollection, this);
+		}
 	}
 
 	private Collection<? extends Output> adapt(List<Difference> diffs) {
