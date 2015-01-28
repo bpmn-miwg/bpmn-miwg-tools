@@ -239,9 +239,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 0,
+    "comments": 3,
     "created_at": "2015-01-16T14:23:25Z",
-    "updated_at": "2015-01-16T14:23:25Z",
+    "updated_at": "2015-01-28T15:30:25Z",
     "closed_at": null,
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/410",
@@ -2490,7 +2490,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2498,7 +2512,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:29:33Z",
-    "updated_at": "2014-12-13T12:29:33Z",
+    "updated_at": "2015-01-27T13:00:36Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: C.1.0\r\nTest procedure: export\r\nDescription: Letters like the german ä,ü,ö,ß are broken after reloading the model."
   },
@@ -2531,7 +2545,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2539,7 +2567,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:29:16Z",
-    "updated_at": "2014-12-13T12:29:16Z",
+    "updated_at": "2015-01-27T13:00:13Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.2.0\r\nTest procedure: export\r\nDescription: The size of the drawing area is fixed. Models that are bigger can't be viewed completely. You also cannot draw very large models."
   },
@@ -2572,7 +2600,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2580,7 +2622,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:29:02Z",
-    "updated_at": "2014-12-13T12:29:02Z",
+    "updated_at": "2015-01-27T12:59:57Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.2.0\r\nTest procedure: export\r\nDescription: Sequenceflows can't be marked as default."
   },
@@ -2613,7 +2655,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2621,7 +2677,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:28:53Z",
-    "updated_at": "2014-12-13T12:28:53Z",
+    "updated_at": "2015-01-27T12:59:40Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.2.0\r\nTest procedure: export\r\nDescription: Only the following start event types are possible: none, message, error, timer. Types like conditional or signal are missing."
   },
@@ -2654,7 +2710,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2662,7 +2732,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:28:43Z",
-    "updated_at": "2014-12-13T12:28:43Z",
+    "updated_at": "2015-01-27T12:59:20Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.2.0\r\nTest procedure: export\r\nDescription: Only the following intermediate catch event types are possible: none, signal. Types like link or message are missing."
   },
@@ -2695,7 +2765,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2703,7 +2787,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:28:30Z",
-    "updated_at": "2014-12-13T12:28:30Z",
+    "updated_at": "2015-01-27T12:58:57Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.2.0\r\nTest procedure: export\r\nDescription: Only the following intermediate catch event types are possible: none, message, signal, timer. Types like conditional are missing."
   },
@@ -2736,7 +2820,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2744,7 +2842,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:28:20Z",
-    "updated_at": "2014-12-13T12:28:20Z",
+    "updated_at": "2015-01-27T12:58:39Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.2.0\r\nTest procedure: export\r\nDescription: Only the following boundary event types are possible: none, message, signal, timer, error. Types like escalation or conditional are missing."
   },
@@ -2777,7 +2875,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2785,7 +2897,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:28:10Z",
-    "updated_at": "2014-12-13T12:28:10Z",
+    "updated_at": "2015-01-27T12:58:17Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.2.0\r\nTest procedure: export\r\nDescription: Only the following end event types are possible: none, error, terminate. Types like message or signal are missing."
   },
@@ -2818,7 +2930,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2826,7 +2952,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:28:00Z",
-    "updated_at": "2014-12-13T12:28:00Z",
+    "updated_at": "2015-01-27T12:57:47Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.2.0\r\nTest procedure: export\r\nDescription: You can't draw a user task with a standard loop. Only parallel and sequencial tasks are available."
   },
@@ -2859,7 +2985,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2867,7 +3007,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:27:51Z",
-    "updated_at": "2014-12-13T12:27:51Z",
+    "updated_at": "2015-01-27T12:57:13Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.1.0\r\nTest procedure: export\r\nDescription: You can't draw a data object or a data base and attache them to a task."
   },
@@ -2900,7 +3040,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2908,7 +3062,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:27:38Z",
-    "updated_at": "2014-12-13T12:27:38Z",
+    "updated_at": "2015-01-27T12:56:52Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.1.0\r\nTest procedure: export\r\nDescription: You can't draw a group."
   },
@@ -2941,7 +3095,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2949,7 +3117,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:27:29Z",
-    "updated_at": "2014-12-13T12:27:29Z",
+    "updated_at": "2015-01-27T12:56:26Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.1.0\r\nTest procedure: export\r\nDescription: It's not possible to create messageflows from an end event."
   },
@@ -2982,7 +3150,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -2990,7 +3172,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:27:16Z",
-    "updated_at": "2014-12-13T12:27:16Z",
+    "updated_at": "2015-01-27T12:56:02Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.4.1\r\nTest procedure: export\r\nDescription: It's not possible to create vertical pools or lanes. And even if, through the fact that you can't draw sequenceflows or messageflows that are attached to the top or bottom of a symbol."
   },
@@ -3023,7 +3205,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3031,7 +3227,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:27:03Z",
-    "updated_at": "2014-12-13T12:27:03Z",
+    "updated_at": "2015-01-27T12:55:28Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.4.0\r\nTest procedure: export\r\nDescription: You can't create a message flows. Only sequence flows are available from the editor. You need to draw sequence flows from one pool to another. After reloading the model, they are automatically converted to messageflows."
   },
@@ -3064,7 +3260,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3072,7 +3282,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:26:52Z",
-    "updated_at": "2014-12-13T12:26:52Z",
+    "updated_at": "2015-01-27T12:54:32Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.4.0\r\nTest procedure: export\r\nDescription: You can't create a lane without a surrounding pool."
   },
@@ -3105,7 +3315,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3113,7 +3337,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:26:45Z",
-    "updated_at": "2014-12-13T12:26:45Z",
+    "updated_at": "2015-01-27T12:54:06Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.4.0\r\nTest procedure: export\r\nDescription: The width of a pool is fixed. You can't change it."
   },
@@ -3146,7 +3370,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3154,7 +3392,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:26:38Z",
-    "updated_at": "2014-12-13T12:26:38Z",
+    "updated_at": "2015-01-27T12:53:39Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.3.0\r\nTest procedure: export\r\nDescription: You can't create a escalation event."
   },
@@ -3187,7 +3425,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3195,7 +3447,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:26:26Z",
-    "updated_at": "2014-12-13T12:26:26Z",
+    "updated_at": "2015-01-27T12:53:18Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.2.0\r\nTest procedure: export\r\nDescription: Outgoing or incoming sequence flows can only touch gateways, events or tasks from the left or right. Top or bottom are not possible."
   },
@@ -3228,7 +3480,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3236,7 +3502,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:26:14Z",
-    "updated_at": "2014-12-13T12:26:14Z",
+    "updated_at": "2015-01-27T12:52:57Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.2.0\r\nTest procedure: export\r\nDescription: It's not possible to create an exclusive gateway without a symbol."
   },
@@ -3269,7 +3535,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3277,7 +3557,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:26:05Z",
-    "updated_at": "2014-12-13T12:26:05Z",
+    "updated_at": "2015-01-27T12:52:24Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.1.0\r\nTest procedure: export\r\nDescription: It's not possible to create a default task. Only usertasks, servicetasks, etc. are possible."
   },
@@ -3310,7 +3590,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3318,7 +3612,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:25:56Z",
-    "updated_at": "2014-12-13T12:25:56Z",
+    "updated_at": "2015-01-27T12:51:56Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: C.1.0\r\nTest procedure: import\r\nDescription: The description text of all sequence flows is missing."
   },
@@ -3351,7 +3645,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3359,7 +3667,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:25:48Z",
-    "updated_at": "2014-12-13T12:25:48Z",
+    "updated_at": "2015-01-27T12:51:37Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: B.1.0\r\nTest procedure: import\r\nDescription: The model could not be opened. It causes the following exception.\r\nException:\r\nnull\r\njava.lang.NullPointerException\r\n\tat com.timout.bpmn.converter.BPMNCodecUtils.getEdgeTerminal(BPMNCodecUtils.java:371)\r\n\tat com.timout.bpmn.converter.BPMNCodec.decodeBPMNEdges(BPMNCodec.java:420)\r\n\tat com.timout.bpmn.converter.BPMNCodec.decode(BPMNCodec.java:296)\r\n\tat com.timout.bpmn.editor.handler.DocumentHandler.readFromFile(DocumentHandler.java:78)\r\n\tat com.timout.bpmn.editor.GUIEditor.<init>(GUIEditor.java:120)\r\n\tat com.timout.bpmn.editor.IdeaBPMNEditor.<init>(IdeaBPMNEditor.java:43)\r\n\tat com.timout.bpmn.editor.BPMNEditorProvider.createEditor(BPMNEditorProvider.java:27)\r\n\tat com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl$10.run(FileEditorManagerImpl.java:814)\r\n\tat com.intellij.util.ui.UIUtil.invokeAndWaitIfNeeded(UIUtil.java:2125)\r\n\tat com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl.openFileImpl4(FileEditorManagerImpl.java:797)\r\n\tat com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl.openFileImpl3(FileEditorManagerImpl.java:737)\r\n\tat com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl$8.run(FileEditorManagerImpl.java:717)\r\n\tat com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:117)\r\n\tat com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:99)\r\n\tat com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:85)\r\n\tat com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl.openFileImpl2(FileEditorManagerImpl.java:714)\r\n\tat com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl.openFileWithProviders(FileEditorManagerImpl.java:655)\r\n\tat com.intellij.openapi.fileEditor.ex.FileEditorManagerEx.openFile(FileEditorManagerEx.java:146)\r\n\tat com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl$14.run(FileEditorManagerImpl.java:1075)\r\n\tat com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:124)\r\n\tat com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:99)\r\n\tat com.intellij.openapi.command.impl.CoreCommandProcessor.executeCommand(CoreCommandProcessor.java:85)\r\n\tat com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl.openEditor(FileEditorManagerImpl.java:1071)\r\n\tat com.intellij.openapi.fileEditor.OpenFileDescriptor.navigateInAnyFileEditor(OpenFileDescriptor.java:152)\r\n\tat com.intellij.openapi.fileEditor.OpenFileDescriptor.navigateInEditor(OpenFileDescriptor.java:138)\r\n\tat com.intellij.openapi.fileEditor.OpenFileDescriptor.navigateInEditorOrNativeApp(OpenFileDescriptor.java:134)\r\n\tat com.intellij.openapi.fileEditor.OpenFileDescriptor.navigate(OpenFileDescriptor.java:121)\r\n\tat com.intellij.psi.impl.source.PsiFileImpl.navigate(PsiFileImpl.java:934)\r\n\tat com.intellij.codeInsight.navigation.NavigationUtil.openFileWithPsiElement(NavigationUtil.java:167)\r\n\tat com.intellij.ide.projectView.impl.nodes.AbstractPsiBasedNode.navigate(AbstractPsiBasedNode.java:207)\r\n\tat com.intellij.ide.projectView.impl.nodes.AbstractPsiBasedNode.navigate(AbstractPsiBasedNode.java:217)\r\n\tat com.intellij.ide.projectView.impl.nodes.PsiFileNode.navigate(PsiFileNode.java:132)\r\n\tat com.intellij.util.OpenSourceUtil.navigate(OpenSourceUtil.java:53)\r\n\tat com.intellij.util.OpenSourceUtil.openSourcesFrom(OpenSourceUtil.java:31)\r\n\tat com.intellij.util.EditSourceOnDoubleClickHandler$TreeMouseListener.processDoubleClick(EditSourceOnDoubleClickHandler.java:130)\r\n\tat com.intellij.util.EditSourceOnDoubleClickHandler$TreeMouseListener.onDoubleClick(EditSourceOnDoubleClickHandler.java:122)\r\n\tat com.intellij.ui.DoubleClickListener.onClick(DoubleClickListener.java:30)\r\n\tat com.intellij.ui.ClickListener$1.mouseReleased(ClickListener.java:73)\r\n\tat java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:290)\r\n\tat java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)\r\n\tat java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)\r\n\tat java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)\r\n\tat java.awt.Component.processMouseEvent(Component.java:6525)\r\n\tat javax.swing.JComponent.processMouseEvent(JComponent.java:3321)\r\n\tat com.intellij.ui.treeStructure.Tree.processMouseEvent(Tree.java:421)\r\n\tat com.intellij.ide.dnd.aware.DnDAwareTree.processMouseEvent(DnDAwareTree.java:53)\r\n\tat java.awt.Component.processEvent(Component.java:6290)\r\n\tat java.awt.Container.processEvent(Container.java:2234)\r\n\tat java.awt.Component.dispatchEventImpl(Component.java:4881)\r\n\tat java.awt.Container.dispatchEventImpl(Container.java:2292)\r\n\tat java.awt.Component.dispatchEvent(Component.java:4703)\r\n\tat java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)\r\n\tat java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)\r\n\tat java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)\r\n\tat java.awt.Container.dispatchEventImpl(Container.java:2278)\r\n\tat java.awt.Window.dispatchEventImpl(Window.java:2739)\r\n\tat java.awt.Component.dispatchEvent(Component.java:4703)\r\n\tat java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)\r\n\tat java.awt.EventQueue.access$400(EventQueue.java:97)\r\n\tat java.awt.EventQueue$3.run(EventQueue.java:697)\r\n\tat java.awt.EventQueue$3.run(EventQueue.java:691)\r\n\tat java.security.AccessController.doPrivileged(Native Method)\r\n\tat java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)\r\n\tat java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)\r\n\tat java.awt.EventQueue$4.run(EventQueue.java:719)\r\n\tat java.awt.EventQueue$4.run(EventQueue.java:717)\r\n\tat java.security.AccessController.doPrivileged(Native Method)\r\n\tat java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)\r\n\tat java.awt.EventQueue.dispatchEvent(EventQueue.java:716)\r\n\tat com.intellij.ide.IdeEventQueue.e(IdeEventQueue.java:748)\r\n\tat com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:573)\r\n\tat com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:384)\r\n\tat java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)\r\n\tat java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)\r\n\tat java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)\r\n\tat java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)\r\n\tat java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)\r\n\tat java.awt.EventDispatchThread.run(EventDispatchThread.java:82)"
   },
@@ -3392,7 +3700,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3400,7 +3722,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:25:36Z",
-    "updated_at": "2014-12-13T12:25:36Z",
+    "updated_at": "2015-01-27T12:51:24Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.4.1\r\nTest procedure: import\r\nDescription: The text of the start event 4 is positioned under the event instead of above the event."
   },
@@ -3433,7 +3755,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3441,7 +3777,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:25:26Z",
-    "updated_at": "2014-12-13T12:25:26Z",
+    "updated_at": "2015-01-27T12:50:43Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.4.1\r\nTest procedure: import\r\nDescription: Lanes 2 and 3 are over each other, instead of beeing positioned next to another."
   },
@@ -3474,7 +3810,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3482,7 +3832,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:25:15Z",
-    "updated_at": "2014-12-13T12:25:15Z",
+    "updated_at": "2015-01-27T12:50:17Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.4.1\r\nTest procedure: import\r\nDescription: Pools and lanes are oriented vertical instead of horizontal."
   },
@@ -3515,7 +3865,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3523,7 +3887,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:25:07Z",
-    "updated_at": "2014-12-13T12:25:07Z",
+    "updated_at": "2015-01-27T12:49:56Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.4.0\r\nTest procedure: import\r\nDescription: The description text of both message flows is missing."
   },
@@ -3556,7 +3920,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3564,7 +3942,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:24:56Z",
-    "updated_at": "2014-12-13T12:24:56Z",
+    "updated_at": "2015-01-27T12:49:28Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.3.0\r\nTest procedure: import\r\nDescription: The Text of both displayed boundary events is displaced."
   },
@@ -3638,7 +4016,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3646,7 +4038,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:24:33Z",
-    "updated_at": "2014-12-13T12:24:33Z",
+    "updated_at": "2015-01-27T12:49:01Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.3.0\r\nTest procedure: import\r\nDescription: The start event is positioned too low causing the sequence line to be not completely horizontal."
   },
@@ -3679,7 +4071,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20actiBPM",
+        "name": "Tool: actiBPM",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -3687,7 +4093,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-12-13T12:23:54Z",
-    "updated_at": "2014-12-13T12:23:54Z",
+    "updated_at": "2015-01-27T12:47:30Z",
     "closed_at": null,
     "body": "Tool name: actiBPM\r\nTool version: 3.E-8\r\nTest case id: A.2.0\r\nTest procedure: import\r\nDescription: Exclusive gateways are not positioned correctly. Compared with the lines they tend to be slightly too far top left."
   },
