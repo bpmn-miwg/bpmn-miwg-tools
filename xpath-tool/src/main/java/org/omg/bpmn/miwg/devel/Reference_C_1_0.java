@@ -45,7 +45,7 @@ public class Reference_C_1_0 extends AbstractTestCase {
 	
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new SpecificTestResultScanParameters("reference", "C.1.0"));
+		return ScanUtil.data(new SpecificTestResultScanParameters("Reference", "C.1.0"));
 	}
 
 }

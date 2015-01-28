@@ -64,7 +64,7 @@ public class AnalysisJob {
 		actualInput = new FileAnalysisInput(bpmnFile);
 
 		File parentFolder = folder.getParentFile();
-		File referenceFolder = new File(parentFolder, "reference");
+		File referenceFolder = new File(parentFolder, "Reference");
 		if (!referenceFolder.exists())
 			throw new FileNotFoundException(referenceFolder.getCanonicalPath());
 
