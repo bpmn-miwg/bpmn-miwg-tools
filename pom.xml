@@ -3,14 +3,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.omg.bpmn.miwg</groupId>
-  <artifactId>test-suite</artifactId>
+  <artifactId>tools-github-pages</artifactId>
   <version>0.2-SNAPSHOT</version>
-  <name>BPMN 2.0 MIWG Test Suite</name>
-  <description>
-    <![CDATA[
-      Reference BPMN files and various vendor's implementations of the same. 
-    ]]>
-  </description>
+  <name>BPMN MIWG Tools GitHub Pages</name>
+  <description>Aggregates test results and tool reports</description>
   <packaging>jar</packaging>
 
   <properties>
@@ -19,7 +15,7 @@
   
   <repositories>
     <repository>
-      <id>bpmn-miwg-tools-mvn-repo</id>
+      <id>bpmn-miwg-test-suite-mvn-repo</id>
       <url>https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/mvn-repo/</url>
       <snapshots>
         <enabled>true</enabled>
@@ -43,19 +39,6 @@
   </dependencies>
 
   <build>
-    <resources>
-      <resource>
-        <filtering>false</filtering>
-        <directory>${basedir}</directory>
-        <includes>
-          <include>**/*</include>
-        </includes>
-        <excludes>
-          <exclude>target/**/*</exclude>
-          <exclude>**/*.bak</exclude>
-        </excludes>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
