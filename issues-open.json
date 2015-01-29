@@ -1,5 +1,1075 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/433",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/433/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/433/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/433/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/433",
+    "id": 55809792,
+    "number": 433,
+    "title": "Envelope markers are not depicted on the messageflows",
+    "user": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
+        "name": "Tool: Yaoqiang BPMN Editor",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T20:20:28Z",
+    "updated_at": "2015-01-28T20:20:28Z",
+    "closed_at": null,
+    "body": "Visible on B.1.0 and B.2.0 \"Message Flow 1\""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/432",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/432/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/432/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/432/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/432",
+    "id": 55809533,
+    "number": 432,
+    "title": "Call activity are depicted with an collapsed marker",
+    "user": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
+        "name": "Tool: Yaoqiang BPMN Editor",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T20:18:14Z",
+    "updated_at": "2015-01-28T20:18:14Z",
+    "closed_at": null,
+    "body": "On B.1.0, the call activity \"Call Activity Calling a Global Task\" is depicted with a collapsed + marker"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/431",
+    "id": 55797898,
+    "number": 431,
+    "title": "Is Test A4.0 valid BMPN?",
+    "user": {
+      "login": "gcsm1th",
+      "id": 9299036,
+      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gcsm1th",
+      "html_url": "https://github.com/gcsm1th",
+      "followers_url": "https://api.github.com/users/gcsm1th/followers",
+      "following_url": "https://api.github.com/users/gcsm1th/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gcsm1th/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gcsm1th/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gcsm1th/subscriptions",
+      "organizations_url": "https://api.github.com/users/gcsm1th/orgs",
+      "repos_url": "https://api.github.com/users/gcsm1th/repos",
+      "events_url": "https://api.github.com/users/gcsm1th/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gcsm1th/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2015-01-28T18:48:03Z",
+    "updated_at": "2015-01-28T22:08:38Z",
+    "closed_at": null,
+    "body": "I am not certain that the A4.0 reference model is valid BPMN.    Section 10.3 BPMN 2.0.1\r\n\r\n\"NOTE: All Message Flows MUST connect two separate Pools. They MAY connect to the Pool boundary or to Flow Objects within the Pool boundary.\" \r\n\r\n The 2 message flows in this model connect Tasks in \"Pool\" with tasks in \"Lane 1\", which is not in any Pool.  This appears to violate the BPMN standard.  "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/430",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/430/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/430/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/430/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/430",
+    "id": 55796667,
+    "number": 430,
+    "title": "Wrong label positions",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.1",
+        "name": "Test: A.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.2",
+        "name": "Test: A.1.2",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
+        "name": "Test: A.2.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:38:02Z",
+    "updated_at": "2015-01-28T18:38:02Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nA.2.0: Gateway labels\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/429",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/429/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/429/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/429/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/429",
+    "id": 55796503,
+    "number": 429,
+    "title": "Missing group label",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:36:46Z",
+    "updated_at": "2015-01-28T18:36:46Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nB.1.0: The only group (*Group*)\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/428",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/428/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/428/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/428/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/428",
+    "id": 55796348,
+    "number": 428,
+    "title": "Call activities has no thick lines",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:35:25Z",
+    "updated_at": "2015-01-28T18:35:25Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nB.1.0: *Call Activity Calling a global task*\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/427",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/427/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/427/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/427/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/427",
+    "id": 55796233,
+    "number": 427,
+    "title": "Incorrect sequence flow",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:34:16Z",
+    "updated_at": "2015-01-28T18:34:40Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nA.4.1: The sequence flows between a process 1 and task 5 is not straight\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/426",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/426/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/426/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/426/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/426",
+    "id": 55796063,
+    "number": 426,
+    "title": "Empty box between pool and lane",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:32:56Z",
+    "updated_at": "2015-01-28T18:33:03Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nA.4.1: The lanes in the second pool are only a few pixels high. Between \"Pool 1\" and \"Lane 1\" is an empty box.\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/425",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/425/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/425/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/425/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/425",
+    "id": 55795861,
+    "number": 425,
+    "title": "The lanes in the second pool have the wrong height",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:31:33Z",
+    "updated_at": "2015-01-28T18:31:33Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nA.4.1: The lanes in the second pool are only a few pixels high.\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/424",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/424/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/424/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/424/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/424",
+    "id": 55795804,
+    "number": 424,
+    "title": "Pool added",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:31:02Z",
+    "updated_at": "2015-01-28T18:31:02Z",
+    "closed_at": null,
+    "body": "# Description\r\nA second Pool was added. The reference has only one pool. Lanes may exist without a comprising pool.\r\n\r\n# Example\r\nA.4.0: Both bottom lanes.\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/423",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/423/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/423/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/423/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/423",
+    "id": 55795710,
+    "number": 423,
+    "title": "Expanded sub process has a collapsed marker",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:30:24Z",
+    "updated_at": "2015-01-28T18:30:24Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nA.4.0: Both sub processes\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/422",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/422/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/422/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/422/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/422",
+    "id": 55795607,
+    "number": 422,
+    "title": "Sequence flow bending points are incorrect",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:29:42Z",
+    "updated_at": "2015-01-28T18:37:13Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nB.2.0: Outgoing sequence flow from *Intermediate Event Link\"\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/421",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/421/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/421/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/421/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/421",
+    "id": 55795390,
+    "number": 421,
+    "title": "Marker on call activity missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:28:12Z",
+    "updated_at": "2015-01-28T18:28:59Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nB..2.0: *Call activity calling a global user task*\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/420",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/420/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/420/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/420/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/420",
+    "id": 55795239,
+    "number": 420,
+    "title": "Message flow marker missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:27:10Z",
+    "updated_at": "2015-01-28T18:27:18Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nB.2.0: *Message Flow 1*\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/419",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/419/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/419/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/419/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/419",
+    "id": 55794883,
+    "number": 419,
+    "title": "Missing marker in exclusive gateways",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:24:28Z",
+    "updated_at": "2015-01-28T18:26:09Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nC.1.0: *Invoice approved?* gateway\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/418",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/418/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/418/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/418/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/418",
+    "id": 55794779,
+    "number": 418,
+    "title": "Incorrect bending points",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:23:40Z",
+    "updated_at": "2015-01-28T18:23:40Z",
+    "closed_at": null,
+    "body": "# Description\r\nAnnotation, data store, and data associations, and association (cf. Annotation) bending points are off\r\n(i.e., B.1.0: The bending point between service task 7 and the data store)\r\n\r\n# Example\r\n* C.1.0: Most message flows\r\n* B.1.0: *Service Task 7*: Association with the Data Store Reference\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/417",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/417/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/417/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/417/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/417",
+    "id": 55794701,
+    "number": 417,
+    "title": "Data Objects + Data Stores have no label",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:23:06Z",
+    "updated_at": "2015-01-28T18:23:06Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nB.1.0: Associations with Service Task 7\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/416",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/416/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/416/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/416/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/416",
+    "id": 55794645,
+    "number": 416,
+    "title": "Non-interrupting boundary message event becomes an interrupting boundary message event",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-01-28T18:22:43Z",
+    "updated_at": "2015-01-28T18:22:43Z",
+    "closed_at": null,
+    "body": "# Description\r\nCf. Title.\r\n\r\n# Example\r\nA.3.0: Message event on collapsed sub process.\r\n\r\n# Graphical Diff\r\nhttp://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Visual%20Paradigm%2011.1\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/415",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/415/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/415/comments",
@@ -36,9 +1106,9 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-01-19T09:54:58Z",
-    "updated_at": "2015-01-19T10:21:56Z",
+    "updated_at": "2015-01-29T10:25:50Z",
     "closed_at": null,
-    "body": "I would like to submit for discussion an alternate version of the C.1.0 model\r\n\r\nThis model presents no W4 specific mecanism and only use standard BPMN mecanism such as Xsd for types definition and XPATH for formal expression and is fully executable, according to the specification.\r\n\r\nIt introduce Data Objects 'approved' and 'clarified' used to evaluate the Condition Expressions using XPATH. These Data Objects respectively reference Item Definitions ref 'xsdBool' and 'xsdString' using xsd structure reference corresponding to boolean and string. The xsd type definition are imported into the Definitions using the standard import mecanism\r\n\r\nFinally 'Archive invoice' Service Task implementation has been set to '##unspecified' so each vendor can choose how to run the associated service\r\n\r\nHere is an image of the definitions\r\n![c 1 0_demo w4](https://cloud.githubusercontent.com/assets/8003851/5798551/9f0664de-9fc8-11e4-88ed-64c5d3b34709.PNG)\r\n\r\nsee https://github.com/benmichel/bpmn-miwg-demos/tree/master/2015-06-15-19-omg-technical-meeting-berlin/w4-execution-demo for the bpmn and imported files"
+    "body": "I would like to submit for discussion an alternate version of the C.1.0 model\r\n\r\nThis model presents no W4 specific mecanism and only use standard BPMN mecanism such as Xsd for types definition and XPATH for formal expression and is fully executable, according to the specification.\r\n\r\nIt introduce Data Objects 'approved' and 'clarified' used to evaluate the Condition Expressions using XPATH. These Data Objects respectively reference Item Definitions ref 'xsdBool' and 'xsdString' using xsd structure reference corresponding to boolean and string. The xsd type definition are imported into the Definitions using the standard import mecanism\r\n\r\nFinally 'Archive invoice' Service Task implementation has been set to '##unspecified' so each vendor can choose how to run the associated service\r\n\r\nHere is an image of the definitions\r\n![c 1 0_demo w4](https://cloud.githubusercontent.com/assets/8003851/5798551/9f0664de-9fc8-11e4-88ed-64c5d3b34709.PNG)\r\n\r\nsee https://github.com/bpmn-miwg/bpmn-miwg-demos/tree/master/2015-06-15-19-omg-technical-meeting-berlin/w4-execution-demo for the bpmn and imported files"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/414",
@@ -159,9 +1229,9 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-01-19T09:34:59Z",
-    "updated_at": "2015-01-19T09:34:59Z",
+    "updated_at": "2015-01-28T17:08:42Z",
     "closed_at": null,
-    "body": "The Sequence Flow labeled \"yes\" (id=\"invoiceApproved\"), outgoing of Gateway \"Invoice approved\" (id=\"invoice_approved\"), has the following Condition Expression :\r\n\r\n    <conditionExpression xsi:type=\"tFormalExpression\" id=\"sid-0ed8a0cb-f28a-4689-bbd8-77dafd0ccfa0\">${approved}</conditionExpression>\r\n\r\nHow is this expression to be resolved from a standard point of view ? What is 'approved' suppose to be since it does not seems to be a DataObject or DataStore ?\r\nIf we look at the expression language attribute of the definitions, we have\r\n\r\n    expressionLanguage=\"http://www.w3.org/1999/XPath\".\r\n\r\nThis means that the expression language used to resolve formal expressions should be XPATH. I thing XPATH is a good choice for the demo since it should be supported by BPMN implementors (according to chapter 10.3.3 of the spec), but if we are to use XPATH the expression should be :\r\n\r\n    <conditionExpression xsi:type=\"tFormalExpression\" id=\"sid-0ed8a0cb-f28a-4689-bbd8-77dafd0ccfa0\">getDataObject('approved')</conditionExpression>\r\nor\r\n\r\n    <conditionExpression xsi:type=\"tFormalExpression\" id=\"sid-0ed8a0cb-f28a-4689-bbd8-77dafd0ccfa0\"><![CDATA[//processInstance/dataEntries/approved/value]]></conditionExpression>\r\n\r\nwhere 'approved' is a DataObject of boolean type. We could use the default type language (Table 8.1 page 53 of the spec) to define the type of this DataObject so it would be http://www.w3.org/2001/XMLSchema:boolean\r\n\r\nps : The same observation can be done for the Sequence Flow with id 'invoiceNotApproved'."
+    "body": "The Sequence Flow labeled \"yes\" (id=\"invoiceApproved\"), outgoing of Gateway \"Invoice approved\" (id=\"invoice_approved\"), has the following Condition Expression :\r\n\r\n    <conditionExpression xsi:type=\"tFormalExpression\" id=\"sid-0ed8a0cb-f28a-4689-bbd8-77dafd0ccfa0\">${approved}</conditionExpression>\r\n\r\nHow is this expression to be resolved from a standard point of view ? What is 'approved' suppose to be since it does not seems to be a DataObject or DataStore ?\r\nIf we look at the expression language attribute of the definitions, we have\r\n\r\n    expressionLanguage=\"http://www.w3.org/1999/XPath\".\r\n\r\nThis means that the expression language used to resolve formal expressions should be XPATH. I thing XPATH is a good choice for the demo since it should be supported by BPMN implementors (according to chapter 10.3.3 of the spec), but if we are to use XPATH the expression should be :\r\n\r\n    <conditionExpression xsi:type=\"tFormalExpression\" id=\"sid-0ed8a0cb-f28a-4689-bbd8-77dafd0ccfa0\">getDataObject('approved')</conditionExpression>\r\n\r\n\r\nwhere 'approved' is a DataObject of boolean type. We could use the default type language (Table 8.1 page 53 of the spec) to define the type of this DataObject so it would be http://www.w3.org/2001/XMLSchema:boolean\r\n\r\nps : The same observation can be done for the Sequence Flow with id 'invoiceNotApproved'."
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/411",
@@ -203,53 +1273,6 @@
     "updated_at": "2015-01-21T17:52:07Z",
     "closed_at": null,
     "body": "From an execution point of view, is it ok to start the process with a Message Start Event when we are not in a conversation context with two participant sending messages to one another ?\r\n\r\nW4 BPMN engine for one, only accept this type of event during execution if it is the target of a Message Flow and if the source is in an executable Process in another Participant (and if the Message Flow and Participants are referenced in a Conversation and if Correlation Keys and Properties are defined, etc. as specified by the specification)\r\nTo summurise, W4 BPMN engine will not be able to instantiate a process starting with a Message Start Event if we are not in a strict collaboration/conversation context.\r\n\r\nTo simplify the modelisation I propose to replace the Message Start Event by a None Start Event, so more vendors (including W4) will be able to instantiate this process without too much trouble."
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/410",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/410/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/410/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/410/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/410",
-    "id": 54580286,
-    "number": 410,
-    "title": "Label boundaries and potential owners addition",
-    "user": {
-      "login": "benmichel",
-      "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/benmichel",
-      "html_url": "https://github.com/benmichel",
-      "followers_url": "https://api.github.com/users/benmichel/followers",
-      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
-      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
-      "organizations_url": "https://api.github.com/users/benmichel/orgs",
-      "repos_url": "https://api.github.com/users/benmichel/repos",
-      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/benmichel/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 3,
-    "created_at": "2015-01-16T14:23:25Z",
-    "updated_at": "2015-01-28T15:30:25Z",
-    "closed_at": null,
-    "pull_request": {
-      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/410",
-      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/410",
-      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/410.diff",
-      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/410.patch"
-    },
-    "body": "- Add Label boundaries when missing on BPMNShapes and BPMNEdges\r\n- Add PotentialOwners on UserTasks"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/408",
@@ -10204,76 +11227,6 @@
     "body": "Label position do not respect the bounds in the bpmn file for a lot"
   },
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/218",
-    "id": 45257518,
-    "number": 218,
-    "title": "There is a Gap between the Pool and the Lanes",
-    "user": {
-      "login": "SimonRinguette",
-      "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SimonRinguette",
-      "html_url": "https://github.com/SimonRinguette",
-      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
-      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
-      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
-      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
-      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
-        "name": "Test: A.4.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
-        "name": "Test: A.4.1",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
-        "name": "Test: B.2.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
-        "name": "Tool: Yaoqiang BPMN Editor",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 1,
-    "created_at": "2014-10-08T15:23:32Z",
-    "updated_at": "2014-10-09T10:30:02Z",
-    "closed_at": null,
-    "body": "This affects only the version 3 of the product (commercial)"
-  },
-  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/217",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/217/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/217/comments",
@@ -10327,126 +11280,11 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2014-10-08T15:18:36Z",
-    "updated_at": "2014-10-08T15:18:36Z",
+    "updated_at": "2015-01-28T16:03:28Z",
     "closed_at": null,
     "body": "In B.1.0 both message flows\r\nIn B.2.0 Association for Annotation"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/216",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/216/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/216/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/216/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/216",
-    "id": 45256496,
-    "number": 216,
-    "title": "Lane and Pool names are not correct",
-    "user": {
-      "login": "SimonRinguette",
-      "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SimonRinguette",
-      "html_url": "https://github.com/SimonRinguette",
-      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
-      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
-      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
-      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
-      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
-        "name": "Test: A.4.1",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
-        "name": "Tool: Yaoqiang BPMN Editor",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 1,
-    "created_at": "2014-10-08T15:15:32Z",
-    "updated_at": "2014-10-09T10:38:06Z",
-    "closed_at": null,
-    "body": "Pool 1 is called Pool\r\nThere is no Lane 1 in Pool 1\r\nPool 2 does not have a label\r\nLane 2 is called Lane 1\r\nLane 3 is called Lane 2"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/215",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/215/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/215/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/215/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/215",
-    "id": 45256084,
-    "number": 215,
-    "title": "Sequence flow not straight",
-    "user": {
-      "login": "SimonRinguette",
-      "id": 521578,
-      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SimonRinguette",
-      "html_url": "https://github.com/SimonRinguette",
-      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
-      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
-      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
-      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
-      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
-        "name": "Test: A.3.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
-        "name": "Test: A.4.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Yaoqiang%20BPMN%20Editor",
-        "name": "Tool: Yaoqiang BPMN Editor",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2014-10-08T15:12:09Z",
-    "updated_at": "2014-10-09T13:28:28Z",
-    "closed_at": null,
-    "body": "Between the start event and the first activity"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/214",
@@ -16968,653 +17806,5 @@
     "updated_at": "2014-10-01T14:16:19Z",
     "closed_at": null,
     "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/38",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/38/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/38/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/38/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/38",
-    "id": 13937338,
-    "number": 38,
-    "title": "Expanded Call Activity displayed without content",
-    "user": {
-      "login": "falko",
-      "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/falko",
-      "html_url": "https://github.com/falko",
-      "followers_url": "https://api.github.com/users/falko/followers",
-      "following_url": "https://api.github.com/users/falko/following{/other_user}",
-      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
-      "organizations_url": "https://api.github.com/users/falko/orgs",
-      "repos_url": "https://api.github.com/users/falko/repos",
-      "events_url": "https://api.github.com/users/falko/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/falko/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
-        "name": "Roundtrip",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
-        "name": "Test: B.2.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": {
-      "login": "mschoe",
-      "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mschoe",
-      "html_url": "https://github.com/mschoe",
-      "followers_url": "https://api.github.com/users/mschoe/followers",
-      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
-      "organizations_url": "https://api.github.com/users/mschoe/orgs",
-      "repos_url": "https://api.github.com/users/mschoe/repos",
-      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mschoe/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "milestone": null,
-    "comments": 3,
-    "created_at": "2013-05-03T14:50:49Z",
-    "updated_at": "2014-10-01T14:16:23Z",
-    "closed_at": null,
-    "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.1.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.1.0-import.png)\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/35",
-    "id": 13853852,
-    "number": 35,
-    "title": "Data associations cannot be assigned a name / label",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-05-01T16:02:59Z",
-    "updated_at": "2013-05-03T15:07:23Z",
-    "closed_at": null,
-    "body": "Data associations cannot be assigned a name / label in the tool.\r\nTherefore, the associations cannot be imported or exported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the center left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/34",
-    "id": 13853771,
-    "number": 34,
-    "title": "Collapsed call activities display the name of the called process - not the assigned name",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-05-01T16:00:46Z",
-    "updated_at": "2013-05-03T15:07:55Z",
-    "closed_at": null,
-    "body": "Collapsed call activities display the name of the called process. A name may be assigned but is not displayed.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy at the cennter border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/33/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/33",
-    "id": 13852084,
-    "number": 33,
-    "title": "Cameo Business Modeler lacks direct support for *.BPMN XML Import",
-    "user": {
-      "login": "lonniev",
-      "id": 2193384,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2193384?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/lonniev",
-      "html_url": "https://github.com/lonniev",
-      "followers_url": "https://api.github.com/users/lonniev/followers",
-      "following_url": "https://api.github.com/users/lonniev/following{/other_user}",
-      "gists_url": "https://api.github.com/users/lonniev/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/lonniev/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/lonniev/subscriptions",
-      "organizations_url": "https://api.github.com/users/lonniev/orgs",
-      "repos_url": "https://api.github.com/users/lonniev/repos",
-      "events_url": "https://api.github.com/users/lonniev/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/lonniev/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Cameo%20Business%20Modeler",
-        "name": "Tool: Cameo Business Modeler",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-05-01T15:19:25Z",
-    "updated_at": "2013-05-06T10:48:41Z",
-    "closed_at": null,
-    "body": "Cameo Business Modeler lacks direct support for importation of the *.BPMN XML file format. The tool provides import support for XPDL and XMI formats."
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/29/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/29",
-    "id": 13733410,
-    "number": 29,
-    "title": "Data store reference names are not displayed",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-28T11:45:18Z",
-    "updated_at": "2013-04-30T11:37:16Z",
-    "closed_at": null,
-    "body": "Data store references are imported, yet not displayed. The node is assigned the name correctly. Yet, data store references have a separate label which is assigned a default text. The name of the node can be retrieved when looking at the node properties.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data store reference in question is in the left center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
-    "id": 13733336,
-    "number": 28,
-    "title": "B.1.0 Data object names are ommitted",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-28T11:37:52Z",
-    "updated_at": "2013-04-30T11:37:50Z",
-    "closed_at": null,
-    "body": "Data object names are not imported.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data object in question is in the center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
-    "id": 13733261,
-    "number": 27,
-    "title": "Expanded call activities and collapsed subprocesses are not supported.",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-28T11:29:10Z",
-    "updated_at": "2013-05-01T16:02:54Z",
-    "closed_at": null,
-    "body": "Call activities cannot be expanded in MID Innovator. Therefore, they are not imported correctly as *expanded call activities* but as *collapsed call activities*. The elements of the expanded call activity are not supported as well.\r\nAs modeling expanded call activities is not supported by the software, the export fails as well.\r\n\r\nSimilarly, collapsed subprocesses are not supported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the lower left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
-    "id": 13594794,
-    "number": 24,
-    "title": "Text annotations are not exported",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-24T15:44:58Z",
-    "updated_at": "2013-04-28T11:38:21Z",
-    "closed_at": null,
-    "body": "Text annotations are not exported in the BPMN file.\r\n\r\nExample B.1.0:\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n* [Exported BPMN](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-export.bpmn)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
-    "id": 13594240,
-    "number": 23,
-    "title": "BPMN text annotations are not imported",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-24T15:37:19Z",
-    "updated_at": "2013-04-28T11:38:42Z",
-    "closed_at": null,
-    "body": "Text annotations appear not to be imported from the BPMN file in MID Innovator.\r\n\r\nExample B.1.0:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
-    "id": 13587618,
-    "number": 21,
-    "title": "Import places Events and Gateways in upper left corner",
-    "user": {
-      "login": "falko",
-      "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/falko",
-      "html_url": "https://github.com/falko",
-      "followers_url": "https://api.github.com/users/falko/followers",
-      "following_url": "https://api.github.com/users/falko/following{/other_user}",
-      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
-      "organizations_url": "https://api.github.com/users/falko/orgs",
-      "repos_url": "https://api.github.com/users/falko/repos",
-      "events_url": "https://api.github.com/users/falko/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/falko/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
-        "name": "Test: A.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
-        "name": "Test: A.2.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2013-04-24T13:47:32Z",
-    "updated_at": "2013-04-29T09:33:45Z",
-    "closed_at": null,
-    "body": "In MID Innovator 11 R5 E (Version 11.5.1.30223) Events and Gateways are positioned in the upper left corner of the containing Lane.\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
-    "id": 13586218,
-    "number": 20,
-    "title": "Sequence Flows not imported",
-    "user": {
-      "login": "falko",
-      "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/falko",
-      "html_url": "https://github.com/falko",
-      "followers_url": "https://api.github.com/users/falko/followers",
-      "following_url": "https://api.github.com/users/falko/following{/other_user}",
-      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
-      "organizations_url": "https://api.github.com/users/falko/orgs",
-      "repos_url": "https://api.github.com/users/falko/repos",
-      "events_url": "https://api.github.com/users/falko/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/falko/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
-        "name": "Test: A.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
-        "name": "Test: A.2.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2013-04-24T13:25:14Z",
-    "updated_at": "2013-04-29T09:35:08Z",
-    "closed_at": null,
-    "body": "Matthias Kurz reported: \"The Innovator creates both a process model as well as a diagram during update (these are two different yet linked entities in Innovator). Yet the diagram misses basic basic layout information like connectors.\"\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
   }
 ]
