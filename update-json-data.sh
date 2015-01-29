@@ -9,11 +9,14 @@ wget 'http://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/tools-tested-b
 wget "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&per_page=100&page=1"   --output-document=issues-open-01.json
 wget "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&per_page=100&page=2"   --output-document=issues-open-02.json
 wget "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&per_page=100&page=3"   --output-document=issues-open-03.json
+wget "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&per_page=100&page=4"   --output-document=issues-open-04.json
 head -n -2 issues-open-01.json > issues-open.json
 echo "  }," >> issues-open.json
 tail -n +2 issues-open-02.json | head -n -2 >> issues-open.json
 echo "  }," >> issues-open.json
-tail -n +2 issues-open-03.json >> issues-open.json
+tail -n +2 issues-open-03.json | head -n -2 >> issues-open.json
+echo "  }," >> issues-open.json
+tail -n +2 issues-open-04.json >> issues-open.json
 rm issues-open-*.json
 
 
