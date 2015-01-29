@@ -48,6 +48,28 @@
             <phase>process-resources</phase>
             <configuration>
               <target>
+                <echo>Delete old directories</echo>
+                <delete includeEmptyDirs="true">
+                  <fileset dir="${basedir}/">
+                    <include name="**/*"/>
+                    <exclude name=".*"/>
+                    <exclude name=".*/**/*"/>
+                    <exclude name="bin/**/*"/>
+                    <exclude name="target/**/*"/>
+                    <exclude name="css/**/*"/>
+                    <exclude name="img/**/*"/>
+                    <exclude name="js/**/*"/>
+                    <exclude name="lib/**/*"/>
+                    <exclude name="bpmn-tools-tested-for-model-interchange-screenshot.png"/>
+                    <exclude name="index.html"/>
+                    <exclude name="issues-closed.json"/>
+                    <exclude name="issues-open.json"/>
+                    <exclude name="pom.xml"/>
+                    <exclude name="README.md"/>
+                    <exclude name="update-json-data.sh"/>
+                    <exclude name="visual-test-result-comparison.html"/>
+                  </fileset>
+                </delete>
                 <echo>Unzipping test suite from ${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}</echo>
                 <unzip src="${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}" 
                     dest="${basedir}/">
@@ -72,7 +94,7 @@
                     <exclude name="target/**/*"/>
                     <exclude name="*.sh"/>
                   </patternset>
-                </unzip>
+		</unzip>
                 <!-- 
                   Fix path in overview.html. This is needed because overview
                   uses same template as individual tests that run in xpath or 
