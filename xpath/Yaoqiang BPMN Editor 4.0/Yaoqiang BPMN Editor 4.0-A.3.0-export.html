@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="Yaoqiang BPMN Editor 4.0">
+      <h2>Yaoqiang BPMN Editor 4.0</h2>
+      <div class="test" data-test="A.3.0" data-variant="Export">
+         <h3>A.3.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: Yaoqiang BPMN Editor 4.0-A.3.0-export</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : callingMethod: Push (id: _1420248766608)</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectElementX; Message: /bpmn:definitions/bpmn:process</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectElementX: Push (id: PROCESS_1)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;_3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos; and @id=&apos;_5&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateBoundaryEvent; Message: Boundary element &apos;Boundary Intermediate Event Non-Interrupting Message&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkCancelActivity; Message: Attribute cancelActivity=false</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_13&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;_9&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;_1420248766608&quot;&apos;]/process[@id=&apos;id=&quot;PROCESS_1&quot;&apos;]/subProcess[@id=&apos;id=&quot;_5&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;_7&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;_9&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;_1420248766608&quot;&apos;]/process[@id=&apos;id=&quot;PROCESS_1&quot;&apos;]/subProcess[@id=&apos;id=&quot;_5&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateBoundaryEvent; Message: Boundary element &apos;Boundary Intermediate Event Interrupting Escalation&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkEscalationEvent; Message: Escalation event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkCancelActivity; Message: Attribute cancelActivity=true</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;_16&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;_19&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : callingMethod: Pop (id: PROCESS_1)</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>

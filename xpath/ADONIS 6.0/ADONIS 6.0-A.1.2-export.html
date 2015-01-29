@@ -20,11 +20,89 @@
         </ul>
 			</div>
 		</div>
-		<div class="testresults">
+<div class="testresults">
    <div class="tool" data-vendor="ADONIS 6.0">
       <h2>ADONIS 6.0</h2>
-      <div class="test" data-test="A.1.2" data-variant="export">
+      <div class="test" data-test="A.1.2" data-variant="Export">
          <h3>A.1.2</h3>
+         <div class="info">
+            <h4>ANALYSIS: ADONIS 6.0-A.1.2-export</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : callingMethod: Push (id: def_29333)</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectElementX; Message: /bpmn:definitions/bpmn:process</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectElementX: Push (id: process_29333)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;Task 1&apos; and @id=&apos;obj.29367&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>      FINDING: checkOwner; Message: Cannot find resource reference; Parameter: bpmn:performer/bpmn:resourceRef</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkDataAssociation: Push (id: obj.29367)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation; Message: Association reference dataObject &apos;Data Object 1&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Pop (id: obj.29367)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Task 2&apos; and @id=&apos;obj.29371&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>      FINDING: checkOperation; Message: Cannot find attribute; Parameter: operationRef</h4>
+         </div>
+         <div class="finding">
+            <h4>      FINDING: checkOperation; Message: Cannot find operation; Parameter: /bpmn:definitions/bpmn:interface/bpmn:operation[@id=&apos;null&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkDataAssociation: Push (id: obj.29371)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation; Message: Association reference dataObject &apos;Data Object 1&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Pop (id: obj.29371)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkDataAssociation: Push (id: obj.29371)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation; Message: Association reference dataObject &apos;Data Object 2&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Pop (id: obj.29371)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;Task 3&apos; and @id=&apos;obj.29375&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkDataAssociation: Push (id: obj.29375)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation; Message: Association reference dataObject &apos;Data Object 2&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Pop (id: obj.29375)</h4>
+         </div>
+         <div class="finding">
+            <h4>      FINDING: checkOwner; Message: Cannot find resource reference; Parameter: bpmn:performer/bpmn:resourceRef</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;obj.29379&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : callingMethod: Pop (id: process_29333)</h4>
+         </div>
       </div>
    </div>
 </div>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="Visual Paradigm 11.1">
+      <h2>Visual Paradigm 11.1</h2>
+      <div class="test" data-test="B.2.0" data-variant="Roundtrip">
+         <h3>B.2.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: Visual Paradigm 11.1-B.2.0-roundtrip</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : callingMethod: Push (id: Definition)</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectElementX; Message: //bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectElementX: Push (id: collaboration-Trisotech_Visio-_6)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElementX; Message: bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkMessageDefinition; Message: Message definition</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElementX; Message: bpmn:messageFlow[@name=&apos;Message Flow 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkMessageDefinition; Message: Message definition</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectProcessX: Push (id: process-WFP_6_1)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 1 Timer&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkTimerEvent; Message: Timer event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;WFP_6_1__d84e5824_7bb7_4057_9dba_6c8794f7948c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:sendTask[@name=&apos;Send Task 2&apos; and @id=&apos;WFP_6_1__76ee26df_2c95_495b_9d9a_cb806aea6baf&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;User Task 3&apos; and @id=&apos;WFP_6_1__0e87da16_736e_45b2_95e5_8f45940f3adf&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Push (id: WFP_6_1__0e87da16_736e_45b2_95e5_8f45940f3adf)</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkDataAssociation; Message: Cannot find node; Parameter: bpmn:dataInputAssociation/bpmn:targetRef[text()=&apos;WFP_6_1__f906ca20_8666_41ff_9d37_b76e09ac4f94-target&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : checkDataAssociation: Pop (id: WFP_6_1__0e87da16_736e_45b2_95e5_8f45940f3adf)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectElement; Message: bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectElement: Push (id: WFP_6_1__dec393e7_f182_4d31_b05f_e33ac3a5e35f)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateGatewaySequenceFlowStack; Message: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id=&apos;%s&apos;]; Target parameter .; Target Check: self::node()[@name=&apos;Conditional Sequence Flow&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateGatewaySequenceFlowStack; Message: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id=&apos;%s&apos;]; Target parameter .; Target Check: self::node()[@name=&apos;Default Sequence Flow 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : checkDefaultSequenceFlow; Message: Default Sequence Flow</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: WFP_6_1__dec393e7_f182_4d31_b05f_e33ac3a5e35f)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Service Task 4&apos; and @id=&apos;WFP_6_1__ac1fde31_c0cd_4a8a_9728_a5fb49602de7&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Signal Throw 1&apos; and @id=&apos;WFP_6_1__0326fdf5_7c71_41d9_838c_ab141a1b1ed0&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkSignalEvent; Message: Signal event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Collapsed Sub-Process 1 Multi-Instances&apos; and @id=&apos;WFP_6_1__149a6e1d_0385_4d0f_a90c_c2150a291a67&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement: Push (id: WFP_6_1__149a6e1d_0385_4d0f_a90c_c2150a291a67)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : checkMultiInstanceParallel; Message: Multi instance loop characteristics (sequential=false)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: WFP_6_1__149a6e1d_0385_4d0f_a90c_c2150a291a67)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;WFP_6_1__2a08c361_be51_437e_a86d_c62798c14e83&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateBoundaryEvent; Message: Boundary element &apos;Boundary Intermediate Event Non-Interrupting Conditional&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkCancelActivity; Message: Attribute cancelActivity=false</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkParallelMultiple; Message: Attribute parallelMultiple is not existing but the expected value (false) equals the default value (false)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkConditionalEvent; Message: Conditional event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: bpmn:endEvent[@name=&apos;End Event 1 Message&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;Definition&quot;&apos;]/process[@id=&apos;id=&quot;process-WFP_6_1&quot;&apos;]/inclusiveGateway[@id=&apos;id=&quot;WFP_6_1__dec393e7_f182_4d31_b05f_e33ac3a5e35f&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:callActivity[@name=&apos;Call Activity calling a Global User Task&apos; and @id=&apos;WFP_6_1__a74c1d4d_db90_43ff_8920_139a300b39a5&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkGlobalTask; Message: Attribute &apos;calledElement&apos; does not exist; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectElementX; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectElementX: Push (id: WFP_6_1__303e68ec_dbb3_4d90_8a96_26e0be44f5f3)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElementX; Message: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : selectElementX; Message: bpmn:userTask[@name=&apos;User Task 7 Standard Loop&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : selectElementX: Push (id: WFP_6_1__303e68ec_dbb3_4d90_8a96_26e0be44f5f3__b9343536_6490_4559_8365_71d5c4cbb7cb)</h4>
+         </div>
+         <div class="ok">
+            <h4>            OK     : navigateElementX; Message: bpmn:standardLoopCharacteristics</h4>
+         </div>
+         <div class="ok">
+            <h4>            OK     : callingMethod: Pop (id: WFP_6_1__303e68ec_dbb3_4d90_8a96_26e0be44f5f3__b9343536_6490_4559_8365_71d5c4cbb7cb)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElementX; Message: bpmn:endEvent[@name=&apos;End Event 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: WFP_6_1__303e68ec_dbb3_4d90_8a96_26e0be44f5f3)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElementX; Message: bpmn:userTask[@name=&apos;User Task 8&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateBoundaryEvent; Message: Boundary element &apos;null&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkEscalationEvent; Message: Escalation event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 9&apos; and @id=&apos;WFP_6_1__8f41085a_3302_4cfc_9231_23bb4b43c7a1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Conditional Catch&apos; and @id=&apos;WFP_6_1__c9cb2415_6a2e_49d6_84b9_27babcde4088&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkConditionalEvent; Message: Conditional event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 10&apos; and @id=&apos;WFP_6_1__a01498ae_086c_4adc_9229_ec3135bc2bcf&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageFlow; Message: message flow &apos;Message Flow 2&apos; (Input)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 3 Signal&apos; and @id=&apos;WFP_6_1__5cc02d0f_c090_4e48_8da3_f32cbbca9565&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkSignalEvent; Message: Signal event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : callingMethod: Pop (id: process-WFP_6_1)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectProcessX: Push (id: process-ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6)</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkXORMarkersForProcess; Message: There is no isMarkerVisible attribute in the BPMNShape element for the BPMN element with the id &apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__49e94b5f_ce21_4c2b_b78d_3cde5c09c15e&apos; although true is expected.; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElementX; Message: bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElementX; Message: bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 2 Message&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageFlow; Message: message flow &apos;Message Flow 1&apos; (Input)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 11&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__511d95ed_38f9_473e_9466_525285a007f5&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:eventBasedGateway[@name=&apos;Event Base Gateway 3&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__be29f267_9d56_46ef_8bbc_e13513b25fce&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkEventGatewayExclusive; Message: Attribute eventGatewayType is not existing but the expected value (Exclusive) equals the default value (Exclusive)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;Definition&quot;&apos;]/process[@id=&apos;id=&quot;process-ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__be29f267_9d56_46ef_8bbc_e13513b25fce&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Timer Catch&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__034907bf_d3d7_4629_818c_14c3e69d5bc6&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;Definition&quot;&apos;]/process[@id=&apos;id=&quot;process-ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__be29f267_9d56_46ef_8bbc_e13513b25fce&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__f2081fdb_3b8a_480b_9f61_fbf683e2018c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;Definition&quot;&apos;]/process[@id=&apos;id=&quot;process-ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__be29f267_9d56_46ef_8bbc_e13513b25fce&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch 2&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__05c6bc89_5265_435c_8a9e_533c44a6888b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: selectElementX; Message: No node found; Parameter: bpmn:callActivity[@name=&apos;Expanded Call Activity&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectElementX: Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: selectCallActivityProcess; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : selectCallActivityProcess: Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 4 Conditional&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: checkMultiInstanceSequential; Message: Loop characteristics not set; Parameter: bpmn:multiInstanceLoopCharacteristics</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: navigateBoundaryEvent; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>            OK     : checkCancelActivity; Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)</h4>
+         </div>
+         <div class="ok">
+            <h4>            OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: checkTerminateEvent; Message: Cannot find terminate event definition; Parameter: bpmn:terminateEventDefinition | bpmn:eventDefinitionRef</h4>
+         </div>
+         <div class="ok">
+            <h4>            OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>            OK     : callingMethod: Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateBoundaryEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkConditionalEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkCancelActivity; Message: No current node; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkLinkEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkMessageFlow; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElementX; Message: bpmn:subProcess[@name=&apos;Collapsed Sub-Process 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Push (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__0263ca9e_2ca0_4f4e_b7dd_86e15dcf2447)</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkDataAssociation; Message: Cannot find node; Parameter: bpmn:dataInputAssociation/bpmn:targetRef[text()=&apos;_fa10ebaf_7088_4def_8cc3_d959b8876b06-target&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : checkDataAssociation: Pop (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__0263ca9e_2ca0_4f4e_b7dd_86e15dcf2447)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectElementX; Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway 4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectElementX: Push (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__49e94b5f_ce21_4c2b_b78d_3cde5c09c15e)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateGatewaySequenceFlowStack; Message: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id=&apos;%s&apos;]; Target parameter .; Target Check: self::node()[@name=&apos;Default Sequence Flow 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : checkDefaultSequenceFlow; Message: Default Sequence Flow</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__49e94b5f_ce21_4c2b_b78d_3cde5c09c15e)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElementX; Message: bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Message Throw&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageEvent; Message: Message event definition</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateElementX; Message: No node found; Parameter: bpmn:callActivity[@name=&apos;Collapsed Call Activity&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name=&apos;Boundary Intermediate Event Non-Interrupting Escalation&apos; and @attachedToRef=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__796ccbc5_ad88_465c_849a_87447a0283d3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkEscalationEvent; Message: Cannot find escalation event definition; Parameter: bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 18&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateThrowEvent[@name=&apos;&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkEscalationEvent; Message: Cannot find escalation event definition; Parameter: bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 23&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateBoundaryEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkCancelActivity; Message: No current node; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkParallelMultiple; Message: No current node; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkMessageEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElementX; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 21&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__137281ee_758e_4c36_8942_74c5d807e1b3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateBoundaryEvent; Message: Boundary element &apos;Boundary Intermediate Event Interrupting Timer&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkCancelActivity; Message: Attribute cancelActivity=true</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkTimerEvent; Message: Timer event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 27&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__0e99d67a_a88a_4631_85cc_aa1f9cd8cc5e&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 6&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__10ecbff1_cd15_4a5c_9aa5_6f2a35479416&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;Definition&quot;&apos;]/process[@id=&apos;id=&quot;process-ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6&quot;&apos;]/task[@id=&apos;id=&quot;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__137281ee_758e_4c36_8942_74c5d807e1b3&quot;&apos;]/</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__7e6ccf38_e740_4537_a439_a8e984d066de&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement: Push (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__7e6ccf38_e740_4537_a439_a8e984d066de)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 5 None&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Service Task 22&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__7e6ccf38_e740_4537_a439_a8e984d066de__6936f794_7bbb_4aa1_ae48_3a35bab4e2f4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : checkMultiInstanceParallel; Message: Multi instance loop characteristics (sequential=false)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 8 None&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__7e6ccf38_e740_4537_a439_a8e984d066de__4f744697_3643_41a9_9d07_84c78e2df64b&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__7e6ccf38_e740_4537_a439_a8e984d066de)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 23&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__73343358_7838_48a1_baf2_2b0266e3a55b&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateBoundaryEvent; Message: Boundary element &apos;Boundary Intermediate Event Non-Interrupting Signal&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkSignalEvent; Message: Signal event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkCancelActivity; Message: Attribute cancelActivity=false</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 24&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__663e9963_9cf6_4032_9652_3a20f50dcda3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 11 Escalation&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__dfb273c6_0ad3_4030_9e72_638adf7ca75f&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 6 Signal&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 25&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__242b8e6c_681c_438e_ab34_729255121eff&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway 5&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__1215d072_524b_4724_99d7_a0a406435904&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 26&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__cbebc7f2_9fb5_4fbf_a6dc_13140c784da7&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Signal Throw 2&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__8476a0f7_36b7_4666_a3b2_c18efcc68a94&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 6&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__10ecbff1_cd15_4a5c_9aa5_6f2a35479416&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 28&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__928cd158_ebe1_4c0a_9c3e_42e77d663aa2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway 7&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__df7727a0_f509_45eb_bb89_85753f439576&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 11 Escalation&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__dfb273c6_0ad3_4030_9e72_638adf7ca75f&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway 5&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 3&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__189118eb_65fc_43e8_8a34_a155b113914f&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Link&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement; Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 3&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__189118eb_65fc_43e8_8a34_a155b113914f&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement: Push (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__189118eb_65fc_43e8_8a34_a155b113914f)</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event 7&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Signal Catch&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkSignalEvent; Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 31&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway 7&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event 12&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateElement; Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkErrorEvent; Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : callingMethod: Pop (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__189118eb_65fc_43e8_8a34_a155b113914f)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 32&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__d58753a7_d38b_49cd_914d_14e4cdaa4449&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateBoundaryEvent; Message: Boundary element &apos;null&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 33&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__0ab0e0ac_f88b_4402_9986_e95a72dfc8a3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 14&apos; and @id=&apos;ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__3400f56a_4565_47d1_91db_0ba17b958cb2__147b1900_7e7d_4b8f_b243_0155265f1c00&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : callingMethod: Pop (id: process-ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : callingMethod: Pop (id: collaboration-Trisotech_Visio-_6)</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+	</body>
+</html>

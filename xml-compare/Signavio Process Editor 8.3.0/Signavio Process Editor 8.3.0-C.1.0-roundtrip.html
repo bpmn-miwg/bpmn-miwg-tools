@@ -26,6 +26,20 @@
       <div class="test" data-test="C.1.0" data-variant="Roundtrip">
          <h3>C.1.0</h3>
          <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]">/definitions[1] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]">/definitions[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]">/definitions[1] :	version</span>
+               <span class="vendor" data-xpath="/definitions[1]">/definitions[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in xsi:schemaLocation attribute (id:23)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/@schemaLocation">/definitions[1]/@schemaLocation :	http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd</span>
@@ -33,24 +47,24 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]">/definitions[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]">/definitions[1] :	typeLanguage</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]">/definitions[1] :	5</span>
+               <span class="reference" data-xpath="/definitions[1]">/definitions[1] :	8</span>
                <span class="vendor" data-xpath="/definitions[1]">/definitions[1] :	6</span>
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	7</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	8</span>
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/collaboration[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/extensionElements[1]/signavioDiagramMetaData[1]">/definitions[1]/collaboration[1]/extensionElements[1]/signavioDiagramMetaData[1] :	signavio:signavioDiagramMetaData</span>
             </span>
          </div>
          <div class="finding">
@@ -61,24 +75,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in sequence of child nodes (id:20)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/participant[1]">/definitions[1]/collaboration[1]/participant[1] :	0</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/participant[1]">/definitions[1]/collaboration[1]/participant[1] :	1</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in presence of child nodes to be (id:18)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/collaboration[1]/participant[2]/extensionElements[1]">/definitions[1]/collaboration[1]/participant[2]/extensionElements[1] :	true</span>
                <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/participant[2]/extensionElements[1]">/definitions[1]/collaboration[1]/participant[2]/extensionElements[1] :	false</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in sequence of child nodes (id:20)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/participant[2]">/definitions[1]/collaboration[1]/participant[2] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/participant[2]">/definitions[1]/collaboration[1]/participant[2] :	2</span>
             </span>
          </div>
          <div class="finding">
@@ -89,24 +89,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in sequence of child nodes (id:20)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[1]">/definitions[1]/collaboration[1]/messageFlow[1] :	2</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[1]">/definitions[1]/collaboration[1]/messageFlow[1] :	3</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in attribute name (id:2)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	null</span>
                <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	name</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in sequence of child nodes (id:20)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	3</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	4</span>
             </span>
          </div>
          <div class="finding">
@@ -117,24 +103,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in sequence of child nodes (id:20)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[3]">/definitions[1]/collaboration[1]/messageFlow[3] :	4</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[3]">/definitions[1]/collaboration[1]/messageFlow[3] :	5</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in attribute name (id:2)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[4]">/definitions[1]/collaboration[1]/messageFlow[4] :	null</span>
                <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[4]">/definitions[1]/collaboration[1]/messageFlow[4] :	name</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in sequence of child nodes (id:20)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[4]">/definitions[1]/collaboration[1]/messageFlow[4] :	5</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[4]">/definitions[1]/collaboration[1]/messageFlow[4] :	6</span>
             </span>
          </div>
          <div class="finding">
@@ -147,42 +119,21 @@
          <div class="finding">
             <h4>Difference found in sequence of child nodes (id:20)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[5]">/definitions[1]/collaboration[1]/messageFlow[5] :	6</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[5]">/definitions[1]/collaboration[1]/messageFlow[5] :	7</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in presence of child node (id:22)</h4>
-            <span class="detailedoutput">
-               <span class="reference">null :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/extensionElements[1]">/definitions[1]/collaboration[1]/extensionElements[1] :	extensionElements</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in sequence of child nodes (id:20)</h4>
-            <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	1</span>
                <span class="vendor" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	2</span>
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]">/definitions[1]/process[1] :	4</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]">/definitions[1]/process[1] :	5</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]">/definitions[1]/process[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]">/definitions[1]/process[1] :	processType</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/extensionElements[1]">/definitions[1]/process[1]/extensionElements[1] :	true</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/extensionElements[1]">/definitions[1]/process[1]/extensionElements[1] :	false</span>
             </span>
          </div>
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/laneSet[1]/lane[1]/extensionElements[1]">/definitions[1]/process[1]/laneSet[1]/lane[1]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/laneSet[1]/lane[1]/extensionElements[1]">/definitions[1]/process[1]/laneSet[1]/lane[1]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/laneSet[1]/lane[1]/extensionElements[1]">/definitions[1]/process[1]/laneSet[1]/lane[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -194,9 +145,30 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/laneSet[1]/lane[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/laneSet[1]/lane[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of element attributes (id:11)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/startEvent[1]">/definitions[1]/process[1]/startEvent[1] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]">/definitions[1]/process[1]/startEvent[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/startEvent[1]">/definitions[1]/process[1]/startEvent[1] :	isInterrupting</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]">/definitions[1]/process[1]/startEvent[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/startEvent[1]/extensionElements[1]">/definitions[1]/process[1]/startEvent[1]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/startEvent[1]/extensionElements[1]">/definitions[1]/process[1]/startEvent[1]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]/extensionElements[1]">/definitions[1]/process[1]/startEvent[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -204,6 +176,13 @@
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[1]/startEvent[1]/extensionElements[1]/signavioMetaData[2]">/definitions[1]/process[1]/startEvent[1]/extensionElements[1]/signavioMetaData[2] :	signavio:signavioMetaData</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/startEvent[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/startEvent[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
                <span class="vendor">null :	null</span>
             </span>
          </div>
@@ -222,37 +201,9 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	2</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	5</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	startQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]/extensionElements[1]">/definitions[1]/process[1]/task[1]/extensionElements[1] :	12</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]/extensionElements[1]">/definitions[1]/process[1]/task[1]/extensionElements[1] :	13</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/task[1]/extensionElements[1]">/definitions[1]/process[1]/task[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -334,37 +285,16 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	2</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	5</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	startQuantity</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/task[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[2]/extensionElements[1]">/definitions[1]/process[1]/task[2]/extensionElements[1] :	12</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[2]/extensionElements[1]">/definitions[1]/process[1]/task[2]/extensionElements[1] :	13</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/task[2]/extensionElements[1]">/definitions[1]/process[1]/task[2]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -446,6 +376,13 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[2]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/task[2]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in attribute name (id:2)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[1]">/definitions[1]/process[1]/endEvent[1] :	null</span>
@@ -455,7 +392,7 @@
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[1]/extensionElements[1]">/definitions[1]/process[1]/endEvent[1]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[1]/extensionElements[1]">/definitions[1]/process[1]/endEvent[1]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[1]/extensionElements[1]">/definitions[1]/process[1]/endEvent[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -467,9 +404,16 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/endEvent[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[1]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[1]/extensionElements[1] :	3</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[1]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[1]/extensionElements[1] :	4</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[1]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[1]/extensionElements[1] :	2</span>
             </span>
          </div>
@@ -532,6 +476,13 @@
          <div class="finding">
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/intermediateCatchEvent[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[1]/messageEventDefinition[1]">/definitions[1]/process[1]/intermediateCatchEvent[1]/messageEventDefinition[1] :	messageEventDefinition</span>
                <span class="vendor">null :	null</span>
             </span>
@@ -544,37 +495,9 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	2</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	5</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	startQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[3]/extensionElements[1]">/definitions[1]/process[1]/task[3]/extensionElements[1] :	12</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[3]/extensionElements[1]">/definitions[1]/process[1]/task[3]/extensionElements[1] :	13</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/task[3]/extensionElements[1]">/definitions[1]/process[1]/task[3]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -656,17 +579,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/eventBasedGateway[1]">/definitions[1]/process[1]/eventBasedGateway[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/eventBasedGateway[1]">/definitions[1]/process[1]/eventBasedGateway[1] :	eventGatewayType</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/eventBasedGateway[1]">/definitions[1]/process[1]/eventBasedGateway[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/eventBasedGateway[1]">/definitions[1]/process[1]/eventBasedGateway[1] :	instantiate</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[3]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/task[3]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -679,7 +595,7 @@
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/eventBasedGateway[1]/extensionElements[1]">/definitions[1]/process[1]/eventBasedGateway[1]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/eventBasedGateway[1]/extensionElements[1]">/definitions[1]/process[1]/eventBasedGateway[1]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/eventBasedGateway[1]/extensionElements[1]">/definitions[1]/process[1]/eventBasedGateway[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -691,9 +607,16 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/eventBasedGateway[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/eventBasedGateway[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[2]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[2]/extensionElements[1] :	3</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[2]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[2]/extensionElements[1] :	4</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[2]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[2]/extensionElements[1] :	2</span>
             </span>
          </div>
@@ -756,6 +679,13 @@
          <div class="finding">
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[2]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/intermediateCatchEvent[2]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[2]/messageEventDefinition[1]">/definitions[1]/process[1]/intermediateCatchEvent[2]/messageEventDefinition[1] :	messageEventDefinition</span>
                <span class="vendor">null :	null</span>
             </span>
@@ -768,37 +698,9 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	2</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	5</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	startQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/task[4]/extensionElements[1]">/definitions[1]/process[1]/task[4]/extensionElements[1] :	12</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[4]/extensionElements[1]">/definitions[1]/process[1]/task[4]/extensionElements[1] :	13</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/task[4]/extensionElements[1]">/definitions[1]/process[1]/task[4]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -880,9 +782,16 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[4]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/task[4]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[3]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[3]/extensionElements[1] :	3</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[3]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[3]/extensionElements[1] :	4</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[3]/extensionElements[1]">/definitions[1]/process[1]/intermediateCatchEvent[3]/extensionElements[1] :	2</span>
             </span>
          </div>
@@ -945,6 +854,13 @@
          <div class="finding">
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[3]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/intermediateCatchEvent[3]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[1]/intermediateCatchEvent[3]/timerEventDefinition[1]">/definitions[1]/process[1]/intermediateCatchEvent[3]/timerEventDefinition[1] :	timerEventDefinition</span>
                <span class="vendor">null :	null</span>
             </span>
@@ -966,7 +882,7 @@
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[2]/extensionElements[1]">/definitions[1]/process[1]/endEvent[2]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[2]/extensionElements[1]">/definitions[1]/process[1]/endEvent[2]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[2]/extensionElements[1]">/definitions[1]/process[1]/endEvent[2]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -974,6 +890,13 @@
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[2]/extensionElements[1]/signavioMetaData[2]">/definitions[1]/process[1]/endEvent[2]/extensionElements[1]/signavioMetaData[2] :	signavio:signavioMetaData</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[2]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[1]/endEvent[2]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
                <span class="vendor">null :	null</span>
             </span>
          </div>
@@ -1055,24 +978,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]">/definitions[1]/process[2] :	4</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]">/definitions[1]/process[2] :	5</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in attribute value (id:3)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[2]/@name">/definitions[1]/process[2]/@name :	BPMN MIWG Test Case C.1.0</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/@name">/definitions[1]/process[2]/@name :	Process Engine - Invoice Receipt</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]">/definitions[1]/process[2] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]">/definitions[1]/process[2] :	processType</span>
             </span>
          </div>
          <div class="finding">
@@ -1083,9 +992,16 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/extensionElements[1]">/definitions[1]/process[2]/extensionElements[1] :	true</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[2]/extensionElements[1]">/definitions[1]/process[2]/extensionElements[1] :	false</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[1]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[1]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[1]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[1]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[1]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1097,9 +1013,16 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/laneSet[1]/lane[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[2]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[2]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[2]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[2]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[2]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[2]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1111,9 +1034,16 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[2]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/laneSet[1]/lane[2]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[3]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[3]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[3]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[3]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[3]/extensionElements[1]">/definitions[1]/process[2]/laneSet[1]/lane[3]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1125,10 +1055,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	5</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	8</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/laneSet[1]/lane[3]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/laneSet[1]/lane[3]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -1139,30 +1069,16 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
+            <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	startQuantity</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	5</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	4</span>
             </span>
          </div>
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]/extensionElements[1]">/definitions[1]/process[2]/userTask[1]/extensionElements[1] :	12</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]/extensionElements[1]">/definitions[1]/process[2]/userTask[1]/extensionElements[1] :	13</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[1]/extensionElements[1]">/definitions[1]/process[2]/userTask[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1244,9 +1160,23 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/userTask[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]/potentialOwner[1]">/definitions[1]/process[2]/userTask[1]/potentialOwner[1] :	potentialOwner</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/exclusiveGateway[1]/extensionElements[1]">/definitions[1]/process[2]/exclusiveGateway[1]/extensionElements[1] :	5</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/exclusiveGateway[1]/extensionElements[1]">/definitions[1]/process[2]/exclusiveGateway[1]/extensionElements[1] :	6</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/exclusiveGateway[1]/extensionElements[1]">/definitions[1]/process[2]/exclusiveGateway[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1279,10 +1209,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	5</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	8</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/exclusiveGateway[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/exclusiveGateway[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -1293,30 +1223,16 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
+            <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	startQuantity</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[2]">/definitions[1]/process[2]/userTask[2] :	3</span>
             </span>
          </div>
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]/extensionElements[1]">/definitions[1]/process[2]/userTask[2]/extensionElements[1] :	12</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]/extensionElements[1]">/definitions[1]/process[2]/userTask[2]/extensionElements[1] :	13</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[2]/extensionElements[1]">/definitions[1]/process[2]/userTask[2]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1398,10 +1314,17 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	5</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	8</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/userTask[2]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[2]/potentialOwner[1]">/definitions[1]/process[2]/userTask[2]/potentialOwner[1] :	potentialOwner</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -1412,30 +1335,16 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
+            <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	startQuantity</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[3]">/definitions[1]/process[2]/userTask[3] :	3</span>
             </span>
          </div>
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]/extensionElements[1]">/definitions[1]/process[2]/userTask[3]/extensionElements[1] :	12</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]/extensionElements[1]">/definitions[1]/process[2]/userTask[3]/extensionElements[1] :	13</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[3]/extensionElements[1]">/definitions[1]/process[2]/userTask[3]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1517,9 +1426,23 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/userTask[3]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[3]/potentialOwner[1]">/definitions[1]/process[2]/userTask[3]/potentialOwner[1] :	potentialOwner</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/exclusiveGateway[2]/extensionElements[1]">/definitions[1]/process[2]/exclusiveGateway[2]/extensionElements[1] :	5</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/exclusiveGateway[2]/extensionElements[1]">/definitions[1]/process[2]/exclusiveGateway[2]/extensionElements[1] :	6</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/exclusiveGateway[2]/extensionElements[1]">/definitions[1]/process[2]/exclusiveGateway[2]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1552,9 +1475,16 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/exclusiveGateway[2]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/exclusiveGateway[2]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/endEvent[1]/extensionElements[1]">/definitions[1]/process[2]/endEvent[1]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/endEvent[1]/extensionElements[1]">/definitions[1]/process[2]/endEvent[1]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/endEvent[1]/extensionElements[1]">/definitions[1]/process[2]/endEvent[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1566,9 +1496,30 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/endEvent[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/endEvent[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of element attributes (id:11)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]">/definitions[1]/process[2]/startEvent[1] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[2]/startEvent[1]">/definitions[1]/process[2]/startEvent[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]">/definitions[1]/process[2]/startEvent[1] :	isInterrupting</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[2]/startEvent[1]">/definitions[1]/process[2]/startEvent[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]/extensionElements[1]">/definitions[1]/process[2]/startEvent[1]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]/extensionElements[1]">/definitions[1]/process[2]/startEvent[1]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/startEvent[1]/extensionElements[1]">/definitions[1]/process[2]/startEvent[1]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1576,6 +1527,13 @@
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]/extensionElements[1]/signavioMetaData[2]">/definitions[1]/process[2]/startEvent[1]/extensionElements[1]/signavioMetaData[2] :	signavio:signavioMetaData</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/startEvent[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
                <span class="vendor">null :	null</span>
             </span>
          </div>
@@ -1594,13 +1552,6 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	5</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	8</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in attribute value (id:3)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]/@implementation">/definitions[1]/process[2]/userTask[4]/@implementation :	webService</span>
@@ -1608,37 +1559,9 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	startQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	3</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[4]">/definitions[1]/process[2]/userTask[4] :	4</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]/extensionElements[1]">/definitions[1]/process[2]/userTask[4]/extensionElements[1] :	12</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]/extensionElements[1]">/definitions[1]/process[2]/userTask[4]/extensionElements[1] :	13</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[4]/extensionElements[1]">/definitions[1]/process[2]/userTask[4]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1722,6 +1645,20 @@
          <div class="finding">
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/userTask[4]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[4]/potentialOwner[1]">/definitions[1]/process[2]/userTask[4]/potentialOwner[1] :	potentialOwner</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
                <span class="reference">null :	null</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/userTask[4]/dataOutputAssociation[1]">/definitions[1]/process[2]/userTask[4]/dataOutputAssociation[1] :	dataOutputAssociation</span>
             </span>
@@ -1729,7 +1666,7 @@
          <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/endEvent[2]/extensionElements[1]">/definitions[1]/process[2]/endEvent[2]/extensionElements[1] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/endEvent[2]/extensionElements[1]">/definitions[1]/process[2]/endEvent[2]/extensionElements[1] :	3</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/endEvent[2]/extensionElements[1]">/definitions[1]/process[2]/endEvent[2]/extensionElements[1] :	1</span>
             </span>
          </div>
@@ -1741,10 +1678,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of element attributes (id:11)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	4</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	7</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/endEvent[2]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/endEvent[2]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -1755,30 +1692,9 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	completionQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	isForCompensation</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in attribute name (id:2)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	null</span>
-               <span class="vendor" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	startQuantity</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]/extensionElements[1]">/definitions[1]/process[2]/serviceTask[1]/extensionElements[1] :	17</span>
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]/extensionElements[1]">/definitions[1]/process[2]/serviceTask[1]/extensionElements[1] :	18</span>
                <span class="vendor" data-xpath="/definitions[1]/process[2]/serviceTask[1]/extensionElements[1]">/definitions[1]/process[2]/serviceTask[1]/extensionElements[1] :	6</span>
             </span>
          </div>
@@ -1926,6 +1842,13 @@
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]/extensionElements[1]/signavioMetaData[12]">/definitions[1]/process[2]/serviceTask[1]/extensionElements[1]/signavioMetaData[12] :	signavio:signavioMetaData</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]/extensionElements[1]/graphStyle[1]">/definitions[1]/process[2]/serviceTask[1]/extensionElements[1]/graphStyle[1] :	w4graph:graphStyle</span>
                <span class="vendor">null :	null</span>
             </span>
          </div>
@@ -2098,9 +2021,44 @@
             </span>
          </div>
          <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/resource[1]">/definitions[1]/resource[1] :	resource</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/resource[2]">/definitions[1]/resource[2] :	resource</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/resource[3]">/definitions[1]/resource[3] :	resource</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of element attributes (id:11)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
             <h4>Difference found in number of child nodes (id:19)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	1</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	2</span>
                <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	4</span>
             </span>
          </div>
@@ -2140,10 +2098,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2154,10 +2112,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2168,10 +2126,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2252,10 +2210,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2308,10 +2266,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2434,10 +2392,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2448,10 +2406,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2462,10 +2420,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2476,10 +2434,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2518,13 +2476,6 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23] :	2</span>
-            </span>
-         </div>
-         <div class="finding">
             <h4>Difference found in attribute value (id:3)</h4>
             <span class="detailedoutput">
                <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/Bounds[1]/@height :	28.0</span>
@@ -2555,15 +2506,22 @@
          <div class="finding">
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
                <span class="reference">null :	null</span>
                <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2574,10 +2532,10 @@
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -2585,13 +2543,6 @@
             <span class="detailedoutput">
                <span class="reference">null :	null</span>
                <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
-            </span>
-         </div>
-         <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
-            <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] :	2</span>
             </span>
          </div>
          <div class="finding">
@@ -2625,15 +2576,22 @@
          <div class="finding">
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
                <span class="reference">null :	null</span>
                <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
             </span>
          </div>
          <div class="finding">
-            <h4>Difference found in number of child nodes (id:19)</h4>
+            <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] :	1</span>
-               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] :	2</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
             </span>
          </div>
          <div class="finding">
@@ -3997,6 +3955,13 @@
          <div class="finding">
             <h4>Difference found in presence of child node (id:22)</h4>
             <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]">/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1] :	bpmndi:BPMNLabelStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
                <span class="reference">null :	null</span>
                <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]">/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1] :	bpmndi:BPMNLabelStyle</span>
             </span>
@@ -4018,7 +3983,7 @@
          <div class="finding">
             <h4>Difference found in sequence of child nodes (id:20)</h4>
             <span class="detailedoutput">
-               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	4</span>
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	7</span>
                <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	5</span>
             </span>
          </div>

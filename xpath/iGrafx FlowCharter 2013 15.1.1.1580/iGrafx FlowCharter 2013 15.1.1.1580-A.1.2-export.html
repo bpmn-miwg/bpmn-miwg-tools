@@ -20,11 +20,92 @@
         </ul>
 			</div>
 		</div>
-		<div class="testresults">
+<div class="testresults">
    <div class="tool" data-vendor="iGrafx FlowCharter 2013 15.1.1.1580">
       <h2>iGrafx FlowCharter 2013 15.1.1.1580</h2>
-      <div class="test" data-test="A.1.2" data-variant="export">
+      <div class="test" data-test="A.1.2" data-variant="Export">
          <h3>A.1.2</h3>
+         <div class="info">
+            <h4>ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-A.1.2-export</h4>
+         </div>
+         <div class="finding">
+            <h4>  FINDING: callingMethod; Message: Cannot find attribute; Parameter: id</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : callingMethod: Push (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectElementX; Message: /bpmn:definitions/bpmn:process</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectElementX: Push (id: diagram_IDACVOGE)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateElement; Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;Task 1&apos; and @id=&apos;shape_IDALJMGE&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>      FINDING: checkOwner; Message: Cannot find resource reference; Parameter: bpmn:performer/bpmn:resourceRef</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkDataAssociation: Push (id: shape_IDALJMGE)</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataObject &apos;Data Object 1&apos;; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Pop (id: shape_IDALJMGE)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:serviceTask[@name=&apos;Task 2&apos; and @id=&apos;shape_IDABOMGE&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>      FINDING: checkOperation; Message: Cannot find attribute; Parameter: operationRef</h4>
+         </div>
+         <div class="finding">
+            <h4>      FINDING: checkOperation; Message: Cannot find operation; Parameter: /bpmn:definitions/bpmn:interface/bpmn:operation[@id=&apos;null&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkDataAssociation: Push (id: shape_IDABOMGE)</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataObject &apos;Data Object 1&apos;; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Pop (id: shape_IDABOMGE)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkDataAssociation: Push (id: shape_IDABOMGE)</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataObject &apos;Data Object 2&apos;; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Pop (id: shape_IDABOMGE)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;Task 3&apos; and @id=&apos;shape_IDA00NGE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : checkDataAssociation: Push (id: shape_IDA00NGE)</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkDataAssociation; Message: Cannot find the associated artifact dataObject &apos;Data Object 2&apos;; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation: Pop (id: shape_IDA00NGE)</h4>
+         </div>
+         <div class="finding">
+            <h4>      FINDING: checkOwner; Message: Cannot find resource reference; Parameter: bpmn:performer/bpmn:resourceRef</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;shape_IDAP5NGE&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : callingMethod: Pop (id: diagram_IDACVOGE)</h4>
+         </div>
       </div>
    </div>
 </div>
