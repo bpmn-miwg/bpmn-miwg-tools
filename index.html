@@ -88,10 +88,12 @@
                     { "mData": "participatedInDemos", "mRender": renderBoolean },
                     { "mData": "openSource", "mRender": renderLicense },
                     { "mData": "openIssues",
+                      "sType": "numeric",
                       "mRender": function ( data, type, full ) {
                         return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(/\+/g, '%2b').replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
                       } },
                     { "mData": "closedIssues",
+                      "sType": "numeric",
                       "mRender": function ( data, type, full ) {
                         return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=closed&labels=Tool%3A+' + full.tool.replace(/\+/g, '%2b').replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
                       } },
