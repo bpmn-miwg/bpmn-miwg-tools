@@ -82,7 +82,7 @@ public class AnalysisJob {
 	}
 
 	public String getName() {
-		if (variant == MIWGVariant.Reference)
+		if (variant == MIWGVariant.Reference || variant == null)
 			return fullApplicationName + "-" + miwgTestCase;
 		else
 			return fullApplicationName + "-" + miwgTestCase + "-"
