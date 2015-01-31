@@ -50,8 +50,8 @@ import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
 import org.w3c.dom.Document;
 
 public class XPathAnalysisTool implements DOMAnalysisTool {
-	public final static String NAME="xpath";
-	
+	public final static String NAME = "xpath";
+
 	private List<AbstractXpathCheck> registeredChecks = new LinkedList<AbstractXpathCheck>();
 
 	public XPathAnalysisTool() {
@@ -82,8 +82,7 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 				return check;
 			}
 		}
-		throw new RuntimeException(String.format(
-				"No applicable test found for %s", job.getName()));
+		return null;
 	}
 
 	@Override
@@ -91,6 +90,10 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 			Document referenceDocument, Document actualDocument, File logDir)
 			throws Exception {
 		DOMCheck check = getCheck(job);
+		if (check == null)
+			throw new Exception(String.format(
+					"No applicable test found for %s", job.getName()));
+
 		CheckOutput checkOutput = new CheckOutput(job.getName(), logDir);
 		check.init(checkOutput);
 
@@ -99,7 +102,7 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 		try {
 			result = check.execute(actualDocument, this);
 		} catch (Throwable e) {
-			throw new IOException(e.getMessage(), e);
+			throw new Exception(e);
 		} finally {
 			checkOutput.close();
 		}

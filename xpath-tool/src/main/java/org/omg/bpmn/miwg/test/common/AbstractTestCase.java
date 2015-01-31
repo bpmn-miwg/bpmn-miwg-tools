@@ -26,6 +26,7 @@
 package org.omg.bpmn.miwg.test.common;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -68,19 +69,31 @@ public abstract class AbstractTestCase {
 	public void testXpath() throws Exception {
 		XPathAnalysisTool tool = new XPathAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob(param.application.toString(), param.testResult.name, null, null, null);
+		AnalysisJob job = new AnalysisJob(param.application.toString(),
+				param.testResult.name, null, null, null);
 
-		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
-		Document bpmnXmlDOM = DOMFactory.getDocument(bpmnXmlStream);
+		InputStream bpmnXmlStream = null;
+		Document bpmnXmlDOM = null;
+		try {
+			bpmnXmlStream = new FileInputStream(param.testResult.file);
+			bpmnXmlDOM = DOMFactory.getDocument(bpmnXmlStream);
+		} catch (Exception e) {
+			System.err.println("Could not create DOM: " + e.getMessage());
+			fail("Could not create DOM");
+			return;
+		}
+
 		AnalysisResult result = null;
 		try {
-			result = tool.analyzeDOM(job, null, bpmnXmlDOM,
-					param.outputRoot);
+			result = tool.analyzeDOM(job, null, bpmnXmlDOM, param.outputRoot);
 
 			assertEquals(0, result.numFindings);
+		} catch (Exception e) {
+			fail("Exception during execution: " + e.getMessage());
 		} finally {
-			bpmnXmlStream.close();
-			
+			if (bpmnXmlStream != null)
+				bpmnXmlStream.close();
+
 			System.out.println();
 			System.out.println(result);
 		}
@@ -90,7 +103,8 @@ public abstract class AbstractTestCase {
 	public void testSchema() throws Exception {
 		XsdAnalysisTool tool = new XsdAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob(param.application.toString(), param.testResult.name, null, null, null);
+		AnalysisJob job = new AnalysisJob(param.application.toString(),
+				param.testResult.name, null, null, null);
 
 		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
 		AnalysisResult result = null;

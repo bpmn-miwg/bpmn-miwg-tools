@@ -120,7 +120,5 @@ public class C_1_0_Check extends AbstractXpathCheck {
 			pop();
 		}
 		
-		pop();
-
 	}
 }
