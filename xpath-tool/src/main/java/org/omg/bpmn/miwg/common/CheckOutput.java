@@ -85,6 +85,7 @@ public class CheckOutput {
 
 		if (logToFile)
 			textFileWriter.println(line);
+		
 	}
 
 	public void println() {
@@ -139,23 +140,23 @@ public class CheckOutput {
 				textFileWriter.close();
 
 			XStream xstream = new XStream();
+			xstream.processAnnotations(Analysis.class);
+			xstream.processAnnotations(EmptyEntry.class);
 			xstream.processAnnotations(ExceptionEntry.class);
 			xstream.processAnnotations(FindingAssertionEntry.class);
 			xstream.processAnnotations(FindingNavigationEntry.class);
-			xstream.processAnnotations(KeyValueEntry.class);
-			xstream.processAnnotations(ListKeyValueEntry.class);
 			xstream.processAnnotations(InfoEntry.class);
+			xstream.processAnnotations(KeyValueEntry.class);
 			xstream.processAnnotations(ListEntry.class);
+			xstream.processAnnotations(ListKeyValueEntry.class);
+			xstream.processAnnotations(NodePushEntry.class);
+			xstream.processAnnotations(NodePopEntry.class);
 			xstream.processAnnotations(OKAssertionEntry.class);
 			xstream.processAnnotations(OKNavigationEntry.class);
-			xstream.processAnnotations(NodePushEntry.class);
-			xstream.processAnnotations(EmptyEntry.class);
-			xstream.processAnnotations(NodePopEntry.class);
-			xstream.processAnnotations(TestEntry.class);
 			xstream.processAnnotations(ResultsEntry.class);
-			xstream.processAnnotations(TotalResultsEntry.class);
-			xstream.processAnnotations(Analysis.class);
+			xstream.processAnnotations(TestEntry.class);
 			xstream.processAnnotations(TestFileEntry.class);
+			xstream.processAnnotations(TotalResultsEntry.class);
 			String xml = xstream.toXML(stack.firstElement());
 
 			xmlFileWriter.print(xml);
