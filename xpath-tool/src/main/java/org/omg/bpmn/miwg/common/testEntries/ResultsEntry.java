@@ -26,14 +26,11 @@
 package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
+import org.simpleframework.xml.Attribute;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-
-@XStreamAlias("Results")
 public class ResultsEntry extends AbstractCheckEntry {
 
-	@XStreamAsAttribute
+	@Attribute
 	private String name;
 
 	public ResultsEntry(String test) {

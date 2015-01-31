@@ -26,12 +26,9 @@
 package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
-
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import org.simpleframework.xml.Attribute;
 
 
-@XStreamAlias("KeyValue")
 public class KeyValueEntry extends AbstractCheckEntry {
 	
 	public KeyValueEntry(String key, String value) {
@@ -39,9 +36,9 @@ public class KeyValueEntry extends AbstractCheckEntry {
 		this.value = value;
 	}
 	
-	@XStreamAsAttribute
+	@Attribute
 	public String key;
-	@XStreamAsAttribute
+	@Attribute
 	public String value;
 
 	@Override

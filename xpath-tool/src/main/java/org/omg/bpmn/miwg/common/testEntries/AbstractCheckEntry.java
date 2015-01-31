@@ -29,13 +29,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
+import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.Root;
 
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
-
+@Root
 public abstract class AbstractCheckEntry {
-
-	@XStreamImplicit
-	public List<AbstractCheckEntry> children = new LinkedList<AbstractCheckEntry>();
+	
+	@ElementList(inline=true)
+	private List<AbstractCheckEntry> children = new LinkedList<AbstractCheckEntry>();
 
 	public void addChild(AbstractCheckEntry entry) {
 		children.add(entry);
@@ -45,4 +46,14 @@ public abstract class AbstractCheckEntry {
 	
 	public abstract OutputType getOutputType();
 
+	public void TEST_print(int level) {
+		StringBuilder sb = new StringBuilder();
+		for (int i=0;i<level;i++)
+			sb.append(" ");
+		
+		System.err.println(sb.toString() + this.toString());
+		for (AbstractCheckEntry c : children)
+			c.TEST_print(level + 1);
+	}
+	
 }

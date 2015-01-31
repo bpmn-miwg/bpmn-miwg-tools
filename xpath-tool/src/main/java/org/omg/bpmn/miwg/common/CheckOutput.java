@@ -11,9 +11,13 @@ import java.util.List;
 import java.util.Stack;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
-import org.omg.bpmn.miwg.common.testEntries.*;
-
-import com.thoughtworks.xstream.XStream;
+import org.omg.bpmn.miwg.common.testEntries.AbstractCheckEntry;
+import org.omg.bpmn.miwg.common.testEntries.Analysis;
+import org.omg.bpmn.miwg.common.testEntries.EmptyEntry;
+import org.omg.bpmn.miwg.common.testEntries.NodePopEntry;
+import org.omg.bpmn.miwg.common.testEntries.TestEntry;
+import org.simpleframework.xml.Serializer;
+import org.simpleframework.xml.core.Persister;
 
 public class CheckOutput {
 	private File textFile;
@@ -75,8 +79,10 @@ public class CheckOutput {
 	public void println(AbstractCheckEntry entry) {
 		String line = generateSpaces(stack.size() * 2) + entry.toLine();
 
-		if (!(entry instanceof EmptyEntry))
+		if (!(entry instanceof EmptyEntry)) {
 			stack.peek().addChild(entry);
+			// System.err.println(stack.peek() + ".ADD(" + entry + ")");
+		}
 
 		System.out.println(line);
 
@@ -85,7 +91,7 @@ public class CheckOutput {
 
 		if (logToFile)
 			textFileWriter.println(line);
-		
+
 	}
 
 	public void println() {
@@ -95,19 +101,26 @@ public class CheckOutput {
 	public void push(AbstractCheckEntry entry) {
 		if (!stack.empty()) {
 			stack.peek().addChild(entry);
+			// System.err.println(stack.peek() + ".ADD(" + entry + ")");
 		}
 
 		String line = generateSpaces(stack.size() * 2) + entry.toLine();
 
 		Output miwgOutput = new Output(entry.getOutputType(), line);
 		miwgOutputs.add(miwgOutput);
-		
+
 		System.out.println(line);
 
 		if (logToFile)
 			textFileWriter.println(line);
 
 		stack.push(entry);
+
+		// System.err.println("STACK.PUSH(" + entry + ")");
+		/*
+		 * for (AbstractCheckEntry e : stack.toArray(new
+		 * AbstractCheckEntry[stack.size()])) { System.err.println(e); }
+		 */
 	}
 
 	public void pop() {
@@ -133,33 +146,20 @@ public class CheckOutput {
 		}
 	}
 
-	public void close() {
+	public void close() throws Exception {
 
 		if (logToFile) {
 			if (textFileWriter != null)
 				textFileWriter.close();
 
-			XStream xstream = new XStream();
-			xstream.processAnnotations(Analysis.class);
-			xstream.processAnnotations(EmptyEntry.class);
-			xstream.processAnnotations(ExceptionEntry.class);
-			xstream.processAnnotations(FindingAssertionEntry.class);
-			xstream.processAnnotations(FindingNavigationEntry.class);
-			xstream.processAnnotations(InfoEntry.class);
-			xstream.processAnnotations(KeyValueEntry.class);
-			xstream.processAnnotations(ListEntry.class);
-			xstream.processAnnotations(ListKeyValueEntry.class);
-			xstream.processAnnotations(NodePushEntry.class);
-			xstream.processAnnotations(NodePopEntry.class);
-			xstream.processAnnotations(OKAssertionEntry.class);
-			xstream.processAnnotations(OKNavigationEntry.class);
-			xstream.processAnnotations(ResultsEntry.class);
-			xstream.processAnnotations(TestEntry.class);
-			xstream.processAnnotations(TestFileEntry.class);
-			xstream.processAnnotations(TotalResultsEntry.class);
-			String xml = xstream.toXML(stack.firstElement());
 
-			xmlFileWriter.print(xml);
+			Serializer serializer = new Persister();
+
+			try {
+				serializer.write(stack.firstElement(), xmlFileWriter);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
 			if (xmlFileWriter != null)
 				xmlFileWriter.close();

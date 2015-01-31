@@ -26,19 +26,16 @@
 package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
-
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import org.simpleframework.xml.Attribute;
 
 
-@XStreamAlias("Info")
 public class InfoEntry extends AbstractCheckEntry {
 	
 	public InfoEntry(String message) {
 		this.message = message;
 	}
 	
-	@XStreamAsAttribute
+	@Attribute
 	public String message;
 
 	@Override

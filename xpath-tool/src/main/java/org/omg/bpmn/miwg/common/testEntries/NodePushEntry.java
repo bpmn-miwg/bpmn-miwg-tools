@@ -26,11 +26,10 @@
 package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
+import org.simpleframework.xml.Root;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-
-@XStreamAlias("NodePush")
+@Root(name="push")
 public class NodePushEntry extends OKNavigationEntry {
 	
 	public NodePushEntry(String caller, String identifier, CheckContext testContext) {

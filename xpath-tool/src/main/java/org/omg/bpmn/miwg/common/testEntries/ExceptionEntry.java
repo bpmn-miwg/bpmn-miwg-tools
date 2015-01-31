@@ -26,12 +26,9 @@
 package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
-
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import org.simpleframework.xml.Attribute;
 
 
-@XStreamAlias("Exception")
 public class ExceptionEntry extends AbstractCheckEntry {
 	
 	public ExceptionEntry(String message, Throwable e) {
@@ -41,7 +38,7 @@ public class ExceptionEntry extends AbstractCheckEntry {
 	
 	public Throwable exception;
 	
-	@XStreamAsAttribute
+	@Attribute
 	public String message;
 
 	@Override

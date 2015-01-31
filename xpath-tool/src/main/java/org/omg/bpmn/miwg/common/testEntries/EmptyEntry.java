@@ -27,10 +27,7 @@ package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-
-@XStreamAlias("Empty")
 public class EmptyEntry extends AbstractCheckEntry {
 
 	@Override

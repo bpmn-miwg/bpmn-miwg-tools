@@ -26,17 +26,15 @@
 package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Root;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-
-
-@XStreamAlias("Analysis")
+@Root
 public class Analysis extends AbstractCheckEntry {
 	
-	@XStreamAsAttribute
+	@Attribute
 	private String name;
-	
+
 	
 	public Analysis(String name) {
 		this.name = name;

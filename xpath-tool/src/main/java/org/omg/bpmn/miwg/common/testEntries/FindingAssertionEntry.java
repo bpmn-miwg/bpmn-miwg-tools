@@ -27,19 +27,19 @@ package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
+import org.simpleframework.xml.Attribute;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-
-@XStreamAlias("FindingAssertion")
 public class FindingAssertionEntry extends AbstractCheckEntry {
-	@XStreamAsAttribute
+
+	@Attribute
 	public String assertion;
-	@XStreamAsAttribute
+
+	@Attribute
 	public String message;
-	@XStreamAsAttribute
+
+	@Attribute
 	public String parameter;
-	@XStreamAsAttribute
+
 	public CheckContext testContext;
 	
 	public FindingAssertionEntry(String assertion, String message, CheckContext testContext) {

@@ -27,17 +27,18 @@ package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Root;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-
-@XStreamAlias("OKAssertion")
+@Root(name="ok")
 public class OKAssertionEntry extends AbstractCheckEntry {
-	@XStreamAsAttribute
+
+	@Attribute
 	public String assertion;
-	@XStreamAsAttribute
+
+	@Attribute
 	public String message;
-	@XStreamAsAttribute
+
 	public CheckContext testContext;
 	
 	public OKAssertionEntry(String assertion, String message, CheckContext testContext) {

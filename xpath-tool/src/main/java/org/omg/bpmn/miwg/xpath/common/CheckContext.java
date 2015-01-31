@@ -27,9 +27,7 @@ package org.omg.bpmn.miwg.xpath.common;
 
 import org.w3c.dom.Node;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-@XStreamAlias("TestContext")
 public class CheckContext {
 
 	private String stackID;

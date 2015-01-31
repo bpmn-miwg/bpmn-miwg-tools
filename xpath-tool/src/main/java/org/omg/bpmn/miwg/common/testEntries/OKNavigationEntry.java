@@ -27,37 +27,38 @@ package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
+import org.simpleframework.xml.Attribute;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-
-@XStreamAlias("Navigation")
 public class OKNavigationEntry extends AbstractCheckEntry {
-	@XStreamAsAttribute
+
+	@Attribute
 	public String message;
-	@XStreamAsAttribute
+
+	@Attribute
 	public String identifier;
-	@XStreamAsAttribute
+
+	@Attribute
 	public String caller;
-	@XStreamAsAttribute
+
 	public CheckContext testContext;
-	
-	public OKNavigationEntry(String message, String caller, String identifier, CheckContext testContext) {
+
+	public OKNavigationEntry(String message, String caller, String identifier,
+			CheckContext testContext) {
 		this.message = message;
 		this.identifier = identifier;
 		this.caller = caller;
 		this.testContext = testContext;
 	}
-	
+
 	@Override
 	public String toLine() {
-		return String.format("OK     : %s: %s (id: %s)", caller, message, identifier);
+		return String.format("OK     : %s: %s (id: %s)", caller, message,
+				identifier);
 	}
-	
+
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.ok;
 	}
-
 
 }

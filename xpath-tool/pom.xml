@@ -35,11 +35,6 @@
       <artifactId>analysis-tool-api</artifactId>
       <version>${project.version}</version>
     </dependency>
-  <dependency>
-    <groupId>com.thoughtworks.xstream</groupId>
-    <artifactId>xstream</artifactId>
-    <version>1.4.4</version>
-  </dependency>
   </dependencies>
 
   <build>

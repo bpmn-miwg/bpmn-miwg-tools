@@ -27,10 +27,7 @@ package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-
-@XStreamAlias("NodePop")
 public class NodePopEntry extends OKNavigationEntry {
 	
 	public NodePopEntry(String caller, String identifier, CheckContext testContext) {

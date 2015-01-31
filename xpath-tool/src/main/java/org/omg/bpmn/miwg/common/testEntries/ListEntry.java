@@ -26,18 +26,15 @@
 package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
+import org.simpleframework.xml.Attribute;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-
-@XStreamAlias("ListItem")
 public class ListEntry extends AbstractCheckEntry {
 
 	public ListEntry(String message) {
 		this.message = message;
 	}
 
-	@XStreamAsAttribute
+	@Attribute
 	public String message;
 
 	@Override
