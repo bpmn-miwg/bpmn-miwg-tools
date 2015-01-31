@@ -32,7 +32,7 @@ import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-@Root
+@Root(name="entry")
 public abstract class AbstractCheckEntry {
 	
 	@ElementList(inline=true)
