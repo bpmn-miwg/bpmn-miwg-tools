@@ -26,15 +26,14 @@
 package org.omg.bpmn.miwg.xpath;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
-import org.omg.bpmn.miwg.common.DOMCheck;
 import org.omg.bpmn.miwg.common.CheckOutput;
+import org.omg.bpmn.miwg.common.DOMCheck;
 import org.omg.bpmn.miwg.xpath.checks.A_1_0_Check;
 import org.omg.bpmn.miwg.xpath.checks.A_1_1_Check;
 import org.omg.bpmn.miwg.xpath.checks.A_1_2_Check;
