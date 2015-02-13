@@ -90,6 +90,8 @@ public abstract class AbstractTestCase {
 			assertEquals(0, result.numFindings);
 		} catch (Exception e) {
 			fail("Exception during execution: " + e.getMessage());
+			System.err.println("Exception: " + e.getMessage());
+			e.printStackTrace();
 		} finally {
 			if (bpmnXmlStream != null)
 				bpmnXmlStream.close();

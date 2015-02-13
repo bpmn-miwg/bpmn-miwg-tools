@@ -1,7 +1,5 @@
 package org.omg.bpmn.miwg.common;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -73,7 +71,7 @@ public abstract class AbstractCheck {
 		this.out = out;
 	}
 
-    protected void loadFile(File file) throws Throwable {
+    /*protected void loadFile(File file) throws Throwable {
         InputStream is = null;
         try {
             is = new FileInputStream(file);
@@ -85,7 +83,7 @@ public abstract class AbstractCheck {
                 ;
             }
         }
-    }
+    }*/
 
     protected void loadResource(InputStream is) throws Throwable {
         factory = DocumentBuilderFactory.newInstance();

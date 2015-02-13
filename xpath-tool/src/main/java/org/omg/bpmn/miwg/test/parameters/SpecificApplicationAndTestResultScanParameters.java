@@ -23,48 +23,44 @@
  * 
  */
 
-package org.omg.bpmn.miwg.common.testEntries;
+package org.omg.bpmn.miwg.test.parameters;
 
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
-import org.omg.bpmn.miwg.xpath.common.CheckContext;
-import org.simpleframework.xml.Attribute;
+import java.io.File;
+import java.io.IOException;
 
-public class FindingAssertionEntry extends AbstractCheckEntry {
+import org.omg.bpmn.miwg.test.common.Application;
+import org.omg.bpmn.miwg.test.common.ScanParameters;
+import org.omg.bpmn.miwg.test.common.TestResult;
 
-	@Attribute
-	public String assertion;
+public class SpecificApplicationAndTestResultScanParameters implements ScanParameters {
 
-	@Attribute
-	public String message;
+	protected String applicationName;
+	protected String testResultName;
 
-	@Attribute(required=false)
-	public String parameter;
-
-	public CheckContext testContext;
-	
-	public FindingAssertionEntry(String assertion, String message, CheckContext testContext) {
-		this.assertion = assertion;
-		this.message = message;
-		this.parameter = "";
-		this.testContext = testContext;
-	}
-	
-	public FindingAssertionEntry(String assertion, String message, String parameter) {
-		this.assertion = assertion;
-		this.message = message;
-		this.parameter = parameter;
-	}
-	
-	
-	@Override
-	public String toLine() {
-		return String.format("FINDING: %s; Message: %s; Parameter: %s", assertion, message, parameter);
+	public SpecificApplicationAndTestResultScanParameters(String application,
+			String testResult) {
+		this.applicationName = application;
+		this.testResultName = testResult;
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.finding;
+	public File getInputRoot() throws IOException {
+		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
+		return new File(s);
 	}
-	
-	
+
+	public File getOutputRoot() throws IOException {
+		String s = new File("../../XPathOutput").getCanonicalPath();
+		return new File(s);
+	}
+
+	public boolean acceptApplication(Application application) {
+		return application.name.toLowerCase().equals(
+				applicationName.toLowerCase());
+	}
+
+	public boolean acceptTestResult(TestResult testResult) {
+		return testResult.name.toLowerCase().startsWith(
+				testResultName.toLowerCase());
+	}
+
 }

@@ -5,6 +5,7 @@ import org.omg.bpmn.miwg.xpath.common.ArtifactType;
 import org.omg.bpmn.miwg.xpath.common.Direction;
 import org.w3c.dom.Node;
 
+
 public class B_2_0_Check extends AbstractXpathCheck {
 
 	@Override
@@ -13,7 +14,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 	}
 
 	@Override
-    public void doExecute() throws Throwable {
+	public void doExecute() throws Throwable {
 
 		Node n;
 		{
@@ -27,7 +28,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 			{
 				selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
-				
+
 				checkXORMarkersForProcess(true);
 
 				navigateElement("bpmn:startEvent", "Start Event 1 Timer");
@@ -42,22 +43,18 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				checkDataAssociation(ArtifactType.DataObject, "Data Object",
 						Direction.Input);
 
-				{
-					selectElement("bpmn:inclusiveGateway", "Inclusive Gateway 1");
-					navigateGatewaySequenceFlowStack("Conditional Sequence Flow");
-					navigateGatewaySequenceFlowStack("Default Sequence Flow 1");
-					checkDefaultSequenceFlow();
-					n = head();
-					pop();
-				}
-				
-				navigateFollowingElement("bpmn:serviceTask", "Service Task 4");
+				n = navigateFollowingElement("bpmn:inclusiveGateway",
+						"Inclusive Gateway 1");
 
-				navigateFollowingElement("bpmn:intermediateThrowEvent", "Intermediate Event Signal Throw 1");
+				navigateFollowingElement("bpmn:serviceTask", "Service Task 4", "Conditional Sequence Flow");
+
+				navigateFollowingElement("bpmn:intermediateThrowEvent",
+						"Intermediate Event Signal Throw 1");
 				checkSignalEvent();
 
 				{
-					selectFollowingElement("bpmn:subProcess", "Collapsed Sub-Process 1 Multi-Instances");
+					selectFollowingElement("bpmn:subProcess",
+							"Collapsed Sub-Process 1 Multi-Instances");
 					checkMultiInstanceParallel();
 					checkXORMarkersForProcess(true);
 					pop();
@@ -73,10 +70,11 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				navigateElement("bpmn:parallelGateway", "Parallel Gateway 2");
 				navigateElement("bpmn:endEvent", "End Event 1 Message");
 				checkMessageEvent();
-				
+
 				navigateElement(n);
 
-				navigateFollowingElement("bpmn:callActivity", "Call Activity calling a Global User Task");
+				navigateFollowingElement("bpmn:callActivity",
+						"Call Activity calling a Global User Task");
 				checkGlobalTask(true);
 
 				{
@@ -113,7 +111,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 			{
 				selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
-				
+
 				checkXORMarkersForProcess(true);
 
 				navigateElementX("bpmn:laneSet/bpmn:lane[@name='Lane 1']");
@@ -130,27 +128,26 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				checkEventGatewayExclusive(true);
 
 				navigateElement(n);
-
-				navigateFollowingElement("bpmn:intermediateCatchEvent",
-						"Intermediate Event Timer Catch");
-
-				navigateElement(n);
-
 				navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Intermediate Event Message Catch");
 				checkMessageEvent();
 
 				navigateElement(n);
+				navigateFollowingElement("bpmn:intermediateCatchEvent",
+						"Intermediate Event Message Catch 2");
 
-				navigateFollowingElement("bpmn:intermediateCatchEvent", "Intermediate Event Message Catch 2");
+				navigateElement(n);
+				navigateFollowingElement("bpmn:intermediateCatchEvent",
+						"Intermediate Event Timer Catch");
 
 				{
 					// Flow following the intermediate timer event
 
-					{
-                        selectElementX("bpmn:callActivity[@name='Expanded Call Activity']");
+					navigateFollowingElement("bpmn:callActivity",
+							"Expanded Call Activity");
 
-						selectCallActivityProcess();
+					selectCallActivityProcess();
+					{
 
 						navigateElement("bpmn:startEvent", "Start Event 3");
 
@@ -172,15 +169,14 @@ public class B_2_0_Check extends AbstractXpathCheck {
 						checkTerminateEvent();
 
 						navigateElement(n);
-						
+
 						navigateFollowingElement("bpmn:serviceTask",
 								"Service Task 14");
 
 						navigateFollowingElement("bpmn:endEvent", "End Event 4");
 
-						pop();
-						pop();
 					}
+					pop();
 
 					n = navigateFollowingElement("bpmn:serviceTask",
 							"Service Task 15");
@@ -194,7 +190,8 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 					navigateElement(n);
 
-					navigateFollowingElement("bpmn:receiveTask", "Receive Task 16");
+					navigateFollowingElement("bpmn:receiveTask",
+							"Receive Task 16");
 
 					navigateFollowingElement("bpmn:endEvent",
 							"End Event 6 Message");
@@ -228,8 +225,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 					navigateFollowingElement("bpmn:task", "Task 18");
 
-					navigateFollowingElement("bpmn:intermediateThrowEvent",
-							"");
+					navigateFollowingElement("bpmn:intermediateThrowEvent", "");
 					checkEscalationEvent();
 
 					navigateFollowingElement("bpmn:task", "Task 23");
@@ -371,6 +367,6 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 			pop();
 		}
-		
+
 	}
 }

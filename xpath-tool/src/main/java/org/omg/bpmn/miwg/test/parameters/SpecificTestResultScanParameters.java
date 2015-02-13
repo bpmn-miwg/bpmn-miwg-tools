@@ -34,13 +34,10 @@ import org.omg.bpmn.miwg.test.common.TestResult;
 
 public class SpecificTestResultScanParameters implements ScanParameters {
 
-	protected String applicationName;
-	protected String testResultName;
+	private String testResultName;
 
-	public SpecificTestResultScanParameters(String application,
-			String testResult) {
-		this.applicationName = application;
-		this.testResultName = testResult;
+	public SpecificTestResultScanParameters(String testResultName) {
+		this.testResultName = testResultName;
 	}
 
 	public File getInputRoot() throws IOException {
@@ -54,12 +51,11 @@ public class SpecificTestResultScanParameters implements ScanParameters {
 	}
 
 	public boolean acceptApplication(Application application) {
-		return application.name.toLowerCase().equals(
-				applicationName.toLowerCase());
+		return true;
 	}
 
 	public boolean acceptTestResult(TestResult testResult) {
-		return testResult.name.toLowerCase().startsWith(
+		return testResult.name.toLowerCase().equals(
 				testResultName.toLowerCase());
 	}
 

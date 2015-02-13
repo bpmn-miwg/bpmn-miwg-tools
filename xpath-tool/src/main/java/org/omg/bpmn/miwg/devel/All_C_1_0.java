@@ -23,48 +23,29 @@
  * 
  */
 
-package org.omg.bpmn.miwg.common.testEntries;
+package org.omg.bpmn.miwg.devel;
 
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
-import org.omg.bpmn.miwg.xpath.common.CheckContext;
-import org.simpleframework.xml.Attribute;
+import java.io.IOException;
+import java.util.List;
 
-public class FindingAssertionEntry extends AbstractCheckEntry {
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.test.common.AbstractTestCase;
+import org.omg.bpmn.miwg.test.common.InstanceParameter;
+import org.omg.bpmn.miwg.test.common.ScanUtil;
+import org.omg.bpmn.miwg.test.parameters.SpecificTestResultScanParameters;
 
-	@Attribute
-	public String assertion;
-
-	@Attribute
-	public String message;
-
-	@Attribute(required=false)
-	public String parameter;
-
-	public CheckContext testContext;
+@RunWith(Parameterized.class)
+public class All_C_1_0 extends AbstractTestCase {
 	
-	public FindingAssertionEntry(String assertion, String message, CheckContext testContext) {
-		this.assertion = assertion;
-		this.message = message;
-		this.parameter = "";
-		this.testContext = testContext;
+	public All_C_1_0(InstanceParameter parameter) {
+		super(parameter);
 	}
 	
-	public FindingAssertionEntry(String assertion, String message, String parameter) {
-		this.assertion = assertion;
-		this.message = message;
-		this.parameter = parameter;
-	}
-	
-	
-	@Override
-	public String toLine() {
-		return String.format("FINDING: %s; Message: %s; Parameter: %s", assertion, message, parameter);
+	@Parameters
+	public static List<Object[]> data() throws IOException {
+		return ScanUtil.data(new SpecificTestResultScanParameters("c.1.0-roundtrip.bpmn"));
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.finding;
-	}
-	
-	
 }

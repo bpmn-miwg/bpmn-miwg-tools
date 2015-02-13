@@ -1,6 +1,5 @@
 package org.omg.bpmn.miwg.xpath.common;
 
-import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -26,12 +25,14 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
+
 public abstract class AbstractXpathCheck extends AbstractCheck implements
 		DOMCheck {
 
 	private XPath xpath;
 	private Node currentNode;
 	private Stack<Node> nodeStack;
+	private Stack<Node> currentNodeStack;
 
 	public boolean isApplicable(String testResultName) {
 		String checkName = getName();
@@ -42,6 +43,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	public void init(CheckOutput out) {
 		xpath = null;
 		nodeStack = null;
+		currentNodeStack = null;
 		super.init(out);
 	}
 
@@ -61,7 +63,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 			while (s.contains("  "))
 				s = s.replaceAll("  ", " ");
-			
+
 			s = s.trim();
 			// out.println(">>>>>" + s);
 			attr.setTextContent(s);
@@ -77,23 +79,13 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 	}
 
-	protected void loadResource(InputStream is) throws Throwable {
-		super.loadResource(is);
-		XPathFactory xpathfactory = XPathFactory.newInstance();
-		xpath = xpathfactory.newXPath();
-		xpath.setNamespaceContext(new NameSpaceContexts());
-		nodeStack = new Stack<Node>();
-		push(doc.getDocumentElement());
-		normalizeNames();
-	}
-
 	protected Node pop() {
 		NodePopEntry e = new NodePopEntry(callingMethod(),
 				getNodeIDNoNull(nodeStack.peek()),
 				CheckContext.createTestContext(this));
 		out.pop(e);
 		Node n = nodeStack.pop();
-		currentNode = n;
+		currentNode = currentNodeStack.pop();
 		return n;
 	}
 
@@ -101,7 +93,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		if (n == null)
 			return "";
 
-		String s = getAttribute(n, "id");
+		String s = getAttribute(n, "id", false);
 		if (s == null)
 			return "";
 		else
@@ -113,6 +105,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				getNodeIDNoNull(n), CheckContext.createTestContext(this));
 		out.push(e);
 		nodeStack.push(n);
+		currentNodeStack.push(currentNode);
 	}
 
 	protected Node head() {
@@ -146,7 +139,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 			if (methodName.startsWith("navigate")
 					|| methodName.startsWith("select")
-					|| methodName.startsWith("check")) {
+					|| methodName.startsWith("check")){
 				lastName = methodName;
 				// break;
 			}
@@ -154,7 +147,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		if (lastName == null)
-			return stacktrace[1].getMethodName();
+			return stacktrace[3].getMethodName();
 		else
 			return lastName;
 	}
@@ -336,6 +329,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return navigateElementX(expr, null);
 	}
 
+	public Node navigateElement(String type, String attrKey, String attrValue)
+			throws Throwable {
+		String xpath = String.format("%s[@%s='%s']", type, attrKey, attrValue);
+		// String xpath = String.format("%s", type);
+		Node n = navigateElementX(xpath);
+		return n;
+	}
+
 	public Node navigateElement(String type, String name) throws Throwable {
 		if (name != null) {
 			String xpath = String.format("%s[@name='%s']", type, name);
@@ -426,8 +427,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			if (nSequenceFlow != null) {
 
 				String nameCondition;
-				
-				
+
 				if (name == null) {
 					nameCondition = "not(@name) and ";
 				} else if (name.equals("")) {
@@ -587,6 +587,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		selectElementX(xpath);
 	}
 
+	public void selectElementNoID(String type) throws Throwable {
+		String xpath = String.format("%s", type);
+		selectElementX(xpath);
+	}
+
 	public void selectElementX(String expr) throws Throwable {
 		selectElementX(expr, null);
 	}
@@ -604,8 +609,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			return;
 		}
 		ok(expr);
-		setCurrentNode(n, param);
 		push(n);
+		setCurrentNode(n, param);
 	}
 
 	public Node selectCallActivityProcess() throws Throwable {
@@ -627,9 +632,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		ok(xpath);
-		setCurrentNode(n, null);
 		push(n);
-		return null;
+		setCurrentNode(n, null);
+		return n;
 	}
 
 	public void selectProcessX(String xpath) throws Throwable {
@@ -744,6 +749,34 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			boolean defaultValue) throws Throwable {
 		checkAttributeValue(attribute, Boolean.toString(value),
 				Boolean.toString(defaultValue));
+	}
+
+	protected void checkAttributeValue(String attribute, String value)
+			throws Throwable {
+		if (currentNode == null) {
+			finding("", "No Current node");
+			return;
+		}
+
+		Node attr = currentNode.getAttributes().getNamedItem(attribute);
+
+		if (attr == null) {
+			finding("",
+					String.format("Attribute %s is not existing.", attribute));
+			return;
+
+		}
+
+		String s = attr.getTextContent();
+
+		if (!s.equals(value)) {
+			finding(attribute, String.format(
+					"Attribute %s does not have the expected value '%s'",
+					attribute, value));
+			return;
+		}
+
+		ok("Attribute " + attribute + "=" + value);
 	}
 
 	protected void checkAttributeValue(Node n, String attribute, String value)
@@ -1451,19 +1484,17 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		checkAttributeValue(n, "name", operation);
-	}
-
-	public Node getCurrentNode() {
-		return currentNode;
-	}
+	} 
 
 	@Override
-	public AnalysisResult execute(Document actualDocument, AnalysisTool tool) throws Throwable {
+	public AnalysisResult execute(Document actualDocument, AnalysisTool tool)
+			throws Throwable {
 		this.doc = actualDocument;
 		XPathFactory xpathfactory = XPathFactory.newInstance();
 		xpath = xpathfactory.newXPath();
 		xpath.setNamespaceContext(new NameSpaceContexts());
 		nodeStack = new Stack<Node>();
+		currentNodeStack = new Stack<Node>();
 		push(doc.getDocumentElement());
 		normalizeNames();
 		doExecute();
@@ -1472,5 +1503,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	protected abstract void doExecute() throws Throwable;
+
+	public Node getCurrentNode() {
+		return currentNode;
+	}
 
 }
