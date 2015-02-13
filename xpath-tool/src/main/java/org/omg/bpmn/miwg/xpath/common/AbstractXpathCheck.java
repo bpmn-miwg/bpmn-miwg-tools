@@ -25,7 +25,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-
 public abstract class AbstractXpathCheck extends AbstractCheck implements
 		DOMCheck {
 
@@ -139,7 +138,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 			if (methodName.startsWith("navigate")
 					|| methodName.startsWith("select")
-					|| methodName.startsWith("check")){
+					|| methodName.startsWith("check")) {
 				lastName = methodName;
 				// break;
 			}
@@ -1484,7 +1483,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		checkAttributeValue(n, "name", operation);
-	} 
+	}
 
 	@Override
 	public AnalysisResult execute(Document actualDocument, AnalysisTool tool)

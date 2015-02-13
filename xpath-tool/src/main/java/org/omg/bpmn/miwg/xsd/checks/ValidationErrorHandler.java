@@ -19,8 +19,8 @@ public class ValidationErrorHandler extends DefaultHandler {
 
 	public void warning(SAXParseException e) {
 		numWarning++;
-		out.println(new InfoEntry("Warning Line " + e.getLineNumber() + ": " + e.getMessage()
-				+ "\n"));
+		out.println(new InfoEntry("Warning Line " + e.getLineNumber() + ": "
+				+ e.getMessage() + "\n"));
 	}
 
 	public void error(SAXParseException e) {

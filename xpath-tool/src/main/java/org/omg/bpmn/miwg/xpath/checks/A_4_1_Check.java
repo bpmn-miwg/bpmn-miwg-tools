@@ -3,7 +3,6 @@ package org.omg.bpmn.miwg.xpath.checks;
 import org.omg.bpmn.miwg.xpath.common.Direction;
 import org.w3c.dom.Node;
 
-
 public class A_4_1_Check extends A_4_0_Check {
 
 	@Override
@@ -12,7 +11,7 @@ public class A_4_1_Check extends A_4_0_Check {
 	}
 
 	@Override
-    public void doExecute() throws Throwable {
+	public void doExecute() throws Throwable {
 		selectCollaboration();
 
 		{
@@ -77,5 +76,5 @@ public class A_4_1_Check extends A_4_0_Check {
 		pop();
 
 	}
-	
+
 }

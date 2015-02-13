@@ -32,7 +32,8 @@ import org.omg.bpmn.miwg.test.common.Application;
 import org.omg.bpmn.miwg.test.common.ScanParameters;
 import org.omg.bpmn.miwg.test.common.TestResult;
 
-public class SpecificApplicationAndTestResultScanParameters implements ScanParameters {
+public class SpecificApplicationAndTestResultScanParameters implements
+		ScanParameters {
 
 	protected String applicationName;
 	protected String testResultName;

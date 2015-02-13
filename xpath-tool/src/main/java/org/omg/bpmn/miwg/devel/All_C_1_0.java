@@ -38,14 +38,15 @@ import org.omg.bpmn.miwg.test.parameters.SpecificTestResultScanParameters;
 
 @RunWith(Parameterized.class)
 public class All_C_1_0 extends AbstractTestCase {
-	
+
 	public All_C_1_0(InstanceParameter parameter) {
 		super(parameter);
 	}
-	
+
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new SpecificTestResultScanParameters("c.1.0-roundtrip.bpmn"));
+		return ScanUtil.data(new SpecificTestResultScanParameters(
+				"c.1.0-roundtrip.bpmn"));
 	}
 
 }

@@ -11,7 +11,7 @@ public class A_3_0_Check extends AbstractXpathCheck {
 	}
 
 	@Override
-    public void doExecute() throws Throwable {
+	public void doExecute() throws Throwable {
 
 		{
 
@@ -29,7 +29,7 @@ public class A_3_0_Check extends AbstractXpathCheck {
 			checkCancelActivity(false);
 
 			navigateFollowingElement("bpmn:task", "Task 3");
-			
+
 			navigateFollowingElement("bpmn:endEvent", "End Event 1");
 
 			navigateElement(n1);
@@ -37,19 +37,19 @@ public class A_3_0_Check extends AbstractXpathCheck {
 			navigateFollowingElement("bpmn:task", "Task 2");
 
 			navigateFollowingElement("bpmn:endEvent", "End Event 1");
-			
+
 			navigateElement(n1);
-			
+
 			navigateBoundaryEvent("Boundary Intermediate Event Interrupting Escalation");
 			checkEscalationEvent();
 			checkCancelActivity(true);
-			
+
 			navigateFollowingElement("bpmn:task", "Task 4");
-			
+
 			navigateFollowingElement("bpmn:endEvent", "End Event 2");
 
 			pop();
-			
+
 		}
 	}
 

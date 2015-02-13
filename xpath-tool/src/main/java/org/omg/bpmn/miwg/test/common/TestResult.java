@@ -36,5 +36,5 @@ public class TestResult {
 
 	public String name;
 	public File file;
-	
+
 }

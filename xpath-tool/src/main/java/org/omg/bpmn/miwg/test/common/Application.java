@@ -31,19 +31,19 @@ import java.util.regex.Pattern;
 
 public class Application {
 
-	private static Pattern twopart = Pattern.compile("(.*)\\s(\\S+)"); 
-	
+	private static Pattern twopart = Pattern.compile("(.*)\\s(\\S+)");
+
 	public String application;
 	public File folder;
 	public String name;
 	public String version;
-	
+
 	public Application(File folder) {
 		this.folder = folder;
 		this.application = folder.getName();
-		
+
 		Matcher m = twopart.matcher(application);
-		
+
 		if (m.matches()) {
 			this.name = m.group(1);
 			this.version = m.group(2);
@@ -51,15 +51,11 @@ public class Application {
 			this.name = application;
 			this.version = "";
 		}
-		
-		
-	}
 
-	
+	}
 
 	public String toString() {
 		return name + "//" + version;
 	}
-
 
 }

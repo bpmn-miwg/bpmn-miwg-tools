@@ -28,14 +28,13 @@ package org.omg.bpmn.miwg.common.testEntries;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.simpleframework.xml.Attribute;
 
-
 public class KeyValueEntry extends AbstractCheckEntry {
-	
+
 	public KeyValueEntry(String key, String value) {
 		this.key = key;
 		this.value = value;
 	}
-	
+
 	@Attribute
 	public String key;
 	@Attribute
@@ -45,11 +44,10 @@ public class KeyValueEntry extends AbstractCheckEntry {
 	public String toLine() {
 		return String.format("%s: %s", key, value);
 	}
-	
+
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.info;
 	}
-
 
 }

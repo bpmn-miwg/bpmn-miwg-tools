@@ -28,13 +28,11 @@ package org.omg.bpmn.miwg.common.testEntries;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.simpleframework.xml.Attribute;
 
-
 public class TestEntry extends AbstractCheckEntry {
-	
+
 	@Attribute
 	private String name;
-	
-	
+
 	public TestEntry(String name) {
 		this.name = name;
 	}
@@ -43,6 +41,7 @@ public class TestEntry extends AbstractCheckEntry {
 	public String toLine() {
 		return String.format("TEST: %s", name);
 	}
+
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.info;

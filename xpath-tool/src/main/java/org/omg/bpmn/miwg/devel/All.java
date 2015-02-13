@@ -38,11 +38,11 @@ import org.omg.bpmn.miwg.test.parameters.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class All extends AbstractTestCase {
-	
+
 	public All(InstanceParameter parameter) {
 		super(parameter);
 	}
-	
+
 	@Parameters
 	public static List<Object[]> data() throws IOException {
 		return ScanUtil.data(new StandardScanParameters());

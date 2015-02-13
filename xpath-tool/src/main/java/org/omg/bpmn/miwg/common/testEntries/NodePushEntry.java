@@ -28,13 +28,12 @@ package org.omg.bpmn.miwg.common.testEntries;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 import org.simpleframework.xml.Root;
 
-
-@Root(name="push")
+@Root(name = "push")
 public class NodePushEntry extends OKNavigationEntry {
-	
-	public NodePushEntry(String caller, String identifier, CheckContext testContext) {
+
+	public NodePushEntry(String caller, String identifier,
+			CheckContext testContext) {
 		super("Push", caller, identifier, testContext);
 	}
-	
 
 }

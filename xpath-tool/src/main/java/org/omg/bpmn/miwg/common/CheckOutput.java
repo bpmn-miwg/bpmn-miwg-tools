@@ -152,7 +152,6 @@ public class CheckOutput {
 			if (textFileWriter != null)
 				textFileWriter.close();
 
-
 			Serializer serializer = new Persister();
 
 			try {

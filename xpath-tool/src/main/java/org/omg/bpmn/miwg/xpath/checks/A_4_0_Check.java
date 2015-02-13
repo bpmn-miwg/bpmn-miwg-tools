@@ -12,7 +12,7 @@ public class A_4_0_Check extends AbstractXpathCheck {
 	}
 
 	@Override
-    public void doExecute() throws Throwable {
+	public void doExecute() throws Throwable {
 
 		selectCollaboration();
 

@@ -38,14 +38,15 @@ import org.omg.bpmn.miwg.test.parameters.ApplicationScanParameters;
 
 @RunWith(Parameterized.class)
 public class Signavio_8_3_0 extends AbstractTestCase {
-	
+
 	public Signavio_8_3_0(InstanceParameter parameter) {
 		super(parameter);
 	}
-	
+
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new ApplicationScanParameters("Signavio Process Editor"));
+		return ScanUtil.data(new ApplicationScanParameters(
+				"Signavio Process Editor"));
 	}
 
 }

@@ -28,16 +28,15 @@ package org.omg.bpmn.miwg.common.testEntries;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.simpleframework.xml.Attribute;
 
-
 public class ExceptionEntry extends AbstractCheckEntry {
-	
+
 	public ExceptionEntry(String message, Throwable e) {
 		this.message = message;
 		this.exception = e;
 	}
-	
+
 	public Throwable exception;
-	
+
 	@Attribute
 	public String message;
 
@@ -45,11 +44,10 @@ public class ExceptionEntry extends AbstractCheckEntry {
 	public String toLine() {
 		return String.format("EXCEPTION: %s (%s)", message, exception);
 	}
-	
+
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.exception;
 	}
-
 
 }

@@ -5,7 +5,6 @@ import org.omg.bpmn.miwg.xpath.common.ArtifactType;
 import org.omg.bpmn.miwg.xpath.common.Direction;
 import org.w3c.dom.Node;
 
-
 public class B_2_0_Check extends AbstractXpathCheck {
 
 	@Override
@@ -46,7 +45,8 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				n = navigateFollowingElement("bpmn:inclusiveGateway",
 						"Inclusive Gateway 1");
 
-				navigateFollowingElement("bpmn:serviceTask", "Service Task 4", "Conditional Sequence Flow");
+				navigateFollowingElement("bpmn:serviceTask", "Service Task 4",
+						"Conditional Sequence Flow");
 
 				navigateFollowingElement("bpmn:intermediateThrowEvent",
 						"Intermediate Event Signal Throw 1");

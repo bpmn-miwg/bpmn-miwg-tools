@@ -27,7 +27,6 @@ package org.omg.bpmn.miwg.xpath.common;
 
 import org.w3c.dom.Node;
 
-
 public class CheckContext {
 
 	private String stackID;

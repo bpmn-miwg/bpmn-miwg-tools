@@ -32,10 +32,10 @@ import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-@Root(name="entry")
+@Root(name = "entry")
 public abstract class AbstractCheckEntry {
-	
-	@ElementList(inline=true)
+
+	@ElementList(inline = true)
 	private List<AbstractCheckEntry> children = new LinkedList<AbstractCheckEntry>();
 
 	public void addChild(AbstractCheckEntry entry) {
@@ -43,17 +43,17 @@ public abstract class AbstractCheckEntry {
 	}
 
 	public abstract String toLine();
-	
+
 	public abstract OutputType getOutputType();
 
 	public void TEST_print(int level) {
 		StringBuilder sb = new StringBuilder();
-		for (int i=0;i<level;i++)
+		for (int i = 0; i < level; i++)
 			sb.append(" ");
-		
+
 		System.err.println(sb.toString() + this.toString());
 		for (AbstractCheckEntry c : children)
 			c.TEST_print(level + 1);
 	}
-	
+
 }

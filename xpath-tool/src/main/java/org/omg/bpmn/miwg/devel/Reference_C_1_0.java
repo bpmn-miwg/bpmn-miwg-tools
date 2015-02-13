@@ -38,14 +38,16 @@ import org.omg.bpmn.miwg.test.parameters.SpecificApplicationAndTestResultScanPar
 
 @RunWith(Parameterized.class)
 public class Reference_C_1_0 extends AbstractTestCase {
-	
+
 	public Reference_C_1_0(InstanceParameter parameter) {
 		super(parameter);
 	}
-	
+
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new SpecificApplicationAndTestResultScanParameters("Reference", "C.1.0"));
+		return ScanUtil
+				.data(new SpecificApplicationAndTestResultScanParameters(
+						"Reference", "C.1.0"));
 	}
 
 }

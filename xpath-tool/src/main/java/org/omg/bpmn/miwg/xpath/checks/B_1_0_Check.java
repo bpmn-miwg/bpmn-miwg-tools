@@ -13,7 +13,7 @@ public class B_1_0_Check extends AbstractXpathCheck {
 	}
 
 	@Override
-    public void doExecute() throws Throwable {
+	public void doExecute() throws Throwable {
 
 		{
 
@@ -93,29 +93,34 @@ public class B_1_0_Check extends AbstractXpathCheck {
 
 					navigateElement("bpmn:startEvent", "Start Event None 2");
 					navigateFollowingElement("bpmn:task", "Abstract Task 6");
-					navigateFollowingElement("bpmn:endEvent", "End Event None 3");
-					
+					navigateFollowingElement("bpmn:endEvent",
+							"End Event None 3");
+
 					pop();
 				}
-				
-				navigateFollowingElement("bpmn:exclusiveGateway", "Exclusive Gateway Convergence 2");
-				
+
+				navigateFollowingElement("bpmn:exclusiveGateway",
+						"Exclusive Gateway Convergence 2");
+
 				navigateFollowingElement("bpmn:endEvent", "End Event Terminate");
-				
+
 				navigateElement(n1);
-				
+
 				navigateFollowingElement("bpmn:serviceTask", "Service Task 7");
-				checkDataAssociation(ArtifactType.DataObject, "Data Object", Direction.Input);
-				checkDataAssociation(ArtifactType.DataStoreReference, "Data Store Reference", Direction.Output);
-				
-				navigateFollowingElement("bpmn:exclusiveGateway", "Exclusive Gateway Convergence 2");
-				
+				checkDataAssociation(ArtifactType.DataObject, "Data Object",
+						Direction.Input);
+				checkDataAssociation(ArtifactType.DataStoreReference,
+						"Data Store Reference", Direction.Output);
+
+				navigateFollowingElement("bpmn:exclusiveGateway",
+						"Exclusive Gateway Convergence 2");
+
 				pop();
 			}
 
 			pop();
 		}
-		
+
 	}
 
 }

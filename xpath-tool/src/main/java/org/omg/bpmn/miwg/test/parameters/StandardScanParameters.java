@@ -33,7 +33,7 @@ import org.omg.bpmn.miwg.test.common.ScanParameters;
 import org.omg.bpmn.miwg.test.common.TestResult;
 
 public class StandardScanParameters implements ScanParameters {
-	
+
 	public File getInputRoot() throws IOException {
 		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
 		return new File(s);
@@ -43,12 +43,11 @@ public class StandardScanParameters implements ScanParameters {
 		String s = new File("../../XPathOutput").getCanonicalPath();
 		return new File(s);
 	}
-	
-	
+
 	public boolean acceptApplication(Application application) {
 		return true;
 	}
-	
+
 	public boolean acceptTestResult(TestResult testResult) {
 		return true;
 	}

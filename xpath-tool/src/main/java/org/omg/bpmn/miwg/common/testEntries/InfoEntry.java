@@ -28,13 +28,12 @@ package org.omg.bpmn.miwg.common.testEntries;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.simpleframework.xml.Attribute;
 
-
 public class InfoEntry extends AbstractCheckEntry {
-	
+
 	public InfoEntry(String message) {
 		this.message = message;
 	}
-	
+
 	@Attribute
 	public String message;
 
@@ -42,11 +41,10 @@ public class InfoEntry extends AbstractCheckEntry {
 	public String toLine() {
 		return message;
 	}
-	
+
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.info;
 	}
-
 
 }

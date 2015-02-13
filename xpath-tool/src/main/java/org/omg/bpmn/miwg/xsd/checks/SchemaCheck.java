@@ -62,7 +62,8 @@ public class SchemaCheck extends AbstractCheck implements StreamCheck {
 		return is;
 	}
 
-	public AnalysisResult execute(InputStream is, AnalysisTool analysisTool) throws Throwable {
+	public AnalysisResult execute(InputStream is, AnalysisTool analysisTool)
+			throws Throwable {
 
 		ValidationErrorHandler eHandler = new ValidationErrorHandler();
 		eHandler.setTestOutput(out);

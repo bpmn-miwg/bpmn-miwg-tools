@@ -37,34 +37,35 @@ public class FindingAssertionEntry extends AbstractCheckEntry {
 	@Attribute
 	public String message;
 
-	@Attribute(required=false)
+	@Attribute(required = false)
 	public String parameter;
 
 	public CheckContext testContext;
-	
-	public FindingAssertionEntry(String assertion, String message, CheckContext testContext) {
+
+	public FindingAssertionEntry(String assertion, String message,
+			CheckContext testContext) {
 		this.assertion = assertion;
 		this.message = message;
 		this.parameter = "";
 		this.testContext = testContext;
 	}
-	
-	public FindingAssertionEntry(String assertion, String message, String parameter) {
+
+	public FindingAssertionEntry(String assertion, String message,
+			String parameter) {
 		this.assertion = assertion;
 		this.message = message;
 		this.parameter = parameter;
 	}
-	
-	
+
 	@Override
 	public String toLine() {
-		return String.format("FINDING: %s; Message: %s; Parameter: %s", assertion, message, parameter);
+		return String.format("FINDING: %s; Message: %s; Parameter: %s",
+				assertion, message, parameter);
 	}
 
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.finding;
 	}
-	
-	
+
 }

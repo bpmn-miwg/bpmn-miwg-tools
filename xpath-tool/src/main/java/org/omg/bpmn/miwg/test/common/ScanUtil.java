@@ -33,7 +33,6 @@ import java.util.List;
 
 public class ScanUtil {
 
-
 	public static List<Object[]> data(ScanParameters conf) throws IOException {
 
 		InstanceParameter template = new InstanceParameter();

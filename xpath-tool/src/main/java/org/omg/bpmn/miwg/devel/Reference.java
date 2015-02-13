@@ -38,11 +38,11 @@ import org.omg.bpmn.miwg.test.parameters.ReferenceScanParameters;
 
 @RunWith(Parameterized.class)
 public class Reference extends AbstractTestCase {
-	
+
 	public Reference(InstanceParameter parameter) {
 		super(parameter);
 	}
-	
+
 	@Parameters
 	public static List<Object[]> data() throws IOException {
 		return ScanUtil.data(new ReferenceScanParameters());

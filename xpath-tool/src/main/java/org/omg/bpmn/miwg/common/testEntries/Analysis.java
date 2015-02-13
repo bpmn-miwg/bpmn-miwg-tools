@@ -31,11 +31,10 @@ import org.simpleframework.xml.Root;
 
 @Root
 public class Analysis extends AbstractCheckEntry {
-	
+
 	@Attribute
 	private String name;
 
-	
 	public Analysis(String name) {
 		this.name = name;
 	}
@@ -49,5 +48,5 @@ public class Analysis extends AbstractCheckEntry {
 	public OutputType getOutputType() {
 		return OutputType.info;
 	}
-	
+
 }

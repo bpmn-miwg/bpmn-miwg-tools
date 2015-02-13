@@ -189,7 +189,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 
 					selectElementNoID("bpmn:extensionElements");
 					{
-						//navigateElement("field", "name", "text0");
+						// navigateElement("field", "name", "text0");
 
 					}
 					pop();
@@ -202,7 +202,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 			}
 			pop();
 			pop();
-			
+
 		}
 		pop();
 	}

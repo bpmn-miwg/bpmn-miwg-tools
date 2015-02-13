@@ -12,7 +12,7 @@ public class DemoTechnicalSupportCheck extends AbstractXpathCheck {
 	}
 
 	@Override
-    public void doExecute() throws Throwable {
+	public void doExecute() throws Throwable {
 
 		{
 			Node n1, n2;

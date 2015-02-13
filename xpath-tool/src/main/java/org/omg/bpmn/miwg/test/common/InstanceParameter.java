@@ -50,7 +50,7 @@ public class InstanceParameter implements Cloneable {
 
 	@Override
 	public InstanceParameter clone() {
-		return (InstanceParameter)CloneUtil.clone(this);
+		return (InstanceParameter) CloneUtil.clone(this);
 	}
 
 }

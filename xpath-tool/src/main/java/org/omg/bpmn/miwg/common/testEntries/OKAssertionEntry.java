@@ -30,7 +30,7 @@ import org.omg.bpmn.miwg.xpath.common.CheckContext;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
-@Root(name="ok")
+@Root(name = "ok")
 public class OKAssertionEntry extends AbstractCheckEntry {
 
 	@Attribute
@@ -40,19 +40,19 @@ public class OKAssertionEntry extends AbstractCheckEntry {
 	public String message;
 
 	public CheckContext testContext;
-	
-	public OKAssertionEntry(String assertion, String message, CheckContext testContext) {
+
+	public OKAssertionEntry(String assertion, String message,
+			CheckContext testContext) {
 		this.assertion = assertion;
 		this.message = message;
 		this.testContext = testContext;
 	}
-	
+
 	@Override
 	public String toLine() {
 		return String.format("OK     : %s; Message: %s", assertion, message);
 	}
-	
-	
+
 	@Override
 	public OutputType getOutputType() {
 		return OutputType.ok;

@@ -37,33 +37,34 @@ import org.omg.bpmn.miwg.xsd.checks.SchemaCheck;
 
 public class XsdAnalysisTool implements StreamAnalysisTool {
 
-	public final static String NAME="xsd";
-	
+	public final static String NAME = "xsd";
+
 	public String getName() {
 		return NAME;
 	}
 
 	@Override
-	public AnalysisResult analyzeStream(
-			AnalysisJob job, InputStream referenceBpmnXml, InputStream actualBpmnXml,
+	public AnalysisResult analyzeStream(AnalysisJob job,
+			InputStream referenceBpmnXml, InputStream actualBpmnXml,
 			File reportFolder) throws Exception {
 
 		SchemaCheck check = new SchemaCheck();
-		CheckOutput checkOutput = new CheckOutput(NAME + job.getName() + "-" + job.getMIWGTestCase(), reportFolder);
+		CheckOutput checkOutput = new CheckOutput(NAME + job.getName() + "-"
+				+ job.getMIWGTestCase(), reportFolder);
 		check.init(checkOutput);
 
 		AnalysisResult result;
-		
+
 		try {
-			 result = check.execute(actualBpmnXml, this);
+			result = check.execute(actualBpmnXml, this);
 		} catch (Throwable e) {
 			throw new IOException(e.getMessage(), e);
 		} finally {
 			checkOutput.close();
 		}
-		
+
 		return result;
-		
+
 	}
 
 }

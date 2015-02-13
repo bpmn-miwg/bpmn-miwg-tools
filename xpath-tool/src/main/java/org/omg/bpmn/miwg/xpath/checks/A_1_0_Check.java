@@ -9,21 +9,21 @@ public class A_1_0_Check extends AbstractXpathCheck {
 		return "A.1.0";
 	}
 
-    @Override
-    protected void doExecute() throws Throwable {
-        selectElementX("/bpmn:definitions/bpmn:process");
+	@Override
+	protected void doExecute() throws Throwable {
+		selectElementX("/bpmn:definitions/bpmn:process");
 
-        navigateElement("bpmn:startEvent", "Start Event");
+		navigateElement("bpmn:startEvent", "Start Event");
 
-        navigateFollowingElement("bpmn:task", "Task 1");
-       
-        navigateFollowingElement("bpmn:task", "Task 2");
+		navigateFollowingElement("bpmn:task", "Task 1");
 
-        navigateFollowingElement("bpmn:task", "Task 3");
+		navigateFollowingElement("bpmn:task", "Task 2");
 
-        navigateFollowingElement("bpmn:endEvent", "End Event");
+		navigateFollowingElement("bpmn:task", "Task 3");
 
-        pop();
-    }
+		navigateFollowingElement("bpmn:endEvent", "End Event");
+
+		pop();
+	}
 
 }

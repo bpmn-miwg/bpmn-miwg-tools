@@ -27,7 +27,6 @@ package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 
-
 public class EmptyEntry extends AbstractCheckEntry {
 
 	@Override

@@ -4,7 +4,6 @@ import java.util.Iterator;
 
 import javax.xml.namespace.NamespaceContext;
 
-
 public class NameSpaceContexts implements NamespaceContext {
 
 	public String getNamespaceURI(String prefix) {
@@ -26,7 +25,7 @@ public class NameSpaceContexts implements NamespaceContext {
 			return "http://www.w4.eu/spec/BPMN/20110701/MODEL";
 		if ("w4graph".equals(prefix))
 			return "http://www.w4.eu/spec/BPMN/20110930/GRAPH";
-		
+
 		throw new IllegalArgumentException(prefix);
 	}
 

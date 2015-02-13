@@ -38,14 +38,15 @@ import org.omg.bpmn.miwg.test.parameters.ApplicationScanParameters;
 
 @RunWith(Parameterized.class)
 public class ITP_Commerce_Process_Modeler extends AbstractTestCase {
-	
+
 	public ITP_Commerce_Process_Modeler(InstanceParameter parameter) {
 		super(parameter);
 	}
-	
+
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new ApplicationScanParameters("itp-commerce Process Modeler for Microsoft Visio"));
+		return ScanUtil.data(new ApplicationScanParameters(
+				"itp-commerce Process Modeler for Microsoft Visio"));
 	}
 
 }

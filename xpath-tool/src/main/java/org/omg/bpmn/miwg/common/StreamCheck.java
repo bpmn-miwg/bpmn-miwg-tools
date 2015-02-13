@@ -11,6 +11,7 @@ public interface StreamCheck {
 
 	String getName();
 
-    AnalysisResult execute(InputStream actualBpmnXml, AnalysisTool analysisTool) throws Throwable;
-    
+	AnalysisResult execute(InputStream actualBpmnXml, AnalysisTool analysisTool)
+			throws Throwable;
+
 }

@@ -27,12 +27,11 @@ package org.omg.bpmn.miwg.common.testEntries;
 
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
 
-
 public class NodePopEntry extends OKNavigationEntry {
-	
-	public NodePopEntry(String caller, String identifier, CheckContext testContext) {
+
+	public NodePopEntry(String caller, String identifier,
+			CheckContext testContext) {
 		super("Pop", caller, identifier, testContext);
 	}
-	
 
 }
