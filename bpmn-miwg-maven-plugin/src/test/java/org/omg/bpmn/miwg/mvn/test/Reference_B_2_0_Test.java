@@ -37,6 +37,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
 import org.omg.bpmn.miwg.api.tools.StreamAnalysisTool;
@@ -57,8 +58,10 @@ public class Reference_B_2_0_Test {
 
 	private static final String TESTRESULTS_FOLDER = "../../bpmn-miwg-test-suite";
 	private static final String REFERENCE_FILE = TESTRESULTS_FOLDER
-			+ "/Reference/B.2.0.bpmn";
-	private static final String CAMMUNDA_FILE = TESTRESULTS_FOLDER + "/camunda Modeler 2.4.0/B.2.0-roundtrip.bpmn";
+ + "/"
+            + Consts.REFERENCE_DIR + "/B.2.0.bpmn";
+    private static final String CAMUNDA_FILE = TESTRESULTS_FOLDER
+            + "/camunda Modeler 2.4.0/B.2.0-roundtrip.bpmn";
 
 	private InputStream referenceStream;
 	private Document referenceDOM;
@@ -84,7 +87,7 @@ public class Reference_B_2_0_Test {
 	public void testReference_XSD() throws Exception {
 		StreamAnalysisTool xsdTool = new XsdAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob("Reference",
+        AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR,
 				"B.2.0", MIWGVariant.Reference, null, null);
 
 		assertEquals(0, xsdTool.analyzeStream(job, null, referenceStream, null).numFindings);
@@ -94,7 +97,7 @@ public class Reference_B_2_0_Test {
 	public void testReference_XPath() throws Exception {
 		DOMAnalysisTool xpathTool = new XPathAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob("Reference",
+        AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR,
 				"B.2.0", MIWGVariant.Reference, null, null);
 
 		assertEquals(0, xpathTool.analyzeDOM(job, null, referenceDOM, null).numFindings);
@@ -104,7 +107,7 @@ public class Reference_B_2_0_Test {
 	public void testReference_XMLCompare() throws Exception {
 		DOMAnalysisTool compareTool = new XmlCompareAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob("Reference",
+        AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR,
 				"B.2.0", MIWGVariant.Reference, null, null);
 
 		assertEquals(0, compareTool.analyzeDOM(job, referenceDOM, referenceDOM, null).numFindings);
@@ -114,10 +117,11 @@ public class Reference_B_2_0_Test {
 	public void test_B_2_0_XMLCompare() throws Exception {
 		DOMAnalysisTool compareTool = new XmlCompareAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob("Reference",
+        AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR,
 				"B.2.0", MIWGVariant.Reference, null, null);
 
-		assertFalse(0 == compareTool.analyzeDOM(job, DOMFactory.getDocument(CAMMUNDA_FILE), referenceDOM, null).numFindings);
+        assertFalse(0 == compareTool.analyzeDOM(job,
+                DOMFactory.getDocument(CAMUNDA_FILE), referenceDOM, null).numFindings);
 	}
 
 	

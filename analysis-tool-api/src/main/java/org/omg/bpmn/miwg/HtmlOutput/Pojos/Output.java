@@ -9,6 +9,14 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
+/**
+ * Represents a single 'output' of one of the Analysis tools. This may be a
+ * non-conformance to the spec or may simply be a legitimate difference
+ * (referred to as 'findings'). Further manual investigation is required.
+ * 
+ * @author Sven
+ * @see {@link OutputType} for the ontology of outputs.
+ */
 @Root(name = "div")
 public class Output {
 

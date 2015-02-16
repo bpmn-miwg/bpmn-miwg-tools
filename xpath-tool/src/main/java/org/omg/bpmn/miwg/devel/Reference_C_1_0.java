@@ -31,6 +31,7 @@ import java.util.List;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.test.common.AbstractTestCase;
 import org.omg.bpmn.miwg.test.common.InstanceParameter;
 import org.omg.bpmn.miwg.test.common.ScanUtil;
@@ -47,7 +48,7 @@ public class Reference_C_1_0 extends AbstractTestCase {
 	public static List<Object[]> data() throws IOException {
 		return ScanUtil
 				.data(new SpecificApplicationAndTestResultScanParameters(
-						"Reference", "C.1.0"));
+                        Consts.REFERENCE_DIR, "C.1.0"));
 	}
 
 }

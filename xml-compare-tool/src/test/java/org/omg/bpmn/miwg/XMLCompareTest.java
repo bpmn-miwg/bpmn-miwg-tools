@@ -2,6 +2,7 @@ package org.omg.bpmn.miwg;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.File;
@@ -13,7 +14,13 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.junit.Test;
 import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.TestResults;
+import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.Consts;
+import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
+import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
+import org.omg.bpmn.miwg.util.TestUtil;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.w3c.dom.Document;
 
@@ -29,28 +36,36 @@ public class XMLCompareTest {
         InputStream compareStream = null;
         try {
             bpmnStream = getClass().getResourceAsStream(
-                    "/Reference/" + TEST_ID + ".bpmn");
+                    "/" + Consts.REFERENCE_DIR + "/" + TEST_ID + ".bpmn");
             assertNotNull(bpmnStream);
             compareStream = getClass().getResourceAsStream(
                     "/" + TOOL_ID + "/" + TEST_ID + "-" + VARIANT + ".bpmn");
             assertNotNull(compareStream);
-            Collection<? extends Output> significantDifferences = new XmlCompareAnalysisTool()
-                    .analyzeDOM(null, readDom(bpmnStream), readDom(compareStream), null).output;
+            AnalysisJob job = new AnalysisJob(
+                    "Yaoqiang BPMN Editor 3.0.1 Error", "A.1.0",
+                    MIWGVariant.Roundtrip, new ResourceAnalysisInput(
+                            getClass(), "/" + Consts.REFERENCE_DIR + "/"
+                                    + TEST_ID + ".bpmn"),
+                    new ResourceAnalysisInput(getClass(), "/" + TOOL_ID + "/"
+                            + TEST_ID + "-" + VARIANT + ".bpmn"));
+
+            File dir = new File(new File("target", "xml-compare"), TOOL_ID);
+            XmlCompareAnalysisTool tool = new XmlCompareAnalysisTool();
+            AnalysisResult result = tool
+                    .analyzeDOM(job, readDom(bpmnStream),
+                    readDom(compareStream), dir);
+            Collection<? extends Output> significantDifferences = result.output;
             System.out.println("Found " + significantDifferences.size()
                     + " diffs.");
             for (Output output : significantDifferences) {
                 System.out.println("..." + output.getDescription());
             }
 
-            assertEquals(33, significantDifferences.size());
+            assertEquals(45, significantDifferences.size());
 
-            TestResults results = new TestResults();
-            org.omg.bpmn.miwg.HtmlOutput.Pojos.Test test = results.addTool(TOOL_ID)
-                    .addTest(TEST_ID, VARIANT);
-            test.addAll(significantDifferences);
-            final File f = new File(new File(new File("target", "xml-compare"),
-                    TOOL_ID), TOOL_ID + "-" + TEST_ID + ".html");
-            results.writeResultFile(f);
+            File resultsFile = HTMLAnalysisOutputWriter.writeAnalysisResults(
+                    TestUtil.REPORT_BASE_FOLDER, job, tool, result);
+            assertTrue(resultsFile.exists());
         } catch (Exception e) {
             e.printStackTrace();
             fail(e.getClass() + ":" + e.getMessage());

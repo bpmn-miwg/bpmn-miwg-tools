@@ -9,6 +9,11 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
+/**
+ * Represents a BPMN modeling tool.
+ * 
+ * @author Sven
+ */
 @Root(name="div")
 public class Tool {
 
@@ -30,11 +35,11 @@ public class Tool {
 	public Tool() {
 	}
 	
-	/**
-	 * Constructor setting the name property (e.g. A.1.0-roundtrip)
-	 * 
-	 * @param name
-	 */
+	    /**
+     * Constructor setting the name property (e.g. Signavio Process Editor 7.0)
+     * 
+     * @param name
+     */
 	public Tool(String name) {
 		this.name = name;
 		this.vendorName = name;

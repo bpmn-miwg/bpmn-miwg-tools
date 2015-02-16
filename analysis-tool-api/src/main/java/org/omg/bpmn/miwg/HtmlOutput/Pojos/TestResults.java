@@ -25,43 +25,53 @@
 
 package org.omg.bpmn.miwg.HtmlOutput.Pojos;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringWriter;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
+import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-import org.simpleframework.xml.Serializer;
-import org.simpleframework.xml.core.Persister;
 
 /**
+ * POJO representing the result from one {@link AnalysisJob}.
+ * 
+ * <p>
  * Example structure:
  * 
- * <div class="testresults"> <div class="tool"> <h2>Signavio Process Editor 7.0</h2>
- * <div class="test"> <h3>A.1.0-roundtrip</h3> <div class="issue">
- * <p>
- * Issue description
- * </p>
- * <div class="issue">
- * <p>
- * Sub issue description
- * </p>
- * </div> <div> ... </div> <div class="test"> ... </div> </div> <div
- * class="tool"> ... </div> ... <div>
+ * <pre>
+ * &lt;div class="testresults"> 
+ *   &lt;div class="tool">
+ *     &lt;h2>Signavio Process Editor 7.0</h2>
+ *       &lt;div class="test">
+ *       &lt;h3>A.1.0-roundtrip</h3> 
+ *       &lt;div class="issue">
+ *         &lt;p>Issue description&lt;/p>
+ *       &lt;/div>
+ *       &lt;div class="issue">
+ *         &lt;p>Sub issue description&lt;/p>
+ *       &lt;/div>
+ *       &lt;div> 
+ *       ... 
+ *     &lt;/div> 
+ *     &lt;div class="test"> 
+ *       ... 
+ *     &lt;/div> 
+ *   &lt;/div>
+ *   &lt;div class="tool"> 
+ *     ... 
+ *   &lt;/div> 
+ *   ... 
+ * &lt;div>
+ * </pre>
  * 
  * @author Sven
- * 
+ * @see {@link HTMLAnalysisOutputWriter} for helpers to write the results to
+ *      file.
  */
 @Root(name = "div")
 public class TestResults {
-
-    private static final String HTML_FILE = "resultspage.html";
-    private static final String RESULTS_PLACEHOLDER = "{TESTRESULTS}";
 
     @Attribute(name = "class", required = true)
     private String clazz = TestResults.class.getSimpleName().toLowerCase();
@@ -99,49 +109,7 @@ public class TestResults {
         return this.addTool(tool);
     }
 
-    /**
-     * Returns a shadow copy of all tool results.
-     * 
-     * @return {@link List} of {@link Tool}
-     */
-    public List<Tool> getToolsCopy() {
-        List<Tool> t = new LinkedList<Tool>();
-        t.addAll(getTools());
-        return t;
-    }
-
-    public String toString() {
-        // RegistryMatcher m = new RegistryMatcher();
-        // m.bind(String.class, new StringTransformer());
-        Serializer serializer = new Persister();
-        StringWriter writer = new StringWriter();
-
-        try {
-            serializer.write(this, writer);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "Exception occurred. See stack trace in log.";
-        }
-        return produceSurroundingHtml(writer);
-    }
-
-    private String produceSurroundingHtml(StringWriter writer) {
-        InputStream is = TestResults.class.getClassLoader()
-                .getResourceAsStream(HTML_FILE);
-        String html = convertStreamToString(is);
-
-        return html.replace(RESULTS_PLACEHOLDER, writer.toString());
-    }
-
-    public static String convertStreamToString(java.io.InputStream is) {
-        java.util.Scanner s = null;
-        try {
-            s = new java.util.Scanner(is).useDelimiter("\\A");
-            return s.hasNext() ? s.next() : "";
-        } finally {
-            s.close();
-        }
-    }
+    
 
     /* Getter & Setter */
 
@@ -156,10 +124,6 @@ public class TestResults {
         }
 
         return tools;
-    }
-
-    public void writeResultFile(File f) throws IOException {
-        FileUtils.writeStringToFile(f, toString());
     }
 
 }

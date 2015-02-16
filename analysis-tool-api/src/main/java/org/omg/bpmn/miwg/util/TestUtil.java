@@ -5,9 +5,13 @@ import java.io.FilenameFilter;
 
 public class TestUtil {
 
-    public static final String REPORT_BASE_FOLDER = "target" + File.separator
+    public static final String REPORT_BASE_FOLDER_NAME = "target"
+            + File.separator
             + "site";
 	
+    public static final File REPORT_BASE_FOLDER = new File("target"
+            + File.separator + "site");
+
 	public static void prepareHTMLReportFolder(String reportFolderPath) {
 		File reportFolder = new File(reportFolderPath);
 		reportFolder.mkdirs();

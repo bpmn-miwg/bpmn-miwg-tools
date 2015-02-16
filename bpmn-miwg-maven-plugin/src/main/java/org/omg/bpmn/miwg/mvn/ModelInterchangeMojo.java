@@ -30,6 +30,7 @@ import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -48,30 +49,27 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisRun;
+import org.omg.bpmn.miwg.api.Consts;
+import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.input.FileAnalysisInput;
+import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
 import org.omg.bpmn.miwg.mvn.filter.BpmnFileFilter;
 import org.omg.bpmn.miwg.mvn.filter.DirFilter;
-
-import edu.emory.mathcs.backport.java.util.Collections;
+import org.omg.bpmn.miwg.xmlCompare.Variant;
 
 /**
  * Goal which scans project for BPMN files and tests them for interoperability.
  */
 @Mojo(name = "test", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
 public class ModelInterchangeMojo extends AbstractMojo {
-	protected static final String SUITE_B_PATH = "/";
-
-	protected static final String SUITE_A_PATH = "/";
-
-	/**
-	 * Project instance, needed for attaching the buildinfo file. Used to add
-	 * new source directory to the build.
-	 * 
-	 */
+	    /**
+     * Project instance Used to add new source directory to the build.
+     */
 	@Parameter(defaultValue = "${project}", required = true)
 	protected MavenProject project;
 
 	/**
-	 * Application under test.
+	 * BPMN Application under test.
 	 */
 	@Parameter(defaultValue = "${project.bpmn.application}", property = "application", required = false)
 	protected String application;
@@ -122,7 +120,11 @@ public class ModelInterchangeMojo extends AbstractMojo {
 						for (File b : bpmnFiles) {
 							AnalysisJob job;
                             try {
-                                job = new AnalysisJob(b.getCanonicalPath());
+                                job = new AnalysisJob(app, inferTestName(b),
+                                        inferMiwgVariant(b),
+                                        new FileAnalysisInput(b),
+                                        new ResourceAnalysisInput(getClass(),
+                                                inferReference(b)));
                                 jobs.add(job);
                             } catch (Throwable t) {
                                 getLog().error(
@@ -144,7 +146,6 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	protected List<String> getApplications() {
 		if (application == null) {
 			JsonReader jsonReader = Json.createReader(getClass()
@@ -201,4 +202,26 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		return analysisRuns;
 	}
 
+    protected MIWGVariant inferMiwgVariant(File b) {
+        MIWGVariant variant = null;
+        if (b.getName().contains(Variant.roundtrip.toString())) {
+            variant = MIWGVariant.Roundtrip;
+        } else if (b.getName().contains(Variant.export.toString())) {
+            variant = MIWGVariant.Export;
+        } else {
+            getLog().error(
+                    "Looks like this BPMN does not have the expected naming convention: "
+                            + b);
+        }
+        return variant;
+    }
+
+    protected String inferTestName(File bpmnFile) {
+        return bpmnFile.getName().substring(0, bpmnFile.getName().indexOf('-'));
+    }
+
+    protected String inferReference(File bpmnFile) {
+        return "/" + Consts.REFERENCE_DIR + "/" + inferTestName(bpmnFile)
+                + Consts.BPMN_FILE_EXTENSION;
+    }
 }

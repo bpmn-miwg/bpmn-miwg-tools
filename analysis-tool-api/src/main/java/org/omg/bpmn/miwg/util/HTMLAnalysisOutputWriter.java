@@ -24,11 +24,12 @@ public class HTMLAnalysisOutputWriter {
 		return new File(rootFolder, "overview.html");
 	}
 
-	public static void writeAnalysisResults(File rootFolder, AnalysisJob job,
+    public static File writeAnalysisResults(File rootFolder, AnalysisJob job,
 			AnalysisTool aTool, AnalysisResult result) throws Exception {
 		PrintWriter htmlOutputWriter = null;
 		InputStream templateStream = null;
 		Scanner scanner = null;
+        File resultsFile = null;
 		try {
 			// Build Simple XML POJO
 			//AnalysisOutputFragment root = new AnalysisOutputFragment();
@@ -56,7 +57,7 @@ public class HTMLAnalysisOutputWriter {
 			String completeString = template.replace("{ANALYSISRESULTS}",
 					outputString);
 
-			File resultsFile = result.getHTMLResultsFile(rootFolder, job);
+            resultsFile = result.getHTMLResultsFile(rootFolder, job);
 			
 			resultsFile.getParentFile().mkdirs();
 			
@@ -75,6 +76,7 @@ public class HTMLAnalysisOutputWriter {
 			}
 			scanner.close();
 		}
+        return resultsFile;
 	}
 
 	public static void writeOverview(File folder, Collection<AnalysisRun> runs)

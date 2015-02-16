@@ -76,9 +76,12 @@
 
   <repositories>
     <repository>
-      <id>bpmn-miwg-snapshot-repository</id>
-      <name>BPMN MIWG Snapshot Repository</name>
-      <url>https://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
+      <id>bpmn-miwg-tools-mvn-repo</id>
+      <url>https://raw.github.com/bpmn-miwg/bpmn-miwg-tools/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
     </repository>
   </repositories>
 

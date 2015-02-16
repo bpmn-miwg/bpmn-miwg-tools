@@ -89,6 +89,20 @@
   </dependencies>
 
   <build>
+    <testResources>
+      <testResource>
+        <directory>${project.basedir}/src/test/resources</directory>
+      </testResource>
+      <testResource>
+        <filtering>false</filtering>
+        <directory>${project.basedir}/src/test/invalid-resources</directory>
+         <includes>
+          <!-- include only files that follow the naming conventions and are thus understood by the tools -->
+          <include>**/*.bpmn</include>
+          <include>**/*.png</include>
+        </includes>
+      </testResource>
+    </testResources>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

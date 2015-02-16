@@ -32,7 +32,7 @@ public class AnalysisFacadeTest {
 
 	@Before
 	public void cleanGeneratedHTMLFiles() {
-		TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_BASE_FOLDER);
+		TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_BASE_FOLDER_NAME);
 	}
 
 	@Test
@@ -48,14 +48,14 @@ public class AnalysisFacadeTest {
 						BPMN_RESOURCE_REFERENCE), new ResourceAnalysisInput(
 						getClass(), BPMN_RESOURCE_REFERENCE)));
 
-		AnalysisFacade faccade = new AnalysisFacade(new File(
-				TestUtil.REPORT_BASE_FOLDER));
+        AnalysisFacade faccade = new AnalysisFacade(new File(
+                TestUtil.REPORT_BASE_FOLDER_NAME));
 
 		Collection<AnalysisRun> runs = faccade.executeAnalysisJobs(jobs);
 		assertEquals(2, runs.size());
 
 		File overviewFile = HTMLAnalysisOutputWriter.getOverviewFile(new File(
-				TestUtil.REPORT_BASE_FOLDER));
+				TestUtil.REPORT_BASE_FOLDER_NAME));
 		assertTrue(overviewFile.exists());
 		assertTrue(overviewFile.length() > 0);
 	}
@@ -69,15 +69,15 @@ public class AnalysisFacadeTest {
 						getClass(), BPMN_RESOURCE_REFERENCE));
 
 		AnalysisFacade faccade = new AnalysisFacade(new File(
-				TestUtil.REPORT_BASE_FOLDER));
+				TestUtil.REPORT_BASE_FOLDER_NAME));
 		AnalysisRun run = faccade.executeAnalysisJob(job);
 
 		File xsdFile = run.getResult(XsdAnalysisTool.NAME).getHTMLResultsFile(
-				new File(TestUtil.REPORT_BASE_FOLDER), job);
+				new File(TestUtil.REPORT_BASE_FOLDER_NAME), job);
 		File xpathFile = run.getResult(XPathAnalysisTool.NAME)
-				.getHTMLResultsFile(new File(TestUtil.REPORT_BASE_FOLDER), job);
+				.getHTMLResultsFile(new File(TestUtil.REPORT_BASE_FOLDER_NAME), job);
 		File xmlCompareFile = run.getResult(XmlCompareAnalysisTool.NAME)
-				.getHTMLResultsFile(new File(TestUtil.REPORT_BASE_FOLDER), job);
+				.getHTMLResultsFile(new File(TestUtil.REPORT_BASE_FOLDER_NAME), job);
 
 		assertTrue(xsdFile.exists());
 		assertTrue(xpathFile.exists());
@@ -97,7 +97,7 @@ public class AnalysisFacadeTest {
 						getClass(), BPMN_RESOURCE), null);
 
 		AnalysisFacade faccade = new AnalysisFacade(new File(
-				TestUtil.REPORT_BASE_FOLDER));
+				TestUtil.REPORT_BASE_FOLDER_NAME));
 		AnalysisRun run = faccade.executeAnalysisJob(job);
 
 		assertFalse(job.hasReference());
@@ -110,32 +110,37 @@ public class AnalysisFacadeTest {
 		assertEquals("Wrong type for the only output item although the reference is missing", output.iterator().next().getOutputType(), OutputType.info);
 	}
 
-	@Test
-	public void testMultipleFilesFromOneApplication() throws Exception {
-		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
-		jobs.add(new AnalysisJob(
-				"src/test/resources/W4 BPMN+ Composer V.9.0/A.1.0-roundtrip.bpmn"));
-		jobs.add(new AnalysisJob(
-				"src/test/resources/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"));
+    @Test
+    public void testMultipleFilesFromOneApplication() throws Exception {
+        Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
+        jobs.add(new AnalysisJob("W4 BPMN+ Composer V.9.0", "A.1.0",
+                MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
+                        "/W4 BPMN+ Composer V.9.0/A.1.0-roundtrip.bpmn"), null));
+        jobs.add(new AnalysisJob("W4 BPMN+ Composer V.9.0", "A.2.0",
+                MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
+                        "/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"), null));
 
-		AnalysisFacade facade = new AnalysisFacade(new File(
-				TestUtil.REPORT_BASE_FOLDER));
-		facade.executeAnalysisJobs(jobs);
-	}
+        AnalysisFacade facade = new AnalysisFacade(new File(
+                TestUtil.REPORT_BASE_FOLDER_NAME));
+        facade.executeAnalysisJobs(jobs);
+    }
 
-	@Test
-	public void testMultipleFilesFromTwoApplications() throws Exception {
-		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
-		jobs.add(new AnalysisJob(
-				"src/test/resources/W4 BPMN+ Composer V.9.0/A.1.0-roundtrip.bpmn"));
-		jobs.add(new AnalysisJob(
-				"src/test/resources/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"));
-		jobs.add(new AnalysisJob(
-				"src/test/resources/bpmn.io 0.5.0/B.2.0-roundtrip.bpmn"));
+    @Test
+    public void testMultipleFilesFromTwoApplications() throws Exception {
+        Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
+        jobs.add(new AnalysisJob("W4 BPMN+ Composer V.9.0", "A.1.0",
+                MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
+                        "/W4 BPMN+ Composer V.9.0/A.1.0-roundtrip.bpmn"), null));
+        jobs.add(new AnalysisJob("W4 BPMN+ Composer V.9.0", "A.2.0",
+                MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
+                        "/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"), null));
+        jobs.add(new AnalysisJob("bpmn.io 0.5.0", "B.2.0",
+                MIWGVariant.Roundtrip, new ResourceAnalysisInput(getClass(),
+                        "/bpmn.io 0.5.0/B.2.0-roundtrip.bpmn"), null));
 
-		AnalysisFacade facade = new AnalysisFacade(new File(
-				TestUtil.REPORT_BASE_FOLDER));
-		facade.executeAnalysisJobs(jobs);
-	}
+        AnalysisFacade facade = new AnalysisFacade(new File(
+                TestUtil.REPORT_BASE_FOLDER_NAME));
+        facade.executeAnalysisJobs(jobs);
+    }
 
 }

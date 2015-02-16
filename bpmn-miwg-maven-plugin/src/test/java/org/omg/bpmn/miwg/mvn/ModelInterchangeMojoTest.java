@@ -18,6 +18,8 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.maven.model.Resource;
 import org.junit.Before;
 import org.junit.Test;
+import org.omg.bpmn.miwg.api.Consts;
+import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.util.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.util.TestUtil;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
@@ -46,10 +48,10 @@ public class ModelInterchangeMojoTest {
 
 	@Before
 	public void setUp() throws Exception {
-		TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_BASE_FOLDER);
+		TestUtil.prepareHTMLReportFolder(TestUtil.REPORT_BASE_FOLDER_NAME);
 
 		mojo = new ModelInterchangeMojo();
-		mojo.outputDirectory = new File(TestUtil.REPORT_BASE_FOLDER);
+		mojo.outputDirectory = new File(TestUtil.REPORT_BASE_FOLDER_NAME);
 		mojo.resources = new ArrayList<Resource>();
 
 		overview = HTMLAnalysisOutputWriter
@@ -67,7 +69,7 @@ public class ModelInterchangeMojoTest {
 		List<File> bpmnFiles = new ArrayList<File>();
 		File dir = new File("src/test/resources");
 		mojo.scanForBpmn(dir, bpmnFiles);
-		// 15 = the total number of BPMN files in src/test/resources
+        // first param is the total number of BPMN files in src/test/resources
 		assertEquals(21, bpmnFiles.size());
 	}
 
@@ -80,7 +82,35 @@ public class ModelInterchangeMojoTest {
 		assertEquals(9, bpmnFiles.size());
 	}
 
-	@Test
+    @Test
+    public void testInferMiwgVariant() {
+        File bpmnFile = new File("src" + File.separator + "test"
+                + File.separator + "resources" + File.separator + W4_MODELER_ID
+                + File.separator + "A.1.0-export.bpmn");
+        MIWGVariant variant = mojo.inferMiwgVariant(bpmnFile);
+        assertEquals(MIWGVariant.Export, variant);
+    }
+
+    @Test
+    public void testInferTestName() {
+        File bpmnFile = new File("src" + File.separator + "test"
+                + File.separator + "resources" + File.separator + W4_MODELER_ID
+                + File.separator + "A.1.0-export.bpmn");
+        String test = mojo.inferTestName(bpmnFile);
+        assertEquals("A.1.0", test);
+    }
+
+    @Test
+    public void testInferReference() {
+        File bpmnFile = new File("src" + File.separator + "test"
+                + File.separator + "resources" + File.separator + W4_MODELER_ID
+                + File.separator + "A.1.0-export.bpmn");
+        String referenceResource = mojo.inferReference(bpmnFile);
+        assertEquals("/" + Consts.REFERENCE_DIR + "/A.1.0.bpmn",
+                referenceResource);
+    }
+
+    @Test
 	public void testMojo() {
 		try {
 			Resource res = new Resource();
@@ -90,7 +120,7 @@ public class ModelInterchangeMojoTest {
 
 			System.out
 					.println("Checking expected output exists with base folder: "
-							+ TestUtil.REPORT_BASE_FOLDER);
+							+ TestUtil.REPORT_BASE_FOLDER_NAME);
 
             // assert structure and content of overview file
 			assertTrue(overview.exists());
@@ -100,15 +130,15 @@ public class ModelInterchangeMojoTest {
 			assertEquals(9 /* count of .bpmn in W4 dir */, nodes.getLength());
 
 			// report files for each tool
-			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
+			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER_NAME,
 					XmlCompareAnalysisTool.NAME));
-			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
+			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER_NAME,
 					XsdAnalysisTool.NAME));
-			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER,
+			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER_NAME,
 					XPathAnalysisTool.NAME));
 
             // assert structure of individual results file
-            File xpathResult = new File(TestUtil.REPORT_BASE_FOLDER
+            File xpathResult = new File(TestUtil.REPORT_BASE_FOLDER_NAME
                     + File.separator + XPathAnalysisTool.NAME + File.separator
                     + W4_MODELER_ID + File.separator
                     + W4_MODELER_ID + "-A.1.0-roundtrip.html");

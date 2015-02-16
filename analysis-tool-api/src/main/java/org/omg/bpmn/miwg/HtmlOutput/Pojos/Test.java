@@ -9,6 +9,11 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
+/**
+ * Represents a single test within the BPMN MIWG test suite, for example A.1.0.
+ * 
+ * @author Sven
+ */
 @Root(name = "div")
 public class Test {
 	/* Fields */
