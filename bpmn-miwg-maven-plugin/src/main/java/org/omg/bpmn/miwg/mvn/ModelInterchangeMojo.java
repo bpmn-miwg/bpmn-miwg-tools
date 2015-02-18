@@ -118,6 +118,9 @@ public class ModelInterchangeMojo extends AbstractMojo {
 						scanForBpmn(dir, bpmnFiles, app);
 
 						for (File b : bpmnFiles) {
+                            getLog().info(
+                                    "Analysing bpmn file: "
+                                            + b.getAbsolutePath());
 							AnalysisJob job;
                             try {
                                 job = new AnalysisJob(app, inferTestName(b),

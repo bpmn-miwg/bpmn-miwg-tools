@@ -86,6 +86,14 @@
       <artifactId>javax.json</artifactId>
       <version>1.0.4</version>
     </dependency>
+    
+    <!-- Required at runtime for private testing -->
+    <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>test-suite</artifactId>
+      <version>0.2-SNAPSHOT</version>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
 
   <build>

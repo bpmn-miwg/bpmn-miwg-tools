@@ -49,31 +49,6 @@
         </configuration>
         <version>2.3.2</version>
       </plugin>
-      <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.7</version>
-        <executions>
-          <execution>
-            <phase>process-test-resources</phase>
-            <configuration>
-              <target>
-
-                <echo>Unzipping test suite from ${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}</echo>
-                <unzip src="${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}" 
-                    dest="${project.build.directory}/test-suite/">
-                  <patternset>
-                    <exclude name="META-INF/**/*"/>
-                    <exclude name="target/**/*"/>
-                  </patternset>
-                </unzip>
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
 
     <pluginManagement>

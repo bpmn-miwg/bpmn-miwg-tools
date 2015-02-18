@@ -24,15 +24,16 @@ public class DOMFactory {
 		return document;
 	}
 
-	public static Document getDocument(String fileName)
-			throws FileNotFoundException, ParserConfigurationException,
-			SAXException, IOException {
-		return getDocument(new FileInputStream(fileName));
-	}
-	
-	public static Document getDocument(File file)
-			throws FileNotFoundException, ParserConfigurationException,
-			SAXException, IOException {
-		return getDocument(new FileInputStream(file));
-	}
+    public static Document getDocument(String resourceName)
+            throws FileNotFoundException, ParserConfigurationException,
+            SAXException, IOException {
+        return getDocument(DOMFactory.class.getResourceAsStream(resourceName));
+    }
+
+    public static Document getDocument(File file) throws FileNotFoundException,
+            ParserConfigurationException, SAXException, IOException {
+        System.err
+                .println("WARNING! This method MAY NOT be portable as it relies on file system layout");
+        return getDocument(new FileInputStream(file));
+    }
 }

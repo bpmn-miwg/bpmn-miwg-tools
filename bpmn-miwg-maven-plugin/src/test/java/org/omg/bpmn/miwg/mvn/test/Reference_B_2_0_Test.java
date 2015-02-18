@@ -27,16 +27,13 @@ package org.omg.bpmn.miwg.mvn.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
@@ -56,31 +53,16 @@ import org.w3c.dom.Document;
 
 public class Reference_B_2_0_Test {
 
-	private static final String TESTRESULTS_FOLDER = "../../bpmn-miwg-test-suite";
-	private static final String REFERENCE_FILE = TESTRESULTS_FOLDER
- + "/"
-            + Consts.REFERENCE_DIR + "/B.2.0.bpmn";
-    private static final String CAMUNDA_FILE = TESTRESULTS_FOLDER
-            + "/camunda Modeler 2.4.0/B.2.0-roundtrip.bpmn";
+    private static final String REFERENCE_RESOURCE =
+            "/" + Consts.REFERENCE_DIR + "/B.2.0.bpmn";
+    private static final String CAMUNDA_RESOURCE =
+            "/camunda Modeler 2.4.0/B.2.0-roundtrip.bpmn";
 
-	private InputStream referenceStream;
-	private Document referenceDOM;
+	private static Document referenceDOM;
 
-	@Before
-	public void setUp() throws Exception {
-		assertTrue("Test results directory cannot be found.", new File(
-				TESTRESULTS_FOLDER).exists());
-		assertTrue("Reference file appears not to exist", new File(
-				REFERENCE_FILE).exists());
-		referenceDOM = DOMFactory.getDocument(REFERENCE_FILE);
-		referenceStream = new FileInputStream(REFERENCE_FILE); // Execute a second time in order to have an open stream
-	}
-
-	@After
-	public void tearDown() throws Exception {
-		if (referenceStream == null)
-			referenceStream.close();
-		referenceDOM = null;
+    @BeforeClass
+    public static void setUpOnce() throws Exception {
+         referenceDOM = DOMFactory.getDocument(REFERENCE_RESOURCE);
 	}
 
 	@Test
@@ -89,8 +71,16 @@ public class Reference_B_2_0_Test {
 
         AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR,
 				"B.2.0", MIWGVariant.Reference, null, null);
-
-		assertEquals(0, xsdTool.analyzeStream(job, null, referenceStream, null).numFindings);
+        InputStream referenceStream = null;
+        try {
+            referenceStream = getClass()
+                    .getResourceAsStream(REFERENCE_RESOURCE);
+            assertEquals(0,
+                    xsdTool.analyzeStream(job, null, referenceStream, null).numFindings);
+        } finally {
+            if (referenceStream != null)
+                referenceStream.close();
+        }
 	}
 
 	@Test
@@ -109,7 +99,6 @@ public class Reference_B_2_0_Test {
 
         AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR,
 				"B.2.0", MIWGVariant.Reference, null, null);
-
 		assertEquals(0, compareTool.analyzeDOM(job, referenceDOM, referenceDOM, null).numFindings);
 	}
 
@@ -120,8 +109,8 @@ public class Reference_B_2_0_Test {
         AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR,
 				"B.2.0", MIWGVariant.Reference, null, null);
 
-        assertFalse(0 == compareTool.analyzeDOM(job,
-                DOMFactory.getDocument(CAMUNDA_FILE), referenceDOM, null).numFindings);
+        assertEquals(0, compareTool.analyzeDOM(job,
+                DOMFactory.getDocument(CAMUNDA_RESOURCE), referenceDOM, null).numFindings);
 	}
 
 	

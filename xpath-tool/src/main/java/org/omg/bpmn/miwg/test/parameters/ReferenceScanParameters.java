@@ -35,12 +35,16 @@ import org.omg.bpmn.miwg.test.common.TestResult;
 public class ReferenceScanParameters implements ScanParameters {
 
 	public File getInputRoot() throws IOException {
+        System.err
+                .println("WARNING! THIS METHOD IS NOT PORTABLE AS IT RELIES ON A FILE SYSTEM LAYOUT");
 		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
 		return new File(s);
 	}
 
 	public File getOutputRoot() throws IOException {
-		String s = new File("../../XPathOutput").getCanonicalPath();
+        System.err
+                .println("WARNING! THIS METHOD IS NOT PORTABLE AS IT RELIES ON A FILE SYSTEM LAYOUT");
+        String s = new File("../../XPathOutput").getCanonicalPath();
 		return new File(s);
 	}
 

@@ -63,7 +63,6 @@ public class AnalysisFacade {
 			// Build the DOMs for the DOMAnalysisTools
 			{
 				actualInputStream = job.getActualInput().getInputStream();
-				assert referenceInputStream != null;
 				assert actualInputStream != null;
 
 				actualDom = DOMFactory.getDocument(actualInputStream);

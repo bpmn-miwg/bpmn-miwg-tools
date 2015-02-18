@@ -31,8 +31,8 @@ import org.w3c.dom.NodeList;
 
 public class ModelInterchangeMojoTest {
 
-	private static final String W4_MODELER_ID = "W4 BPMN+ Composer V.9.0";
-	private static final String CAMUNDA_MODELER_ID = "camunda Modeler 2.4.0";
+    private static final String BPMN_IO_ID = "bpmn.io 0.5.0";
+    private static final String CAMUNDA_MODELER_ID = "camunda Modeler 2.4.0";
 	private static final String CAMUNDA_JS_ID = "camunda-bpmn.js c906a7c941b82dbb832ed9be62989c171c724199";
 	private static final String ECLIPSE_MODELER_ID = "Eclipse BPMN2 Modeler 0.2.6";
 	private static final String IBM_MODELER_ID = "IBM Process Designer 8.0.1";
@@ -40,7 +40,8 @@ public class ModelInterchangeMojoTest {
 	private static final String SIGNAVIO_MODELER_ID = "Signavio Process Editor 7.8.1";
 	private static final String YAOQIANG_2_MODELER_ID = "Yaoqiang BPMN Editor 2.2.6";
 	private static final String YAOQIANG_3_MODELER_ID = "Yaoqiang BPMN Editor 3.0.1";
-	private static ModelInterchangeMojo mojo;
+    private static final String W4_MODELER_ID = "W4 BPMN+ Composer V.9.0";
+    private static ModelInterchangeMojo mojo;
 	private static XPathExpression testOverviewExpr;
 	private static File overview;
 	private static DocumentBuilder docBuilder;
@@ -55,7 +56,7 @@ public class ModelInterchangeMojoTest {
 		mojo.resources = new ArrayList<Resource>();
 
 		overview = HTMLAnalysisOutputWriter
-				.getOverviewFile(mojo.outputDirectory);
+                .getOverviewFile(TestUtil.REPORT_BASE_FOLDER);
 
 		docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 
@@ -70,7 +71,7 @@ public class ModelInterchangeMojoTest {
 		File dir = new File("src/test/resources");
 		mojo.scanForBpmn(dir, bpmnFiles);
         // first param is the total number of BPMN files in src/test/resources
-		assertEquals(21, bpmnFiles.size());
+		assertEquals(22, bpmnFiles.size());
 	}
 
 	@Test
@@ -79,7 +80,11 @@ public class ModelInterchangeMojoTest {
 		File dir = new File("src" + File.separator + "test" + File.separator
 				+ "resources");
 		mojo.scanForBpmn(dir, bpmnFiles, W4_MODELER_ID);
-		assertEquals(9, bpmnFiles.size());
+        assertEquals(9, bpmnFiles.size());
+
+        bpmnFiles.clear();
+        mojo.scanForBpmn(dir, bpmnFiles, BPMN_IO_ID);
+        assertEquals(1, bpmnFiles.size());
 	}
 
     @Test
@@ -127,7 +132,11 @@ public class ModelInterchangeMojoTest {
 			Document document = docBuilder.parse(overview);
 			NodeList nodes = (NodeList) testOverviewExpr.evaluate(document,
 					XPathConstants.NODESET);
-			assertEquals(9 /* count of .bpmn in W4 dir */, nodes.getLength());
+            // first param is number of bpmn files in the src/test/resources
+            // folders of vendors listed in tools-tested-by-miwg.json
+            // At time of writing this includes W4 & camunda but excludes
+            // bpmn.io
+            assertEquals(10, nodes.getLength());
 
 			// report files for each tool
 			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER_NAME,

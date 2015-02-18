@@ -112,11 +112,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.omg.bpmn.miwg</groupId>
-      <artifactId>test-suite</artifactId>
-      <version>0.2-SNAPSHOT</version>
-    </dependency>
     <!-- TODO required only by xml-compare so should prob not be here
     <dependency>
       <groupId>xmlunit</groupId>
