@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.test.common;
+package org.omg.bpmn.miwg.devel.common;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;

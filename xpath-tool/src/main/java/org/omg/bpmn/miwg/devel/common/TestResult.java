@@ -23,40 +23,18 @@
  * 
  */
 
-package org.omg.bpmn.miwg.test.parameters;
+package org.omg.bpmn.miwg.devel.common;
 
 import java.io.File;
-import java.io.IOException;
 
-import org.omg.bpmn.miwg.test.common.Application;
-import org.omg.bpmn.miwg.test.common.ScanParameters;
-import org.omg.bpmn.miwg.test.common.TestResult;
+public class TestResult {
 
-public class ApplicationScanParameters implements ScanParameters {
-
-	protected String applicationName;
-
-	public ApplicationScanParameters(String application) {
-		this.applicationName = application;
+	public TestResult(File testResultFile) {
+		this.name = testResultFile.getName();
+		this.file = testResultFile;
 	}
 
-	public File getInputRoot() throws IOException {
-		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
-		return new File(s);
-	}
-
-	public File getOutputRoot() throws IOException {
-		String s = new File("../../XPathOutput").getCanonicalPath();
-		return new File(s);
-	}
-
-	public boolean acceptApplication(Application application) {
-		return application.name.toLowerCase().equals(
-				applicationName.toLowerCase());
-	}
-
-	public boolean acceptTestResult(TestResult testResult) {
-		return true;
-	}
+	public String name;
+	public File file;
 
 }

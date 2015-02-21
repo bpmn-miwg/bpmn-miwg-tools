@@ -23,39 +23,40 @@
  * 
  */
 
-package org.omg.bpmn.miwg.test.common;
+package org.omg.bpmn.miwg.devel.parameters;
 
 import java.io.File;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.IOException;
 
-public class Application {
+import org.omg.bpmn.miwg.devel.common.Application;
+import org.omg.bpmn.miwg.devel.common.ScanParameters;
+import org.omg.bpmn.miwg.devel.common.TestResult;
 
-	private static Pattern twopart = Pattern.compile("(.*)\\s(\\S+)");
+public class SpecificTestResultScanParameters implements ScanParameters {
 
-	public String application;
-	public File folder;
-	public String name;
-	public String version;
+	private String testResultName;
 
-	public Application(File folder) {
-		this.folder = folder;
-		this.application = folder.getName();
-
-		Matcher m = twopart.matcher(application);
-
-		if (m.matches()) {
-			this.name = m.group(1);
-			this.version = m.group(2);
-		} else {
-			this.name = application;
-			this.version = "";
-		}
-
+	public SpecificTestResultScanParameters(String testResultName) {
+		this.testResultName = testResultName;
 	}
 
-	public String toString() {
-		return name + "//" + version;
+	public File getInputRoot() throws IOException {
+		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
+		return new File(s);
+	}
+
+	public File getOutputRoot() throws IOException {
+		String s = new File("../../XPathOutput").getCanonicalPath();
+		return new File(s);
+	}
+
+	public boolean acceptApplication(Application application) {
+		return true;
+	}
+
+	public boolean acceptTestResult(TestResult testResult) {
+		return testResult.name.toLowerCase().equals(
+				testResultName.toLowerCase());
 	}
 
 }

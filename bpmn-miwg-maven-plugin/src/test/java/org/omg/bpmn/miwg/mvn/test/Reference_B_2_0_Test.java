@@ -26,14 +26,12 @@
 package org.omg.bpmn.miwg.mvn.test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 
 import java.io.InputStream;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
@@ -60,7 +58,8 @@ public class Reference_B_2_0_Test {
 
 	private static Document referenceDOM;
 
-    @BeforeClass
+
+	@BeforeClass
     public static void setUpOnce() throws Exception {
          referenceDOM = DOMFactory.getDocument(REFERENCE_RESOURCE);
 	}

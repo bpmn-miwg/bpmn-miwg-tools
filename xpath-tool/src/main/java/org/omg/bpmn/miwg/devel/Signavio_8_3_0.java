@@ -31,10 +31,10 @@ import java.util.List;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.omg.bpmn.miwg.test.common.AbstractTestCase;
-import org.omg.bpmn.miwg.test.common.InstanceParameter;
-import org.omg.bpmn.miwg.test.common.ScanUtil;
-import org.omg.bpmn.miwg.test.parameters.ApplicationScanParameters;
+import org.omg.bpmn.miwg.devel.common.AbstractTestCase;
+import org.omg.bpmn.miwg.devel.common.InstanceParameter;
+import org.omg.bpmn.miwg.devel.common.ScanUtil;
+import org.omg.bpmn.miwg.devel.parameters.ApplicationScanParameters;
 
 @RunWith(Parameterized.class)
 public class Signavio_8_3_0 extends AbstractTestCase {

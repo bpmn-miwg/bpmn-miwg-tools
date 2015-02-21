@@ -63,11 +63,11 @@ public class AnalysisFacade {
 			// Build the DOMs for the DOMAnalysisTools
 			{
 				actualInputStream = job.getActualInput().getInputStream();
-				assert actualInputStream != null;
+				//assert actualInputStream != null;
 
 				actualDom = DOMFactory.getDocument(actualInputStream);
 
-				assert actualDom != null;
+				//assert actualDom != null;
 				if (actualInputStream != null)
 					actualInputStream.close();
 			}
@@ -79,7 +79,7 @@ public class AnalysisFacade {
 					referenceInputStream = job.getReferenceInput()
 							.getInputStream();
 					referenceDom = DOMFactory.getDocument(referenceInputStream);
-					assert referenceDom != null;
+					// assert referenceDom != null;
 					if (referenceInputStream != null)
 						referenceInputStream.close();
 				} else {
@@ -90,7 +90,7 @@ public class AnalysisFacade {
 			
 			// Build the InputStream for the XSD tool using the input stream
 			actualInputStream = job.getActualInput().getInputStream();
-			assert actualInputStream != null;
+			//assert actualInputStream != null;
 
 			AnalysisResult xsdResult = xsdAnalysisTool.analyzeStream(job, null,
 					actualInputStream, null);

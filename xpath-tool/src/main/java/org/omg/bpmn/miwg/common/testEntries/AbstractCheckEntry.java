@@ -46,14 +46,4 @@ public abstract class AbstractCheckEntry {
 
 	public abstract OutputType getOutputType();
 
-	public void TEST_print(int level) {
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < level; i++)
-			sb.append(" ");
-
-		System.err.println(sb.toString() + this.toString());
-		for (AbstractCheckEntry c : children)
-			c.TEST_print(level + 1);
-	}
-
 }

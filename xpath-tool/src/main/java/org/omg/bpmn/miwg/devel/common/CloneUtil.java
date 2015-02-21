@@ -23,40 +23,38 @@
  * 
  */
 
-package org.omg.bpmn.miwg.test.parameters;
+package org.omg.bpmn.miwg.devel.common;
 
-import java.io.File;
-import java.io.IOException;
+import java.lang.reflect.Field;
 
-import org.omg.bpmn.miwg.test.common.Application;
-import org.omg.bpmn.miwg.test.common.ScanParameters;
-import org.omg.bpmn.miwg.test.common.TestResult;
+public class CloneUtil {
+	@SuppressWarnings("rawtypes")
+	public static Object clone(Object o) {
+		Object clone = null;
 
-public class SpecificTestResultScanParameters implements ScanParameters {
+		try {
+			clone = o.getClass().newInstance();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
 
-	private String testResultName;
-
-	public SpecificTestResultScanParameters(String testResultName) {
-		this.testResultName = testResultName;
+		// Walk up the superclass hierarchy
+		for (Class obj = o.getClass(); !obj.equals(Object.class); obj = obj
+				.getSuperclass()) {
+			Field[] fields = obj.getDeclaredFields();
+			for (int i = 0; i < fields.length; i++) {
+				fields[i].setAccessible(true);
+				try {
+					// for each class/suerclass, copy all fields
+					// from this object to the clone
+					fields[i].set(clone, fields[i].get(o));
+				} catch (IllegalArgumentException e) {
+				} catch (IllegalAccessException e) {
+				}
+			}
+		}
+		return clone;
 	}
-
-	public File getInputRoot() throws IOException {
-		String s = new File("../../bpmn-miwg-test-suite").getCanonicalPath();
-		return new File(s);
-	}
-
-	public File getOutputRoot() throws IOException {
-		String s = new File("../../XPathOutput").getCanonicalPath();
-		return new File(s);
-	}
-
-	public boolean acceptApplication(Application application) {
-		return true;
-	}
-
-	public boolean acceptTestResult(TestResult testResult) {
-		return testResult.name.toLowerCase().equals(
-				testResultName.toLowerCase());
-	}
-
 }

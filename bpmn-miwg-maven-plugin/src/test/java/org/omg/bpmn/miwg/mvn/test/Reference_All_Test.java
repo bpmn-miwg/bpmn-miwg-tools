@@ -2,26 +2,21 @@ package org.omg.bpmn.miwg.mvn.test;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.api.MIWGVariant;
-import org.omg.bpmn.miwg.test.common.InstanceParameter;
-import org.omg.bpmn.miwg.test.common.ScanUtil;
-import org.omg.bpmn.miwg.test.parameters.ReferenceScanParameters;
 import org.omg.bpmn.miwg.util.DOMFactory;
-import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
 import org.omg.bpmn.miwg.xsd.XsdAnalysisTool;
 import org.w3c.dom.Document;
@@ -29,14 +24,27 @@ import org.w3c.dom.Document;
 @RunWith(Parameterized.class)
 public class Reference_All_Test {
 
+	private final static String REF = "Reference";
+
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new ReferenceScanParameters());
+		List<Object[]> list = new LinkedList<Object[]>();
+
+		list.add(new String[] { "A.1.0.bpmn" });
+		list.add(new String[] { "A.2.0.bpmn" });
+		list.add(new String[] { "A.3.0.bpmn" });
+		list.add(new String[] { "A.4.0.bpmn" });
+		list.add(new String[] { "A.4.1.bpmn" });
+		list.add(new String[] { "B.1.0.bpmn" });
+		list.add(new String[] { "B.2.0.bpmn" });
+		list.add(new String[] { "C.1.0.bpmn" });
+
+		return list;
 	}
 
-	protected InstanceParameter param;
+	protected String param;
 
-	public Reference_All_Test(InstanceParameter parameter) {
+	public Reference_All_Test(String parameter) {
 		this.param = parameter;
 	}
 
@@ -48,24 +56,17 @@ public class Reference_All_Test {
 		System.out.println(param);
 	}
 
-	@After
-	public void tearDown() throws Exception {
-
-	}
 
 	@Test
-    @Ignore
-    // This test cannot be run for now as it relies on file system information
-    // in ReferenceScanParameters
 	public void testXpath() throws Exception {
 		XPathAnalysisTool tool = new XPathAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob(param.application.toString(),
-				param.testResult.name, MIWGVariant.Reference, null, null);
+		AnalysisJob job = new AnalysisJob(REF, param, MIWGVariant.Reference,
+				null, null);
 
-		Document bpmnXmlDOM = DOMFactory.getDocument(param.testResult.file);
-		AnalysisResult result = tool.analyzeDOM(job, null, bpmnXmlDOM,
-				param.outputRoot);
+		Document bpmnXmlDOM = DOMFactory.getDocument("/" + Consts.REFERENCE_DIR
+				+ "/" + param);
+		AnalysisResult result = tool.analyzeDOM(job, null, bpmnXmlDOM, null);
 
 		assertEquals(0, result.numFindings);
 
@@ -74,19 +75,17 @@ public class Reference_All_Test {
 	}
 
 	@Test
-    @Ignore
-    // This test cannot be run for now as it relies on file system information
-    // in ReferenceScanParameters
 	public void testSchema() throws Exception {
 		XsdAnalysisTool tool = new XsdAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob(param.application.toString(),
-				param.testResult.name, MIWGVariant.Reference, null, null);
+		AnalysisJob job = new AnalysisJob(REF, param, MIWGVariant.Reference,
+				null, null);
 
-		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
+		InputStream bpmnXmlStream = this.getClass().getResourceAsStream(
+				"/" + Consts.REFERENCE_DIR + "/" + param);
 		try {
 			AnalysisResult result = tool.analyzeStream(job, null,
-					bpmnXmlStream, param.outputRoot);
+					bpmnXmlStream, null);
 
 			assertEquals(0, result.numFindings);
 
@@ -96,28 +95,6 @@ public class Reference_All_Test {
 			bpmnXmlStream.close();
 		}
 	}
-
-	/***
-	 * This test checks that there is no difference between the same DOMs.
-	 * 
-	 */
-	@Test
-	public void testXmlCompare() throws Exception {
-		XmlCompareAnalysisTool tool = new XmlCompareAnalysisTool();
-
-		AnalysisJob job = new AnalysisJob(param.application.toString(),
-				param.testResult.name, MIWGVariant.Reference, null, null);
-
-		Document bpmnXmlDOM1 = DOMFactory.getDocument(param.testResult.file);
-		Document bpmnXmlDOM2 = DOMFactory.getDocument(param.testResult.file);
-
-		AnalysisResult result = tool.analyzeDOM(job, bpmnXmlDOM1, bpmnXmlDOM2,
-				param.outputRoot);
-
-		assertEquals(0, result.numFindings);
-
-		System.out.println();
-		System.out.println(result);
-	}
+	
 
 }
