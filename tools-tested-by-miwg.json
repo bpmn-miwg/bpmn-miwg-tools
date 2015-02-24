@@ -271,6 +271,21 @@
       "notes": ""
     },
     {
+      "vendor": "Sparx",
+      "tool": "Enterprise Architect",
+      "version": "12.0.1207",
+      "website": "http://www.sparxsystems.com/",
+      "bpiId": "",
+      "supportsBpmn2": true,
+      "hasImport": true,
+      "hasExport": true,
+      "hasRoundtrip": true,
+      "testResultsSubmitted": "partial",
+      "participatedInDemos": false,
+      "openSource": false,
+      "notes": ""
+    },
+    {
       "vendor": "Trisotech",
       "tool": "Trisotech BPMN Visio Modeler",
       "version": "4.2",
