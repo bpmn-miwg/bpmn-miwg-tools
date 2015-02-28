@@ -28,11 +28,8 @@
          <div class="info">
             <h4>ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-B.2.0-export</h4>
          </div>
-         <div class="finding">
-            <h4>  FINDING: callingMethod; Message: Cannot find attribute; Parameter: id</h4>
-         </div>
          <div class="ok">
-            <h4>  OK     : callingMethod: Push (id: )</h4>
+            <h4>  OK     : execute: Push (id: )</h4>
          </div>
          <div class="ok">
             <h4>    OK     : selectElementX; Message: //bpmn:collaboration</h4>
@@ -86,61 +83,43 @@
             <h4>          OK     : checkDataAssociation: Pop (id: shape_IDAC3OKB)</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: selectElement; Message: No node found; Parameter: bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 1&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>        OK     : selectElement: Push (id: )</h4>
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 1&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>          FINDING: navigateGatewaySequenceFlowStack; Message: Parent failed; Parameter: </h4>
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:serviceTask[@name=&apos;Service Task 4&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>          FINDING: navigateGatewaySequenceFlowStack; Message: Parent failed; Parameter: </h4>
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Signal Throw 1&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>          FINDING: checkDefaultSequenceFlow; Message: Current node is not a sequenceFlow; Parameter: userTask</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: )</h4>
+            <h4>        FINDING: checkSignalEvent; Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: checkSignalEvent; Message: Current node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: selectFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>        FINDING: selectFollowingElement; Message: No outgoing reference found; Parameter: bpmn:subProcess[@name=&apos;Collapsed Sub-Process 1 Multi-Instances&apos;]</h4>
          </div>
          <div class="ok">
             <h4>        OK     : selectFollowingElement: Push (id: )</h4>
          </div>
          <div class="finding">
-            <h4>          FINDING: checkMultiInstanceParallel; Message: Current node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>          FINDING: checkXORMarkersForProcess; Message: Current node is null; Parameter: null</h4>
+            <h4>          FINDING: checkMultiInstanceParallel; Message: Loop characteristics not set; Parameter: bpmn:multiInstanceLoopCharacteristics</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: )</h4>
+            <h4>          OK     : doExecute: Pop (id: )</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 5&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: navigateBoundaryEvent; Message: Current node is null; Parameter: null</h4>
+            <h4>        FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name=&apos;Boundary Intermediate Event Non-Interrupting Conditional&apos; and @attachedToRef=&apos;shape_IDAC3OKB&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: checkCancelActivity; Message: No current node; Parameter: </h4>
+            <h4>        FINDING: checkCancelActivity; Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: </h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkParallelMultiple; Message: Attribute parallelMultiple is not existing but the expected value (false) equals the default value (false)</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: checkParallelMultiple; Message: No current node; Parameter: </h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: checkConditionalEvent; Message: Current node is null; Parameter: null</h4>
+            <h4>        FINDING: checkConditionalEvent; Message: Cannot find conditional event definition; Parameter: bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef</h4>
          </div>
          <div class="finding">
             <h4>        FINDING: navigateElement; Message: No node found; Parameter: bpmn:parallelGateway[@name=&apos;Parallel Gateway 2&apos;]</h4>
@@ -179,13 +158,13 @@
             <h4>            OK     : navigateElementX; Message: bpmn:standardLoopCharacteristics</h4>
          </div>
          <div class="ok">
-            <h4>            OK     : callingMethod: Pop (id: shape_IDA4RYIB)</h4>
+            <h4>            OK     : doExecute: Pop (id: shape_IDA4RYIB)</h4>
          </div>
          <div class="ok">
             <h4>          OK     : navigateElementX; Message: bpmn:endEvent[@name=&apos;End Event 2&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: shape_IDASRMKB)</h4>
+            <h4>          OK     : doExecute: Pop (id: shape_IDASRMKB)</h4>
          </div>
          <div class="ok">
             <h4>        OK     : navigateElementX; Message: bpmn:userTask[@name=&apos;User Task 8&apos;]</h4>
@@ -218,7 +197,7 @@
             <h4>        OK     : checkSignalEvent; Message: Signal event definition</h4>
          </div>
          <div class="ok">
-            <h4>        OK     : callingMethod: Pop (id: process_IDAVOMKB)</h4>
+            <h4>        OK     : doExecute: Pop (id: process_IDAVOMKB)</h4>
          </div>
          <div class="ok">
             <h4>      OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>
@@ -260,12 +239,6 @@
             <h4>        OK     : navigateElement; Message: #document/definitions/process[@id=&apos;id=&quot;process_IDANNMKB&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;shape_IDATEI2B&quot;&apos;]/</h4>
          </div>
          <div class="ok">
-            <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Timer Catch&apos; and @id=&apos;shape_IDAUWJ2B&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>        OK     : navigateElement; Message: #document/definitions/process[@id=&apos;id=&quot;process_IDANNMKB&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;shape_IDATEI2B&quot;&apos;]/</h4>
-         </div>
-         <div class="ok">
             <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch&apos; and @id=&apos;shape_IDA1AI2B&apos;]</h4>
          </div>
          <div class="ok">
@@ -277,80 +250,83 @@
          <div class="ok">
             <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch 2&apos; and @id=&apos;shape_IDA45I2B&apos;]</h4>
          </div>
-         <div class="finding">
-            <h4>        FINDING: selectElementX; Message: No node found; Parameter: bpmn:callActivity[@name=&apos;Expanded Call Activity&apos;]</h4>
+         <div class="ok">
+            <h4>        OK     : navigateElement; Message: #document/definitions/process[@id=&apos;id=&quot;process_IDANNMKB&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;shape_IDATEI2B&quot;&apos;]/</h4>
          </div>
          <div class="ok">
-            <h4>        OK     : selectElementX: Push (id: )</h4>
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Timer Catch&apos; and @id=&apos;shape_IDAUWJ2B&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>          FINDING: selectCallActivityProcess; Message: Parent failed; Parameter: null</h4>
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:callActivity[@name=&apos;Expanded Call Activity&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: selectCallActivityProcess; Message: Cannot find attribute; Parameter: calledElement</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: selectCallActivityProcess; Message: Process node not found; Parameter: //bpmn:process[@id=&apos;null&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : selectCallActivityProcess: Push (id: )</h4>
+            <h4>        OK     : selectCallActivityProcess: Push (id: )</h4>
          </div>
          <div class="finding">
-            <h4>            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 3&apos;]</h4>
+            <h4>          FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 3&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>            FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 4 Conditional&apos;]</h4>
+            <h4>          FINDING: navigateElement; Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event 4 Conditional&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>            FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+            <h4>          FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
          </div>
          <div class="finding">
-            <h4>            FINDING: checkMultiInstanceSequential; Message: Loop characteristics not set; Parameter: bpmn:multiInstanceLoopCharacteristics</h4>
+            <h4>          FINDING: checkMultiInstanceSequential; Message: Loop characteristics not set; Parameter: bpmn:multiInstanceLoopCharacteristics</h4>
          </div>
          <div class="finding">
-            <h4>            FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
+            <h4>          FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
          </div>
          <div class="finding">
-            <h4>            FINDING: navigateBoundaryEvent; Message: Parent failed; Parameter: null</h4>
+            <h4>          FINDING: navigateBoundaryEvent; Message: Parent failed; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>            OK     : checkCancelActivity; Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)</h4>
+            <h4>          OK     : checkCancelActivity; Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkMessageEvent; Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>            OK     : checkMessageEvent; Message: Message event definition</h4>
-         </div>
-         <div class="finding">
-            <h4>            FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>            FINDING: checkTerminateEvent; Message: Cannot find terminate event definition; Parameter: bpmn:terminateEventDefinition | bpmn:eventDefinitionRef</h4>
+            <h4>          OK     : checkTerminateEvent; Message: Terminate event definition</h4>
          </div>
          <div class="ok">
-            <h4>            OK     : navigateElement; Message: </h4>
+            <h4>          OK     : navigateElement; Message: </h4>
          </div>
          <div class="finding">
-            <h4>            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
          </div>
          <div class="finding">
-            <h4>            FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>            OK     : callingMethod: Pop (id: )</h4>
+            <h4>          OK     : doExecute: Pop (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:serviceTask[@name=&apos;Service Task 15&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: navigateBoundaryEvent; Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name=&apos;Boundary Intermediate Event Interrupting Conditional&apos; and @attachedToRef=&apos;shape_IDAUWJ2B&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>        FINDING: checkConditionalEvent; Message: Cannot find conditional event definition; Parameter: bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: )</h4>
+            <h4>        OK     : checkCancelActivity; Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Link&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: navigateBoundaryEvent; Message: Current node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: checkConditionalEvent; Message: Current node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: checkCancelActivity; Message: No current node; Parameter: </h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: checkLinkEvent; Message: Current node is null; Parameter: null</h4>
+            <h4>        FINDING: checkLinkEvent; Message: Cannot find link event definition; Parameter: bpmn:linkEventDefinition | bpmn:linkDefinitionRef</h4>
          </div>
          <div class="ok">
             <h4>        OK     : navigateElement; Message: </h4>
@@ -383,7 +359,7 @@
             <h4>          FINDING: checkDefaultSequenceFlow; Message: No current node; Parameter: </h4>
          </div>
          <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: )</h4>
+            <h4>          OK     : doExecute: Pop (id: )</h4>
          </div>
          <div class="ok">
             <h4>        OK     : navigateElementX; Message: bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Message Throw&apos;]</h4>
@@ -485,7 +461,7 @@
             <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event 8 None&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: shape_IDAIXMKB)</h4>
+            <h4>          OK     : doExecute: Pop (id: shape_IDAIXMKB)</h4>
          </div>
          <div class="ok">
             <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 23&apos; and @id=&apos;shape_IDA2MTIB&apos;]</h4>
@@ -575,25 +551,25 @@
             <h4>          FINDING: checkErrorEvent; Message: Current node is null; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: )</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: navigateBoundaryEvent; Message: Current node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>          OK     : doExecute: Pop (id: )</h4>
          </div>
          <div class="ok">
-            <h4>        OK     : callingMethod: Pop (id: process_IDANNMKB)</h4>
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 32&apos; and @id=&apos;shape_IDARBK2B&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>      OK     : callingMethod: Pop (id: diagram_IDAOK5IB)</h4>
+            <h4>        OK     : navigateBoundaryEvent; Message: Boundary element &apos;null&apos; found</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Task 33&apos; and @id=&apos;shape_IDA4NK2B&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement; Message: bpmn:endEvent[@name=&apos;End Event 14&apos; and @id=&apos;shape_IDA3EK2B&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : doExecute: Pop (id: process_IDANNMKB)</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : doExecute: Pop (id: diagram_IDAOK5IB)</h4>
          </div>
       </div>
    </div>

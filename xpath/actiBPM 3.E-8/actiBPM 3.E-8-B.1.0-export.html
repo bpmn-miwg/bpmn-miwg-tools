@@ -29,7 +29,7 @@
             <h4>ANALYSIS: actiBPM 3.E-8-B.1.0-export</h4>
          </div>
          <div class="ok">
-            <h4>  OK     : callingMethod: Push (id: m1418416034250)</h4>
+            <h4>  OK     : execute: Push (id: m1418416034250)</h4>
          </div>
          <div class="ok">
             <h4>    OK     : selectElementX; Message: //bpmn:collaboration</h4>
@@ -71,7 +71,7 @@
             <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event None 1&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>        OK     : callingMethod: Pop (id: myProcess_1)</h4>
+            <h4>        OK     : doExecute: Pop (id: myProcess_1)</h4>
          </div>
          <div class="ok">
             <h4>      OK     : selectProcessX; Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>
@@ -137,22 +137,22 @@
             <h4>            FINDING: navigateFollowingElement; Message: Parent failed; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>            OK     : callingMethod: Pop (id: )</h4>
+            <h4>            OK     : doExecute: Pop (id: )</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: )</h4>
+            <h4>          OK     : doExecute: Pop (id: )</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 1&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
+            <h4>        FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event Message&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkMessageEvent; Message: Message event definition</h4>
          </div>
          <div class="finding">
-            <h4>        FINDING: checkMessageEvent; Message: Current node is null; Parameter: null</h4>
-         </div>
-         <div class="finding">
-            <h4>        FINDING: checkMessageFlow; Message: Current node is null; Parameter: null</h4>
+            <h4>        FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;Message Flow 2&apos; and @sourceRef=&apos;_12&apos;]</h4>
          </div>
          <div class="ok">
             <h4>        OK     : navigateElement; Message: </h4>
@@ -194,7 +194,7 @@
             <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : callingMethod: Pop (id: )</h4>
+            <h4>          OK     : doExecute: Pop (id: )</h4>
          </div>
          <div class="finding">
             <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
@@ -218,10 +218,10 @@
             <h4>        FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>        OK     : callingMethod: Pop (id: myProcess_2)</h4>
+            <h4>        OK     : doExecute: Pop (id: myProcess_2)</h4>
          </div>
          <div class="ok">
-            <h4>      OK     : callingMethod: Pop (id: COLLABORATION_1)</h4>
+            <h4>      OK     : doExecute: Pop (id: COLLABORATION_1)</h4>
          </div>
       </div>
    </div>
