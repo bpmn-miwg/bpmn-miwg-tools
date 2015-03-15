@@ -66,6 +66,28 @@ public abstract class AbstractTestCase {
 	}
 
 	@Test
+	public void testSchema() throws Exception {
+		XsdAnalysisTool tool = new XsdAnalysisTool();
+
+		AnalysisJob job = new AnalysisJob(param.application.toString(),
+				param.testResult.name, null, null, null);
+
+		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
+		AnalysisResult result = null;
+		try {
+			result = tool.analyzeStream(job, null, bpmnXmlStream,
+					param.outputRoot);
+
+			assertEquals(0, result.numFindings);
+		} finally {
+			bpmnXmlStream.close();
+
+			System.out.println();
+			System.out.println(result);
+		}
+	}
+	
+	@Test
 	public void testXpath() throws Exception {
 		XPathAnalysisTool tool = new XPathAnalysisTool();
 
@@ -101,26 +123,6 @@ public abstract class AbstractTestCase {
 		}
 	}
 
-	@Test
-	public void testSchema() throws Exception {
-		XsdAnalysisTool tool = new XsdAnalysisTool();
 
-		AnalysisJob job = new AnalysisJob(param.application.toString(),
-				param.testResult.name, null, null, null);
-
-		InputStream bpmnXmlStream = new FileInputStream(param.testResult.file);
-		AnalysisResult result = null;
-		try {
-			result = tool.analyzeStream(job, null, bpmnXmlStream,
-					param.outputRoot);
-
-			assertEquals(0, result.numFindings);
-		} finally {
-			bpmnXmlStream.close();
-
-			System.out.println();
-			System.out.println(result);
-		}
-	}
 
 }
