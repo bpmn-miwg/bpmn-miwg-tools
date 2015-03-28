@@ -34,7 +34,7 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.devel.common.AbstractTestCase;
 import org.omg.bpmn.miwg.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.devel.common.ScanUtil;
-import org.omg.bpmn.miwg.devel.parameters.StandardScanParameters;
+import org.omg.bpmn.miwg.devel.common.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class All extends AbstractTestCase {
@@ -45,7 +45,7 @@ public class All extends AbstractTestCase {
 
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new StandardScanParameters());
+		return ScanUtil.data(new StandardScanParameters(null, null));
 	}
 
 }

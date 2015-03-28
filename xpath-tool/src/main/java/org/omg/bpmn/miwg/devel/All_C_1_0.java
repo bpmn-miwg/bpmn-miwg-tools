@@ -34,7 +34,7 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.devel.common.AbstractTestCase;
 import org.omg.bpmn.miwg.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.devel.common.ScanUtil;
-import org.omg.bpmn.miwg.devel.parameters.SpecificTestResultScanParameters;
+import org.omg.bpmn.miwg.devel.common.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class All_C_1_0 extends AbstractTestCase {
@@ -45,7 +45,7 @@ public class All_C_1_0 extends AbstractTestCase {
 
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new SpecificTestResultScanParameters(
+		return ScanUtil.data(new StandardScanParameters(null,
 				"c.1.0-roundtrip.bpmn"));
 	}
 

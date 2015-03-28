@@ -35,7 +35,7 @@ import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.devel.common.AbstractTestCase;
 import org.omg.bpmn.miwg.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.devel.common.ScanUtil;
-import org.omg.bpmn.miwg.devel.parameters.SpecificApplicationAndTestResultScanParameters;
+import org.omg.bpmn.miwg.devel.common.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class Reference_C_1_0 extends AbstractTestCase {
@@ -47,7 +47,7 @@ public class Reference_C_1_0 extends AbstractTestCase {
 	@Parameters
 	public static List<Object[]> data() throws IOException {
 		return ScanUtil
-				.data(new SpecificApplicationAndTestResultScanParameters(
+				.data(new StandardScanParameters(
                         Consts.REFERENCE_DIR, "C.1.0"));
 	}
 

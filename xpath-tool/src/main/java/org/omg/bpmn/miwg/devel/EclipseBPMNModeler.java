@@ -34,7 +34,7 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.devel.common.AbstractTestCase;
 import org.omg.bpmn.miwg.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.devel.common.ScanUtil;
-import org.omg.bpmn.miwg.devel.parameters.ApplicationScanParameters;
+import org.omg.bpmn.miwg.devel.common.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class EclipseBPMNModeler extends AbstractTestCase {
@@ -45,8 +45,8 @@ public class EclipseBPMNModeler extends AbstractTestCase {
 
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new ApplicationScanParameters(
-				"Eclipse BPMN2 Modeler"));
+		return ScanUtil.data(new StandardScanParameters(
+				"Eclipse BPMN2 Modeler", null));
 	}
 
 }

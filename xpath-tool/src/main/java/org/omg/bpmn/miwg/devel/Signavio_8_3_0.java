@@ -34,7 +34,7 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.devel.common.AbstractTestCase;
 import org.omg.bpmn.miwg.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.devel.common.ScanUtil;
-import org.omg.bpmn.miwg.devel.parameters.ApplicationScanParameters;
+import org.omg.bpmn.miwg.devel.common.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class Signavio_8_3_0 extends AbstractTestCase {
@@ -45,8 +45,8 @@ public class Signavio_8_3_0 extends AbstractTestCase {
 
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new ApplicationScanParameters(
-				"Signavio Process Editor"));
+		return ScanUtil.data(new StandardScanParameters(
+				"Signavio Process Editor", null));
 	}
 
 }

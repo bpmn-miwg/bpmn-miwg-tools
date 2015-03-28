@@ -34,7 +34,7 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.devel.common.AbstractTestCase;
 import org.omg.bpmn.miwg.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.devel.common.ScanUtil;
-import org.omg.bpmn.miwg.devel.parameters.ApplicationScanParameters;
+import org.omg.bpmn.miwg.devel.common.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class ITP_Commerce_Process_Modeler extends AbstractTestCase {
@@ -45,8 +45,10 @@ public class ITP_Commerce_Process_Modeler extends AbstractTestCase {
 
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new ApplicationScanParameters(
-				"itp-commerce Process Modeler for Microsoft Visio"));
+		return ScanUtil
+				.data(new StandardScanParameters(
+						"itp-commerce Process Modeler for Microsoft Visio",
+						null));
 	}
 
 }

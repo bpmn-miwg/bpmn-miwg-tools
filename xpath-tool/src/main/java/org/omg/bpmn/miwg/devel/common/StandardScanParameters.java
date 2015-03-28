@@ -23,22 +23,18 @@
  * 
  */
 
-package org.omg.bpmn.miwg.devel.parameters;
+package org.omg.bpmn.miwg.devel.common;
 
 import java.io.File;
 import java.io.IOException;
 
-import org.omg.bpmn.miwg.devel.common.Application;
-import org.omg.bpmn.miwg.devel.common.ScanParameters;
-import org.omg.bpmn.miwg.devel.common.TestResult;
-
-public class SpecificApplicationAndTestResultScanParameters implements
+public class StandardScanParameters implements
 		ScanParameters {
 
 	protected String applicationName;
 	protected String testResultName;
 
-	public SpecificApplicationAndTestResultScanParameters(String application,
+	public StandardScanParameters(String application,
 			String testResult) {
 		this.applicationName = application;
 		this.testResultName = testResult;
@@ -55,13 +51,19 @@ public class SpecificApplicationAndTestResultScanParameters implements
 	}
 
 	public boolean acceptApplication(Application application) {
-		return application.name.toLowerCase().equals(
-				applicationName.toLowerCase());
+		if (applicationName == null)
+			return true;
+		else
+			return application.name.toLowerCase().equals(
+					applicationName.toLowerCase());
 	}
 
 	public boolean acceptTestResult(TestResult testResult) {
-		return testResult.name.toLowerCase().startsWith(
-				testResultName.toLowerCase());
+		if (testResultName == null)
+			return true;
+		else
+			return testResult.name.toLowerCase().startsWith(
+					testResultName.toLowerCase());
 	}
 
 }

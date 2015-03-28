@@ -93,6 +93,12 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 			throw new Exception(String.format(
 					"No applicable test found for %s", job.getName()));
 
+		return analyzeDOM(job, referenceDocument, actualDocument, check, logDir);
+	}
+
+	public AnalysisResult analyzeDOM(AnalysisJob job,
+			Document referenceDocument, Document actualDocument,
+			DOMCheck check, File logDir) throws Exception {
 		CheckOutput checkOutput = new CheckOutput(job.getName(), logDir);
 		check.init(checkOutput);
 
