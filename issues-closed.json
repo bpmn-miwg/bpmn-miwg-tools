@@ -1927,6 +1927,469 @@
     "body": ""
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/246",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/246/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/246/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/246/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/246",
+    "id": 45849425,
+    "number": 246,
+    "title": "DataOutputAssociation not shown",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20bpmn.io",
+        "name": "Tool: bpmn.io",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2014-10-15T10:05:04Z",
+    "updated_at": "2015-04-16T16:43:49Z",
+    "closed_at": "2015-04-16T16:43:49Z",
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/245",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/245/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/245/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/245/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/245",
+    "id": 45523467,
+    "number": 245,
+    "title": "Collapsed Call Activity without +",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20bpmn.io",
+        "name": "Tool: bpmn.io",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-10-10T20:59:20Z",
+    "updated_at": "2015-04-16T16:45:09Z",
+    "closed_at": "2015-04-16T16:45:09Z",
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/242",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/242/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/242/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/242/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/242",
+    "id": 45523320,
+    "number": 242,
+    "title": "PNG is cut off at bottom",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20bpmn.io",
+        "name": "Tool: bpmn.io",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-10-10T20:57:45Z",
+    "updated_at": "2015-04-16T16:45:54Z",
+    "closed_at": "2015-04-16T16:45:54Z",
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/241",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/241/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/241/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/241/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/241",
+    "id": 45515790,
+    "number": 241,
+    "title": "Labels slightly too high",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20bpmn.io",
+        "name": "Tool: bpmn.io",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-10-10T19:33:47Z",
+    "updated_at": "2015-04-16T16:37:55Z",
+    "closed_at": "2015-04-16T16:37:55Z",
+    "body": "Especially for Events, Gateways and Data Store References"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/240",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/240/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/240/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/240/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/240",
+    "id": 45515500,
+    "number": 240,
+    "title": "Throwing link event shown as catching",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20bpmn.io",
+        "name": "Tool: bpmn.io",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-10-10T19:30:16Z",
+    "updated_at": "2015-04-16T16:46:27Z",
+    "closed_at": "2015-04-16T16:46:27Z",
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/237",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/237/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/237/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/237/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/237",
+    "id": 45505485,
+    "number": 237,
+    "title": "Message Flows missing",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20bpmn.io",
+        "name": "Tool: bpmn.io",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2014-10-10T17:42:37Z",
+    "updated_at": "2015-04-16T16:47:17Z",
+    "closed_at": "2015-04-16T16:47:17Z",
+    "body": ""
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218/comments",
