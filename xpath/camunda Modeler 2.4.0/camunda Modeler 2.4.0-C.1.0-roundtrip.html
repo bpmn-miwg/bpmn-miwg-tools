@@ -31,23 +31,23 @@
          <div class="ok">
             <h4>  OK     : execute: Push (id: sid-bdb880ac-c464-4e5c-aa56-569d709436e0)</h4>
          </div>
-         <div class="finding">
-            <h4>    FINDING: navigateElement; Message: No node found; Parameter: bpmn:resource[@name=&apos;Team Assistant&apos;]</h4>
+         <div class="ok">
+            <h4>    OK     : navigateElement; Message: bpmn:resource[@name=&apos;Team Assistant&apos;]</h4>
          </div>
-         <div class="finding">
-            <h4>    FINDING: checkAttributeValue; Message: No Current node; Parameter: </h4>
+         <div class="ok">
+            <h4>    OK     : checkAttributeValue; Message: Attribute w4:type=User</h4>
          </div>
-         <div class="finding">
-            <h4>    FINDING: navigateElement; Message: No node found; Parameter: bpmn:resource[@name=&apos;Approver&apos;]</h4>
+         <div class="ok">
+            <h4>    OK     : navigateElement; Message: bpmn:resource[@name=&apos;Approver&apos;]</h4>
          </div>
-         <div class="finding">
-            <h4>    FINDING: checkAttributeValue; Message: No Current node; Parameter: </h4>
+         <div class="ok">
+            <h4>    OK     : checkAttributeValue; Message: Attribute w4:type=User</h4>
          </div>
-         <div class="finding">
-            <h4>    FINDING: navigateElement; Message: No node found; Parameter: bpmn:resource[@name=&apos;Accountant&apos;]</h4>
+         <div class="ok">
+            <h4>    OK     : navigateElement; Message: bpmn:resource[@name=&apos;Accountant&apos;]</h4>
          </div>
-         <div class="finding">
-            <h4>    FINDING: checkAttributeValue; Message: No Current node; Parameter: </h4>
+         <div class="ok">
+            <h4>    OK     : checkAttributeValue; Message: Attribute w4:type=User</h4>
          </div>
          <div class="ok">
             <h4>    OK     : selectCollaboration; Message: bpmn:collaboration</h4>
@@ -85,26 +85,26 @@
          <div class="ok">
             <h4>          OK     : checkAttributeValue; Message: Attribute metaValue=[]</h4>
          </div>
-         <div class="finding">
-            <h4>          FINDING: selectElementNoID; Message: No node found; Parameter: w4graph:graphStyle</h4>
+         <div class="ok">
+            <h4>          OK     : selectElementNoID; Message: w4graph:graphStyle</h4>
          </div>
          <div class="ok">
             <h4>          OK     : selectElementNoID: Push (id: )</h4>
          </div>
-         <div class="finding">
-            <h4>            FINDING: navigateElement; Message: Parent failed; Parameter: w4graph:basic[@background=&apos;192,192,192&apos;]</h4>
+         <div class="ok">
+            <h4>            OK     : navigateElement; Message: w4graph:basic[@background=&apos;192,192,192&apos;]</h4>
          </div>
-         <div class="finding">
-            <h4>            FINDING: checkAttributeValue; Message: Attribute foreground is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>            OK     : checkAttributeValue; Message: Attribute foreground=0,0,0</h4>
          </div>
-         <div class="finding">
-            <h4>            FINDING: checkAttributeValue; Message: Attribute autoResize is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>            OK     : checkAttributeValue; Message: Attribute autoResize=false</h4>
          </div>
-         <div class="finding">
-            <h4>            FINDING: checkAttributeValue; Message: Attribute borderColor is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>            OK     : checkAttributeValue; Message: Attribute borderColor=100,100,100</h4>
          </div>
-         <div class="finding">
-            <h4>            FINDING: checkAttributeValue; Message: Attribute collapsed is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>            OK     : checkAttributeValue; Message: Attribute collapsed=false</h4>
          </div>
          <div class="ok">
             <h4>            OK     : doExecute: Pop (id: )</h4>
@@ -127,41 +127,41 @@
          <div class="ok">
             <h4>          OK     : checkMessageEvent; Message: Message event definition</h4>
          </div>
-         <div class="ok">
-            <h4>          OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Scan camunda-invoice-en&apos; and @id=&apos;sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF&apos;]</h4>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Scan camunda-invoice-en&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkMessageFlow; Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name=&apos;&apos;) and @sourceRef=&apos;sid-36EA43D1-0FE6-4197-AC57-7A43785B784B&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Archive original&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateCatchEvent[@name=&apos;Approver to be assigned&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Assign approver&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:eventBasedGateway[@name=&apos;&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:intermediateCatchEvent[@name=&apos;7 days&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: checkTimerEvent; Message: Cannot find timer event definition; Parameter: bpmn:timerEventDefinition | bpmn:eventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;null&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>          OK     : checkMessageFlow; Message: message flow &apos;&apos; (Output) -&gt; //bpmn:startEvent[@name=&apos;Invoice received&apos; and @id=&apos;StartEvent_1&apos;]</h4>
+            <h4>          OK     : navigateElement; Message: </h4>
          </div>
-         <div class="ok">
-            <h4>          OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Archive original&apos; and @id=&apos;sid-CFAC8502-0E69-4F08-BE36-8499B8C0FA44&apos;]</h4>
+         <div class="finding">
+            <h4>          FINDING: navigateFollowingElement; Message: The base node is null; Parameter: null</h4>
          </div>
-         <div class="ok">
-            <h4>          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Approver to be assigned&apos; and @id=&apos;sid-40EC6574-E644-425C-8CE7-EE384F0C3520&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : navigateFollowingElement; Message: bpmn:task[@name=&apos;Assign approver&apos; and @id=&apos;sid-64AFCE49-96A2-4A51-96CB-9DF689C37DAD&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : navigateFollowingElement; Message: bpmn:eventBasedGateway[@id=&apos;sid-F0D29912-929D-491C-8D23-73BD80CF980A&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;7 days&apos; and @id=&apos;sid-0E349B8B-14A7-4565-988A-38F3A9B624D2&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : checkTimerEvent; Message: Timer event definition</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : navigateFollowingElement; Message: bpmn:endEvent[not(@name) and @id=&apos;sid-BC9AC0B6-1785-4E35-A974-7FEF1A586B9D&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : navigateElement; Message: #document/definitions[@id=&apos;id=&quot;sid-bdb880ac-c464-4e5c-aa56-569d709436e0&quot;&apos;]/process[@id=&apos;id=&quot;sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;sid-F0D29912-929D-491C-8D23-73BD80CF980A&quot;&apos;]/</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : navigateFollowingElement; Message: bpmn:intermediateCatchEvent[@name=&apos;Invoice review needed&apos; and @id=&apos;sid-B548B980-12E3-408E-9AC4-7031B85A8F2D&apos;]</h4>
-         </div>
-         <div class="ok">
-            <h4>          OK     : checkMessageEvent; Message: Message event definition</h4>
+         <div class="finding">
+            <h4>          FINDING: checkMessageEvent; Message: Current node is null; Parameter: null</h4>
          </div>
          <div class="ok">
             <h4>          OK     : navigateElement; Message: bpmn:task[@name=&apos;Review and document result&apos;]</h4>
@@ -175,29 +175,29 @@
          <div class="ok">
             <h4>          OK     : selectElementNoID: Push (id: )</h4>
          </div>
-         <div class="finding">
-            <h4>            FINDING: selectElementNoID; Message: No node found; Parameter: w4graph:graphStyle</h4>
+         <div class="ok">
+            <h4>            OK     : selectElementNoID; Message: w4graph:graphStyle</h4>
          </div>
          <div class="ok">
             <h4>            OK     : selectElementNoID: Push (id: )</h4>
          </div>
-         <div class="finding">
-            <h4>              FINDING: navigateElement; Message: Parent failed; Parameter: w4graph:basic[@autoResize=&apos;false&apos;]</h4>
+         <div class="ok">
+            <h4>              OK     : navigateElement; Message: w4graph:basic[@autoResize=&apos;false&apos;]</h4>
          </div>
-         <div class="finding">
-            <h4>              FINDING: checkAttributeValue; Message: Attribute foreground is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>              OK     : checkAttributeValue; Message: Attribute foreground=0,0,0</h4>
          </div>
-         <div class="finding">
-            <h4>              FINDING: checkAttributeValue; Message: Attribute background is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>              OK     : checkAttributeValue; Message: Attribute background=255,255,255</h4>
          </div>
-         <div class="finding">
-            <h4>              FINDING: checkAttributeValue; Message: Attribute autoResize is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>              OK     : checkAttributeValue; Message: Attribute autoResize=false</h4>
          </div>
-         <div class="finding">
-            <h4>              FINDING: checkAttributeValue; Message: Attribute borderColor is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>              OK     : checkAttributeValue; Message: Attribute borderColor=100,100,100</h4>
          </div>
-         <div class="finding">
-            <h4>              FINDING: checkAttributeValue; Message: Attribute collapsed is not existing.; Parameter: </h4>
+         <div class="ok">
+            <h4>              OK     : checkAttributeValue; Message: Attribute collapsed=false</h4>
          </div>
          <div class="ok">
             <h4>              OK     : doExecute: Pop (id: )</h4>
@@ -241,8 +241,8 @@
          <div class="ok">
             <h4>          OK     : checkMessageEvent; Message: Message event definition</h4>
          </div>
-         <div class="ok">
-            <h4>          OK     : checkMessageFlow; Message: message flow &apos;&apos; (Input) -&gt; //bpmn:task[@name=&apos;Scan camunda-invoice-en&apos; and @id=&apos;sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF&apos;]</h4>
+         <div class="finding">
+            <h4>          FINDING: checkMessageFlow; Message: Could not find messageFlow partner; Parameter: //bpmn:task[@name=&apos;Scan camunda-invoice-en&apos; and @id=&apos;sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF&apos;]</h4>
          </div>
          <div class="ok">
             <h4>          OK     : navigateFollowingElement; Message: bpmn:userTask[@name=&apos;Assign Approver&apos; and @id=&apos;assignApprover&apos;]</h4>

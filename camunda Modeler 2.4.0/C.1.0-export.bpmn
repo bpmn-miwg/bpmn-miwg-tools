@@ -72,7 +72,7 @@
       <outgoing>sid-7971C38C-2EF5-41F2-A24E-3FFCA069EDBF</outgoing>
       <messageEventDefinition id="sid-7f89416b-58ec-4e26-b9bc-390f9e8f2ae0"/>
     </startEvent>
-    <task id="sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF" name="Scan&#xA;camunda-invoice-en">
+    <task id="sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF" name="Scan Invoice">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
         <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
@@ -162,7 +162,7 @@
       <outgoing>sid-D03CC374-8575-4F38-98B4-4DFF014C43CB</outgoing>
       <messageEventDefinition id="sid-b9aae81c-0006-46ad-9445-89307e8eeed8"/>
     </intermediateCatchEvent>
-    <task id="sid-6FC20E19-AF3A-4A77-8588-2D671C98D93D" name="Review and document result">
+    <task id="sid-6FC20E19-AF3A-4A77-8588-2D671C98D93D" name="Review and document&#xA;result">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
         <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
@@ -280,7 +280,7 @@
         <flowNodeRef>archiveInvoice</flowNodeRef>
       </lane>
     </laneSet>
-    <userTask id="approveInvoice" camunda:assignee="${approver}" camunda:formKey="app:approveInvoice.jsf" name="Approve Invoice" implementation="webService">
+    <userTask id="approveInvoice" camunda:assignee="${approver}" camunda:formKey="app:approveInvoice.jsf" name="Approve&#xA;Invoice" implementation="webService">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
         <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
@@ -391,9 +391,6 @@
       </extensionElements>
       <incoming>invoiceApproved</incoming>
       <outgoing>SequenceFlow_2</outgoing>
-      <dataOutputAssociation id="DataOutputAssociation_1">
-        <targetRef>DataStoreReference_1</targetRef>
-      </dataOutputAssociation>
     </userTask>
     <endEvent id="invoiceProcessed" name="Invoice&#xA;processed">
       <extensionElements>
@@ -491,12 +488,6 @@
         <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
       </extensionElements>
     </sequenceFlow>
-    <dataStoreReference id="DataStoreReference_1" name="Financial Accounting System" dataStoreRef="sid-14ef3d18-7218-4f57-98f0-bb595114754b">
-      <extensionElements>
-        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
-        <signavio:signavioMetaData metaKey="userstory" metaValue="[]"/>
-      </extensionElements>
-    </dataStoreReference>
   </process>
   <bpmndi:BPMNDiagram id="sid-78cf0368-c97e-4dea-885f-0e535c20d6c7">
     <bpmndi:BPMNPlane id="sid-39085760-f7ff-4491-a241-483b340d6533" bpmnElement="sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3">
@@ -524,7 +515,7 @@
       <bpmndi:BPMNShape id="sid-40EC6574-E644-425C-8CE7-EE384F0C3520_gui" bpmnElement="sid-40EC6574-E644-425C-8CE7-EE384F0C3520">
         <omgdc:Bounds height="30.0" width="30.0" x="455.75" y="118.0"/>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="46.0" width="95.0" x="423.0" y="69.0"/>
+          <omgdc:Bounds height="38.0" width="77.0" x="432.0" y="81.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="sid-64AFCE49-96A2-4A51-96CB-9DF689C37DAD_gui" bpmnElement="sid-64AFCE49-96A2-4A51-96CB-9DF689C37DAD">
@@ -590,12 +581,6 @@
       <bpmndi:BPMNShape id="archiveInvoice_gui" bpmnElement="archiveInvoice">
         <omgdc:Bounds height="80.0" width="100.0" x="795.0" y="655.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="DataStoreReference_1_gui" bpmnElement="DataStoreReference_1">
-        <omgdc:Bounds height="60.173" width="62.001" x="587.9995" y="784.9135"/>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="22.0" width="176.0" x="530.0" y="843.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="sid-71EF9530-A32A-49BC-A783-9B98A5801362_gui" bpmnElement="sid-71EF9530-A32A-49BC-A783-9B98A5801362">
         <omgdi:waypoint xsi:type="omgdc:Point" x="672.5" y="113.0"/>
         <omgdi:waypoint xsi:type="omgdc:Point" x="672.5" y="77.0"/>
@@ -607,7 +592,7 @@
         <omgdi:waypoint xsi:type="omgdc:Point" x="602.0" y="695.0"/>
         <omgdi:waypoint xsi:type="omgdc:Point" x="653.0" y="695.0"/>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="26.0" width="32.0" x="576.0" y="508.0"/>
+          <omgdc:Bounds height="22.0" width="27.0" x="552.0" y="552.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-C0540F47-C3C0-4FA8-B000-6D87640A6178_gui" bpmnElement="sid-C0540F47-C3C0-4FA8-B000-6D87640A6178">
@@ -632,7 +617,7 @@
         <omgdi:waypoint xsi:type="omgdc:Point" x="523.0" y="362.0"/>
         <omgdi:waypoint xsi:type="omgdc:Point" x="563.0" y="362.0"/>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="26.0" width="24.0" x="533.0" y="471.0"/>
+          <omgdc:Bounds height="22.0" width="20.0" x="533.0" y="480.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-915AC9A0-CD35-4DF2-93F7-4535397622F8_gui" bpmnElement="sid-915AC9A0-CD35-4DF2-93F7-4535397622F8">
@@ -660,7 +645,7 @@
         <omgdi:waypoint xsi:type="omgdc:Point" x="748.0" y="362.0"/>
         <omgdi:waypoint xsi:type="omgdc:Point" x="941.0" y="362.0"/>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="26.0" width="24.0" x="756.0" y="361.0"/>
+          <omgdc:Bounds height="22.0" width="20.0" x="756.0" y="372.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sequenceFlow_180_gui" bpmnElement="sequenceFlow_180">
@@ -726,10 +711,6 @@
       <bpmndi:BPMNEdge id="sid-7971C38C-2EF5-41F2-A24E-3FFCA069EDBF_gui" bpmnElement="sid-7971C38C-2EF5-41F2-A24E-3FFCA069EDBF">
         <omgdi:waypoint xsi:type="omgdc:Point" x="129.0" y="133.0"/>
         <omgdi:waypoint xsi:type="omgdc:Point" x="167.0" y="133.0"/>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_DataOutputAssociation_1" bpmnElement="DataOutputAssociation_1" sourceElement="prepareBankTransfer_gui" targetElement="DataStoreReference_1_gui">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="674.0" y="735.0"/>
-        <omgdi:waypoint xsi:type="omgdc:Point" x="639.0" y="784.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

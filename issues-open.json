@@ -1,5 +1,1023 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/469",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/469/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/469/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/469/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/469",
+    "id": 68704704,
+    "number": 469,
+    "title": "Labels show conditions which are not in the reference",
+    "user": {
+      "login": "zmisiak",
+      "id": 4265164,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zmisiak",
+      "html_url": "https://github.com/zmisiak",
+      "followers_url": "https://api.github.com/users/zmisiak/followers",
+      "following_url": "https://api.github.com/users/zmisiak/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zmisiak/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zmisiak/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zmisiak/subscriptions",
+      "organizations_url": "https://api.github.com/users/zmisiak/orgs",
+      "repos_url": "https://api.github.com/users/zmisiak/repos",
+      "events_url": "https://api.github.com/users/zmisiak/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zmisiak/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-04-15T14:59:10Z",
+    "updated_at": "2015-04-15T14:59:10Z",
+    "closed_at": null,
+    "body": "Labels display condition, which was not show in the reference"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/468",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/468/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/468/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/468/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/468",
+    "id": 68704498,
+    "number": 468,
+    "title": "Problems with label positions",
+    "user": {
+      "login": "zmisiak",
+      "id": 4265164,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zmisiak",
+      "html_url": "https://github.com/zmisiak",
+      "followers_url": "https://api.github.com/users/zmisiak/followers",
+      "following_url": "https://api.github.com/users/zmisiak/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zmisiak/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zmisiak/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zmisiak/subscriptions",
+      "organizations_url": "https://api.github.com/users/zmisiak/orgs",
+      "repos_url": "https://api.github.com/users/zmisiak/repos",
+      "events_url": "https://api.github.com/users/zmisiak/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zmisiak/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-04-15T14:58:06Z",
+    "updated_at": "2015-04-15T14:58:06Z",
+    "closed_at": null,
+    "body": "Labels on the conditional sequence flows coming out of gateways are not in proper positions"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/467",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/467/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/467/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/467/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/467",
+    "id": 68703864,
+    "number": 467,
+    "title": "Problems with event positioning",
+    "user": {
+      "login": "zmisiak",
+      "id": 4265164,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zmisiak",
+      "html_url": "https://github.com/zmisiak",
+      "followers_url": "https://api.github.com/users/zmisiak/followers",
+      "following_url": "https://api.github.com/users/zmisiak/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zmisiak/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zmisiak/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zmisiak/subscriptions",
+      "organizations_url": "https://api.github.com/users/zmisiak/orgs",
+      "repos_url": "https://api.github.com/users/zmisiak/repos",
+      "events_url": "https://api.github.com/users/zmisiak/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zmisiak/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-04-15T14:55:17Z",
+    "updated_at": "2015-04-15T14:55:17Z",
+    "closed_at": null,
+    "body": "All the events seem to be 1 pixel off \r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/466",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/466/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/466/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/466/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/466",
+    "id": 67149444,
+    "number": 466,
+    "title": "Task labels rendered slightly too high",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
+        "name": "Tool: camunda Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-04-08T14:59:10Z",
+    "updated_at": "2015-04-08T14:59:10Z",
+    "closed_at": null,
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/465",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/465/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/465/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/465/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/465",
+    "id": 64991138,
+    "number": 465,
+    "title": "Text Annotation in the wrong process element",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-03-28T21:17:16Z",
+    "updated_at": "2015-03-28T21:20:49Z",
+    "closed_at": null,
+    "body": "* Tool: Visual Paradigm 11.1\r\n* B.1.0-roundtrip\r\n\r\n**Visual Paradigm BPMN**\r\n```xml\r\n\t<process id=\"Trisotech_Visio-_6\" isExecutable=\"false\" name=\"B.1.0\">\r\n\t\t<startEvent id=\"_200f43e7_1385_46e2_a380_3ef16ebe7847\" name=\"Start Event None 1\">\r\n\t\t\t<outgoing>_60ed96e6_5954_48de_861b_7d1e3c1fb23e</outgoing>\r\n\t\t</startEvent>\r\n\t\t<task completionQuantity=\"1\" id=\"_c57a5344_213f_4834_a6c3_94ce878b413c\" isForCompensation=\"false\" name=\"Abstract Task 4\" startQuantity=\"1\">\r\n\t\t\t<incoming>_60ed96e6_5954_48de_861b_7d1e3c1fb23e</incoming>\r\n\t\t\t<outgoing>_6c6288e8_43f6_4085_87c7_1ff21c38fe17</outgoing>\r\n\t\t</task>\r\n\t\t<endEvent id=\"_ed405919_9fd6_47d0_bb00_9be7d5467efb\" name=\"End Event None 2\">\r\n\t\t\t<incoming>_6c6288e8_43f6_4085_87c7_1ff21c38fe17</incoming>\r\n\t\t</endEvent>\r\n\t\t<sequenceFlow id=\"_60ed96e6_5954_48de_861b_7d1e3c1fb23e\" name=\"\" sourceRef=\"_200f43e7_1385_46e2_a380_3ef16ebe7847\" targetRef=\"_c57a5344_213f_4834_a6c3_94ce878b413c\">\r\n\t\t</sequenceFlow>\r\n\t\t<sequenceFlow id=\"_6c6288e8_43f6_4085_87c7_1ff21c38fe17\" name=\"\" sourceRef=\"_c57a5344_213f_4834_a6c3_94ce878b413c\" targetRef=\"_ed405919_9fd6_47d0_bb00_9be7d5467efb\">\r\n\t\t</sequenceFlow>\r\n\t\t<textAnnotation id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4815ea6a_ede2_489b_8b37_2cdb2835b02c\">\r\n\t\t\t<text>Text Annotation</text>\r\n\t\t</textAnnotation>\r\n\t\t<group id=\"_bd04180e_49f6_4cf0_a7d6_da59e2840b4b\">\r\n\t\t</group>\r\n\t</process>\r\n```\r\nNotes:\r\n* Extension elements have been reduced in order to reduce the size.\r\n\r\n**Reference BPMN**\r\n```xml\r\n <semantic:process isExecutable=\"false\" id=\"WFP-6-2\">\r\n        [...]\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n        [...]\r\n        <semantic:textAnnotation id=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\">\r\n            <semantic:text>Text Annotation</semantic:text>\r\n        </semantic:textAnnotation>\r\n        <semantic:association associationDirection=\"None\" sourceRef=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\" targetRef=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\" id=\"_5362a7ef-ce7e-4a91-9c38-66c07b1b5f49\"/>\r\n    </semantic:process>\r\n```\r\n\r\n**Analysis**\r\n* The *textAnnotation* element is in a completely wrong *process* element.\r\n* The *group* element is in a completely wrong *process* element (and is missing a name). There is only one *group* element in the BPMN file."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/464",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/464/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/464/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/464/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/464",
+    "id": 64989144,
+    "number": 464,
+    "title": "Wrong element for collapsed sub process",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Visual%20Paradigm",
+        "name": "Tool: Visual Paradigm",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-03-28T21:11:09Z",
+    "updated_at": "2015-03-28T21:11:09Z",
+    "closed_at": null,
+    "body": "* Tool: Visual Paradigm 11.1\r\n* B.1.0-roundtrip\r\n\r\n**Visual Paradigm BPMN**\r\n```xml\r\n\t\t<subProcess completionQuantity=\"1\" id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0_\" isForCompensation=\"false\" name=\"Call Activity Collapsed\" startQuantity=\"1\" triggeredByEvent=\"false\">\r\n\t\t\t<incoming>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23__9d489bd9_9435_4692_bc98_4cdda4a61569</incoming>\r\n\t\t\t<outgoing>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23__10a16fd5_0d56_4fdb_8529_0a0610a573be</outgoing>\r\n\t\t\t<startEvent id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___18770c5c_c117_4570_aaf2_8c7a6910c34d\" name=\"Start Event None 3\">\r\n\t\t\t\t<outgoing>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___107de09e_8506_4d2b_ad00_3341be723dff</outgoing>\r\n\t\t\t</startEvent>\r\n\t\t\t<task completionQuantity=\"1\" id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___47207d3b_8dc2_4679_bf33_c1e7e677765b\" isForCompensation=\"false\" name=\"Abstract Task 8\" startQuantity=\"1\">\r\n\t\t\t\t<incoming>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___107de09e_8506_4d2b_ad00_3341be723dff</incoming>\r\n\t\t\t\t<outgoing>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___2e21b112_d974_4add_9bee_91dafbed0a22</outgoing>\r\n\t\t\t</task>\r\n\t\t\t<endEvent id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___ab12c75c_eaf3_4ae1_9021_ee556711757f\" name=\"End Event None 4\">\r\n\t\t\t\t<incoming>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___2e21b112_d974_4add_9bee_91dafbed0a22</incoming>\r\n\t\t\t</endEvent>\r\n\t\t\t<sequenceFlow id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___2e21b112_d974_4add_9bee_91dafbed0a22\" name=\"\" sourceRef=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___47207d3b_8dc2_4679_bf33_c1e7e677765b\" targetRef=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___ab12c75c_eaf3_4ae1_9021_ee556711757f\">\r\n\t\t\t</sequenceFlow>\r\n\t\t\t<sequenceFlow id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___107de09e_8506_4d2b_ad00_3341be723dff\" name=\"\" sourceRef=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___18770c5c_c117_4570_aaf2_8c7a6910c34d\" targetRef=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___47207d3b_8dc2_4679_bf33_c1e7e677765b\">\r\n\t\t\t</sequenceFlow>\r\n\t\t</subProcess>\r\n```\r\nNotes:\r\n* Extension elements have been reduced in order to reduce the size.\r\n* There is no other element with the name *Call Activity Collapsed*. Expecially no *callActivity*.\r\n\r\n**Reference BPMN**\r\n```xml\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/461",
+    "id": 61899163,
+    "number": 461,
+    "title": "Text annotation is moved from process to collaboration",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Enterprise%20Architect",
+        "name": "Tool: Enterprise Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2015-03-15T21:02:02Z",
+    "updated_at": "2015-04-08T17:08:40Z",
+    "closed_at": null,
+    "body": "Title: Text annotation is moved from process to collaboration\r\nTool: Enterprise Architect 12.0.1207\r\nTags: B.1.0, roundtrip, Tool: Enterprise Architect\r\n\r\n**Enterprise Architect BPMN**\r\n```xml\r\n\t<bpmn:collaboration id=\"EAID_A0CC40B8_47A2_4273_B3F8_AE9CC4842E9D\" isClosed=\"false\">\r\n\t\t[...]\r\n\t\t<bpmn:textAnnotation id=\"EAID_8D99B7D9_FD83_417c_850C_F9C313823F32\" textFormat=\"text/plain\">\r\n\t\t\t<bpmn:text>Text Annotation</bpmn:text>\r\n\t\t</bpmn:textAnnotation>\r\n\t\t<bpmn:group id=\"EAID_F2E054D5_61C2_4b72_A84E_36A07F58CA22\" categoryValueRef=\"EAID_CV000000_8974_4806_890D_2EFEB3173345\"/>\r\n\t</bpmn:collaboration>\r\n\t[...]\r\n\t<bpmn:process id=\"EAID_5F0E77E6_C603_445b_A076_3EBF285D9F9A\" isClosed=\"false\" processType=\"None\" isExecutable=\"false\">\r\n\t\t[...]\r\n\t\t<bpmn:callActivity id=\"EAID_5AC3CA0B_A9B1_41b5_ABB2_2F397FE2520C\" name=\"Call Activity Collapsed\" startQuantity=\"1\" completionQuantity=\"1\" isForCompensation=\"false\" calledElement=\"EAID_4F291C7F_2348_4c02_AE8F_3D6CF36BC971\">\r\n\t\t\t<bpmn:incoming>EAID_523040CB_4A13_4f86_B228_3073A00632A3</bpmn:incoming>\r\n\t\t\t<bpmn:outgoing>EAID_00A59044_6061_4fad_975D_B3B79F307064</bpmn:outgoing>\r\n\t\t</bpmn:callActivity>\r\n\t\t[...]\r\n\t\t<bpmn:association id=\"EAID_EF002E25_FCDE_4817_9FD7_F9B8C54E2E52\" sourceRef=\"EAID_5AC3CA0B_A9B1_41b5_ABB2_2F397FE2520C\" targetRef=\"EAID_8D99B7D9_FD83_417c_850C_F9C313823F32\" associationDirection=\"None\"/>\r\n\t</bpmn:process>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n    <semantic:process isExecutable=\"false\" id=\"WFP-6-2\">\r\n\t\t[...]\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n\t\t[...]\r\n\t\t<semantic:textAnnotation id=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\">\r\n            <semantic:text>Text Annotation</semantic:text>\r\n        </semantic:textAnnotation>\r\n        <semantic:association associationDirection=\"None\" sourceRef=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\" targetRef=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\" id=\"_5362a7ef-ce7e-4a91-9c38-66c07b1b5f49\"/>\r\n    </semantic:process>\r\n```\r\n**Analysis**\r\nThe text annotation is moved from the process element to the collaboration element.\r\nHowever, as text annotations have no semantical impact and the visual representation is unaffected, there is limited practical impact."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/460",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/460/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/460/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/460/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/460",
+    "id": 61899043,
+    "number": 460,
+    "title": "Attribute calledElement is missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Bizagi%20Modeler",
+        "name": "Tool: Bizagi Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-03-15T21:01:06Z",
+    "updated_at": "2015-03-15T21:05:09Z",
+    "closed_at": null,
+    "body": "Title: Attribute calledElement is missing\r\nTool: Bizagi Modeler 2.8.0.8\r\nTags: B.1.0, roundtrip, Tool: Bizagi Modeler\r\n\r\n**Reference BPMN**\r\n```xml\r\n<semantic:callActivity calledElement=\"Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450\" name=\"Expanded Call Activity\" id=\"_ba16239e-181e-4b9f-bc5b-0bb2ee973450\">\r\n\t<semantic:incoming>_5106fe5e-184d-4069-8c1c-54f81fd577a9</semantic:incoming>\r\n\t<semantic:outgoing>_c1931975-c1c3-499e-8a57-89b61affba3a</semantic:outgoing>\r\n</semantic:callActivity>\r\n```\r\n\r\n**Bizagi BPMN**\r\n```xml\r\n<callActivity id=\"_ba16239e-181e-4b9f-bc5b-0bb2ee973450\" name=\"Expanded Call Activity\">\r\n  <extensionElements>\r\n\t<bizagi:BizagiExtensions xmlns:bizagi=\"http://www.bizagi.com/bpmn20\">\r\n\t  <bizagi:BizagiProperties>\r\n\t\t<bizagi:BizagiProperty name=\"bgColor\" value=\"White\" />\r\n\t\t<bizagi:BizagiProperty name=\"borderColor\" value=\"Black\" />\r\n\t  </bizagi:BizagiProperties>\r\n\t</bizagi:BizagiExtensions>\r\n  </extensionElements>\r\n  <incoming>_5106fe5e-184d-4069-8c1c-54f81fd577a9</incoming>\r\n  <outgoing>_c1931975-c1c3-499e-8a57-89b61affba3a</outgoing>\r\n</callActivity>\r\n```\r\n\r\n**Analysis**\r\nThe attribute *calledElement* is missing.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/459",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/459/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/459/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/459/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/459",
+    "id": 61898975,
+    "number": 459,
+    "title": "Data associations are empty",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Bizagi%20Modeler",
+        "name": "Tool: Bizagi Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-03-15T21:00:34Z",
+    "updated_at": "2015-03-15T21:05:48Z",
+    "closed_at": null,
+    "body": "Title: Empty data associations\r\nTool: Bizagi Modeler 2.8.0.8\r\nTags: B.1.0, roundtrip, Tool: Bizagi Modeler\r\n\r\n**Reference BPMN**\r\n```xml\r\n        <semantic:serviceTask implementation=\"##WebService\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Service Task 7\" id=\"_fea1c5af-6c76-403f-809e-26d476d92741\">\r\n            <semantic:incoming>_6a248585-952e-40ff-82ec-b6d8f410b73a</semantic:incoming>\r\n            <semantic:outgoing>_657f30ba-0690-4a14-8b8e-d8939efcc7bd</semantic:outgoing>\r\n            <semantic:ioSpecification>\r\n                <semantic:dataInput id=\"Din1373655174951\"/>\r\n                <semantic:dataOutput id=\"Dout1373655174952\"/>\r\n                <semantic:inputSet>\r\n                    <semantic:dataInputRefs>Din1373655174951</semantic:dataInputRefs>\r\n                </semantic:inputSet>\r\n                <semantic:outputSet>\r\n                    <semantic:dataOutputRefs>Dout1373655174952</semantic:dataOutputRefs>\r\n                </semantic:outputSet>\r\n            </semantic:ioSpecification>\r\n            <semantic:dataInputAssociation id=\"_73afd30d-7d54-4897-9350-1f7d301ef1b2\">\r\n                <semantic:sourceRef>_3d35229f-2c75-4d5d-a066-2d14e46e442e</semantic:sourceRef>\r\n                <semantic:targetRef>Din1373655174951</semantic:targetRef>\r\n            </semantic:dataInputAssociation>\r\n            <semantic:dataOutputAssociation id=\"_fa10ebaf-7088-4def-8cc3-d959b8876b06\">\r\n                <semantic:sourceRef>Dout1373655174952</semantic:sourceRef>\r\n                <semantic:targetRef>_b9385abf-d293-40b7-848b-8add4db48415</semantic:targetRef>\r\n            </semantic:dataOutputAssociation>\r\n        </semantic:serviceTask>\r\n```\r\n\r\n**Bizagi BPMN**\r\n```xml\r\n    <serviceTask id=\"_fea1c5af-6c76-403f-809e-26d476d92741\" name=\"Service Task 7\">\r\n      <extensionElements>\r\n        <bizagi:BizagiExtensions xmlns:bizagi=\"http://www.bizagi.com/bpmn20\">\r\n          <bizagi:BizagiProperties>\r\n            <bizagi:BizagiProperty name=\"bgColor\" value=\"White\" />\r\n            <bizagi:BizagiProperty name=\"borderColor\" value=\"Black\" />\r\n          </bizagi:BizagiProperties>\r\n        </bizagi:BizagiExtensions>\r\n      </extensionElements>\r\n      <incoming>_6a248585-952e-40ff-82ec-b6d8f410b73a</incoming>\r\n      <outgoing>_657f30ba-0690-4a14-8b8e-d8939efcc7bd</outgoing>\r\n      <ioSpecification id=\"Id_603617a8-652f-4afa-beb9-5b55e1c0a5bd\">\r\n        <dataInput id=\"Din1373655174951\" />\r\n        <dataOutput id=\"Dout1373655174952\" />\r\n        <inputSet id=\"Id_c09aed5d-fc8d-46f1-8b68-aa46f9b9051b\" />\r\n        <inputSet id=\"Id_615939e5-a1c1-4309-90eb-6e375a7fdc64\">\r\n          <dataInputRefs>Din1373655174951</dataInputRefs>\r\n        </inputSet>\r\n        <outputSet id=\"Id_87ebaaab-da2e-472f-bccb-632516e19302\" />\r\n        <outputSet id=\"Id_b93d67e6-f79b-4cb6-9f99-2ad7740f5a76\">\r\n          <dataOutputRefs>Dout1373655174952</dataOutputRefs>\r\n        </outputSet>\r\n      </ioSpecification>\r\n      <dataInputAssociation id=\"_73afd30d-7d54-4897-9350-1f7d301ef1b2\" />\r\n      <dataOutputAssociation id=\"_fa10ebaf-7088-4def-8cc3-d959b8876b06\" />\r\n    </serviceTask>\r\n```\r\n\r\n**Analysis**\r\nThe *dataInputAssociation* and *dataOutputAssociation* have no *sourceRef* and *targetRef* child elements.\r\nWhile the information in these elements are already contained in the *ioSpecification*, these elements are mandatory."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/458",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/458/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/458/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/458/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/458",
+    "id": 60691875,
+    "number": 458,
+    "title": "Reference C.1.0: Resolution attribute missing in DI",
+    "user": {
+      "login": "krat0s",
+      "id": 1541830,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/krat0s",
+      "html_url": "https://github.com/krat0s",
+      "followers_url": "https://api.github.com/users/krat0s/followers",
+      "following_url": "https://api.github.com/users/krat0s/following{/other_user}",
+      "gists_url": "https://api.github.com/users/krat0s/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/krat0s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/krat0s/subscriptions",
+      "organizations_url": "https://api.github.com/users/krat0s/orgs",
+      "repos_url": "https://api.github.com/users/krat0s/repos",
+      "events_url": "https://api.github.com/users/krat0s/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/krat0s/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 7,
+    "created_at": "2015-03-11T17:01:34Z",
+    "updated_at": "2015-04-08T17:09:46Z",
+    "closed_at": null,
+    "body": "The resolution attribute is missing in <bpmndi:BPMNDiagram> element.\r\n\r\nThe missing attribute will result in tools defaulting to their own value of choice (e.g. itp-commerce = 72, trisotech = 96). While this does not affect the overall look of the diagram (as all shapes are scaled proportionally), it does make a difference to the shape-size/font-size ratio, as the font size, as I understand, is measured in points and is not scaled with respect to the resolution.\r\n\r\nThe following two images show the different results.\r\n\r\n![c 1 0-import](https://cloud.githubusercontent.com/assets/1541830/6601570/c26d63a2-c816-11e4-9e07-2b093e3ed965.png)\r\nResolution = 72\r\n\r\n![c 1 0_res96](https://cloud.githubusercontent.com/assets/1541830/6601611/ea0c8a3c-c816-11e4-80d4-5448e44cc390.png)\r\nResolution = 96\r\n\r\n\r\nIn my opinion, the following line:\r\n```xml\r\n<bpmndi:BPMNDiagram id=\"sid-78cf0368-c97e-4dea-885f-0e535c20d6c7\" name=\"Collaboration C.1.0\">\r\n```\r\nshould be changed to this:\r\n```xml\r\n<bpmndi:BPMNDiagram id=\"sid-78cf0368-c97e-4dea-885f-0e535c20d6c7\" name=\"Collaboration C.1.0\" resolution=\"96\">\r\n```\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/453",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/453/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/453/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/453/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/453",
+    "id": 59188008,
+    "number": 453,
+    "title": "ARIS 9.6.0.1.882244 Import Issue for B.2.0",
+    "user": {
+      "login": "BPMNhero",
+      "id": 11218291,
+      "avatar_url": "https://avatars.githubusercontent.com/u/11218291?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/BPMNhero",
+      "html_url": "https://github.com/BPMNhero",
+      "followers_url": "https://api.github.com/users/BPMNhero/followers",
+      "following_url": "https://api.github.com/users/BPMNhero/following{/other_user}",
+      "gists_url": "https://api.github.com/users/BPMNhero/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/BPMNhero/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/BPMNhero/subscriptions",
+      "organizations_url": "https://api.github.com/users/BPMNhero/orgs",
+      "repos_url": "https://api.github.com/users/BPMNhero/repos",
+      "events_url": "https://api.github.com/users/BPMNhero/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/BPMNhero/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20ARIS%20Architect",
+        "name": "Tool: ARIS Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-27T04:29:04Z",
+    "updated_at": "2015-02-27T04:29:04Z",
+    "closed_at": null,
+    "body": "Tool name: ARIS Architect\r\nTool version: 9.6\r\nTest case id: B.2.0\r\nTest procedure: import\r\nDescription: Took ~90 minutes for import to run, then produced error:\r\n\"Transformation failed.\r\n\r\n--------- [Error] ----------\r\njava.lang.IllegalArgumentException: Comparison method violates its general contract!\r\n\tat java.util.TimSort.mergeHi(TimSort.java:868)\r\n\tat java.util.TimSort.mergeAt(TimSort.java:485)\r\n\tat java.util.TimSort.mergeCollapse(TimSort.java:408)\r\n\tat java.util.TimSort.sort(TimSort.java:214)\r\n\tat java.util.TimSort.sort(TimSort.java:173)\r\n\tat java.util.Arrays.sort(Arrays.java:659)\r\n\tat java.util.Collections.sort(Collections.java:217)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTHelper.sortGraphs(AMTHelper.java:36)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.algorithms.AHierarchyConsolidator.consolidateGraphs(AHierarchyConsolidator.java:61)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTTransformerSubComponent.consolidateByIdentificators(AMTTransformerSubComponent.java:192)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTTransformerSubComponent.applyMatchedRules(AMTTransformerSubComponent.java:119)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController$TransformationExecutionCommand.stepApplyMatches(ATransformationController.java:777)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController$TransformationExecutionCommand.invoke(ATransformationController.java:394)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController.executeTransformationImpl(ATransformationController.java:171)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController.executeTransformation(ATransformationController.java:128)\r\n\tat com.aris.modeling.server.bl.components.mtexecution.AMTExecutionAction.run(AMTExecutionAction.java:107)\r\n\tat com.aris.modeling.server.common.AServerTaskRunnable.run(AServerTaskRunnable.java:28)\r\n\tat java.lang.Thread.run(Thread.java:724)\""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/452",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/452/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/452/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/452/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/452",
+    "id": 59146059,
+    "number": 452,
+    "title": "ARIS 9.6.0.1.882244 Import Issue for C.1.0",
+    "user": {
+      "login": "BPMNhero",
+      "id": 11218291,
+      "avatar_url": "https://avatars.githubusercontent.com/u/11218291?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/BPMNhero",
+      "html_url": "https://github.com/BPMNhero",
+      "followers_url": "https://api.github.com/users/BPMNhero/followers",
+      "following_url": "https://api.github.com/users/BPMNhero/following{/other_user}",
+      "gists_url": "https://api.github.com/users/BPMNhero/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/BPMNhero/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/BPMNhero/subscriptions",
+      "organizations_url": "https://api.github.com/users/BPMNhero/orgs",
+      "repos_url": "https://api.github.com/users/BPMNhero/repos",
+      "events_url": "https://api.github.com/users/BPMNhero/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/BPMNhero/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20ARIS%20Architect",
+        "name": "Tool: ARIS Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-26T21:24:56Z",
+    "updated_at": "2015-02-26T21:24:56Z",
+    "closed_at": null,
+    "body": "Tool name: ARIS Architect\r\nTool version: 9.6\r\nTest case id: C.1.0\r\nTest procedure: import\r\nDescription: Took 50+ minutes for import to run, then produced error:\r\n\"Transformation failed.\r\n\r\n--------- [Error] ----------\r\njava.lang.IllegalArgumentException: Comparison method violates its general contract!\r\n\tat java.util.TimSort.mergeHi(TimSort.java:868)\r\n\tat java.util.TimSort.mergeAt(TimSort.java:485)\r\n\tat java.util.TimSort.mergeCollapse(TimSort.java:410)\r\n\tat java.util.TimSort.sort(TimSort.java:214)\r\n\tat java.util.TimSort.sort(TimSort.java:173)\r\n\tat java.util.Arrays.sort(Arrays.java:659)\r\n\tat java.util.Collections.sort(Collections.java:217)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTHelper.sortGraphs(AMTHelper.java:36)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.algorithms.AHierarchyConsolidator.consolidateGraphs(AHierarchyConsolidator.java:61)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTTransformerSubComponent.consolidateByIdentificators(AMTTransformerSubComponent.java:192)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTTransformerSubComponent.applyMatchedRules(AMTTransformerSubComponent.java:119)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController$TransformationExecutionCommand.stepApplyMatches(ATransformationController.java:777)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController$TransformationExecutionCommand.invoke(ATransformationController.java:394)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController.executeTransformationImpl(ATransformationController.java:171)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController.executeTransformation(ATransformationController.java:128)\r\n\tat com.aris.modeling.server.bl.components.mtexecution.AMTExecutionAction.run(AMTExecutionAction.java:107)\r\n\tat com.aris.modeling.server.common.AServerTaskRunnable.run(AServerTaskRunnable.java:28)\r\n\tat java.lang.Thread.run(Thread.java:724)\""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/451",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/451/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/451/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/451/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/451",
+    "id": 59145910,
+    "number": 451,
+    "title": "ARIS 9.6.0.1.882244 Import Issue for B.1.0",
+    "user": {
+      "login": "BPMNhero",
+      "id": 11218291,
+      "avatar_url": "https://avatars.githubusercontent.com/u/11218291?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/BPMNhero",
+      "html_url": "https://github.com/BPMNhero",
+      "followers_url": "https://api.github.com/users/BPMNhero/followers",
+      "following_url": "https://api.github.com/users/BPMNhero/following{/other_user}",
+      "gists_url": "https://api.github.com/users/BPMNhero/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/BPMNhero/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/BPMNhero/subscriptions",
+      "organizations_url": "https://api.github.com/users/BPMNhero/orgs",
+      "repos_url": "https://api.github.com/users/BPMNhero/repos",
+      "events_url": "https://api.github.com/users/BPMNhero/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/BPMNhero/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20ARIS%20Architect",
+        "name": "Tool: ARIS Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-26T21:24:04Z",
+    "updated_at": "2015-02-26T21:24:04Z",
+    "closed_at": null,
+    "body": "B.1.0\r\nTool name: ARIS Architect\r\nTool version: 9.6\r\nTest case id: B.1.0\r\nTest procedure: import\r\nDescription: Took many minutes for import to run, then produced error:\r\n\"Transformation failed.\r\n\r\n--------- [Error] ----------\r\njava.lang.IllegalArgumentException: Comparison method violates its general contract!\r\n\tat java.util.TimSort.mergeHi(TimSort.java:868)\r\n\tat java.util.TimSort.mergeAt(TimSort.java:485)\r\n\tat java.util.TimSort.mergeCollapse(TimSort.java:410)\r\n\tat java.util.TimSort.sort(TimSort.java:214)\r\n\tat java.util.TimSort.sort(TimSort.java:173)\r\n\tat java.util.Arrays.sort(Arrays.java:659)\r\n\tat java.util.Collections.sort(Collections.java:217)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTHelper.sortGraphs(AMTHelper.java:36)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.algorithms.AHierarchyConsolidator.consolidateGraphs(AHierarchyConsolidator.java:61)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTTransformerSubComponent.consolidateByIdentificators(AMTTransformerSubComponent.java:192)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTTransformerSubComponent.applyMatchedRules(AMTTransformerSubComponent.java:119)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController$TransformationExecutionCommand.stepApplyMatches(ATransformationController.java:777)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController$TransformationExecutionCommand.invoke(ATransformationController.java:394)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController.executeTransformationImpl(ATransformationController.java:171)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController.executeTransformation(ATransformationController.java:128)\r\n\tat com.aris.modeling.server.bl.components.mtexecution.AMTExecutionAction.run(AMTExecutionAction.java:107)\r\n\tat com.aris.modeling.server.common.AServerTaskRunnable.run(AServerTaskRunnable.java:28)\r\n\tat java.lang.Thread.run(Thread.java:724)\""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/450",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/450/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/450/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/450/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/450",
+    "id": 59145763,
+    "number": 450,
+    "title": "ARIS 9.6.0.1.882244 Import Issue for A.4.1",
+    "user": {
+      "login": "BPMNhero",
+      "id": 11218291,
+      "avatar_url": "https://avatars.githubusercontent.com/u/11218291?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/BPMNhero",
+      "html_url": "https://github.com/BPMNhero",
+      "followers_url": "https://api.github.com/users/BPMNhero/followers",
+      "following_url": "https://api.github.com/users/BPMNhero/following{/other_user}",
+      "gists_url": "https://api.github.com/users/BPMNhero/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/BPMNhero/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/BPMNhero/subscriptions",
+      "organizations_url": "https://api.github.com/users/BPMNhero/orgs",
+      "repos_url": "https://api.github.com/users/BPMNhero/repos",
+      "events_url": "https://api.github.com/users/BPMNhero/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/BPMNhero/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20ARIS%20Architect",
+        "name": "Tool: ARIS Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-26T21:23:18Z",
+    "updated_at": "2015-02-26T21:23:18Z",
+    "closed_at": null,
+    "body": "Tool name: ARIS Architect\r\nTool version: 9.6\r\nTest case id: A.4.1\r\nTest procedure: import\r\nDescription: Took many minutes for import to run, then failed with an error:\r\n\"Transformation failed.\r\n\r\n--------- [Error] ----------\r\njava.lang.IllegalArgumentException: Comparison method violates its general contract!\r\n\tat java.util.TimSort.mergeHi(TimSort.java:868)\r\n\tat java.util.TimSort.mergeAt(TimSort.java:485)\r\n\tat java.util.TimSort.mergeCollapse(TimSort.java:408)\r\n\tat java.util.TimSort.sort(TimSort.java:214)\r\n\tat java.util.TimSort.sort(TimSort.java:173)\r\n\tat java.util.Arrays.sort(Arrays.java:659)\r\n\tat java.util.Collections.sort(Collections.java:217)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTHelper.sortGraphs(AMTHelper.java:36)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.algorithms.AHierarchyConsolidator.consolidateGraphs(AHierarchyConsolidator.java:61)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTTransformerSubComponent.consolidateByIdentificators(AMTTransformerSubComponent.java:192)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.subcomponents.transformer.AMTTransformerSubComponent.applyMatchedRules(AMTTransformerSubComponent.java:119)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController$TransformationExecutionCommand.stepApplyMatches(ATransformationController.java:777)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController$TransformationExecutionCommand.invoke(ATransformationController.java:394)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController.executeTransformationImpl(ATransformationController.java:171)\r\n\tat com.aris.modeling.server.bl.logic.mtexecution.ATransformationController.executeTransformation(ATransformationController.java:128)\r\n\tat com.aris.modeling.server.bl.components.mtexecution.AMTExecutionAction.run(AMTExecutionAction.java:107)\r\n\tat com.aris.modeling.server.common.AServerTaskRunnable.run(AServerTaskRunnable.java:28)\r\n\tat java.lang.Thread.run(Thread.java:724)\""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/449",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/449/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/449/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/449/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/449",
+    "id": 59144928,
+    "number": 449,
+    "title": "ARIS 9.6.0.1.882244 Import Issue for A.4.0",
+    "user": {
+      "login": "BPMNhero",
+      "id": 11218291,
+      "avatar_url": "https://avatars.githubusercontent.com/u/11218291?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/BPMNhero",
+      "html_url": "https://github.com/BPMNhero",
+      "followers_url": "https://api.github.com/users/BPMNhero/followers",
+      "following_url": "https://api.github.com/users/BPMNhero/following{/other_user}",
+      "gists_url": "https://api.github.com/users/BPMNhero/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/BPMNhero/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/BPMNhero/subscriptions",
+      "organizations_url": "https://api.github.com/users/BPMNhero/orgs",
+      "repos_url": "https://api.github.com/users/BPMNhero/repos",
+      "events_url": "https://api.github.com/users/BPMNhero/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/BPMNhero/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20ARIS%20Architect",
+        "name": "Tool: ARIS Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 11,
+    "created_at": "2015-02-26T21:17:13Z",
+    "updated_at": "2015-02-27T18:38:12Z",
+    "closed_at": null,
+    "body": "Tool name: ARIS Architect\r\nTool version: 9.6\r\nTest case id: A.3.0\r\nTest procedure: import\r\nDescription: Completed import, produced part of the graphics, ended with an error:\r\n\"Transformation completed with warnings.\r\n\r\n--------- [Warning] ----------\r\nModel generation failed. Connection type 'CT_IS_PREDEC_OF_1' is not allowed.\r\nModel generation failed. Connection type 'CT_IS_PREDEC_OF_1' is not allowed.\r\nModel generation failed. Connection type 'CT_IS_PREDEC_OF_1' is not allowed.\"\r\n\r\n![a 4 0_import_error](https://cloud.githubusercontent.com/assets/11218291/6402083/875801c4-bdca-11e4-952a-b6263aaf0903.png)\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/447",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/447/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/447/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/447/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/447",
+    "id": 58936999,
+    "number": 447,
+    "title": "End events are slightly shifted to the left",
+    "user": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Enterprise%20Architect",
+        "name": "Tool: Enterprise Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-25T17:16:44Z",
+    "updated_at": "2015-02-25T17:16:44Z",
+    "closed_at": null,
+    "body": "Compared to the reference, the end events seems to the shifted on the horizontal axis."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/446",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/446/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/446/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/446/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/446",
+    "id": 58936855,
+    "number": 446,
+    "title": "Conditions are displayed on sequence flow out of the gateways",
+    "user": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Enterprise%20Architect",
+        "name": "Tool: Enterprise Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-25T17:15:54Z",
+    "updated_at": "2015-02-25T17:15:54Z",
+    "closed_at": null,
+    "body": "We can see the conditions (${approved} for instance) being depicted on the sequence flow out of the gateways"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/445",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/445/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/445/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/445/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/445",
+    "id": 58936556,
+    "number": 445,
+    "title": "Group label is not properly positioned",
+    "user": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Enterprise%20Architect",
+        "name": "Tool: Enterprise Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-25T17:14:25Z",
+    "updated_at": "2015-02-25T17:14:25Z",
+    "closed_at": null,
+    "body": "The group label is positioned to the center inside the group while the reference picture it at the top left corner outside of the group."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/444",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/444/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/444/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/444/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/444",
+    "id": 58936240,
+    "number": 444,
+    "title": "The label are slightly shifted",
+    "user": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Enterprise%20Architect",
+        "name": "Tool: Enterprise Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-25T17:13:14Z",
+    "updated_at": "2015-02-25T17:13:14Z",
+    "closed_at": null,
+    "body": "This is especially visible on textual annotations (B.1.0 and B.2.0).\r\n\r\nOn A.4.0 we can see that the message flow labels are closer to the boundary of the lane than on the reference.\r\n\r\nTasks seem to have their label slightly shifted from the center also."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/443",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/443/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/443/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/443/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/443",
+    "id": 58935604,
+    "number": 443,
+    "title": "Label bound of the gateways in A.2.0 do not seem to respect the boundaries",
+    "user": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Enterprise%20Architect",
+        "name": "Tool: Enterprise Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-02-25T17:10:14Z",
+    "updated_at": "2015-02-25T17:10:14Z",
+    "closed_at": null,
+    "body": "The bounds of the 2 gateways of A.2.0 are not wrapping at the same position for the label which may indicate that the bound or the font-size is not respected."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/439",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/439/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/439/comments",
@@ -391,56 +1409,6 @@
     "updated_at": "2015-01-28T20:18:14Z",
     "closed_at": null,
     "body": "On B.1.0, the call activity \"Call Activity Calling a Global Task\" is depicted with a collapsed + marker"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/431",
-    "id": 55797898,
-    "number": 431,
-    "title": "Is Test A4.0 valid BMPN?",
-    "user": {
-      "login": "gcsm1th",
-      "id": 9299036,
-      "avatar_url": "https://avatars.githubusercontent.com/u/9299036?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gcsm1th",
-      "html_url": "https://github.com/gcsm1th",
-      "followers_url": "https://api.github.com/users/gcsm1th/followers",
-      "following_url": "https://api.github.com/users/gcsm1th/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gcsm1th/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gcsm1th/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gcsm1th/subscriptions",
-      "organizations_url": "https://api.github.com/users/gcsm1th/orgs",
-      "repos_url": "https://api.github.com/users/gcsm1th/repos",
-      "events_url": "https://api.github.com/users/gcsm1th/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gcsm1th/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
-        "name": "bug",
-        "color": "fc2929"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
-        "name": "Test: A.4.0",
-        "color": "006b75"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 1,
-    "created_at": "2015-01-28T18:48:03Z",
-    "updated_at": "2015-01-28T22:08:38Z",
-    "closed_at": null,
-    "body": "I am not certain that the A4.0 reference model is valid BPMN.    Section 10.3 BPMN 2.0.1\r\n\r\n\"NOTE: All Message Flows MUST connect two separate Pools. They MAY connect to the Pool boundary or to Flow Objects within the Pool boundary.\" \r\n\r\n The 2 message flows in this model connect Tasks in \"Pool\" with tasks in \"Lane 1\", which is not in any Pool.  This appears to violate the BPMN standard.  "
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/430",
@@ -5444,9 +6412,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 2,
+    "comments": 4,
     "created_at": "2014-11-19T10:30:14Z",
-    "updated_at": "2015-02-04T21:41:54Z",
+    "updated_at": "2015-03-05T10:07:12Z",
     "closed_at": null,
     "body": "The label position is missing for tasks, lanes and pools. Consequently, the import results will look differently between tools that place the label at their default position."
   },
@@ -11701,6 +12669,11 @@
         "color": "006b75"
       },
       {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
         "name": "Tool: camunda Modeler",
         "color": "009800"
@@ -11735,7 +12708,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-10-01T14:27:53Z",
-    "updated_at": "2014-10-01T14:27:53Z",
+    "updated_at": "2015-04-08T14:50:33Z",
     "closed_at": null,
     "body": "We consider this a feature and will most likely not fix it, as it doesn't change the semantics."
   },
