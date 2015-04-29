@@ -33,13 +33,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
-import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.devel.common.AbstractTestCase;
 import org.omg.bpmn.miwg.devel.common.InstanceParameter;
 import org.omg.bpmn.miwg.devel.common.ScanUtil;
@@ -58,10 +58,17 @@ public class All_B_1_0_TextAnnotationIssue extends AbstractTestCase {
 
 	@Parameters
 	public static List<Object[]> data() throws IOException {
-		return ScanUtil.data(new StandardScanParameters(
-                Consts.REFERENCE_DIR, "B.1.0"));
+		return ScanUtil.data(new StandardScanParameters(null,
+				"B.1.0"));
 	}
 
+	@Test
+	@Override
+	@Ignore
+	public void testSchema() throws Exception {
+		
+	}
+	
 	@Test
 	@Override
 	public void testXpath() throws Exception {
@@ -99,8 +106,7 @@ public class All_B_1_0_TextAnnotationIssue extends AbstractTestCase {
 			System.out.println(result);
 		}
 	}
-	
-	
+
 	private class B_1_0_TextAnnotationIssue_Check extends AbstractXpathCheck {
 
 		@Override
@@ -110,33 +116,17 @@ public class All_B_1_0_TextAnnotationIssue extends AbstractTestCase {
 
 		@Override
 		public void doExecute() throws Throwable {
+			selectElementX("//bpmn:collaboration");
 			{
-
-				selectElementX("//bpmn:collaboration");
-
-
-				{
-					selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
-					checkXORMarkersForProcess(false);
-					navigateElement("bpmn:startEvent", "Start Event Message");
-					checkMessageEvent();
-					navigateFollowingElement("bpmn:parallelGateway",
-							"Parallel Gateway Divergence");
-					navigateFollowingElement("bpmn:exclusiveGateway",
-							"Exclusive Gateway Divergence 1");
-					navigateFollowingElement("bpmn:callActivity",
-							"Call Activity Collapsed");
-					checkTextAssociation("Text Annotation");
-
-					pop();
-				}
-
+				selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
+				navigateElement("bpmn:callActivity",
+						"Call Activity Collapsed");
+				checkTextAssociation("Text Annotation");
 				pop();
 			}
-
+			pop();
 		}
 
 	}
-
 
 }
