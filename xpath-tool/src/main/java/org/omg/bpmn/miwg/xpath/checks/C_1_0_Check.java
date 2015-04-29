@@ -67,7 +67,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 					checkMessageEvent();
 
 					navigateFollowingElement("bpmn:task",
-							"Scan camunda-invoice-en");
+							"Scan Invoice");
 					checkMessageFlow("", Direction.Output, "bpmn:startEvent",
 							"Invoice received");
 
@@ -139,7 +139,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 				navigateElement("bpmn:startEvent", "Invoice received");
 				checkMessageEvent();
 				checkMessageFlow("", Direction.Input, "bpmn:task",
-						"Scan camunda-invoice-en");
+						"Scan Invoice");
 
 				navigateFollowingElement("bpmn:userTask", "Assign Approver");
 				// checkMessageFlow("", Direction.Output,
