@@ -373,9 +373,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 3,
+    "comments": 4,
     "created_at": "2015-07-01T13:12:57Z",
-    "updated_at": "2015-07-01T14:07:09Z",
+    "updated_at": "2015-07-01T14:21:15Z",
     "closed_at": null,
     "body": "Tool: GenMyModel.com\r\nVersion: 0.47\r\n\r\nDoes the specification require the subprocess label to be positionned at the top left corner?\r\n\r\n=> Please set the following label for this issue: Tool: GenMyModel"
   },
