@@ -3,13 +3,9 @@
   <head>
     <meta charset=utf-8 />
     <!-- DataTables CSS -->
-<!--     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
     <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.4/css/jquery.dataTables_themeroller.css">
-    
+
     <!-- Theme -->
-<!--
-    <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/start/jquery-ui-1.7.2.custom.css">
--->
     <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/redmond/jquery-ui-1.7.2.custom.css">
 
     <!-- jQuery -->
@@ -67,7 +63,7 @@
       //          "sAjaxSource": toolsUrl,
       //          "sAjaxDataProp": "tools",
                 "aaData": toolsTestedByMIWG.tools,
-                "aaSorting": [[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ], [ 6, "desc" ], [ 7, "desc" ], [ 8, "desc" ], [ 9, "asc" ], [10, "desc" ], [0, "asc" ], [1, "asc" ]],
+                "aaSorting": [[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ], [ 6, "desc" ], [ 9, "desc" ],  [ 8, "desc" ], [ 7, "desc" ], [ 0, "asc" ], [1, "asc" ]],
                 "aoColumns": [
                     { "mData": "vendor" },
                     { "mData": "tool",
@@ -84,17 +80,21 @@
                     { "mData": "hasImport", "mRender": renderImportExport },
                     { "mData": "hasExport", "mRender": renderImportExport },
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
-                    { "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },
-                    { "mData": "participatedInDemos", "mRender": renderBoolean },
+                    /*{ "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },*/
+                    { "mData": "lastResultsSubmitted" },
+                    { "mData": "testResultsASubmitted", "mRender": renderTestResultsASubmitted },
+                    { "mData": "testResultsBSubmitted", "mRender": renderTestResultsBSubmitted },
+                    { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted },
+                    { "mData": "participatedInDemosByYear", /*"mRender": renderParticipation*/ },
                     { "mData": "openSource", "mRender": renderLicense },
-                    { "mData": "openIssues",
+                    /*{ "mData": "openIssues",
                       "mRender": function ( data, type, full ) {
                         return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(/\+/g, '%2b').replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
                       } },
                     { "mData": "closedIssues",
                       "mRender": function ( data, type, full ) {
                         return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=closed&labels=Tool%3A+' + full.tool.replace(/\+/g, '%2b').replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
-                      } },
+                      } },*/
       //               { "mData": "notes" },
                 ],
               } );
@@ -122,6 +122,21 @@
                     + ' <a href="overview.html#' + toolAndVersion + '">Details</a>'
                 }
                 return result;
+              }
+
+              function renderTestResultsASubmitted(data, type, full) {
+                data += '/5';
+                return data ;
+              }
+
+              function renderTestResultsBSubmitted(data, type, full) {
+                data += '/2';
+                return data;
+              }
+
+              function renderTestResultsCSubmitted(data, type, full) {
+                data += '/4';
+                return data;
               }
 
               function renderLicense(data, type, full) {
@@ -193,11 +208,15 @@
             <th>Import</th>
             <th>Export</th>
             <th>Roundtrip</th>
-            <th>Results Submitted</th>
+            <!--<th>A Results Submitted</th>-->
+            <th>Most recent submission</th>
+            <th>A Results Submitted</th>
+            <th>B Results Submitted</th>
+            <th>C Results Submitted</th>
             <th>Part of Demos</th>
             <th>License</th>
-            <th>Open Issues</th>
-            <th>Closed Issues</th>
+            <!--<th>Open Issues</th>
+            <th>Closed Issues</th>-->
 <!--             <th>Notes</th> -->
           </tr>
         </thead>
