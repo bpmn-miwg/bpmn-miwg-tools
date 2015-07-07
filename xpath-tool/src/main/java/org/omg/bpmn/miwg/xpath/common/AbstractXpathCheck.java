@@ -57,6 +57,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			s = s.trim();
 			// out.println(">>>  " + s);
 			s = s.replaceAll("&#10;", " ");
+			s = s.replaceAll("&#xA;", " ");
 			s = s.replaceAll("\n", " ");
 			s = s.replaceAll("\r", " ");
 
