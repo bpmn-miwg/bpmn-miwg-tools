@@ -46,6 +46,7 @@ public class Registry {
 		registeredChecks.add(new B_1_0_Check());
 		registeredChecks.add(new B_2_0_Check());
 		registeredChecks.add(new C_1_0_Check());
+		registeredChecks.add(new C_1_1_Check());
 		registeredChecks.add(new C_2_0_Check());
 		registeredChecks.add(new DemoTechnicalSupportCheck());
 	}
