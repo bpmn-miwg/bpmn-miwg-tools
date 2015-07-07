@@ -38,6 +38,7 @@ public class Reference_All_Test {
 		list.add(new String[] { "B.1.0.bpmn" });
 		list.add(new String[] { "B.2.0.bpmn" });
 		list.add(new String[] { "C.1.0.bpmn" });
+		list.add(new String[] { "C.2.0.bpmn" });
 
 		return list;
 	}

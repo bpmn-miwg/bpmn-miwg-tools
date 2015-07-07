@@ -34,17 +34,7 @@ import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.common.DOMCheck;
-import org.omg.bpmn.miwg.xpath.checks.A_1_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_1_1_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_1_2_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_2_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_3_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_4_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.A_4_1_Check;
-import org.omg.bpmn.miwg.xpath.checks.B_1_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.B_2_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.C_1_0_Check;
-import org.omg.bpmn.miwg.xpath.checks.DemoTechnicalSupportCheck;
+import org.omg.bpmn.miwg.xpath.checks.Registry;
 import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
 import org.w3c.dom.Document;
 
@@ -54,25 +44,11 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 	private List<AbstractXpathCheck> registeredChecks = new LinkedList<AbstractXpathCheck>();
 
 	public XPathAnalysisTool() {
-		registerCheck(new A_1_0_Check());
-		registerCheck(new A_1_1_Check());
-		registerCheck(new A_1_2_Check());
-		registerCheck(new A_2_0_Check());
-		registerCheck(new A_3_0_Check());
-		registerCheck(new A_4_0_Check());
-		registerCheck(new A_4_1_Check());
-		registerCheck(new B_1_0_Check());
-		registerCheck(new B_2_0_Check());
-		registerCheck(new C_1_0_Check());
-		registerCheck(new DemoTechnicalSupportCheck());
+		registeredChecks = Registry.getChecks();
 	}
 
 	public String getName() {
 		return NAME;
-	}
-
-	private void registerCheck(AbstractXpathCheck check) {
-		registeredChecks.add(check);
 	}
 
 	private DOMCheck getCheck(AnalysisJob job) {
