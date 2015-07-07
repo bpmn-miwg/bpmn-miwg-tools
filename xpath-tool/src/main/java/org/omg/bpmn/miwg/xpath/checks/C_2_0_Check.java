@@ -13,7 +13,7 @@ public class C_2_0_Check extends AbstractXpathCheck {
 
 	@Override
 	public void doExecute() throws Throwable {
-		
+
 		Node n, n1;
 
 		selectCollaboration();
@@ -26,90 +26,114 @@ public class C_2_0_Check extends AbstractXpathCheck {
 				{
 					checkAttributeValue("isExecutable", "false");
 
-					navigateElement("bpmn:startEvent", "Receive Credit Card Information");
+					navigateElement("bpmn:startEvent",
+							"Receive Credit Card Information");
 					checkMessageEvent();
-					checkMessageFlow("Send Credit Card Information", Direction.Input, "bpmn:task",
-							"Pay Order");
-					
+					checkMessageFlow("Send Credit Card Information",
+							Direction.Input, "bpmn:task", "Pay Order");
+
 					navigateFollowingElement("bpmn:task", "Take Payment");
-					
+
 					navigateFollowingElement("bpmn:endEvent", "Send Result");
 					checkMessageEvent();
 					checkMessageFlow("", Direction.Output, "bpmn:task",
 							"Pay Order");
-					
+
 				}
 				pop();
-				
+
 			}
 			pop();
-			
+
 			selectPool("Customer");
 			{
-				
+
 				selectReferencedProcess();
 				{
 					checkAttributeValue("isExecutable", "false");
-					
+
 					navigateElement("bpmn:startEvent", null);
-					
-					navigateFollowingElement("bpmn:task", "Browse Products on Amazon");
-					
+
+					navigateFollowingElement("bpmn:task",
+							"Browse Products on Amazon");
+
 					navigateFollowingElement("bpmn:task", "Add Item to Cart");
-					
-					n = navigateFollowingElement("bpmn:exclusiveGateway", "Done Shopping?");
-					
-					navigateFollowingElement("bpmn:task", "Browse Products on Amazon", "No");
-					
+
+					n = navigateFollowingElement("bpmn:exclusiveGateway",
+							"Done Shopping?");
+
+					navigateFollowingElement("bpmn:task",
+							"Browse Products on Amazon", "No");
+
 					navigateElement(n);
-					
+
 					n1 = selectFollowingElement("bpmn:subProcess", "Checkout");
 					{
 						navigateElement("bpmn:startEvent", null);
-						
+
 						navigateFollowingElement("bpmn:task", "Pay Order");
-						checkMessageFlow("Send Credit Card Information", Direction.Output, "bpmn:startEvent",
+						checkMessageFlow("Send Credit Card Information",
+								Direction.Output, "bpmn:startEvent",
 								"Receive Credit Card Information");
-						checkMessageFlow(null, Direction.Input, "bpmn:endEvent",
-								"Send Result");
-						
-						n = navigateFollowingElement("bpmn:exclusiveGateway", "Payment accepted?");
-						
-						navigateFollowingElement("bpmn:intermediateThrowEvent", "Send Order", "Yes");
-						checkMessageFlow(null, Direction.Output, "bpmn:startEvent",
-								"Receive Order");
-						
+						checkMessageFlow(null, Direction.Input,
+								"bpmn:endEvent", "Send Result");
+
+						n = navigateFollowingElement("bpmn:exclusiveGateway",
+								"Payment accepted?");
+
+						navigateFollowingElement("bpmn:intermediateThrowEvent",
+								"Send Order", "Yes");
+						checkMessageFlow(null, Direction.Output,
+								"bpmn:startEvent", "Receive Order");
+
 						navigateFollowingElement("bpmn:endEvent", null);
-						
+
 						navigateElement(n);
-						
-						n = navigateFollowingElement("bpmn:exclusiveGateway", "Retry?", "No");
-						
-						navigateFollowingElement("bpmn:task", "Pay Order", "Yes");
-						
+
+						n = navigateFollowingElement("bpmn:exclusiveGateway",
+								"Retry?", "No");
+
+						navigateFollowingElement("bpmn:task", "Pay Order",
+								"Yes");
+
 						navigateElement(n);
-						
+
 						navigateFollowingElement("bpmn:endEvent", null, "No");
 						checkErrorEvent();
-						
+
 					}
 					pop();
-					
+
 					navigateBoundaryEvent(null);
 					checkErrorEvent();
-					
+
 					navigateFollowingElement("bpmn:endEvent", null);
-				
+
 					navigateElement(n1);
-					
+
 					navigateFollowingElement("bpmn:task", "Receive items");
-					
+
 					navigateFollowingElement("bpmn:endEvent", null);
 				}
 				pop();
-				
-				
-				
+
+			}
+			pop();
+
+			selectPool("Amazon");
+			{
+
+				selectReferencedProcess();
+				{
+
+					selectElement("bpmn:startEvent", "Receive Order");
+					checkMessageEvent();
+					checkMessageFlow(null, Direction.Input, "bpmn:intermediateThrowEvent", "Send Order");
+					
+					
+				}
+				pop();
+
 			}
 			pop();
 
