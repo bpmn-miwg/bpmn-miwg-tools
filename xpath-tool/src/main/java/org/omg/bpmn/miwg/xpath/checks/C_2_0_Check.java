@@ -126,14 +126,44 @@ public class C_2_0_Check extends AbstractXpathCheck {
 				selectReferencedProcess();
 				{
 
-					selectElement("bpmn:startEvent", "Receive Order");
+					navigateElement("bpmn:startEvent", "Receive Order");
 					checkMessageEvent();
 					checkMessageFlow(null, Direction.Input, "bpmn:intermediateThrowEvent", "Send Order");
 					
+					navigateFollowingElement("bpmn:task", "Pick items");
+					
+					navigateFollowingElement("bpmn:task", "Place in bin");
+					
+					navigateFollowingElement("bpmn:task", "Receive and Package items");
+					
+					navigateFollowingElement("bpmn:task", "Send to carrier dock");
+					checkMessageFlow(null, Direction.Output, "bpmn:startEvent", "Pick items");
+					
+					navigateFollowingElement("bpmn:endEvent", null);
 					
 				}
 				pop();
 
+			}
+			pop();
+			
+			selectPool("Carrier"); {
+				
+				selectReferencedProcess();
+				{
+					
+					navigateElement("bpmn:startEvent", "Pick items");
+					
+					navigateFollowingElement("bpmn:task", "Load Truck");
+					
+					navigateFollowingElement("bpmn:task", "Deliver Items");
+					checkMessageFlow(null, Direction.Output, "bpmn:task", "Receive items");
+					
+					navigateFollowingElement("bpmn:endEvent", null);
+					
+				}
+				pop();
+				
 			}
 			pop();
 
