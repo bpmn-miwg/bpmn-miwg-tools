@@ -14,6 +14,7 @@ public class C_2_0_Check extends AbstractXpathCheck {
 	@Override
 	public void doExecute() throws Throwable {
 		
+		Node n, n1;
 
 		selectCollaboration();
 		{
@@ -56,16 +57,58 @@ public class C_2_0_Check extends AbstractXpathCheck {
 					
 					navigateFollowingElement("bpmn:task", "Add Item to Cart");
 					
-					Node n = navigateFollowingElement("bpmn:exclusiveGateway", "Done Shopping?");
+					n = navigateFollowingElement("bpmn:exclusiveGateway", "Done Shopping?");
 					
 					navigateFollowingElement("bpmn:task", "Browse Products on Amazon", "No");
 					
 					navigateElement(n);
 					
-					navigateFollowingElement("bpmn:subProcess", "Checkout");
+					n1 = selectFollowingElement("bpmn:subProcess", "Checkout");
+					{
+						navigateElement("bpmn:startEvent", null);
+						
+						navigateFollowingElement("bpmn:task", "Pay Order");
+						checkMessageFlow("Send Credit Card Information", Direction.Output, "bpmn:startEvent",
+								"Receive Credit Card Information");
+						checkMessageFlow(null, Direction.Input, "bpmn:endEvent",
+								"Send Result");
+						
+						n = navigateFollowingElement("bpmn:exclusiveGateway", "Payment accepted?");
+						
+						navigateFollowingElement("bpmn:intermediateThrowEvent", "Send Order", "Yes");
+						checkMessageFlow(null, Direction.Output, "bpmn:startEvent",
+								"Receive Order");
+						
+						navigateFollowingElement("bpmn:endEvent", null);
+						
+						navigateElement(n);
+						
+						n = navigateFollowingElement("bpmn:exclusiveGateway", "Retry?", "No");
+						
+						navigateFollowingElement("bpmn:task", "Pay Order", "Yes");
+						
+						navigateElement(n);
+						
+						navigateFollowingElement("bpmn:endEvent", null, "No");
+						checkErrorEvent();
+						
+					}
+					pop();
 					
+					navigateBoundaryEvent(null);
+					checkErrorEvent();
+					
+					navigateFollowingElement("bpmn:endEvent", null);
+				
+					navigateElement(n1);
+					
+					navigateFollowingElement("bpmn:task", "Receive items");
+					
+					navigateFollowingElement("bpmn:endEvent", null);
 				}
 				pop();
+				
+				
 				
 			}
 			pop();

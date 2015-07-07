@@ -570,16 +570,17 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		ok(path);
 	}
 
-	public void selectFollowingElement(String type, String name)
+	public Node selectFollowingElement(String type, String name)
 			throws Throwable {
 		if (head() == null) {
 			finding(String.format("Type: %s, name: %s", type, name),
 					"Parent failed");
 			push(null);
-			return;
+			return null;
 		}
 		Node n = navigateFollowingElement(type, name);
 		push(n);
+		return n;
 	}
 
 	public void selectElement(String type, String name) throws Throwable {
