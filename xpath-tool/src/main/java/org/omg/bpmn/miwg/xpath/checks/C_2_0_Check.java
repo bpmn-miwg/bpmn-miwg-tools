@@ -2,6 +2,7 @@ package org.omg.bpmn.miwg.xpath.checks;
 
 import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
 import org.omg.bpmn.miwg.xpath.common.Direction;
+import org.w3c.dom.Node;
 
 public class C_2_0_Check extends AbstractXpathCheck {
 
@@ -35,6 +36,33 @@ public class C_2_0_Check extends AbstractXpathCheck {
 					checkMessageEvent();
 					checkMessageFlow("", Direction.Output, "bpmn:task",
 							"Pay Order");
+					
+				}
+				pop();
+				
+			}
+			pop();
+			
+			selectPool("Customer");
+			{
+				
+				selectReferencedProcess();
+				{
+					checkAttributeValue("isExecutable", "false");
+					
+					navigateElement("bpmn:startEvent", null);
+					
+					navigateFollowingElement("bpmn:task", "Browse Products on Amazon");
+					
+					navigateFollowingElement("bpmn:task", "Add Item to Cart");
+					
+					Node n = navigateFollowingElement("bpmn:exclusiveGateway", "Done Shopping?");
+					
+					navigateFollowingElement("bpmn:task", "Browse Products on Amazon", "No");
+					
+					navigateElement(n);
+					
+					navigateFollowingElement("bpmn:subProcess", "Checkout");
 					
 				}
 				pop();
