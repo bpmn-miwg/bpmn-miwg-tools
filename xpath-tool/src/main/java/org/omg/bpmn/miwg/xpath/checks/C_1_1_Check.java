@@ -10,6 +10,8 @@ public class C_1_1_Check extends AbstractXpathCheck {
 		return "C.1.1";
 	}
 
+
+
 	@Override
 	public void doExecute() throws Throwable {
 
@@ -32,9 +34,11 @@ public class C_1_1_Check extends AbstractXpathCheck {
 			navigateFollowingElement("bpmn:userTask", "Assign Approver");
 
 			navigateFollowingElement("bpmn:userTask", "Approve Invoice");
+			checkExtensionElements();
 
 			Node n1 = navigateFollowingElement("bpmn:exclusiveGateway",
 					"Invoice approved?");
+			
 
 			{
 				navigateFollowingElement("bpmn:userTask", "Rechnung klären",

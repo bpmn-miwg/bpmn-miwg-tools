@@ -68,7 +68,7 @@ public class Reference_All_Test {
 
 		Document bpmnXmlDOM = DOMFactory.getDocument("/" + Consts.REFERENCE_DIR
 				+ "/" + param);
-		AnalysisResult result = tool.analyzeDOM(job, null, bpmnXmlDOM, null);
+		AnalysisResult result = tool.analyzeDOM(job, bpmnXmlDOM, bpmnXmlDOM, null);
 
 		assertEquals(0, result.numFindings);
 

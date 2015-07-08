@@ -9,11 +9,14 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.custommonkey.xmlunit.Difference;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 import org.omg.bpmn.miwg.common.AbstractCheck;
 import org.omg.bpmn.miwg.common.CheckOutput;
 import org.omg.bpmn.miwg.common.DOMCheck;
+import org.omg.bpmn.miwg.common.DOMUtil;
+import org.omg.bpmn.miwg.common.WhitespaceUtil;
 import org.omg.bpmn.miwg.common.testEntries.FindingAssertionEntry;
 import org.omg.bpmn.miwg.common.testEntries.NodePopEntry;
 import org.omg.bpmn.miwg.common.testEntries.NodePushEntry;
@@ -28,10 +31,11 @@ import org.w3c.dom.Text;
 public abstract class AbstractXpathCheck extends AbstractCheck implements
 		DOMCheck {
 
-	private XPath xpath;
+	private XPath xpathTest;
 	private Node currentNode;
 	private Stack<Node> nodeStack;
 	private Stack<Node> currentNodeStack;
+	private Document referenceDocument;
 
 	public boolean isApplicable(String testResultName) {
 		String checkName = getName();
@@ -40,26 +44,23 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	@Override
 	public void init(CheckOutput out) {
-		xpath = null;
+		xpathTest = null;
 		nodeStack = null;
 		currentNodeStack = null;
 		super.init(out);
 	}
 
-	private void normalizeNames() throws XPathExpressionException {
-		Object o = xpath.evaluate("//bpmn:*[@name]", head(),
+	private void normalizeNames(Document document)
+			throws XPathExpressionException {
+		Object o = xpathTest.evaluate("//bpmn:*[@name]", document,
 				XPathConstants.NODESET);
 		NodeList nl = (NodeList) o;
 		for (int i = 0; i < nl.getLength(); i++) {
 			Node n = nl.item(i);
 			Attr attr = (Attr) n.getAttributes().getNamedItem("name");
 			String s = attr.getValue();
-			s = s.trim();
 			// out.println(">>>  " + s);
-			s = s.replaceAll("&#10;", " ");
-			s = s.replaceAll("&#xA;", " ");
-			s = s.replaceAll("\n", " ");
-			s = s.replaceAll("\r", " ");
+			s = WhitespaceUtil.normalizeWhitespace(s);
 
 			while (s.contains("  "))
 				s = s.replaceAll("  ", " ");
@@ -69,7 +70,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			attr.setTextContent(s);
 		}
 
-		Object o2 = xpath.evaluate("//child::text()", head(),
+		Object o2 = xpathTest.evaluate("//child::text()", head(),
 				XPathConstants.NODESET);
 		NodeList nl2 = (NodeList) o2;
 		for (int i = 0; i < nl2.getLength(); i++) {
@@ -181,7 +182,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	private Node findNode(Node base, String expr)
 			throws XPathExpressionException {
-		Object o = xpath.evaluate(expr, base, XPathConstants.NODE);
+		Object o = xpathTest.evaluate(expr, base, XPathConstants.NODE);
 		if (o == null)
 			return null;
 		else {
@@ -223,7 +224,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	private List<Node> findNodes(Node base, String expr)
 			throws XPathExpressionException {
-		Object o = xpath.evaluate(expr, base, XPathConstants.NODESET);
+		Object o = xpathTest.evaluate(expr, base, XPathConstants.NODESET);
 		if (o == null)
 			return null;
 		else {
@@ -1134,6 +1135,64 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 	}
 
+	public void checkExtensionElements() throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+		
+		if (getReferenceDocument() == null) {
+			finding(null, "The reference has not been specified");
+			return;
+		}
+
+		String xpath;
+
+		String id = getCurrentNodeID();
+		xpath = "//bpmn:*[@id='" + id + "']";
+		Node refNode = (Node) getXpathTest().evaluate(xpath,
+				getReferenceDocument(), XPathConstants.NODE);
+		if (refNode == null) {
+			finding(xpath, "Cannot find corresponding element in reference DOM");
+			return;
+		}
+
+		xpath = "bpmn:extensionElements";
+
+		Node testEE = (Node) getXpathTest().evaluate(xpath, currentNode,
+				XPathConstants.NODE);
+		if (testEE == null) {
+			finding(xpath, "Cannot find extension element");
+			return;
+		}
+
+		Node refEE = (Node) getXpathTest().evaluate(xpath, refNode,
+				XPathConstants.NODE);
+		if (refEE == null) {
+			finding(xpath,
+					"Cannot find corresponding extension element in reference DOM");
+			return;
+		}
+
+		List<Difference> differences = DOMUtil.checkSubtreeForDifferences(
+				currentNode, refNode);
+
+		if (differences.isEmpty()) {
+			ok(null, "Extension elements are similar to the reference");
+			return;
+		} else {
+			finding(null, "Extension Elements are not similar to the reference");
+
+			push(testEE);
+
+			for (Difference difference : differences) {
+				finding(null, difference.toString());
+			}
+
+			pop();
+		}
+	}
+
 	public void checkErrorEvent() throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
@@ -1488,16 +1547,19 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	@Override
-	public AnalysisResult execute(Document actualDocument, AnalysisTool tool)
-			throws Throwable {
+	public AnalysisResult execute(Document actualDocument, AnalysisTool tool,
+			Document referenceDocument) throws Throwable {
 		this.doc = actualDocument;
+		this.referenceDocument = referenceDocument;
 		XPathFactory xpathfactory = XPathFactory.newInstance();
-		xpath = xpathfactory.newXPath();
-		xpath.setNamespaceContext(new NameSpaceContexts());
+		xpathTest = xpathfactory.newXPath();
+		xpathTest.setNamespaceContext(new NameSpaceContexts());
 		nodeStack = new Stack<Node>();
 		currentNodeStack = new Stack<Node>();
 		push(doc.getDocumentElement());
-		normalizeNames();
+		normalizeNames(doc);
+		if (referenceDocument != null)
+			normalizeNames(referenceDocument);
 		doExecute();
 		return new AnalysisResult(resultsOK(), resultsFinding(),
 				out.getMiwgOutput(), tool);
@@ -1507,6 +1569,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	public Node getCurrentNode() {
 		return currentNode;
+	}
+
+	public Document getReferenceDocument() {
+		return referenceDocument;
+	}
+
+	public XPath getXpathTest() {
+		return xpathTest;
 	}
 
 }

@@ -10,7 +10,7 @@ public interface DOMCheck {
 
 	String getName();
 
-	AnalysisResult execute(Document actualBpmnXml, AnalysisTool analysisTool)
+	AnalysisResult execute(Document actualBpmnXml, AnalysisTool analysisTool, Document referenceBpmnXMl)
 			throws Throwable;
 
 }

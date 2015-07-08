@@ -35,6 +35,11 @@
       <artifactId>analysis-tool-api</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <dependency>
+    	<groupId>xmlunit</groupId>
+    	<artifactId>xmlunit</artifactId>
+    	<version>1.3</version>
+    </dependency>
   </dependencies>
 
   <build>

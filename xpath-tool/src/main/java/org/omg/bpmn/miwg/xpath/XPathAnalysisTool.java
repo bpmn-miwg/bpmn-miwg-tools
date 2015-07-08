@@ -81,7 +81,7 @@ public class XPathAnalysisTool implements DOMAnalysisTool {
 		AnalysisResult result;
 
 		try {
-			result = check.execute(actualDocument, this);
+			result = check.execute(actualDocument, this, referenceDocument);
 		} catch (Throwable e) {
 			throw new Exception(e);
 		} finally {

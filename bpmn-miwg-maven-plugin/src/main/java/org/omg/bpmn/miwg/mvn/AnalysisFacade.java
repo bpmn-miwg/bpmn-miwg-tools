@@ -99,7 +99,7 @@ public class AnalysisFacade {
 					referenceDom, actualDom, null);
 
 			AnalysisResult xpathResult = xpathAnalysisTool.analyzeDOM(job,
-					null, actualDom, null);
+					referenceDom, actualDom, null);
 
 			AnalysisRun run = new AnalysisRun(job);
 
