@@ -11,6 +11,7 @@
       </extensionElements>
       <userTask id="approveInvoice" camunda:assignee="${approver}" camunda:formKey="app:approveInvoice.jsf" name="Approve Invoice" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="##unspecified">
          <extensionElements>
+            <w4graph:new>a</w4graph:new>
             <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
             <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
             <signavio:signavioMetaData metaKey="documentationlink" metaValue="[]"/>

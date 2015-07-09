@@ -1178,7 +1178,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				currentNode, refNode);
 
 		if (differences.isEmpty()) {
-			ok(null, "Extension elements are similar to the reference");
+			ok("Extension elements are similar to the reference");
 			return;
 		} else {
 			finding(null, "Extension Elements are not similar to the reference");
@@ -1186,7 +1186,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			push(testEE);
 
 			for (Difference difference : differences) {
-				finding(null, difference.toString());
+				finding(null, difference.getId() + ": " + difference.toString());
 			}
 
 			pop();

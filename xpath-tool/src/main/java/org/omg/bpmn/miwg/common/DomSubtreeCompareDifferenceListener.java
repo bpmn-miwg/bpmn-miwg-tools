@@ -74,10 +74,8 @@ public class DomSubtreeCompareDifferenceListener implements DifferenceListener {
 			return RETURN_IGNORE_DIFFERENCE_NODES_IDENTICAL;
 
 		case DifferenceConstants.CHILD_NODE_NOT_FOUND_ID:
-			if (difference.getTestNodeDetail().getValue().toString()
-					.equals("#text")
-					&& difference.getControlNodeDetail().getValue()
-							.equals("null"))
+			// Something has been added in the test document
+			if (difference.getControlNodeDetail().getNode() == null)
 				return RETURN_IGNORE_DIFFERENCE_NODES_IDENTICAL;
 			else
 				return RETURN_ACCEPT_DIFFERENCE;

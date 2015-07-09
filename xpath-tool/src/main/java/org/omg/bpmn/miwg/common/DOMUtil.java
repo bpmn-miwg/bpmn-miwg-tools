@@ -43,6 +43,8 @@ import javax.xml.transform.stream.StreamResult;
 import org.custommonkey.xmlunit.DetailedDiff;
 import org.custommonkey.xmlunit.Diff;
 import org.custommonkey.xmlunit.Difference;
+import org.custommonkey.xmlunit.ElementNameAndAttributeQualifier;
+import org.custommonkey.xmlunit.XMLUnit;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -90,9 +92,12 @@ public class DOMUtil {
 		newTestDoc.normalizeDocument();
 		newRefDoc.normalizeDocument();
 
-		Diff diff = new Diff(newTestDoc, newRefDoc);
+		XMLUnit.setIgnoreWhitespace(true);
+		
+		Diff diff = new Diff(newRefDoc, newTestDoc);
 		DetailedDiff detailedDiff = new DetailedDiff(diff);
 		detailedDiff.overrideDifferenceListener(new DomSubtreeCompareDifferenceListener());
+		detailedDiff.overrideElementQualifier(new ElementNameAndAttributeQualifier());
 
 		List<Difference> differences = new LinkedList<Difference>();
 
