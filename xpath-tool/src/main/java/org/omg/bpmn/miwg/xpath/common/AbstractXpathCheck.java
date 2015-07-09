@@ -24,6 +24,7 @@ import org.omg.bpmn.miwg.common.testEntries.OKAssertionEntry;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
@@ -1135,29 +1136,38 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 	}
 
+	protected Node findCorrespondingReferenceElement(Node testNode)
+			throws XPathExpressionException {
+		if (getReferenceDocument() == null) {
+			finding(null, "The reference has not been specified");
+			return null;
+		}
+
+		String id = getCurrentNodeID();
+		String xpath = "//bpmn:*[@id='" + id + "']";
+		Node refNode = (Node) getXpathTest().evaluate(xpath,
+				getReferenceDocument(), XPathConstants.NODE);
+
+		if (refNode == null) {
+			finding(xpath, "Cannot find corresponding element in reference DOM");
+			return null;
+		}
+
+		return refNode;
+	}
+
 	public void checkExtensionElements() throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
 		}
-		
-		if (getReferenceDocument() == null) {
-			finding(null, "The reference has not been specified");
-			return;
-		}
 
-		String xpath;
-
-		String id = getCurrentNodeID();
-		xpath = "//bpmn:*[@id='" + id + "']";
-		Node refNode = (Node) getXpathTest().evaluate(xpath,
-				getReferenceDocument(), XPathConstants.NODE);
+		Node refNode = findCorrespondingReferenceElement(currentNode);
 		if (refNode == null) {
-			finding(xpath, "Cannot find corresponding element in reference DOM");
 			return;
 		}
 
-		xpath = "bpmn:extensionElements";
+		String xpath = "bpmn:extensionElements";
 
 		Node testEE = (Node) getXpathTest().evaluate(xpath, currentNode,
 				XPathConstants.NODE);
@@ -1175,7 +1185,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		List<Difference> differences = DOMUtil.checkSubtreeForDifferences(
-				currentNode, refNode);
+				testEE, refEE);
 
 		if (differences.isEmpty()) {
 			ok("Extension elements are similar to the reference");
@@ -1191,6 +1201,46 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 			pop();
 		}
+	}
+
+	public void checkNonBPMNAttributes() throws Throwable {
+		Node testNode = currentNode;
+		Node refNode = findCorrespondingReferenceElement(currentNode);
+
+		NamedNodeMap refAttrs = refNode.getAttributes();
+		NamedNodeMap testAttrs = testNode.getAttributes();
+
+		for (int i = 0; i < refAttrs.getLength(); i++) {
+			Node refAttr = refAttrs.item(i);
+
+			if (refAttr.getNamespaceURI() != null
+					&& !refAttr.getNamespaceURI().equals(
+							NameSpaceContexts.BPMN_MODEL_NS_URI)) {
+
+				Node testAttr = testAttrs.getNamedItemNS(
+						refAttr.getNamespaceURI(), refAttr.getLocalName());
+
+				if (testAttr == null) {
+					finding(null,
+							"Cannot find attribute '" + refAttr.toString()
+									+ "' from reference in test file");
+					return;
+				}
+
+				if (!testAttr.getNodeValue().equals(refAttr.getNodeValue())) {
+					finding(null,
+							"The attribute '" + refAttr.toString()
+									+ "' has the value '"
+									+ testAttr.getNodeValue()
+									+ "'. In the reference the value is '"
+									+ refAttr.getNodeValue() + "'.");
+					return;
+				}
+			}
+
+		}
+		ok("All non-BPMN attributes from reference exist in the test document as well.");
+
 	}
 
 	public void checkErrorEvent() throws Throwable {

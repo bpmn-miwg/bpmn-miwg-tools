@@ -12,8 +12,12 @@ public class C_1_1_Check extends AbstractXpathCheck {
 
 
 
+
 	@Override
 	public void doExecute() throws Throwable {
+		navigateElementX("/bpmn:definitions");
+		checkAttributeValue("expressionLanguage", "http://www.w3.org/1999/XPath");
+		
 
 		navigateElement("bpmn:resource", "Team Assistant");
 		checkAttributeValue("w4:type", "User");
@@ -73,6 +77,7 @@ public class C_1_1_Check extends AbstractXpathCheck {
 				checkExtensionElements();
 
 				navigateFollowingElement("bpmn:serviceTask", "Archive Invoice");
+				checkNonBPMNAttributes();
 				checkExtensionElements();
 
 				navigateFollowingElement("bpmn:endEvent", "Invoice processed");

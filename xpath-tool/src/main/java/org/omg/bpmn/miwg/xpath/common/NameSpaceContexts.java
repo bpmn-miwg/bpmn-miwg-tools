@@ -6,9 +6,11 @@ import javax.xml.namespace.NamespaceContext;
 
 public class NameSpaceContexts implements NamespaceContext {
 
+	public final static String BPMN_MODEL_NS_URI = "http://www.omg.org/spec/BPMN/20100524/MODEL"; 
+	
 	public String getNamespaceURI(String prefix) {
 		if ("bpmn".equals(prefix))
-			return "http://www.omg.org/spec/BPMN/20100524/MODEL";
+			return BPMN_MODEL_NS_URI;
 		if ("bpmndi".equals(prefix))
 			return "http://www.omg.org/spec/BPMN/20100524/DI";
 		if ("camunda".equals(prefix))
