@@ -63,7 +63,7 @@
       //          "sAjaxSource": toolsUrl,
       //          "sAjaxDataProp": "tools",
                 "aaData": toolsTestedByMIWG.tools,
-                "aaSorting": [[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ], [ 6, "desc" ], [ 9, "desc" ],  [ 8, "desc" ], [ 7, "desc" ], [ 0, "asc" ], [1, "asc" ]],
+                "aaSorting": [/*[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ],*/ [ 6, "desc" ],  [ 8, "desc" ], [ 9, "desc" ], [ 10, "desc" ], [ 11, "desc" ], [ 0, "asc" ], [1, "asc" ]],
                 "aoColumns": [
                     { "mData": "vendor" },
                     { "mData": "tool",
@@ -72,7 +72,7 @@
                         if (full.website.length == 0) {
                           result = data.replace('Microsoft', 'MS')+' '+full.version;
                         } else {
-                          result = '<a href="'+full.website+'">'+data.replace('Microsoft', 'MS')+' '+full.version.replace('c906a7c941b82dbb832ed9be62989c171c724199', 'c906a7c941')+'</a>';
+                          result = '<a href="'+full.website+'">'+data.replace('Microsoft', 'MS')+' '+full.version+'</a>';
                         }
                         return '<strong>' + result + '</strong>';
                       } },
@@ -81,11 +81,16 @@
                     { "mData": "hasExport", "mRender": renderImportExport },
                     { "mData": "hasRoundtrip", "mRender": renderBoolean },
                     /*{ "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },*/
+                    { "mData": "participatedInDemosByYear",
+                      "mRender": function(data, type, full) {
+                        return data.split(",")[0];
+                      },
+                      "bVisible" : false },
+                    { "mData": "participatedInDemosByYear", /*"mRender": renderParticipation*/ },
                     { "mData": "lastResultsSubmitted" },
                     { "mData": "testResultsASubmitted", "mRender": renderTestResultsASubmitted },
                     { "mData": "testResultsBSubmitted", "mRender": renderTestResultsBSubmitted },
                     { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted },
-                    { "mData": "participatedInDemosByYear", /*"mRender": renderParticipation*/ },
                     { "mData": "openSource", "mRender": renderLicense },
                     /*{ "mData": "openIssues",
                       "mRender": function ( data, type, full ) {
@@ -125,17 +130,17 @@
               }
 
               function renderTestResultsASubmitted(data, type, full) {
-                data += '/5';
+                data += '/20';
                 return data ;
               }
 
               function renderTestResultsBSubmitted(data, type, full) {
-                data += '/2';
+                data += '/8';
                 return data;
               }
 
               function renderTestResultsCSubmitted(data, type, full) {
-                data += '/4';
+                data += '/16';
                 return data;
               }
 
@@ -203,17 +208,18 @@
         <thead>
           <tr>
             <th width="25%">Vendor</th>
-            <th width="25%">Tool Name &amp; Version</th>
+            <th width="25%">Tool</th>
             <th>BPMN 2.0</th>
             <th>Import</th>
             <th>Export</th>
             <th>Roundtrip</th>
+            <th>Last Demo Participation</th>
+            <th>Demo Participation</th>
             <!--<th>A Results Submitted</th>-->
-            <th>Most recent submission</th>
+            <th>Last Test Submission</th>
             <th>A Results Submitted</th>
             <th>B Results Submitted</th>
             <th>C Results Submitted</th>
-            <th>Part of Demos</th>
             <th>License</th>
             <!--<th>Open Issues</th>
             <th>Closed Issues</th>-->
