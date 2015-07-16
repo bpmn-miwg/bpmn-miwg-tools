@@ -141,7 +141,7 @@
 		  participated = "partial";
 		}
                 var result = renderTrafficLight(participated, type, full);
-                return result + ' ' + data.split(",").join(", ");
+                return '<span style="white-space:nowrap;">' + result + ' ' + data.split(",").join(", ") + '</span>';
               }
 
               function renderTestResultsSubmitted(data, type, full) {
