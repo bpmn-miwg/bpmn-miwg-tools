@@ -1,0 +1,96 @@
+
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.kohsuke.github.GHContent;
+import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
+
+public class RepoScanner {
+  
+  protected static final Logger LOGGER = Logger.getLogger(RepoScanner.class.getName());
+  
+  List<String> testCases;
+
+	public JSONObject getSubmissionsFromRepo(String repoName) {
+    LOGGER.info("Scanning Repo '" + repoName + "'.\n\n This might take some time!\n\n");
+		JSONObject submissions;
+    try {
+			GitHub github = GitHub.connect("falko", "90011a5a4f2606a6981c5d961b9b43ba22223f47");
+			GHRepository repository = github.getRepository(repoName);
+			testCases = getReferences(repository);
+			submissions = getSubmissionsFromRootDir(repository);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		LOGGER.info("done with scanning Repo '" + repoName + "'.");
+		return submissions;
+	}
+
+  private List<String> getReferences(GHRepository repository) throws IOException {
+    ArrayList<String> references = new ArrayList<String>();
+    List<GHContent> directoryContent = repository.getDirectoryContent("Reference");
+    for (GHContent content : directoryContent) {
+      String name = content.getName();
+      String type = content.getType();
+      if ("file".equals(type) && name.matches("[A-C]\\.[1-9][0-9]*\\.[0-9]+.bpmn")) {
+        references.add(name.replace(".bpmn", ""));
+      }
+    }
+    LOGGER.info("References: " + references);
+    return references;
+  }
+
+  private JSONObject getSubmissionsFromRootDir(GHRepository repository) throws IOException {
+    LOGGER.info("Scanning: " + repository.getName());
+    JSONObject submissions = new JSONObject();
+    List<GHContent> directoryContent = repository.getDirectoryContent("/");
+    for (GHContent content : directoryContent) {
+      String name = content.getName();
+      String type = content.getType();
+      if ("dir".equals(type) && !"Reference".equals(name) && !"Work in Progress".equals(name)) {
+        getSubmissionsFromToolDir(submissions, repository, content.getPath());
+      }
+    }
+    return submissions;
+  }
+  
+  @SuppressWarnings("unchecked")
+  private void getSubmissionsFromToolDir(JSONObject submissions, GHRepository repository,
+      String tool) throws IOException {
+    LOGGER.info("Scanning: " + repository.getName() + "/" + tool);
+    int count = 0;
+    int countA = 0;
+    int countB = 0;
+    int countC = 0;
+    JSONArray files = new JSONArray();
+    List<GHContent> directoryContent = repository.getDirectoryContent(tool.replace(" ", "%20"));
+    for (GHContent content : directoryContent) {
+      String name = content.getName();
+      String type = content.getType();
+      for (String testCase : testCases) {
+        if ("file".equals(type) && name.matches(testCase + "-(import.png|roundtrip.bpmn|export.png|export.bpmn)")) {
+          count++;
+          if (name.startsWith("A")) countA++;
+          if (name.startsWith("B")) countB++;
+          if (name.startsWith("C")) countC++;
+          files.add(name);
+          break;
+        }
+      }
+    }
+    JSONObject submission = new JSONObject();
+    submission.put("count", count);
+    submission.put("countA", countA);
+    submission.put("countB", countB);
+    submission.put("countC", countC);
+    submission.put("files", files);
+    submissions.put(tool, submission);
+  }
+  
+}
