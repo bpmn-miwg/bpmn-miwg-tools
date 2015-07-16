@@ -38,6 +38,8 @@ public class Reference_All_Test {
 		list.add(new String[] { "B.1.0.bpmn" });
 		list.add(new String[] { "B.2.0.bpmn" });
 		list.add(new String[] { "C.1.0.bpmn" });
+		list.add(new String[] { "C.1.1.bpmn" });
+		list.add(new String[] { "C.2.0.bpmn" });
 
 		return list;
 	}
@@ -66,7 +68,7 @@ public class Reference_All_Test {
 
 		Document bpmnXmlDOM = DOMFactory.getDocument("/" + Consts.REFERENCE_DIR
 				+ "/" + param);
-		AnalysisResult result = tool.analyzeDOM(job, null, bpmnXmlDOM, null);
+		AnalysisResult result = tool.analyzeDOM(job, bpmnXmlDOM, bpmnXmlDOM, null);
 
 		assertEquals(0, result.numFindings);
 

@@ -71,7 +71,7 @@ public class ModelInterchangeMojoTest {
 		File dir = new File("src/test/resources");
 		mojo.scanForBpmn(dir, bpmnFiles);
         // first param is the total number of BPMN files in src/test/resources
-		assertEquals(22, bpmnFiles.size());
+		assertEquals(26, bpmnFiles.size());
 	}
 
 	@Test
