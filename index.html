@@ -30,30 +30,36 @@
 //         var toolsUrl = "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/contents/tools-tested-by-miwg.json"; // application/vnd.github.v3.raw
 //         var toolsUrl = "../../bpmn-miwg-test-suite/tools-tested-by-miwg.json";
         var toolsUrl = "tools-tested-by-miwg.json";
+        var submissionsUrl = "submissions.json";
         var openIssuesUrl = "issues-open.json";
         var closedIssuesUrl = "issues-closed.json";
 
         $.getJSON(toolsUrl, function (toolsTestedByMIWG) {
-          $.getJSON(openIssuesUrl, function (openIssues) {
+          $.getJSON(submissionsUrl, function (submissions) {
             $.getJSON(closedIssuesUrl, function (closedIssues) {
 
               for (i = 0; i < toolsTestedByMIWG.tools.length; i++) {
-                toolsTestedByMIWG.tools[i].openIssues = 0;
-                toolsTestedByMIWG.tools[i].closedIssues = 0;
-                openIssues.forEach(function(issue) {
-                  issue.labels.forEach(function(label) {
-                    if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
-                      toolsTestedByMIWG.tools[i].openIssues++;
-                    }
-                  });
-                });
-                closedIssues.forEach(function(issue) {
-                  issue.labels.forEach(function(label) {
-                    if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
-                      toolsTestedByMIWG.tools[i].closedIssues++;
-                    }
-                  });
-                });
+                 var tool = toolsTestedByMIWG.tools[i];
+                 toolsTestedByMIWG.tools[i].testResultsSubmitted = submissions[tool.tool + ' ' + tool.version].count;
+                 toolsTestedByMIWG.tools[i].testResultsASubmitted = submissions[tool.tool + ' ' + tool.version].countA;
+                 toolsTestedByMIWG.tools[i].testResultsBSubmitted = submissions[tool.tool + ' ' + tool.version].countB;
+                 toolsTestedByMIWG.tools[i].testResultsCSubmitted = submissions[tool.tool + ' ' + tool.version].countC;
+//                 toolsTestedByMIWG.tools[i].openIssues = 0;
+//                 toolsTestedByMIWG.tools[i].closedIssues = 0;
+//                 openIssues.forEach(function(issue) {
+//                   issue.labels.forEach(function(label) {
+//                     if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
+//                       toolsTestedByMIWG.tools[i].openIssues++;
+//                     }
+//                   });
+//                 });
+//                 closedIssues.forEach(function(issue) {
+//                   issue.labels.forEach(function(label) {
+//                     if (label.name == 'Tool: ' + toolsTestedByMIWG.tools[i].tool) {
+//                       toolsTestedByMIWG.tools[i].closedIssues++;
+//                     }
+//                   });
+//                 });
               }
 
               $('#bpmn-tools').dataTable( {
@@ -63,31 +69,26 @@
       //          "sAjaxSource": toolsUrl,
       //          "sAjaxDataProp": "tools",
                 "aaData": toolsTestedByMIWG.tools,
-                "aaSorting": [/*[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ],*/ [ 6, "desc" ],  [ 8, "desc" ], [ 9, "desc" ], [ 10, "desc" ], [ 11, "desc" ], [ 0, "asc" ], [1, "asc" ]],
+                "aaSorting": [/*[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ],*/ [ 6, "desc" ],  [ 8, "desc" ], [ 9, "desc" ], [ 10, "desc" ], [ 11, "desc" ], [ 12, "desc" ], [ 0, "asc" ], [1, "asc" ]],
                 "aoColumns": [
                     { "mData": "vendor" },
                     { "mData": "tool",
                       "mRender": function ( data, type, full ) {
-                        var result = '';
-                        if (full.website.length == 0) {
-                          result = data.replace('Microsoft', 'MS')+' '+full.version;
-                        } else {
-                          result = '<a href="'+full.website+'">'+data.replace('Microsoft', 'MS')+' '+full.version+'</a>';
-                        }
+                        var result = '<a href="' + generateVisualDiffUrl(full) + '">' + data.replace('Microsoft', 'MS') + ' ' + full.version + '</a>';
                         return '<strong>' + result + '</strong>';
                       } },
                     { "mData": "supportsBpmn2", "mRender": renderBoolean },
                     { "mData": "hasImport", "mRender": renderImportExport },
                     { "mData": "hasExport", "mRender": renderImportExport },
-                    { "mData": "hasRoundtrip", "mRender": renderBoolean },
-                    /*{ "mData": "testResultsSubmitted", "mRender": renderTestResultsSubmitted },*/
+                    { "mData": "hasRoundtrip", "mRender": renderRoundtrip },
                     { "mData": "participatedInDemosByYear",
                       "mRender": function(data, type, full) {
                         return data.split(",")[0];
                       },
                       "bVisible" : false },
-                    { "mData": "participatedInDemosByYear", /*"mRender": renderParticipation*/ },
-                    { "mData": "lastResultsSubmitted" },
+                    { "mData": "participatedInDemosByYear", "mRender": renderYear },
+                    { "mData": "lastResultsSubmitted", "mRender": renderYear },
+                    { "mData": "testResultsSubmitted", "bVisible" : false /*"mRender": renderTestResultsSubmitted*/ },
                     { "mData": "testResultsASubmitted", "mRender": renderTestResultsASubmitted },
                     { "mData": "testResultsBSubmitted", "mRender": renderTestResultsBSubmitted },
                     { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted },
@@ -106,50 +107,86 @@
 
               function renderImportExport(data, type, full) {
                 var result = renderBoolean(data, type, full);
-                if ((data === true) && (full.testResultsSubmitted === true || full.testResultsSubmitted === "partial")) {
+                if ((data === true) && (full.lastResultsSubmitted != 0)) {
+                  var visualDiffUrl = generateVisualDiffUrl(full);
+                  result = '<span class="sr-only">' + data + '</span><a href="' + visualDiffUrl + '">' + result + ' Diff</a>';
+                }
+                return result;
+              }
+              
+              function renderRoundtrip(data, type, full) {
+                var result = renderBoolean(data, type, full);
+                result = '<span class="sr-only">' + data + '</span><a href="overview.html#' + generateToolAndVersion(full) + '">' + result + ' Details</a>';
+                return result;
+              }
+              
+              function generateVisualDiffUrl(full) {
+                  return 'visual-test-result-comparison.html?tool=' + generateToolAndVersion(full);
+              }
+              
+              function generateToolAndVersion(full) {
                   var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
                   // TODO trying to figure out why Firefox does not 
                   // show the anchor encoded as expected
                   console.debug('toolAndVersion:'+toolAndVersion);
-                  result = '<span class="sr-only">' + data + '</span><a href="visual-test-result-comparison.html?tool=' + toolAndVersion + '">' + result + ' Diff</a>';
-                }
-                return result;
+                  return toolAndVersion;
+              }
+
+              function renderYear(data, type, full) {
+                var lastParticipation = data.split(",")[0];
+                var participated = false;
+                if (lastParticipation == "2015") {
+		  participated = true;
+		} else if (lastParticipation != "0") {
+		  participated = "partial";
+		}
+                var result = renderTrafficLight(participated, type, full);
+                return result + ' ' + data.split(",").join(", ");
               }
 
               function renderTestResultsSubmitted(data, type, full) {
                 var result = renderTrafficLight(data, type, full);
                 if ((data === true || data === "partial") && (full.hasExport === true || full.hasRoundtrip === true)) {
-                  var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
-                  // TODO trying to figure out why Firefox does not 
-                  // show the anchor encoded as expected
-                  console.debug('toolAndVersion:'+toolAndVersion);
                   result = result
-                    + ' <a href="overview.html#' + toolAndVersion + '">Details</a>'
+                    + ' <a href="overview.html#' + generateToolAndVersion(full) + '">Details</a>';
                 }
                 return result;
               }
 
               function renderTestResultsASubmitted(data, type, full) {
-                data += '/20';
-                return data ;
+                return renderTestResultsSubmittedInCategory(data, type, full, 20);
               }
 
               function renderTestResultsBSubmitted(data, type, full) {
-                data += '/8';
-                return data;
+                return renderTestResultsSubmittedInCategory(data, type, full, 8);
               }
 
               function renderTestResultsCSubmitted(data, type, full) {
-                data += '/16';
-                return data;
+                return renderTestResultsSubmittedInCategory(data, type, full, 16);
+              }
+
+              function renderTestResultsSubmittedInCategory(data, type, full, referenceCount) {
+                var complete = false;
+                if (data == referenceCount) {
+                  complete = true;
+                } else if (data != 0) {
+                  complete = "partial";
+                }
+                var result = renderTrafficLight(complete, type, full);
+                return result + ' ' + data + '/' + referenceCount;
               }
 
               function renderLicense(data, type, full) {
+		var result = '';
                 if (data) {
-                  return 'Open&nbsp;Source';
+                  result = 'Open&nbsp;Source';
                 } else {
-                  return 'Commercial';
+                  result = 'Commercial';
                 }
+		if (full.website.length > 0) {
+		  result = '<a href="'+full.website+'">'+result+'</a>';
+		}
+		return result;
               }
 
               function renderTrafficLight(data, type, full) {
@@ -215,8 +252,8 @@
             <th>Roundtrip</th>
             <th>Last Demo Participation</th>
             <th>Demo Participation</th>
-            <!--<th>A Results Submitted</th>-->
             <th>Last Test Submission</th>
+            <th>Results Submitted</th>
             <th>A Results Submitted</th>
             <th>B Results Submitted</th>
             <th>C Results Submitted</th>
