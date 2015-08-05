@@ -92,7 +92,8 @@
                     { "mData": "testResultsASubmitted", "mRender": renderTestResultsASubmitted },
                     { "mData": "testResultsBSubmitted", "mRender": renderTestResultsBSubmitted },
                     { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted },
-                    { "mData": "openSource", "mRender": renderLicense },
+                    { "mData": "website", "mRender": renderWebsite },
+//                     { "mData": "openSource", "mRender": renderLicense },
                     /*{ "mData": "openIssues",
                       "mRender": function ( data, type, full ) {
                         return '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues?state=open&labels=Tool%3A+' + full.tool.replace(/\+/g, '%2b').replace(/ /g, '+') + '"><strong>' + data + '</strong></a>';
@@ -189,6 +190,14 @@
 		return result;
               }
 
+              function renderWebsite(data, type, full) {
+		var result = '';
+                if (data) {
+		  result = '<a href="'+data+'" target="_blanck">' + renderIcon('new-window', '', 'website') + '</a>';
+		}
+		return result;
+              }
+
               function renderTrafficLight(data, type, full) {
                 var icon = "minus-sign"; // ban-circle remove-sign
                 var color = "darkred";
@@ -244,8 +253,8 @@
       <table id="bpmn-tools" class="display" width="100%">
         <thead>
           <tr>
-            <th width="25%">Vendor</th>
-            <th width="25%">Tool</th>
+            <th width="10%">Vendor</th>
+            <th width="15%">Tool</th>
             <th>BPMN 2.0</th>
             <th>Import</th>
             <th>Export</th>
@@ -257,7 +266,8 @@
             <th>A Results Submitted</th>
             <th>B Results Submitted</th>
             <th>C Results Submitted</th>
-            <th>License</th>
+            <th>Website</th>
+            <!--<th>License</th>-->
             <!--<th>Open Issues</th>
             <th>Closed Issues</th>-->
 <!--             <th>Notes</th> -->
@@ -305,13 +315,30 @@
                 <td>Tool can both import and export BPMN 2.0 XML files based on the XML Schema Definition (XSD) that ships with the specification</td>
               </tr>
               <tr>
-                <td>Results submitted</td>
-                <td>Test results have been submitted for the tool either by users or the vendor (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
-              </tr>
-              <tr>
-                <td>Part of Demos</td>
+                <td>Last Demo Participation</td>
                 <td>Tool participated in one of the <a href="https://github.com/bpmn-miwg/bpmn-miwg-demos">public BPMN MIWG demos</a></td>
               </tr>
+              <tr>
+                <td>Last Test Submission</td>
+                <td>Last time test results have been submitted for the tool either by users or the vendor</td>
+              </tr>
+              <tr>
+                <td>A Results Submitted</td>
+                <td>Number of test results submitted in category A "Layout" (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
+              </tr>
+              <tr>
+                <td>B Results Submitted</td>
+                <td>Number of test results submitted in category B "Conformance class coverage" (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
+              </tr>
+              <tr>
+                <td>B Results Submitted</td>
+                <td>Number of test results submitted in category C "Complex scenarios" (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
+              </tr>
+              <tr>
+                <td>Website</td>
+                <td>Link to the official website of the tool</td>
+              </tr>
+<!--
               <tr>
                 <td>License</td>
                 <td>License of the tool</td>
@@ -324,6 +351,7 @@
                 <td>Closed Issues</td>
                 <td>Issues identified by the BPMN MIWG that are already fixed by the vendor (click on the number to see the issues)</td>
               </tr>
+-->
             </tbody>
           </table>
         </div>
