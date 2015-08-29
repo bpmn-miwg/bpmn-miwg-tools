@@ -401,6 +401,10 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				.format("bpmn:laneSet/bpmn:lane[@name='%s']", name);
 		return navigateElementX(xPath);
 	}
+	
+	public Node navigateDefinitions() throws Throwable {
+		return navigateElementX("/bpmn:definitions");
+	}
 
 	protected Node navigateSequenceFlow(Node node, String type, String name)
 			throws Throwable {

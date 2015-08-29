@@ -15,7 +15,7 @@ public class A_3_0_Check extends AbstractXpathCheck {
 
 		{
 
-			selectElementX("/bpmn:definitions/bpmn:process");
+			selectFirstProcess();
 
 			navigateElement("bpmn:startEvent", "Start Event");
 

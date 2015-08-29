@@ -15,7 +15,7 @@ public class C_1_1_Check extends AbstractXpathCheck {
 
 	@Override
 	public void doExecute() throws Throwable {
-		navigateElementX("/bpmn:definitions");
+		navigateDefinitions();
 		checkAttributeValue("expressionLanguage", "http://www.w3.org/1999/XPath");
 		
 

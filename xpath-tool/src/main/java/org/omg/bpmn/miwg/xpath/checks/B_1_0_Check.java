@@ -17,7 +17,7 @@ public class B_1_0_Check extends AbstractXpathCheck {
 
 		{
 
-			selectElementX("//bpmn:collaboration");
+			selectCollaboration();
 
 			navigateElement("bpmn:messageFlow", "Message Flow 1");
 			navigateElement("bpmn:messageFlow", "Message Flow 2");

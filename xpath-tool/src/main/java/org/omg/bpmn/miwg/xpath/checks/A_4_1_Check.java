@@ -33,8 +33,9 @@ public class A_4_1_Check extends A_4_0_Check {
 		}
 
 		{
-			navigateElementX("/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]");
-			selectElementX("/bpmn:definitions/bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]");
+			selectProcessByLane("Lane 1");
+			pop();
+			selectProcessByLane("Lane 2");
 
 			navigateElement("bpmn:startEvent", "Start Event 2");
 

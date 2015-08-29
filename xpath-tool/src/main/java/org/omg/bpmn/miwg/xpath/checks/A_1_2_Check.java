@@ -13,7 +13,7 @@ public class A_1_2_Check extends A_1_0_Check {
 
 	@Override
 	protected void doExecute() throws Throwable {
-		selectElementX("/bpmn:definitions/bpmn:process");
+		selectFirstProcess();
 
 		navigateElement("bpmn:startEvent", "Start Event");
 
