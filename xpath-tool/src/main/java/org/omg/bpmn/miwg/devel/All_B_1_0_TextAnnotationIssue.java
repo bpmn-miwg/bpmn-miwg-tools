@@ -118,7 +118,7 @@ public class All_B_1_0_TextAnnotationIssue extends AbstractTestCase {
 		public void doExecute() throws Throwable {
 			selectElementX("//bpmn:collaboration");
 			{
-				selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
+				selectProcessByParticipant("Pool");
 				navigateElement("bpmn:callActivity",
 						"Call Activity Collapsed");
 				checkTextAssociation("Text Annotation");

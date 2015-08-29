@@ -470,7 +470,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			String targetId = getAttribute(sequenceFlowNode, "targetRef");
 			String xpathTarget = String.format("%s[%s@id='%s']", type,
 					nameCondition, targetId);
-			
+
 			Node targetNode = findNode(xpathTarget);
 			if (targetNode != null) {
 				ok(xpathTarget);
@@ -478,22 +478,26 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				/**
 				 * We have found the correct sequence flow and the target
 				 * element. Now we check whether there is a corresponding
-				 * incoming and outgoing element (this is necessary as agreed in issue #100).
+				 * incoming and outgoing element (this is necessary as agreed in
+				 * issue #100).
 				 */
-				
-				String xpathOutgoing =  String.format("bpmn:outgoing[text()='%s']", sequenceFlowID);
+
+				String xpathOutgoing = String.format(
+						"bpmn:outgoing[text()='%s']", sequenceFlowID);
 				Node outgoingNode = findNode(node, xpathOutgoing);
 				if (outgoingNode == null) {
-					finding(xpathOutgoing, "There is no corresponding outgoing node for the sequence flow");
-				}
-				
-				String xpathIncoming = String.format("bpmn:incoming[text()='%s']", sequenceFlowID);
-				Node incomingNode = findNode(targetNode, xpathIncoming);
-				if (incomingNode == null) {
-					finding(xpathIncoming, "There is no corresponding incoming node for the sequence flow");
+					finding(xpathOutgoing,
+							"There is no corresponding outgoing node for the sequence flow");
 				}
 
-				
+				String xpathIncoming = String.format(
+						"bpmn:incoming[text()='%s']", sequenceFlowID);
+				Node incomingNode = findNode(targetNode, xpathIncoming);
+				if (incomingNode == null) {
+					finding(xpathIncoming,
+							"There is no corresponding incoming node for the sequence flow");
+				}
+
 				setCurrentNode(targetNode, null);
 				return targetNode;
 			}
@@ -729,7 +733,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return n;
 	}
 
-	public void selectProcessX(String xpath) throws Throwable {
+	public void selectFirstProcess() throws Throwable { 
+		selectProcessX("/bpmn:definitions/bpmn:process");
+	}
+	
+	private void selectProcessX(String xpath) throws Throwable {
 		if (head() == null) {
 			finding(xpath, "Parent failed");
 			push(null);
@@ -760,6 +768,12 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		selectProcessX(xpath);
 	}
 
+	public void selectProcessByLane(String lane) throws Throwable {
+		String xpath = String.format(
+				"//bpmn:process[bpmn:laneSet/bpmn:lane[@name='%s']]", lane);
+		selectProcessX(xpath);
+	}
+
 	public void selectProcessOfCallActivity() throws Throwable {
 		if (head() == null) {
 			finding("selectProcessofCallActivity", "Parent failed");
@@ -786,6 +800,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		setCurrentNode(n, null);
 		push(n);
 	}
+	
+
 
 	public void checkDefaultSequenceFlow() throws Throwable {
 		if (currentNode == null) {

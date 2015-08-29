@@ -25,7 +25,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 			checkMessageDefinition();
 
 			{
-				selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]");
+				selectProcessByParticipant("Participant");
 
 				checkXORMarkersForProcess(true);
 
