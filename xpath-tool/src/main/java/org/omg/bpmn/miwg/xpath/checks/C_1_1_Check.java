@@ -31,41 +31,31 @@ public class C_1_1_Check extends AbstractXpathCheck {
 		selectElement("bpmn:process", "Invoice Handling (OMG BPMN MIWG Demo)");
 		{
 			checkAttributeValue("isExecutable", "true");
-			checkExtensionElements();
 
 			navigateElement("bpmn:startEvent", "Invoice received");
-			checkExtensionElements();
 
 			navigateFollowingElement("bpmn:userTask", "Assign Approver");
-			checkExtensionElements();
 
 			navigateFollowingElement("bpmn:userTask", "Approve Invoice");
-			checkExtensionElements();
 
 			Node n1 = navigateFollowingElement("bpmn:exclusiveGateway",
 					"Invoice approved?");
-			checkExtensionElements();
 			
 
 			{
 				navigateFollowingElement("bpmn:userTask", "Rechnung klären",
 						"no");
-				checkExtensionElements();
 
 				Node n2 = navigateFollowingElement("bpmn:exclusiveGateway",
 						"Review successful?");
-				checkExtensionElements();
 
 				navigateFollowingElement("bpmn:userTask", "Approve Invoice",
 						"yes");
-				checkExtensionElements();
 
 				navigateElement(n2);
-				checkExtensionElements();
 
 				navigateFollowingElement("bpmn:endEvent",
 						"Invoice not processed", "no");
-				checkExtensionElements();
 
 			}
 
@@ -74,14 +64,10 @@ public class C_1_1_Check extends AbstractXpathCheck {
 			{
 				navigateFollowingElement("bpmn:userTask",
 						"Prepare Bank Transfer", "yes");
-				checkExtensionElements();
 
 				navigateFollowingElement("bpmn:serviceTask", "Archive Invoice");
-				checkNonBPMNAttributes();
-				checkExtensionElements();
 
 				navigateFollowingElement("bpmn:endEvent", "Invoice processed");
-				checkExtensionElements();
 
 			}
 		}

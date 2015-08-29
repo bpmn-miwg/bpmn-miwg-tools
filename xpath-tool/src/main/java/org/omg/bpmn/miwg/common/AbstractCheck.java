@@ -29,6 +29,7 @@ public abstract class AbstractCheck {
 		details.setDescription(entry.toLine());
 	}
 
+
 	protected void ok(String assertion, String message) {
 		ok(new OKAssertionEntry(assertion, message, null));
 	}

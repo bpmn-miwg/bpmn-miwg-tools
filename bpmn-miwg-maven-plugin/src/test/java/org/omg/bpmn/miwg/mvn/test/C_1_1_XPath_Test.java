@@ -59,6 +59,8 @@ public class C_1_1_XPath_Test {
 		testDOM = DOMFactory.getDocument(TEST_RESOURCE);
 	}
 
+
+
 	@Test
 	public void testReference_XPath() throws Exception {
 		DOMAnalysisTool xpathTool = new XPathAnalysisTool();
@@ -68,7 +70,23 @@ public class C_1_1_XPath_Test {
 
 		assertEquals(
 				0,
+				xpathTool.analyzeDOM(job, referenceDOM, referenceDOM, null).numFindings);
+	}
+	
+	/***
+	 * This test will yield differences between the reference and test bpmn files.
+	 * The differences are explained in /src/test/resources/Reference/C.1.1-Differences.txt
+	 */
+	@Test
+	public void testReference_XPath_ExpectedDifference() throws Exception {
+		DOMAnalysisTool xpathTool = new XPathAnalysisTool();
+
+		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "C.1.1",
+				MIWGVariant.Reference, null, null);
+
+		assertEquals(
+				5,
 				xpathTool.analyzeDOM(job, referenceDOM, testDOM, null).numFindings);
 	}
-
+	
 }

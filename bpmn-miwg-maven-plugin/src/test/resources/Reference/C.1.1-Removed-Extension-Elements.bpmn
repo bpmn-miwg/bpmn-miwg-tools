@@ -11,8 +11,6 @@
       </extensionElements>
       <userTask id="approveInvoice" camunda:assignee="${approver}" camunda:formKey="app:approveInvoice.jsf" name="Approve Invoice" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="##unspecified">
          <extensionElements>
-            <w4graph:new>a</w4graph:new>
-            <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
             <signavio:signavioMetaData metaKey="adaptereventtype" metaValue=""/>
             <signavio:signavioMetaData metaKey="documentationlink" metaValue="[]"/>
             <signavio:signavioMetaData metaKey="test" metaValue=""/>
@@ -245,7 +243,7 @@
          </extensionElements>
          <incoming>SequenceFlow_3</incoming>
       </endEvent>
-      <serviceTask id="archiveInvoice" camunda:delegateExpression="#{archiveService}" w4:serviceName="ArchiveInvoiceService" name="Archive&#xA;Invoice" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="##unspecified">
+      <serviceTask id="archiveInvoice" camunda:delegateExpression="#{archiveService}" name="Archive&#xA;Invoice" completionQuantity="1" isForCompensation="false" startQuantity="1" implementation="##unspecified">
          <extensionElements>
             <camunda:field name="text0" stringValue="Hello World"/>
             <camunda:field name="text1">
