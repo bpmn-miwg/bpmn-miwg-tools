@@ -132,7 +132,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	/**
-	 * Logs a finding and derives the name of the assertion from the top method name. 
+	 * Logs a finding and derives the name of the assertion from the top method
+	 * name.
 	 */
 	protected void findingTop(String parameter, String message) {
 		finding(new FindingAssertionEntry(callingMethodTop(), message,
@@ -141,7 +142,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	private void setCurrentNode(Node n, String param) throws Throwable {
 		currentNode = n;
-		
+
 		triggerAutoChecks();
 	}
 
@@ -428,7 +429,6 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	protected Node navigateFollowingElement(Node node, String type,
 			String name, String sequenceFlowName) throws Throwable {
-		String xpathOutgoing = "bpmn:outgoing";
 
 		if (node == null) {
 			finding(null, "The base node is null");
@@ -440,51 +440,102 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			return null;
 		}
 
-		for (Node outgoingNode : findNodes(node, xpathOutgoing)) {
-			String sequenceFlowId = outgoingNode.getTextContent();
+		String sourceID = getCurrentNodeID();
 
-			String xpathSequenceFlow;
+		String xpathSequenceFlow;
 
-			if (sequenceFlowName == null) {
-				xpathSequenceFlow = String.format(
-						"bpmn:sequenceFlow[@id='%s']", sequenceFlowId);
+		if (sequenceFlowName == null) {
+			xpathSequenceFlow = String.format(
+					"bpmn:sequenceFlow[@sourceRef='%s']", sourceID);
+		} else {
+			xpathSequenceFlow = String.format(
+					"bpmn:sequenceFlow[@sourceRef='%s' and @name='%s']",
+					sourceID, sequenceFlowName);
+		}
+
+		List<Node> sequenceFlowNodes = findNodes(head(), xpathSequenceFlow);
+		for (Node sequenceFlowNode : sequenceFlowNodes) {
+
+			String sequenceFlowID = getNodeIDNoNull(sequenceFlowNode);
+			String nameCondition;
+
+			if (name == null) {
+				nameCondition = "not(@name) and ";
+			} else if (name.equals("")) {
+				nameCondition = "";
 			} else {
-				xpathSequenceFlow = String.format(
-						"bpmn:sequenceFlow[@id='%s' and @name='%s']",
-						sequenceFlowId, sequenceFlowName);
+				nameCondition = String.format("@name='%s' and ", name);
 			}
-			Node nSequenceFlow = findNode(xpathSequenceFlow);
 
-			if (nSequenceFlow != null) {
+			String targetId = getAttribute(sequenceFlowNode, "targetRef");
+			String xpathTarget = String.format("%s[%s@id='%s']", type,
+					nameCondition, targetId);
+			
+			Node targetNode = findNode(xpathTarget);
+			if (targetNode != null) {
+				ok(xpathTarget);
 
-				String nameCondition;
-
-				if (name == null) {
-					nameCondition = "not(@name) and ";
-				} else if (name.equals("")) {
-					nameCondition = "";
-				} else {
-					nameCondition = String.format("@name='%s' and ", name);
+				/**
+				 * We have found the correct sequence flow and the target
+				 * element. Now we check whether there is a corresponding
+				 * incoming and outgoing element (this is necessary as agreed in issue #100).
+				 */
+				
+				String xpathOutgoing =  String.format("bpmn:outgoing[text()='%s']", sequenceFlowID);
+				Node outgoingNode = findNode(node, xpathOutgoing);
+				if (outgoingNode == null) {
+					finding(xpathOutgoing, "There is no corresponding outgoing node for the sequence flow");
+				}
+				
+				String xpathIncoming = String.format("bpmn:incoming[text()='%s']", sequenceFlowID);
+				Node incomingNode = findNode(targetNode, xpathIncoming);
+				if (incomingNode == null) {
+					finding(xpathIncoming, "There is no corresponding incoming node for the sequence flow");
 				}
 
-				String targetId = getAttribute(nSequenceFlow, "targetRef");
-				String xpathTarget = String.format("%s[%s@id='%s']", type,
-						nameCondition, targetId);
-
-				Node n = findNode(xpathTarget);
-				if (n != null) {
-					ok(xpathTarget);
-					setCurrentNode(n, null);
-					return n;
-				}
-
+				
+				setCurrentNode(targetNode, null);
+				return targetNode;
 			}
+
 		}
 
 		finding(String.format("%s[@name='%s']", type, name),
 				"No outgoing reference found");
-		
+
 		return null;
+
+		/*
+		 * for (Node outgoingNode : findNodes(node, xpathOutgoing)) { String
+		 * sequenceFlowId = outgoingNode.getTextContent();
+		 * 
+		 * String xpathSequenceFlow;
+		 * 
+		 * if (sequenceFlowName == null) { xpathSequenceFlow = String.format(
+		 * "bpmn:sequenceFlow[@id='%s']", sequenceFlowId); } else {
+		 * xpathSequenceFlow = String.format(
+		 * "bpmn:sequenceFlow[@id='%s' and @name='%s']", sequenceFlowId,
+		 * sequenceFlowName); } Node nSequenceFlow =
+		 * findNode(xpathSequenceFlow);
+		 * 
+		 * if (nSequenceFlow != null) {
+		 * 
+		 * String nameCondition;
+		 * 
+		 * if (name == null) { nameCondition = "not(@name) and "; } else if
+		 * (name.equals("")) { nameCondition = ""; } else { nameCondition =
+		 * String.format("@name='%s' and ", name); }
+		 * 
+		 * String targetId = getAttribute(nSequenceFlow, "targetRef"); String
+		 * xpathTarget = String.format("%s[%s@id='%s']", type, nameCondition,
+		 * targetId);
+		 * 
+		 * Node n = findNode(xpathTarget); if (n != null) { ok(xpathTarget);
+		 * setCurrentNode(n, null); return n; }
+		 * 
+		 * } }
+		 */
+
 	}
 
 	public Node navigateElementX(String expr, String param) throws Throwable {
