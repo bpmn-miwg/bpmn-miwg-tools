@@ -89,7 +89,7 @@ public class Reference_B_2_0_Test {
         AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR,
 				"B.2.0", MIWGVariant.Reference, null, null);
 
-		assertEquals(0, xpathTool.analyzeDOM(job, null, referenceDOM, null).numFindings);
+		assertEquals(0, xpathTool.analyzeDOM(job, referenceDOM, referenceDOM, null).numFindings);
 	}
 
 	@Test

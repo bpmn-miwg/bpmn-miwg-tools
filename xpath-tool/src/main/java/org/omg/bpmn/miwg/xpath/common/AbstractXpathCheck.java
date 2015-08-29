@@ -621,8 +621,10 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	private void triggerAutoChecks() throws Throwable {
-		checkAutoExtensionElements();
-		checkAutoNonBPMNAttributes();
+		if (referenceDocument != null) {
+			checkAutoExtensionElements();
+			checkAutoNonBPMNAttributes();
+		}
 	}
 
 	public void selectElementNoID(String type) throws Throwable {

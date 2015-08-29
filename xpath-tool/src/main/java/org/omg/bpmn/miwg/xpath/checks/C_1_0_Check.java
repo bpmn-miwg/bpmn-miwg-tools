@@ -29,36 +29,6 @@ public class C_1_0_Check extends AbstractXpathCheck {
 			selectPool("Team-Assistant");
 			{
 
-				selectElementNoID("bpmn:extensionElements");
-				{
-
-					navigateElement("signavio:signavioMetaData", "metaKey",
-							"bgcolor");
-					checkAttributeValue("metaValue", "#ffffff");
-
-					navigateElement("signavio:signavioMetaData", "metaKey",
-							"rolle");
-					checkAttributeValue("metaValue", "[]");
-
-					navigateElement("signavio:signavioMetaData", "metaKey",
-							"userstory");
-					checkAttributeValue("metaValue", "[]");
-
-					selectElementNoID("w4graph:graphStyle");
-					{
-
-						navigateElement("w4graph:basic", "background",
-								"192,192,192");
-						checkAttributeValue("foreground", "0,0,0");
-						checkAttributeValue("autoResize", "false");
-						checkAttributeValue("borderColor", "100,100,100");
-						checkAttributeValue("collapsed", "false");
-					}
-					pop();
-
-				}
-				pop();
-
 				selectReferencedProcess();
 				{
 					checkAttributeValue("isExecutable", "false");
@@ -100,25 +70,6 @@ public class C_1_0_Check extends AbstractXpathCheck {
 					navigateElement("bpmn:task", "Review and document result");
 
 					navigateElement("bpmn:endEvent", null);
-
-					selectElementNoID("bpmn:extensionElements");
-					{
-
-						selectElementNoID("w4graph:graphStyle");
-						{
-
-							navigateElement("w4graph:basic", "autoResize",
-									"false");
-							checkAttributeValue("foreground", "0,0,0");
-							checkAttributeValue("background", "255,255,255");
-							checkAttributeValue("autoResize", "false");
-							checkAttributeValue("borderColor", "100,100,100");
-							checkAttributeValue("collapsed", "false");
-						}
-						pop();
-
-					}
-					pop();
 
 				}
 				pop();
@@ -186,13 +137,6 @@ public class C_1_0_Check extends AbstractXpathCheck {
 
 					checkAttributeValue("camunda:delegateExpression",
 							"#{archiveService}");
-
-					selectElementNoID("bpmn:extensionElements");
-					{
-						// navigateElement("field", "name", "text0");
-
-					}
-					pop();
 
 					navigateFollowingElement("bpmn:endEvent",
 							"Invoice processed");

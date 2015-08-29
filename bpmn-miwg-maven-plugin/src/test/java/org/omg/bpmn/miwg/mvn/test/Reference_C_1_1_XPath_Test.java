@@ -44,7 +44,7 @@ import org.w3c.dom.Document;
  *
  */
 
-public class C_1_1_XPath_Test {
+public class Reference_C_1_1_XPath_Test {
 
 	private static final String REFERENCE_RESOURCE = "/" + Consts.REFERENCE_DIR
 			+ "/C.1.1.bpmn";

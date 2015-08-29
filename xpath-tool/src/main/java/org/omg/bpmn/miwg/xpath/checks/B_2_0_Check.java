@@ -17,8 +17,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 		Node n;
 		{
-
-			selectElementX("//bpmn:collaboration");
+			selectCollaboration();
 
 			navigateElementX("bpmn:messageFlow[@name='Message Flow 1']");
 			checkMessageDefinition();
@@ -78,19 +77,19 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				checkGlobalTask(true);
 
 				{
-					selectElementX("bpmn:subProcess[@name='Expanded Sub-Process 1']");
+					selectElement("bpmn:subProcess", "Expanded Sub-Process 1");
 					checkXORMarkersForProcess(true);
-					navigateElementX("bpmn:startEvent[@name='Start Event 2']");
-					{
-						selectElementX("bpmn:userTask[@name='User Task 7 Standard Loop']");
-						navigateElementX("bpmn:standardLoopCharacteristics");
-						pop();
-					}
-					navigateElementX("bpmn:endEvent[@name='End Event 2']");
+					
+					navigateElement("bpmn:startEvent", "Start Event 2");
+					
+					navigateFollowingElement("bpmn:userTask", "User Task 7 Standard Loop");
+					//TODO: navigateElementX("bpmn:standardLoopCharacteristics");
+
+					navigateFollowingElement("bpmn:endEvent", "End Event 2");
 					pop();
 				}
 
-				navigateElementX("bpmn:userTask[@name='User Task 8']");
+				navigateElement("bpmn:userTask", "User Task 8");
 				navigateBoundaryEvent(null);
 				checkEscalationEvent();
 
@@ -110,12 +109,13 @@ public class B_2_0_Check extends AbstractXpathCheck {
 			}
 
 			{
-				selectProcessX("//bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]");
+				selectPool("Pool");
+				selectReferencedProcess();
 
 				checkXORMarkersForProcess(true);
-
-				navigateElementX("bpmn:laneSet/bpmn:lane[@name='Lane 1']");
-				navigateElementX("bpmn:laneSet/bpmn:lane[@name='Lane 2']");
+				
+				navigateLane("Lane 1");
+				navigateLane("Lane 2");
 
 				navigateElement("bpmn:startEvent", "Start Event 2 Message");
 				checkMessageEvent();
@@ -362,6 +362,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 				}
 
+				pop();
 				pop();
 			}
 
