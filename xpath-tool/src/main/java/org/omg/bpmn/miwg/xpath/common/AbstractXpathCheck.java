@@ -622,6 +622,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	private void triggerAutoChecks() throws Throwable {
 		if (referenceDocument != null) {
+			// These auto checks only work when there is a reference document
 			checkAutoExtensionElements();
 			checkAutoNonBPMNAttributes();
 		}
