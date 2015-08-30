@@ -59,7 +59,7 @@ public class FindingAssertionEntry extends AbstractCheckEntry {
 
 	@Override
 	public String toLine() {
-		return String.format("FINDING: %s; Message: %s; Parameter: %s",
+		return String.format("FINDING: %-40s Message: %s; Parameter: %s",
 				assertion, message, parameter);
 	}
 

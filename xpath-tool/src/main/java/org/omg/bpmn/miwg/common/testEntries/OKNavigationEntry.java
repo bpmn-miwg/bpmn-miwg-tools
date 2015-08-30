@@ -52,7 +52,7 @@ public class OKNavigationEntry extends AbstractCheckEntry {
 
 	@Override
 	public String toLine() {
-		return String.format("OK     : %s: %s (id: %s)", caller, message,
+		return String.format("OK     : %-40s %s (id: %s)", caller, message,
 				identifier);
 	}
 

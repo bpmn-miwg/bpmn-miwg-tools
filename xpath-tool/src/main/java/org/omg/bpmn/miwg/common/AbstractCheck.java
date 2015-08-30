@@ -57,12 +57,12 @@ public abstract class AbstractCheck {
 	}
 
 	public void pluggableAssertionOk(Assertion assertion, String message) {
-		ok(new OKAssertionEntry("Pluggable assertion " + assertion.getClass().getSimpleName(), message,
+		ok(new OKAssertionEntry("Pluggable: " + assertion.getClass().getSimpleName(), message,
 				null));
 	}
 
 	public void pluggableAssertionFinding(Assertion assertion, String message, String parameter) {
-		ok(new FindingAssertionEntry("Pluggable assertion " + assertion.getClass().getSimpleName(),
+		ok(new FindingAssertionEntry("Pluggable: " + assertion.getClass().getSimpleName(),
 				message, (String) null));
 	}
 

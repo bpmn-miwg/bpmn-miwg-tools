@@ -50,7 +50,7 @@ public class OKAssertionEntry extends AbstractCheckEntry {
 
 	@Override
 	public String toLine() {
-		return String.format("OK     : %s; Message: %s", assertion, message);
+		return String.format("OK     : %-40s Message: %s", assertion, message);
 	}
 
 	@Override

@@ -39,7 +39,7 @@ public class InfoEntry extends AbstractCheckEntry {
 
 	@Override
 	public String toLine() {
-		return String.format("INFO   : %s", message);
+		return String.format("INFO   : %-30s", message);
 	}
 
 
