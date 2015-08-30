@@ -400,7 +400,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				.format("bpmn:laneSet/bpmn:lane[@name='%s']", name);
 		return navigateElementX(xPath);
 	}
-	
+
 	public Node navigateDefinitions() throws Throwable {
 		return navigateElementX("/bpmn:definitions");
 	}
@@ -635,11 +635,72 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		selectElementX(xpath);
 	}
 
+	public Node navigateChildElement(String type, String name) throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return null;
+		}
+
+		String xpath;
+		if (name == null) {
+			xpath = String.format("%s[(not(@name) or @name='')]", type, name); // "string-length(@attr)=0";
+		} else {
+			xpath = String.format("%s[@name='%s']", type, name);
+		}
+
+		Node n = findNode(currentNode, xpath);
+		if (n == null) {
+			finding(xpath, "No node found");
+			return null;
+		}
+		ok(xpath);
+		setCurrentNode(n);
+		return n;
+	}
+
+	public void checkChildElementValue(String type, String name,
+			String expectedValue) throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String xpath;
+		if (name == null) {
+			xpath = String.format("%s[(not(@name) or @name='')]", type, name); // "string-length(@attr)=0";
+		} else {
+			xpath = String.format("%s[@name='%s']", type, name);
+		}
+
+		Node n = findNode(currentNode, xpath);
+		if (n == null) {
+			finding(xpath, "No node found");
+			return;
+		}
+
+		String actualValue = n.getTextContent();
+
+		if (!expectedValue.equals(actualValue)) {
+			finding(xpath,
+					String.format(
+							"The element has the expected value '%s', but the actual value is '%s'",
+							expectedValue, actualValue));
+			return;
+		}
+
+		ok(xpath);
+	}
+
 	private void triggerAutoChecks() throws Throwable {
-		if (referenceDocument != null) {
-			// These auto checks only work when there is a reference document
-			checkAutoExtensionElements();
-			checkAutoNonBPMNAttributes();
+		if (currentNode != null) {
+
+			if (referenceDocument != null) {
+				// These auto checks only work when there is a reference
+				// document
+				checkAutoExtensionElements();
+				checkAutoNonBPMNAttributes();
+			}
+
 		}
 	}
 
@@ -693,10 +754,10 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return n;
 	}
 
-	public void selectFirstProcess() throws Throwable { 
+	public void selectFirstProcess() throws Throwable {
 		selectProcessX("/bpmn:definitions/bpmn:process");
 	}
-	
+
 	private void selectProcessX(String xpath) throws Throwable {
 		if (head() == null) {
 			finding(xpath, "Parent failed");
@@ -760,8 +821,6 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		setCurrentNode(n);
 		push(n);
 	}
-	
-
 
 	public void checkDefaultSequenceFlow() throws Throwable {
 		if (currentNode == null) {
@@ -813,6 +872,16 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		ok("Attribute " + attribute + "exists");
 	}
 
+	private boolean hasAttribute(String attribute) {
+		if (currentNode == null) {
+			return false;
+		}
+
+		Node attr = currentNode.getAttributes().getNamedItem(attribute);
+
+		return attr != null;
+	}
+
 	protected void checkAttributeValue(String attribute, boolean value,
 			boolean defaultValue) throws Throwable {
 		checkAttributeValue(attribute, Boolean.toString(value),
@@ -845,6 +914,27 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		ok("Attribute " + attribute + "=" + value);
+	}
+
+	protected String checkAttributeValue(String attribute) throws Throwable {
+		if (currentNode == null) {
+			finding("", "Null node");
+			return null;
+		}
+
+		Node attr = currentNode.getAttributes().getNamedItem(attribute);
+
+		if (attr == null) {
+			finding("",
+					String.format("Attribute %s is not existing.", attribute));
+			return null;
+
+		}
+
+		String value = attr.getTextContent();
+
+		ok("Attribute " + attribute + "=" + value);
+		return value;
 	}
 
 	protected void checkAttributeValue(Node n, String attribute, String value)
@@ -1082,21 +1172,61 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	public void checkMessageEvent() throws Throwable {
+		checkMessageEvent(false, null);
+	}
+
+	public void checkMessageEvent(boolean followMessageRef) throws Throwable {
+		checkMessageEvent(followMessageRef, null);
+	}
+	
+	public void checkMessageEvent(boolean followMessageRef,
+			String expectedMessageName) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
 		}
 
 		String xpath = "bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef";
-		Node n = findNode(currentNode, xpath);
-
-		if (n == null) {
+		Node messageEventDefinitionNode = findNode(currentNode, xpath);
+		if (messageEventDefinitionNode == null) {
 			finding(xpath, "Cannot find message event definition");
 			return;
-		} else {
-			ok("Message event definition");
-			return;
 		}
+
+		if (followMessageRef) {
+			String messageID = getAttribute(messageEventDefinitionNode,
+					"messageRef", false);
+			if (messageID == null) {
+				finding(null,
+						"The messageEventDefinition element has no messageRef attribute");
+				return;
+			}
+
+			String messageXpath = String.format("//bpmn:message[@id='%s']",
+					messageID);
+			Node messageNode = findNode(messageXpath);
+			if (messageNode == null) {
+				finding(messageXpath, String.format(
+						"Cannot find the referenced message with the id %s",
+						messageID));
+				return;
+			}
+
+			if (expectedMessageName != null) {
+				String actualMessageName = getAttribute(messageNode, "name",
+						false);
+				if (!expectedMessageName.equals(actualMessageName)) {
+					finding(null,
+							String.format(
+									"The name of the referenced message should be %s, but it is %s",
+									expectedMessageName, actualMessageName));
+					return;
+				}
+			}
+		}
+
+		ok("Message event definition");
+		return;
 	}
 
 	public void checkTimerEvent() throws Throwable {

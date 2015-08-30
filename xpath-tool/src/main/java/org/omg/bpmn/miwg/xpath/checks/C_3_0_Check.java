@@ -1,7 +1,6 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
 import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
-import org.omg.bpmn.miwg.xpath.common.Direction;
 import org.w3c.dom.Node;
 
 public class C_3_0_Check extends AbstractXpathCheck {
@@ -13,13 +12,25 @@ public class C_3_0_Check extends AbstractXpathCheck {
 
 	@Override
 	public void doExecute() throws Throwable {
+		navigateElement("bpmn:resource", "User");
+		String resourceID = checkAttributeValue("id");
+
 		selectFirstProcess();
-
+		checkAttributeValue("isExecutable", "true");
+		
+		
 		navigateElement("bpmn:startEvent", "Receive customer request");
-		checkMessageEvent();
+		checkMessageEvent(true, "Service Level");
 
-		navigateFollowingElement("bpmn:userTask", "Analyse customer request");
+		Node taskAnalyseCustomerRequest = navigateFollowingElement("bpmn:userTask", "Analyse customer request");
+		checkAttributeValue("startQuantity", "2");
+		checkAttributeValue("completionQuantity", "2");
+		
+		navigateChildElement("bpmn:potentialOwner", "Potential Owner");
+		checkChildElementValue("bpmn:resourceRef", null, resourceID);
 
+		
+		navigateElement(taskAnalyseCustomerRequest);
 		Node gateway = navigateFollowingElement("bpmn:exclusiveGateway",
 				"Service type");
 
@@ -56,7 +67,8 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		Node task3 = 
 				navigateFollowingElement("bpmn:userTask", "Perform repair (standard level)", "Standard");
 		navigateBoundaryEvent("");
-		checkMessageEvent();
+		checkMessageEvent(true, "Service Level");
+		
 		navigateFollowingElement("bpmn:userTask", "Perform repair (premium level)");
 		
 		navigateElement(task3);
