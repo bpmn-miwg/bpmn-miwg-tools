@@ -511,10 +511,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 							"There is no corresponding incoming node for the sequence flow");
 				}
 
-				if (assertions != null)
+				if (assertions != null) {
 					for (Assertion assertion : assertions) {
 						assertion.check(sequenceFlowNode, this);
 					}
+				}
 
 				setCurrentNode(targetNode);
 				return targetNode;
@@ -526,38 +527,6 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				"No outgoing reference found");
 
 		return null;
-
-		/*
-		 * for (Node outgoingNode : findNodes(node, xpathOutgoing)) { String
-		 * sequenceFlowId = outgoingNode.getTextContent();
-		 * 
-		 * String xpathSequenceFlow;
-		 * 
-		 * if (sequenceFlowName == null) { xpathSequenceFlow = String.format(
-		 * "bpmn:sequenceFlow[@id='%s']", sequenceFlowId); } else {
-		 * xpathSequenceFlow = String.format(
-		 * "bpmn:sequenceFlow[@id='%s' and @name='%s']", sequenceFlowId,
-		 * sequenceFlowName); } Node nSequenceFlow =
-		 * findNode(xpathSequenceFlow);
-		 * 
-		 * if (nSequenceFlow != null) {
-		 * 
-		 * String nameCondition;
-		 * 
-		 * if (name == null) { nameCondition = "not(@name) and "; } else if
-		 * (name.equals("")) { nameCondition = ""; } else { nameCondition =
-		 * String.format("@name='%s' and ", name); }
-		 * 
-		 * String targetId = getAttribute(nSequenceFlow, "targetRef"); String
-		 * xpathTarget = String.format("%s[%s@id='%s']", type, nameCondition,
-		 * targetId);
-		 * 
-		 * Node n = findNode(xpathTarget); if (n != null) { ok(xpathTarget);
-		 * setCurrentNode(n, null); return n; }
-		 * 
-		 * } }
-		 */
-
 	}
 
 	private Node navigateElementX(String expr, String param) throws Throwable {

@@ -11,6 +11,7 @@ import org.omg.bpmn.miwg.common.testEntries.FindingAssertionEntry;
 import org.omg.bpmn.miwg.common.testEntries.InfoEntry;
 import org.omg.bpmn.miwg.common.testEntries.OKAssertionEntry;
 import org.omg.bpmn.miwg.xpath.common.CheckContext;
+import org.omg.bpmn.miwg.xpath.pluggableAssertions.Assertion;
 import org.w3c.dom.Document;
 
 public abstract class AbstractCheck {
@@ -28,7 +29,6 @@ public abstract class AbstractCheck {
 		DetailedOutput details = new DetailedOutput();
 		details.setDescription(entry.toLine());
 	}
-
 
 	protected void ok(String assertion, String message) {
 		ok(new OKAssertionEntry(assertion, message, null));
@@ -54,6 +54,16 @@ public abstract class AbstractCheck {
 		out.println(entry);
 		DetailedOutput details = new DetailedOutput();
 		details.setDescription(entry.toLine());
+	}
+
+	public void pluggableAssertionOk(Assertion assertion, String message) {
+		ok(new OKAssertionEntry("Pluggable assertion " + assertion.getClass().getSimpleName(), message,
+				null));
+	}
+
+	public void pluggableAssertionFinding(Assertion assertion, String message, String parameter) {
+		ok(new FindingAssertionEntry("Pluggable assertion " + assertion.getClass().getSimpleName(),
+				message, (String) null));
 	}
 
 	protected int resultsOK() {
