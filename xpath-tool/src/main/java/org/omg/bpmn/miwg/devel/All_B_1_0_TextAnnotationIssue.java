@@ -116,7 +116,7 @@ public class All_B_1_0_TextAnnotationIssue extends AbstractTestCase {
 
 		@Override
 		public void doExecute() throws Throwable {
-			selectElementX("//bpmn:collaboration");
+			selectCollaboration();
 			{
 				selectProcessByParticipant("Pool");
 				navigateElement("bpmn:callActivity",

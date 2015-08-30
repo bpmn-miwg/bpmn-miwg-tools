@@ -19,11 +19,6 @@ public class B_2_0_Check extends AbstractXpathCheck {
 		{
 			selectCollaboration();
 
-			navigateElementX("bpmn:messageFlow[@name='Message Flow 1']");
-			checkMessageDefinition();
-			navigateElementX("bpmn:messageFlow[@name='Message Flow 2']");
-			checkMessageDefinition();
-
 			{
 				selectProcessByParticipant("Participant");
 
@@ -202,23 +197,21 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				{
 					// FLOW following the event message catch
 
-					navigateElementX(
-							"bpmn:subProcess[@name='Collapsed Sub-Process 2']",
-							"L2CollapsedSubProcess");
+					navigateElement("bpmn:subProcess", "Collapsed Sub-Process 2");
 					checkDataAssociation(ArtifactType.DataStoreReference,
 							"Data Store Reference", Direction.Input);
 
 					{
-						selectElementX("bpmn:exclusiveGateway[@name='Exclusive Gateway 4']");
+						selectElement("bpmn:exclusiveGateway", "Exclusive Gateway 4");
 						navigateGatewaySequenceFlowStack("Default Sequence Flow 2");
 						checkDefaultSequenceFlow();
 						pop();
 					}
 
-					navigateElementX("bpmn:intermediateThrowEvent[@name='Intermediate Event Message Throw']");
+					navigateElement("bpmn:intermediateThrowEvent", "Intermediate Event Message Throw");
 					checkMessageEvent();
 
-					n = navigateElementX("bpmn:callActivity[@name='Collapsed Call Activity']");
+					n = navigateElement("bpmn:callActivity", "Collapsed Call Activity");
 
 					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Escalation");
 					checkEscalationEvent();
@@ -253,7 +246,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				{
 					// FLOW following the Intermediate Event Message Catch 2
 
-					navigateElementX("bpmn:intermediateCatchEvent[@name='Intermediate Event Message Catch 2']");
+					navigateElement("bpmn:intermediateCatchEvent", "Intermediate Event Message Catch 2");
 
 					n = navigateFollowingElement("bpmn:task", "Task 21");
 					navigateBoundaryEvent("Boundary Intermediate Event Interrupting Timer");

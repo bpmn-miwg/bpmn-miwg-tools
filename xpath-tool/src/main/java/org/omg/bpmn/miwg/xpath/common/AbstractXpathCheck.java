@@ -23,7 +23,6 @@ import org.omg.bpmn.miwg.common.testEntries.NodePushEntry;
 import org.omg.bpmn.miwg.common.testEntries.OKAssertionEntry;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -140,7 +139,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				parameter));
 	}
 
-	private void setCurrentNode(Node n, String param) throws Throwable {
+	private void setCurrentNode(Node n) throws Throwable {
 		currentNode = n;
 
 		triggerAutoChecks();
@@ -293,14 +292,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				String.format("self::node()[@name='%s']", sequenceFlowName));
 	}
 
-	public void navigateReferenceX(String referenceXpath, String targetXpath,
+	private void navigateReferenceX(String referenceXpath, String targetXpath,
 			String targetXpathParameter, String targetCheckXpath)
 			throws Throwable {
 		navigateReferenceX(head(), referenceXpath, targetXpath,
 				targetXpathParameter, targetCheckXpath);
 	}
 
-	public void navigateReferenceX(Node baseNode, String referenceXpath,
+	private void navigateReferenceX(Node baseNode, String referenceXpath,
 			String targetXpath, String targetXpathParameter,
 			String targetCheckXpath) throws Throwable {
 
@@ -349,7 +348,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 							referenceXpath, targetXpath, targetXpathParameter,
 							targetCheckXpath);
 			ok(message);
-			setCurrentNode(foundNode, message);
+			setCurrentNode(foundNode);
 		} else {
 			finding(targetCheckXpath, "Target check failed");
 			return;
@@ -357,7 +356,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	}
 
-	public Node navigateElementX(String expr) throws Throwable {
+	private Node navigateElementX(String expr) throws Throwable {
 		return navigateElementX(expr, null);
 	}
 
@@ -422,7 +421,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		Node n = findNode(xpathTarget);
 		if (n != null) {
 			ok(xpathTarget);
-			setCurrentNode(n, null);
+			setCurrentNode(n);
 			return n;
 		}
 
@@ -502,7 +501,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 							"There is no corresponding incoming node for the sequence flow");
 				}
 
-				setCurrentNode(targetNode, null);
+				setCurrentNode(targetNode);
 				return targetNode;
 			}
 
@@ -546,7 +545,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	}
 
-	public Node navigateElementX(String expr, String param) throws Throwable {
+	private Node navigateElementX(String expr, String param) throws Throwable {
 		if (head() == null) {
 			finding(expr, "Parent failed");
 			return null;
@@ -557,13 +556,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			return null;
 		}
 		ok(expr);
-		setCurrentNode(n, param);
+		setCurrentNode(n);
 		return n;
-	}
-
-	public void navigateElementXByParam(String xpathNav, String xpathVal)
-			throws Throwable {
-		navigateElementXByParam(xpathNav, xpathVal, null);
 	}
 
 	public void selectCollaboration() throws Throwable {
@@ -584,44 +578,6 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		String xpath = String.format("//bpmn:process[@id='%s']", ref);
 
 		selectElementX(xpath);
-	}
-
-	public void navigateElementXByParam(String xpathNav, String xpathVal,
-			String param) throws Throwable {
-		String message = "Navigation: " + xpathNav + "; Value: " + xpathVal;
-		if (head() == null) {
-			finding(message, "Parent failed");
-			return;
-		}
-
-		Node n = findNode(xpathVal);
-		if (n == null) {
-			finding(message, "Value node not found");
-			return;
-		}
-
-		String value;
-		if (n instanceof Element)
-			value = n.getTextContent();
-		else
-			value = n.getNodeValue();
-
-		if (value == null) {
-			finding(message, "Value node was found yet has no value");
-			return;
-		}
-
-		String xpath = String.format(xpathNav, value);
-		message += "; Generated: " + xpath;
-
-		Node n2 = findNode(xpath);
-		if (n2 == null) {
-			finding(message, "Node not found");
-			return;
-		}
-
-		ok(xpath);
-		setCurrentNode(n2, message);
 	}
 
 	public void navigateBoundaryEvent(String name) throws Throwable {
@@ -651,12 +607,12 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			finding(xpathBoundaryElement, "Cannot find boundary element");
 			return;
 		}
-		setCurrentNode(n, null);
+		setCurrentNode(n);
 		ok(String.format("Boundary element '%s' found", name));
 	}
 
 	public void navigateElement(Node node) throws Throwable {
-		setCurrentNode(node, null);
+		setCurrentNode(node);
 		String path = getPath(node);
 		ok(path);
 	}
@@ -692,11 +648,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		selectElementX(xpath);
 	}
 
-	public void selectElementX(String expr) throws Throwable {
+	private void selectElementX(String expr) throws Throwable {
 		selectElementX(expr, null);
 	}
 
-	public void selectElementX(String expr, String param) throws Throwable {
+	private void selectElementX(String expr, String param) throws Throwable {
 		if (head() == null) {
 			finding(expr, "Parent failed");
 			push(null);
@@ -710,7 +666,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 		ok(expr);
 		push(n);
-		setCurrentNode(n, param);
+		setCurrentNode(n);
 	}
 
 	public Node selectCallActivityProcess() throws Throwable {
@@ -733,7 +689,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		ok(xpath);
 		push(n);
-		setCurrentNode(n, null);
+		setCurrentNode(n);
 		return n;
 	}
 
@@ -761,7 +717,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		Node n = (Node) o;
 
 		ok(xpath);
-		setCurrentNode(n, null);
+		setCurrentNode(n);
 		push(n);
 	}
 
@@ -801,7 +757,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		ok(xpath);
-		setCurrentNode(n, null);
+		setCurrentNode(n);
 		push(n);
 	}
 	

@@ -17,7 +17,7 @@ public class DemoTechnicalSupportCheck extends AbstractXpathCheck {
 		{
 			Node n1, n2;
 
-			selectElementX("//bpmn:collaboration");
+			selectCollaboration();
 
 			{
 

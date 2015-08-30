@@ -38,8 +38,8 @@ public class B_1_0_Check extends AbstractXpathCheck {
 			{
 				selectProcessByParticipant("Pool");
 				checkXORMarkersForProcess(false);
-				navigateElementX(".//bpmn:lane[@name='Lane 1']");
-				navigateElementX(".//bpmn:lane[@name='Lane 2']");
+				this.navigateLane("Lane 1");
+				this.navigateLane("Lane 2");
 				navigateElement("bpmn:startEvent", "Start Event Message");
 				checkMessageEvent();
 				Node n1 = navigateFollowingElement("bpmn:parallelGateway",

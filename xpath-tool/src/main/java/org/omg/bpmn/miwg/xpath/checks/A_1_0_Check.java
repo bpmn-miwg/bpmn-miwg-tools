@@ -11,7 +11,7 @@ public class A_1_0_Check extends AbstractXpathCheck {
 
 	@Override
 	protected void doExecute() throws Throwable {
-		selectElementX("/bpmn:definitions/bpmn:process");
+		selectFirstProcess();
 
 		navigateElement("bpmn:startEvent", "Start Event");
 
