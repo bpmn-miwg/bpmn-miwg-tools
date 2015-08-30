@@ -591,14 +591,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			finding(xpathBoundaryElement, "Cannot find boundary element");
 			return;
 		}
-		setCurrentNode(n);
 		ok(String.format("Boundary element '%s' found", name));
+		setCurrentNode(n);
 	}
 
-	public void navigateElement(Node node) throws Throwable {
-		setCurrentNode(node);
+	public void navigateBookmarkedElement(Node node) throws Throwable {
 		String path = getPath(node);
 		ok(path);
+		setCurrentNode(node);
 	}
 
 	public Node selectFollowingElement(String type, String name)

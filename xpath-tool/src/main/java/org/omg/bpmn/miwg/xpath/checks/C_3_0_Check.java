@@ -31,14 +31,14 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		navigateChildElement("bpmn:potentialOwner", "Potential Owner");
 		checkChildElementValue("bpmn:resourceRef", null, resourceID);
 
-		navigateElement(taskAnalyseCustomerRequest);
+		navigateBookmarkedElement(taskAnalyseCustomerRequest);
 		Node gateway = navigateFollowingElement("bpmn:exclusiveGateway",
 				"Service type");
 
 		navigateFollowingElement("bpmn:userTask", "Replace fridge", "Warranty");
 		navigateFollowingElement("bpmn:endEvent", "Fridge replaced");
 
-		navigateElement(gateway);
+		navigateBookmarkedElement(gateway);
 		navigateFollowingElement("bpmn:subProcess", "Perform emergency repair",
 				"Emergency service");
 		Node gateway2 = navigateFollowingElement("bpmn:exclusiveGateway",
@@ -46,10 +46,10 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		navigateFollowingElement("bpmn:endEvent", "Emergency repair completed",
 				"yes");
 
-		navigateElement(gateway2);
+		navigateBookmarkedElement(gateway2);
 		navigateFollowingElement("bpmn:userTask", "Replace fridge", "no");
 
-		navigateElement(gateway);
+		navigateBookmarkedElement(gateway);
 
 		Node gateway3 = navigateFollowingElement("bpmn:exclusiveGateway",
 				"Service level", "Regular repair service");
@@ -65,10 +65,10 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		checkTimerEvent();
 		navigateFollowingElement("bpmn:subProcess", "Perform emergency repair");
 
-		navigateElement(task2);
+		navigateBookmarkedElement(task2);
 		navigateFollowingElement("bpmn:endEvent", "Repair completed");
 
-		navigateElement(gateway3);
+		navigateBookmarkedElement(gateway3);
 		Node task3 = navigateFollowingElement("bpmn:userTask",
 				"Perform repair (standard level)", "Standard");
 		navigateBoundaryEvent("");
@@ -77,7 +77,7 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		navigateFollowingElement("bpmn:userTask",
 				"Perform repair (premium level)");
 
-		navigateElement(task3);
+		navigateBookmarkedElement(task3);
 		navigateFollowingElement("bpmn:endEvent", "Repair completed");
 
 		pop();

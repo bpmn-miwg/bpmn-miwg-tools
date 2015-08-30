@@ -54,7 +54,7 @@ public class DemoTechnicalSupportCheck extends AbstractXpathCheck {
 				navigateFollowingElement("bpmn:endEvent",
 						"Customer issue resolved", "Solution is effective");
 
-				navigateElement(n2);
+				navigateBookmarkedElement(n2);
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Get issue description from customer");
@@ -80,7 +80,7 @@ public class DemoTechnicalSupportCheck extends AbstractXpathCheck {
 				navigateFollowingElement("bpmn:manualTask",
 						"Provide solution to customer");
 
-				navigateElement(n1);
+				navigateBookmarkedElement(n1);
 
 				pop();
 
@@ -110,7 +110,7 @@ public class DemoTechnicalSupportCheck extends AbstractXpathCheck {
 				navigateFollowingElement("bpmn:endEvent",
 						"Issue handled by 1st level support");
 
-				navigateElement(n1);
+				navigateBookmarkedElement(n1);
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Request 2nd level support",
@@ -151,7 +151,7 @@ public class DemoTechnicalSupportCheck extends AbstractXpathCheck {
 				navigateFollowingElement("bpmn:endEvent",
 						"Issue handled by 2 nd level support");
 
-				navigateElement(n1);
+				navigateBookmarkedElement(n1);
 
 				navigateFollowingElement("bpmn:manualTask",
 						"Request supplier support",

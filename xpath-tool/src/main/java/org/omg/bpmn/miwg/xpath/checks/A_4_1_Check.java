@@ -54,7 +54,7 @@ public class A_4_1_Check extends A_4_0_Check {
 
 			navigateFollowingElement("bpmn:endEvent", "End Event 2");
 
-			navigateElement(n1);
+			navigateBookmarkedElement(n1);
 
 			{
 				selectFollowingElement("bpmn:subProcess",

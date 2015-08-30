@@ -25,18 +25,18 @@ public class A_2_0_Check extends AbstractXpathCheck {
 
 			navigateFollowingElement("bpmn:task", "Task 2");
 
-			navigateElement(n1);
+			navigateBookmarkedElement(n1);
 
 			Node n2 = navigateFollowingElement("bpmn:task", "Task 3");
 
-			navigateElement(n1);
+			navigateBookmarkedElement(n1);
 
 			navigateFollowingElement("bpmn:task", "Task 4");
 
 			navigateFollowingElement("bpmn:exclusiveGateway",
 					"Gateway (Merge Flows)");
 
-			navigateElement(n2);
+			navigateBookmarkedElement(n2);
 
 			navigateFollowingElement("bpmn:exclusiveGateway",
 					"Gateway (Merge Flows)");

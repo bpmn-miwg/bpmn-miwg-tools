@@ -65,7 +65,7 @@ public class C_2_0_Check extends AbstractXpathCheck {
 					navigateFollowingElement("bpmn:task",
 							"Browse Products on Amazon", "No");
 
-					navigateElement(n);
+					navigateBookmarkedElement(n);
 
 					n1 = selectFollowingElement("bpmn:subProcess", "Checkout");
 					{
@@ -88,7 +88,7 @@ public class C_2_0_Check extends AbstractXpathCheck {
 
 						navigateFollowingElement("bpmn:endEvent", null);
 
-						navigateElement(n);
+						navigateBookmarkedElement(n);
 
 						n = navigateFollowingElement("bpmn:exclusiveGateway",
 								"Retry?", "No");
@@ -96,7 +96,7 @@ public class C_2_0_Check extends AbstractXpathCheck {
 						navigateFollowingElement("bpmn:task", "Pay Order",
 								"Yes");
 
-						navigateElement(n);
+						navigateBookmarkedElement(n);
 
 						navigateFollowingElement("bpmn:endEvent", null, "No");
 						checkErrorEvent();
@@ -109,7 +109,7 @@ public class C_2_0_Check extends AbstractXpathCheck {
 
 					navigateFollowingElement("bpmn:endEvent", null);
 
-					navigateElement(n1);
+					navigateBookmarkedElement(n1);
 
 					navigateFollowingElement("bpmn:task", "Receive items");
 

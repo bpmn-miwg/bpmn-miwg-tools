@@ -65,7 +65,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				navigateElement("bpmn:endEvent", "End Event 1 Message");
 				checkMessageEvent();
 
-				navigateElement(n);
+				navigateBookmarkedElement(n);
 
 				navigateFollowingElement("bpmn:callActivity",
 						"Call Activity calling a Global User Task");
@@ -122,16 +122,16 @@ public class B_2_0_Check extends AbstractXpathCheck {
 						"Event Base Gateway 3");
 				checkEventGatewayExclusive(true);
 
-				navigateElement(n);
+				navigateBookmarkedElement(n);
 				navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Intermediate Event Message Catch");
 				checkMessageEvent();
 
-				navigateElement(n);
+				navigateBookmarkedElement(n);
 				navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Intermediate Event Message Catch 2");
 
-				navigateElement(n);
+				navigateBookmarkedElement(n);
 				navigateFollowingElement("bpmn:intermediateCatchEvent",
 						"Intermediate Event Timer Catch");
 
@@ -163,7 +163,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 								"End Event 5 Terminate");
 						checkTerminateEvent();
 
-						navigateElement(n);
+						navigateBookmarkedElement(n);
 
 						navigateFollowingElement("bpmn:serviceTask",
 								"Service Task 14");
@@ -183,7 +183,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 							"Intermediate Event Link");
 					checkLinkEvent();
 
-					navigateElement(n);
+					navigateBookmarkedElement(n);
 
 					navigateFollowingElement("bpmn:receiveTask",
 							"Receive Task 16");
@@ -223,7 +223,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 					navigateFollowingElement("bpmn:task", "Task 23");
 
-					navigateElement(n);
+					navigateBookmarkedElement(n);
 
 					n = navigateFollowingElement("bpmn:task", "Task 17");
 					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Message");
@@ -236,7 +236,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 					navigateFollowingElement("bpmn:endEvent",
 							"End Event 7 None");
 
-					navigateElement(n);
+					navigateBookmarkedElement(n);
 
 					navigateFollowingElement("bpmn:endEvent",
 							"End Event 7 None");
@@ -258,7 +258,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 					navigateFollowingElement("bpmn:inclusiveGateway",
 							"Inclusive Gateway 6");
 
-					navigateElement(n);
+					navigateBookmarkedElement(n);
 
 					{
 						selectFollowingElement("bpmn:subProcess",
@@ -338,7 +338,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 						navigateFollowingElement("bpmn:endEvent",
 								"End Event 12");
 
-						navigateElement(n);
+						navigateBookmarkedElement(n);
 						navigateFollowingElement("bpmn:endEvent",
 								"End Event 13 Error");
 						checkErrorEvent();

@@ -32,13 +32,13 @@ public class A_3_0_Check extends AbstractXpathCheck {
 
 			navigateFollowingElement("bpmn:endEvent", "End Event 1");
 
-			navigateElement(n1);
+			navigateBookmarkedElement(n1);
 
 			navigateFollowingElement("bpmn:task", "Task 2");
 
 			navigateFollowingElement("bpmn:endEvent", "End Event 1");
 
-			navigateElement(n1);
+			navigateBookmarkedElement(n1);
 
 			navigateBoundaryEvent("Boundary Intermediate Event Interrupting Escalation");
 			checkEscalationEvent();

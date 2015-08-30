@@ -52,14 +52,14 @@ public class C_1_1_Check extends AbstractXpathCheck {
 				navigateFollowingElement("bpmn:userTask", "Approve Invoice",
 						"yes");
 
-				navigateElement(n2);
+				navigateBookmarkedElement(n2);
 
 				navigateFollowingElement("bpmn:endEvent",
 						"Invoice not processed", "no");
 
 			}
 
-			navigateElement(n1);
+			navigateBookmarkedElement(n1);
 
 			{
 				navigateFollowingElement("bpmn:userTask",

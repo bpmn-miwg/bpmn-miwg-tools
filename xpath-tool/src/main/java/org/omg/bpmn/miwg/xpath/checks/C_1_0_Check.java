@@ -61,7 +61,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 
 					navigateFollowingElement("bpmn:endEvent", null);
 
-					navigateElement(n1);
+					navigateBookmarkedElement(n1);
 
 					navigateFollowingElement("bpmn:intermediateCatchEvent",
 							"Invoice review needed");
@@ -119,7 +119,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 					navigateFollowingElement("bpmn:endEvent",
 							"Invoice not processed", "no");
 
-					navigateElement(n2);
+					navigateBookmarkedElement(n2);
 
 					navigateFollowingElement("bpmn:userTask",
 							"Approve Invoice", "yes");
@@ -127,7 +127,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 				}
 
 				{
-					navigateElement(n1);
+					navigateBookmarkedElement(n1);
 
 					navigateFollowingElement("bpmn:userTask",
 							"Prepare Bank Transfer", "yes");

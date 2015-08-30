@@ -70,7 +70,7 @@ public class B_1_0_Check extends AbstractXpathCheck {
 				checkMessageEvent();
 				checkMessageFlow("Message Flow 2", Direction.Output);
 
-				navigateElement(n2);
+				navigateBookmarkedElement(n2);
 
 				navigateFollowingElement("bpmn:callActivity",
 						"Call Activity Calling a Global Task");
@@ -78,7 +78,7 @@ public class B_1_0_Check extends AbstractXpathCheck {
 				navigateFollowingElement("bpmn:exclusiveGateway",
 						"Exclusive Gateway Convergence 1");
 
-				navigateElement(n1);
+				navigateBookmarkedElement(n1);
 
 				navigateFollowingElement("bpmn:userTask", "User Task 5");
 				n1 = navigateFollowingElement("bpmn:exclusiveGateway",
@@ -104,7 +104,7 @@ public class B_1_0_Check extends AbstractXpathCheck {
 
 				navigateFollowingElement("bpmn:endEvent", "End Event Terminate");
 
-				navigateElement(n1);
+				navigateBookmarkedElement(n1);
 
 				navigateFollowingElement("bpmn:serviceTask", "Service Task 7");
 				checkDataAssociation(ArtifactType.DataObject, "Data Object",
