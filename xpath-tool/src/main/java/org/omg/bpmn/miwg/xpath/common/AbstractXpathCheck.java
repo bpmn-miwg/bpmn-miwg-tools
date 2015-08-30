@@ -21,6 +21,7 @@ import org.omg.bpmn.miwg.common.testEntries.FindingAssertionEntry;
 import org.omg.bpmn.miwg.common.testEntries.NodePopEntry;
 import org.omg.bpmn.miwg.common.testEntries.NodePushEntry;
 import org.omg.bpmn.miwg.common.testEntries.OKAssertionEntry;
+import org.omg.bpmn.miwg.xpath.pluggableAssertions.Assertion;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -115,18 +116,18 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return nodeStack.lastElement();
 	}
 
-	protected void ok(String message) {
+	public void ok(String message) {
 		ok(new OKAssertionEntry(callingMethod(), message,
 				CheckContext.createTestContext(this)));
 	}
 
-	protected void okTop(String message) {
+	public void okTop(String message) {
 		ok(new OKAssertionEntry(callingMethodTop(), message,
 				CheckContext.createTestContext(this)));
 	}
 
 	@Override
-	protected void finding(String parameter, String message) {
+	public void finding(String parameter, String message) {
 		finding(new FindingAssertionEntry(callingMethod(), message, parameter));
 	}
 
@@ -134,7 +135,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	 * Logs a finding and derives the name of the assertion from the top method
 	 * name.
 	 */
-	protected void findingTop(String parameter, String message) {
+	public void findingTop(String parameter, String message) {
 		finding(new FindingAssertionEntry(callingMethodTop(), message,
 				parameter));
 	}
@@ -382,13 +383,20 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	public Node navigateFollowingElement(String type, String name)
 			throws Throwable {
-		return navigateFollowingElement(currentNode, type, name, null);
+		return navigateFollowingElement(currentNode, type, name, null, new Assertion[] {});
 	}
 
 	public Node navigateFollowingElement(String type, String name,
 			String sequenceFlowName) throws Throwable {
 		return navigateFollowingElement(currentNode, type, name,
-				sequenceFlowName);
+				sequenceFlowName, new Assertion[] {});
+	}
+
+	public Node navigateFollowingElement(String type, String name,
+			String sequenceFlowName, Assertion[] assertions)
+			throws Throwable {
+		return navigateFollowingElement(currentNode, type, name,
+				sequenceFlowName, assertions);
 	}
 
 	public Node navigateSequenceFlow(String type, String name) throws Throwable {
@@ -419,19 +427,21 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				nameCondition, targetId);
 		xpathTarget = String.format("%s[@id='%s']", type, targetId);
 		Node n = findNode(xpathTarget);
-		if (n != null) {
-			ok(xpathTarget);
-			setCurrentNode(n);
-			return n;
+
+		if (n == null) {
+			finding(String.format("%s[@name='%s']", type, name),
+					"No outgoing reference found");
+			return null;
 		}
 
-		finding(String.format("%s[@name='%s']", type, name),
-				"No outgoing reference found");
-		return null;
+		ok(xpathTarget);
+		setCurrentNode(n);
+		return n;
 	}
 
 	protected Node navigateFollowingElement(Node node, String type,
-			String name, String sequenceFlowName) throws Throwable {
+			String name, String sequenceFlowName,
+			Assertion[] assertions) throws Throwable {
 
 		if (node == null) {
 			finding(null, "The base node is null");
@@ -500,6 +510,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 					finding(xpathIncoming,
 							"There is no corresponding incoming node for the sequence flow");
 				}
+
+				if (assertions != null)
+					for (Assertion assertion : assertions) {
+						assertion.check(sequenceFlowNode, this);
+					}
 
 				setCurrentNode(targetNode);
 				return targetNode;
@@ -1178,7 +1193,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	public void checkMessageEvent(boolean followMessageRef) throws Throwable {
 		checkMessageEvent(followMessageRef, null);
 	}
-	
+
 	public void checkMessageEvent(boolean followMessageRef,
 			String expectedMessageName) throws Throwable {
 		if (currentNode == null) {

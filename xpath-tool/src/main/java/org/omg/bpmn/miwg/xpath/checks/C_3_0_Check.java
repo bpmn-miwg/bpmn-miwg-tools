@@ -1,6 +1,8 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
 import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.omg.bpmn.miwg.xpath.pluggableAssertions.Assertion;
+import org.omg.bpmn.miwg.xpath.pluggableAssertions.SequenceFlowCondition;
 import org.w3c.dom.Node;
 
 public class C_3_0_Check extends AbstractXpathCheck {
@@ -17,19 +19,18 @@ public class C_3_0_Check extends AbstractXpathCheck {
 
 		selectFirstProcess();
 		checkAttributeValue("isExecutable", "true");
-		
-		
+
 		navigateElement("bpmn:startEvent", "Receive customer request");
 		checkMessageEvent(true, "Service Level");
 
-		Node taskAnalyseCustomerRequest = navigateFollowingElement("bpmn:userTask", "Analyse customer request");
+		Node taskAnalyseCustomerRequest = navigateFollowingElement(
+				"bpmn:userTask", "Analyse customer request");
 		checkAttributeValue("startQuantity", "2");
 		checkAttributeValue("completionQuantity", "2");
-		
+
 		navigateChildElement("bpmn:potentialOwner", "Potential Owner");
 		checkChildElementValue("bpmn:resourceRef", null, resourceID);
 
-		
 		navigateElement(taskAnalyseCustomerRequest);
 		Node gateway = navigateFollowingElement("bpmn:exclusiveGateway",
 				"Service type");
@@ -53,24 +54,29 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		Node gateway3 = navigateFollowingElement("bpmn:exclusiveGateway",
 				"Service level", "Regular repair service");
 
-		Node task2 = navigateFollowingElement("bpmn:userTask",
-				"Perform repair (premium level)", "Premium");
-		
+		Node task2 = navigateFollowingElement(
+				"bpmn:userTask",
+				"Perform repair (premium level)",
+				"Premium",
+				new Assertion[] { new SequenceFlowCondition(
+						"tFormalExpression", "Service Level == 'Premium'") });
+
 		navigateBoundaryEvent("2 hours");
 		checkTimerEvent();
 		navigateFollowingElement("bpmn:subProcess", "Perform emergency repair");
-		
+
 		navigateElement(task2);
 		navigateFollowingElement("bpmn:endEvent", "Repair completed");
-		
+
 		navigateElement(gateway3);
-		Node task3 = 
-				navigateFollowingElement("bpmn:userTask", "Perform repair (standard level)", "Standard");
+		Node task3 = navigateFollowingElement("bpmn:userTask",
+				"Perform repair (standard level)", "Standard");
 		navigateBoundaryEvent("");
 		checkMessageEvent(true, "Service Level");
-		
-		navigateFollowingElement("bpmn:userTask", "Perform repair (premium level)");
-		
+
+		navigateFollowingElement("bpmn:userTask",
+				"Perform repair (premium level)");
+
 		navigateElement(task3);
 		navigateFollowingElement("bpmn:endEvent", "Repair completed");
 

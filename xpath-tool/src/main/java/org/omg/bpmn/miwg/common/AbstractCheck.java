@@ -73,12 +73,6 @@ public abstract class AbstractCheck {
 		this.out = out;
 	}
 
-	/*
-	 * protected void loadFile(File file) throws Throwable { InputStream is =
-	 * null; try { is = new FileInputStream(file); loadResource(is); } finally {
-	 * try { is.close(); } catch (Exception e) { ; } } }
-	 */
-
 	protected void loadResource(InputStream is) throws Throwable {
 		factory = DocumentBuilderFactory.newInstance();
 		factory.setNamespaceAware(true);

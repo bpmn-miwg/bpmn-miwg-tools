@@ -6,8 +6,9 @@ import javax.xml.namespace.NamespaceContext;
 
 public class NameSpaceContexts implements NamespaceContext {
 
-	public final static String BPMN_MODEL_NS_URI = "http://www.omg.org/spec/BPMN/20100524/MODEL"; 
-	
+	public final static String BPMN_MODEL_NS_URI = "http://www.omg.org/spec/BPMN/20100524/MODEL";
+	public final static String XSI_NS_URI = "http://www.w3.org/2001/XMLSchema-instance";
+
 	public String getNamespaceURI(String prefix) {
 		if ("bpmn".equals(prefix))
 			return BPMN_MODEL_NS_URI;
@@ -27,6 +28,8 @@ public class NameSpaceContexts implements NamespaceContext {
 			return "http://www.w4.eu/spec/BPMN/20110701/MODEL";
 		if ("w4graph".equals(prefix))
 			return "http://www.w4.eu/spec/BPMN/20110930/GRAPH";
+		if ("xsi".equals(prefix))
+			return XSI_NS_URI;
 
 		throw new IllegalArgumentException(prefix);
 	}
