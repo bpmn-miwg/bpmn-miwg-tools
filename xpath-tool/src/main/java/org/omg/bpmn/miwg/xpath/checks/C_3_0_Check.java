@@ -27,6 +27,7 @@ public class C_3_0_Check extends AbstractXpathCheck {
 				"bpmn:userTask", "Analyse customer request");
 		checkAttributeValue("startQuantity", "2");
 		checkAttributeValue("completionQuantity", "2");
+		checkAttributeValue("implementation", "##WebService");
 
 		navigateChildElement("bpmn:potentialOwner", "Potential Owner");
 		checkChildElementValue("bpmn:resourceRef", null, resourceID);
@@ -34,6 +35,7 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		navigateBookmarkedElement(taskAnalyseCustomerRequest);
 		Node gateway = navigateFollowingElement("bpmn:exclusiveGateway",
 				"Service type");
+		checkAttributeValue("gatewayDirection", "Diverging");
 
 		navigateFollowingElement("bpmn:userTask", "Replace fridge", "Warranty");
 		navigateFollowingElement("bpmn:endEvent", "Fridge replaced");
