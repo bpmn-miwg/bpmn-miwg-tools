@@ -23,39 +23,52 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.checks;
+package org.omg.bpmn.miwg.mvn.test;
 
-import java.util.LinkedList;
-import java.util.List;
+import static org.junit.Assert.assertEquals;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.Consts;
+import org.omg.bpmn.miwg.api.MIWGVariant;
+import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
+import org.omg.bpmn.miwg.util.DOMFactory;
+import org.omg.bpmn.miwg.xpath.XPathAnalysisTool;
+import org.w3c.dom.Document;
 
-public class Registry {
-	
-	private static List<AbstractXpathCheck> registeredChecks = null;
-	
-	private static void createRegistry() {
-		registeredChecks = new LinkedList<AbstractXpathCheck>();
-		registeredChecks.add(new A_1_0_Check());
-		registeredChecks.add(new A_1_1_Check());
-		registeredChecks.add(new A_1_2_Check());
-		registeredChecks.add(new A_2_0_Check());
-		registeredChecks.add(new A_3_0_Check());
-		registeredChecks.add(new A_4_0_Check());
-		registeredChecks.add(new A_4_1_Check());
-		registeredChecks.add(new B_1_0_Check());
-		registeredChecks.add(new B_2_0_Check());
-		registeredChecks.add(new C_1_0_Check());
-		registeredChecks.add(new C_1_1_Check());
-		registeredChecks.add(new C_2_0_Check());
-		registeredChecks.add(new C_3_0_Check());
-		registeredChecks.add(new DemoTechnicalSupportCheck());
+/**
+ * This test case applies all tools to the reference files.
+ * 
+ * @author matthias
+ *
+ */
+
+public class Reference_C_3_0_XPath_Test {
+
+	private static final String REFERENCE_RESOURCE = "/" + Consts.REFERENCE_DIR
+			+ "/C.3.0.bpmn";
+
+	private static Document referenceDOM;
+
+	@BeforeClass
+	public static void setUpOnce() throws Exception {
+		referenceDOM = DOMFactory.getDocument(REFERENCE_RESOURCE);
 	}
 
-	public static List<AbstractXpathCheck> getChecks() {
-		if (registeredChecks == null)
-			createRegistry();
-		return registeredChecks;
+
+
+	@Test
+	public void testReference_XPath() throws Exception {
+		DOMAnalysisTool xpathTool = new XPathAnalysisTool();
+
+		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "C.3.0",
+				MIWGVariant.Reference, null, null);
+
+		assertEquals(
+				0,
+				xpathTool.analyzeDOM(job, referenceDOM, referenceDOM, null).numFindings);
 	}
+	
 	
 }
