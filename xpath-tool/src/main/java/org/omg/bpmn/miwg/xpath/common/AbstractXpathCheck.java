@@ -856,16 +856,6 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		ok("Attribute " + attribute + "exists");
 	}
 
-	private boolean hasAttribute(String attribute) {
-		if (currentNode == null) {
-			return false;
-		}
-
-		Node attr = currentNode.getAttributes().getNamedItem(attribute);
-
-		return attr != null;
-	}
-
 	protected void checkAttributeValue(String attribute, boolean value,
 			boolean defaultValue) throws Throwable {
 		checkAttributeValue(attribute, Boolean.toString(value),
@@ -1646,8 +1636,6 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				assert false;
 				return;
 			}
-
-			// TODO: Find target node
 
 			String targetID = getAttribute(n, partnerDirectionAttribute);
 
