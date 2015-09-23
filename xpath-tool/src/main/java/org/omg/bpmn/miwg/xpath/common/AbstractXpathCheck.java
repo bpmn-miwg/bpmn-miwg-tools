@@ -1523,6 +1523,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	}
 
+	/**
+	 * Currently, the text annotation may be placed anywhere in the DOM.
+	 */
 	public void checkTextAssociation(String text) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
@@ -1538,10 +1541,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			return;
 		}
 
-		// /bpmn:text
-
 		String xpath = String
-				.format("bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='%s']/@targetRef]/bpmn:text",
+				.format("//bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='%s']/@targetRef]/bpmn:text",
 						currentID);
 
 		List<Node> nl = findNodes(head(), xpath);
