@@ -159,15 +159,15 @@ public class ModelInterchangeMojo extends AbstractMojo {
 			List<String> list = new ArrayList<String>();
 			for (JsonValue tool : toolArray) {
 				JsonObject obj = (JsonObject) tool;
-				if ("true".equalsIgnoreCase(obj.get("testResultsSubmitted")
-						.toString())
-						|| "\"true\"".equalsIgnoreCase(obj.get(
-								"testResultsSubmitted").toString())
-						|| "\"partial\"".equalsIgnoreCase(obj.get(
-								"testResultsSubmitted").toString())) {
+//				if ("true".equalsIgnoreCase(obj.get("testResultsSubmitted")
+//						.toString())
+//						|| "\"true\"".equalsIgnoreCase(obj.get(
+//								"testResultsSubmitted").toString())
+//						|| "\"partial\"".equalsIgnoreCase(obj.get(
+//								"testResultsSubmitted").toString())) {
 					list.add(obj.getString("tool") + " "
 							+ obj.getString("version"));
-				}
+//				}
 			}
 
 			return list;

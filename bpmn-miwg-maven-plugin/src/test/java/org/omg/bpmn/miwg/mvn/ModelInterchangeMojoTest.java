@@ -227,7 +227,7 @@ public class ModelInterchangeMojoTest {
 	@Test
 	public void testApplicationsParsing() {
 		List<String> applications = mojo.getApplications();
-		assertEquals(17, applications.size());
+		assertEquals(21, applications.size());
 		assertTrue(applications.contains(CAMUNDA_MODELER_ID));
 		assertTrue(applications.contains(CAMUNDA_JS_ID));
 		assertTrue(applications.contains(ECLIPSE_MODELER_ID));
