@@ -1,8 +1,6 @@
 package org.omg.bpmn.miwg.mvn.test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.util.Collection;
@@ -99,15 +97,15 @@ public class AnalysisFacadeTest {
 		AnalysisFacade faccade = new AnalysisFacade(new File(
 				TestUtil.REPORT_BASE_FOLDER_NAME));
 		AnalysisRun run = faccade.executeAnalysisJob(job);
-
-		assertFalse(job.hasReference());
-
-		AnalysisResult result = run.getResult(XmlCompareAnalysisTool.NAME);
-		Collection<? extends Output> output = result.getOutput();
-		
-		assertEquals("More than one output item although there is no reference to compare to", 1, output.size());
-		assertEquals("Findings although there is no reference to compare to", 0, result.numFindings);
-		assertEquals("Wrong type for the only output item although the reference is missing", output.iterator().next().getOutputType(), OutputType.info);
+    assertNull(run);
+//		assertFalse(job.hasReference());
+//
+//		AnalysisResult result = run.getResult(XmlCompareAnalysisTool.NAME);
+//		Collection<? extends Output> output = result.getOutput();
+//		
+//		assertEquals("More than one output item although there is no reference to compare to", 1, output.size());
+//		assertEquals("Findings although there is no reference to compare to", 0, result.numFindings);
+//		assertEquals("Wrong type for the only output item although the reference is missing", output.iterator().next().getOutputType(), OutputType.info);
 	}
 
     @Test

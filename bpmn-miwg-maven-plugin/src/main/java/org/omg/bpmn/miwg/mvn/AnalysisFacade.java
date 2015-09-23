@@ -30,7 +30,9 @@ public class AnalysisFacade {
 
 		for (AnalysisJob job : jobs) {
 			AnalysisRun run = executeAnalysisJob(job);
-			runs.add(run);
+			if (run != null) {
+			  runs.add(run);
+			}
 		}
 		HTMLAnalysisOutputWriter.writeOverview(outputFolder, runs);
 
@@ -38,6 +40,7 @@ public class AnalysisFacade {
 	}
 
 	public AnalysisRun executeAnalysisJob(AnalysisJob job) throws Exception {
+	  System.out.println("Executing AnalysisJob '" + job.getName() + "' ...");
 		XPathAnalysisTool xpathAnalysisTool = new XPathAnalysisTool();
 		XsdAnalysisTool xsdAnalysisTool = new XsdAnalysisTool();
 		XmlCompareAnalysisTool compareAnalysisTool = new XmlCompareAnalysisTool();
@@ -46,15 +49,19 @@ public class AnalysisFacade {
 		InputStream actualInputStream = null;
 
 		try {
-			Document actualDom;
-			Document referenceDom;
+			Document actualDom = null;
+			Document referenceDom = null;
 
 			// Build the DOMs for the DOMAnalysisTools
 			{
 				actualInputStream = job.getActualInput().getInputStream();
 				// assert actualInputStream != null;
 
-				actualDom = DOMFactory.getDocument(actualInputStream);
+				try {
+				  actualDom = DOMFactory.getDocument(actualInputStream);
+				} catch (Exception e) {
+				  e.printStackTrace();
+				}
 
 				// assert actualDom != null;
 				if (actualInputStream != null)
@@ -67,43 +74,45 @@ public class AnalysisFacade {
 				if (hasReference) {
 					referenceInputStream = job.getReferenceInput()
 							.getInputStream();
-					referenceDom = DOMFactory.getDocument(referenceInputStream);
+					if (referenceInputStream != null) {
+					  referenceDom = DOMFactory.getDocument(referenceInputStream);
 					// assert referenceDom != null;
-					if (referenceInputStream != null)
 						referenceInputStream.close();
-				} else {
-					referenceInputStream = null;
-					referenceDom = null;
+					}
 				}
 			}
 
-			// Build the InputStream for the XSD tool using the input stream
-			actualInputStream = job.getActualInput().getInputStream();
-			// assert actualInputStream != null;
-
-			AnalysisResult xsdResult = xsdAnalysisTool.analyzeStream(job, null,
-					actualInputStream, null);
-
-			AnalysisResult compareResult = compareAnalysisTool.analyzeDOM(job,
-					referenceDom, actualDom, null);
-
-			AnalysisResult xpathResult = xpathAnalysisTool.analyzeDOM(job,
-					referenceDom, actualDom, null);
-
-			AnalysisRun run = new AnalysisRun(job);
-
-			run.addResult(xsdAnalysisTool, xsdResult);
-			run.addResult(compareAnalysisTool, compareResult);
-			run.addResult(xpathAnalysisTool, xpathResult);
-
-			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
-					xsdAnalysisTool, xsdResult);
-			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
-					compareAnalysisTool, compareResult);
-			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
-					xpathAnalysisTool, xpathResult);
-
-			return run;
+			if (referenceDom != null && actualDom != null) {
+  			// Build the InputStream for the XSD tool using the input stream
+  			actualInputStream = job.getActualInput().getInputStream();
+  			// assert actualInputStream != null;
+  
+  			AnalysisResult xsdResult = xsdAnalysisTool.analyzeStream(job, null,
+  					actualInputStream, null);
+  
+  			AnalysisResult compareResult = compareAnalysisTool.analyzeDOM(job,
+  					referenceDom, actualDom, null);
+  
+  			AnalysisResult xpathResult = xpathAnalysisTool.analyzeDOM(job,
+  					referenceDom, actualDom, null);
+  
+  			AnalysisRun run = new AnalysisRun(job);
+  
+  			run.addResult(xsdAnalysisTool, xsdResult);
+  			run.addResult(compareAnalysisTool, compareResult);
+  			run.addResult(xpathAnalysisTool, xpathResult);
+  
+  			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
+  					xsdAnalysisTool, xsdResult);
+  			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
+  					compareAnalysisTool, compareResult);
+  			HTMLAnalysisOutputWriter.writeAnalysisResults(outputFolder, job,
+  					xpathAnalysisTool, xpathResult);
+  
+  			return run;
+			} else {
+			  return null;
+			}
 		} finally {
 			try {
 				if (referenceInputStream != null)
