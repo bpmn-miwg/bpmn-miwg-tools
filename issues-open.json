@@ -1,5 +1,380 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/488",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/488/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/488/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/488/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/488",
+    "id": 107964652,
+    "number": 488,
+    "title": "Empty string via non-existing attribute",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
+        "name": "Tool: Trisotech BPMN Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-09-23T17:10:11Z",
+    "updated_at": "2015-09-23T17:25:20Z",
+    "closed_at": null,
+    "body": "**Tool**\r\nTrisotech BPMN Modeler 5.0.10\r\n\r\n**Output of the automated checks**\r\n```\r\nOK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (standard level)' and @id='_d034722f-751d-4f37-a3d7-47993822e979']\r\nFINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='' and @attachedToRef='_d034722f-751d-4f37-a3d7-47993822e979']\r\nFINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef\r\nFINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Perform repair (premium level)']\r\nOK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id=\"_5033f8b0-0396-494b-a52c-787034420443\"']/semantic:process[@id='id=\"_8170787a-3207-434d-9bea-4787059f444f\"']/semantic:userTask[@id='id=\"_d034722f-751d-4f37-a3d7-47993822e979\"']/\r\n\r\n```\r\n\r\n\r\n**Trisotech Roundtrip BPMN**\r\n```xml\r\n<semantic:userTask id=\"_d034722f-751d-4f37-a3d7-47993822e979\" name=\"Perform repair (standard level)\" startQuantity=\"1\" completionQuantity=\"1\" isForCompensation=\"false\" implementation=\"##unspecified\">\r\n....\r\n</semantic:userTask>\r\n...\r\n        <semantic:boundaryEvent id=\"Bpmn_BoundaryEvent_LwKtwhqHEeWDuOtG0oS24A\"\r\n        attachedToRef=\"_d034722f-751d-4f37-a3d7-47993822e979\" cancelActivity=\"true\">\r\n            <semantic:extensionElements>\r\n                <w4graph:graphStyle>\r\n                    <w4graph:basic foreground=\"0,0,0\" collapsed=\"false\" borderColor=\"255,255,255\" background=\"0,0,0\" autoResize=\"false\"/>\r\n                </w4graph:graphStyle>\r\n            </semantic:extensionElements>\r\n            <semantic:outgoing>Bpmn_SequenceFlow_-dQQwBqHEeWDuOtG0oS24A</semantic:outgoing>\r\n            <semantic:messageEventDefinition messageRef=\"_6840c92f-f02c-46b3-9565-f5e5b1792ba0\" id=\"Bpmn_MessageEventDefinition_zhREUBqHEeWDuOtG0oS24A\"/>\r\n        </semantic:boundaryEvent>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n<userTask id=\"_d034722f-751d-4f37-a3d7-47993822e979\" name=\"Perform repair (standard level)\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" implementation=\"WebService\">\r\n...\r\n</userTask>\r\n...\r\n    <boundaryEvent id=\"Bpmn_BoundaryEvent_LwKtwhqHEeWDuOtG0oS24A\"\r\n      name=\"\"\r\n      attachedToRef=\"_d034722f-751d-4f37-a3d7-47993822e979\" cancelActivity=\"true\">\r\n      <extensionElements>\r\n        <w4graph:graphStyle>\r\n          <w4graph:basic background=\"0,0,0\" foreground=\"0,0,0\" autoResize=\"false\" borderColor=\"255,255,255\" collapsed=\"false\"/>\r\n        </w4graph:graphStyle>\r\n      </extensionElements>\r\n      <outgoing>Bpmn_SequenceFlow_-dQQwBqHEeWDuOtG0oS24A</outgoing>\r\n      <messageEventDefinition id=\"Bpmn_MessageEventDefinition_zhREUBqHEeWDuOtG0oS24A\" messageRef=\"_6840c92f-f02c-46b3-9565-f5e5b1792ba0\"/>\r\n    </boundaryEvent>\r\n\r\n```\r\n**Analysis**\r\n* The *name* attribute value in the reference is a zero-sized string. The *name* attribute in the tool is missing. IMHO, this is not an expected behavior, because NULL!=\"\".\r\n* If we decide this is acceptable, we can close #331 as well."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/487",
+    "id": 107963348,
+    "number": 487,
+    "title": "Contradicting values of the name and BPMNShape vendor attribute",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-09-23T17:02:37Z",
+    "updated_at": "2015-09-23T17:25:43Z",
+    "closed_at": null,
+    "body": "**Semantics**\r\n```xml\r\n    <userTask id=\"_6a34496f-8cf7-42e5-88a9-d1af98cc3cba\" name=\"Perform repair\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" implementation=\"WebService\">\r\n      <documentation id=\"Bpmn_Documentation_jcoo8e_bEeSGoscwBjzAjw\" textFormat=\"text/plain\"><![CDATA[These customers get special service in case of damage.\r\nThis service level guarantees less than two days to solve the issue.]]></documentation>\r\n      <extensionElements>\r\n        <itp:systemDefinedAttributes>\r\n          <attribute name=\"Hyperlinks\" type=\"String\" value=\"0 Hyperlinks\"/>\r\n          <attribute name=\"ExternalId\" type=\"String\"/>\r\n          <attribute name=\"KPICost\" type=\"Float\" value=\"0\" format=\"Currency;SFr.;;KPI;2\"/>\r\n          <attribute name=\"KPIDuration\" type=\"Float\" value=\"8100\" format=\"Duration;;;KPI;3\">\r\n            <attribute name=\"KPIActiveTime\" type=\"Float\" value=\"7200\" format=\"Duration;;;KPI;3;0.3\"/>\r\n            <attribute name=\"KPIWaitTime\" type=\"Float\" value=\"900\" format=\"Duration;;;KPI;3\"/>\r\n          </attribute>\r\n          <attribute name=\"Resource\" type=\"String\" value=\"PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkOGIzZTMyZC1lMDRmLTRhYzgtOWYyMC0wZDkzMTI3YWZlYWUiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+\"/>\r\n        </itp:systemDefinedAttributes>\r\n        <w4graph:graphStyle>\r\n          <w4graph:basic background=\"194,215,235\" foreground=\"0,0,0\" autoResize=\"false\" borderColor=\"100,100,100\" collapsed=\"false\"/>\r\n        </w4graph:graphStyle>\r\n      </extensionElements>\r\n      <incoming>_be893987-caec-4605-b078-bd96b7cd6c12</incoming>\r\n      <incoming>Bpmn_SequenceFlow_-dQQwBqHEeWDuOtG0oS24A</incoming>\r\n      <outgoing>_d54c5707-af7a-4b36-a059-46681bbf0004</outgoing>\r\n    </userTask>\r\n```\r\n\r\n**Corresponding DI**\r\n```xml\r\n      <bpmndi:BPMNShape id=\"_F97318A7-9E18-4D7D-89EC-3191F6897A72\"\r\n        itp:label=\"Perform repair (premium level)\" itp:elementType=\"userTask\" color:background-color=\"#ECECFF\" color:border-color=\"#000000\"\r\n        bpmnElement=\"_6a34496f-8cf7-42e5-88a9-d1af98cc3cba\">\r\n        <dc:Bounds height=\"59.0\" width=\"121.0\" x=\"504.0\" y=\"416.0\"/>\r\n        <bpmndi:BPMNLabel id=\"Bpmndi_BPMNLabel_jczBAO_bEeSGoscwBjzAjw\" color:color=\"#000000\" labelStyle=\"_ea62b61f-473a-454a-a9bc-14475ce28686\">\r\n          <dc:Bounds height=\"28.0\" width=\"87.0\" x=\"521.0\" y=\"431.0\"/>\r\n        </bpmndi:BPMNLabel>\r\n      </bpmndi:BPMNShape>\r\n```\r\n\r\n**Visual representation**\r\n![c 3 0](https://cloud.githubusercontent.com/assets/4007840/10052140/921bb4f2-6225-11e5-975a-d0f056dfa9f5.png)\r\n\r\n**Analysis**\r\n* The *userTask* has the name *Perform repair* while the corresponding *BPMNShape* *itp:label* attribute has the value *Perform repair (premium level)*.\r\n* IMHO, this is an issue because the DI *itp:label* attribute is used for the visual representation instead of the *userTask*'s *name* attribute.\r\n* Furthermore, while attributes from vendor name spaces have no defined semantics in BPMN, a reference from this working group should not have such conflicts."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/486",
+    "id": 107961416,
+    "number": 486,
+    "title": "conditionExpression has incorrect type",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
+        "name": "Tool: Trisotech BPMN Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-09-23T16:52:44Z",
+    "updated_at": "2015-09-23T16:52:44Z",
+    "closed_at": null,
+    "body": "**Tool**\r\nTrisotech BPMN Modeler 5.0.10\r\n\r\n**Output of the automated checks**\r\n```\r\nOK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (premium level)' and @id='_6a34496f-8cf7-42e5-88a9-d1af98cc3cba']\r\nFINDING: Pluggable: SequenceFlowCondition         Message: The type should be 'tFormalExpression', but it is 'semantic:tFormalExpression'; Parameter: null\r\n```\r\n\r\n\r\n**Trisotech Roundtrip BPMN**\r\n```xml\r\n        <semantic:sequenceFlow id=\"_be893987-caec-4605-b078-bd96b7cd6c12\" name=\"Premium\" triso:userConstraints=\"true\" sourceRef=\"_2b6bc88e-d3be-4704-87d1-c264bf704589\" targetRef=\"_6a34496f-8cf7-42e5-88a9-d1af98cc3cba\">\r\n            <semantic:extensionElements>\r\n                <itp:systemDefinedAttributes>\r\n                    <semantic:attribute value=\"0 Hyperlinks\" type=\"String\" name=\"Hyperlinks\"/>\r\n                    <semantic:attribute type=\"String\" name=\"ExternalId\"/>\r\n                </itp:systemDefinedAttributes>\r\n                <w4graph:graphStyle>\r\n                    <w4graph:basic foreground=\"0,0,0\" collapsed=\"false\" borderColor=\"100,100,100\" background=\"255,255,255\" autoResize=\"false\"/>\r\n                    <w4graph:line routerType=\"Rectilinear\" closestRoute=\"false\" avoidObstacleRoute=\"false\" automaticRoute=\"true\"/>\r\n                </w4graph:graphStyle>\r\n            </semantic:extensionElements>\r\n            <semantic:conditionExpression xsi:type=\"semantic:tFormalExpression\" id=\"Bpmn_FormalExpression_ipW2kBqIEeWDuOtG0oS24A\">Service Level == 'Premium'</semantic:conditionExpression>\r\n        </semantic:sequenceFlow>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n     <sequenceFlow id=\"_be893987-caec-4605-b078-bd96b7cd6c12\" name=\"Premium\" sourceRef=\"_2b6bc88e-d3be-4704-87d1-c264bf704589\" targetRef=\"_6a34496f-8cf7-42e5-88a9-d1af98cc3cba\">\r\n      <extensionElements>\r\n        <itp:systemDefinedAttributes>\r\n          <attribute name=\"Hyperlinks\" type=\"String\" value=\"0 Hyperlinks\"/>\r\n          <attribute name=\"ExternalId\" type=\"String\"/>\r\n        </itp:systemDefinedAttributes>\r\n        <w4graph:graphStyle>\r\n          <w4graph:basic background=\"255,255,255\" foreground=\"0,0,0\" autoResize=\"false\" borderColor=\"100,100,100\" collapsed=\"false\"/>\r\n          <w4graph:line routerType=\"Rectilinear\" automaticRoute=\"true\" closestRoute=\"false\" avoidObstacleRoute=\"false\"/>\r\n        </w4graph:graphStyle>\r\n      </extensionElements>\r\n      <conditionExpression xsi:type=\"tFormalExpression\" id=\"Bpmn_FormalExpression_ipW2kBqIEeWDuOtG0oS24A\"><![CDATA[Service Level == 'Premium']]></conditionExpression>\r\n    </sequenceFlow>\r\n```\r\n\r\n**Analysis**\r\n* The value of the *xsi:type* attribute of the *conditionExpression* element is changed.\r\n* IMHO, the attribute values have no prefixes."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/485",
+    "id": 107960291,
+    "number": 485,
+    "title": "implementation attribute value is changed",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
+        "name": "Tool: Trisotech BPMN Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-09-23T16:45:40Z",
+    "updated_at": "2015-09-23T16:46:09Z",
+    "closed_at": null,
+    "body": "**Tool**\r\nTrisotech BPMN Modeler 5.0.10\r\n\r\n**Output of the automated checks**\r\n```\r\nOK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Analyse customer request' and @id='_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a']\r\nOK     : checkAttributeValue                      Message: Attribute startQuantity=2\r\nOK     : checkAttributeValue                      Message: Attribute completionQuantity=2\r\nFINDING: checkAttributeValue                      Message: Attribute implementation does not have the expected value '##WebService'; Parameter: implementation\r\n```\r\n\r\n\r\n**Trisotech Roundtrip BPMN**\r\n```xml\r\n        <semantic:userTask id=\"_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a\" name=\"Analyse customer request\" startQuantity=\"2\" completionQuantity=\"2\" isForCompensation=\"false\" implementation=\"##unspecified\">\r\n            <semantic:documentation>First contact with customer</semantic:documentation>\r\n            <semantic:extensionElements>\r\n                <itp:systemDefinedAttributes>\r\n                    <semantic:attribute value=\"0 Hyperlinks\" type=\"String\" name=\"Hyperlinks\"/>\r\n                    <semantic:attribute type=\"String\" name=\"ExternalId\"/>\r\n                    <semantic:attribute value=\"0\" type=\"Float\" name=\"KPICost\" format=\"Currency;SFr.;;KPI;2\"/>\r\n                    <semantic:attribute value=\"120\" type=\"Float\" name=\"KPIDuration\" format=\"Duration;;;KPI;3\">\r\n                        <semantic:attribute value=\"120\" type=\"Float\" name=\"KPIActiveTime\" format=\"Duration;;;KPI;3;0.5\"/>\r\n                        <semantic:attribute value=\"0\" type=\"Float\" name=\"KPIWaitTime\" format=\"Duration;;;KPI;3\"/></semantic:attribute>\r\n                    <semantic:attribute value=\"PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+\" type=\"String\" name=\"Resource\"/>\r\n                </itp:systemDefinedAttributes>\r\n                <w4graph:graphStyle>\r\n                    <w4graph:basic foreground=\"0,0,0\" collapsed=\"false\" borderColor=\"100,100,100\" background=\"194,215,235\" autoResize=\"false\"/>\r\n                    <w4graph:line routerType=\"Rectilinear\" closestRoute=\"false\" avoidObstacleRoute=\"false\" automaticRoute=\"true\"/>\r\n                </w4graph:graphStyle>\r\n            </semantic:extensionElements>\r\n            <semantic:incoming>_a5af06ae-bd69-464d-bbaf-3d7418702d77</semantic:incoming>\r\n            <semantic:outgoing>_acb2aca3-8851-48f0-b127-7b3c9db5e18d</semantic:outgoing>\r\n            <semantic:potentialOwner name=\"Potential Owner\" id=\"Bpmn_PotentialOwner_H_12wBqHEeWDuOtG0oS24A\">\r\n                <semantic:resourceRef>Bpmn_Resource__7wrkBqGEeWDuOtG0oS24A</semantic:resourceRef>\r\n            </semantic:potentialOwner>\r\n        </semantic:userTask>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n    <userTask id=\"_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a\" name=\"Analyse customer request\" completionQuantity=\"2\" isForCompensation=\"false\" startQuantity=\"2\" implementation=\"##WebService\">\r\n      <documentation id=\"Bpmn_Documentation_jcmzwe_bEeSGoscwBjzAjw\" textFormat=\"text/plain\">First contact with customer</documentation>\r\n      <extensionElements>\r\n        <itp:systemDefinedAttributes>\r\n          <attribute name=\"Hyperlinks\" type=\"String\" value=\"0 Hyperlinks\"/>\r\n          <attribute name=\"ExternalId\" type=\"String\"/>\r\n          <attribute name=\"KPICost\" type=\"Float\" value=\"0\" format=\"Currency;SFr.;;KPI;2\"/>\r\n          <attribute name=\"KPIDuration\" type=\"Float\" value=\"120\" format=\"Duration;;;KPI;3\">\r\n            <attribute name=\"KPIActiveTime\" type=\"Float\" value=\"120\" format=\"Duration;;;KPI;3;0.5\"/>\r\n            <attribute name=\"KPIWaitTime\" type=\"Float\" value=\"0\" format=\"Duration;;;KPI;3\"/>\r\n          </attribute>\r\n          <attribute name=\"Resource\" type=\"String\" value=\"PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+\"/>\r\n        </itp:systemDefinedAttributes>\r\n        <w4graph:graphStyle>\r\n          <w4graph:basic background=\"194,215,235\" foreground=\"0,0,0\" autoResize=\"false\" borderColor=\"100,100,100\" collapsed=\"false\"/>\r\n          <w4graph:line routerType=\"Rectilinear\" automaticRoute=\"true\" closestRoute=\"false\" avoidObstacleRoute=\"false\"/>\r\n        </w4graph:graphStyle>\r\n      </extensionElements>\r\n      <incoming>_a5af06ae-bd69-464d-bbaf-3d7418702d77</incoming>\r\n      <outgoing>_acb2aca3-8851-48f0-b127-7b3c9db5e18d</outgoing>\r\n      <potentialOwner id=\"Bpmn_PotentialOwner_H_12wBqHEeWDuOtG0oS24A\" name=\"Potential Owner\">\r\n        <resourceRef>Bpmn_Resource__7wrkBqGEeWDuOtG0oS24A</resourceRef>\r\n      </potentialOwner>\r\n    </userTask>\r\n```\r\n\r\n**Analysis**\r\n* The attribute value of the *implementation* attribute of the *userTask* element is changed."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/484",
+    "id": 107959130,
+    "number": 484,
+    "title": "calledElement attribute missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
+        "name": "Tool: Trisotech BPMN Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-09-23T16:38:21Z",
+    "updated_at": "2015-09-23T16:40:26Z",
+    "closed_at": null,
+    "body": "**Tool**\r\nTrisotech BPMN Modeler 5.0.10\r\n\r\n**Output of the automated checks**\r\n```\r\nFINDING: checkGlobalTask                          Message: Attribute 'calledElement' does not exist; Parameter: null\r\n```\r\n\r\n**Trisotech Roundtrip BPMN**\r\n```xml\r\n\t<semantic:globalUserTask name=\"Call Activity calling a Global User Task\"\r\n\t\tid=\"_d4afdad7-65a5-40c6-9fee-e13ba4c0bed4\" />\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n     <semantic:callActivity calledElement=\"_d4afdad7-65a5-40c6-9fee-e13ba4c0bed4\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" name=\"Call Activity calling a Global User Task\" id=\"_a74c1d4d-db90-43ff-8920-139a300b39a5\">\r\n            <semantic:incoming>_be19c2da-316a-47f6-ad7b-eb6c82bf8609</semantic:incoming>\r\n            <semantic:outgoing>_ce63770e-9f4b-4bc0-a56c-88401c59f0bf</semantic:outgoing>\r\n        </semantic:callActivity>\r\n```\r\n\r\n**Analysis**\r\n* The *calledElement* attribute is missing in the *globalUserTask* element."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/483",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/483/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/483/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/483/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/483",
+    "id": 103932389,
+    "number": 483,
+    "title": "Proposed placement of association elements",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/BPMN%20RTF",
+        "name": "BPMN RTF",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Proposal%20for%20RTF",
+        "name": "Proposal for RTF",
+        "color": "fef2c0"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2015-08-30T16:11:44Z",
+    "updated_at": "2015-09-20T15:51:45Z",
+    "closed_at": null,
+    "body": "In #461 the group agreed on creating a proposal for the placement of association elements.\r\nThe proposal can be found here: [Link](https://www.dropbox.com/s/14xbq3b8pknndzp/Text%20Annotation%20Placement.docx?dl=0)."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/482",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/482/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/482/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/482/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/482",
+    "id": 103930969,
+    "number": 482,
+    "title": "Text Annotation incorrectly moved to collaboration",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Enterprise%20Architect",
+        "name": "Tool: Enterprise Architect",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-08-30T15:37:03Z",
+    "updated_at": "2015-08-30T16:10:48Z",
+    "closed_at": null,
+    "body": "* Tool: Enterprise Architect 12.0.1207\r\n* B.1.0-roundtrip\r\n\r\n**Enterprise Architect**\r\n```xml\r\n\t<bpmn:collaboration id=\"EAID_A0CC40B8_47A2_4273_B3F8_AE9CC4842E9D\" isClosed=\"false\">\r\n[...]\r\n\t\t<bpmn:textAnnotation id=\"EAID_8D99B7D9_FD83_417c_850C_F9C313823F32\" textFormat=\"text/plain\">\r\n\t\t\t<bpmn:text>Text Annotation</bpmn:text>\r\n\t\t</bpmn:textAnnotation>\r\n[...]\r\n\t</bpmn:collaboration>\r\n```\r\nNotes:\r\n* Extension elements have been reduced in order to reduce the size.\r\n\r\n**Reference BPMN**\r\n```xml\r\n <semantic:process isExecutable=\"false\" id=\"WFP-6-2\">\r\n        [...]\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n        [...]\r\n        <semantic:textAnnotation id=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\">\r\n            <semantic:text>Text Annotation</semantic:text>\r\n        </semantic:textAnnotation>\r\n        <semantic:association associationDirection=\"None\" sourceRef=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\" targetRef=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\" id=\"_5362a7ef-ce7e-4a91-9c38-66c07b1b5f49\"/>\r\n    </semantic:process>\r\n```\r\n\r\n**Analysis**\r\n* The *textAnnotation* element is in the *collaboration* element instead of the *process* element.\r\n* For more information please refer to #461."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/481",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/481/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/481/comments",
@@ -623,9 +998,9 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-03-28T21:17:16Z",
-    "updated_at": "2015-03-28T21:20:49Z",
+    "updated_at": "2015-08-30T15:38:16Z",
     "closed_at": null,
-    "body": "* Tool: Visual Paradigm 11.1\r\n* B.1.0-roundtrip\r\n\r\n**Visual Paradigm BPMN**\r\n```xml\r\n\t<process id=\"Trisotech_Visio-_6\" isExecutable=\"false\" name=\"B.1.0\">\r\n\t\t<startEvent id=\"_200f43e7_1385_46e2_a380_3ef16ebe7847\" name=\"Start Event None 1\">\r\n\t\t\t<outgoing>_60ed96e6_5954_48de_861b_7d1e3c1fb23e</outgoing>\r\n\t\t</startEvent>\r\n\t\t<task completionQuantity=\"1\" id=\"_c57a5344_213f_4834_a6c3_94ce878b413c\" isForCompensation=\"false\" name=\"Abstract Task 4\" startQuantity=\"1\">\r\n\t\t\t<incoming>_60ed96e6_5954_48de_861b_7d1e3c1fb23e</incoming>\r\n\t\t\t<outgoing>_6c6288e8_43f6_4085_87c7_1ff21c38fe17</outgoing>\r\n\t\t</task>\r\n\t\t<endEvent id=\"_ed405919_9fd6_47d0_bb00_9be7d5467efb\" name=\"End Event None 2\">\r\n\t\t\t<incoming>_6c6288e8_43f6_4085_87c7_1ff21c38fe17</incoming>\r\n\t\t</endEvent>\r\n\t\t<sequenceFlow id=\"_60ed96e6_5954_48de_861b_7d1e3c1fb23e\" name=\"\" sourceRef=\"_200f43e7_1385_46e2_a380_3ef16ebe7847\" targetRef=\"_c57a5344_213f_4834_a6c3_94ce878b413c\">\r\n\t\t</sequenceFlow>\r\n\t\t<sequenceFlow id=\"_6c6288e8_43f6_4085_87c7_1ff21c38fe17\" name=\"\" sourceRef=\"_c57a5344_213f_4834_a6c3_94ce878b413c\" targetRef=\"_ed405919_9fd6_47d0_bb00_9be7d5467efb\">\r\n\t\t</sequenceFlow>\r\n\t\t<textAnnotation id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4815ea6a_ede2_489b_8b37_2cdb2835b02c\">\r\n\t\t\t<text>Text Annotation</text>\r\n\t\t</textAnnotation>\r\n\t\t<group id=\"_bd04180e_49f6_4cf0_a7d6_da59e2840b4b\">\r\n\t\t</group>\r\n\t</process>\r\n```\r\nNotes:\r\n* Extension elements have been reduced in order to reduce the size.\r\n\r\n**Reference BPMN**\r\n```xml\r\n <semantic:process isExecutable=\"false\" id=\"WFP-6-2\">\r\n        [...]\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n        [...]\r\n        <semantic:textAnnotation id=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\">\r\n            <semantic:text>Text Annotation</semantic:text>\r\n        </semantic:textAnnotation>\r\n        <semantic:association associationDirection=\"None\" sourceRef=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\" targetRef=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\" id=\"_5362a7ef-ce7e-4a91-9c38-66c07b1b5f49\"/>\r\n    </semantic:process>\r\n```\r\n\r\n**Analysis**\r\n* The *textAnnotation* element is in a completely wrong *process* element.\r\n* The *group* element is in a completely wrong *process* element (and is missing a name). There is only one *group* element in the BPMN file."
+    "body": "* Tool: Visual Paradigm 11.1\r\n* B.1.0-roundtrip\r\n\r\n**Visual Paradigm BPMN**\r\n```xml\r\n\t<process id=\"Trisotech_Visio-_6\" isExecutable=\"false\" name=\"B.1.0\">\r\n\t\t<startEvent id=\"_200f43e7_1385_46e2_a380_3ef16ebe7847\" name=\"Start Event None 1\">\r\n\t\t\t<outgoing>_60ed96e6_5954_48de_861b_7d1e3c1fb23e</outgoing>\r\n\t\t</startEvent>\r\n\t\t<task completionQuantity=\"1\" id=\"_c57a5344_213f_4834_a6c3_94ce878b413c\" isForCompensation=\"false\" name=\"Abstract Task 4\" startQuantity=\"1\">\r\n\t\t\t<incoming>_60ed96e6_5954_48de_861b_7d1e3c1fb23e</incoming>\r\n\t\t\t<outgoing>_6c6288e8_43f6_4085_87c7_1ff21c38fe17</outgoing>\r\n\t\t</task>\r\n\t\t<endEvent id=\"_ed405919_9fd6_47d0_bb00_9be7d5467efb\" name=\"End Event None 2\">\r\n\t\t\t<incoming>_6c6288e8_43f6_4085_87c7_1ff21c38fe17</incoming>\r\n\t\t</endEvent>\r\n\t\t<sequenceFlow id=\"_60ed96e6_5954_48de_861b_7d1e3c1fb23e\" name=\"\" sourceRef=\"_200f43e7_1385_46e2_a380_3ef16ebe7847\" targetRef=\"_c57a5344_213f_4834_a6c3_94ce878b413c\">\r\n\t\t</sequenceFlow>\r\n\t\t<sequenceFlow id=\"_6c6288e8_43f6_4085_87c7_1ff21c38fe17\" name=\"\" sourceRef=\"_c57a5344_213f_4834_a6c3_94ce878b413c\" targetRef=\"_ed405919_9fd6_47d0_bb00_9be7d5467efb\">\r\n\t\t</sequenceFlow>\r\n\t\t<textAnnotation id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4815ea6a_ede2_489b_8b37_2cdb2835b02c\">\r\n\t\t\t<text>Text Annotation</text>\r\n\t\t</textAnnotation>\r\n\t\t<group id=\"_bd04180e_49f6_4cf0_a7d6_da59e2840b4b\">\r\n\t\t</group>\r\n\t</process>\r\n```\r\nNotes:\r\n* Extension elements have been reduced in order to reduce the size.\r\n\r\n**Reference BPMN**\r\n```xml\r\n <semantic:process isExecutable=\"false\" id=\"WFP-6-2\">\r\n        [...]\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n        [...]\r\n        <semantic:textAnnotation id=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\">\r\n            <semantic:text>Text Annotation</semantic:text>\r\n        </semantic:textAnnotation>\r\n        <semantic:association associationDirection=\"None\" sourceRef=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\" targetRef=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\" id=\"_5362a7ef-ce7e-4a91-9c38-66c07b1b5f49\"/>\r\n    </semantic:process>\r\n```\r\n\r\n**Analysis**\r\n* The *textAnnotation* element is in a completely wrong *process* element.\r\n* The *group* element is in a completely wrong *process* element (and is missing a name). There is only one *group* element in the BPMN file.\r\n* For further information please refer to #461."
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/464",
@@ -681,61 +1056,6 @@
     "updated_at": "2015-03-28T21:11:09Z",
     "closed_at": null,
     "body": "* Tool: Visual Paradigm 11.1\r\n* B.1.0-roundtrip\r\n\r\n**Visual Paradigm BPMN**\r\n```xml\r\n\t\t<subProcess completionQuantity=\"1\" id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0_\" isForCompensation=\"false\" name=\"Call Activity Collapsed\" startQuantity=\"1\" triggeredByEvent=\"false\">\r\n\t\t\t<incoming>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23__9d489bd9_9435_4692_bc98_4cdda4a61569</incoming>\r\n\t\t\t<outgoing>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23__10a16fd5_0d56_4fdb_8529_0a0610a573be</outgoing>\r\n\t\t\t<startEvent id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___18770c5c_c117_4570_aaf2_8c7a6910c34d\" name=\"Start Event None 3\">\r\n\t\t\t\t<outgoing>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___107de09e_8506_4d2b_ad00_3341be723dff</outgoing>\r\n\t\t\t</startEvent>\r\n\t\t\t<task completionQuantity=\"1\" id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___47207d3b_8dc2_4679_bf33_c1e7e677765b\" isForCompensation=\"false\" name=\"Abstract Task 8\" startQuantity=\"1\">\r\n\t\t\t\t<incoming>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___107de09e_8506_4d2b_ad00_3341be723dff</incoming>\r\n\t\t\t\t<outgoing>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___2e21b112_d974_4add_9bee_91dafbed0a22</outgoing>\r\n\t\t\t</task>\r\n\t\t\t<endEvent id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___ab12c75c_eaf3_4ae1_9021_ee556711757f\" name=\"End Event None 4\">\r\n\t\t\t\t<incoming>ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___2e21b112_d974_4add_9bee_91dafbed0a22</incoming>\r\n\t\t\t</endEvent>\r\n\t\t\t<sequenceFlow id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___2e21b112_d974_4add_9bee_91dafbed0a22\" name=\"\" sourceRef=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___47207d3b_8dc2_4679_bf33_c1e7e677765b\" targetRef=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___ab12c75c_eaf3_4ae1_9021_ee556711757f\">\r\n\t\t\t</sequenceFlow>\r\n\t\t\t<sequenceFlow id=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___107de09e_8506_4d2b_ad00_3341be723dff\" name=\"\" sourceRef=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___18770c5c_c117_4570_aaf2_8c7a6910c34d\" targetRef=\"ls_0623a9bd_fd34_462a_b09d_85cb5004be78__4a6df7ac_26d8_4718_ac05_90af463d5e23_WFP_0___47207d3b_8dc2_4679_bf33_c1e7e677765b\">\r\n\t\t\t</sequenceFlow>\r\n\t\t</subProcess>\r\n```\r\nNotes:\r\n* Extension elements have been reduced in order to reduce the size.\r\n* There is no other element with the name *Call Activity Collapsed*. Expecially no *callActivity*.\r\n\r\n**Reference BPMN**\r\n```xml\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n```"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/461",
-    "id": 61899163,
-    "number": 461,
-    "title": "Text annotation is moved from process to collaboration",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
-        "name": "Roundtrip",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Enterprise%20Architect",
-        "name": "Tool: Enterprise Architect",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 3,
-    "created_at": "2015-03-15T21:02:02Z",
-    "updated_at": "2015-04-08T17:08:40Z",
-    "closed_at": null,
-    "body": "Title: Text annotation is moved from process to collaboration\r\nTool: Enterprise Architect 12.0.1207\r\nTags: B.1.0, roundtrip, Tool: Enterprise Architect\r\n\r\n**Enterprise Architect BPMN**\r\n```xml\r\n\t<bpmn:collaboration id=\"EAID_A0CC40B8_47A2_4273_B3F8_AE9CC4842E9D\" isClosed=\"false\">\r\n\t\t[...]\r\n\t\t<bpmn:textAnnotation id=\"EAID_8D99B7D9_FD83_417c_850C_F9C313823F32\" textFormat=\"text/plain\">\r\n\t\t\t<bpmn:text>Text Annotation</bpmn:text>\r\n\t\t</bpmn:textAnnotation>\r\n\t\t<bpmn:group id=\"EAID_F2E054D5_61C2_4b72_A84E_36A07F58CA22\" categoryValueRef=\"EAID_CV000000_8974_4806_890D_2EFEB3173345\"/>\r\n\t</bpmn:collaboration>\r\n\t[...]\r\n\t<bpmn:process id=\"EAID_5F0E77E6_C603_445b_A076_3EBF285D9F9A\" isClosed=\"false\" processType=\"None\" isExecutable=\"false\">\r\n\t\t[...]\r\n\t\t<bpmn:callActivity id=\"EAID_5AC3CA0B_A9B1_41b5_ABB2_2F397FE2520C\" name=\"Call Activity Collapsed\" startQuantity=\"1\" completionQuantity=\"1\" isForCompensation=\"false\" calledElement=\"EAID_4F291C7F_2348_4c02_AE8F_3D6CF36BC971\">\r\n\t\t\t<bpmn:incoming>EAID_523040CB_4A13_4f86_B228_3073A00632A3</bpmn:incoming>\r\n\t\t\t<bpmn:outgoing>EAID_00A59044_6061_4fad_975D_B3B79F307064</bpmn:outgoing>\r\n\t\t</bpmn:callActivity>\r\n\t\t[...]\r\n\t\t<bpmn:association id=\"EAID_EF002E25_FCDE_4817_9FD7_F9B8C54E2E52\" sourceRef=\"EAID_5AC3CA0B_A9B1_41b5_ABB2_2F397FE2520C\" targetRef=\"EAID_8D99B7D9_FD83_417c_850C_F9C313823F32\" associationDirection=\"None\"/>\r\n\t</bpmn:process>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n    <semantic:process isExecutable=\"false\" id=\"WFP-6-2\">\r\n\t\t[...]\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n\t\t[...]\r\n\t\t<semantic:textAnnotation id=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\">\r\n            <semantic:text>Text Annotation</semantic:text>\r\n        </semantic:textAnnotation>\r\n        <semantic:association associationDirection=\"None\" sourceRef=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\" targetRef=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\" id=\"_5362a7ef-ce7e-4a91-9c38-66c07b1b5f49\"/>\r\n    </semantic:process>\r\n```\r\n**Analysis**\r\nThe text annotation is moved from the process element to the collaboration element.\r\nHowever, as text annotations have no semantical impact and the visual representation is unaffected, there is limited practical impact."
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/460",

@@ -280,6 +280,56 @@
     "body": ""
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/461",
+    "id": 61899163,
+    "number": 461,
+    "title": "Text annotation is moved from process to collaboration",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 4,
+    "created_at": "2015-03-15T21:02:02Z",
+    "updated_at": "2015-08-30T16:13:56Z",
+    "closed_at": "2015-08-30T16:13:56Z",
+    "body": "Title: Text annotation is moved from process to collaboration\r\nTool: Enterprise Architect 12.0.1207\r\nTags: B.1.0, roundtrip, Tool: Enterprise Architect\r\n\r\n**Enterprise Architect BPMN**\r\n```xml\r\n\t<bpmn:collaboration id=\"EAID_A0CC40B8_47A2_4273_B3F8_AE9CC4842E9D\" isClosed=\"false\">\r\n\t\t[...]\r\n\t\t<bpmn:textAnnotation id=\"EAID_8D99B7D9_FD83_417c_850C_F9C313823F32\" textFormat=\"text/plain\">\r\n\t\t\t<bpmn:text>Text Annotation</bpmn:text>\r\n\t\t</bpmn:textAnnotation>\r\n\t\t<bpmn:group id=\"EAID_F2E054D5_61C2_4b72_A84E_36A07F58CA22\" categoryValueRef=\"EAID_CV000000_8974_4806_890D_2EFEB3173345\"/>\r\n\t</bpmn:collaboration>\r\n\t[...]\r\n\t<bpmn:process id=\"EAID_5F0E77E6_C603_445b_A076_3EBF285D9F9A\" isClosed=\"false\" processType=\"None\" isExecutable=\"false\">\r\n\t\t[...]\r\n\t\t<bpmn:callActivity id=\"EAID_5AC3CA0B_A9B1_41b5_ABB2_2F397FE2520C\" name=\"Call Activity Collapsed\" startQuantity=\"1\" completionQuantity=\"1\" isForCompensation=\"false\" calledElement=\"EAID_4F291C7F_2348_4c02_AE8F_3D6CF36BC971\">\r\n\t\t\t<bpmn:incoming>EAID_523040CB_4A13_4f86_B228_3073A00632A3</bpmn:incoming>\r\n\t\t\t<bpmn:outgoing>EAID_00A59044_6061_4fad_975D_B3B79F307064</bpmn:outgoing>\r\n\t\t</bpmn:callActivity>\r\n\t\t[...]\r\n\t\t<bpmn:association id=\"EAID_EF002E25_FCDE_4817_9FD7_F9B8C54E2E52\" sourceRef=\"EAID_5AC3CA0B_A9B1_41b5_ABB2_2F397FE2520C\" targetRef=\"EAID_8D99B7D9_FD83_417c_850C_F9C313823F32\" associationDirection=\"None\"/>\r\n\t</bpmn:process>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n    <semantic:process isExecutable=\"false\" id=\"WFP-6-2\">\r\n\t\t[...]\r\n        <semantic:callActivity calledElement=\"WFP-0-\" name=\"Call Activity Collapsed\" id=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\">\r\n            <semantic:incoming>_9d489bd9-9435-4692-bc98-4cdda4a61569</semantic:incoming>\r\n            <semantic:outgoing>_10a16fd5-0d56-4fdb-8529-0a0610a573be</semantic:outgoing>\r\n        </semantic:callActivity>\r\n\t\t[...]\r\n\t\t<semantic:textAnnotation id=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\">\r\n            <semantic:text>Text Annotation</semantic:text>\r\n        </semantic:textAnnotation>\r\n        <semantic:association associationDirection=\"None\" sourceRef=\"_1237e756-d53c-4591-a731-dafffbf0b3f9\" targetRef=\"_4815ea6a-ede2-489b-8b37-2cdb2835b02c\" id=\"_5362a7ef-ce7e-4a91-9c38-66c07b1b5f49\"/>\r\n    </semantic:process>\r\n```\r\n**Analysis**\r\nThe text annotation is moved from the process element to the collaboration element.\r\nHowever, as text annotations have no semantical impact and the visual representation is unaffected, there is limited practical impact."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/457",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/457/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/457/comments",
