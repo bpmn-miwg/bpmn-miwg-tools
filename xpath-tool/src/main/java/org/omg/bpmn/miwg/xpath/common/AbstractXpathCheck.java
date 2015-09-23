@@ -383,7 +383,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	public Node navigateFollowingElement(String type, String name)
 			throws Throwable {
-		return navigateFollowingElement(currentNode, type, name, null, new Assertion[] {});
+		return navigateFollowingElement(currentNode, type, name, null,
+				new Assertion[] {});
 	}
 
 	public Node navigateFollowingElement(String type, String name,
@@ -393,8 +394,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	public Node navigateFollowingElement(String type, String name,
-			String sequenceFlowName, Assertion[] assertions)
-			throws Throwable {
+			String sequenceFlowName, Assertion[] assertions) throws Throwable {
 		return navigateFollowingElement(currentNode, type, name,
 				sequenceFlowName, assertions);
 	}
@@ -440,8 +440,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	protected Node navigateFollowingElement(Node node, String type,
-			String name, String sequenceFlowName,
-			Assertion[] assertions) throws Throwable {
+			String name, String sequenceFlowName, Assertion[] assertions)
+			throws Throwable {
 
 		if (node == null) {
 			finding(null, "The base node is null");
@@ -1390,7 +1390,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	public void checkAutoNonBPMNAttributes() throws Throwable {
 		Node testNode = currentNode;
+		if (currentNode == null) {
+			findingTop(null, "No current node");
+		}
+
 		Node refNode = findCorrespondingReferenceElement(currentNode);
+
+		if (refNode == null)
+			return;
 
 		NamedNodeMap refAttrs = refNode.getAttributes();
 		NamedNodeMap testAttrs = testNode.getAttributes();

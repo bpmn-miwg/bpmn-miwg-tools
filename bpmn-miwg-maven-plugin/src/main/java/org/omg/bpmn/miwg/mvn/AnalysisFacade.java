@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import org.apache.log4j.Logger;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.AnalysisRun;
@@ -19,8 +18,6 @@ import org.w3c.dom.Document;
 
 public class AnalysisFacade {
 
-	private Logger LOGGER = Logger.getLogger(AnalysisFacade.class);
-
 	private File outputFolder;
 
 	public AnalysisFacade(File outputFolder) {
@@ -32,17 +29,9 @@ public class AnalysisFacade {
 		Collection<AnalysisRun> runs = new LinkedList<AnalysisRun>();
 
 		for (AnalysisJob job : jobs) {
-			try {
-				AnalysisRun run = executeAnalysisJob(job);
-				runs.add(run);
-			} catch (Throwable t) {
-				LOGGER.error(String.format("ERROR: %1$s, %2$s",
-						job.getFullApplicationName(), job.getMIWGTestCase()));
-				LOGGER.error(String.format("     : %1$s, %2$s", t.getClass()
-						.getName(), t.getMessage()));
-			}
+			AnalysisRun run = executeAnalysisJob(job);
+			runs.add(run);
 		}
-
 		HTMLAnalysisOutputWriter.writeOverview(outputFolder, runs);
 
 		return runs;
@@ -63,11 +52,11 @@ public class AnalysisFacade {
 			// Build the DOMs for the DOMAnalysisTools
 			{
 				actualInputStream = job.getActualInput().getInputStream();
-				//assert actualInputStream != null;
+				// assert actualInputStream != null;
 
 				actualDom = DOMFactory.getDocument(actualInputStream);
 
-				//assert actualDom != null;
+				// assert actualDom != null;
 				if (actualInputStream != null)
 					actualInputStream.close();
 			}
@@ -87,10 +76,10 @@ public class AnalysisFacade {
 					referenceDom = null;
 				}
 			}
-			
+
 			// Build the InputStream for the XSD tool using the input stream
 			actualInputStream = job.getActualInput().getInputStream();
-			//assert actualInputStream != null;
+			// assert actualInputStream != null;
 
 			AnalysisResult xsdResult = xsdAnalysisTool.analyzeStream(job, null,
 					actualInputStream, null);
