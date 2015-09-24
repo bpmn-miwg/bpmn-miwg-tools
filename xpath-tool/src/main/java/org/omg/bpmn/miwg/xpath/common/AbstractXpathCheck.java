@@ -37,6 +37,10 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	private Stack<Node> nodeStack;
 	private Stack<Node> currentNodeStack;
 	private Document referenceDocument;
+	
+	protected Stack<Node> __getNodeStack() {
+		return nodeStack;
+	}
 
 	public boolean isApplicable(String testResultName) {
 		String checkName = getName();
@@ -556,6 +560,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	public void selectReferencedProcess() throws Throwable {
 		String ref = getAttribute("processRef");
 		if (ref == null) {
+			push(null);
 			return;
 		}
 
