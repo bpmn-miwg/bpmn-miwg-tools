@@ -1,6 +1,8 @@
 package org.omg.bpmn.miwg.mvn.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.util.Collection;
@@ -8,10 +10,7 @@ import java.util.LinkedList;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisResult;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.MIWGVariant;
 import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
