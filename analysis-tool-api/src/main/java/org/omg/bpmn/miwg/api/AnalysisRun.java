@@ -11,13 +11,13 @@ public class AnalysisRun {
 
 	private AnalysisJob job;
 
-	private Map<AnalysisTool, AnalysisResult> results = new Hashtable<AnalysisTool, AnalysisResult>();
+	private Map<AnalysisTool, AnalysisOutput> results = new Hashtable<AnalysisTool, AnalysisOutput>();
 
 	public AnalysisRun(AnalysisJob job) {
 		this.job = job;
 	}
 
-	public void addResult(AnalysisTool tool, AnalysisResult result) {
+	public void addResult(AnalysisTool tool, AnalysisOutput result) {
 		results.put(tool, result);
 	}
 
@@ -28,13 +28,13 @@ public class AnalysisRun {
 		sb.append("<div class=\"test\" ");
 
 		for (AnalysisTool tool : results.keySet()) {
-			AnalysisResult result = results.get(tool);
+			AnalysisOutput result = results.get(tool);
 			assert result != null;
 
-            sb.append("data-" + tool.getName() + "-ok=\"" + result.numOK
+            sb.append("data-" + tool.getName() + "-ok=\"" + result.numOKs()
                     + "\" ");
             sb.append("data-" + tool.getName() + "-finding=\""
-                    + result.numFindings
+                    + result.numFindings()
 					+ "\" ");
 		}
 
@@ -43,12 +43,12 @@ public class AnalysisRun {
 		sb.append("<ul>\n");
 
 		for (AnalysisTool tool : results.keySet()) {
-			AnalysisResult result = results.get(tool);
+			AnalysisOutput result = results.get(tool);
 			assert result != null;
 
 			sb.append("<li>");
 			sb.append("<a href=\"" + result.getHTMLResultsLink(job) + "\">");
-			sb.append(result.getResultsFileName(job));
+			sb.append(result.getHTMLResultsLink(job));
 			sb.append("</a>");
 			sb.append("</li>\n");
 		}
@@ -63,10 +63,10 @@ public class AnalysisRun {
 		return html;
 	}
 
-	public AnalysisResult getResult(String analysisToolName) {
+	public AnalysisOutput getResult(Class<? extends AnalysisTool> analysisTool) {
 		for (AnalysisTool tool : results.keySet()) {
-			if (tool.getName().equals(analysisToolName)) {
-				AnalysisResult result = results.get(tool);
+			if (tool.getClass().equals(analysisTool)) {
+				AnalysisOutput result = results.get(tool);
 				assert result != null;
 
 				return result;

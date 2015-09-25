@@ -24,11 +24,10 @@
  */
 package org.omg.bpmn.miwg.api.tools;
 
-import java.io.File;
 import java.io.InputStream;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.AnalysisOutput;
 
 /**
  * <b>Experimental</b> interface attempting to allow both current test tools to
@@ -45,9 +44,9 @@ import org.omg.bpmn.miwg.api.AnalysisResult;
  */
 public interface StreamAnalysisTool extends AnalysisTool {
 
-    String getName(); 
-    
-    AnalysisResult analyzeStream(
-            AnalysisJob job, InputStream referenceBpmnXml, InputStream actualBpmnXml, File reportFolder)
-            throws Exception;
+	String getName();
+
+	AnalysisOutput analyzeStream(AnalysisJob job, InputStream referenceBpmnXml,
+			InputStream actualBpmnXml)
+			throws Exception;
 }

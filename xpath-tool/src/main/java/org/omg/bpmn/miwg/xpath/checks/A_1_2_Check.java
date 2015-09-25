@@ -1,8 +1,8 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
-import org.omg.bpmn.miwg.xpath.common.ArtifactType;
-import org.omg.bpmn.miwg.xpath.common.Direction;
-import org.omg.bpmn.miwg.xpath.common.OwnerType;
+import org.omg.bpmn.miwg.xpath.util.ArtifactType;
+import org.omg.bpmn.miwg.xpath.util.Direction;
+import org.omg.bpmn.miwg.xpath.util.OwnerType;
 
 public class A_1_2_Check extends A_1_0_Check {
 

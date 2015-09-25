@@ -30,7 +30,7 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.omg.bpmn.miwg.xpath.common.NameSpaceContexts;
+import org.omg.bpmn.miwg.xpath.util.NameSpaceContexts;
 import org.w3c.dom.Node;
 
 public class AssertionUtil {

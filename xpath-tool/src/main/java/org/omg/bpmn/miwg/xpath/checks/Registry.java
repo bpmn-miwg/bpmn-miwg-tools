@@ -28,7 +28,7 @@ package org.omg.bpmn.miwg.xpath.checks;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 
 public class Registry {
 	

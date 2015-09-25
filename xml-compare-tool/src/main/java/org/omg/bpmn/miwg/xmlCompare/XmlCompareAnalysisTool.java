@@ -25,12 +25,8 @@
 
 package org.omg.bpmn.miwg.xmlCompare;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -38,13 +34,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.custommonkey.xmlunit.Difference;
-import org.custommonkey.xmlunit.NodeDetail;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.Detail;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.DetailedOutput;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.Output;
-import org.omg.bpmn.miwg.HtmlOutput.Pojos.OutputType;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisResult;
+import org.omg.bpmn.miwg.api.AnalysisOutput;
+import org.omg.bpmn.miwg.api.output.dom.NoReferenceEntry;
+import org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry;
 import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
 import org.omg.bpmn.miwg.xmlCompare.bpmn2_0.comparison.Bpmn20ConformanceChecker;
 import org.omg.bpmn.miwg.xmlCompare.bpmn2_0.comparison.Bpmn20DiffConfiguration;
@@ -87,61 +80,32 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 		return checker;
 	}
 
-	public static DetailedOutput describeDifference(Difference difference) {
-		DetailedOutput dOut = new DetailedOutput();
-
-		// Reference xpath/value
-		dOut.addDetail(printDifferenceDetail(difference.getControlNodeDetail(),
-				"reference"));
-
-		// Vendor xpath/value
-		dOut.addDetail(printDifferenceDetail(difference.getTestNodeDetail(),
-				"vendor"));
-
-		return dOut;
-	}
-
-	private static Detail printDifferenceDetail(NodeDetail detail, String type) {
-		Detail d = new Detail();
-		d.setMessage(detail.getXpathLocation() + " :\t" + detail.getValue());
-		d.setType(type);
-		d.setXpath(detail.getXpathLocation());
-		return d;
-	}
-
 	@Override
-	public AnalysisResult analyzeDOM(AnalysisJob job,
-			Document referenceDocument, Document actualDocument, File logDir)
+	public AnalysisOutput analyzeDOM(AnalysisJob job,
+			Document referenceDocument, Document actualDocument)
 			throws Exception {
-		if (job.hasReference()) {
-			List<Difference> diffs = getChecker().getSignificantDifferences(
-					actualDocument, referenceDocument);
-			return new AnalysisResult(0, diffs.size(), adapt(diffs), this);
-		} else {
-			Collection<Output> infoCollection = new LinkedList<Output>();
-			
-			Output info = new Output();
-			info.setOutputType(OutputType.info);
-			info.setDescription("Reference not found. Therefore, we cannot compare with the reference");
-			
-			infoCollection.add(info);
-			
-			return new AnalysisResult(0, 0, infoCollection, this);
-		}
-	}
 
-	private Collection<? extends Output> adapt(List<Difference> diffs) {
-		List<Output> outputs = new ArrayList<Output>();
-		for (Difference diff : diffs) {
-			Output output = new Output(OutputType.finding,
-					describeDifference(diff));
-			output.setDescription(String.format(
-					"Difference found in %1$s (id:%2$s)",
-					diff.getDescription(), diff.getId()));
-			outputs.add(output);
-		}
+		AnalysisOutput output = new AnalysisOutput(job, this);
+		try {
 
-		return outputs;
+			if (referenceDocument != null) {
+				List<Difference> diffs = getChecker()
+						.getSignificantDifferences(actualDocument,
+								referenceDocument);
+
+				for (Difference diff : diffs) {
+					XmlDiffEntry entry = new XmlDiffEntry(diff);
+					output.println(entry);
+				}
+
+			} else {
+				NoReferenceEntry entry = new NoReferenceEntry();
+				output.println(entry);
+			}
+			return output;
+		} finally {
+			output.close();
+		}
 	}
 
 	public String getName() {

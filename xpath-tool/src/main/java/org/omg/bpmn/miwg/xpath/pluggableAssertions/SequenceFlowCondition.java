@@ -25,7 +25,8 @@
 
 package org.omg.bpmn.miwg.xpath.pluggableAssertions;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.omg.bpmn.miwg.api.AnalysisOutput;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 import org.w3c.dom.Node;
 
 public class SequenceFlowCondition implements Assertion {
@@ -39,12 +40,13 @@ public class SequenceFlowCondition implements Assertion {
 	}
 
 	@Override
-	public void check(Node node, AbstractXpathCheck check) throws Throwable {
+	public void check(Node node, AbstractXpathCheck check, AnalysisOutput output)
+			throws Throwable {
 
 		Node conditionExpressionNode = AssertionUtil.findNode(node,
 				"bpmn:conditionExpression");
 		if (conditionExpressionNode == null) {
-			check.pluggableAssertionFinding(this,
+			output.pluggableAssertionFinding(getClass().getSimpleName(),
 					"Could not find a conditionExpression element", null);
 			return;
 		}
@@ -54,18 +56,19 @@ public class SequenceFlowCondition implements Assertion {
 		String actualExpression = AssertionUtil.getTextContent(node);
 
 		if (!expectedType.equals(actualType)) {
-			check.pluggableAssertionFinding(this, String.format(
-					"The type should be '%s', but it is '%s'", expectedType,
-					actualType), null);
+			output.pluggableAssertionFinding(getClass().getSimpleName(), String
+					.format("The type should be '%s', but it is '%s'",
+							expectedType, actualType), null);
 		}
 
 		if (!expectedExpression.equals(actualExpression)) {
-			check.pluggableAssertionFinding(this, String.format(
-					"The expression should be '%s', but it is '%s'",
-					expectedExpression, actualExpression), null);
+			output.pluggableAssertionFinding(getClass().getSimpleName(), String
+					.format("The expression should be '%s', but it is '%s'",
+							expectedExpression, actualExpression), null);
 		}
 
-		check.pluggableAssertionOk(this, "Condition expression is correct");
+		output.pluggableAssertionOk(getClass().getSimpleName(),
+				"Condition expression is correct");
 	}
 
 }

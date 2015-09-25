@@ -31,7 +31,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 import javax.json.Json;
@@ -49,13 +48,10 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisRun;
-import org.omg.bpmn.miwg.api.Consts;
-import org.omg.bpmn.miwg.api.MIWGVariant;
-import org.omg.bpmn.miwg.api.input.FileAnalysisInput;
-import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
+import org.omg.bpmn.miwg.devel.xpath.scan.ScanUtil;
+import org.omg.bpmn.miwg.devel.xpath.scan.StandardScanParameters;
 import org.omg.bpmn.miwg.mvn.filter.BpmnFileFilter;
 import org.omg.bpmn.miwg.mvn.filter.DirFilter;
-import org.omg.bpmn.miwg.xmlCompare.Variant;
 
 /**
  * Goal which scans project for BPMN files and tests them for interoperability.
@@ -102,48 +98,10 @@ public class ModelInterchangeMojo extends AbstractMojo {
 			outputDirectory.mkdirs();
 		}
 
-		AnalysisFacade analysisFacade = new AnalysisFacade(outputDirectory);
-		Collection<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
 		try {
-			for (String app : getApplications()) {
-				getLog().info("Running test suite for " + app);
-				if (resources != null && !resources.isEmpty()) {
-					for (Resource r : resources) {
-						File dir = new File(r.getDirectory());
-						List<File> bpmnFiles = new ArrayList<File>();
-
-						getLog().debug(
-								"Scanning for BPMN files in "
-										+ r.getDirectory());
-						scanForBpmn(dir, bpmnFiles, app);
-
-						for (File b : bpmnFiles) {
-                            getLog().info(
-                                    "Analysing bpmn file: "
-                                            + b.getAbsolutePath());
-							AnalysisJob job;
-                            try {
-                                job = new AnalysisJob(app, inferTestName(b),
-                                        inferMiwgVariant(b),
-                                        new FileAnalysisInput(b),
-                                        new ResourceAnalysisInput(getClass(),
-                                                inferReference(b)));
-                                jobs.add(job);
-                            } catch (Throwable t) {
-                                getLog().error(
-                                        String.format("ERROR: %1$s, %2$s", app,
-                                                b.getCanonicalPath()));
-                                getLog().error(
-                                        String.format("     : %1$s, %2$s", t
-                                                .getClass().getName(), t
-                                                .getMessage()));
-                            }
-						}
-					}
-				}
-			}
-
-			analysisRuns = analysisFacade.executeAnalysisJobs(jobs);
+			AnalysisFacade analysisFacade = new AnalysisFacade();
+			Collection<AnalysisJob> jobs = ScanUtil.buildListOfAnalysisJobs(new StandardScanParameters(null, null));
+			analysisRuns = analysisFacade.executeAnalysisJobs(jobs, outputDirectory.getAbsolutePath());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -205,26 +163,5 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		return analysisRuns;
 	}
 
-    protected MIWGVariant inferMiwgVariant(File b) {
-        MIWGVariant variant = null;
-        if (b.getName().contains(Variant.roundtrip.toString())) {
-            variant = MIWGVariant.Roundtrip;
-        } else if (b.getName().contains(Variant.export.toString())) {
-            variant = MIWGVariant.Export;
-        } else {
-            getLog().error(
-                    "Looks like this BPMN does not have the expected naming convention: "
-                            + b);
-        }
-        return variant;
-    }
 
-    protected String inferTestName(File bpmnFile) {
-        return bpmnFile.getName().substring(0, bpmnFile.getName().indexOf('-'));
-    }
-
-    protected String inferReference(File bpmnFile) {
-        return "/" + Consts.REFERENCE_DIR + "/" + inferTestName(bpmnFile)
-                + Consts.BPMN_FILE_EXTENSION;
-    }
 }

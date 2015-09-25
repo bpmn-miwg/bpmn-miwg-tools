@@ -1,8 +1,8 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
-import org.omg.bpmn.miwg.xpath.common.ArtifactType;
-import org.omg.bpmn.miwg.xpath.common.Direction;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
+import org.omg.bpmn.miwg.xpath.util.ArtifactType;
+import org.omg.bpmn.miwg.xpath.util.Direction;
 import org.w3c.dom.Node;
 
 public class B_2_0_Check extends AbstractXpathCheck {
@@ -74,11 +74,13 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				{
 					selectElement("bpmn:subProcess", "Expanded Sub-Process 1");
 					checkXORMarkersForProcess(true);
-					
+
 					navigateElement("bpmn:startEvent", "Start Event 2");
-					
-					navigateFollowingElement("bpmn:userTask", "User Task 7 Standard Loop");
-					//TODO: navigateElementX("bpmn:standardLoopCharacteristics");
+
+					navigateFollowingElement("bpmn:userTask",
+							"User Task 7 Standard Loop");
+					// TODO:
+					// navigateElementX("bpmn:standardLoopCharacteristics");
 
 					navigateFollowingElement("bpmn:endEvent", "End Event 2");
 					pop();
@@ -108,7 +110,7 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				selectReferencedProcess();
 
 				checkXORMarkersForProcess(true);
-				
+
 				navigateLane("Lane 1");
 				navigateLane("Lane 2");
 
@@ -197,21 +199,25 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				{
 					// FLOW following the event message catch
 
-					navigateElement("bpmn:subProcess", "Collapsed Sub-Process 2");
+					navigateElement("bpmn:subProcess",
+							"Collapsed Sub-Process 2");
 					checkDataAssociation(ArtifactType.DataStoreReference,
 							"Data Store Reference", Direction.Input);
 
 					{
-						selectElement("bpmn:exclusiveGateway", "Exclusive Gateway 4");
+						selectElement("bpmn:exclusiveGateway",
+								"Exclusive Gateway 4");
 						navigateGatewaySequenceFlowStack("Default Sequence Flow 2");
 						checkDefaultSequenceFlow();
 						pop();
 					}
 
-					navigateElement("bpmn:intermediateThrowEvent", "Intermediate Event Message Throw");
+					navigateElement("bpmn:intermediateThrowEvent",
+							"Intermediate Event Message Throw");
 					checkMessageEvent();
 
-					n = navigateElement("bpmn:callActivity", "Collapsed Call Activity");
+					n = navigateElement("bpmn:callActivity",
+							"Collapsed Call Activity");
 
 					navigateBoundaryEvent("Boundary Intermediate Event Non-Interrupting Escalation");
 					checkEscalationEvent();
@@ -246,7 +252,8 @@ public class B_2_0_Check extends AbstractXpathCheck {
 				{
 					// FLOW following the Intermediate Event Message Catch 2
 
-					navigateElement("bpmn:intermediateCatchEvent", "Intermediate Event Message Catch 2");
+					navigateElement("bpmn:intermediateCatchEvent",
+							"Intermediate Event Message Catch 2");
 
 					n = navigateFollowingElement("bpmn:task", "Task 21");
 					navigateBoundaryEvent("Boundary Intermediate Event Interrupting Timer");

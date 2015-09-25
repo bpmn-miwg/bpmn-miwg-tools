@@ -1,6 +1,6 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 
 public class A_1_0_Check extends AbstractXpathCheck {
 

@@ -1,6 +1,6 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 import org.w3c.dom.Node;
 
 public class A_3_0_Check extends AbstractXpathCheck {

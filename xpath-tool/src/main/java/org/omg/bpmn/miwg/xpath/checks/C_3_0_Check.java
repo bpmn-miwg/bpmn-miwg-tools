@@ -1,8 +1,8 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
 import org.omg.bpmn.miwg.xpath.pluggableAssertions.Assertion;
 import org.omg.bpmn.miwg.xpath.pluggableAssertions.SequenceFlowCondition;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 import org.w3c.dom.Node;
 
 public class C_3_0_Check extends AbstractXpathCheck {
@@ -56,10 +56,8 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		Node gateway3 = navigateFollowingElement("bpmn:exclusiveGateway",
 				"Service level", "Regular repair service");
 
-		Node task2 = navigateFollowingElement(
-				"bpmn:userTask",
-				"Perform repair (premium level)",
-				"Premium",
+		Node task2 = navigateFollowingElement("bpmn:userTask",
+				"Perform repair (premium level)", "Premium",
 				new Assertion[] { new SequenceFlowCondition(
 						"tFormalExpression", "Service Level == 'Premium'") });
 

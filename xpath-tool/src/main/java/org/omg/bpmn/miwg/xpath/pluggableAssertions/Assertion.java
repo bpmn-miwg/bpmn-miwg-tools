@@ -25,11 +25,12 @@
 
 package org.omg.bpmn.miwg.xpath.pluggableAssertions;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.omg.bpmn.miwg.api.AnalysisOutput;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 import org.w3c.dom.Node;
 
 public interface Assertion {
 
-	void check(Node node, AbstractXpathCheck check) throws Throwable;
+	void check(Node node, AbstractXpathCheck check, AnalysisOutput output) throws Throwable;
 	
 }

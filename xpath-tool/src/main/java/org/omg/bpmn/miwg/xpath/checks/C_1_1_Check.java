@@ -1,6 +1,6 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 import org.w3c.dom.Node;
 
 public class C_1_1_Check extends AbstractXpathCheck {
@@ -10,14 +10,11 @@ public class C_1_1_Check extends AbstractXpathCheck {
 		return "C.1.1";
 	}
 
-
-
-
 	@Override
 	public void doExecute() throws Throwable {
 		navigateDefinitions();
-		checkAttributeValue("expressionLanguage", "http://www.w3.org/1999/XPath");
-		
+		checkAttributeValue("expressionLanguage",
+				"http://www.w3.org/1999/XPath");
 
 		navigateElement("bpmn:resource", "Team Assistant");
 		checkAttributeValue("w4:type", "User");
@@ -40,7 +37,6 @@ public class C_1_1_Check extends AbstractXpathCheck {
 
 			Node n1 = navigateFollowingElement("bpmn:exclusiveGateway",
 					"Invoice approved?");
-			
 
 			{
 				navigateFollowingElement("bpmn:userTask", "Rechnung klären",

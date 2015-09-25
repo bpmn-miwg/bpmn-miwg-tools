@@ -1,7 +1,7 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
-import org.omg.bpmn.miwg.xpath.common.AbstractXpathCheck;
-import org.omg.bpmn.miwg.xpath.common.Direction;
+import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
+import org.omg.bpmn.miwg.xpath.util.Direction;
 import org.w3c.dom.Node;
 
 public class C_1_0_Check extends AbstractXpathCheck {
@@ -36,8 +36,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 					navigateElement("bpmn:startEvent", "Invoice received");
 					checkMessageEvent();
 
-					navigateFollowingElement("bpmn:task",
-							"Scan Invoice");
+					navigateFollowingElement("bpmn:task", "Scan Invoice");
 					checkMessageFlow("", Direction.Output, "bpmn:startEvent",
 							"Invoice received");
 
