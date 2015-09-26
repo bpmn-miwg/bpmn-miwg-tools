@@ -36,16 +36,16 @@ public class Analysis extends AbstractCheckEntry {
 	@Attribute
 	private String name;
 	@Attribute
-	private AnalysisTool tool;
+	private String toolName;
 
 	public Analysis(String name, AnalysisTool tool) {
 		this.name = name;
-		this.tool = tool;
+		this.toolName = tool.getName();
 	}
 
 	@Override
 	public String toLine() {
-		return String.format("ANALYSIS: %s (Tool: %s)", name, tool.getName());
+		return String.format("ANALYSIS: %s (Tool: %s)", name, toolName);
 	}
 
 	@Override
