@@ -48,6 +48,9 @@ public class Reference_C_1_1_XPath_Test {
 	private static final String REFERENCE_RESOURCE = "/Reference/C.1.1.bpmn";
 	private static final String TEST_RESOURCE = "/Reference/C.1.1-Removed-Extension-Elements.bpmn";
 
+	/**
+	 * This Test checks the reference itself. There should not be any findings.
+	 */
 	@Test
 	public void testIdentical() throws Exception {
 		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "C.1.1",
