@@ -14,7 +14,6 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisOutput;
 import org.omg.bpmn.miwg.api.AnalysisRun;
-import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.api.Variant;
 import org.omg.bpmn.miwg.api.input.AnalysisInput;
 import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
@@ -29,8 +28,6 @@ import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
  */
 @RunWith(Parameterized.class)
 public class Reference_All_Test {
-
-	private final static String REF = "Reference";
 
 	@Parameters
 	public static List<Object[]> data() throws IOException {
@@ -66,10 +63,9 @@ public class Reference_All_Test {
 
 	@Test
 	public void testXpath() throws Exception {
-		AnalysisInput input = new ResourceAnalysisInput(getClass(), "/"
-				+ Consts.REFERENCE_DIR + "/" + param + ".bpmn");
+		AnalysisInput input = new ResourceAnalysisInput(getClass(), "/Reference/" + param + ".bpmn");
 
-		AnalysisJob job = new AnalysisJob(REF, param, Variant.Reference,
+		AnalysisJob job = new AnalysisJob("Reference", param, Variant.Reference,
 				input);
 		job.setXpathOnly();
 
@@ -85,10 +81,9 @@ public class Reference_All_Test {
 
 	@Test
 	public void testSchema() throws Exception {
-		AnalysisInput input = new ResourceAnalysisInput(getClass(), "/"
-				+ Consts.REFERENCE_DIR + "/" + param + ".bpmn");
+		AnalysisInput input = new ResourceAnalysisInput(getClass(), "/Reference/" + param + ".bpmn");
 
-		AnalysisJob job = new AnalysisJob(REF, param, Variant.Reference,
+		AnalysisJob job = new AnalysisJob("Reference", param, Variant.Reference,
 				input);
 		job.setSchemaOnly();
 
