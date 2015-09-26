@@ -23,11 +23,12 @@
  * 
  */
 
-package org.omg.bpmn.miwg.devel.xpath.scan;
+package org.omg.bpmn.miwg.scan;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -36,7 +37,7 @@ import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
 import org.omg.bpmn.miwg.api.Variant;
 import org.omg.bpmn.miwg.api.input.FileAnalysisInput;
 
-public class ScanUtil {
+public class BpmnFileScanner {
 
 	public static List<Object[]> data(ScanParameters conf) throws IOException,
 			ReferenceNotFoundException {
@@ -55,14 +56,14 @@ public class ScanUtil {
 
 		List<AnalysisJob> jobs = new LinkedList<AnalysisJob>();
 
-		List<Application> applications = listApplications(conf.getInputRoot());
+		List<Application> applications = listApplications(conf.getInputRoots());
 		for (Application application : applications) {
 			if (conf.acceptApplication(application)) {
 				List<TestResult> testResults = listTestResults(application.folder);
 				for (TestResult testResult : testResults) {
 					if (conf.acceptTestResult(testResult)) {
 						AnalysisJob job = new AnalysisJob(
-								application.application,
+								application.fullName,
 								inferTestName(testResult.file),
 								inferMiwgVariant(testResult.file),
 								new FileAnalysisInput(testResult.file));
@@ -80,7 +81,7 @@ public class ScanUtil {
 		return application;
 	}
 
-	public static List<Application> listApplications(File folderInput) {
+	public static List<Application> listApplications(Collection<File> inputFolders) {
 
 		class ApplicationDirFilter implements FileFilter {
 			@Override
@@ -91,8 +92,11 @@ public class ScanUtil {
 		}
 
 		List<Application> applications = new LinkedList<Application>();
-		for (File folder : folderInput.listFiles(new ApplicationDirFilter())) {
-			applications.add(convertApplicationFolder(folder));
+		for (File inputFolder : inputFolders) {
+			for (File applicationFolder : inputFolder
+					.listFiles(new ApplicationDirFilter())) {
+				applications.add(convertApplicationFolder(applicationFolder));
+			}
 		}
 		return applications;
 	}
@@ -135,7 +139,7 @@ public class ScanUtil {
 		if (fileName.contains("-")) {
 			return fileName.substring(0, bpmnFile.getName().indexOf('-'));
 		} else {
-			return fileName.substring(0, bpmnFile.getName().indexOf('.'));
+			return fileName.substring(0, bpmnFile.getName().indexOf(".bpmn"));
 		}
 	}
 

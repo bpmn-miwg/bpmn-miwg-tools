@@ -38,9 +38,9 @@ import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
 import org.omg.bpmn.miwg.devel.xpath.common.AbstractTestCase;
-import org.omg.bpmn.miwg.devel.xpath.scan.ScanUtil;
-import org.omg.bpmn.miwg.devel.xpath.scan.StandardScanParameters;
 import org.omg.bpmn.miwg.mvn.AnalysisFacade;
+import org.omg.bpmn.miwg.scan.BpmnFileScanner;
+import org.omg.bpmn.miwg.scan.StandardScanParameters;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
@@ -55,7 +55,7 @@ public class AllTestResults_NoExceptions extends AbstractTestCase {
 	@Parameters
 	public static List<Object[]> data() throws IOException,
 			ReferenceNotFoundException {
-		return ScanUtil.data(new StandardScanParameters(null, null));
+		return BpmnFileScanner.data(new StandardScanParameters(null, null));
 	}
 
 	@Test
@@ -64,8 +64,7 @@ public class AllTestResults_NoExceptions extends AbstractTestCase {
 		try {
 			job.setSchemaOnly();
 
-			AnalysisFacade faccade = new AnalysisFacade();
-			AnalysisRun run = faccade.executeAnalysisJob(job);
+			AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 			run.getResult(SchemaAnalysisTool.class);
 		} catch (Exception e) {
@@ -81,8 +80,7 @@ public class AllTestResults_NoExceptions extends AbstractTestCase {
 		try {
 			job.setXpathOnly();
 
-			AnalysisFacade faccade = new AnalysisFacade();
-			AnalysisRun run = faccade.executeAnalysisJob(job);
+			AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 			run.getResult(XpathAnalysisTool.class);
 		} catch (Exception e) {

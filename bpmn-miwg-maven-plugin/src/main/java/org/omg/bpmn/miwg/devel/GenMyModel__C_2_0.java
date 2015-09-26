@@ -34,8 +34,8 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
 import org.omg.bpmn.miwg.devel.xpath.common.AbstractTestCase;
-import org.omg.bpmn.miwg.devel.xpath.scan.ScanUtil;
-import org.omg.bpmn.miwg.devel.xpath.scan.StandardScanParameters;
+import org.omg.bpmn.miwg.scan.BpmnFileScanner;
+import org.omg.bpmn.miwg.scan.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class GenMyModel__C_2_0 extends AbstractTestCase {
@@ -46,7 +46,7 @@ public class GenMyModel__C_2_0 extends AbstractTestCase {
 
 	@Parameters
 	public static List<Object[]> data() throws IOException, ReferenceNotFoundException {
-		return ScanUtil
+		return BpmnFileScanner
 				.data(new StandardScanParameters(
 						"GenMyModel",
 						"C.2.0"));

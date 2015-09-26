@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.test;
+package org.omg.bpmn.miwg.test.references;
 
 import static org.junit.Assert.assertEquals;
 
@@ -34,8 +34,6 @@ import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.api.Variant;
 import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
 import org.omg.bpmn.miwg.mvn.AnalysisFacade;
-import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
-import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
 /**
@@ -45,50 +43,24 @@ import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
  *
  */
 
-public class Reference_B_2_0_Test {
+public class Reference_C_3_0_XPath_Test {
 
-	private static final String CAMUNDA_RESOURCE = "/camunda Modeler 2.4.0/B.2.0-roundtrip.bpmn";
+	private static final String REFERENCE_RESOURCE = "/" + Consts.REFERENCE_DIR
+			+ "/C.3.0.bpmn";
 
-	private static final ResourceAnalysisInput INPUT = new ResourceAnalysisInput(
-			Reference_B_2_0_Test.class, CAMUNDA_RESOURCE);
-
-	@Test
-	public void testSchema() throws Exception {
-		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "B.2.0",
-				Variant.Reference, INPUT);
-		job.setSchemaOnly();
-
-		AnalysisFacade facade = new AnalysisFacade();
-		AnalysisOutput result = facade.executeAnalysisJob(job).getResult(
-				SchemaAnalysisTool.class);
-
-		assertEquals(0, result.numFindings());
-	}
 
 	@Test
-	public void testXpath() throws Exception {
-		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "B.2.0",
-				Variant.Reference, INPUT);
+	public void testReference_XPath() throws Exception {
+		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "C.3.0",
+				Variant.Reference, new ResourceAnalysisInput(getClass(),
+						REFERENCE_RESOURCE));
 		job.setXpathOnly();
 
-		AnalysisFacade facade = new AnalysisFacade();
-		AnalysisOutput result = facade.executeAnalysisJob(job).getResult(
+		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
 				XpathAnalysisTool.class);
 
 		assertEquals(0, result.numFindings());
 	}
-
-	@Test
-	public void testXmlCompare() throws Exception {
-		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "B.2.0",
-				Variant.Reference, INPUT);
-		job.setXmlCompareOnly();
-
-		AnalysisFacade facade = new AnalysisFacade();
-		AnalysisOutput result = facade.executeAnalysisJob(job).getResult(
-				XmlCompareAnalysisTool.class);
-
-		assertEquals(0, result.numFindings());
-	}
-
+	
+	
 }

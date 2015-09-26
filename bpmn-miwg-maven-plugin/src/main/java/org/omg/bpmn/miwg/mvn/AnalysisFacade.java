@@ -10,7 +10,6 @@ import org.omg.bpmn.miwg.api.AnalysisOutput;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.output.dom.ExceptionEntry;
 import org.omg.bpmn.miwg.api.output.html.HTMLAnalysisOutputWriter;
-import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
@@ -19,7 +18,7 @@ import org.w3c.dom.Document;
 
 public class AnalysisFacade {
 
-	public Collection<AnalysisRun> executeAnalysisJobs(
+	public static Collection<AnalysisRun> executeAnalysisJobs(
 			Collection<AnalysisJob> jobs, String outputFolder) throws Exception {
 		Collection<AnalysisRun> runs = new LinkedList<AnalysisRun>();
 
@@ -35,20 +34,9 @@ public class AnalysisFacade {
 		return runs;
 	}
 
-	/**
-	 * This is a pseudo tool which is used during the initialization of a job.
-	 *
-	 */
-	private class Init implements AnalysisTool {
 
-		@Override
-		public String getName() {
-			return "init";
-		}
-		
-	}
 	
-	public AnalysisRun executeAnalysisJob(AnalysisJob job) throws Exception {
+	public static AnalysisRun executeAnalysisJob(AnalysisJob job) throws Exception {
 		System.out.println("Executing AnalysisJob '" + job.getName() + "' ...");
 
 		XpathAnalysisTool xpathAnalysisTool = new XpathAnalysisTool();
@@ -58,7 +46,7 @@ public class AnalysisFacade {
 		InputStream referenceInputStream = null;
 		InputStream actualInputStream = null;
 
-		AnalysisOutput initOutput = new AnalysisOutput(job, new Init());
+		AnalysisOutput initOutput = new AnalysisOutput(job, new InitAnalysisTool());
 
 		Document actualDom = null;
 		Document referenceDom = null;

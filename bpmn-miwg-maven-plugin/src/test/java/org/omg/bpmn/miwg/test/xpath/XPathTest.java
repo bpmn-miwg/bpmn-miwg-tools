@@ -52,8 +52,7 @@ public class XPathTest {
 				"A.1.0", Variant.Roundtrip, input);
 		job.setXpathOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(XpathAnalysisTool.class);
 		assertEquals(1, result.numFindings());
@@ -68,8 +67,7 @@ public class XPathTest {
 				"A.1.0", Variant.Roundtrip, input);
 		job.setXpathOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(XpathAnalysisTool.class);
 		assertEquals(0, result.numFindings());
@@ -84,8 +82,7 @@ public class XPathTest {
 				"A.1.0", Variant.Roundtrip, input);
 		job.setXpathOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(XpathAnalysisTool.class);
 		assertFalse(result.getHtmlOutput().isEmpty());

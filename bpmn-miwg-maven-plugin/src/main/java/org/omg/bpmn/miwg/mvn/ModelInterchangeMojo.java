@@ -25,19 +25,9 @@
 package org.omg.bpmn.miwg.mvn;
 
 import java.io.File;
-import java.io.FileFilter;
-import java.io.FilenameFilter;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
-
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.JsonValue;
 
 import org.apache.maven.model.Resource;
 import org.apache.maven.plugin.AbstractMojo;
@@ -47,20 +37,17 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisRun;
-import org.omg.bpmn.miwg.devel.xpath.scan.ScanUtil;
-import org.omg.bpmn.miwg.devel.xpath.scan.StandardScanParameters;
-import org.omg.bpmn.miwg.mvn.filter.BpmnFileFilter;
-import org.omg.bpmn.miwg.mvn.filter.DirFilter;
+import org.omg.bpmn.miwg.scan.BpmnFileScanner;
+import org.omg.bpmn.miwg.scan.StandardScanParameters;
 
 /**
  * Goal which scans project for BPMN files and tests them for interoperability.
  */
 @Mojo(name = "test", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
 public class ModelInterchangeMojo extends AbstractMojo {
-	    /**
-     * Project instance Used to add new source directory to the build.
-     */
+	/**
+	 * Project instance Used to add new source directory to the build.
+	 */
 	@Parameter(defaultValue = "${project}", required = true)
 	protected MavenProject project;
 
@@ -85,12 +72,6 @@ public class ModelInterchangeMojo extends AbstractMojo {
 	@Parameter(defaultValue = "${project.resources}", readonly = true, required = true)
 	protected List<Resource> resources;
 
-	protected FilenameFilter bpmnFileFilter = new BpmnFileFilter();
-
-	protected FileFilter dirFilter = new DirFilter();
-	
-	private Collection<AnalysisRun> analysisRuns;
-
 	public void execute() throws MojoExecutionException {
 		getLog().info("Running BPMN-MIWG test suite...");
 
@@ -99,69 +80,22 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		}
 
 		try {
-			AnalysisFacade analysisFacade = new AnalysisFacade();
-			Collection<AnalysisJob> jobs = ScanUtil.buildListOfAnalysisJobs(new StandardScanParameters(null, null));
-			analysisRuns = analysisFacade.executeAnalysisJobs(jobs, outputDirectory.getAbsolutePath());
+			Collection<String> inputFolders = new LinkedList<String>();
+			if (!resources.isEmpty()) {
+				for (Resource resource : resources) {
+					String folderName = resource.getDirectory();
+					inputFolders.add(folderName);
+				}
+			}
+
+			Collection<AnalysisJob> jobs = BpmnFileScanner
+					.buildListOfAnalysisJobs(new StandardScanParameters(application,
+							null, inputFolders, outputDirectory.getCanonicalPath()));
+			AnalysisFacade.executeAnalysisJobs(jobs,
+					outputDirectory.getAbsolutePath());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
-	protected List<String> getApplications() {
-		if (application == null) {
-			JsonReader jsonReader = Json.createReader(getClass()
-					.getResourceAsStream("/tools-tested-by-miwg.json"));
-			JsonObject jsonObject = jsonReader.readObject();
-			JsonArray toolArray = jsonObject.getJsonArray("tools");
-
-			List<String> list = new ArrayList<String>();
-			for (JsonValue tool : toolArray) {
-				JsonObject obj = (JsonObject) tool;
-//				if ("true".equalsIgnoreCase(obj.get("testResultsSubmitted")
-//						.toString())
-//						|| "\"true\"".equalsIgnoreCase(obj.get(
-//								"testResultsSubmitted").toString())
-//						|| "\"partial\"".equalsIgnoreCase(obj.get(
-//								"testResultsSubmitted").toString())) {
-					list.add(obj.getString("tool") + " "
-							+ obj.getString("version"));
-//				}
-			}
-
-			return list;
-		} else {
-			return Collections.singletonList(application);
-		}
-	}
-
-	protected void scanForBpmn(final File dir, final List<File> bpmnFiles) {
-		// first search for bpmn files in this dir...
-		bpmnFiles.addAll(Arrays.asList(dir.listFiles(bpmnFileFilter)));
-
-		// ... then recurse child dirs
-		File[] dirs = dir.listFiles(dirFilter);
-		for (File d2 : dirs) {
-			scanForBpmn(d2, bpmnFiles);
-		}
-	}
-
-	protected void scanForBpmn(final File dir, final List<File> bpmnFiles,
-			final String vendorId) {
-		scanForBpmn(dir, bpmnFiles);
-		if (vendorId != null && vendorId.length() > 0) {
-			List<File> nonMatchingFiles = new ArrayList<File>();
-			for (File bpmnFile : bpmnFiles) {
-				if (!bpmnFile.getAbsolutePath().contains(vendorId)) {
-					nonMatchingFiles.add(bpmnFile);
-				}
-			}
-			bpmnFiles.removeAll(nonMatchingFiles);
-		}
-	}
-
-	public Collection<AnalysisRun> getAnalysisRuns() {
-		return analysisRuns;
-	}
-
 
 }

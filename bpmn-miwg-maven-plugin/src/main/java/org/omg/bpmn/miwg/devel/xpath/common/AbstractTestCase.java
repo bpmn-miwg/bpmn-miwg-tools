@@ -66,9 +66,7 @@ public abstract class AbstractTestCase {
 	public void testSchema() throws Exception {
 		job.setSchemaOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(SchemaAnalysisTool.class);
 
@@ -79,9 +77,7 @@ public abstract class AbstractTestCase {
 	public void testXpath() throws Exception {
 		job.setXpathOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(XpathAnalysisTool.class);
 

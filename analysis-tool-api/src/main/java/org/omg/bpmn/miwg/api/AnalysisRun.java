@@ -24,16 +24,17 @@ public class AnalysisRun {
 	public String buildOverviewHTML(File folder)
 			throws UnsupportedEncodingException {
 		StringBuilder sb = new StringBuilder();
+		
 
-		sb.append("<div class=\"test\" ");
+		sb.append("<div class=\"test\" tool=\"" + job.getFullApplicationName() + "\" testcase=\"" + job.getMIWGTestCase() + "\" ");
 
-		for (AnalysisTool tool : results.keySet()) {
-			AnalysisOutput result = results.get(tool);
+		for (AnalysisTool analysisTool : results.keySet()) {
+			AnalysisOutput result = results.get(analysisTool);
 			assert result != null;
 
-            sb.append("data-" + tool.getName() + "-ok=\"" + result.numOKs()
+            sb.append("data-" + analysisTool.getName() + "-ok=\"" + result.numOKs()
                     + "\" ");
-            sb.append("data-" + tool.getName() + "-finding=\""
+            sb.append("data-" + analysisTool.getName() + "-finding=\""
                     + result.numFindings()
 					+ "\" ");
 		}

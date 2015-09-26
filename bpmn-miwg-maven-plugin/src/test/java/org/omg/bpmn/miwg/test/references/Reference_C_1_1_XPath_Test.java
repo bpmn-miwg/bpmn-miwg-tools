@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.test;
+package org.omg.bpmn.miwg.test.references;
 
 import static org.junit.Assert.assertEquals;
 
@@ -58,8 +58,7 @@ public class Reference_C_1_1_XPath_Test {
 						REFERENCE_RESOURCE));
 		job.setXpathOnly();
 
-		AnalysisFacade facade = new AnalysisFacade();
-		AnalysisOutput result = facade.executeAnalysisJob(job).getResult(
+		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
 				XpathAnalysisTool.class);
 
 		assertEquals(0, result.numFindings());
@@ -77,8 +76,7 @@ public class Reference_C_1_1_XPath_Test {
 						TEST_RESOURCE));
 		job.setXpathOnly();
 
-		AnalysisFacade facade = new AnalysisFacade();
-		AnalysisOutput result = facade.executeAnalysisJob(job).getResult(
+		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
 				XpathAnalysisTool.class);
 
 		assertEquals(5, result.numFindings());

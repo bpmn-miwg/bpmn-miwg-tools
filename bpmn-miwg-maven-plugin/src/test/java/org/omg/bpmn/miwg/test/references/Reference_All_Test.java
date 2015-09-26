@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.test;
+package org.omg.bpmn.miwg.test.references;
 
 import static org.junit.Assert.assertEquals;
 
@@ -73,9 +73,7 @@ public class Reference_All_Test {
 				input);
 		job.setXpathOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(XpathAnalysisTool.class);
 
@@ -94,9 +92,7 @@ public class Reference_All_Test {
 				input);
 		job.setSchemaOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(SchemaAnalysisTool.class);
 

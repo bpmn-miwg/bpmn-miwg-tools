@@ -1,4 +1,4 @@
-/*
+/**
  * The MIT License (MIT)
  * Copyright (c) 2013 OMG BPMN Model Interchange Working Group
  *
@@ -22,24 +22,41 @@
  * THE SOFTWARE.
  * 
  */
-package org.omg.bpmn.miwg.mvn.filter;
+
+package org.omg.bpmn.miwg.scan;
 
 import java.io.File;
-import java.io.FilenameFilter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-/**
- * Simple <code>FileFilter</code> to select BPMN files based on no more than a
- * case insensitive look at the extension.
- * 
- * @author Tim Stephenson
- * 
- */
-public class BpmnFileFilter implements FilenameFilter {
-    @Override
-    public boolean accept(File dir, String name) {
-        if (name.toLowerCase().endsWith(".bpmn")) {
-            return true;
-        }
-        return false;
-    }
-};
+public class Application {
+
+	private static Pattern twopart = Pattern.compile("(.*)\\s(\\S+)");
+
+	public String fullName;
+	public File folder;
+	public String name;
+	public String version;
+
+	public Application(File folder) {
+		this.folder = folder;
+		this.fullName = folder.getName();
+
+		Matcher m = twopart.matcher(this.fullName);
+
+		if (m.matches()) {
+			this.name = m.group(1);
+			this.version = m.group(2);
+		} else {
+			this.name = fullName;
+			this.version = "";
+		}
+
+	}
+
+	public String toString() {
+		return name + " " + version;
+	}
+	
+
+}

@@ -251,7 +251,7 @@ public class AnalysisOutput {
 
 	public String getResultsFileName(AnalysisJob job, String suffix)
 			throws UnsupportedEncodingException {
-		String fileName = job.getReportFolder() + "/" + analysisTool.getName()
+		String fileName = job.getReportFolder() + "/site/" + analysisTool.getName()
 				+ "/" + job.getFullApplicationName() + "/" + job.getName()
 				+ suffix;
 		return fileName;

@@ -30,8 +30,7 @@ public class XMLCompareTest {
 							INPUT));
 			job.setXmlCompareOnly();
 
-			AnalysisFacade facade = new AnalysisFacade();
-			AnalysisOutput result = facade.executeAnalysisJob(job).getResult(
+			AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
 					XmlCompareAnalysisTool.class);
 
 			Collection<? extends Output> significantDifferences = result

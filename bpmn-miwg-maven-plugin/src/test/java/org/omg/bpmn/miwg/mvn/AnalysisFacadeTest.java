@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.test;
+package org.omg.bpmn.miwg.mvn;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -44,9 +44,7 @@ public class AnalysisFacadeTest {
 						BPMN_RESOURCE_REFERENCE), new ResourceAnalysisInput(
 						getClass(), BPMN_RESOURCE_REFERENCE)));
 
-		AnalysisFacade faccade = new AnalysisFacade();
-
-		Collection<AnalysisRun> runs = faccade.executeAnalysisJobs(jobs, TestUtil.REPORT_BASE_FOLDER_NAME);
+		Collection<AnalysisRun> runs = AnalysisFacade.executeAnalysisJobs(jobs, TestUtil.REPORT_BASE_FOLDER_NAME);
 		assertEquals(2, runs.size());
 
 		File overviewFile = HTMLAnalysisOutputWriter.getOverviewFile(new File(
@@ -63,8 +61,7 @@ public class AnalysisFacadeTest {
 						getClass(), BPMN_RESOURCE), new ResourceAnalysisInput(
 						getClass(), BPMN_RESOURCE_REFERENCE));
 
-		AnalysisFacade faccade = new AnalysisFacade();
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		File xsdFile = new File(run.getResult(SchemaAnalysisTool.class)
 				.getHTMLResultsLink(job));
@@ -93,8 +90,7 @@ public class AnalysisFacadeTest {
 				Variant.Roundtrip, new ResourceAnalysisInput(getClass(),
 						"/W4 BPMN+ Composer V.9.0/A.2.0-roundtrip.bpmn"), null));
 
-		AnalysisFacade facade = new AnalysisFacade();
-		facade.executeAnalysisJobs(jobs, null);
+		AnalysisFacade.executeAnalysisJobs(jobs, null);
 	}
 
 	@Test
@@ -110,8 +106,7 @@ public class AnalysisFacadeTest {
 				new ResourceAnalysisInput(getClass(),
 						"/bpmn.io 0.5.0/B.2.0-roundtrip.bpmn"), null));
 
-		AnalysisFacade facade = new AnalysisFacade();
-		facade.executeAnalysisJobs(jobs, null);
+		AnalysisFacade.executeAnalysisJobs(jobs, null);
 	}
 
 }

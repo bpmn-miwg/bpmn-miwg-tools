@@ -53,8 +53,7 @@ public class SchemaTest {
 				"A.1.0", Variant.Roundtrip, input);
 		job.setSchemaOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(SchemaAnalysisTool.class);
 		
@@ -71,8 +70,7 @@ public class SchemaTest {
 				"A.1.0", Variant.Roundtrip, input);
 		job.setSchemaOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(SchemaAnalysisTool.class);
 		assertEquals(0, result.numFindings());
@@ -87,8 +85,7 @@ public class SchemaTest {
 				"A.1.0", Variant.Roundtrip, input);
 		job.setSchemaOnly();
 
-		AnalysisFacade faccade = new AnalysisFacade();
-		AnalysisRun run = faccade.executeAnalysisJob(job);
+		AnalysisRun run = AnalysisFacade.executeAnalysisJob(job);
 
 		AnalysisOutput result = run.getResult(SchemaAnalysisTool.class);
 		assertFalse(result.getHtmlOutput().isEmpty());

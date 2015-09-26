@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.devel.xpath.scan;
+package org.omg.bpmn.miwg.scan;
 
 import java.io.File;
 

@@ -23,34 +23,48 @@
  * 
  */
 
-package org.omg.bpmn.miwg.devel.xpath.scan;
+package org.omg.bpmn.miwg.scan;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
 
 public class StandardScanParameters implements ScanParameters {
 
 	protected String applicationName;
 	protected String testResultName;
-	private String inputRoot;
 	private String outputRoot;
+	private Collection<String> inputRoots;
 
 	public StandardScanParameters(String application, String testResult) {
-		this(application, testResult, "../../bpmn-miwg-test-suite",
+		this(application, testResult, Collections
+				.singletonList("../../bpmn-miwg-test-suite"),
 				"../../XPathOutput");
 	}
 
 	public StandardScanParameters(String application, String testResult,
-			String inputRoot, String outputRoot) {
+			Collection<String> inputRoots, String outputRoot) {
 		this.applicationName = application;
 		this.testResultName = testResult;
-		this.inputRoot = inputRoot;
+		this.inputRoots = inputRoots;
 		this.outputRoot = outputRoot;
 	}
 
-	public File getInputRoot() throws IOException {
-		String s = new File(inputRoot).getCanonicalPath();
-		return new File(s);
+	public StandardScanParameters(String application, String testResult,
+			String inputRoot, String outputRoot) {
+		this(application, testResult, Collections.singletonList(inputRoot),
+				outputRoot);
+	}
+
+	public Collection<File> getInputRoots() throws IOException {
+		Collection<File> inputFolders = new LinkedList<File>();
+		for (String folderName : inputRoots) {
+			File f = new File(folderName).getCanonicalFile();
+			inputFolders.add(f);
+		}
+		return inputFolders;
 	}
 
 	public File getOutputRoot() throws IOException {
@@ -62,7 +76,7 @@ public class StandardScanParameters implements ScanParameters {
 		if (applicationName == null)
 			return true;
 		else
-			return application.name.toLowerCase().equals(
+			return application.fullName.toLowerCase().equals(
 					applicationName.toLowerCase());
 	}
 
