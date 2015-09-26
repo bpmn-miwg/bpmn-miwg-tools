@@ -7,7 +7,7 @@
   <version>0.3-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
-  <name>BPMN-MIWG Maven Plugin</name>
+  <name>BPMN MIWG Maven Plugin</name>
   <inceptionYear>2013</inceptionYear>
   <organization>
   	<name>BPMN Model Interchange Working Group</name>
@@ -81,6 +81,10 @@
       <version>${bpmn.miwg.tools.version}</version>
     </dependency>
     <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>schema-tool</artifactId>
+      <version>${bpmn.miwg.tools.version}</version>
+    </dependency>    <dependency>
       <groupId>org.glassfish</groupId>
       <artifactId>javax.json</artifactId>
       <version>1.0.4</version>

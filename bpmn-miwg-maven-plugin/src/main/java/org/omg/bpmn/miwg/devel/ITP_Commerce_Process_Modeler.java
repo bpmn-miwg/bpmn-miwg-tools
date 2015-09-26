@@ -33,12 +33,11 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
-import org.omg.bpmn.miwg.devel.xpath.common.AbstractTestCase;
 import org.omg.bpmn.miwg.scan.BpmnFileScanner;
 import org.omg.bpmn.miwg.scan.StandardScanParameters;
 
 @RunWith(Parameterized.class)
-public class ITP_Commerce_Process_Modeler extends AbstractTestCase {
+public class ITP_Commerce_Process_Modeler extends AbstractTest {
 
 	public ITP_Commerce_Process_Modeler(AnalysisJob job) {
 		super(job);

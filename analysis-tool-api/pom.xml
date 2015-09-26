@@ -59,4 +59,5 @@
 		</plugins>
 	</build>
 
+	<name>BPMN MIWG API</name>
 </project>

@@ -9,7 +9,7 @@
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>xml-compare-tool</artifactId>
-	<name>BPMN 2.0 XML Compare</name>
+	<name>BPMN MIWG XML Compare Tool</name>
 	<description>
     <![CDATA[
       Utilises XML Unit to compare vendor models to reference ones. Read more 

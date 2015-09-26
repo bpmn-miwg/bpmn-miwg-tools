@@ -37,7 +37,6 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
-import org.omg.bpmn.miwg.devel.xpath.common.AbstractTestCase;
 import org.omg.bpmn.miwg.mvn.AnalysisFacade;
 import org.omg.bpmn.miwg.scan.BpmnFileScanner;
 import org.omg.bpmn.miwg.scan.StandardScanParameters;
@@ -45,7 +44,7 @@ import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
 @RunWith(Parameterized.class)
-public class AllTestResults_NoExceptions extends AbstractTestCase {
+public class AllTestResults_NoExceptions extends AbstractTest {
 
 	public AllTestResults_NoExceptions(AnalysisJob job) {
 		super(job);

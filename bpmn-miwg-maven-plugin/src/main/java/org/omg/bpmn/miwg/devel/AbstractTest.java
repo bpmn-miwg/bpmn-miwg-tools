@@ -23,7 +23,7 @@
  * 
  */
 
-package org.omg.bpmn.miwg.devel.xpath.common;
+package org.omg.bpmn.miwg.devel;
 
 import static org.junit.Assert.assertEquals;
 
@@ -40,11 +40,11 @@ import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
 @RunWith(Parameterized.class)
-public abstract class AbstractTestCase {
+public abstract class AbstractTest {
 
 	protected AnalysisJob job;
 
-	public AbstractTestCase(AnalysisJob parameter) {
+	public AbstractTest(AnalysisJob parameter) {
 		this.job = parameter;
 	}
 

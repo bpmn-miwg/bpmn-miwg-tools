@@ -8,12 +8,11 @@
     <version>0.3-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
-  <artifactId>xpath-tool</artifactId>
-  <name>BPMN MIWG XPath Tool</name>
+  <artifactId>schema-tool</artifactId>
+  <name>BPMN MIWG Schema Tool</name>
   <description>
     <![CDATA[
-       Asserts that expected content from the reference model exists in each vendor model. Read more 
-      at: https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner
+       Asserts that the BPMN XML serializations conforms to the BPMN XSD.
     ]]>
   </description>
   <packaging>jar</packaging>
@@ -34,11 +33,6 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>analysis-tool-api</artifactId>
       <version>${project.version}</version>
-    </dependency>
-    <dependency>
-    	<groupId>xmlunit</groupId>
-    	<artifactId>xmlunit</artifactId>
-    	<version>1.3</version>
     </dependency>
   </dependencies>
 
