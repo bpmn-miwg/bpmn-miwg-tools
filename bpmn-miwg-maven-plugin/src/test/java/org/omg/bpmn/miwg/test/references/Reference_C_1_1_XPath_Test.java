@@ -45,21 +45,18 @@ import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
 public class Reference_C_1_1_XPath_Test {
 
-	private static final String REFERENCE_RESOURCE = "/" + Consts.REFERENCE_DIR
-			+ "/C.1.1.bpmn";
-	private static final String TEST_RESOURCE = "/" + Consts.REFERENCE_DIR
-			+ "/C.1.1-Removed-Extension-Elements.bpmn";
-
+	private static final String REFERENCE_RESOURCE = "/Reference/C.1.1.bpmn";
+	private static final String TEST_RESOURCE = "/Reference/C.1.1-Removed-Extension-Elements.bpmn";
 
 	@Test
-	public void testReference_XPath() throws Exception {
+	public void testIdentical() throws Exception {
 		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "C.1.1",
 				Variant.Reference, new ResourceAnalysisInput(getClass(),
 						REFERENCE_RESOURCE));
 		job.setXpathOnly();
 
-		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
-				XpathAnalysisTool.class);
+		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job)
+				.getResult(XpathAnalysisTool.class);
 
 		assertEquals(0, result.numFindings());
 	}
@@ -70,17 +67,17 @@ public class Reference_C_1_1_XPath_Test {
 	 * /src/test/resources/Reference/C.1.1-Differences.txt
 	 */
 	@Test
-	public void testReference_XPath_ExpectedDifference() throws Exception {
+	public void testMissingExtensionElements() throws Exception {
 		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "C.1.1",
 				Variant.Reference, new ResourceAnalysisInput(getClass(),
 						TEST_RESOURCE));
 		job.setXpathOnly();
 
-		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
-				XpathAnalysisTool.class);
+		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job)
+				.getResult(XpathAnalysisTool.class);
 
 		assertEquals(5, result.numFindings());
-		
+
 	}
 
 }
