@@ -30,7 +30,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisOutput;
-import org.omg.bpmn.miwg.api.Consts;
 import org.omg.bpmn.miwg.api.Variant;
 import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
 import org.omg.bpmn.miwg.mvn.AnalysisFacade;
@@ -45,22 +44,17 @@ import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
 public class Reference_C_3_0_XPath_Test {
 
-	private static final String REFERENCE_RESOURCE = "/" + Consts.REFERENCE_DIR
-			+ "/C.3.0.bpmn";
-
-
 	@Test
 	public void testReference_XPath() throws Exception {
-		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "C.3.0",
+		AnalysisJob job = new AnalysisJob("Reference", "C.3.0",
 				Variant.Reference, new ResourceAnalysisInput(getClass(),
-						REFERENCE_RESOURCE));
+						"/Reference/C.3.0.bpmn"));
 		job.setXpathOnly();
 
-		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
-				XpathAnalysisTool.class);
+		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job)
+				.getResult(XpathAnalysisTool.class);
 
 		assertEquals(0, result.numFindings());
 	}
-	
-	
+
 }
