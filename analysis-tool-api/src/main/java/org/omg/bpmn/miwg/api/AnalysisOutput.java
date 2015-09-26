@@ -74,7 +74,7 @@ public class AnalysisOutput {
 					xmlFile)));
 		}
 
-		Analysis entry = new Analysis(name);
+		Analysis entry = new Analysis(name, tool);
 		push(entry);
 	}
 

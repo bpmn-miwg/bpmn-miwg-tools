@@ -26,6 +26,7 @@
 package org.omg.bpmn.miwg.api.output.dom;
 
 import org.omg.bpmn.miwg.api.output.html.OutputType;
+import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -34,14 +35,17 @@ public class Analysis extends AbstractCheckEntry {
 
 	@Attribute
 	private String name;
+	@Attribute
+	private AnalysisTool tool;
 
-	public Analysis(String name) {
+	public Analysis(String name, AnalysisTool tool) {
 		this.name = name;
+		this.tool = tool;
 	}
 
 	@Override
 	public String toLine() {
-		return String.format("ANALYSIS: %s", name);
+		return String.format("ANALYSIS: %s (Tool: %s)", name, tool.getName());
 	}
 
 	@Override
