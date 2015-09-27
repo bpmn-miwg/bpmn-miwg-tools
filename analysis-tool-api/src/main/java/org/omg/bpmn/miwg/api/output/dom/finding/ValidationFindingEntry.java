@@ -23,42 +23,23 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.finding;
 
-import org.omg.bpmn.miwg.api.AnalysisContext;
-import org.omg.bpmn.miwg.api.output.html.OutputType;
 import org.simpleframework.xml.Attribute;
 
-public class OKNavigationEntry extends AbstractCheckEntry {
+public class ValidationFindingEntry extends AbstractFindingEntry {
 
 	@Attribute
 	public String message;
-
-	@Attribute
-	public String identifier;
-
-	@Attribute
-	public String caller;
-
-	public AnalysisContext testContext;
-
-	public OKNavigationEntry(String message, String caller, String identifier,
-			AnalysisContext testContext) {
+	
+	public ValidationFindingEntry(String message) {
 		this.message = message;
-		this.identifier = identifier;
-		this.caller = caller;
-		this.testContext = testContext;
 	}
 
 	@Override
 	public String toLine() {
-		return String.format("OK     : %-40s %s (id: %s)", caller, message,
-				identifier);
+		return message;
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.ok;
-	}
 
 }

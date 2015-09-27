@@ -23,28 +23,19 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.finding;
 
-import org.omg.bpmn.miwg.api.output.html.OutputType;
-import org.simpleframework.xml.Attribute;
 
-public class ListEntry extends AbstractCheckEntry {
+public class NoReferenceEntry extends AbstractFindingEntry {
 
-	public ListEntry(String message) {
-		this.message = message;
+	public NoReferenceEntry() {
+		System.err.println("This should not happen");
 	}
-
-	@Attribute
-	public String message;
 
 	@Override
 	public String toLine() {
-		return "- " + message;
+		return String.format("Reference not found");
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
-	}
 
 }

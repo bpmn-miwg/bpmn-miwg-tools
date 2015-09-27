@@ -23,22 +23,26 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.info;
 
-import org.omg.bpmn.miwg.api.output.html.OutputType;
+import org.simpleframework.xml.Attribute;
 
-public class TotalResultsEntry extends AbstractCheckEntry {
+public class KeyValueEntry extends AbstractInfoEntry {
 
-	public TotalResultsEntry() {
+	public KeyValueEntry(String key, String value) {
+		this.key = key;
+		this.value = value;
 	}
+
+	@Attribute
+	public String key;
+	@Attribute
+	public String value;
 
 	@Override
 	public String toLine() {
-		return String.format("TEST RESULTS TOTAL:");
+		return String.format("%s: %s", key, value);
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
-	}
+
 }

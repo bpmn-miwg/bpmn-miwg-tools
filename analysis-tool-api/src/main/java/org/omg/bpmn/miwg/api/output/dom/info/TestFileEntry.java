@@ -23,49 +23,23 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.info;
 
-import org.omg.bpmn.miwg.api.AnalysisContext;
-import org.omg.bpmn.miwg.api.output.html.OutputType;
 import org.simpleframework.xml.Attribute;
 
-public class FindingAssertionEntry extends AbstractCheckEntry {
+public class TestFileEntry extends AbstractInfoEntry {
 
 	@Attribute
-	public String assertion;
+	private String name;
 
-	@Attribute
-	public String message;
-
-	@Attribute(required = false)
-	public String parameter;
-
-	public AnalysisContext testContext;
-
-	public FindingAssertionEntry(String assertion, String message,
-			AnalysisContext testContext) {
-		this.assertion = assertion;
-		this.message = message;
-		this.parameter = "";
-		this.testContext = testContext;
-	}
-
-	public FindingAssertionEntry(String assertion, String message,
-			String parameter) {
-		this.assertion = assertion;
-		this.message = message;
-		this.parameter = parameter;
+	public TestFileEntry(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toLine() {
-		return String.format("FINDING: %-40s Message: %s; Parameter: %s",
-				assertion, message, parameter);
+		return String.format("Running tests for %s", name);
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.finding;
-	}
 
 }

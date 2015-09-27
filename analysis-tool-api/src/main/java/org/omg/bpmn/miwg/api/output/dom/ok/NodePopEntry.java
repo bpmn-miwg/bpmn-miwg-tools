@@ -23,31 +23,16 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.ok;
 
-import org.omg.bpmn.miwg.api.output.html.OutputType;
-import org.simpleframework.xml.Attribute;
+import org.omg.bpmn.miwg.api.AnalysisContext;
 
-public class ListKeyValueEntry extends AbstractCheckEntry {
 
-	public ListKeyValueEntry(String key, String value) {
-		this.key = key;
-		this.value = value;
-	}
+public class NodePopEntry extends OKNavigationEntry {
 
-	@Attribute
-	public String key;
-	@Attribute
-	public String value;
-
-	@Override
-	public String toLine() {
-		return String.format("- %s: %s", key, value);
-	}
-
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
+	public NodePopEntry(String caller, String identifier,
+			AnalysisContext testContext) {
+		super("Pop", caller, identifier, testContext);
 	}
 
 }

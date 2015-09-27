@@ -23,20 +23,23 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.info;
 
-import org.omg.bpmn.miwg.api.output.html.OutputType;
+import org.simpleframework.xml.Attribute;
 
-public class EmptyEntry extends AbstractCheckEntry {
+public class InfoEntry extends AbstractInfoEntry {
+
+	public InfoEntry(String message) {
+		this.message = message;
+	}
+
+	@Attribute
+	public String message;
 
 	@Override
 	public String toLine() {
-		return "";
+		return String.format("INFO   : %-30s", message);
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
-	}
 
 }

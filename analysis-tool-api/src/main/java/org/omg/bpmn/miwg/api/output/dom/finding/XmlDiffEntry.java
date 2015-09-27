@@ -1,4 +1,4 @@
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.finding;
 
 import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.NodeDetail;
@@ -7,7 +7,7 @@ import org.omg.bpmn.miwg.api.output.html.DetailedOutput;
 import org.omg.bpmn.miwg.api.output.html.Output;
 import org.omg.bpmn.miwg.api.output.html.OutputType;
 
-public class XmlDiffEntry extends AbstractCheckEntry {
+public class XmlDiffEntry extends AbstractFindingEntry {
 
 	private Difference difference;
 
@@ -33,10 +33,6 @@ public class XmlDiffEntry extends AbstractCheckEntry {
 				+ testDetail.getXpathLocation() + " = " + testDetail.getValue();
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.finding;
-	}
 
 	@Override
 	public Output getHtmlOutput() {

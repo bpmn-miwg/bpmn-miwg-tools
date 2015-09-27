@@ -92,12 +92,8 @@ public class SchemaAnalysisTool implements StreamAnalysisTool {
 			if (eHandler.valid()) {
 				out.ok("Validation", "Schema validation succeeded");
 			} else {
-				out.addIssues(eHandler.numError - 1); // Make sure the following
-														// issue
-														// won't be counted.
-				out.finding("Validation failed", "Warnings "
-						+ eHandler.numWarning + ", Errors: "
-						+ eHandler.numError + ", Fatal Errors: "
+				out.info("Validation failed: Warnings: " + eHandler.numWarning
+						+ ", Errors: " + eHandler.numError + ", Fatal Errors: "
 						+ eHandler.numFatalError);
 			}
 

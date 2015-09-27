@@ -23,31 +23,44 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.finding;
 
-import org.omg.bpmn.miwg.api.output.html.OutputType;
+import org.omg.bpmn.miwg.api.AnalysisContext;
 import org.simpleframework.xml.Attribute;
 
-public class ExceptionEntry extends AbstractCheckEntry {
+public class FindingAssertionEntry extends AbstractFindingEntry {
 
-	public ExceptionEntry(String message, Throwable e) {
-		this.message = message;
-		this.exception = e;
-	}
-
-	public Throwable exception;
+	@Attribute
+	public String assertion;
 
 	@Attribute
 	public String message;
 
-	@Override
-	public String toLine() {
-		return String.format("EXCEPTION: %s (%s)", message, exception);
+	@Attribute(required = false)
+	public String parameter;
+
+	public AnalysisContext testContext;
+
+	public FindingAssertionEntry(String assertion, String message,
+			AnalysisContext testContext) {
+		this.assertion = assertion;
+		this.message = message;
+		this.parameter = "";
+		this.testContext = testContext;
+	}
+
+	public FindingAssertionEntry(String assertion, String message,
+			String parameter) {
+		this.assertion = assertion;
+		this.message = message;
+		this.parameter = parameter;
 	}
 
 	@Override
-	public OutputType getOutputType() {
-		return OutputType.exception;
+	public String toLine() {
+		return String.format("FINDING: %-40s Message: %s; Parameter: %s",
+				assertion, message, parameter);
 	}
+
 
 }

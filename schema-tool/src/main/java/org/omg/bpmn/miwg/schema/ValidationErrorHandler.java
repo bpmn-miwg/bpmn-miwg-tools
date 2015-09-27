@@ -1,7 +1,7 @@
 package org.omg.bpmn.miwg.schema;
 
 import org.omg.bpmn.miwg.api.AnalysisOutput;
-import org.omg.bpmn.miwg.api.output.dom.InfoEntry;
+import org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -19,22 +19,22 @@ public class ValidationErrorHandler extends DefaultHandler {
 
 	public void warning(SAXParseException e) {
 		numWarning++;
-		out.println(new InfoEntry("Warning Line " + e.getLineNumber() + ": "
-				+ e.getMessage() + "\n"));
+		out.finding(new ValidationFindingEntry("Warning Line "
+				+ e.getLineNumber() + ": " + e.getMessage() + "\n"));
 	}
 
 	public void error(SAXParseException e) {
 		numError++;
 		errMessage = new String("Error Line " + e.getLineNumber() + ": "
 				+ e.getMessage() + "\n");
-		out.println(new InfoEntry(errMessage));
+		out.finding(new ValidationFindingEntry(errMessage));
 	}
 
 	public void fatalError(SAXParseException e) {
 		numFatalError++;
 		errMessage = new String("Error Line " + e.getLineNumber() + ": "
 				+ e.getMessage() + "\n");
-		out.println(new InfoEntry(errMessage));
+		out.finding(new ValidationFindingEntry(errMessage));
 	}
 
 	public boolean valid() {

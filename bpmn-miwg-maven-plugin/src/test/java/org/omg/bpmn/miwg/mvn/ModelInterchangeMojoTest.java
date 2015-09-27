@@ -170,6 +170,7 @@ public class ModelInterchangeMojoTest {
 		Resource res = new Resource();
 		res.setDirectory("src/test/invalid-resources");
 		mojo.resources.add(res);
+		mojo.application = "Yaoqiang BPMN Editor 2.2.6";
 		mojo.execute();
 
 		assertTrue(overview.exists());

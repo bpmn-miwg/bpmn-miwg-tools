@@ -36,8 +36,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.custommonkey.xmlunit.Difference;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisOutput;
-import org.omg.bpmn.miwg.api.output.dom.NoReferenceEntry;
-import org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry;
+import org.omg.bpmn.miwg.api.output.dom.finding.NoReferenceEntry;
+import org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry;
 import org.omg.bpmn.miwg.api.tools.DOMAnalysisTool;
 import org.omg.bpmn.miwg.xmlCompare.bpmn2_0.comparison.Bpmn20ConformanceChecker;
 import org.omg.bpmn.miwg.xmlCompare.bpmn2_0.comparison.Bpmn20DiffConfiguration;
@@ -100,7 +100,7 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 
 			} else {
 				NoReferenceEntry entry = new NoReferenceEntry();
-				output.println(entry);
+				output.finding(entry);
 			}
 			return output;
 		} finally {

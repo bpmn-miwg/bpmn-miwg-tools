@@ -23,43 +23,22 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.info;
 
-import org.omg.bpmn.miwg.api.AnalysisContext;
-import org.omg.bpmn.miwg.api.output.html.OutputType;
 import org.simpleframework.xml.Attribute;
 
-public class FindingNavigationEntry extends AbstractCheckEntry {
-	@Attribute
-	public String message;
-	@Attribute
-	public String identifier;
-	@Attribute
-	public String caller;
-	@Attribute
-	public String parameter;
+public class TestEntry extends AbstractInfoEntry {
 
-	public AnalysisContext testContext;
+	@Attribute
+	private String name;
 
-	public FindingNavigationEntry(String message, String caller,
-			String identifier, String parameter, AnalysisContext testContext) {
-		this.message = message;
-		this.identifier = identifier;
-		this.caller = caller;
-		this.parameter = parameter;
-		this.testContext = testContext;
+	public TestEntry(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toLine() {
-		return String.format(
-				"FINDING: %s; Message: %s; Parameter:%s (caller: id: %s)",
-				caller, message, parameter, identifier);
-	}
-
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.finding;
+		return String.format("TEST: %s", name);
 	}
 
 }

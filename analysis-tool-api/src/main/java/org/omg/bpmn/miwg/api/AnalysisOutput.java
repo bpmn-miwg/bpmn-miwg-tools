@@ -12,13 +12,16 @@ import java.util.List;
 import java.util.Stack;
 
 import org.omg.bpmn.miwg.api.output.dom.AbstractCheckEntry;
-import org.omg.bpmn.miwg.api.output.dom.Analysis;
-import org.omg.bpmn.miwg.api.output.dom.EmptyEntry;
-import org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry;
-import org.omg.bpmn.miwg.api.output.dom.InfoEntry;
-import org.omg.bpmn.miwg.api.output.dom.NodePopEntry;
-import org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry;
-import org.omg.bpmn.miwg.api.output.dom.TestEntry;
+import org.omg.bpmn.miwg.api.output.dom.finding.AbstractFindingEntry;
+import org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry;
+import org.omg.bpmn.miwg.api.output.dom.info.AbstractInfoEntry;
+import org.omg.bpmn.miwg.api.output.dom.info.Analysis;
+import org.omg.bpmn.miwg.api.output.dom.info.EmptyEntry;
+import org.omg.bpmn.miwg.api.output.dom.info.InfoEntry;
+import org.omg.bpmn.miwg.api.output.dom.info.TestEntry;
+import org.omg.bpmn.miwg.api.output.dom.ok.AbstractOKEntry;
+import org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry;
+import org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry;
 import org.omg.bpmn.miwg.api.output.html.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.api.output.html.Output;
 import org.omg.bpmn.miwg.api.tools.AnalysisTool;
@@ -78,7 +81,7 @@ public class AnalysisOutput {
 		push(entry);
 	}
 
-	public void ok(AbstractCheckEntry entry) {
+	public void ok(AbstractOKEntry entry) {
 		numOK++;
 		println(entry);
 	}
@@ -87,7 +90,7 @@ public class AnalysisOutput {
 		ok(new OKAssertionEntry(assertion, message, null));
 	}
 
-	public void finding(AbstractCheckEntry entry) {
+	public void finding(AbstractFindingEntry entry) {
 		numFindings++;
 		println(entry);
 	}
@@ -101,7 +104,7 @@ public class AnalysisOutput {
 		info(new InfoEntry(message));
 	}
 
-	public void info(AbstractCheckEntry entry) {
+	public void info(AbstractInfoEntry entry) {
 		println(entry);
 	}
 
@@ -111,7 +114,7 @@ public class AnalysisOutput {
 
 	public void pluggableAssertionFinding(String assertion, String message,
 			String parameter) {
-		ok(new FindingAssertionEntry("Pluggable: " + assertion, message,
+		finding(new FindingAssertionEntry("Pluggable: " + assertion, message,
 				(String) null));
 	}
 
@@ -139,7 +142,7 @@ public class AnalysisOutput {
 		return s;
 	}
 
-	public void println(AbstractCheckEntry entry) {
+	private void println(AbstractCheckEntry entry) {
 		String line = generateSpaces(stack.size() * 2) + entry.toLine();
 
 		if (!(entry instanceof EmptyEntry)) {

@@ -23,27 +23,29 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.info;
 
-import org.omg.bpmn.miwg.api.output.html.OutputType;
+import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Root;
 
-public class TestFileEntry extends AbstractCheckEntry {
+@Root
+public class Analysis extends AbstractInfoEntry {
 
 	@Attribute
 	private String name;
+	@Attribute
+	private String toolName;
 
-	public TestFileEntry(String name) {
+	public Analysis(String name, AnalysisTool tool) {
 		this.name = name;
+		this.toolName = tool.getName();
 	}
 
 	@Override
 	public String toLine() {
-		return String.format("Running tests for %s", name);
+		return String.format("ANALYSIS: %s (Tool: %s)", name, toolName);
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
-	}
+
 }

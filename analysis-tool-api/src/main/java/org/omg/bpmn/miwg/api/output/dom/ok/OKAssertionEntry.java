@@ -23,31 +23,34 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.ok;
 
-import org.omg.bpmn.miwg.api.output.html.OutputType;
+import org.omg.bpmn.miwg.api.AnalysisContext;
 import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Root;
 
-public class KeyValueEntry extends AbstractCheckEntry {
+@Root(name = "ok")
+public class OKAssertionEntry extends AbstractOKEntry {
 
-	public KeyValueEntry(String key, String value) {
-		this.key = key;
-		this.value = value;
+	@Attribute
+	public String assertion;
+
+	@Attribute
+	public String message;
+
+	public AnalysisContext testContext;
+
+	public OKAssertionEntry(String assertion, String message,
+			AnalysisContext testContext) {
+		this.assertion = assertion;
+		this.message = message;
+		this.testContext = testContext;
 	}
-
-	@Attribute
-	public String key;
-	@Attribute
-	public String value;
 
 	@Override
 	public String toLine() {
-		return String.format("%s: %s", key, value);
+		return String.format("OK     : %-40s Message: %s", assertion, message);
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
-	}
 
 }

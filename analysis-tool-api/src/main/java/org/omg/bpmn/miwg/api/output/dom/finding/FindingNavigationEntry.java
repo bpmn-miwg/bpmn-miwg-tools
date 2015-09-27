@@ -23,39 +23,38 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.finding;
 
 import org.omg.bpmn.miwg.api.AnalysisContext;
-import org.omg.bpmn.miwg.api.output.html.OutputType;
 import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.Root;
 
-@Root(name = "ok")
-public class OKAssertionEntry extends AbstractCheckEntry {
-
-	@Attribute
-	public String assertion;
-
+public class FindingNavigationEntry extends AbstractFindingEntry {
 	@Attribute
 	public String message;
+	@Attribute
+	public String identifier;
+	@Attribute
+	public String caller;
+	@Attribute
+	public String parameter;
 
 	public AnalysisContext testContext;
 
-	public OKAssertionEntry(String assertion, String message,
-			AnalysisContext testContext) {
-		this.assertion = assertion;
+	public FindingNavigationEntry(String message, String caller,
+			String identifier, String parameter, AnalysisContext testContext) {
 		this.message = message;
+		this.identifier = identifier;
+		this.caller = caller;
+		this.parameter = parameter;
 		this.testContext = testContext;
 	}
 
 	@Override
 	public String toLine() {
-		return String.format("OK     : %-40s Message: %s", assertion, message);
+		return String.format(
+				"FINDING: %s; Message: %s; Parameter:%s (caller: id: %s)",
+				caller, message, parameter, identifier);
 	}
 
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.ok;
-	}
 
 }

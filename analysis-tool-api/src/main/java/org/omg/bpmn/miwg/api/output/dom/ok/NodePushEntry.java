@@ -23,27 +23,17 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.ok;
 
-import org.omg.bpmn.miwg.api.output.html.OutputType;
-import org.simpleframework.xml.Attribute;
+import org.omg.bpmn.miwg.api.AnalysisContext;
+import org.simpleframework.xml.Root;
 
-public class ResultsEntry extends AbstractCheckEntry {
+@Root(name = "push")
+public class NodePushEntry extends OKNavigationEntry {
 
-	@Attribute
-	private String name;
-
-	public ResultsEntry(String test) {
-		this.name = test;
+	public NodePushEntry(String caller, String identifier,
+			AnalysisContext testContext) {
+		super("Push", caller, identifier, testContext);
 	}
 
-	@Override
-	public String toLine() {
-		return String.format("TEST: %s", name);
-	}
-
-	@Override
-	public OutputType getOutputType() {
-		return OutputType.info;
-	}
 }

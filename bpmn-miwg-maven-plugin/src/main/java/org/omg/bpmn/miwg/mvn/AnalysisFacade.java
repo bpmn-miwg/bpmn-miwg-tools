@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisOutput;
 import org.omg.bpmn.miwg.api.AnalysisRun;
-import org.omg.bpmn.miwg.api.output.dom.ExceptionEntry;
+import org.omg.bpmn.miwg.api.output.dom.finding.ExceptionEntry;
 import org.omg.bpmn.miwg.api.output.html.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.util.DOMFactory;

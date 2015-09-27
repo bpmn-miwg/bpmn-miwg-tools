@@ -23,16 +23,26 @@
  * 
  */
 
-package org.omg.bpmn.miwg.api.output.dom;
+package org.omg.bpmn.miwg.api.output.dom.finding;
 
-import org.omg.bpmn.miwg.api.AnalysisContext;
+import org.simpleframework.xml.Attribute;
 
+public class ExceptionEntry extends AbstractFindingEntry {
 
-public class NodePopEntry extends OKNavigationEntry {
-
-	public NodePopEntry(String caller, String identifier,
-			AnalysisContext testContext) {
-		super("Pop", caller, identifier, testContext);
+	public ExceptionEntry(String message, Throwable e) {
+		this.message = message;
+		this.exception = e;
 	}
+
+	public Throwable exception;
+
+	@Attribute
+	public String message;
+
+	@Override
+	public String toLine() {
+		return String.format("EXCEPTION: %s (%s)", message, exception);
+	}
+
 
 }
