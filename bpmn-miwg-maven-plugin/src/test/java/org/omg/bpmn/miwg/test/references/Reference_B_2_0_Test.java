@@ -47,15 +47,15 @@ import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
 public class Reference_B_2_0_Test {
 
-	private static final String CAMUNDA_RESOURCE = "/camunda Modeler 2.4.0/B.2.0-roundtrip.bpmn";
+	private static final String REFERENCE_RESOURCE = "/Reference/B.2.0.bpmn";
 
-	private static final ResourceAnalysisInput INPUT = new ResourceAnalysisInput(
-			Reference_B_2_0_Test.class, CAMUNDA_RESOURCE);
+	private static final ResourceAnalysisInput REFERENCE_INPUT = new ResourceAnalysisInput(
+			Reference_B_2_0_Test.class, REFERENCE_RESOURCE);
 
 	@Test
 	public void testSchema() throws Exception {
 		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "B.2.0",
-				Variant.Reference, INPUT);
+				Variant.Reference, REFERENCE_INPUT);
 		job.setSchemaOnly();
 
 		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
@@ -67,7 +67,7 @@ public class Reference_B_2_0_Test {
 	@Test
 	public void testXpath() throws Exception {
 		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "B.2.0",
-				Variant.Reference, INPUT);
+				Variant.Reference, REFERENCE_INPUT);
 		job.setXpathOnly();
 
 		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(
@@ -79,7 +79,7 @@ public class Reference_B_2_0_Test {
 	@Test
 	public void testXmlCompare() throws Exception {
 		AnalysisJob job = new AnalysisJob(Consts.REFERENCE_DIR, "B.2.0",
-				Variant.Reference, INPUT);
+				Variant.Reference, REFERENCE_INPUT);
 		job.setXmlCompareOnly();
 
 		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job).getResult(

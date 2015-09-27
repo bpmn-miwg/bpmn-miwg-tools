@@ -42,6 +42,7 @@ public class XMLCompareTest {
 			}
 
 			assertNotSame(0, significantDifferences.size());
+			assertNotSame(0, result.numFindings());
 
 			File resultsFile = new File(result.getResultsFileName(job, ".html"));
 			assertTrue(resultsFile.exists());

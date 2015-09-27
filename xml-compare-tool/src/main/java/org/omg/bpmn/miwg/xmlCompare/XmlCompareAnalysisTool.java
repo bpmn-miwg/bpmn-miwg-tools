@@ -95,7 +95,7 @@ public class XmlCompareAnalysisTool implements DOMAnalysisTool {
 
 				for (Difference diff : diffs) {
 					XmlDiffEntry entry = new XmlDiffEntry(diff);
-					output.println(entry);
+					output.finding(entry);
 				}
 
 			} else {
