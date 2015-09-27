@@ -11,8 +11,6 @@ import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonValue;
 
-import org.omg.bpmn.miwg.mvn.TestConsts;
-
 /**
  * Convenience class that reads the JSON configuration of tools for whom
  * submissions exist and expose it in simple convenient methods.
@@ -20,11 +18,13 @@ import org.omg.bpmn.miwg.mvn.TestConsts;
  * @author Tim Stephenson
  */
 public class ToolsUnderTestHelper {
+    public static final String TOOLS_TESTED = "/tools-tested-by-miwg.json";
+
     public List<String> getToolVsnNames() {
         List<String> toolNames = new ArrayList<String>();
         InputStream is = null;
         try {
-            is = getClass().getResourceAsStream(TestConsts.TOOLS_TESTED);
+            is = getClass().getResourceAsStream(ToolsUnderTestHelper.TOOLS_TESTED);
             JsonReader reader = Json.createReader(new InputStreamReader(is));
             JsonObject rootObj = reader.readObject();
             JsonArray toolsArr = rootObj.getJsonArray("tools");

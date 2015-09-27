@@ -12,6 +12,5 @@ public class TestConsts {
 	public static final String YAOQIANG_3_MODELER_ID = "Yaoqiang BPMN Editor 3.0.1";
 	public static final String W4_MODELER_ID = "W4 BPMN+ Composer V.9.0";
 	public static final String BPMN_IO_ID = "bpmn.io 0.5.0";
-    public static final String TOOLS_TESTED = "/tools-tested-by-miwg.json";
 
 }
