@@ -7,7 +7,6 @@ import static org.junit.Assert.fail;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -22,7 +21,6 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.junit.Before;
 import org.junit.Test;
 import org.omg.bpmn.miwg.api.output.html.HTMLAnalysisOutputWriter;
-import org.omg.bpmn.miwg.scan.ToolsUnderTestHelper;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.util.TestUtil;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
@@ -39,7 +37,6 @@ public class ModelInterchangeMojoTest {
 	private static File overview;
 	private static DocumentBuilder docBuilder;
 	private XPath xPath;
-    private ToolsUnderTestHelper toolsUnderTestHelper;
 
 	@Before
 	public void setUp() throws Exception {
@@ -53,8 +50,6 @@ public class ModelInterchangeMojoTest {
 				.getOverviewFile(TestUtil.REPORT_BASE_FOLDER);
 
 		docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-
-        toolsUnderTestHelper = new ToolsUnderTestHelper();
 	}
 
 	private XPathExpression createXpathExpression(String expression)
@@ -83,26 +78,12 @@ public class ModelInterchangeMojoTest {
 			XPathExpression xpath = createXpathExpression("//div[@class=\"test\"]");
 			NodeList nodes = (NodeList) xpath.evaluate(document,
 					XPathConstants.NODESET);
-			
-            // assert only have results for tools listed in
-            // tools-tested-by-miwg.json
-            List<String> toolVsnNames = toolsUnderTestHelper.getToolVsnNames();
-            for (int i = 0; i < nodes.getLength(); i++) {
-                Node node = nodes.item(i);
-                String toolName = node.getAttributes().getNamedItem("tool")
-                        .getNodeValue();
-                System.out.println("node for tool: " + toolName);
-                assertTrue("Unexpected results listed for: " + toolName,
-                        toolVsnNames.contains(toolName));
-            }
 
 			// first param is number of bpmn files in the src/test/resources
 			// folders of vendors listed in tools-tested-by-miwg.json
             // At time of writing this includes W4 & camunda but excludes
             // bpmn.io
-            // 27 Sep 15: ToolsUnderTestHelper call above should have eliminated
-            // unexpected results already.
-            assertEquals(10, nodes.getLength());
+            assertEquals(20, nodes.getLength());
 
 			// report files for each tool
 			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER_NAME,
