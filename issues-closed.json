@@ -34,9 +34,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 3,
+    "comments": 7,
     "created_at": "2015-09-24T13:36:46Z",
-    "updated_at": "2015-09-25T08:52:51Z",
+    "updated_at": "2015-09-25T13:00:21Z",
     "closed_at": "2015-09-25T08:52:51Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/489",
@@ -45,6 +45,207 @@
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/489.patch"
     },
     "body": "Adding import, export and roundtrip from W4 BPMN+ composer for files :\r\n- C.1.0\r\n- C.1.1\r\n- C.2.0\r\n- C.3.0"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/486",
+    "id": 107961416,
+    "number": 486,
+    "title": "conditionExpression has incorrect type",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
+        "name": "Tool: Trisotech BPMN Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2015-09-23T16:52:44Z",
+    "updated_at": "2015-09-25T13:49:29Z",
+    "closed_at": "2015-09-25T13:49:29Z",
+    "body": "**Tool**\r\nTrisotech BPMN Modeler 5.0.10\r\n\r\n**Output of the automated checks**\r\n```\r\nOK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (premium level)' and @id='_6a34496f-8cf7-42e5-88a9-d1af98cc3cba']\r\nFINDING: Pluggable: SequenceFlowCondition         Message: The type should be 'tFormalExpression', but it is 'semantic:tFormalExpression'; Parameter: null\r\n```\r\n\r\n\r\n**Trisotech Roundtrip BPMN**\r\n```xml\r\n        <semantic:sequenceFlow id=\"_be893987-caec-4605-b078-bd96b7cd6c12\" name=\"Premium\" triso:userConstraints=\"true\" sourceRef=\"_2b6bc88e-d3be-4704-87d1-c264bf704589\" targetRef=\"_6a34496f-8cf7-42e5-88a9-d1af98cc3cba\">\r\n            <semantic:extensionElements>\r\n                <itp:systemDefinedAttributes>\r\n                    <semantic:attribute value=\"0 Hyperlinks\" type=\"String\" name=\"Hyperlinks\"/>\r\n                    <semantic:attribute type=\"String\" name=\"ExternalId\"/>\r\n                </itp:systemDefinedAttributes>\r\n                <w4graph:graphStyle>\r\n                    <w4graph:basic foreground=\"0,0,0\" collapsed=\"false\" borderColor=\"100,100,100\" background=\"255,255,255\" autoResize=\"false\"/>\r\n                    <w4graph:line routerType=\"Rectilinear\" closestRoute=\"false\" avoidObstacleRoute=\"false\" automaticRoute=\"true\"/>\r\n                </w4graph:graphStyle>\r\n            </semantic:extensionElements>\r\n            <semantic:conditionExpression xsi:type=\"semantic:tFormalExpression\" id=\"Bpmn_FormalExpression_ipW2kBqIEeWDuOtG0oS24A\">Service Level == 'Premium'</semantic:conditionExpression>\r\n        </semantic:sequenceFlow>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n     <sequenceFlow id=\"_be893987-caec-4605-b078-bd96b7cd6c12\" name=\"Premium\" sourceRef=\"_2b6bc88e-d3be-4704-87d1-c264bf704589\" targetRef=\"_6a34496f-8cf7-42e5-88a9-d1af98cc3cba\">\r\n      <extensionElements>\r\n        <itp:systemDefinedAttributes>\r\n          <attribute name=\"Hyperlinks\" type=\"String\" value=\"0 Hyperlinks\"/>\r\n          <attribute name=\"ExternalId\" type=\"String\"/>\r\n        </itp:systemDefinedAttributes>\r\n        <w4graph:graphStyle>\r\n          <w4graph:basic background=\"255,255,255\" foreground=\"0,0,0\" autoResize=\"false\" borderColor=\"100,100,100\" collapsed=\"false\"/>\r\n          <w4graph:line routerType=\"Rectilinear\" automaticRoute=\"true\" closestRoute=\"false\" avoidObstacleRoute=\"false\"/>\r\n        </w4graph:graphStyle>\r\n      </extensionElements>\r\n      <conditionExpression xsi:type=\"tFormalExpression\" id=\"Bpmn_FormalExpression_ipW2kBqIEeWDuOtG0oS24A\"><![CDATA[Service Level == 'Premium']]></conditionExpression>\r\n    </sequenceFlow>\r\n```\r\n\r\n**Analysis**\r\n* The value of the *xsi:type* attribute of the *conditionExpression* element is changed.\r\n* IMHO, the attribute values have no prefixes."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/485",
+    "id": 107960291,
+    "number": 485,
+    "title": "implementation attribute value is changed",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
+        "name": "Tool: Trisotech BPMN Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2015-09-23T16:45:40Z",
+    "updated_at": "2015-09-29T15:07:03Z",
+    "closed_at": "2015-09-29T15:07:03Z",
+    "body": "**Tool**\r\nTrisotech BPMN Modeler 5.0.10\r\n\r\n**Output of the automated checks**\r\n```\r\nOK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Analyse customer request' and @id='_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a']\r\nOK     : checkAttributeValue                      Message: Attribute startQuantity=2\r\nOK     : checkAttributeValue                      Message: Attribute completionQuantity=2\r\nFINDING: checkAttributeValue                      Message: Attribute implementation does not have the expected value '##WebService'; Parameter: implementation\r\n```\r\n\r\n\r\n**Trisotech Roundtrip BPMN**\r\n```xml\r\n        <semantic:userTask id=\"_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a\" name=\"Analyse customer request\" startQuantity=\"2\" completionQuantity=\"2\" isForCompensation=\"false\" implementation=\"##unspecified\">\r\n            <semantic:documentation>First contact with customer</semantic:documentation>\r\n            <semantic:extensionElements>\r\n                <itp:systemDefinedAttributes>\r\n                    <semantic:attribute value=\"0 Hyperlinks\" type=\"String\" name=\"Hyperlinks\"/>\r\n                    <semantic:attribute type=\"String\" name=\"ExternalId\"/>\r\n                    <semantic:attribute value=\"0\" type=\"Float\" name=\"KPICost\" format=\"Currency;SFr.;;KPI;2\"/>\r\n                    <semantic:attribute value=\"120\" type=\"Float\" name=\"KPIDuration\" format=\"Duration;;;KPI;3\">\r\n                        <semantic:attribute value=\"120\" type=\"Float\" name=\"KPIActiveTime\" format=\"Duration;;;KPI;3;0.5\"/>\r\n                        <semantic:attribute value=\"0\" type=\"Float\" name=\"KPIWaitTime\" format=\"Duration;;;KPI;3\"/></semantic:attribute>\r\n                    <semantic:attribute value=\"PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+\" type=\"String\" name=\"Resource\"/>\r\n                </itp:systemDefinedAttributes>\r\n                <w4graph:graphStyle>\r\n                    <w4graph:basic foreground=\"0,0,0\" collapsed=\"false\" borderColor=\"100,100,100\" background=\"194,215,235\" autoResize=\"false\"/>\r\n                    <w4graph:line routerType=\"Rectilinear\" closestRoute=\"false\" avoidObstacleRoute=\"false\" automaticRoute=\"true\"/>\r\n                </w4graph:graphStyle>\r\n            </semantic:extensionElements>\r\n            <semantic:incoming>_a5af06ae-bd69-464d-bbaf-3d7418702d77</semantic:incoming>\r\n            <semantic:outgoing>_acb2aca3-8851-48f0-b127-7b3c9db5e18d</semantic:outgoing>\r\n            <semantic:potentialOwner name=\"Potential Owner\" id=\"Bpmn_PotentialOwner_H_12wBqHEeWDuOtG0oS24A\">\r\n                <semantic:resourceRef>Bpmn_Resource__7wrkBqGEeWDuOtG0oS24A</semantic:resourceRef>\r\n            </semantic:potentialOwner>\r\n        </semantic:userTask>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n    <userTask id=\"_c73a5f4a-72f1-4e11-bb40-2f98da75fb9a\" name=\"Analyse customer request\" completionQuantity=\"2\" isForCompensation=\"false\" startQuantity=\"2\" implementation=\"##WebService\">\r\n      <documentation id=\"Bpmn_Documentation_jcmzwe_bEeSGoscwBjzAjw\" textFormat=\"text/plain\">First contact with customer</documentation>\r\n      <extensionElements>\r\n        <itp:systemDefinedAttributes>\r\n          <attribute name=\"Hyperlinks\" type=\"String\" value=\"0 Hyperlinks\"/>\r\n          <attribute name=\"ExternalId\" type=\"String\"/>\r\n          <attribute name=\"KPICost\" type=\"Float\" value=\"0\" format=\"Currency;SFr.;;KPI;2\"/>\r\n          <attribute name=\"KPIDuration\" type=\"Float\" value=\"120\" format=\"Duration;;;KPI;3\">\r\n            <attribute name=\"KPIActiveTime\" type=\"Float\" value=\"120\" format=\"Duration;;;KPI;3;0.5\"/>\r\n            <attribute name=\"KPIWaitTime\" type=\"Float\" value=\"0\" format=\"Duration;;;KPI;3\"/>\r\n          </attribute>\r\n          <attribute name=\"Resource\" type=\"String\" value=\"PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkZmJjMzg4OC05ZDI1LTQzYjktYWEyYS02NzAxZDYwMzhlYTAiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+\"/>\r\n        </itp:systemDefinedAttributes>\r\n        <w4graph:graphStyle>\r\n          <w4graph:basic background=\"194,215,235\" foreground=\"0,0,0\" autoResize=\"false\" borderColor=\"100,100,100\" collapsed=\"false\"/>\r\n          <w4graph:line routerType=\"Rectilinear\" automaticRoute=\"true\" closestRoute=\"false\" avoidObstacleRoute=\"false\"/>\r\n        </w4graph:graphStyle>\r\n      </extensionElements>\r\n      <incoming>_a5af06ae-bd69-464d-bbaf-3d7418702d77</incoming>\r\n      <outgoing>_acb2aca3-8851-48f0-b127-7b3c9db5e18d</outgoing>\r\n      <potentialOwner id=\"Bpmn_PotentialOwner_H_12wBqHEeWDuOtG0oS24A\" name=\"Potential Owner\">\r\n        <resourceRef>Bpmn_Resource__7wrkBqGEeWDuOtG0oS24A</resourceRef>\r\n      </potentialOwner>\r\n    </userTask>\r\n```\r\n\r\n**Analysis**\r\n* The attribute value of the *implementation* attribute of the *userTask* element is changed."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/484",
+    "id": 107959130,
+    "number": 484,
+    "title": "calledElement attribute missing",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
+        "name": "Tool: Trisotech BPMN Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "SimonRinguette",
+      "id": 521578,
+      "avatar_url": "https://avatars.githubusercontent.com/u/521578?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SimonRinguette",
+      "html_url": "https://github.com/SimonRinguette",
+      "followers_url": "https://api.github.com/users/SimonRinguette/followers",
+      "following_url": "https://api.github.com/users/SimonRinguette/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SimonRinguette/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SimonRinguette/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SimonRinguette/subscriptions",
+      "organizations_url": "https://api.github.com/users/SimonRinguette/orgs",
+      "repos_url": "https://api.github.com/users/SimonRinguette/repos",
+      "events_url": "https://api.github.com/users/SimonRinguette/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SimonRinguette/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2015-09-23T16:38:21Z",
+    "updated_at": "2015-09-29T15:07:03Z",
+    "closed_at": "2015-09-29T15:07:03Z",
+    "body": "**Tool**\r\nTrisotech BPMN Modeler 5.0.10\r\n\r\n**Output of the automated checks**\r\n```\r\nFINDING: checkGlobalTask                          Message: Attribute 'calledElement' does not exist; Parameter: null\r\n```\r\n\r\n**Trisotech Roundtrip BPMN**\r\n```xml\r\n<semantic:callActivity\r\n  name=\"Call Activity calling a Global User Task\"\r\n  id=\"_a74c1d4d-db90-43ff-8920-139a300b39a5\"\r\n  startQuantity=\"1\"\r\n  isForCompensation=\"false\"\r\n  completionQuantity=\"1\">\r\n  <semantic:incoming>_be19c2da-316a-47f6-ad7b-eb6c82bf8609 </semantic:incoming>\r\n  <semantic:outgoing>_ce63770e-9f4b-4bc0-a56c-88401c59f0bf </semantic:outgoing>\r\n</semantic:callActivity>\r\n```\r\n\r\n**Reference BPMN**\r\n```xml\r\n<semantic:callActivity\r\n  calledElement=\"_d4afdad7-65a5-40c6-9fee-e13ba4c0bed4\"\r\n  completionQuantity=\"1\"\r\n  isForCompensation=\"false\"\r\n  startQuantity=\"1\"\r\n  name=\"Call Activity calling a Global User Task\"\r\n  id=\"_a74c1d4d-db90-43ff-8920-139a300b39a5\">\r\n    <semantic:incoming>_be19c2da-316a-47f6-ad7b-eb6c82bf8609</semantic:incoming>\r\n    <semantic:outgoing>_ce63770e-9f4b-4bc0-a56c-88401c59f0bf</semantic:outgoing>\r\n</semantic:callActivity>\r\n```\r\n\r\n**Analysis**\r\n* The *calledElement* attribute is missing in the *globalUserTask* element."
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/480",
@@ -2073,7 +2274,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-11-04T07:50:17Z",
-    "updated_at": "2014-11-04T09:22:20Z",
+    "updated_at": "2014-11-04T09:22:21Z",
     "closed_at": "2014-11-04T09:22:20Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/317",
@@ -4889,7 +5090,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-03-12T09:12:22Z",
-    "updated_at": "2014-03-14T15:50:22Z",
+    "updated_at": "2014-03-14T15:50:23Z",
     "closed_at": "2014-03-14T15:50:22Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/153",
@@ -5077,7 +5278,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-12-06T15:33:23Z",
-    "updated_at": "2013-12-06T15:50:29Z",
+    "updated_at": "2014-08-02T05:47:16Z",
     "closed_at": "2013-12-06T15:50:29Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/144",
@@ -5197,7 +5398,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-11-26T13:06:56Z",
-    "updated_at": "2013-11-27T18:57:04Z",
+    "updated_at": "2013-11-27T18:58:01Z",
     "closed_at": "2013-11-27T18:57:04Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/135",
@@ -5364,7 +5565,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-11-23T14:46:31Z",
-    "updated_at": "2013-11-27T17:09:55Z",
+    "updated_at": "2014-07-29T15:17:42Z",
     "closed_at": "2013-11-27T17:09:55Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/127",
@@ -6167,7 +6368,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-07-10T09:10:27Z",
-    "updated_at": "2013-07-10T10:56:02Z",
+    "updated_at": "2014-06-20T19:20:51Z",
     "closed_at": "2013-07-10T10:56:02Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/103",
@@ -6661,7 +6862,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-06-24T13:48:36Z",
-    "updated_at": "2013-06-26T10:54:58Z",
+    "updated_at": "2013-06-26T10:54:59Z",
     "closed_at": "2013-06-26T10:54:58Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/75",
@@ -6891,7 +7092,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2013-05-16T12:13:11Z",
-    "updated_at": "2013-07-10T09:07:18Z",
+    "updated_at": "2014-06-15T18:08:40Z",
     "closed_at": "2013-05-16T13:02:17Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/50",
@@ -7475,7 +7676,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-05-03T14:39:25Z",
-    "updated_at": "2013-07-10T09:07:18Z",
+    "updated_at": "2014-06-15T22:55:55Z",
     "closed_at": "2013-05-03T14:43:10Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/36",
@@ -7991,7 +8192,7 @@
     "milestone": null,
     "comments": 9,
     "created_at": "2013-04-15T22:00:09Z",
-    "updated_at": "2013-05-08T13:33:17Z",
+    "updated_at": "2014-06-12T16:33:42Z",
     "closed_at": "2013-04-24T16:17:23Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/18",
@@ -8214,7 +8415,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2013-04-13T20:45:52Z",
-    "updated_at": "2013-07-20T16:54:42Z",
+    "updated_at": "2014-06-14T03:42:19Z",
     "closed_at": "2013-04-16T22:14:47Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/13",
@@ -8556,7 +8757,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-04-04T11:22:50Z",
-    "updated_at": "2013-04-04T11:23:12Z",
+    "updated_at": "2014-06-25T16:45:50Z",
     "closed_at": "2013-04-04T11:23:12Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/6",
@@ -8603,7 +8804,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-04-03T19:42:14Z",
-    "updated_at": "2013-04-03T19:42:31Z",
+    "updated_at": "2013-04-03T19:42:32Z",
     "closed_at": "2013-04-03T19:42:31Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/5",
@@ -8650,7 +8851,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-04-03T19:22:08Z",
-    "updated_at": "2013-04-03T19:22:44Z",
+    "updated_at": "2014-07-22T05:11:18Z",
     "closed_at": "2013-04-03T19:22:44Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/4",
@@ -8715,7 +8916,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2013-04-03T14:58:33Z",
-    "updated_at": "2014-06-11T07:48:34Z",
+    "updated_at": "2014-07-04T09:15:21Z",
     "closed_at": "2013-04-03T16:00:33Z",
     "pull_request": {
       "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/3",
