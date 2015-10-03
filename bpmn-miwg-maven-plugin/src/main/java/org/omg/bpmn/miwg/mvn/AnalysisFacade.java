@@ -2,21 +2,34 @@ package org.omg.bpmn.miwg.mvn;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisOutput;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.output.dom.finding.ExceptionEntry;
-import org.omg.bpmn.miwg.api.output.html.HTMLAnalysisOutputWriter;
+import org.omg.bpmn.miwg.api.output.overview.OverviewWriter;
+import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.util.DOMFactory;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 import org.w3c.dom.Document;
 
+
 public class AnalysisFacade {
+
+	public static final List<Class<? extends AnalysisTool>> TOOL_ORDER;
+
+	static {
+		TOOL_ORDER = new ArrayList<Class<? extends AnalysisTool>>();
+		TOOL_ORDER.add(SchemaAnalysisTool.class);
+		TOOL_ORDER.add(XmlCompareAnalysisTool.class);
+		TOOL_ORDER.add(XpathAnalysisTool.class);
+	}
 
 	public static Collection<AnalysisRun> executeAnalysisJobs(
 			Collection<AnalysisJob> jobs, String outputFolder) throws Exception {
@@ -28,15 +41,16 @@ public class AnalysisFacade {
 				runs.add(run);
 			}
 		}
-		if (outputFolder != null)
-			HTMLAnalysisOutputWriter.writeOverview(outputFolder, runs);
+		if (outputFolder != null) {
+			OverviewWriter.writeOverviewTxt(outputFolder, runs, TOOL_ORDER);
+			OverviewWriter.writeOverviewHtml(outputFolder, runs);
+		}
 
 		return runs;
 	}
 
-
-	
-	public static AnalysisRun executeAnalysisJob(AnalysisJob job) throws Exception {
+	public static AnalysisRun executeAnalysisJob(AnalysisJob job)
+			throws Exception {
 		System.out.println("Executing AnalysisJob '" + job.getName() + "' ...");
 
 		XpathAnalysisTool xpathAnalysisTool = new XpathAnalysisTool();
@@ -46,7 +60,8 @@ public class AnalysisFacade {
 		InputStream referenceInputStream = null;
 		InputStream actualInputStream = null;
 
-		AnalysisOutput initOutput = new AnalysisOutput(job, new InitAnalysisTool());
+		AnalysisOutput initOutput = new AnalysisOutput(job,
+				new InitAnalysisTool());
 
 		Document actualDom = null;
 		Document referenceDom = null;
@@ -65,8 +80,7 @@ public class AnalysisFacade {
 			initOutput.finding(new ExceptionEntry(
 					"Exception during job preparation", e));
 			return run;
-		}
-		finally {
+		} finally {
 			initOutput.close();
 		}
 

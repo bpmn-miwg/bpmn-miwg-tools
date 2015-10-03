@@ -20,7 +20,7 @@ import org.apache.maven.model.Resource;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.junit.Before;
 import org.junit.Test;
-import org.omg.bpmn.miwg.api.output.html.HTMLAnalysisOutputWriter;
+import org.omg.bpmn.miwg.api.output.overview.OverviewWriter;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.util.TestUtil;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
@@ -46,8 +46,8 @@ public class ModelInterchangeMojoTest {
 		mojo.outputDirectory = new File(TestUtil.REPORT_BASE_FOLDER_NAME);
 		mojo.resources = new ArrayList<Resource>();
 
-		overview = HTMLAnalysisOutputWriter
-				.getOverviewFile(TestUtil.REPORT_BASE_FOLDER);
+		overview = OverviewWriter
+				.getOverviewFileHtml(TestUtil.REPORT_BASE_FOLDER);
 
 		docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 	}

@@ -13,7 +13,7 @@ import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.Variant;
 import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
-import org.omg.bpmn.miwg.api.output.html.HTMLAnalysisOutputWriter;
+import org.omg.bpmn.miwg.api.output.overview.OverviewWriter;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.util.TestUtil;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
@@ -47,7 +47,7 @@ public class AnalysisFacadeTest {
 				TestUtil.REPORT_BASE_FOLDER_NAME);
 		assertEquals(2, runs.size());
 
-		File overviewFile = HTMLAnalysisOutputWriter.getOverviewFile(new File(
+		File overviewFile = OverviewWriter.getOverviewFileHtml(new File(
 				TestUtil.REPORT_BASE_FOLDER_NAME));
 		assertTrue(overviewFile.exists());
 		assertTrue(overviewFile.length() > 0);

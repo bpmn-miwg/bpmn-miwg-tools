@@ -22,9 +22,10 @@ import org.omg.bpmn.miwg.api.output.dom.info.TestEntry;
 import org.omg.bpmn.miwg.api.output.dom.ok.AbstractOKEntry;
 import org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry;
 import org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry;
-import org.omg.bpmn.miwg.api.output.html.HTMLAnalysisOutputWriter;
 import org.omg.bpmn.miwg.api.output.html.Output;
+import org.omg.bpmn.miwg.api.output.overview.OverviewWriter;
 import org.omg.bpmn.miwg.api.tools.AnalysisTool;
+import org.omg.bpmn.miwg.util.StringUtil;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
@@ -134,16 +135,8 @@ public class AnalysisOutput {
 		return textFile;
 	}
 
-	private String generateSpaces(int n) {
-		String s = "";
-		for (int i = 0; i < n; i++) {
-			s += " ";
-		}
-		return s;
-	}
-
 	private void println(AbstractCheckEntry entry) {
-		String line = generateSpaces(stack.size() * 2) + entry.toLine();
+		String line = StringUtil.generateSpaces(stack.size() * 2) + entry.toLine();
 
 		if (!(entry instanceof EmptyEntry)) {
 			stack.peek().addChild(entry);
@@ -170,7 +163,7 @@ public class AnalysisOutput {
 			// System.err.println(stack.peek() + ".ADD(" + entry + ")");
 		}
 
-		String line = generateSpaces(stack.size() * 2) + entry.toLine();
+		String line = StringUtil.generateSpaces(stack.size() * 2) + entry.toLine();
 
 		Output miwgOutput = new Output(entry.getOutputType(), line);
 		htmlOutputs.add(miwgOutput);
@@ -224,7 +217,7 @@ public class AnalysisOutput {
 			if (xmlFileWriter != null)
 				xmlFileWriter.close();
 
-			HTMLAnalysisOutputWriter.writeAnalysisResults(job,
+			OverviewWriter.writeAnalysisResults(job,
 					analysisTool, this);
 		}
 	}

@@ -29,6 +29,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.output.overview.OverviewWriter;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
@@ -66,7 +67,7 @@ import org.simpleframework.xml.Root;
  * </pre>
  * 
  * @author Sven
- * @see {@link HTMLAnalysisOutputWriter} for helpers to write the results to
+ * @see {@link OverviewWriter} for helpers to write the results to
  *      file.
  */
 @Root(name = "div")
