@@ -1,5 +1,52 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/498",
+    "id": 110387703,
+    "number": 498,
+    "title": "ibo Prometheus 3.9.0.0",
+    "user": {
+      "login": "cboibo",
+      "id": 15027443,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15027443?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cboibo",
+      "html_url": "https://github.com/cboibo",
+      "followers_url": "https://api.github.com/users/cboibo/followers",
+      "following_url": "https://api.github.com/users/cboibo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cboibo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cboibo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cboibo/subscriptions",
+      "organizations_url": "https://api.github.com/users/cboibo/orgs",
+      "repos_url": "https://api.github.com/users/cboibo/repos",
+      "events_url": "https://api.github.com/users/cboibo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cboibo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-10-08T07:20:22Z",
+    "updated_at": "2015-10-08T09:52:10Z",
+    "closed_at": "2015-10-08T09:52:10Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/498",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/498",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/498.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/498.patch"
+    },
+    "body": "Version 3.9.0.0 for ibo Prometheus with C-Cases added and A- and B-Cases updated."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/489",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/489/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/489/comments",
@@ -47,6 +94,56 @@
     "body": "Adding import, export and roundtrip from W4 BPMN+ composer for files :\r\n- C.1.0\r\n- C.1.1\r\n- C.2.0\r\n- C.3.0"
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/487",
+    "id": 107963348,
+    "number": 487,
+    "title": "Reference C.3.0: Contradicting values of the name and BPMNShape vendor attribute",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2015-09-23T17:02:37Z",
+    "updated_at": "2015-10-07T17:03:33Z",
+    "closed_at": "2015-10-07T17:03:33Z",
+    "body": "**Semantics**\r\n```xml\r\n    <userTask id=\"_6a34496f-8cf7-42e5-88a9-d1af98cc3cba\" name=\"Perform repair\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" implementation=\"WebService\">\r\n      <documentation id=\"Bpmn_Documentation_jcoo8e_bEeSGoscwBjzAjw\" textFormat=\"text/plain\"><![CDATA[These customers get special service in case of damage.\r\nThis service level guarantees less than two days to solve the issue.]]></documentation>\r\n      <extensionElements>\r\n        <itp:systemDefinedAttributes>\r\n          <attribute name=\"Hyperlinks\" type=\"String\" value=\"0 Hyperlinks\"/>\r\n          <attribute name=\"ExternalId\" type=\"String\"/>\r\n          <attribute name=\"KPICost\" type=\"Float\" value=\"0\" format=\"Currency;SFr.;;KPI;2\"/>\r\n          <attribute name=\"KPIDuration\" type=\"Float\" value=\"8100\" format=\"Duration;;;KPI;3\">\r\n            <attribute name=\"KPIActiveTime\" type=\"Float\" value=\"7200\" format=\"Duration;;;KPI;3;0.3\"/>\r\n            <attribute name=\"KPIWaitTime\" type=\"Float\" value=\"900\" format=\"Duration;;;KPI;3\"/>\r\n          </attribute>\r\n          <attribute name=\"Resource\" type=\"String\" value=\"PHBlcmZvcm1lci1hc3NpZ25tZW50cz4NCiAgPHBlcmZvcm1lci1hc3NpZ25tZW50IHNjZW5hcmlvLXJlZi1pZD0iNTE4MDY2MTEtZDdlYy00MWY3LTgxNzMtYjAxYjk2OWUxOTc0IiBwZXJmb3JtZXItcmVmLWlkPSJkOGIzZTMyZC1lMDRmLTRhYzgtOWYyMC0wZDkzMTI3YWZlYWUiIHByaW9yaXR5PSI0IiBtYXgtY2FwYWNpdHk9IjEwMCIgY3JpdGljYWwtY2FwYWNpdHk9IjgwIiAvPg0KPC9wZXJmb3JtZXItYXNzaWdubWVudHM+\"/>\r\n        </itp:systemDefinedAttributes>\r\n        <w4graph:graphStyle>\r\n          <w4graph:basic background=\"194,215,235\" foreground=\"0,0,0\" autoResize=\"false\" borderColor=\"100,100,100\" collapsed=\"false\"/>\r\n        </w4graph:graphStyle>\r\n      </extensionElements>\r\n      <incoming>_be893987-caec-4605-b078-bd96b7cd6c12</incoming>\r\n      <incoming>Bpmn_SequenceFlow_-dQQwBqHEeWDuOtG0oS24A</incoming>\r\n      <outgoing>_d54c5707-af7a-4b36-a059-46681bbf0004</outgoing>\r\n    </userTask>\r\n```\r\n\r\n**Corresponding DI**\r\n```xml\r\n      <bpmndi:BPMNShape id=\"_F97318A7-9E18-4D7D-89EC-3191F6897A72\"\r\n        itp:label=\"Perform repair (premium level)\" itp:elementType=\"userTask\" color:background-color=\"#ECECFF\" color:border-color=\"#000000\"\r\n        bpmnElement=\"_6a34496f-8cf7-42e5-88a9-d1af98cc3cba\">\r\n        <dc:Bounds height=\"59.0\" width=\"121.0\" x=\"504.0\" y=\"416.0\"/>\r\n        <bpmndi:BPMNLabel id=\"Bpmndi_BPMNLabel_jczBAO_bEeSGoscwBjzAjw\" color:color=\"#000000\" labelStyle=\"_ea62b61f-473a-454a-a9bc-14475ce28686\">\r\n          <dc:Bounds height=\"28.0\" width=\"87.0\" x=\"521.0\" y=\"431.0\"/>\r\n        </bpmndi:BPMNLabel>\r\n      </bpmndi:BPMNShape>\r\n```\r\n\r\n**Visual representation**\r\n![c 3 0](https://cloud.githubusercontent.com/assets/4007840/10052140/921bb4f2-6225-11e5-975a-d0f056dfa9f5.png)\r\n\r\n**Analysis**\r\n* The *userTask* has the name *Perform repair* while the corresponding *BPMNShape* *itp:label* attribute has the value *Perform repair (premium level)*.\r\n* IMHO, this is an issue because the DI *itp:label* attribute is used for the visual representation instead of the *userTask*'s *name* attribute.\r\n* Furthermore, while attributes from vendor name spaces have no defined semantics in BPMN, a reference from this working group should not have such conflicts."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/comments",
@@ -86,8 +183,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
-        "name": "Tool: Trisotech BPMN Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Visio%20AddIn",
+        "name": "Tool: Trisotech BPMN Visio AddIn",
         "color": "009800"
       }
     ],
@@ -141,8 +238,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
-        "name": "Tool: Trisotech BPMN Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Visio%20AddIn",
+        "name": "Tool: Trisotech BPMN Visio AddIn",
         "color": "009800"
       }
     ],
@@ -214,8 +311,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
-        "name": "Tool: Trisotech BPMN Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Visio%20AddIn",
+        "name": "Tool: Trisotech BPMN Visio AddIn",
         "color": "009800"
       }
     ],
@@ -4142,6 +4239,74 @@
     "body": "The call activity labeled \"Call Activity Calling a Global Task\" suggests that a global task is being called. In the XML, however, no `calledElement` is defined for the call activity and there are no global tasks that could be called.\r\n\r\nI suggest that we either change the label to something more generic like \"Call Activity\" or add a global task and set a reference from the call activity."
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/193",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/193/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/193/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/193/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/193",
+    "id": 43611770,
+    "number": 193,
+    "title": "Reference A.1.2: Issue with label position in XML",
+    "user": {
+      "login": "krat0s",
+      "id": 1541830,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1541830?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/krat0s",
+      "html_url": "https://github.com/krat0s",
+      "followers_url": "https://api.github.com/users/krat0s/followers",
+      "following_url": "https://api.github.com/users/krat0s/following{/other_user}",
+      "gists_url": "https://api.github.com/users/krat0s/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/krat0s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/krat0s/subscriptions",
+      "organizations_url": "https://api.github.com/users/krat0s/orgs",
+      "repos_url": "https://api.github.com/users/krat0s/repos",
+      "events_url": "https://api.github.com/users/krat0s/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/krat0s/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.2",
+        "name": "Test: A.1.2",
+        "color": "006b75"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "tstephen",
+      "id": 1498508,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1498508?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tstephen",
+      "html_url": "https://github.com/tstephen",
+      "followers_url": "https://api.github.com/users/tstephen/followers",
+      "following_url": "https://api.github.com/users/tstephen/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tstephen/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tstephen/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tstephen/subscriptions",
+      "organizations_url": "https://api.github.com/users/tstephen/orgs",
+      "repos_url": "https://api.github.com/users/tstephen/repos",
+      "events_url": "https://api.github.com/users/tstephen/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tstephen/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 5,
+    "created_at": "2014-09-23T10:12:17Z",
+    "updated_at": "2015-10-07T16:00:19Z",
+    "closed_at": "2015-10-07T14:51:34Z",
+    "body": "In the reference image A.1.2.png, the label \"Data Object 2 [Reviewed]\" is centered below the data object shape. In the XML, however, the coordinates for the label put it more to the right.\r\n\r\nAll other data object labels are placed and exported correctly."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/192",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/192/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/192/comments",
@@ -6922,8 +7087,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Web%20Modeler",
-        "name": "Tool: Trisotech BPMN Web Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Trisotech%20BPMN%20Modeler",
+        "name": "Tool: Trisotech BPMN Modeler",
         "color": "009800"
       }
     ],
