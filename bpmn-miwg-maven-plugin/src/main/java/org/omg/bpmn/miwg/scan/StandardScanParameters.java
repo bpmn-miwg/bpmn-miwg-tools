@@ -27,9 +27,12 @@ package org.omg.bpmn.miwg.scan;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 public class StandardScanParameters implements ScanParameters {
 
@@ -37,6 +40,10 @@ public class StandardScanParameters implements ScanParameters {
 	protected String testResultName;
 	private String outputRoot;
 	private Collection<String> inputRoots;
+	private final static Set<String> SUPPORTED_TESTCASES = new HashSet<String>(
+			Arrays.asList(new String[] { "A.1.0", "A.2.0", "A.3.0", "A.4.0",
+					"A.4.1", "B.1.0", "B.2.0", "C.1.0", "C.1.1", "C.2.0",
+					"C.3.0" }));
 
 	public StandardScanParameters(String application, String testResult) {
 		this(application, testResult, Collections
@@ -81,8 +88,11 @@ public class StandardScanParameters implements ScanParameters {
 	}
 
 	public boolean acceptTestResult(TestResult testResult) {
-		if (testResultName == null)
-			return true;
+		if (testResultName == null) {
+			String testName = BpmnFileScanner.inferTestName(testResult.file)
+					.toUpperCase();
+			return SUPPORTED_TESTCASES.contains(testName);
+		}
 		else
 			return testResult.name.toLowerCase().startsWith(
 					testResultName.toLowerCase());

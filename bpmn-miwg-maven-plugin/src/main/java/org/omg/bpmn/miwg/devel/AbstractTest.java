@@ -26,8 +26,13 @@
 package org.omg.bpmn.miwg.devel;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+import java.util.LinkedList;
+import java.util.List;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -44,10 +49,12 @@ public abstract class AbstractTest {
 
 	protected AnalysisJob job;
 
+	private static List<AnalysisRun> runs = new LinkedList<AnalysisRun>();
+	
+	
 	public AbstractTest(AnalysisJob parameter) {
 		this.job = parameter;
 	}
-
 
 	@Before
 	public void setUp() throws Exception {
@@ -70,7 +77,11 @@ public abstract class AbstractTest {
 
 		AnalysisOutput result = run.getResult(SchemaAnalysisTool.class);
 
+		if (result == null)
+			fail("Null result returned");
+
 		assertEquals(0, result.numFindings());
+		runs.add(run);
 	}
 
 	@Test
@@ -81,7 +92,16 @@ public abstract class AbstractTest {
 
 		AnalysisOutput result = run.getResult(XpathAnalysisTool.class);
 
+		if (result == null)
+			fail("Null result returned");
+
 		assertEquals(0, result.numFindings());
+		runs.add(run);
+	}
+	
+	@AfterClass
+	public void afterClass() {
+		
 	}
 
 }
