@@ -68,15 +68,22 @@ public class DomSubtreeCompareDifferenceListener implements DifferenceListener {
 			else
 				return RETURN_ACCEPT_DIFFERENCE;
 
-		case DifferenceConstants.CHILD_NODELIST_LENGTH_ID:
 		case DifferenceConstants.ATTR_SEQUENCE_ID:
+		case DifferenceConstants.CHILD_NODELIST_LENGTH_ID:
 		case DifferenceConstants.CHILD_NODELIST_SEQUENCE_ID:
 			return RETURN_IGNORE_DIFFERENCE_NODES_IDENTICAL;
 
 		case DifferenceConstants.CHILD_NODE_NOT_FOUND_ID:
 			// Something has been added in the test document
-			//return RETURN_ACCEPT_DIFFERENCE;
+			// return RETURN_ACCEPT_DIFFERENCE;
 			if (difference.getControlNodeDetail().getNode() == null)
+				return RETURN_IGNORE_DIFFERENCE_NODES_IDENTICAL;
+			else
+				return RETURN_ACCEPT_DIFFERENCE;
+
+		case DifferenceConstants.HAS_CHILD_NODES_ID:
+			// The reference has no child nodes
+			if (difference.getControlNodeDetail().getNode().hasChildNodes() == false)
 				return RETURN_IGNORE_DIFFERENCE_NODES_IDENTICAL;
 			else
 				return RETURN_ACCEPT_DIFFERENCE;

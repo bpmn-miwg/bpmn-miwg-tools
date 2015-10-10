@@ -100,7 +100,7 @@ public abstract class AbstractTest {
 	}
 	
 	@AfterClass
-	public void afterClass() {
+	public static void afterClass() {
 		
 	}
 
