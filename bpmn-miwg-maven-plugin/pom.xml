@@ -22,22 +22,6 @@
     <bpmn.miwg.tools.version>0.3-SNAPSHOT</bpmn.miwg.tools.version>
   </properties>
   
-  <distributionManagement>
-    <repository>
-      <id>bpmn-miwg-snapshot</id>
-      <name>BPMN-MIWG Snapshot Repository</name>
-      <url>http://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
-    </repository>
-  </distributionManagement>
-
-  <repositories>
-    <repository>
-      <id>bpmn-miwg-snapshot-repository</id>
-      <name>BPMN MIWG Snapshot Repository</name>
-      <url>https://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
-    </repository>
-  </repositories>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>
@@ -96,6 +80,7 @@
       <artifactId>test-suite</artifactId>
       <version>0.2-SNAPSHOT</version>
       <scope>runtime</scope>
+      <optional>true</optional>
     </dependency>
   </dependencies>
 
