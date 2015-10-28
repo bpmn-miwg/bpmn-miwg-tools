@@ -84,7 +84,7 @@
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
     <!-- staging area for subsequent commit and push -->
-    <local-mvn-repo.snapshot.directory>file:../bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
+    <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
   </properties>
 
   <repositories>
