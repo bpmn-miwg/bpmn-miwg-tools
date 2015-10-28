@@ -68,19 +68,11 @@
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>schema-tool</artifactId>
       <version>${bpmn.miwg.tools.version}</version>
-    </dependency>    <dependency>
+    </dependency>
+    <dependency>
       <groupId>org.glassfish</groupId>
       <artifactId>javax.json</artifactId>
       <version>1.0.4</version>
-    </dependency>
-    
-    <!-- Required at runtime for private testing -->
-    <dependency>
-      <groupId>org.omg.bpmn.miwg</groupId>
-      <artifactId>test-suite</artifactId>
-      <version>0.2-SNAPSHOT</version>
-      <scope>runtime</scope>
-      <optional>true</optional>
     </dependency>
   </dependencies>
 
@@ -166,6 +158,19 @@
     </pluginManagement>
   </build>
   <profiles>
+    <profile>
+      <id>private-testing</id>
+    
+      <dependencies>
+        <!-- Required at runtime for private testing -->
+        <dependency>
+          <groupId>org.omg.bpmn.miwg</groupId>
+          <artifactId>test-suite</artifactId>
+          <version>2016-SNAPSHOT</version>
+          <scope>runtime</scope>
+        </dependency>
+      </dependencies>
+    </profile>
     <profile>
       <id>run-its</id>
       <build>
