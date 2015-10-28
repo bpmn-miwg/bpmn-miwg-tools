@@ -29,10 +29,13 @@
 
   <distributionManagement>
     <repository>
-      <id>internal.repo</id>
-      <name>Temporary Staging Repository</name>
-      <url>file://${project.build.directory}/mvn-repo</url>
+      <id>repo</id>
+      <url>https://github.com/bpmn-miwg/bpmn-miwg-mvn-repo/raw/master/releases</url>
     </repository>
+    <snapshotRepository>
+      <id>snapshot-repo</id>
+      <url>https://github.com/bpmn-miwg/bpmn-miwg-mvn-repo/raw/master/snapshots</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <ciManagement>
@@ -80,6 +83,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
+    <!-- staging area for subsequent commit and push -->
+    <local-mvn-repo.snapshot.directory>file:../bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
   </properties>
 
   <repositories>
@@ -172,37 +177,8 @@
         <artifactId>maven-deploy-plugin</artifactId>
         <version>2.8.1</version>
         <configuration>
-          <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+          <altDeploymentRepository>internal.repo::default::${local-mvn-repo.snapshot.directory}</altDeploymentRepository>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>com.github.github</groupId>
-        <artifactId>site-maven-plugin</artifactId>
-        <version>0.10</version>
-        <configuration>
-          <!-- git commit message -->
-          <message>Maven artifacts for ${project.artifactId} ${project.version}</message>
-          <!-- disable webpage processing -->
-          <noJekyll>true</noJekyll>
-          <!-- matches distribution management repository url above -->
-          <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-	  <!-- remote branch name -->
-	  <includes><include>**/*</include></includes>
-          <branch>refs/heads/mvn-repo</branch>
-          <!-- github repo name -->
-          <repositoryName>bpmn-miwg-tools</repositoryName>
-          <!-- github username -->
-          <repositoryOwner>bpmn-miwg</repositoryOwner>
-        </configuration>
-        <executions>
-          <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
-          <execution>
-            <goals>
-              <goal>site</goal>
-            </goals>
-            <phase>deploy</phase>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
 

@@ -2,19 +2,18 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>bpmn-miwg-maven-plugin</artifactId>
-  <version>0.3-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
+  <parent>
+    <groupId>org.omg.bpmn.miwg</groupId>
+    <artifactId>tools</artifactId>
+    <version>0.3-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
 
   <name>BPMN MIWG Maven Plugin</name>
   <inceptionYear>2013</inceptionYear>
-  <organization>
-  	<name>BPMN Model Interchange Working Group</name>
-  	<url>http://www.omgwiki.org/bpmn-miwg/</url>
-  </organization>
   <description>Maven plugin to invoke tests on the BPMN test cases in this project. </description>
-  <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,22 +21,6 @@
     <bpmn.miwg.tools.version>0.3-SNAPSHOT</bpmn.miwg.tools.version>
   </properties>
   
-  <distributionManagement>
-    <repository>
-      <id>bpmn-miwg-snapshot</id>
-      <name>BPMN-MIWG Snapshot Repository</name>
-      <url>http://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
-    </repository>
-  </distributionManagement>
-
-  <repositories>
-    <repository>
-      <id>bpmn-miwg-snapshot-repository</id>
-      <name>BPMN MIWG Snapshot Repository</name>
-      <url>https://repository-bpmn-miwg.forge.cloudbees.com/snapshot/</url>
-    </repository>
-  </repositories>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>
