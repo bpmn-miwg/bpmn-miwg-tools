@@ -1,0 +1,20 @@
+ANALYSIS: Modelio 3.5-B.2.0-roundtrip (Tool: xsd)
+  Error Line 2: cvc-complex-type.4: Attribute 'targetNamespace' must appear on element 'definitions'.
+
+  Error Line 15: cvc-complex-type.2.4.b: The content of element 'conditionalEventDefinition' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":condition}' is expected.
+
+  Error Line 79: cvc-complex-type.2.4.b: The content of element 'ns5:conditionalEventDefinition' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":condition}' is expected.
+
+  Error Line 105: cvc-complex-type.2.4.b: The content of element 'ioSpecification' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":outputSet}' is expected.
+
+  Error Line 129: cvc-complex-type.2.4.b: The content of element 'conditionalEventDefinition' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":condition}' is expected.
+
+  Error Line 309: cvc-complex-type.2.4.b: The content of element 'ns5:conditionalEventDefinition' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":condition}' is expected.
+
+  Error Line 389: cvc-complex-type.4: Attribute 'name' must appear on element 'linkEventDefinition'.
+
+  Error Line 399: cvc-complex-type.2.4.b: The content of element 'ioSpecification' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":outputSet}' is expected.
+
+  Error Line 479: cvc-complex-type.4: Attribute 'name' must appear on element 'linkEventDefinition'.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 9, Fatal Errors: 0

@@ -1,0 +1,2 @@
+ANALYSIS: Enterprise Architect 12.0.1207-B.1.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

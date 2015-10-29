@@ -1,0 +1,46 @@
+ANALYSIS: Modelio 3.5-C.1.1-roundtrip (Tool: xsd)
+  Error Line 2: cvc-complex-type.4: Attribute 'targetNamespace' must appear on element 'definitions'.
+
+  Error Line 23: cvc-datatype-valid.1.2.1: '5b94437d-1688-4bcf-aa76-1c8ecd080e55-edd43648-488c-41ed-839e-b4f62d149e7c' is not a valid value for 'NCName'.
+
+  Error Line 23: cvc-attribute.3: The value '5b94437d-1688-4bcf-aa76-1c8ecd080e55-edd43648-488c-41ed-839e-b4f62d149e7c' of attribute 'id' on element 'dataOutput' is not valid with respect to its type, 'ID'.
+
+  Error Line 24: cvc-complex-type.2.4.a: Invalid content was found starting with element 'outputSet'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutput, "http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet}' is expected.
+
+  Error Line 25: cvc-datatype-valid.1.2.1: '5b94437d-1688-4bcf-aa76-1c8ecd080e55-edd43648-488c-41ed-839e-b4f62d149e7c' is not a valid value for 'NCName'.
+
+  Error Line 25: cvc-type.3.1.3: The value '5b94437d-1688-4bcf-aa76-1c8ecd080e55-edd43648-488c-41ed-839e-b4f62d149e7c' of element 'dataOutputRefs' is not valid.
+
+  Error Line 29: cvc-datatype-valid.1.2.1: '5b94437d-1688-4bcf-aa76-1c8ecd080e55-edd43648-488c-41ed-839e-b4f62d149e7c' is not a valid value for 'NCName'.
+
+  Error Line 29: cvc-type.3.1.3: The value '5b94437d-1688-4bcf-aa76-1c8ecd080e55-edd43648-488c-41ed-839e-b4f62d149e7c' of element 'sourceRef' is not valid.
+
+  Error Line 42: cvc-datatype-valid.1.2.1: '71931b25-0607-4e01-8153-a571782ef036-43bae3ed-dcfd-4863-8140-e67d98bfb9ce' is not a valid value for 'NCName'.
+
+  Error Line 42: cvc-attribute.3: The value '71931b25-0607-4e01-8153-a571782ef036-43bae3ed-dcfd-4863-8140-e67d98bfb9ce' of attribute 'id' on element 'dataOutput' is not valid with respect to its type, 'ID'.
+
+  Error Line 43: cvc-complex-type.2.4.a: Invalid content was found starting with element 'outputSet'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutput, "http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet}' is expected.
+
+  Error Line 44: cvc-datatype-valid.1.2.1: '71931b25-0607-4e01-8153-a571782ef036-43bae3ed-dcfd-4863-8140-e67d98bfb9ce' is not a valid value for 'NCName'.
+
+  Error Line 44: cvc-type.3.1.3: The value '71931b25-0607-4e01-8153-a571782ef036-43bae3ed-dcfd-4863-8140-e67d98bfb9ce' of element 'dataOutputRefs' is not valid.
+
+  Error Line 48: cvc-datatype-valid.1.2.1: '71931b25-0607-4e01-8153-a571782ef036-43bae3ed-dcfd-4863-8140-e67d98bfb9ce' is not a valid value for 'NCName'.
+
+  Error Line 48: cvc-type.3.1.3: The value '71931b25-0607-4e01-8153-a571782ef036-43bae3ed-dcfd-4863-8140-e67d98bfb9ce' of element 'sourceRef' is not valid.
+
+  Error Line 56: cvc-datatype-valid.1.2.1: '1e6b04b3-6ea0-40cf-972a-28e0bbd75424-0f4e6fe2-aca8-4f39-8f74-a9ce1bcbe647' is not a valid value for 'NCName'.
+
+  Error Line 56: cvc-attribute.3: The value '1e6b04b3-6ea0-40cf-972a-28e0bbd75424-0f4e6fe2-aca8-4f39-8f74-a9ce1bcbe647' of attribute 'id' on element 'dataOutput' is not valid with respect to its type, 'ID'.
+
+  Error Line 57: cvc-complex-type.2.4.a: Invalid content was found starting with element 'outputSet'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutput, "http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet}' is expected.
+
+  Error Line 58: cvc-datatype-valid.1.2.1: '1e6b04b3-6ea0-40cf-972a-28e0bbd75424-0f4e6fe2-aca8-4f39-8f74-a9ce1bcbe647' is not a valid value for 'NCName'.
+
+  Error Line 58: cvc-type.3.1.3: The value '1e6b04b3-6ea0-40cf-972a-28e0bbd75424-0f4e6fe2-aca8-4f39-8f74-a9ce1bcbe647' of element 'dataOutputRefs' is not valid.
+
+  Error Line 62: cvc-datatype-valid.1.2.1: '1e6b04b3-6ea0-40cf-972a-28e0bbd75424-0f4e6fe2-aca8-4f39-8f74-a9ce1bcbe647' is not a valid value for 'NCName'.
+
+  Error Line 62: cvc-type.3.1.3: The value '1e6b04b3-6ea0-40cf-972a-28e0bbd75424-0f4e6fe2-aca8-4f39-8f74-a9ce1bcbe647' of element 'sourceRef' is not valid.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 22, Fatal Errors: 0

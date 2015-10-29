@@ -1,0 +1,38 @@
+ANALYSIS: Visual Paradigm 11.1-A.3.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: Definition)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='Trisotech_Visio-_6']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='Trisotech_Visio-_6']
+    OK     : selectFirstProcess                       Push (id: Trisotech_Visio-_6)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1ac4b759_40e3_4dfb_b0e3_ad1d201d6c3d']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1ac4b759_40e3_4dfb_b0e3_ad1d201d6c3d']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='_65f5459f_44ae_436d_a089_a91d6d78075b']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_65f5459f_44ae_436d_a089_a91d6d78075b']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_65f5459f_44ae_436d_a089_a91d6d78075b']
+      OK     : navigateFollowingElement                 Message: bpmn:subProcess[@name='Collapsed Sub-Process' and @id='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      FINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Message' and @attachedToRef='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+      FINDING: checkCancelActivity                      Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="Definition"']/process[@id='id="Trisotech_Visio-_6"']/subProcess[@id='id="_1ae31d1b_2559_4f78_a3ec_47986a49db48"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='_2d2d0d29_896f_49f9_8109_77a7304309c5']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_2d2d0d29_896f_49f9_8109_77a7304309c5']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_2d2d0d29_896f_49f9_8109_77a7304309c5']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 1' and @id='_ce253897_4300_4b24_b71f_4c9535698c70']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_ce253897_4300_4b24_b71f_4c9535698c70']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_ce253897_4300_4b24_b71f_4c9535698c70']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="Definition"']/process[@id='id="Trisotech_Visio-_6"']/subProcess[@id='id="_1ae31d1b_2559_4f78_a3ec_47986a49db48"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      FINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Interrupting Escalation' and @attachedToRef='_1ae31d1b_2559_4f78_a3ec_47986a49db48']
+      FINDING: checkEscalationEvent                     Message: Cannot find escalation event definition; Parameter: bpmn:escalationEventDefinition | bpmn:escalationDefinitionRef
+      OK     : checkCancelActivity                      Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 4']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 2']
+      OK     : doExecute                                Pop (id: Trisotech_Visio-_6)

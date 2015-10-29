@@ -1,0 +1,50 @@
+ANALYSIS: Modelio 3.5-A.3.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: MO-73ddf9f7-3bd5-4f69-91bb-013015a1c382)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-cd726abd-9b9d-42a7-ae29-1c530880bf71']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-cd726abd-9b9d-42a7-ae29-1c530880bf71']
+    OK     : selectFirstProcess                       Push (id: MO-cd726abd-9b9d-42a7-ae29-1c530880bf71)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-17cffc77-a254-49dd-9617-6994a6b64201']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-17cffc77-a254-49dd-9617-6994a6b64201']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='MO-a803cd4a-63c3-4df6-a133-9fe02f63b6e9']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-a803cd4a-63c3-4df6-a133-9fe02f63b6e9']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-a803cd4a-63c3-4df6-a133-9fe02f63b6e9']
+      OK     : navigateFollowingElement                 Message: bpmn:subProcess[@name='Collapsed Sub-Process' and @id='MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12']
+      OK     : navigateBoundaryEvent                    Message: Boundary element 'Boundary Intermediate Event Non-Interrupting Message' found
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2eb6d831-dfce-4504-9480-d9181b713dd2']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2eb6d831-dfce-4504-9480-d9181b713dd2']
+      OK     : checkMessageEvent                        Message: Message event definition
+      FINDING: checkCancelActivity                      Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='MO-2beec56e-41d8-43bf-8aa4-c02e7b043005']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2beec56e-41d8-43bf-8aa4-c02e7b043005']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2beec56e-41d8-43bf-8aa4-c02e7b043005']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 1' and @id='MO-2afdca38-192a-40ce-a7d4-83c499379612']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2afdca38-192a-40ce-a7d4-83c499379612']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2afdca38-192a-40ce-a7d4-83c499379612']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-73ddf9f7-3bd5-4f69-91bb-013015a1c382"']/process[@id='id="MO-cd726abd-9b9d-42a7-ae29-1c530880bf71"']/subProcess[@id='id="MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='MO-0d33337d-9a80-43cb-ba5a-45cb1de585b6']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-0d33337d-9a80-43cb-ba5a-45cb1de585b6']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-0d33337d-9a80-43cb-ba5a-45cb1de585b6']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 1' and @id='MO-2afdca38-192a-40ce-a7d4-83c499379612']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2afdca38-192a-40ce-a7d4-83c499379612']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2afdca38-192a-40ce-a7d4-83c499379612']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-73ddf9f7-3bd5-4f69-91bb-013015a1c382"']/process[@id='id="MO-cd726abd-9b9d-42a7-ae29-1c530880bf71"']/subProcess[@id='id="MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-947ec13d-9266-42f2-bbc9-dc73bb2a8f12']
+      OK     : navigateBoundaryEvent                    Message: Boundary element 'Boundary Intermediate Event Interrupting Escalation' found
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-550d4b95-caf1-4956-9373-82e9e1f29b1c']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-550d4b95-caf1-4956-9373-82e9e1f29b1c']
+      OK     : checkEscalationEvent                     Message: Escalation event definition
+      OK     : checkCancelActivity                      Message: Attribute cancelActivity is not existing but the expected value (true) equals the default value (true)
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 4' and @id='MO-e1cc8637-3d46-4bc0-abcd-6eb851d72135']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-e1cc8637-3d46-4bc0-abcd-6eb851d72135']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-e1cc8637-3d46-4bc0-abcd-6eb851d72135']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 2' and @id='MO-18b44274-105f-4b84-b24f-089f0be8f7e7']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-18b44274-105f-4b84-b24f-089f0be8f7e7']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-18b44274-105f-4b84-b24f-089f0be8f7e7']
+      OK     : doExecute                                Pop (id: MO-cd726abd-9b9d-42a7-ae29-1c530880bf71)

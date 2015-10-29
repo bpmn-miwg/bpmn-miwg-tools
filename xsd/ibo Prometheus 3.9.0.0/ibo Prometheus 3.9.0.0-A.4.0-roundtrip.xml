@@ -1,0 +1,11 @@
+<analysis name="ibo Prometheus 3.9.0.0-A.4.0-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 25: cvc-datatype-valid.1.2.1: &apos;&apos; is not a valid value for &apos;QName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 25: cvc-attribute.3: The value &apos;&apos; of attribute &apos;targetRef&apos; on element &apos;semantic:messageFlow&apos; is not valid with respect to its type, &apos;QName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 26: cvc-datatype-valid.1.2.1: &apos;&apos; is not a valid value for &apos;QName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 26: cvc-attribute.3: The value &apos;&apos; of attribute &apos;sourceRef&apos; on element &apos;semantic:messageFlow&apos; is not valid with respect to its type, &apos;QName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 4, Fatal Errors: 0"/>
+</analysis>

@@ -1,0 +1,2 @@
+ANALYSIS: Trisotech BPMN Modeler 5.0.15-C.1.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

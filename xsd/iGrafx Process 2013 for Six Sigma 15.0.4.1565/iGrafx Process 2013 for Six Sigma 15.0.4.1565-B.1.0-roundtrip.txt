@@ -1,0 +1,4 @@
+ANALYSIS: iGrafx Process 2013 for Six Sigma 15.0.4.1565-B.1.0-roundtrip (Tool: xsd)
+  Error Line 173: cvc-complex-type.2.4.a: Invalid content was found starting with element 'sequenceFlow'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":artifact, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":correlationSubscription, "http://www.omg.org/spec/BPMN/20100524/MODEL":supports}' is expected.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0

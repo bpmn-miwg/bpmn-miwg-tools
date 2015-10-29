@@ -1,0 +1,33 @@
+ANALYSIS: actiBPM 3.E-8-A.2.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: _1373649889746)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    OK     : selectFirstProcess                       Push (id: WFP-6-)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='_5a972b87-735d-454a-b31c-f52fb3afc5c7']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_b50f530c-3450-4e1a-b81f-ea346dc6e1cb']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_b50f530c-3450-4e1a-b81f-ea346dc6e1cb']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Split Flow)' and @id='_35fe57a7-1302-44e2-bf58-032f11af7ecb']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_fe74c141-8843-4b00-a704-5e5e13be53b0']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_fe74c141-8843-4b00-a704-5e5e13be53b0']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='_4f7d62d7-f0e6-46bc-be00-69e02da38f65']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_f1478fb7-98c4-4c01-8c15-68bd04c91535']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_f1478fb7-98c4-4c01-8c15-68bd04c91535']
+      OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="_1373649889746"']/semantic:process[@id='id="WFP-6-"']/semantic:exclusiveGateway[@id='id="_35fe57a7-1302-44e2-bf58-032f11af7ecb"']/
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='_e6eb725a-34bc-45c7-aed0-9f9596cd7bee']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_a1570a53-28d2-41b1-a3a2-3e50c00d747e']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_a1570a53-28d2-41b1-a3a2-3e50c00d747e']
+      OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="_1373649889746"']/semantic:process[@id='id="WFP-6-"']/semantic:exclusiveGateway[@id='id="_35fe57a7-1302-44e2-bf58-032f11af7ecb"']/
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 4' and @id='_7d399717-1aba-47ac-8d7d-8aaa033255e0']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_20ebb3c1-5178-4c7c-a91d-23e58f2aa73b']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_20ebb3c1-5178-4c7c-a91d-23e58f2aa73b']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='_33c66216-391c-49c2-aa19-d8f0b7f5f91d']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_698b593f-18eb-42ea-b8cd-bcd51e1514cc']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_698b593f-18eb-42ea-b8cd-bcd51e1514cc']
+      OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="_1373649889746"']/semantic:process[@id='id="WFP-6-"']/semantic:task[@id='id="_e6eb725a-34bc-45c7-aed0-9f9596cd7bee"']/
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='_33c66216-391c-49c2-aa19-d8f0b7f5f91d']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_e9ebc7c7-995d-46db-86ce-d823bc2b4687']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_e9ebc7c7-995d-46db-86ce-d823bc2b4687']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event' and @id='_258f51eb-b764-4a71-b681-3a01cca14143']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_d4ce87c6-1373-45d6-a3b4-fbb2a04ee2e5']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_d4ce87c6-1373-45d6-a3b4-fbb2a04ee2e5']
+      OK     : doExecute                                Pop (id: WFP-6-)

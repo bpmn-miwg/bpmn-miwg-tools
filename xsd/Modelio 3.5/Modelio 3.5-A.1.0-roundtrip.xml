@@ -1,0 +1,5 @@
+<analysis name="Modelio 3.5-A.1.0-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 2: cvc-complex-type.4: Attribute &apos;targetNamespace&apos; must appear on element &apos;definitions&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0"/>
+</analysis>

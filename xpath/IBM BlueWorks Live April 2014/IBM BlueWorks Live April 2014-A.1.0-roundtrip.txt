@@ -1,0 +1,30 @@
+ANALYSIS: IBM BlueWorks Live April 2014-A.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: bpmn-922d8a9f-83c6-48eb-896d-463ae1888c73)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-4a8d7768-b5ec-49c1-b3eb-b0281b85afdf']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-4a8d7768-b5ec-49c1-b3eb-b0281b85afdf']
+    OK     : selectFirstProcess                       Push (id: bpmn-4a8d7768-b5ec-49c1-b3eb-b0281b85afdf)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-89735506-4384-45c6-8d5a-d363a7eaf9ce']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-89735506-4384-45c6-8d5a-d363a7eaf9ce']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='bpmn-142d6727-9d63-4290-9eba-56a49784cd91']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='bpmn-aaf39068-a11c-47ce-9eef-c01ae2d4da81']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='bpmn-aaf39068-a11c-47ce-9eef-c01ae2d4da81']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-142d6727-9d63-4290-9eba-56a49784cd91']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-142d6727-9d63-4290-9eba-56a49784cd91']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='bpmn-501559c3-3dda-46f8-a13b-871baae3f29e']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='bpmn-f6ceb9f2-5f69-4f13-844f-02b0c5f45f16']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='bpmn-f6ceb9f2-5f69-4f13-844f-02b0c5f45f16']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-501559c3-3dda-46f8-a13b-871baae3f29e']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-501559c3-3dda-46f8-a13b-871baae3f29e']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='bpmn-7e138f02-39d7-4a65-bcbe-c9ab703dbcb8']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='bpmn-b7b6f9fe-7527-4a39-a7a8-81bc5f0609ce']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='bpmn-b7b6f9fe-7527-4a39-a7a8-81bc5f0609ce']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-7e138f02-39d7-4a65-bcbe-c9ab703dbcb8']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-7e138f02-39d7-4a65-bcbe-c9ab703dbcb8']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event' and @id='bpmn-3f0383c0-402c-4282-87ff-3954861bfc5c']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='bpmn-0713d884-43b9-42dc-8c8e-6a4757611b85']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='bpmn-0713d884-43b9-42dc-8c8e-6a4757611b85']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-3f0383c0-402c-4282-87ff-3954861bfc5c']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmn-3f0383c0-402c-4282-87ff-3954861bfc5c']
+      OK     : doExecute                                Pop (id: bpmn-4a8d7768-b5ec-49c1-b3eb-b0281b85afdf)

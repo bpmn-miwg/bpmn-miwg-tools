@@ -1,0 +1,15 @@
+ANALYSIS: IBM Process Designer 8.0.1-A.3.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1] = name
+Test: /definitions[1] = null
+  Reference: /definitions[1]/@targetNamespace = http://www.trisotech.com/definitions/_1373649919111
+Test: /definitions[1]/@targetNamespace = http://A.3.0/Initial Import/Process
+  Reference: /definitions[1] = null
+Test: /definitions[1] = version
+  Reference: /definitions[1] = 2
+Test: /definitions[1] = 1
+  Reference: /definitions[1]/process[1] = semantic:process
+Test: null = null
+  Reference: /definitions[1]/BPMNDiagram[1] = bpmndi:BPMNDiagram
+Test: null = null
+  Reference: null = null
+Test: /definitions[1]/process[1] = bpmn:process

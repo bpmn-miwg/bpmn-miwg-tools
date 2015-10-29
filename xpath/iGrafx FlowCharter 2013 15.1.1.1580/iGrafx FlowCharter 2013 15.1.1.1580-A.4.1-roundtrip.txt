@@ -1,0 +1,50 @@
+ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-A.4.1-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: diagram_IDAPU0JB)
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='diagram_IDAPU0JB']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='diagram_IDAPU0JB']
+      OK     : selectPool                               Message: bpmn:participant[@name='Pool 1']
+      OK     : selectPool                               Push (id: dept_IDASCTJB)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='dept_IDASCTJB']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='dept_IDASCTJB']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='process_IDASCTJB']
+        OK     : selectReferencedProcess                  Push (id: process_IDASCTJB)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process_IDASCTJB']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process_IDASCTJB']
+          FINDING: navigateElement                          Message: No node found; Parameter: bpmn:startEvent[@name='Start Event 1']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 1' and @sourceRef='process_IDASCTJB']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 2' and @targetRef='process_IDASCTJB']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+          OK     : doExecute                                Pop (id: process_IDASCTJB)
+        OK     : doExecute                                Pop (id: dept_IDASCTJB)
+      OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process_IDASCTJB']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process_IDASCTJB']
+      OK     : selectProcessByLane                      Push (id: process_IDASCTJB)
+        OK     : doExecute                                Pop (id: process_IDASCTJB)
+      OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process_IDAN5SJB']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process_IDAN5SJB']
+      OK     : selectProcessByLane                      Push (id: process_IDAN5SJB)
+        FINDING: navigateElement                          Message: No node found; Parameter: bpmn:startEvent[@name='Start Event 2']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+        FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 1' and @targetRef='process_IDAN5SJB']
+        FINDING: selectFollowingElement                   Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Expanded Sub-Process 1']
+        OK     : selectFollowingElement                   Push (id: )
+          OK     : doExecute                                Pop (id: )
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 5']
+        FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 2' and @sourceRef='process_IDAN5SJB']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 2']
+        OK     : navigateBookmarkedElement                Message: 
+        FINDING: selectFollowingElement                   Message: The base node is null; Parameter: null
+        OK     : selectFollowingElement                   Push (id: )
+          FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 4']
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : doExecute                                Pop (id: )
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        OK     : doExecute                                Pop (id: process_IDAN5SJB)
+      OK     : doExecute                                Pop (id: diagram_IDAPU0JB)

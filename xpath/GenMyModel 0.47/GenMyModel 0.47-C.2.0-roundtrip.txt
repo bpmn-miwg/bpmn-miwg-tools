@@ -1,0 +1,83 @@
+ANALYSIS: GenMyModel 0.47-C.2.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: _1434549882485)
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: sid-22222a8b-009f-4147-b08e-4e027b89fa86)
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='sid-22222a8b-009f-4147-b08e-4e027b89fa86']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='sid-22222a8b-009f-4147-b08e-4e027b89fa86']
+      FINDING: selectPool                               Message: No node found; Parameter: bpmn:participant[@name='Credit Card Company']
+      OK     : selectPool                               Push (id: )
+        FINDING: selectReferencedProcess                  Message: Node is null; Parameter: 
+        OK     : selectReferencedProcess                  Push (id: )
+          FINDING: checkAttributeValue                      Message: Attribute isExecutable is not existing.; Parameter: 
+          FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Receive Credit Card Information']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+          OK     : doExecute                                Pop (id: )
+        OK     : doExecute                                Pop (id: )
+      FINDING: selectPool                               Message: No node found; Parameter: bpmn:participant[@name='Customer']
+      OK     : selectPool                               Push (id: )
+        FINDING: selectReferencedProcess                  Message: Node is null; Parameter: 
+        OK     : selectReferencedProcess                  Push (id: )
+          FINDING: checkAttributeValue                      Message: Attribute isExecutable is not existing.; Parameter: 
+          FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[not(@name)]
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          OK     : navigateBookmarkedElement                Message: 
+          FINDING: selectFollowingElement                   Message: Parent failed; Parameter: Type: bpmn:subProcess, name: Checkout
+          OK     : selectFollowingElement                   Push (id: )
+            FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[not(@name)]
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
+            FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            OK     : navigateBookmarkedElement                Message: 
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            OK     : navigateBookmarkedElement                Message: 
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: checkErrorEvent                          Message: Current node is null; Parameter: null
+            OK     : doExecute                                Pop (id: )
+          FINDING: navigateBoundaryEvent                    Message: Current node is null; Parameter: null
+          FINDING: checkErrorEvent                          Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : navigateBookmarkedElement                Message: 
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : doExecute                                Pop (id: )
+        OK     : doExecute                                Pop (id: )
+      FINDING: selectPool                               Message: No node found; Parameter: bpmn:participant[@name='Amazon']
+      OK     : selectPool                               Push (id: )
+        FINDING: selectReferencedProcess                  Message: Node is null; Parameter: 
+        OK     : selectReferencedProcess                  Push (id: )
+          FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Receive Order']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          OK     : doExecute                                Pop (id: )
+        OK     : doExecute                                Pop (id: )
+      FINDING: selectPool                               Message: No node found; Parameter: bpmn:participant[@name='Carrier']
+      OK     : selectPool                               Push (id: )
+        FINDING: selectReferencedProcess                  Message: Node is null; Parameter: 
+        OK     : selectReferencedProcess                  Push (id: )
+          FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Pick items']
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          OK     : doExecute                                Pop (id: )
+        OK     : doExecute                                Pop (id: )
+      OK     : doExecute                                Pop (id: sid-22222a8b-009f-4147-b08e-4e027b89fa86)

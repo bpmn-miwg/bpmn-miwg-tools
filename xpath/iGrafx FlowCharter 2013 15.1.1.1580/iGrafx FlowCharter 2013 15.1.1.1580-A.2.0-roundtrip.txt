@@ -1,0 +1,19 @@
+ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-A.2.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='diagram_IDATDPGE']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='diagram_IDATDPGE']
+    OK     : selectFirstProcess                       Push (id: diagram_IDATDPGE)
+      FINDING: navigateElement                          Message: No node found; Parameter: bpmn:startEvent[@name='Start Event']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Gateway (Split Flow)']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : doExecute                                Pop (id: diagram_IDATDPGE)

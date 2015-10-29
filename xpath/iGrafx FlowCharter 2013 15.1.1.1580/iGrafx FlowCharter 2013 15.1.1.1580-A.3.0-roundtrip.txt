@@ -1,0 +1,24 @@
+ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-A.3.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='diagram_IDAYZ1EB']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='diagram_IDAYZ1EB']
+    OK     : selectFirstProcess                       Push (id: diagram_IDAYZ1EB)
+      FINDING: navigateElement                          Message: No node found; Parameter: bpmn:startEvent[@name='Start Event']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Collapsed Sub-Process']
+      FINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Message' and @attachedToRef='diagram_IDAYZ1EB']
+      FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+      FINDING: checkCancelActivity                      Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateBoundaryEvent                    Message: Current node is null; Parameter: null
+      FINDING: checkEscalationEvent                     Message: Current node is null; Parameter: null
+      FINDING: checkCancelActivity                      Message: No current node; Parameter: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : doExecute                                Pop (id: diagram_IDAYZ1EB)

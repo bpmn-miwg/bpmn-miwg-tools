@@ -1,0 +1,2 @@
+ANALYSIS: camunda Modeler 2.4.0-C.1.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

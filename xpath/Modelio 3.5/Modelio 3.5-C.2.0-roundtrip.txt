@@ -1,0 +1,121 @@
+ANALYSIS: Modelio 3.5-C.2.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: MO-a40f8c63-bb0b-42c4-8750-1ceca4a9d6ca)
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: MO-8acc71e8-e9d5-4c3b-9d59-28d833966b8d)
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-8acc71e8-e9d5-4c3b-9d59-28d833966b8d']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-8acc71e8-e9d5-4c3b-9d59-28d833966b8d']
+      OK     : selectPool                               Message: bpmn:participant[@name='Credit Card Company']
+      OK     : selectPool                               Push (id: MO-179405f9-ea57-42e2-a581-4e8b2ebd43f6)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-179405f9-ea57-42e2-a581-4e8b2ebd43f6']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-179405f9-ea57-42e2-a581-4e8b2ebd43f6']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='MO-ccd9389f-b7be-4125-a031-b64dbb864001']
+        OK     : selectReferencedProcess                  Push (id: MO-ccd9389f-b7be-4125-a031-b64dbb864001)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-ccd9389f-b7be-4125-a031-b64dbb864001']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-ccd9389f-b7be-4125-a031-b64dbb864001']
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=false
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Receive Credit Card Information']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-8fced61d-65be-4ced-980b-b5322792bfd8']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-8fced61d-65be-4ced-980b-b5322792bfd8']
+          OK     : checkMessageEvent                        Message: Message event definition
+          OK     : checkMessageFlow                         Message: message flow 'Send Credit Card Information' (Input) -> //bpmn:task[@name='Pay Order' and @id='MO-e89bbd86-a2ff-49d7-998d-62a2c80a7ddd']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Take Payment' and @id='MO-1a003391-070e-46e9-aa9b-bdde69e772d3']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1a003391-070e-46e9-aa9b-bdde69e772d3']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1a003391-070e-46e9-aa9b-bdde69e772d3']
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Send Result' and @id='MO-e6ed5caa-ec9a-4107-8b6f-dbfff500fc89']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-e6ed5caa-ec9a-4107-8b6f-dbfff500fc89']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-e6ed5caa-ec9a-4107-8b6f-dbfff500fc89']
+          OK     : checkMessageEvent                        Message: Message event definition
+          OK     : checkMessageFlow                         Message: message flow '' (Output) -> //bpmn:task[@name='Pay Order' and @id='MO-e89bbd86-a2ff-49d7-998d-62a2c80a7ddd']
+          OK     : doExecute                                Pop (id: MO-ccd9389f-b7be-4125-a031-b64dbb864001)
+        OK     : doExecute                                Pop (id: MO-179405f9-ea57-42e2-a581-4e8b2ebd43f6)
+      OK     : selectPool                               Message: bpmn:participant[@name='Customer']
+      OK     : selectPool                               Push (id: MO-95d51fe4-ab8a-4b42-8e77-9ab79f091883)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-95d51fe4-ab8a-4b42-8e77-9ab79f091883']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-95d51fe4-ab8a-4b42-8e77-9ab79f091883']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='MO-1f21242f-7623-45b4-a23b-2a2d10def185']
+        OK     : selectReferencedProcess                  Push (id: MO-1f21242f-7623-45b4-a23b-2a2d10def185)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1f21242f-7623-45b4-a23b-2a2d10def185']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1f21242f-7623-45b4-a23b-2a2d10def185']
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=false
+          FINDING: navigateElement                          Message: No node found; Parameter: bpmn:startEvent[not(@name)]
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Browse Products on Amazon']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Add Item to Cart']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Done Shopping?']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Browse Products on Amazon']
+          OK     : navigateBookmarkedElement                Message: 
+          FINDING: selectFollowingElement                   Message: The base node is null; Parameter: null
+          OK     : selectFollowingElement                   Push (id: )
+            FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[not(@name)]
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
+            FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            OK     : navigateBookmarkedElement                Message: 
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            OK     : navigateBookmarkedElement                Message: 
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: checkErrorEvent                          Message: Current node is null; Parameter: null
+            OK     : doExecute                                Pop (id: )
+          FINDING: navigateBoundaryEvent                    Message: Current node is null; Parameter: null
+          FINDING: checkErrorEvent                          Message: Current node is null; Parameter: null
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : navigateBookmarkedElement                Message: 
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : doExecute                                Pop (id: MO-1f21242f-7623-45b4-a23b-2a2d10def185)
+        OK     : doExecute                                Pop (id: MO-95d51fe4-ab8a-4b42-8e77-9ab79f091883)
+      OK     : selectPool                               Message: bpmn:participant[@name='Amazon']
+      OK     : selectPool                               Push (id: MO-eb2a1250-7cab-442d-99a7-16adac299b42)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-eb2a1250-7cab-442d-99a7-16adac299b42']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-eb2a1250-7cab-442d-99a7-16adac299b42']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='MO-d4a59f29-30d3-4edf-89a9-7181dcb5a1ce']
+        OK     : selectReferencedProcess                  Push (id: MO-d4a59f29-30d3-4edf-89a9-7181dcb5a1ce)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-d4a59f29-30d3-4edf-89a9-7181dcb5a1ce']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-d4a59f29-30d3-4edf-89a9-7181dcb5a1ce']
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Receive Order']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-d2752750-fe1d-4650-9d03-74c383f314e8']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-d2752750-fe1d-4650-9d03-74c383f314e8']
+          OK     : checkMessageEvent                        Message: Message event definition
+          OK     : checkMessageFlow                         Message: message flow 'null' (Input) -> //bpmn:intermediateThrowEvent[@name='Send Order' and @id='MO-ca109722-9a92-4a72-a5e1-d5a8fb196c95']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Pick items' and @id='MO-a00232ee-281a-46aa-aafa-47ac15575e9f']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-a00232ee-281a-46aa-aafa-47ac15575e9f']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-a00232ee-281a-46aa-aafa-47ac15575e9f']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Place in bin' and @id='MO-a4e864aa-1c03-442b-ab00-f08428ab9d01']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-a4e864aa-1c03-442b-ab00-f08428ab9d01']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-a4e864aa-1c03-442b-ab00-f08428ab9d01']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Receive and Package items' and @id='MO-5c704bc9-3d25-4011-91d8-4c09e7c69483']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-5c704bc9-3d25-4011-91d8-4c09e7c69483']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-5c704bc9-3d25-4011-91d8-4c09e7c69483']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Send to carrier dock' and @id='MO-64cb253b-7111-4dc8-af2a-19c2e9a45306']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-64cb253b-7111-4dc8-af2a-19c2e9a45306']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-64cb253b-7111-4dc8-af2a-19c2e9a45306']
+          OK     : checkMessageFlow                         Message: message flow 'null' (Output) -> //bpmn:startEvent[@name='Pick items' and @id='MO-59c65b0f-e689-4d34-92ea-69f74020842e']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='null']
+          OK     : doExecute                                Pop (id: MO-d4a59f29-30d3-4edf-89a9-7181dcb5a1ce)
+        OK     : doExecute                                Pop (id: MO-eb2a1250-7cab-442d-99a7-16adac299b42)
+      OK     : selectPool                               Message: bpmn:participant[@name='Carrier']
+      OK     : selectPool                               Push (id: MO-711e6f30-a831-42fe-a97d-3f887329f070)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-711e6f30-a831-42fe-a97d-3f887329f070']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-711e6f30-a831-42fe-a97d-3f887329f070']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='MO-da0008c3-b334-4dae-9f37-c88282557f17']
+        OK     : selectReferencedProcess                  Push (id: MO-da0008c3-b334-4dae-9f37-c88282557f17)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-da0008c3-b334-4dae-9f37-c88282557f17']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-da0008c3-b334-4dae-9f37-c88282557f17']
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Pick items']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-59c65b0f-e689-4d34-92ea-69f74020842e']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-59c65b0f-e689-4d34-92ea-69f74020842e']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Load Truck' and @id='MO-04501899-6403-4f12-a866-fbd10bf40b72']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-04501899-6403-4f12-a866-fbd10bf40b72']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-04501899-6403-4f12-a866-fbd10bf40b72']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Deliver Items' and @id='MO-1ff46895-d1fe-44e8-8437-d0b169e23605']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1ff46895-d1fe-44e8-8437-d0b169e23605']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1ff46895-d1fe-44e8-8437-d0b169e23605']
+          OK     : checkMessageFlow                         Message: message flow 'null' (Output) -> //bpmn:task[@name='Receive items' and @id='MO-48ecbe0e-c7e8-4b92-b2cb-3e8f74129339']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='null']
+          OK     : doExecute                                Pop (id: MO-da0008c3-b334-4dae-9f37-c88282557f17)
+        OK     : doExecute                                Pop (id: MO-711e6f30-a831-42fe-a97d-3f887329f070)
+      OK     : doExecute                                Pop (id: MO-8acc71e8-e9d5-4c3b-9d59-28d833966b8d)

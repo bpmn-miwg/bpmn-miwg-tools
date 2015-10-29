@@ -1,0 +1,14 @@
+ANALYSIS: IBM Process Designer 8.0.1-A.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: bpmnid-e25cec90-057e-457a-91a1-35e65537a644)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536']
+    OK     : selectFirstProcess                       Push (id: bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmnid-196c656e-baa2-4306-809b-56ba006057b9']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmnid-196c656e-baa2-4306-809b-56ba006057b9']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event']
+      OK     : doExecute                                Pop (id: bpmnid-80c796ae-c11d-42d8-92ae-1d88bab84536)

@@ -1,0 +1,109 @@
+ANALYSIS: Signavio Process Editor 8.3.0-A.4.1-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: sid-07804ef9-c968-45f0-876b-1628149d30c5)
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: sid-ab24bb6d-5181-4eb9-ba50-59c55d369b63)
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='sid-ab24bb6d-5181-4eb9-ba50-59c55d369b63']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='sid-ab24bb6d-5181-4eb9-ba50-59c55d369b63']
+      OK     : selectPool                               Message: bpmn:participant[@name='Pool 1']
+      OK     : selectPool                               Push (id: sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1)
+        OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='sid-34746A54-1D7D-46CA-B219-0C4CEAE51170']
+        OK     : selectReferencedProcess                  Push (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 1']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateElement                          Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 11: Expected number of element attributes '4' but was '9' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'bold' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fill' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fontFamily' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fontSize' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'italic' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            OK     : navigateElement                          Pop (id: )
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='sid-3D477D07-D669-4A26-9454-12AD775FDE70']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Output)
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='sid-1208A5BA-9E1C-49D2-82E3-5DB2C0E9887D']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Input)
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 1' and @id='sid-5F0F3508-96EF-4F9B-9182-64AD17334E23']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : doExecute                                Pop (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)
+        OK     : doExecute                                Pop (id: sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1)
+      OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : selectProcessByLane                      Push (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)
+        OK     : doExecute                                Pop (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)
+      OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : selectProcessByLane                      Push (id: sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4)
+        OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 2']
+        FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+        OK     : navigateElement                          Push (id: )
+          FINDING: checkAutoExtensionElements               Message: 11: Expected number of element attributes '4' but was '9' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+          FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'bold' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+          FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fill' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+          FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fontFamily' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+          FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fontSize' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+          FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'italic' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+          OK     : navigateElement                          Pop (id: )
+        OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='sid-34E8C3A5-5C2A-4593-AC67-038B737814D7']
+        FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+        OK     : navigateFollowingElement                 Push (id: )
+          FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+          FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+          OK     : navigateFollowingElement                 Pop (id: )
+        OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Input)
+        OK     : selectFollowingElement                   Message: bpmn:subProcess[@name='Expanded Sub-Process 1' and @id='sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754']
+        OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+        OK     : selectFollowingElement                   Push (id: sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754)
+          OK     : doExecute                                Pop (id: sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754)
+        OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 5' and @id='sid-485E1184-9951-4B41-9794-A9AFD42A3249']
+        FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+        OK     : navigateFollowingElement                 Push (id: )
+          FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+          FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+          OK     : navigateFollowingElement                 Pop (id: )
+        OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Output)
+        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 2' and @id='sid-78073B2D-35BB-45D5-9CF1-D446602F8E59']
+        OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+        OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-07804ef9-c968-45f0-876b-1628149d30c5"']/process[@id='id="sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4"']/task[@id='id="sid-34E8C3A5-5C2A-4593-AC67-038B737814D7"']/
+        FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+        OK     : navigateBookmarkedElement                Push (id: )
+          FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+          FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+          OK     : navigateBookmarkedElement                Pop (id: )
+        OK     : selectFollowingElement                   Message: bpmn:subProcess[@name='Expanded Sub-Process 2' and @id='sid-645780CC-D61F-4715-8B58-71679305245F']
+        OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+        OK     : selectFollowingElement                   Push (id: sid-645780CC-D61F-4715-8B58-71679305245F)
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 4']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateElement                          Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 11: Expected number of element attributes '4' but was '9' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'bold' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fill' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fontFamily' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'fontSize' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'null' but was 'italic' - comparing <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1] to <signavio:signavioLabel...> at /extensionElements[1]/signavioLabel[1]; Parameter: null
+            OK     : navigateElement                          Pop (id: )
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 6' and @id='sid-B414AE83-11A2-4968-B4E4-45833D641928']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 4' and @id='sid-46E6675F-8040-45FE-B5C3-B904596F3D4F']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : doExecute                                Pop (id: sid-645780CC-D61F-4715-8B58-71679305245F)
+        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 5' and @id='sid-93C83C6A-1122-4E0F-9F47-4027C9080456']
+        OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+        OK     : doExecute                                Pop (id: sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4)
+      OK     : doExecute                                Pop (id: sid-ab24bb6d-5181-4eb9-ba50-59c55d369b63)

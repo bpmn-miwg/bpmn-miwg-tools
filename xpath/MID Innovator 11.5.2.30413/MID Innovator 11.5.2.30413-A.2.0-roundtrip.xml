@@ -1,0 +1,20 @@
+<analysis name="MID Innovator 11.5.2.30413-A.2.0-roundtrip" toolName="xpath">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFirstProcess" message="/bpmn:definitions/bpmn:process"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="WFP-6-" caller="selectFirstProcess">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;_5a972b87-735d-454a-b31c-f52fb3afc5c7&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Gateway (Split Flow)&apos; and @id=&apos;_35fe57a7-1302-44e2-bf58-032f11af7ecb&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;_4f7d62d7-f0e6-46bc-be00-69e02da38f65&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/bpmn:definitions/bpmn:process[@id=&apos;id=&quot;WFP-6-&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;_35fe57a7-1302-44e2-bf58-032f11af7ecb&quot;&apos;]/"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_e6eb725a-34bc-45c7-aed0-9f9596cd7bee&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/bpmn:definitions/bpmn:process[@id=&apos;id=&quot;WFP-6-&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;_35fe57a7-1302-44e2-bf58-032f11af7ecb&quot;&apos;]/"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;_7d399717-1aba-47ac-8d7d-8aaa033255e0&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;_33c66216-391c-49c2-aa19-d8f0b7f5f91d&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/bpmn:definitions/bpmn:process[@id=&apos;id=&quot;WFP-6-&quot;&apos;]/bpmn:task[@id=&apos;id=&quot;_e6eb725a-34bc-45c7-aed0-9f9596cd7bee&quot;&apos;]/"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;_33c66216-391c-49c2-aa19-d8f0b7f5f91d&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;_258f51eb-b764-4a71-b681-3a01cca14143&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="WFP-6-" caller="doExecute"/>
+      </entry>
+   </entry>
+</analysis>

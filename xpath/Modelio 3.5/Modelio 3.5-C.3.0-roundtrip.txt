@@ -1,0 +1,95 @@
+ANALYSIS: Modelio 3.5-C.3.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: MO-68a45e76-c353-4558-ac28-cfe126f6294b)
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
+    FINDING: checkAttributeValue                      Message: Null node; Parameter: 
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-9e256cde-8ba7-459d-b4bd-2416f6609c98']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-9e256cde-8ba7-459d-b4bd-2416f6609c98']
+    OK     : selectFirstProcess                       Push (id: MO-9e256cde-8ba7-459d-b4bd-2416f6609c98)
+      OK     : checkAttributeValue                      Message: Attribute isExecutable=true
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Receive customer request']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-e4b5a178-94b1-45fd-a039-1e5af2e3239d']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-e4b5a178-94b1-45fd-a039-1e5af2e3239d']
+      FINDING: checkMessageEvent                        Message: The messageEventDefinition element has no messageRef attribute; Parameter: null
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Analyse customer request' and @id='MO-4209c389-b4a9-411b-b2f5-dedd0e7df7d5']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-4209c389-b4a9-411b-b2f5-dedd0e7df7d5']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-4209c389-b4a9-411b-b2f5-dedd0e7df7d5']
+      OK     : checkAttributeValue                      Message: Attribute startQuantity=2
+      OK     : checkAttributeValue                      Message: Attribute completionQuantity=2
+      OK     : checkAttributeValue                      Message: Attribute implementation=##WebService
+      FINDING: navigateChildElement                     Message: No node found; Parameter: bpmn:potentialOwner[@name='Potential Owner']
+      FINDING: checkChildElementValue                   Message: No node found; Parameter: bpmn:resourceRef[(not(@name) or @name='')]
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-68a45e76-c353-4558-ac28-cfe126f6294b"']/process[@id='id="MO-9e256cde-8ba7-459d-b4bd-2416f6609c98"']/userTask[@id='id="MO-4209c389-b4a9-411b-b2f5-dedd0e7df7d5"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-4209c389-b4a9-411b-b2f5-dedd0e7df7d5']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-4209c389-b4a9-411b-b2f5-dedd0e7df7d5']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Service type' and @id='MO-78e7f740-8d9e-484e-b96d-92f8e7f73567']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-78e7f740-8d9e-484e-b96d-92f8e7f73567']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-78e7f740-8d9e-484e-b96d-92f8e7f73567']
+      OK     : checkAttributeValue                      Message: Attribute gatewayDirection=Diverging
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Replace fridge' and @id='MO-2bb12a42-8ad8-47d8-8ccb-761622642471']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2bb12a42-8ad8-47d8-8ccb-761622642471']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2bb12a42-8ad8-47d8-8ccb-761622642471']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Fridge replaced' and @id='MO-c68303d5-d18e-42ba-b5ae-104b44e6b530']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-c68303d5-d18e-42ba-b5ae-104b44e6b530']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-c68303d5-d18e-42ba-b5ae-104b44e6b530']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-68a45e76-c353-4558-ac28-cfe126f6294b"']/process[@id='id="MO-9e256cde-8ba7-459d-b4bd-2416f6609c98"']/exclusiveGateway[@id='id="MO-78e7f740-8d9e-484e-b96d-92f8e7f73567"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-78e7f740-8d9e-484e-b96d-92f8e7f73567']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-78e7f740-8d9e-484e-b96d-92f8e7f73567']
+      OK     : navigateFollowingElement                 Message: bpmn:subProcess[@name='Perform emergency repair' and @id='MO-5024ffcf-e0b8-499c-a134-995260dc19e8']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-5024ffcf-e0b8-499c-a134-995260dc19e8']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-5024ffcf-e0b8-499c-a134-995260dc19e8']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Successful?' and @id='MO-f30c62ca-1d1c-40d7-9a59-5c04c60c23e9']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f30c62ca-1d1c-40d7-9a59-5c04c60c23e9']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f30c62ca-1d1c-40d7-9a59-5c04c60c23e9']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Emergency repair completed' and @id='MO-29ad34e9-1da1-46ef-b66f-74409da2d3ed']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-29ad34e9-1da1-46ef-b66f-74409da2d3ed']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-29ad34e9-1da1-46ef-b66f-74409da2d3ed']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-68a45e76-c353-4558-ac28-cfe126f6294b"']/process[@id='id="MO-9e256cde-8ba7-459d-b4bd-2416f6609c98"']/exclusiveGateway[@id='id="MO-f30c62ca-1d1c-40d7-9a59-5c04c60c23e9"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f30c62ca-1d1c-40d7-9a59-5c04c60c23e9']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f30c62ca-1d1c-40d7-9a59-5c04c60c23e9']
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Replace fridge' and @id='MO-2bb12a42-8ad8-47d8-8ccb-761622642471']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2bb12a42-8ad8-47d8-8ccb-761622642471']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-2bb12a42-8ad8-47d8-8ccb-761622642471']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-68a45e76-c353-4558-ac28-cfe126f6294b"']/process[@id='id="MO-9e256cde-8ba7-459d-b4bd-2416f6609c98"']/exclusiveGateway[@id='id="MO-78e7f740-8d9e-484e-b96d-92f8e7f73567"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-78e7f740-8d9e-484e-b96d-92f8e7f73567']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-78e7f740-8d9e-484e-b96d-92f8e7f73567']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Service level' and @id='MO-781bee90-4fee-4965-a72e-ccf90da83d65']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-781bee90-4fee-4965-a72e-ccf90da83d65']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-781bee90-4fee-4965-a72e-ccf90da83d65']
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (premium level)' and @id='MO-6cd35e22-fdb9-409f-bea1-01dac33a4724']
+      FINDING: Pluggable: SequenceFlowCondition         Message: Could not find a conditionExpression element; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-6cd35e22-fdb9-409f-bea1-01dac33a4724']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-6cd35e22-fdb9-409f-bea1-01dac33a4724']
+      OK     : navigateBoundaryEvent                    Message: Boundary element '2 hours' found
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-5ee5c4b8-2b8e-4dbc-b475-ec4abaae7ed2']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-5ee5c4b8-2b8e-4dbc-b475-ec4abaae7ed2']
+      OK     : checkTimerEvent                          Message: Timer event definition
+      OK     : navigateFollowingElement                 Message: bpmn:subProcess[@name='Perform emergency repair' and @id='MO-5024ffcf-e0b8-499c-a134-995260dc19e8']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-5024ffcf-e0b8-499c-a134-995260dc19e8']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-5024ffcf-e0b8-499c-a134-995260dc19e8']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-68a45e76-c353-4558-ac28-cfe126f6294b"']/process[@id='id="MO-9e256cde-8ba7-459d-b4bd-2416f6609c98"']/userTask[@id='id="MO-6cd35e22-fdb9-409f-bea1-01dac33a4724"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-6cd35e22-fdb9-409f-bea1-01dac33a4724']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-6cd35e22-fdb9-409f-bea1-01dac33a4724']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Repair completed' and @id='MO-73ff1ee5-7bd0-4975-a77c-0c1b95c84003']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-73ff1ee5-7bd0-4975-a77c-0c1b95c84003']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-73ff1ee5-7bd0-4975-a77c-0c1b95c84003']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-68a45e76-c353-4558-ac28-cfe126f6294b"']/process[@id='id="MO-9e256cde-8ba7-459d-b4bd-2416f6609c98"']/exclusiveGateway[@id='id="MO-781bee90-4fee-4965-a72e-ccf90da83d65"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-781bee90-4fee-4965-a72e-ccf90da83d65']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-781bee90-4fee-4965-a72e-ccf90da83d65']
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (standard level)' and @id='MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6']
+      OK     : navigateBoundaryEvent                    Message: Boundary element '' found
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1a5ac989-8618-490a-b878-e0f88a3dc8c5']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1a5ac989-8618-490a-b878-e0f88a3dc8c5']
+      FINDING: checkMessageEvent                        Message: The messageEventDefinition element has no messageRef attribute; Parameter: null
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (premium level)' and @id='MO-6cd35e22-fdb9-409f-bea1-01dac33a4724']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-6cd35e22-fdb9-409f-bea1-01dac33a4724']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-6cd35e22-fdb9-409f-bea1-01dac33a4724']
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="MO-68a45e76-c353-4558-ac28-cfe126f6294b"']/process[@id='id="MO-9e256cde-8ba7-459d-b4bd-2416f6609c98"']/userTask[@id='id="MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Repair completed' and @id='MO-73ff1ee5-7bd0-4975-a77c-0c1b95c84003']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-73ff1ee5-7bd0-4975-a77c-0c1b95c84003']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-73ff1ee5-7bd0-4975-a77c-0c1b95c84003']
+      OK     : doExecute                                Pop (id: MO-9e256cde-8ba7-459d-b4bd-2416f6609c98)

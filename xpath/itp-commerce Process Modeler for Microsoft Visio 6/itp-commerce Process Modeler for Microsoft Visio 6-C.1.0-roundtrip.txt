@@ -1,0 +1,78 @@
+ANALYSIS: itp-commerce Process Modeler for Microsoft Visio 6-C.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: sid-bdb880ac-c464-4e5c-aa56-569d709436e0)
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
+    FINDING: checkAttributeValue                      Message: No Current node; Parameter: 
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
+    FINDING: checkAttributeValue                      Message: No Current node; Parameter: 
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
+    FINDING: checkAttributeValue                      Message: No Current node; Parameter: 
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : selectPool                               Message: bpmn:participant[@name='Team-Assistant']
+      OK     : selectPool                               Push (id: _c5b99877-f696-47aa-b514-7b8037a5c022)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_c5b99877-f696-47aa-b514-7b8037a5c022']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_c5b99877-f696-47aa-b514-7b8037a5c022']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57']
+        OK     : selectReferencedProcess                  Push (id: sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57)
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          FINDING: checkAttributeValue                      Message: Attribute isExecutable is not existing.; Parameter: 
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : checkMessageEvent                        Message: Message event definition
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Scan Invoice' and @id='sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : checkMessageFlow                         Message: message flow '' (Output) -> //bpmn:startEvent[@name='Invoice received' and @id='StartEvent_1']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Archive original' and @id='sid-CFAC8502-0E69-4F08-BE36-8499B8C0FA44']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='Approver to be assigned' and @id='sid-40EC6574-E644-425C-8CE7-EE384F0C3520']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Assign approver' and @id='sid-64AFCE49-96A2-4A51-96CB-9DF689C37DAD']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateFollowingElement                 Message: bpmn:eventBasedGateway[@id='sid-F0D29912-929D-491C-8D23-73BD80CF980A']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='7 days' and @id='sid-0E349B8B-14A7-4565-988A-38F3A9B624D2']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : checkTimerEvent                          Message: Timer event definition
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[not(@name) and @id='sid-BC9AC0B6-1785-4E35-A974-7FEF1A586B9D']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57"']/eventBasedGateway[@id='id="sid-F0D29912-929D-491C-8D23-73BD80CF980A"']/
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='Invoice review needed' and @id='sid-B548B980-12E3-408E-9AC4-7031B85A8F2D']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : checkMessageEvent                        Message: Message event definition
+          OK     : navigateElement                          Message: bpmn:task[@name='Review and document result']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateElement                          Message: bpmn:endEvent[not(@name)]
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : doExecute                                Pop (id: sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57)
+        OK     : doExecute                                Pop (id: _c5b99877-f696-47aa-b514-7b8037a5c022)
+      FINDING: selectPool                               Message: No node found; Parameter: bpmn:participant[@name='Process Engine - Invoice Receipt']
+      OK     : selectPool                               Push (id: )
+        FINDING: selectReferencedProcess                  Message: Node is null; Parameter: 
+        OK     : selectReferencedProcess                  Push (id: )
+          FINDING: checkAttributeValue                      Message: Attribute isExecutable is not existing.; Parameter: 
+          FINDING: navigateLane                             Message: Parent failed; Parameter: bpmn:laneSet/bpmn:lane[@name='Team Assistant']
+          FINDING: navigateLane                             Message: Parent failed; Parameter: bpmn:laneSet/bpmn:lane[@name='Approver']
+          FINDING: navigateLane                             Message: Parent failed; Parameter: bpmn:laneSet/bpmn:lane[@name='Accountant']
+          FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Invoice received']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: checkAttributeValue                      Message: Attribute camunda:assignee is not existing.; Parameter: 
+          FINDING: checkAttributeValue                      Message: Attribute camunda:formKey is not existing.; Parameter: 
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          OK     : navigateBookmarkedElement                Message: 
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : navigateBookmarkedElement                Message: 
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          FINDING: checkAttributeValue                      Message: No Current node; Parameter: 
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : doExecute                                Pop (id: )
+        OK     : doExecute                                Pop (id: )
+      OK     : doExecute                                Pop (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)
