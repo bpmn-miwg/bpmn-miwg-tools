@@ -1,5 +1,107 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/500",
+    "id": 112563756,
+    "number": 500,
+    "title": "test(camunda modeler): update results to v2.7.0",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2015-10-21T11:09:49Z",
+    "updated_at": "2015-11-04T14:57:04Z",
+    "closed_at": "2015-10-28T14:40:35Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/500",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/500",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/500.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/500.patch"
+    },
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/499",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/499/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/499/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/499/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/499",
+    "id": 110845146,
+    "number": 499,
+    "title": "Minor modifications to extension elements",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Roundtrip",
+        "name": "Roundtrip",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20W4%20BPMN+%20Composer",
+        "name": "Tool: W4 BPMN+ Composer",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2015-10-11T09:25:17Z",
+    "updated_at": "2015-10-12T13:15:28Z",
+    "closed_at": "2015-10-12T13:15:28Z",
+    "body": "**Tool**: W4 BPMN+ Composer V.9.1\r\n\r\n**Reference excerpt**\r\n```xml\r\n  <serviceTask id=\"archiveInvoice\" camunda:delegateExpression=\"#{archiveService}\" w4:serviceName=\"ArchiveInvoiceService\" name=\"Archive&#xA;Invoice\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" implementation=\"##unspecified\">\r\n         <extensionElements>\r\n            <camunda:field name=\"text0\" stringValue=\"Hello World\"/>\r\n            <camunda:field name=\"text1\">\r\n               <camunda:expression>${genderBean.getGenderString(gender)}</camunda:expression>\r\n            </camunda:field>\r\n            <camunda:field name=\"text2\">\r\n               <camunda:expression>Hello ${gender == 'male' ? 'Mr.' : 'Mrs.'} ${name}</camunda:expression>\r\n            </camunda:field>\r\n            <camunda:field name=\"text3\">\r\n               <camunda:string>\r\n\t          Hello World\r\n\t      </camunda:string>\r\n            </camunda:field>\r\n            <camunda:field name=\"text4\">\r\n               <camunda:string>\r\n\t          &lt;p&gt;Hello World&lt;/p&gt;&lt;br&gt;\r\n\t      </camunda:string>\r\n            </camunda:field>\r\n[...]\r\n      </serviceTask>\r\n```\r\n\r\n**W4 BPMN+ Composer excerpt**\r\n```xml\r\n    <serviceTask id=\"archiveInvoice\" camunda:delegateExpression=\"#{archiveService}\" w4:serviceName=\"ArchiveInvoiceService\" name=\"Archive&#xA;Invoice\" completionQuantity=\"1\" isForCompensation=\"false\" startQuantity=\"1\" implementation=\"##unspecified\">\r\n      <extensionElements>\r\n        <camunda:field name=\"text0\" stringValue=\"Hello World\"/>\r\n        <camunda:field name=\"text1\">\r\n               <camunda:expression>${genderBean.getGenderString(gender)}</camunda:expression>\r\n            </camunda:field>\r\n        <camunda:field name=\"text2\">\r\n               <camunda:expression>Hello ${gender == 'male' ? 'Mr.' : 'Mrs.'} ${name}</camunda:expression>\r\n            </camunda:field>\r\n        <camunda:field name=\"text3\">\r\n               <camunda:string><![CDATA[\r\n\t          Hello World\r\n\t      ]]></camunda:string>\r\n            </camunda:field>\r\n        <camunda:field name=\"text4\">\r\n               <camunda:string><![CDATA[\r\n\t          <p>Hello World</p><br>\r\n\t      ]]></camunda:string>\r\n            </camunda:field>\r\n[...]\r\n    </serviceTask>\r\n```\r\n\r\n**Analysis**\r\n* The string \"Hello World\" is put into a CDATA element. (text3 + text4)\r\n* This string \"&lt;p&gt;Hello World&lt;/p&gt;&lt;br&gt;\" is put into a CDATA element and corresponding html elements\r\n* However, this finding is really just a very minor finding. One could even argue this is not really a issue.\r\n* As of today, the schema and xpath tools are not proposing any more findings."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498/comments",
