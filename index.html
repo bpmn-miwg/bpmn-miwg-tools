@@ -38,10 +38,14 @@
         var openIssuesUrl = "issues-open.json";
         var closedIssuesUrl = "issues-closed.json";
 
-        $.getJSON(toolsUrl, function (toolsTestedByMIWG) {
-          $.getJSON(submissionsUrl, function (submissions) {
-            $.getJSON(closedIssuesUrl, function (closedIssues) {
-
+        $.when(
+          $.getJSON(toolsUrl),
+          $.getJSON(submissionsUrl)/*,
+            $.getJSON(closedIssuesUrl)*/
+        ).then(function (res1, res2) {
+              var toolsTestedByMIWG = res1[0];
+              var submissions = res2[0];
+              //var closedIssues = res3[0];
               for (i = 0; i < toolsTestedByMIWG.tools.length; i++) {
                  var tool = toolsTestedByMIWG.tools[i];
                  var toolAndVersion = tool.tool + ' ' + tool.version;
@@ -239,10 +243,8 @@
                 return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span class="sr-only">' + data + '</span>';
               }
 
-            })
-          })
         })
-                    
+
         $('.panel[id="legend"] .panel-title').prepend('<span class="toggle-indicator btn btn-default">+</span>&nbsp;');
         $('.panel[id="legend"] .panel-heading').click(function(panel) {
           // TODO this hardcoding of index 0 will always operate on legend panel
