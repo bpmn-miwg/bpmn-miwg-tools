@@ -1,5 +1,52 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/521",
+    "id": 116946798,
+    "number": 521,
+    "title": "Performed import and roundtrip tests using Aeneis 5.7 from Intellior.",
+    "user": {
+      "login": "krehl",
+      "id": 1944048,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1944048?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/krehl",
+      "html_url": "https://github.com/krehl",
+      "followers_url": "https://api.github.com/users/krehl/followers",
+      "following_url": "https://api.github.com/users/krehl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/krehl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/krehl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/krehl/subscriptions",
+      "organizations_url": "https://api.github.com/users/krehl/orgs",
+      "repos_url": "https://api.github.com/users/krehl/repos",
+      "events_url": "https://api.github.com/users/krehl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/krehl/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-14T19:20:35Z",
+    "updated_at": "2015-11-18T16:54:10Z",
+    "closed_at": "2015-11-18T16:54:10Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/521",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/521",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/521.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/521.patch"
+    },
+    "body": "Hope everything is correct so far, will perform the export tests tomorrow and create issues about my findings as well. BR Konstantin"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500/comments",

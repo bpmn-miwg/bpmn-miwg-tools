@@ -1,5 +1,46 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/520",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/520/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/520/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/520/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/520",
+    "id": 115138730,
+    "number": 520,
+    "title": "BPMN MIWG Font size interchange",
+    "user": {
+      "login": "nilei",
+      "id": 3751637,
+      "avatar_url": "https://avatars.githubusercontent.com/u/3751637?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nilei",
+      "html_url": "https://github.com/nilei",
+      "followers_url": "https://api.github.com/users/nilei/followers",
+      "following_url": "https://api.github.com/users/nilei/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nilei/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nilei/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nilei/subscriptions",
+      "organizations_url": "https://api.github.com/users/nilei/orgs",
+      "repos_url": "https://api.github.com/users/nilei/repos",
+      "events_url": "https://api.github.com/users/nilei/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nilei/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2015-11-04T20:20:51Z",
+    "updated_at": "2015-11-11T16:10:25Z",
+    "closed_at": null,
+    "body": "I was asked by Simon Ringuette to raise an issue here on GitHub concerning the font size Doodle answer I gave here: http://doodle.com/poll/fdm2m792kr2xx8sy\r\n\r\nFor web based applications, both pixel and points are not the best solution. The ideal font size is defined in em or rem in a web application like most of us provide, especially for better responsive compatibility.\r\n\r\n-- Cheers, Nils"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/519",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/519/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/519/comments",
@@ -879,9 +920,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 10,
+    "comments": 16,
     "created_at": "2015-10-07T17:09:32Z",
-    "updated_at": "2015-10-29T08:30:50Z",
+    "updated_at": "2015-11-18T11:23:46Z",
     "closed_at": null,
     "body": "This issue is meant as a place holder for discussions regarding Labels.\r\nIt is a follow up to issue #330 and issue #458 \r\nIn particular we are interested in label :\r\n1. bounds definition and interchange\r\n2. Font size to be expressed in Font Points or in Pixels\r\n3. The effect these two have together on rendering\r\n4. Text wrapping and <cr> within labels \r\n\r\n"
   },
