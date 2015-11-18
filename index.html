@@ -44,10 +44,20 @@
 
               for (i = 0; i < toolsTestedByMIWG.tools.length; i++) {
                  var tool = toolsTestedByMIWG.tools[i];
-                 toolsTestedByMIWG.tools[i].testResultsSubmitted = submissions[tool.tool + ' ' + tool.version].count;
-                 toolsTestedByMIWG.tools[i].testResultsASubmitted = submissions[tool.tool + ' ' + tool.version].countA;
-                 toolsTestedByMIWG.tools[i].testResultsBSubmitted = submissions[tool.tool + ' ' + tool.version].countB;
-                 toolsTestedByMIWG.tools[i].testResultsCSubmitted = submissions[tool.tool + ' ' + tool.version].countC;
+                 var toolAndVersion = tool.tool + ' ' + tool.version;
+                 if (submissions[toolAndVersion]) {
+                   var submission = submissions[toolAndVersion];
+                   toolsTestedByMIWG.tools[i].testResultsSubmitted = submission.count;
+                   toolsTestedByMIWG.tools[i].testResultsASubmitted = submission.countA;
+                   toolsTestedByMIWG.tools[i].testResultsBSubmitted = submission.countB;
+                   toolsTestedByMIWG.tools[i].testResultsCSubmitted = submission.countC;
+                 } else {
+                   console.debug('Warning: No submission counts for tool: ' + toolAndVersion + ' => Try to regenerate submissions.json');
+                   toolsTestedByMIWG.tools[i].testResultsSubmitted = 0;
+                   toolsTestedByMIWG.tools[i].testResultsASubmitted = 0;
+                   toolsTestedByMIWG.tools[i].testResultsBSubmitted = 0;
+                   toolsTestedByMIWG.tools[i].testResultsCSubmitted = 0;
+                 }
 //                 toolsTestedByMIWG.tools[i].openIssues = 0;
 //                 toolsTestedByMIWG.tools[i].closedIssues = 0;
 //                 openIssues.forEach(function(issue) {
@@ -133,7 +143,7 @@
                   var toolAndVersion = encodeURIComponent(full.tool + ' ' + full.version);
                   // TODO trying to figure out why Firefox does not 
                   // show the anchor encoded as expected
-                  console.debug('toolAndVersion:'+toolAndVersion);
+                  //console.debug('toolAndVersion: '+toolAndVersion);
                   return toolAndVersion;
               }
 
