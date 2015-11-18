@@ -67,6 +67,8 @@
                     <exclude name="pom.xml"/>
                     <exclude name="README.md"/>
                     <exclude name="update-json-data.sh"/>
+                    <exclude name="submissions.sh"/>
+                    <exclude name="submissions.json"/>
                     <exclude name="visual-test-result-comparison.html"/>
                   </fileset>
                 </delete>
