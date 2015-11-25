@@ -1,3 +1,3 @@
 <analysis name="actiBPM 3.E-8-A.1.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
 </analysis>

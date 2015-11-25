@@ -1,112 +1,112 @@
 <analysis name="W4 BPMN+ Composer V.9.1-C.1.0-roundtrip" toolName="xpath">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.NodePushEntry" message="Push" identifier="sid-bdb880ac-c464-4e5c-aa56-569d709436e0" caller="execute">
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateElement" message="bpmn:resource[@name=&apos;Team Assistant&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateElement" message="bpmn:resource[@name=&apos;Approver&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateElement" message="bpmn:resource[@name=&apos;Accountant&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="selectCollaboration" message="bpmn:collaboration"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.NodePushEntry" message="Push" identifier="sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3" caller="selectCollaboration">
-         <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="selectPool" message="bpmn:participant[@name=&apos;Team-Assistant&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.NodePushEntry" message="Push" identifier="sid-46891B57-A9D3-4A8B-AEBF-D4BA5F3961AD" caller="selectPool">
-            <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57&apos;]"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.NodePushEntry" message="Push" identifier="sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57" caller="selectReferencedProcess">
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute isExecutable=false"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Invoice received&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Scan Invoice&apos; and @id=&apos;sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;&apos; (Output) -&gt; //bpmn:startEvent[@name=&apos;Invoice received&apos; and @id=&apos;StartEvent_1&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Archive original&apos; and @id=&apos;sid-CFAC8502-0E69-4F08-BE36-8499B8C0FA44&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Approver to be assigned&apos; and @id=&apos;sid-40EC6574-E644-425C-8CE7-EE384F0C3520&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Assign approver&apos; and @id=&apos;sid-64AFCE49-96A2-4A51-96CB-9DF689C37DAD&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:eventBasedGateway[@id=&apos;sid-F0D29912-929D-491C-8D23-73BD80CF980A&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;7 days&apos; and @id=&apos;sid-0E349B8B-14A7-4565-988A-38F3A9B624D2&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkTimerEvent" message="Timer event definition"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[not(@name) and @id=&apos;sid-BC9AC0B6-1785-4E35-A974-7FEF1A586B9D&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/definitions[@id=&apos;id=&quot;sid-bdb880ac-c464-4e5c-aa56-569d709436e0&quot;&apos;]/process[@id=&apos;id=&quot;sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;sid-F0D29912-929D-491C-8D23-73BD80CF980A&quot;&apos;]/"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Invoice review needed&apos; and @id=&apos;sid-B548B980-12E3-408E-9AC4-7031B85A8F2D&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateElement" message="bpmn:task[@name=&apos;Review and document result&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateElement" message="bpmn:endEvent[not(@name)]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.NodePopEntry" message="Pop" identifier="sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57" caller="doExecute"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-bdb880ac-c464-4e5c-aa56-569d709436e0" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:resource[@name=&apos;Team Assistant&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:resource[@name=&apos;Approver&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:resource[@name=&apos;Accountant&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaboration" message="bpmn:collaboration"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3" caller="selectCollaboration">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectPool" message="bpmn:participant[@name=&apos;Team-Assistant&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-46891B57-A9D3-4A8B-AEBF-D4BA5F3961AD" caller="selectPool">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57" caller="selectReferencedProcess">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute isExecutable=false"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Invoice received&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Scan Invoice&apos; and @id=&apos;sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;&apos; (Output) -&gt; //bpmn:startEvent[@name=&apos;Invoice received&apos; and @id=&apos;StartEvent_1&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Archive original&apos; and @id=&apos;sid-CFAC8502-0E69-4F08-BE36-8499B8C0FA44&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Approver to be assigned&apos; and @id=&apos;sid-40EC6574-E644-425C-8CE7-EE384F0C3520&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Assign approver&apos; and @id=&apos;sid-64AFCE49-96A2-4A51-96CB-9DF689C37DAD&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:eventBasedGateway[@id=&apos;sid-F0D29912-929D-491C-8D23-73BD80CF980A&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;7 days&apos; and @id=&apos;sid-0E349B8B-14A7-4565-988A-38F3A9B624D2&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkTimerEvent" message="Timer event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[not(@name) and @id=&apos;sid-BC9AC0B6-1785-4E35-A974-7FEF1A586B9D&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/definitions[@id=&apos;id=&quot;sid-bdb880ac-c464-4e5c-aa56-569d709436e0&quot;&apos;]/process[@id=&apos;id=&quot;sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57&quot;&apos;]/eventBasedGateway[@id=&apos;id=&quot;sid-F0D29912-929D-491C-8D23-73BD80CF980A&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Invoice review needed&apos; and @id=&apos;sid-B548B980-12E3-408E-9AC4-7031B85A8F2D&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:task[@name=&apos;Review and document result&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:endEvent[not(@name)]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57" caller="doExecute"/>
             </entry>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.NodePopEntry" message="Pop" identifier="sid-46891B57-A9D3-4A8B-AEBF-D4BA5F3961AD" caller="doExecute"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-46891B57-A9D3-4A8B-AEBF-D4BA5F3961AD" caller="doExecute"/>
          </entry>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="selectPool" message="bpmn:participant[@name=&apos;Process Engine - Invoice Receipt&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.NodePushEntry" message="Push" identifier="Process_Engine_1" caller="selectPool">
-            <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;bpmn-miwg-test-case-c.1.0&apos;]"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.NodePushEntry" message="Push" identifier="bpmn-miwg-test-case-c.1.0" caller="selectReferencedProcess">
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute isExecutable=true"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Team Assistant&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Approver&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Accountant&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Invoice received&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;&apos; (Input) -&gt; //bpmn:task[@name=&apos;Scan Invoice&apos; and @id=&apos;sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Assign Approver&apos; and @id=&apos;assignApprover&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Approve Invoice&apos; and @id=&apos;approveInvoice&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute camunda:assignee=${approver}"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute camunda:formKey=app:approveInvoice.jsf"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Invoice approved?&apos; and @id=&apos;invoice_approved&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Rechnung klären&apos; and @id=&apos;reviewInvoice&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Review successful?&apos; and @id=&apos;reviewSuccessful_gw&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Invoice not processed&apos; and @id=&apos;invoiceNotProcessed&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/definitions[@id=&apos;id=&quot;sid-bdb880ac-c464-4e5c-aa56-569d709436e0&quot;&apos;]/process[@id=&apos;id=&quot;bpmn-miwg-test-case-c.1.0&quot;&apos;]/exclusiveGateway[@id=&apos;id=&quot;reviewSuccessful_gw&quot;&apos;]/"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Approve Invoice&apos; and @id=&apos;approveInvoice&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/definitions[@id=&apos;id=&quot;sid-bdb880ac-c464-4e5c-aa56-569d709436e0&quot;&apos;]/process[@id=&apos;id=&quot;bpmn-miwg-test-case-c.1.0&quot;&apos;]/exclusiveGateway[@id=&apos;id=&quot;invoice_approved&quot;&apos;]/"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Prepare Bank Transfer&apos; and @id=&apos;prepareBankTransfer&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Archive Invoice&apos; and @id=&apos;archiveInvoice&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute camunda:delegateExpression=#{archiveService}"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Invoice processed&apos; and @id=&apos;invoiceProcessed&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.NodePopEntry" message="Pop" identifier="bpmn-miwg-test-case-c.1.0" caller="doExecute"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectPool" message="bpmn:participant[@name=&apos;Process Engine - Invoice Receipt&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="Process_Engine_1" caller="selectPool">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;bpmn-miwg-test-case-c.1.0&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="bpmn-miwg-test-case-c.1.0" caller="selectReferencedProcess">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute isExecutable=true"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Team Assistant&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Approver&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Accountant&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Invoice received&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;&apos; (Input) -&gt; //bpmn:task[@name=&apos;Scan Invoice&apos; and @id=&apos;sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Assign Approver&apos; and @id=&apos;assignApprover&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Approve Invoice&apos; and @id=&apos;approveInvoice&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute camunda:assignee=${approver}"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute camunda:formKey=app:approveInvoice.jsf"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Invoice approved?&apos; and @id=&apos;invoice_approved&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Rechnung klären&apos; and @id=&apos;reviewInvoice&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Review successful?&apos; and @id=&apos;reviewSuccessful_gw&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Invoice not processed&apos; and @id=&apos;invoiceNotProcessed&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/definitions[@id=&apos;id=&quot;sid-bdb880ac-c464-4e5c-aa56-569d709436e0&quot;&apos;]/process[@id=&apos;id=&quot;bpmn-miwg-test-case-c.1.0&quot;&apos;]/exclusiveGateway[@id=&apos;id=&quot;reviewSuccessful_gw&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Approve Invoice&apos; and @id=&apos;approveInvoice&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/definitions[@id=&apos;id=&quot;sid-bdb880ac-c464-4e5c-aa56-569d709436e0&quot;&apos;]/process[@id=&apos;id=&quot;bpmn-miwg-test-case-c.1.0&quot;&apos;]/exclusiveGateway[@id=&apos;id=&quot;invoice_approved&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Prepare Bank Transfer&apos; and @id=&apos;prepareBankTransfer&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Archive Invoice&apos; and @id=&apos;archiveInvoice&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute camunda:delegateExpression=#{archiveService}"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Invoice processed&apos; and @id=&apos;invoiceProcessed&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="bpmn-miwg-test-case-c.1.0" caller="doExecute"/>
             </entry>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.NodePopEntry" message="Pop" identifier="Process_Engine_1" caller="doExecute"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="Process_Engine_1" caller="doExecute"/>
          </entry>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.NodePopEntry" message="Pop" identifier="sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3" caller="doExecute"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3" caller="doExecute"/>
       </entry>
    </entry>
 </analysis>

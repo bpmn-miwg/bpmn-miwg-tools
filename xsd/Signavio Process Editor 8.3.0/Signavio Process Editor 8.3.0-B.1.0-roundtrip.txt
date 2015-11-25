@@ -1,6 +1,6 @@
 ANALYSIS: Signavio Process Editor 8.3.0-B.1.0-roundtrip (Tool: xsd)
-  INFO   : Error Line 209: cvc-id.2: There are multiple occurrences of ID value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450'.
+  Error Line 209: cvc-id.2: There are multiple occurrences of ID value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450'.
 
-  INFO   : Error Line 209: cvc-attribute.3: The value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450' of attribute 'id' on element 'process' is not valid with respect to its type, 'ID'.
+  Error Line 209: cvc-attribute.3: The value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450' of attribute 'id' on element 'process' is not valid with respect to its type, 'ID'.
 
-  FINDING: Validation failed                        Message: Warnings 0, Errors: 2, Fatal Errors: 0; Parameter: 
+  INFO   : Validation failed: Warnings: 0, Errors: 2, Fatal Errors: 0

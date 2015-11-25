@@ -1,21 +1,21 @@
 <analysis name="actiBPM 3.E-8-A.1.0-roundtrip" toolName="xpath">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.NodePushEntry" message="Push" identifier="_1373649849716" caller="execute">
-      <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="selectFirstProcess" message="/bpmn:definitions/bpmn:process"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.NodePushEntry" message="Push" identifier="WFP-6-" caller="selectFirstProcess">
-         <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;_ec59e164-68b4-4f94-98de-ffb1c58a84af&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding outgoing node for the sequence flow" parameter="bpmn:outgoing[text()=&apos;_e16564d7-0c4c-413e-95f6-f668a3f851fb&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding incoming node for the sequence flow" parameter="bpmn:incoming[text()=&apos;_e16564d7-0c4c-413e-95f6-f668a3f851fb&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;_820c21c0-45f3-473b-813f-06381cc637cd&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding outgoing node for the sequence flow" parameter="bpmn:outgoing[text()=&apos;_d77dd5ec-e4e7-420e-bbe7-8ac9cd1df599&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding incoming node for the sequence flow" parameter="bpmn:incoming[text()=&apos;_d77dd5ec-e4e7-420e-bbe7-8ac9cd1df599&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_e70a6fcb-913c-4a7b-a65d-e83adc73d69c&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding outgoing node for the sequence flow" parameter="bpmn:outgoing[text()=&apos;_2aa47410-1b0e-4f8b-ad54-d6f798080cb4&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding incoming node for the sequence flow" parameter="bpmn:incoming[text()=&apos;_2aa47410-1b0e-4f8b-ad54-d6f798080cb4&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;_a47df184-085b-49f7-bb82-031c84625821&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding outgoing node for the sequence flow" parameter="bpmn:outgoing[text()=&apos;_8e8fe679-eb3b-4c43-a4d6-891e7087ff80&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding incoming node for the sequence flow" parameter="bpmn:incoming[text()=&apos;_8e8fe679-eb3b-4c43-a4d6-891e7087ff80&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.NodePopEntry" message="Pop" identifier="WFP-6-" caller="doExecute"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_1373649849716" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFirstProcess" message="/bpmn:definitions/bpmn:process"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="WFP-6-" caller="selectFirstProcess">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;_ec59e164-68b4-4f94-98de-ffb1c58a84af&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding outgoing node for the sequence flow" parameter="bpmn:outgoing[text()=&apos;_e16564d7-0c4c-413e-95f6-f668a3f851fb&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding incoming node for the sequence flow" parameter="bpmn:incoming[text()=&apos;_e16564d7-0c4c-413e-95f6-f668a3f851fb&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;_820c21c0-45f3-473b-813f-06381cc637cd&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding outgoing node for the sequence flow" parameter="bpmn:outgoing[text()=&apos;_d77dd5ec-e4e7-420e-bbe7-8ac9cd1df599&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding incoming node for the sequence flow" parameter="bpmn:incoming[text()=&apos;_d77dd5ec-e4e7-420e-bbe7-8ac9cd1df599&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;_e70a6fcb-913c-4a7b-a65d-e83adc73d69c&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding outgoing node for the sequence flow" parameter="bpmn:outgoing[text()=&apos;_2aa47410-1b0e-4f8b-ad54-d6f798080cb4&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding incoming node for the sequence flow" parameter="bpmn:incoming[text()=&apos;_2aa47410-1b0e-4f8b-ad54-d6f798080cb4&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;_a47df184-085b-49f7-bb82-031c84625821&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding outgoing node for the sequence flow" parameter="bpmn:outgoing[text()=&apos;_8e8fe679-eb3b-4c43-a4d6-891e7087ff80&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="There is no corresponding incoming node for the sequence flow" parameter="bpmn:incoming[text()=&apos;_8e8fe679-eb3b-4c43-a4d6-891e7087ff80&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="WFP-6-" caller="doExecute"/>
       </entry>
    </entry>
 </analysis>

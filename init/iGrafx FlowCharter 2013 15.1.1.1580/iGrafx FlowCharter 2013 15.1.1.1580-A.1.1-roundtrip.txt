@@ -1,2 +1,0 @@
-ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-A.1.1-roundtrip (Tool: init)
-  EXCEPTION: Exception during job preparation (org.omg.bpmn.miwg.api.ReferenceNotFoundException: Cannot find reference resource /Reference/A.1.1.bpmn (null ressource))

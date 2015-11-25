@@ -1,21 +1,21 @@
 <analysis name="GenMyModel 0.47-C.2.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 261: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 261: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 267: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 267: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 295: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 295: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 309: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 309: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 337: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 337: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 353: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 353: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 359: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 359: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 371: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 371: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 377: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 377: cvc-complex-type.4: Attribute &apos;height&apos; must appear on element &apos;dc:Bounds&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="Validation failed" message="Warnings 0, Errors: 9, Fatal Errors: 0" parameter=""/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 9, Fatal Errors: 0"/>
 </analysis>

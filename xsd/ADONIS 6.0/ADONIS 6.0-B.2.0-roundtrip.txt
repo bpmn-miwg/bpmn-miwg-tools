@@ -1,4 +1,4 @@
 ANALYSIS: ADONIS 6.0-B.2.0-roundtrip (Tool: xsd)
-  INFO   : Error Line 2671: cvc-id.1: There is no ID/IDREF binding for IDREF 'dataInput_con.144345'.
+  Error Line 2671: cvc-id.1: There is no ID/IDREF binding for IDREF 'dataInput_con.144345'.
 
-  FINDING: Validation failed                        Message: Warnings 0, Errors: 1, Fatal Errors: 0; Parameter: 
+  INFO   : Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0

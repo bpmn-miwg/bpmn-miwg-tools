@@ -1,9 +1,9 @@
 <analysis name="bpmn.io 0.9.2-A.1.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 27: cvc-complex-type.3.2.2: Attribute &apos;di:name&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 27: cvc-complex-type.3.2.2: Attribute &apos;di:name&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 27: cvc-complex-type.3.2.2: Attribute &apos;di:documentation&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 27: cvc-complex-type.3.2.2: Attribute &apos;di:documentation&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 27: cvc-complex-type.3.2.2: Attribute &apos;di:resolution&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 27: cvc-complex-type.3.2.2: Attribute &apos;di:resolution&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="Validation failed" message="Warnings 0, Errors: 3, Fatal Errors: 0" parameter=""/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 3, Fatal Errors: 0"/>
 </analysis>

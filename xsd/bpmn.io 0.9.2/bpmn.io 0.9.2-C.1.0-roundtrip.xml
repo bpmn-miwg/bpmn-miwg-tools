@@ -1,13 +1,13 @@
 <analysis name="bpmn.io 0.9.2-C.1.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 432: cvc-complex-type.3.2.2: Attribute &apos;resourceRef&apos; is not allowed to appear in element &apos;potentialOwner&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 432: cvc-complex-type.3.2.2: Attribute &apos;resourceRef&apos; is not allowed to appear in element &apos;potentialOwner&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 470: cvc-complex-type.3.2.2: Attribute &apos;resourceRef&apos; is not allowed to appear in element &apos;potentialOwner&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 470: cvc-complex-type.3.2.2: Attribute &apos;resourceRef&apos; is not allowed to appear in element &apos;potentialOwner&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 492: cvc-complex-type.3.2.2: Attribute &apos;resourceRef&apos; is not allowed to appear in element &apos;potentialOwner&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 492: cvc-complex-type.3.2.2: Attribute &apos;resourceRef&apos; is not allowed to appear in element &apos;potentialOwner&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 552: cvc-complex-type.3.2.2: Attribute &apos;resourceRef&apos; is not allowed to appear in element &apos;potentialOwner&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 552: cvc-complex-type.3.2.2: Attribute &apos;resourceRef&apos; is not allowed to appear in element &apos;potentialOwner&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 700: cvc-complex-type.3.2.2: Attribute &apos;omgdi:name&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 700: cvc-complex-type.3.2.2: Attribute &apos;omgdi:name&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="Validation failed" message="Warnings 0, Errors: 5, Fatal Errors: 0" parameter=""/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 5, Fatal Errors: 0"/>
 </analysis>

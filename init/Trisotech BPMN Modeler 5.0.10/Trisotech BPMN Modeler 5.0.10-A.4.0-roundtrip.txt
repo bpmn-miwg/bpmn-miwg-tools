@@ -1,1 +1,0 @@
-ANALYSIS: Trisotech BPMN Modeler 5.0.10-A.4.0-roundtrip (Tool: init)
