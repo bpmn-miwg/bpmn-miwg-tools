@@ -1,8 +1,8 @@
 ANALYSIS: ADONIS 6.0-B.1.0-roundtrip (Tool: xsd)
-  Error Line 620: cvc-id.2: There are multiple occurrences of ID value 'WFP-0-'.
+  INFO   : Error Line 620: cvc-id.2: There are multiple occurrences of ID value 'WFP-0-'.
 
-  Error Line 620: cvc-attribute.3: The value 'WFP-0-' of attribute 'id' on element 'process' is not valid with respect to its type, 'ID'.
+  INFO   : Error Line 620: cvc-attribute.3: The value 'WFP-0-' of attribute 'id' on element 'process' is not valid with respect to its type, 'ID'.
 
-  Error Line 962: cvc-id.1: There is no ID/IDREF binding for IDREF 'dataInput_con.143011'.
+  INFO   : Error Line 962: cvc-id.1: There is no ID/IDREF binding for IDREF 'dataInput_con.143011'.
 
-  INFO   : Validation failed: Warnings: 0, Errors: 3, Fatal Errors: 0
+  FINDING: Validation failed                        Message: Warnings 0, Errors: 3, Fatal Errors: 0; Parameter: 

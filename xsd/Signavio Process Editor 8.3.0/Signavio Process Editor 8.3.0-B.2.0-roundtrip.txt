@@ -1,12 +1,12 @@
 ANALYSIS: Signavio Process Editor 8.3.0-B.2.0-roundtrip (Tool: xsd)
-  Error Line 150: cvc-complex-type.2.4.b: The content of element 'ioSpecification' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":outputSet}' is expected.
+  INFO   : Error Line 150: cvc-complex-type.2.4.b: The content of element 'ioSpecification' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":outputSet}' is expected.
 
-  Error Line 621: cvc-complex-type.2.4.b: The content of element 'ioSpecification' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":outputSet}' is expected.
+  INFO   : Error Line 621: cvc-complex-type.2.4.b: The content of element 'ioSpecification' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":inputSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":outputSet}' is expected.
 
-  Error Line 1002: cvc-id.2: There are multiple occurrences of ID value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450'.
+  INFO   : Error Line 1002: cvc-id.2: There are multiple occurrences of ID value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450'.
 
-  Error Line 1002: cvc-attribute.3: The value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450' of attribute 'id' on element 'process' is not valid with respect to its type, 'ID'.
+  INFO   : Error Line 1002: cvc-attribute.3: The value 'Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450' of attribute 'id' on element 'process' is not valid with respect to its type, 'ID'.
 
-  Error Line 2168: cvc-id.1: There is no ID/IDREF binding for IDREF 'sid-e8f5a749-f73a-4e47-87fd-8de9056fbd01'.
+  INFO   : Error Line 2168: cvc-id.1: There is no ID/IDREF binding for IDREF 'sid-e8f5a749-f73a-4e47-87fd-8de9056fbd01'.
 
-  INFO   : Validation failed: Warnings: 0, Errors: 5, Fatal Errors: 0
+  FINDING: Validation failed                        Message: Warnings 0, Errors: 5, Fatal Errors: 0; Parameter: 

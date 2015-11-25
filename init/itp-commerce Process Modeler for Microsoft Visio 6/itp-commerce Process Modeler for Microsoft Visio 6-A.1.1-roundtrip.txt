@@ -1,0 +1,2 @@
+ANALYSIS: itp-commerce Process Modeler for Microsoft Visio 6-A.1.1-roundtrip (Tool: init)
+  EXCEPTION: Exception during job preparation (org.omg.bpmn.miwg.api.ReferenceNotFoundException: Cannot find reference resource /Reference/A.1.1.bpmn (null ressource))

@@ -1,20 +1,20 @@
 ANALYSIS: bpmn.io 0.9.2-B.2.0-roundtrip (Tool: xsd)
-  Error Line 88: cvc-complex-type.2.4.a: Invalid content was found starting with element 'semantic:inputOutputSpecification'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics, "http://www.omg.org/spec/BPMN/20100524/MODEL":rendering}' is expected.
+  INFO   : Error Line 88: cvc-complex-type.2.4.a: Invalid content was found starting with element 'semantic:inputOutputSpecification'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics, "http://www.omg.org/spec/BPMN/20100524/MODEL":rendering}' is expected.
 
-  Error Line 365: cvc-complex-type.2.4.a: Invalid content was found starting with element 'semantic:inputOutputSpecification'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics, "http://www.omg.org/spec/BPMN/20100524/MODEL":laneSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":flowElement, "http://www.omg.org/spec/BPMN/20100524/MODEL":artifact}' is expected.
+  INFO   : Error Line 365: cvc-complex-type.2.4.a: Invalid content was found starting with element 'semantic:inputOutputSpecification'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":outgoing, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataInputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataOutputAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":loopCharacteristics, "http://www.omg.org/spec/BPMN/20100524/MODEL":laneSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":flowElement, "http://www.omg.org/spec/BPMN/20100524/MODEL":artifact}' is expected.
 
-  Error Line 591: cvc-complex-type.2.4.a: Invalid content was found starting with element 'semantic:participant'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":artifact, "http://www.omg.org/spec/BPMN/20100524/MODEL":conversationNode, "http://www.omg.org/spec/BPMN/20100524/MODEL":conversationAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":participantAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":messageFlowAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":correlationKey, "http://www.omg.org/spec/BPMN/20100524/MODEL":choreographyRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conversationLink}' is expected.
+  INFO   : Error Line 591: cvc-complex-type.2.4.a: Invalid content was found starting with element 'semantic:participant'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":artifact, "http://www.omg.org/spec/BPMN/20100524/MODEL":conversationNode, "http://www.omg.org/spec/BPMN/20100524/MODEL":conversationAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":participantAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":messageFlowAssociation, "http://www.omg.org/spec/BPMN/20100524/MODEL":correlationKey, "http://www.omg.org/spec/BPMN/20100524/MODEL":choreographyRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":conversationLink}' is expected.
 
-  Error Line 596: cvc-complex-type.3.2.2: Attribute 'di:name' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
+  INFO   : Error Line 596: cvc-complex-type.3.2.2: Attribute 'di:name' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
 
-  Error Line 596: cvc-complex-type.3.2.2: Attribute 'di:documentation' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
+  INFO   : Error Line 596: cvc-complex-type.3.2.2: Attribute 'di:documentation' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
 
-  Error Line 596: cvc-complex-type.3.2.2: Attribute 'di:resolution' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
+  INFO   : Error Line 596: cvc-complex-type.3.2.2: Attribute 'di:resolution' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
 
-  Error Line 1724: cvc-complex-type.3.2.2: Attribute 'di:name' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
+  INFO   : Error Line 1724: cvc-complex-type.3.2.2: Attribute 'di:name' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
 
-  Error Line 1724: cvc-complex-type.3.2.2: Attribute 'di:documentation' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
+  INFO   : Error Line 1724: cvc-complex-type.3.2.2: Attribute 'di:documentation' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
 
-  Error Line 1724: cvc-complex-type.3.2.2: Attribute 'di:resolution' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
+  INFO   : Error Line 1724: cvc-complex-type.3.2.2: Attribute 'di:resolution' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
 
-  INFO   : Validation failed: Warnings: 0, Errors: 9, Fatal Errors: 0
+  FINDING: Validation failed                        Message: Warnings 0, Errors: 9, Fatal Errors: 0; Parameter: 

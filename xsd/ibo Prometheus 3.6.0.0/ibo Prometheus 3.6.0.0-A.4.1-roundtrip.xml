@@ -1,0 +1,7 @@
+<analysis name="ibo Prometheus 3.6.0.0-A.4.1-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 235: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;ibo:CollapsedBounds&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/DI&quot;:BPMNLabel}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.InfoEntry" message="Error Line 258: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;ibo:CollapsedBounds&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/DI&quot;:BPMNLabel}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.FindingAssertionEntry" assertion="Validation failed" message="Warnings 0, Errors: 2, Fatal Errors: 0" parameter=""/>
+</analysis>

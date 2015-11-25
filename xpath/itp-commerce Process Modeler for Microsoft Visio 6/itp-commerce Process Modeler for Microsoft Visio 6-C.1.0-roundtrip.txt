@@ -1,11 +1,11 @@
 ANALYSIS: itp-commerce Process Modeler for Microsoft Visio 6-C.1.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: sid-bdb880ac-c464-4e5c-aa56-569d709436e0)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
-    FINDING: checkAttributeValue                      Message: No Current node; Parameter: 
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
-    FINDING: checkAttributeValue                      Message: No Current node; Parameter: 
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
-    FINDING: checkAttributeValue                      Message: No Current node; Parameter: 
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
     OK     : selectCollaboration                      Message: bpmn:collaboration
     OK     : selectCollaboration                      Push (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)
       OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference

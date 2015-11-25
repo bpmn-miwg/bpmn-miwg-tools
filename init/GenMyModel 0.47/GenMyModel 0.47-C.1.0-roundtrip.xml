@@ -1,3 +1,3 @@
 <analysis name="GenMyModel 0.47-C.1.0-roundtrip" toolName="init">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ExceptionEntry" message="Exception during job preparation"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ExceptionEntry" message="Exception during job preparation"/>
 </analysis>

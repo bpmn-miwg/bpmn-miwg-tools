@@ -1,9 +1,9 @@
 <analysis name="IBM Process Designer 8.0.1-A.1.0-roundtrip" toolName="xml-compare">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.XmlDiffEntry"/>
 </analysis>

@@ -1,20 +1,20 @@
 ANALYSIS: GenMyModel 0.47-C.2.0-roundtrip (Tool: xsd)
-  Error Line 261: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 261: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  Error Line 267: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 267: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  Error Line 295: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 295: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  Error Line 309: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 309: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  Error Line 337: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 337: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  Error Line 353: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 353: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  Error Line 359: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 359: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  Error Line 371: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 371: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  Error Line 377: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
+  INFO   : Error Line 377: cvc-complex-type.4: Attribute 'height' must appear on element 'dc:Bounds'.
 
-  INFO   : Validation failed: Warnings: 0, Errors: 9, Fatal Errors: 0
+  FINDING: Validation failed                        Message: Warnings 0, Errors: 9, Fatal Errors: 0; Parameter: 
