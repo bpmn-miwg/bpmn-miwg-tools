@@ -1,5 +1,52 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/522",
+    "id": 118268761,
+    "number": 522,
+    "title": "Performed export tests for Aeneis 5.7.89.2400",
+    "user": {
+      "login": "krehl",
+      "id": 1944048,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1944048?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/krehl",
+      "html_url": "https://github.com/krehl",
+      "followers_url": "https://api.github.com/users/krehl/followers",
+      "following_url": "https://api.github.com/users/krehl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/krehl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/krehl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/krehl/subscriptions",
+      "organizations_url": "https://api.github.com/users/krehl/orgs",
+      "repos_url": "https://api.github.com/users/krehl/repos",
+      "events_url": "https://api.github.com/users/krehl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/krehl/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-22T15:28:55Z",
+    "updated_at": "2015-11-24T11:26:37Z",
+    "closed_at": "2015-11-24T11:26:37Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/522",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/522",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/522.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/522.patch"
+    },
+    "body": ""
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521/comments",

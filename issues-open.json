@@ -920,9 +920,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 16,
+    "comments": 17,
     "created_at": "2015-10-07T17:09:32Z",
-    "updated_at": "2015-11-18T11:23:46Z",
+    "updated_at": "2015-11-18T18:33:51Z",
     "closed_at": null,
     "body": "This issue is meant as a place holder for discussions regarding Labels.\r\nIt is a follow up to issue #330 and issue #458 \r\nIn particular we are interested in label :\r\n1. bounds definition and interchange\r\n2. Font size to be expressed in Font Points or in Pixels\r\n3. The effect these two have together on rendering\r\n4. Text wrapping and <cr> within labels \r\n\r\n"
   },
