@@ -1,0 +1,17 @@
+<analysis name="Aeneis 5.7.89.2400-B.1.0-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 6: cvc-datatype-valid.1.2.1: &apos;96b393c0-8dc7-4501-9377-d108d66d5d84&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 6: cvc-attribute.3: The value &apos;96b393c0-8dc7-4501-9377-d108d66d5d84&apos; of attribute &apos;id&apos; on element &apos;semantic:globalTask&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 6: cvc-complex-type.3.2.2: Attribute &apos;completionQuantity&apos; is not allowed to appear in element &apos;semantic:globalTask&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 6: cvc-complex-type.3.2.2: Attribute &apos;isForCompensation&apos; is not allowed to appear in element &apos;semantic:globalTask&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 6: cvc-complex-type.3.2.2: Attribute &apos;startQuantity&apos; is not allowed to appear in element &apos;semantic:globalTask&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 91: cvc-datatype-valid.1.2.1: &apos;96b393c0-8dc7-4501-9377-d108d66d5d84&apos; is not a valid value for &apos;QName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 91: cvc-attribute.3: The value &apos;96b393c0-8dc7-4501-9377-d108d66d5d84&apos; of attribute &apos;calledElement&apos; on element &apos;semantic:callActivity&apos; is not valid with respect to its type, &apos;QName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 7, Fatal Errors: 0"/>
+</analysis>

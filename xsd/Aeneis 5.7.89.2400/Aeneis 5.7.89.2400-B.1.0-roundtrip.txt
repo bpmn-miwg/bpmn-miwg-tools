@@ -1,0 +1,16 @@
+ANALYSIS: Aeneis 5.7.89.2400-B.1.0-roundtrip (Tool: xsd)
+  Error Line 6: cvc-datatype-valid.1.2.1: '96b393c0-8dc7-4501-9377-d108d66d5d84' is not a valid value for 'NCName'.
+
+  Error Line 6: cvc-attribute.3: The value '96b393c0-8dc7-4501-9377-d108d66d5d84' of attribute 'id' on element 'semantic:globalTask' is not valid with respect to its type, 'ID'.
+
+  Error Line 6: cvc-complex-type.3.2.2: Attribute 'completionQuantity' is not allowed to appear in element 'semantic:globalTask'.
+
+  Error Line 6: cvc-complex-type.3.2.2: Attribute 'isForCompensation' is not allowed to appear in element 'semantic:globalTask'.
+
+  Error Line 6: cvc-complex-type.3.2.2: Attribute 'startQuantity' is not allowed to appear in element 'semantic:globalTask'.
+
+  Error Line 91: cvc-datatype-valid.1.2.1: '96b393c0-8dc7-4501-9377-d108d66d5d84' is not a valid value for 'QName'.
+
+  Error Line 91: cvc-attribute.3: The value '96b393c0-8dc7-4501-9377-d108d66d5d84' of attribute 'calledElement' on element 'semantic:callActivity' is not valid with respect to its type, 'QName'.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 7, Fatal Errors: 0
