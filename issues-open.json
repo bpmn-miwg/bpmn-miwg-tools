@@ -1,5 +1,1332 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/546",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/546/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/546/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/546/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/546",
+    "id": 119060021,
+    "number": 546,
+    "title": "Size of Gateway is not respected",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T15:00:40Z",
+    "updated_at": "2015-11-26T15:00:40Z",
+    "closed_at": null,
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/545",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/545/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/545/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/545/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/545",
+    "id": 119059926,
+    "number": 545,
+    "title": "Artefact around sequence flow label",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T15:00:15Z",
+    "updated_at": "2015-11-26T15:00:15Z",
+    "closed_at": null,
+    "body": "Artefact around sequence flow label"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/544",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/544/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/544/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/544/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/544",
+    "id": 119059646,
+    "number": 544,
+    "title": "General Layout not respected",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:58:38Z",
+    "updated_at": "2015-11-26T14:58:38Z",
+    "closed_at": null,
+    "body": "General Layout not respected"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/543",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/543/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/543/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/543/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/543",
+    "id": 119059355,
+    "number": 543,
+    "title": "DataObject and DataStare are missing",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:57:04Z",
+    "updated_at": "2015-11-26T14:57:04Z",
+    "closed_at": null,
+    "body": "DataObject and DataStare are missing"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/542",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/542/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/542/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/542/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/542",
+    "id": 119059210,
+    "number": 542,
+    "title": "Group is missing",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:56:21Z",
+    "updated_at": "2015-11-26T14:56:21Z",
+    "closed_at": null,
+    "body": "Group is missing"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/541",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/541/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/541/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/541/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/541",
+    "id": 119059092,
+    "number": 541,
+    "title": "CallActivity are displayed in Colapsed mode",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:55:33Z",
+    "updated_at": "2015-11-26T14:55:33Z",
+    "closed_at": null,
+    "body": "CallActivity are displayed in Colapsed mode, they should be expanded"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/540",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/540/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/540/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/540/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/540",
+    "id": 119058852,
+    "number": 540,
+    "title": "Sub Process are displayed horizontaly",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:53:51Z",
+    "updated_at": "2015-11-26T14:53:51Z",
+    "closed_at": null,
+    "body": "Sub Process are displayed horizontally, they should be displayed vertically"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/539",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/539/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/539/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/539/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/539",
+    "id": 119058550,
+    "number": 539,
+    "title": "Wrong layout of sub process label",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:52:03Z",
+    "updated_at": "2015-11-26T14:52:03Z",
+    "closed_at": null,
+    "body": "Wrong layout of sub process label"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/538",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/538/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/538/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/538/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/538",
+    "id": 119058379,
+    "number": 538,
+    "title": "Wrong layout of connection point",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:51:05Z",
+    "updated_at": "2015-11-26T14:51:05Z",
+    "closed_at": null,
+    "body": "Wrong layout of connection point on task 3"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/537",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/537/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/537/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/537/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/537",
+    "id": 119058226,
+    "number": 537,
+    "title": "Wrong placement of label of Message Flow",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:50:02Z",
+    "updated_at": "2015-11-26T14:50:02Z",
+    "closed_at": null,
+    "body": "Wrong placement of label of Message Flow"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/536",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/536/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/536/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/536/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/536",
+    "id": 119058044,
+    "number": 536,
+    "title": "Lane out of pool not supported",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:48:52Z",
+    "updated_at": "2015-11-26T14:48:52Z",
+    "closed_at": null,
+    "body": "Lane out of pool not supported"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/535",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/535/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/535/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/535/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/535",
+    "id": 119057868,
+    "number": 535,
+    "title": "Lane layout not respected",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:47:49Z",
+    "updated_at": "2015-11-26T14:47:49Z",
+    "closed_at": null,
+    "body": "Lane layout not respected"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/534",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/534/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/534/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/534/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/534",
+    "id": 119057606,
+    "number": 534,
+    "title": "Wrong placement of interruptible message event",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:46:38Z",
+    "updated_at": "2015-11-26T14:46:38Z",
+    "closed_at": null,
+    "body": "Wrong placement of interruptible message event"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/533",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/533/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/533/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/533/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/533",
+    "id": 119057321,
+    "number": 533,
+    "title": "Task Layout is not respected",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:44:41Z",
+    "updated_at": "2015-11-26T14:44:41Z",
+    "closed_at": null,
+    "body": "Task Layout is not respected"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/532",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/532/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/532/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/532/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/532",
+    "id": 119057016,
+    "number": 532,
+    "title": "Connection points before Gateway are moved",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:42:50Z",
+    "updated_at": "2015-11-26T14:42:50Z",
+    "closed_at": null,
+    "body": "Connection points before Gateway are moved"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/531",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/531/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/531/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/531/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/531",
+    "id": 119056724,
+    "number": 531,
+    "title": "Introduction of cross marker in Gateway",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:40:57Z",
+    "updated_at": "2015-11-26T14:40:57Z",
+    "closed_at": null,
+    "body": "Introduction of cross marker in Gateway"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/530",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/530/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/530/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/530/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/530",
+    "id": 119056417,
+    "number": 530,
+    "title": "Labels of Start and End Events are in middle of the figure",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T14:38:43Z",
+    "updated_at": "2015-11-26T14:38:43Z",
+    "closed_at": null,
+    "body": "Labels of Start and End Events are in middle of the figure"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/529",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/529/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/529/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/529/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/529",
+    "id": 119055868,
+    "number": 529,
+    "title": " Participant is missing label separation line ",
+    "user": {
+      "login": "aabherve",
+      "id": 15227604,
+      "avatar_url": "https://avatars.githubusercontent.com/u/15227604?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/aabherve",
+      "html_url": "https://github.com/aabherve",
+      "followers_url": "https://api.github.com/users/aabherve/followers",
+      "following_url": "https://api.github.com/users/aabherve/following{/other_user}",
+      "gists_url": "https://api.github.com/users/aabherve/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/aabherve/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/aabherve/subscriptions",
+      "organizations_url": "https://api.github.com/users/aabherve/orgs",
+      "repos_url": "https://api.github.com/users/aabherve/repos",
+      "events_url": "https://api.github.com/users/aabherve/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/aabherve/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Aeneis",
+        "name": "Tool: Aeneis",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2015-11-26T14:35:12Z",
+    "updated_at": "2015-11-26T17:27:08Z",
+    "closed_at": null,
+    "body": "\r\nParticipant is missing label separation line "
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/527",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/527/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/527/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/527/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/527",
+    "id": 118974236,
+    "number": 527,
+    "title": "Data Store seems too small",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T05:26:07Z",
+    "updated_at": "2015-11-26T05:54:18Z",
+    "closed_at": null,
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/526",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/526/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/526/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/526/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/526",
+    "id": 118974178,
+    "number": 526,
+    "title": "Call Activity calling Global Task displayed with '+' marker",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T05:25:13Z",
+    "updated_at": "2015-11-26T05:25:13Z",
+    "closed_at": null,
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/525",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/525/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/525/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/525/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/525",
+    "id": 118899765,
+    "number": 525,
+    "title": "Test Case: Multiple definitions in a single file and a model with external definitions to be imported",
+    "user": {
+      "login": "dgagne",
+      "id": 553249,
+      "avatar_url": "https://avatars.githubusercontent.com/u/553249?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dgagne",
+      "html_url": "https://github.com/dgagne",
+      "followers_url": "https://api.github.com/users/dgagne/followers",
+      "following_url": "https://api.github.com/users/dgagne/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dgagne/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dgagne/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dgagne/subscriptions",
+      "organizations_url": "https://api.github.com/users/dgagne/orgs",
+      "repos_url": "https://api.github.com/users/dgagne/repos",
+      "events_url": "https://api.github.com/users/dgagne/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dgagne/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-25T18:47:22Z",
+    "updated_at": "2015-11-25T18:47:22Z",
+    "closed_at": null,
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/524",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/524/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/524/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/524/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/524",
+    "id": 118877691,
+    "number": 524,
+    "title": "Vertical Pools without labels and their Lane labels on the left",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-25T16:48:41Z",
+    "updated_at": "2015-11-25T16:48:52Z",
+    "closed_at": null,
+    "body": ""
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/520",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/520/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/520/comments",
@@ -69,7 +1396,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -77,7 +1408,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:19:09Z",
-    "updated_at": "2015-10-27T10:19:09Z",
+    "updated_at": "2015-11-26T13:53:17Z",
     "closed_at": null,
     "body": "Some line wrapper characters in Task label are not processed correctly\r\n\r\n![c 1 1-import](https://cloud.githubusercontent.com/assets/15227604/10755207/8051afec-7c9c-11e5-9159-4e2c067c15b9.png)\r\n"
   },
@@ -110,7 +1441,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -118,7 +1453,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:17:37Z",
-    "updated_at": "2015-10-27T10:17:37Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "The guard of conditional SequenceFlow is display, not the label\r\n\r\n![c 1 1-import](https://cloud.githubusercontent.com/assets/15227604/10755155/3e0df104-7c9c-11e5-892f-22d40900e789.png)\r\n"
   },
@@ -151,7 +1486,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -159,7 +1498,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:15:00Z",
-    "updated_at": "2015-10-27T10:15:00Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Some start events are reverted as interruptible event\r\n\r\n![c 1 0-import](https://cloud.githubusercontent.com/assets/15227604/10755100/f131e0c0-7c9b-11e5-8e53-9e8b44527e23.png)\r\n"
   },
@@ -192,7 +1531,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -200,7 +1543,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:12:45Z",
-    "updated_at": "2015-10-27T10:12:45Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Sometime Pool are not well align at the end of import process\r\n\r\n![b 2 0-import](https://cloud.githubusercontent.com/assets/15227604/10755051/9f2bf66c-7c9b-11e5-95a5-0c88be63ca84.png)\r\n"
   },
@@ -233,7 +1576,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -241,7 +1588,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:10:10Z",
-    "updated_at": "2015-10-27T10:10:10Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Group are not reverted in modelio bpmn diagram\r\n\r\n![b 1 0-import](https://cloud.githubusercontent.com/assets/15227604/10754940/3bf7f4ba-7c9b-11e5-8770-88345104a394.png)\r\n"
   },
@@ -274,7 +1621,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -282,7 +1633,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:08:31Z",
-    "updated_at": "2015-10-27T10:08:31Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Representation of Data Store is not standard\r\n![b 1 0-import](https://cloud.githubusercontent.com/assets/15227604/10754905/0c156f2a-7c9b-11e5-9f51-36e2257f6072.png)\r\n"
   },
@@ -315,7 +1666,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -323,7 +1678,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:07:18Z",
-    "updated_at": "2015-10-27T10:07:18Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Expanded Call Activity aren not supported in Modelio\r\n\r\n![b 1 0-import](https://cloud.githubusercontent.com/assets/15227604/10754878/e0ab61a0-7c9a-11e5-8fe5-321188a8e160.png)\r\n"
   },
@@ -356,7 +1711,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -364,7 +1723,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:05:37Z",
-    "updated_at": "2015-10-27T10:05:37Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Vertical Lane are not supported by Modelio"
   },
@@ -397,7 +1756,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -405,7 +1768,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:04:54Z",
-    "updated_at": "2015-10-27T10:04:54Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "A sign is displayed on bottom of expanded sub process, it must be removed\r\n\r\n![a 4 0-import](https://cloud.githubusercontent.com/assets/15227604/10754823/844a3972-7c9a-11e5-8065-4857fb671de7.png)"
   },
@@ -438,7 +1801,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -446,7 +1813,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T10:01:20Z",
-    "updated_at": "2015-10-27T10:02:50Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "The header of lane is closed by a lane,It should not be the case.\r\n\r\n![a 4 0-import](https://cloud.githubusercontent.com/assets/15227604/10754749/0c39f076-7c9a-11e5-948c-be7edf20a81e.png)\r\n"
   },
@@ -479,7 +1846,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -487,7 +1858,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T09:58:52Z",
-    "updated_at": "2015-10-27T09:58:52Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Wrong positioning of message flow label\r\n![a 4 0-import](https://cloud.githubusercontent.com/assets/15227604/10754707/b45f1f02-7c99-11e5-9803-8c7607967ca6.png)\r\n"
   },
@@ -520,7 +1891,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -528,7 +1903,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T09:56:02Z",
-    "updated_at": "2015-10-27T09:56:02Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Not expected message attached to a Message Flow.\r\n\r\n![a 4 0-import](https://cloud.githubusercontent.com/assets/15227604/10754640/444eb6c8-7c99-11e5-92dd-7c30fa64f732.png)\r\n"
   },
@@ -561,7 +1936,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -569,7 +1948,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T09:07:01Z",
-    "updated_at": "2015-10-27T09:07:01Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Each lane must currently be included in a Pool, it must be fixed\r\n\r\n![a 4 0-import](https://cloud.githubusercontent.com/assets/15227604/10753573/4fc7bff6-7c92-11e5-8636-d8847c512989.png)\r\n"
   },
@@ -602,7 +1981,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -610,7 +1993,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T09:03:06Z",
-    "updated_at": "2015-10-27T09:03:06Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Some edges are not well rooted :\r\n\r\n![a 2 0-import](https://cloud.githubusercontent.com/assets/15227604/10753522/e56e6042-7c91-11e5-8e4d-45eea66492a7.png)\r\n"
   },
@@ -643,7 +2026,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -651,7 +2038,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T08:56:36Z",
-    "updated_at": "2015-10-27T08:56:36Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "The coordinates of  floating labels are not recover.\r\n![a 3 0-import](https://cloud.githubusercontent.com/assets/15227604/10753384/ff077594-7c90-11e5-8b11-77ebec318d18.png)\r\n\r\n\r\n"
   },
@@ -684,7 +2071,11 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Modelio",
+        "name": "Tool: Modelio",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -692,7 +2083,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2015-10-27T08:50:48Z",
-    "updated_at": "2015-10-27T08:52:19Z",
+    "updated_at": "2015-11-26T13:53:16Z",
     "closed_at": null,
     "body": "Labels of 'Box' elements like Task are aligned on top when it should be centered\r\n\r\n![a 1 0-import](https://cloud.githubusercontent.com/assets/15227604/10753273/2c6d007c-7c90-11e5-9f58-6300e7cbe357.png)\r\n\r\n \r\n"
   },
@@ -1970,23 +3361,91 @@
         "color": "0052cc"
       },
       {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
         "name": "Test: C.1.0",
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
     "state": "open",
     "locked": false,
-    "assignee": null,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
     "milestone": null,
     "comments": 0,
     "created_at": "2015-04-08T14:59:10Z",
-    "updated_at": "2015-04-08T14:59:10Z",
+    "updated_at": "2015-11-25T19:06:21Z",
     "closed_at": null,
     "body": ""
   },
@@ -13267,8 +14726,23 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       },
       {
@@ -13301,7 +14775,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-10-01T14:27:53Z",
-    "updated_at": "2015-04-08T14:50:33Z",
+    "updated_at": "2015-11-25T16:29:41Z",
     "closed_at": null,
     "body": "We consider this a feature and will most likely not fix it, as it doesn't change the semantics."
   },
@@ -13313,7 +14787,7 @@
     "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/209",
     "id": 44568543,
     "number": 209,
-    "title": "Label of Collapsed Sub-Process and Call Activity aligned top instead of center",
+    "title": "Label of Collapsed Sub-Process and Call Activity aligned on top, centered and cut-off",
     "user": {
       "login": "falko",
       "id": 40038,
@@ -13360,8 +14834,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -13389,9 +14863,9 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-10-01T14:19:14Z",
-    "updated_at": "2014-10-01T14:20:46Z",
+    "updated_at": "2015-11-25T16:36:53Z",
     "closed_at": null,
-    "body": "See also: http://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=camunda%20Modeler%202.4.0"
+    "body": "See also: http://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Camunda%20Modeler%202.7.0"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/208",
@@ -13448,8 +14922,23 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -13477,7 +14966,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2014-10-01T14:13:43Z",
-    "updated_at": "2014-10-01T14:13:43Z",
+    "updated_at": "2015-11-25T16:40:32Z",
     "closed_at": null,
     "body": "see: http://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=camunda%20Modeler%202.4.0"
   },
@@ -13870,7 +15359,7 @@
     "milestone": null,
     "comments": 9,
     "created_at": "2014-06-19T09:02:48Z",
-    "updated_at": "2015-10-29T10:23:31Z",
+    "updated_at": "2015-11-25T16:17:01Z",
     "closed_at": null,
     "body": "As mentioned in Table 12.35, we could provide sample for:\r\n- (\"normal\") Sequence Flow\r\n- Default Sequence Flow\r\n- Conditional Sequence Flow\r\n\r\nUse case where I detected an interchange incompatibility:\r\nIf no conditionExpression set on a Sequence Flow and the Sequence Flow is not marked as default on outgoing reference of Task/Gateways, the Sequence Flow is  a \"normal\" Sequence Flow. It seems that some tools are considering it as \"Default Sequence Flow\" (itp Commerce, Trisotech and Signavio... I'm feeling alone :s). I think that the *default* attribute on preceding Task/Gateway is missing.\r\nWhy I want to make the difference? I want to keep the condition defined by user even if it is ignored in order that if he is not sure between default and a condition he can switch easily from one to another as we kept the conditionExpression.\r\n\r\nBased on the specification the right behavior seems to ignore the conditionExpression and be based only on the default attribute to detect Default Sequence Flow:\r\nTable 10.3, 10.123, 10.124, 10.125 on default attribute:\r\n> The Sequence Flow that will receive a token when none of the conditionExpressions on  other outgoing Sequence Flows evaluate to true. The default Sequence Flow should not have a conditionExpression. Any such Expression SHALL be ignored.\r\n\r\nI\r\n![diagramtotestdefaultsequenceflowwithcondition-1 0](https://cloud.githubusercontent.com/assets/1105127/3325776/c7c3b756-f793-11e3-84fb-cfe92abb727d.png)\r\n\r\n>     <model:exclusiveGateway id=\"_jDY8EPeREeO2W5WJKwzkfQ\" name=\"Gateway1\" default=\"_7WRGkPeQEeO2W5WJKwzkfQ\"/><model:sequenceFlow id=\"_7WRGkPeQEeO2W5WJKwzkfQ\" name=\"\" sourceRef=\"_jDY8EPeREeO2W5WJKwzkfQ\" targetRef=\"_7TL9YPeQEeO2W5WJKwzkfQ\">      <model:conditionExpression xsi:type=\"model:tFormalExpression\" id=\"_kZ1xofeREeO2W5WJKwzkfQ\" evaluatesToTypeRef=\"java:java.lang.Boolean\">true</model:conditionExpression>    </model:sequenceFlow>\r\n\r\nThe litigious case is in green and I put my understanding of the right value:\r\n![issue187bpmn-sequenceflowdefaultconditional](https://cloud.githubusercontent.com/assets/1105127/3384803/0732240a-fc61-11e3-925a-a91e1cd3905a.png)\r\n"
   },
@@ -15149,8 +16638,8 @@
         "color": "009800"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -15770,8 +17259,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -15802,84 +17291,6 @@
     "updated_at": "2014-10-01T14:15:51Z",
     "closed_at": null,
     "body": "Tested with camunda Modeler version 2.2.0 - export test\r\n \r\n - cannot edit name for groups/ input field missing in properties field"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/136",
-    "id": 23312972,
-    "number": 136,
-    "title": "Cannot add lane to colaboration without pool",
-    "user": {
-      "login": "mschoe",
-      "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mschoe",
-      "html_url": "https://github.com/mschoe",
-      "followers_url": "https://api.github.com/users/mschoe/followers",
-      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
-      "organizations_url": "https://api.github.com/users/mschoe/orgs",
-      "repos_url": "https://api.github.com/users/mschoe/repos",
-      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mschoe/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
-        "name": "Test: A.4.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
-        "color": "009800"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/wontfix",
-        "name": "wontfix",
-        "color": "ffffff"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": {
-      "login": "mschoe",
-      "id": 2777965,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mschoe",
-      "html_url": "https://github.com/mschoe",
-      "followers_url": "https://api.github.com/users/mschoe/followers",
-      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
-      "organizations_url": "https://api.github.com/users/mschoe/orgs",
-      "repos_url": "https://api.github.com/users/mschoe/repos",
-      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mschoe/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-11-26T13:11:27Z",
-    "updated_at": "2015-05-06T13:38:23Z",
-    "closed_at": null,
-    "body": "Tested with camunda Modeler version 2.2.0 - export test"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/134",
@@ -15921,8 +17332,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       },
       {
@@ -15967,7 +17378,7 @@
     "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/133",
     "id": 23242906,
     "number": 133,
-    "title": "Lane without pool not visualized",
+    "title": "Lane without Pool not supported",
     "user": {
       "login": "mschoe",
       "id": 2777965,
@@ -15989,6 +17400,11 @@
     },
     "labels": [
       {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
         "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
         "name": "Import",
         "color": "0052cc"
@@ -15999,8 +17415,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       },
       {
@@ -16033,7 +17449,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2013-11-25T13:45:36Z",
-    "updated_at": "2015-05-06T13:38:38Z",
+    "updated_at": "2015-11-26T05:21:59Z",
     "closed_at": null,
     "body": "Tested with camunda Modeler 2.2.0 \r\n\r\n![A.4.0](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/blob/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/camunda%20Modeler%202.2.0/A.4.0-import.png)"
   },
@@ -19269,8 +20685,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -19342,8 +20758,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -19425,8 +20841,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       },
       {

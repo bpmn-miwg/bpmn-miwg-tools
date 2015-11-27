@@ -1,5 +1,125 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/528",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/528/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/528/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/528/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/528",
+    "id": 118976366,
+    "number": 528,
+    "title": "Second Pool missing in B.2.0 export result",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-26T05:55:18Z",
+    "updated_at": "2015-11-26T06:00:07Z",
+    "closed_at": "2015-11-26T06:00:07Z",
+    "body": "See http://bpmn-miwg.github.io/bpmn-miwg-tools/visual-test-result-comparison.html?tool=Camunda%20Modeler%202.7.0#sect-B.2.0"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/523",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/523/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/523/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/523/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/523",
+    "id": 118869208,
+    "number": 523,
+    "title": "Submission of A.2.1 reference file proposal",
+    "user": {
+      "login": "benmichel",
+      "id": 8003851,
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/benmichel",
+      "html_url": "https://github.com/benmichel",
+      "followers_url": "https://api.github.com/users/benmichel/followers",
+      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
+      "organizations_url": "https://api.github.com/users/benmichel/orgs",
+      "repos_url": "https://api.github.com/users/benmichel/repos",
+      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/benmichel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-11-25T16:09:07Z",
+    "updated_at": "2015-11-25T16:14:48Z",
+    "closed_at": "2015-11-25T16:14:48Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/523",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/523",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/523.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/523.patch"
+    },
+    "body": "Submission of A.2.1 reference file proposal"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522/comments",
@@ -5723,6 +5843,89 @@
     "body": "The current serialization of A.4.1 reference test case is missing the Label Style (bpmndi:BPMNLabelStyle)  definition in its serialization"
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/136",
+    "id": 23312972,
+    "number": 136,
+    "title": "Cannot add Lane without Pool to collaboration",
+    "user": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/duplicate",
+        "name": "duplicate",
+        "color": "cccccc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
+        "color": "009800"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/wontfix",
+        "name": "wontfix",
+        "color": "ffffff"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "mschoe",
+      "id": 2777965,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2777965?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mschoe",
+      "html_url": "https://github.com/mschoe",
+      "followers_url": "https://api.github.com/users/mschoe/followers",
+      "following_url": "https://api.github.com/users/mschoe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mschoe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mschoe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mschoe/subscriptions",
+      "organizations_url": "https://api.github.com/users/mschoe/orgs",
+      "repos_url": "https://api.github.com/users/mschoe/repos",
+      "events_url": "https://api.github.com/users/mschoe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mschoe/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-11-26T13:11:27Z",
+    "updated_at": "2015-11-26T05:22:38Z",
+    "closed_at": "2015-11-26T05:22:38Z",
+    "body": "Tested with camunda Modeler version 2.2.0 - export test"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/135",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/135/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/135/comments",
@@ -5814,8 +6017,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -7790,8 +7993,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -7855,8 +8058,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -7920,8 +8123,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
@@ -7985,8 +8188,8 @@
         "color": "006b75"
       },
       {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20camunda%20Modeler",
-        "name": "Tool: camunda Modeler",
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Camunda%20Modeler",
+        "name": "Tool: Camunda Modeler",
         "color": "009800"
       }
     ],
