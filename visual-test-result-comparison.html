@@ -82,12 +82,13 @@ function loadJSON() {
               var png_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "png");
               $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' /></a>").appendTo(refDiv);
               //$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
-
+              
               var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "bpmn");
               var folder_url = url_pattern.folder.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference");
-
+              var bounds_url = url_pattern.bounds.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "png");
               var nav = $("<ul class='nav nav-pills'/>").appendTo(refDiv);
 
+              $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURI(png_url) + "&overlay=" + encodeURI(bounds_url)+"&title=Reference%20" + variation.variation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
               $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
               $("<li><a href='" + folder_url + "' target='_blank'>Reference folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
 
@@ -153,6 +154,7 @@ function toolSelected() {
       var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type).replace("{FILEEXT}", "bpmn");
       var png_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type).replace("{FILEEXT}", "png");
       var folder_url = url_pattern.folder.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool);
+      var bounds_url = url_pattern.bounds.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", referenceVariation).replace("{FILEEXT}", "png");
       var img_id = "'" + referenceVariation + "-" + type + "'"
       //if (type.png) {
         $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' onerror='ImgError(this);'/></a>").appendTo(div);
@@ -162,6 +164,7 @@ function toolSelected() {
 
       var nav = $("<ul class='nav nav-pills'/>").appendTo(div);
 
+      $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURI(png_url) + "&overlay=" + encodeURI(bounds_url)+"&title=" + type + "%20" + referenceVariation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
       $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
       $("<li><a href='" + folder_url + "' target='_blank'>Results folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
 
