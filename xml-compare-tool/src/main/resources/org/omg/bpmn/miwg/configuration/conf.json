@@ -1,4 +1,11 @@
 {
+  "defaultAttributes": [
+    "/definitions/@typeLanguage",
+    "/definitions/@expressionLanguage",
+    "/definitions/process/@isClosed",
+    "/definitions/process/@isExecutable",
+    "/definitions/process/@processType"
+  ],
   "ignoredNodes": [
     "a",
     "b"

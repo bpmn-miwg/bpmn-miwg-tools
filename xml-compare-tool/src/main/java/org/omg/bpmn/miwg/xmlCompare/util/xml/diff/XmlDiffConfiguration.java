@@ -45,6 +45,7 @@ import org.omg.bpmn.miwg.xmlCompare.util.ObjectUtils;
  */
 public class XmlDiffConfiguration {
 	
+    private List<String>            defaultAttributes;
 	private List<String>			ignoredNodes;
 	private List<String>			ignoredAttributes;
 	private List<String>			optionalAttributes;
@@ -55,11 +56,14 @@ public class XmlDiffConfiguration {
 	private ElementsPrefixMatcher prefixMatcher;
 	private Map<String, Pattern>	defaultAttributeValues;
 	
-	public XmlDiffConfiguration(String[] ignoredNodes, String[] ignoredAttributes, String[] optionalAttributes, 
-			String[] idsAndIdRefs, String[] ignoredNamespacesInAttributes,
+    public XmlDiffConfiguration(String[] defaultAttributes,
+            String[] ignoredNodes, String[] ignoredAttributes,
+            String[] optionalAttributes, String[] idsAndIdRefs,
+            String[] ignoredNamespacesInAttributes,
 			String[] caseInsensitiveAttributes, String[] languageSpecificAttributes,
 			ElementsPrefixMatcher prefixMatcher, String[][] defaultAttributeValues) {
-		this.ignoredNodes = ArrayUtil.toMutableList(ignoredNodes);
+        this.defaultAttributes = ArrayUtil.toMutableList(defaultAttributes);
+        this.ignoredNodes = ArrayUtil.toMutableList(ignoredNodes);
 		this.ignoredAttributes = ArrayUtil.toMutableList(ignoredAttributes);
 		this.optionalAttributes = ArrayUtil.toMutableList(optionalAttributes);
 		this.idsAndIdRefs = ArrayUtil.toMutableList(idsAndIdRefs);
@@ -76,7 +80,17 @@ public class XmlDiffConfiguration {
 			}
 		}
 	}
-	
+
+    /**
+     * An array of XPath strings matching attributes. These XPaths are allowed
+     * to appear in the test file even when they are missing from the control.
+     * 
+     * @return the <b>live</b> list of default attributes (changing it will
+     *         change the internal copy!)
+     */
+    public List<String> getDefaultAttributes() {
+        return defaultAttributes;
+    }
 	
 	/**
 	 * An array of XPath strings matching nodes. Differences originating in matching nodes or their children/attributes

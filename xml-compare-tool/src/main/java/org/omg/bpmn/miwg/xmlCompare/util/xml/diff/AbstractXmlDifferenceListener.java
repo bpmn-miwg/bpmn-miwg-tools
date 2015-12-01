@@ -73,6 +73,7 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 	private Set<String> caseInsensitiveAttributes = new HashSet<String>();
 	private Set<String> ignoredNamespacesInAttributes = new HashSet<String>();
 	private Set<String> languageSpecificAttributes = new HashSet<String>();
+	private Map<Node, Set<String>> defaultAttributesMap = new HashMap<Node, Set<String>>();
 	private Map<Node, Set<String>> ignoredAttributesMap = new HashMap<Node, Set<String>>();
 	private Map<Node, Set<String>> optionalAttributesMap = new HashMap<Node, Set<String>>();
 	private Map<String, Pattern>	defaultAttributeValues			= new HashMap<String, Pattern>();
@@ -101,6 +102,7 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 		caseInsensitiveAttributes.clear();
 		ignoredNamespacesInAttributes.clear();
 		languageSpecificAttributes.clear();
+        defaultAttributesMap.clear();
 		ignoredAttributesMap.clear();
 		optionalAttributesMap.clear();
 		defaultAttributeValues.clear();
@@ -109,6 +111,10 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 		helper = new XmlUnitHelper(controlDoc, testDoc, configuration.getElementsPrefixMatcher());
 		
 		List<Node> tmpNodeList;
+        // parse ignored attributes
+        parseAttributes(configuration.getDefaultAttributes(),
+                defaultAttributesMap);
+
 		// parse ignored nodes
 		for (String ignoredNodeXpath : configuration.getIgnoredNodes()) {
 			tmpNodeList = helper.getAllMatchingNodesFromBothDocuments(ignoredNodeXpath);
@@ -119,24 +125,12 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 		}
 
 		// parse ignored attributes
-		for (String ignoredAttributeXpath : configuration.getIgnoredAttributes()) {
-			// split attribute name and XPath for node
-			Pair<String, String> nodeAndAttribute = XPathUtil.splitXPathIntoNodeAndAttribute(ignoredAttributeXpath);			
-			tmpNodeList = helper.getAllMatchingNodesFromBothDocuments(nodeAndAttribute.getKey());
-			for (Node ignoredAttribute : tmpNodeList) {
-				getIgnoredAttributesForNode(ignoredAttribute).add(nodeAndAttribute.getValue());
-			}
-		}
+        parseAttributes(configuration.getIgnoredAttributes(),
+                ignoredAttributesMap);
 
 		// parse optional attributes
-		for (String optionalAttributeXpath : configuration.getOptionalAttributes()) {
-			// split attribute name and XPath for node
-			Pair<String, String> nodeAndAttribute = XPathUtil.splitXPathIntoNodeAndAttribute(optionalAttributeXpath);
-			tmpNodeList = helper.getAllMatchingNodesFromBothDocuments(nodeAndAttribute.getKey());
-			for (Node optionalAttribute : tmpNodeList) {
-				getOptionalAttributesForNode(optionalAttribute).add(nodeAndAttribute.getValue());
-			}
-		}
+        parseAttributes(configuration.getIgnoredAttributes(),
+                optionalAttributesMap);
 		
 		defaultAttributeValues.putAll(configuration.getDefaultAttributeValues());
 
@@ -162,7 +156,22 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 		LOGGER.trace("DifferenceListener Initialization finished");
 	}
 
-	
+    private void parseAttributes(List<String> attrs, Map<Node, Set<String>> map) {
+        List<Node> tmpNodeList;
+        for (String attrXpath : attrs) {
+            // split attribute name and XPath for node
+            Pair<String, String> nodeAndAttribute = XPathUtil
+                    .splitXPathIntoNodeAndAttribute(attrXpath);
+            tmpNodeList = helper
+                    .getAllMatchingNodesFromBothDocuments(nodeAndAttribute
+                            .getKey());
+            for (Node attrNode : tmpNodeList) {
+                getAttributeSetForNode(attrNode, map).add(
+                        nodeAndAttribute.getValue());
+            }
+        }
+    }
+
 	@Override
 	public void skippedComparison(Node node, Node node1) {
 		//do nothing
@@ -180,8 +189,11 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 					|| isCausedByOptionalAttribute(difference)
 					|| isCausedByIgnorableAttributeValue(difference)
 					|| isCausedByNamespaceProblems(difference)
+                    || isCausedByAdditionalNamespace(difference)
 					|| isCausedByLanguageSettings(difference)
 					|| isCausedByCapitalizationOfAttributeValue(difference)
+                    || isCausedByAddingDefaultAttribute(difference)
+                    || isRedundantSummaryError(difference)
 					|| canDifferenceBeIgnored(difference)){
 				numIgnoredDiffs++;
 				return DifferenceListener.RETURN_IGNORE_DIFFERENCE_NODES_IDENTICAL;
@@ -313,7 +325,8 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 				String attrValue = (attrNode == null)? null : attrNode.getNodeValue();
 				if (canAttributeBeIgnored(attrName, attrValue)) {
 					Node node = helper.getDocumentNode(difference, type, false);
-					getIgnoredAttributesForNode(node).add(attrName);
+                    getAttributeSetForNode(node, ignoredAttributesMap).add(
+                            attrName);
 					return true;
 				}
 			}
@@ -389,6 +402,47 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 		return false;
 	}
 
+    /**
+     * Vendors may introduce new namespaces and these should not be reported as
+     * significant differences.
+     * 
+     * @param difference
+     * @return
+     * @see https://github.com/bpmn-miwg/bpmn-miwg-tools/issues/13
+     */
+    protected boolean isCausedByAdditionalNamespace(Difference difference) {
+        try {
+            Attr attr = null;
+            int len = difference.getTestNodeDetail().getNode().getAttributes()
+                    .getLength();
+            for (int i = 0; i < len; i++) {
+                Attr tmp = (Attr) difference.getTestNodeDetail().getNode()
+                        .getAttributes().item(i);
+                if (difference.getTestNodeDetail().getValue()
+                        .equals(tmp.getLocalName())) {
+                    // this is the attribute in question
+                    attr = tmp;
+                    break;
+                }
+            }
+
+            if (attr != null) {
+                String uri = attr.getNamespaceURI();
+                if (uri != null
+                        && difference.getControlNodeDetail().getNode()
+                                .getOwnerDocument().lookupNamespaceURI(uri) == null) {
+                    // So the control document does not have this namespace
+                    // that the test doc does => OK to ignore.
+                    return true;
+                }
+            }
+        } catch (NullPointerException e) {
+            // Assume because the namespace scenario we are looking for is
+            // not cause of difference and report it
+        }
+
+        return false;
+    }
 
 	/**
 	 * Ignores all differences caused by an ignored attribute (see {@link DiffConfiguration#getIgnoredAttributes()}
@@ -409,7 +463,8 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 			String namespace = helper.getNamespaceOfAttribute(attrName, node.getAttributes());
 			if (namespace != null && ignoredNamespacesInAttributes.contains(namespace)){
 				//add attribute name to ignored attributes so that a difference in attribute numbers can be caught later on
-				getIgnoredAttributesForNode(node).add(attrName);
+                getAttributeSetForNode(node, ignoredAttributesMap)
+                        .add(attrName);
 				return true;
 			}
 				
@@ -427,6 +482,36 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 		return isCausedByAttribute(difference, true);
 	}
 
+    /**
+     * Ignores all differences when the test model has added optional attributes
+     * missing from the reference.
+     * 
+     * @param difference
+     * @return
+     */
+    protected boolean isCausedByAddingDefaultAttribute(Difference difference) {
+        if (difference.getId() == DifferenceConstants.ATTR_NAME_NOT_FOUND_ID) {
+            // ignore attributes belonging to a certain namespace
+            String attrName = difference.getControlNodeDetail().getValue();
+            String testAttrName = difference.getTestNodeDetail().getValue();
+            Node node;
+            if (attrName == null || attrName.equals(ATTR_NULL)) {
+                node = helper.getDocumentNode(difference,
+                        XmlDiffDocumentType.TEST, false);
+            } else {
+                node = helper.getDocumentNode(difference,
+                        XmlDiffDocumentType.CONTROL, false);
+            }
+            Set<String> defaultedAttributesForNode = getAttributeSetForNode(
+                    node, defaultAttributesMap);
+            for (String string : defaultedAttributesForNode) {
+                if (testAttrName.equals(string)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
 	protected boolean isCausedByAttribute(Difference difference, boolean isOptional) {
 		if (difference.getId() != DifferenceConstants.ATTR_NAME_NOT_FOUND_ID
@@ -454,7 +539,8 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 				if (node != null){
 //					String attributeName = difference.getControlNodeDetail().getNode().getNodeName();
 					String attributeName = XPathUtil.getAttributeNameFromXPath(difference.getControlNodeDetail().getXpathLocation());
-					if (getIgnoredAttributesForNode(node).contains(attributeName)) {
+                    if (getAttributeSetForNode(node, ignoredAttributesMap)
+                            .contains(attributeName)) {
 						return true;
 					}
 				}
@@ -465,9 +551,11 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 			}
 
 			if (isOptional) {
-				attributeSet = getOptionalAttributesForNode(node);
+                attributeSet = getAttributeSetForNode(node,
+                        optionalAttributesMap);
 			} else {
-				attributeSet = getIgnoredAttributesForNode(node);
+                attributeSet = getAttributeSetForNode(node,
+                        ignoredAttributesMap);
 			}
 
 			switch (difference.getId()) {
@@ -586,6 +674,20 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 		// add same test for testNode if blacklisted nodes are not ignored
 	}
 
+    /**
+     * Ignore an error that summarises errors in children that are reported
+     * separately.
+     * 
+     * @see https://github.com/bpmn-miwg/bpmn-miwg-tools/issues/10
+     * @param difference
+     * @return
+     */
+    protected boolean isRedundantSummaryError(Difference difference) {
+        if ("number of element attributes".equals(difference.getDescription())) {
+            return true;
+        }
+        return false;
+    }
 
 	// **************************************************************************************
 	// Helper methods
@@ -627,12 +729,6 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 		 	canAttributeBeIgnored(attrName, attrValue);
 	}
 	
-	protected Set<String> getIgnoredAttributesForNode(Node node) {
-		return getAttributeSetForNode(node, ignoredAttributesMap);
-	}
-	protected Set<String> getOptionalAttributesForNode(Node node) {
-		return getAttributeSetForNode(node, optionalAttributesMap);
-	}
 	private Set<String> getAttributeSetForNode(Node node, Map<Node, Set<String>> nodeToAttributesMap) {
 		Set<String> attributeNames = nodeToAttributesMap.get(node);
 

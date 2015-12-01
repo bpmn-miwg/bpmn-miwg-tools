@@ -33,6 +33,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class BpmnCompareConfiguration {
 
+    private String[] defaultAttributes;
 	private String[] ignoredNodes;
 	private String[] ignoredAttributes;
 	private String[] idsAndIdRefs;
@@ -61,6 +62,13 @@ public class BpmnCompareConfiguration {
 	}
 
 	/* Getter & Setter */
+    public String[] getDefaultAttributes() {
+        return defaultAttributes;
+    }
+
+    public void setDefaultAttributes(String[] defaultAttributes) {
+        this.defaultAttributes = defaultAttributes;
+    }
 
 	public String[] getIgnoredNodes() {
 		return ignoredNodes;

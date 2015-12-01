@@ -37,6 +37,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 public class Bpmn20DiffConfiguration extends XmlDiffConfiguration {
 	
 	//@formatter:off
+    private static String[] defaultAttributes;
 	private static String[] ignoredNodes;
 	private static String[] ignoredAttributes;
 	private static String[] idsAndIdRefs;
@@ -73,12 +74,14 @@ public class Bpmn20DiffConfiguration extends XmlDiffConfiguration {
 	private static final ElementsPrefixMatcher	prefixMatcher					= new Bpmn20ElementsPrefixMatcher();
 	
 	public Bpmn20DiffConfiguration() {
-		super(ignoredNodes, ignoredAttributes, optionalAttributes,
+        super(defaultAttributes, ignoredNodes, ignoredAttributes,
+                optionalAttributes,
 				idsAndIdRefs, null, null, null, prefixMatcher,
 				defaultAttributeValueRegexes);
 	}
 	
 	public static void setConf(BpmnCompareConfiguration conf) {
+        defaultAttributes = conf.getDefaultAttributes();
 		ignoredNodes = conf.getIgnoredNodes();
 		ignoredAttributes = conf.getIgnoredAttributes();
 		optionalAttributes = conf.getOptionalAttributes();
