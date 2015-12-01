@@ -1,16 +1,13 @@
 package org.omg.bpmn.miwg.api;
 
 import java.io.File;
-import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.util.Collection;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
 import org.omg.bpmn.miwg.api.tools.AnalysisTool;
 
-@SuppressWarnings("unused")
 public class AnalysisRun {
 
 	private AnalysisJob job;
@@ -100,7 +97,7 @@ public class AnalysisRun {
 			}
 		}
 
-		sb.append(System.lineSeparator());
+        sb.append(System.getProperty("line.separator"));
 
 		return sb.toString();
 	}

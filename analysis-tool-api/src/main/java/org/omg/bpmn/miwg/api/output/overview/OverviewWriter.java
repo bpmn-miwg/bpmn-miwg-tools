@@ -144,9 +144,9 @@ public class OverviewWriter {
 			sb.append(String.format("  %11s", toolClass.newInstance().getName()));
 		}
 
-		sb.append(System.lineSeparator());
+        sb.append(System.getProperty("line.separator"));
 		sb.append(StringUtil.generateCharacters(109, '='));
-		sb.append(System.lineSeparator());
+        sb.append(System.getProperty("line.separator"));
 
 		for (AnalysisRun run : runs) {
 			sb.append(run.buildOverviewFragmentTxt(folder, sortedTools));
