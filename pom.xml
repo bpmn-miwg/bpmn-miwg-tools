@@ -5,7 +5,7 @@
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>tools</artifactId>
   <packaging>pom</packaging>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.3</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
@@ -85,6 +85,7 @@
     <github.global.server>github</github.global.server>
     <!-- staging area for subsequent commit and push -->
     <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
+    <bpmn.miwg.tools.version>${project.version}</bpmn.miwg.tools.version>
   </properties>
 
   <repositories>

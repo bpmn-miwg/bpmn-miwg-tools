@@ -7,7 +7,7 @@
   <parent>
     <groupId>org.omg.bpmn.miwg</groupId>
     <artifactId>tools</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.3</version>
     <relativePath>..</relativePath>
   </parent>
 
@@ -18,7 +18,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.7</java.version>
-    <bpmn.miwg.tools.version>0.3-SNAPSHOT</bpmn.miwg.tools.version>
   </properties>
   
   <dependencies>
