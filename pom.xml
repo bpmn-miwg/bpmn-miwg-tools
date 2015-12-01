@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>tools-github-pages</artifactId>
-  <version>0.2-SNAPSHOT</version>
+  <version>0.4-SNAPSHOT</version>
   <name>BPMN MIWG Tools GitHub Pages</name>
   <description>Aggregates test results and tool reports</description>
   <packaging>jar</packaging>
