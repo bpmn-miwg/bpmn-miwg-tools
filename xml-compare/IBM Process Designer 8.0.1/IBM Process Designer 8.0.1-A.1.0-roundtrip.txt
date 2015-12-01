@@ -3,8 +3,6 @@ ANALYSIS: IBM Process Designer 8.0.1-A.1.0-roundtrip (Tool: xml-compare)
 Test: /definitions[1] = null
   Reference: /definitions[1]/@targetNamespace = http://www.trisotech.com/definitions/_1373649849716
 Test: /definitions[1]/@targetNamespace = http://A.1.0/Initial Import/Process
-  Reference: /definitions[1] = null
-Test: /definitions[1] = version
   Reference: /definitions[1] = 2
 Test: /definitions[1] = 1
   Reference: /definitions[1]/process[1] = semantic:process

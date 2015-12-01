@@ -1,18 +1,8 @@
 ANALYSIS: Yaoqiang BPMN Editor 4.0-A.3.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1] = null
-Test: /definitions[1] = typeLanguage
   Reference: /definitions[1] = [attribute absent]
 Test: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd
-  Reference: /definitions[1]/process[1] = 2
-Test: /definitions[1]/process[1] = 4
-  Reference: /definitions[1]/process[1] = null
-Test: /definitions[1]/process[1] = isClosed
-  Reference: /definitions[1]/process[1] = null
-Test: /definitions[1]/process[1] = processType
   Reference: /definitions[1]/process[1] = 18
 Test: /definitions[1]/process[1] = 19
-  Reference: /definitions[1]/process[1]/startEvent[1] = 2
-Test: /definitions[1]/process[1]/startEvent[1] = 4
   Reference: /definitions[1]/process[1]/startEvent[1] = null
 Test: /definitions[1]/process[1]/startEvent[1] = isInterrupting
   Reference: /definitions[1]/process[1]/startEvent[1] = null

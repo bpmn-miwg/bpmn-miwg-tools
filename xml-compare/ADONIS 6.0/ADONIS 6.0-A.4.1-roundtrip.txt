@@ -3,8 +3,6 @@ ANALYSIS: ADONIS 6.0-A.4.1-roundtrip (Tool: xml-compare)
 Test: /definitions[1]/@targetNamespace = http://www.omg.org/bpmn20
   Reference: /definitions[1] = null
 Test: /definitions[1] = name
-  Reference: /definitions[1]/collaboration[1] = 1
-Test: /definitions[1]/collaboration[1] = 3
   Reference: /definitions[1]/collaboration[1] = null
 Test: /definitions[1]/collaboration[1] = isClosed
   Reference: /definitions[1]/collaboration[1] = null
