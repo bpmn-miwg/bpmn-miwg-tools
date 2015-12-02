@@ -148,7 +148,8 @@
     "config": {
         "url_pattern": {
             "file": "https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/{TOOLURL}/{FILEURL}.{FILEEXT}",
-            "folder": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/tree/master/{TOOLURL}"
+            "folder": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/tree/master/{TOOLURL}",
+            "boundsFolder": "https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/Reference/Bounds"
         }
     }
 }
