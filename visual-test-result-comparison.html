@@ -88,7 +88,7 @@ function loadJSON() {
 
               var nav = $("<ul class='nav nav-pills'/>").appendTo(refDiv);
 
-              $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURI(png_url) + "&overlayFolder=" + encodeURI(url_pattern.boundsFolder)+"&variation=" + encodeURI(variation.variation) + "&title=Reference%20" + variation.variation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
+              $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(variation.variation) + "&title=Reference%20" + variation.variation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
               $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
               $("<li><a href='" + folder_url + "' target='_blank'>Reference folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
 
@@ -163,7 +163,7 @@ function toolSelected() {
 
       var nav = $("<ul class='nav nav-pills'/>").appendTo(div);
 
-      $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURI(png_url) + "&overlayFolder=" + encodeURI(url_pattern.boundsFolder)+"&variation=" + encodeURI(referenceVariation) + "&title=" + type + "%20" + referenceVariation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
+      $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(referenceVariation) + "&title=" + type + "%20" + referenceVariation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
       $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
       $("<li><a href='" + folder_url + "' target='_blank'>Results folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
 
