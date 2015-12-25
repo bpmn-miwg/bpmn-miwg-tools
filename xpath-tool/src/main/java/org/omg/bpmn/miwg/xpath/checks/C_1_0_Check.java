@@ -4,6 +4,7 @@ import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 import org.omg.bpmn.miwg.xpath.util.Direction;
 import org.w3c.dom.Node;
 
+
 public class C_1_0_Check extends AbstractXpathCheck {
 
 	@Override

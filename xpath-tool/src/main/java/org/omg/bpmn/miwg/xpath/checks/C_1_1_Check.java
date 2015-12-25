@@ -1,5 +1,6 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
+
 import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 import org.w3c.dom.Node;
 
