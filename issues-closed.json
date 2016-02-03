@@ -1,6 +1,55 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/548",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/548/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/548/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/548/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/548",
+    "id": 122524359,
+    "number": 548,
+    "title": "Sequence flows labels position updated",
+    "user": {
+      "login": "benmichel",
+      "id": 8003851,
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/benmichel",
+      "html_url": "https://github.com/benmichel",
+      "followers_url": "https://api.github.com/users/benmichel/followers",
+      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
+      "organizations_url": "https://api.github.com/users/benmichel/orgs",
+      "repos_url": "https://api.github.com/users/benmichel/repos",
+      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/benmichel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2015-12-16T15:10:13Z",
+    "updated_at": "2015-12-16T15:10:21Z",
+    "closed_at": "2015-12-16T15:10:21Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/548",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/548",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/548.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/548.patch"
+    },
+    "body": "labels for sequence flows are now rightly placed"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/528",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/528/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/528/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/528/events",
@@ -74,6 +123,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/523",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/523/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/523/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/523/events",
@@ -121,6 +171,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/522/events",
@@ -168,6 +219,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/521/events",
@@ -215,6 +267,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/500/events",
@@ -262,6 +315,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/499",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/499/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/499/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/499/events",
@@ -317,6 +371,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/498/events",
@@ -364,6 +419,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/489",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/489/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/489/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/489/events",
@@ -411,6 +467,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/487/events",
@@ -461,6 +518,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/486/events",
@@ -516,6 +574,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/485/events",
@@ -589,6 +648,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/484/events",
@@ -662,6 +722,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/480",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/480/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/480/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/480/events",
@@ -707,6 +768,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/473",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/473/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/473/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/473/events",
@@ -754,6 +816,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/472",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/472/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/472/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/472/events",
@@ -801,6 +864,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/470",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/470/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/470/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/470/events",
@@ -848,6 +912,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/463",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/463/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/463/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/463/events",
@@ -895,6 +960,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/462",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/462/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/462/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/462/events",
@@ -942,6 +1008,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/461/events",
@@ -992,6 +1059,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/457",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/457/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/457/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/457/events",
@@ -1033,6 +1101,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/456",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/456/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/456/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/456/events",
@@ -1083,6 +1152,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/455",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/455/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/455/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/455/events",
@@ -1130,6 +1200,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/454",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/454/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/454/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/454/events",
@@ -1177,6 +1248,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/448",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/448/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/448/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/448/events",
@@ -1224,6 +1296,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/442",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/442/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/442/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/442/events",
@@ -1279,6 +1352,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/441",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/441/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/441/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/441/events",
@@ -1326,6 +1400,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/440",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/440/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/440/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/440/events",
@@ -1373,6 +1448,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/436",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/436/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/436/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/436/events",
@@ -1428,6 +1504,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/431/events",
@@ -1478,6 +1555,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/415",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/415/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/415/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/415/events",
@@ -1519,6 +1597,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/413",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/413/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/413/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/413/events",
@@ -1560,6 +1639,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/412",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/412/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/412/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/412/events",
@@ -1601,6 +1681,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/410",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/410/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/410/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/410/events",
@@ -1648,6 +1729,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/409",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/409/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/409/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/409/events",
@@ -1695,6 +1777,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/368",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/368/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/368/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/368/events",
@@ -1745,6 +1828,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/337",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/337/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/337/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/337/events",
@@ -1792,6 +1876,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/336",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/336/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/336/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/336/events",
@@ -1839,6 +1924,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/335",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/335/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/335/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/335/events",
@@ -1880,6 +1966,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/334",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/334/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/334/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/334/events",
@@ -1927,6 +2014,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/329",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/329/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/329/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/329/events",
@@ -1974,6 +2062,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/328",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/328/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/328/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/328/events",
@@ -2021,6 +2110,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/327",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/327/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/327/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/327/events",
@@ -2062,6 +2152,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/326",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/326/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/326/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/326/events",
@@ -2117,6 +2208,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/325",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/325/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/325/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/325/events",
@@ -2177,6 +2269,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/324",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/324/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/324/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/324/events",
@@ -2237,6 +2330,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/323",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/323/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/323/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/323/events",
@@ -2292,6 +2386,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/322",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/322/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/322/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/322/events",
@@ -2357,6 +2452,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/321",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/321/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/321/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/321/events",
@@ -2417,6 +2513,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/320",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/320/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/320/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/320/events",
@@ -2492,6 +2589,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/319",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/319/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/319/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/319/events",
@@ -2562,6 +2660,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/318",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/318/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/318/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/318/events",
@@ -2652,6 +2751,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/317",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/317/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/317/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/317/events",
@@ -2699,6 +2799,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/301",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/301/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/301/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/301/events",
@@ -2759,6 +2860,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/300",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/300/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/300/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/300/events",
@@ -2829,6 +2931,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/295",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/295/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/295/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/295/events",
@@ -2897,6 +3000,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/294",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/294/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/294/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/294/events",
@@ -2965,6 +3069,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/293",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/293/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/293/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/293/events",
@@ -3033,6 +3138,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/292",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/292/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/292/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/292/events",
@@ -3080,6 +3186,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/273",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/273/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/273/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/273/events",
@@ -3148,6 +3255,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/272",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/272/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/272/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/272/events",
@@ -3195,6 +3303,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/270",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/270/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/270/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/270/events",
@@ -3242,6 +3351,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/266",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/266/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/266/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/266/events",
@@ -3289,6 +3399,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/260",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/260/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/260/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/260/events",
@@ -3336,6 +3447,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/259",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/259/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/259/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/259/events",
@@ -3383,6 +3495,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/254",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/254/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/254/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/254/events",
@@ -3438,6 +3551,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/246",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/246/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/246/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/246/events",
@@ -3511,6 +3625,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/245",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/245/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/245/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/245/events",
@@ -3589,6 +3704,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/242",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/242/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/242/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/242/events",
@@ -3667,6 +3783,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/241",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/241/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/241/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/241/events",
@@ -3755,6 +3872,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/240",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/240/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/240/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/240/events",
@@ -3828,6 +3946,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/237",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/237/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/237/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/237/events",
@@ -3901,6 +4020,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/218/events",
@@ -3971,6 +4091,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/216",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/216/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/216/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/216/events",
@@ -4026,6 +4147,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/215",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/215/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/215/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/215/events",
@@ -4086,6 +4208,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/213",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/213/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/213/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/213/events",
@@ -4141,6 +4264,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/206",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/206/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/206/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/206/events",
@@ -4188,6 +4312,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/205",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/205/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/205/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/205/events",
@@ -4235,6 +4360,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/203",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/203/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/203/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/203/events",
@@ -4303,6 +4429,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/202",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/202/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/202/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/202/events",
@@ -4344,6 +4471,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/199",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/199/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/199/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/199/events",
@@ -4391,6 +4519,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/196",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/196/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/196/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/196/events",
@@ -4438,6 +4567,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/195",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/195/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/195/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/195/events",
@@ -4506,6 +4636,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/194",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/194/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/194/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/194/events",
@@ -4556,6 +4687,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/193",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/193/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/193/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/193/events",
@@ -4624,6 +4756,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/192",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/192/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/192/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/192/events",
@@ -4692,6 +4825,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/191",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/191/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/191/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/191/events",
@@ -4739,6 +4873,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/190",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/190/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/190/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/190/events",
@@ -4804,6 +4939,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/189",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/189/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/189/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/189/events",
@@ -4845,6 +4981,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/188",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/188/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/188/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/188/events",
@@ -4891,7 +5028,77 @@
     "body": ""
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
+    "id": 36060863,
+    "number": 187,
+    "title": "Reference A.2.1 Provide test case with different kinds of Sequence Flows",
+    "user": {
+      "login": "apupier",
+      "id": 1105127,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1105127?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/apupier",
+      "html_url": "https://github.com/apupier",
+      "followers_url": "https://api.github.com/users/apupier/followers",
+      "following_url": "https://api.github.com/users/apupier/following{/other_user}",
+      "gists_url": "https://api.github.com/users/apupier/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/apupier/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/apupier/subscriptions",
+      "organizations_url": "https://api.github.com/users/apupier/orgs",
+      "repos_url": "https://api.github.com/users/apupier/repos",
+      "events_url": "https://api.github.com/users/apupier/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/apupier/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
+        "name": "Test: A.2.1",
+        "color": "006b75"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": {
+      "login": "benmichel",
+      "id": 8003851,
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/benmichel",
+      "html_url": "https://github.com/benmichel",
+      "followers_url": "https://api.github.com/users/benmichel/followers",
+      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
+      "organizations_url": "https://api.github.com/users/benmichel/orgs",
+      "repos_url": "https://api.github.com/users/benmichel/repos",
+      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/benmichel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 9,
+    "created_at": "2014-06-19T09:02:48Z",
+    "updated_at": "2016-01-20T19:39:14Z",
+    "closed_at": "2016-01-20T19:39:14Z",
+    "body": "As mentioned in Table 12.35, we could provide sample for:\r\n- (\"normal\") Sequence Flow\r\n- Default Sequence Flow\r\n- Conditional Sequence Flow\r\n\r\nUse case where I detected an interchange incompatibility:\r\nIf no conditionExpression set on a Sequence Flow and the Sequence Flow is not marked as default on outgoing reference of Task/Gateways, the Sequence Flow is  a \"normal\" Sequence Flow. It seems that some tools are considering it as \"Default Sequence Flow\" (itp Commerce, Trisotech and Signavio... I'm feeling alone :s). I think that the *default* attribute on preceding Task/Gateway is missing.\r\nWhy I want to make the difference? I want to keep the condition defined by user even if it is ignored in order that if he is not sure between default and a condition he can switch easily from one to another as we kept the conditionExpression.\r\n\r\nBased on the specification the right behavior seems to ignore the conditionExpression and be based only on the default attribute to detect Default Sequence Flow:\r\nTable 10.3, 10.123, 10.124, 10.125 on default attribute:\r\n> The Sequence Flow that will receive a token when none of the conditionExpressions on  other outgoing Sequence Flows evaluate to true. The default Sequence Flow should not have a conditionExpression. Any such Expression SHALL be ignored.\r\n\r\nI\r\n![diagramtotestdefaultsequenceflowwithcondition-1 0](https://cloud.githubusercontent.com/assets/1105127/3325776/c7c3b756-f793-11e3-84fb-cfe92abb727d.png)\r\n\r\n>     <model:exclusiveGateway id=\"_jDY8EPeREeO2W5WJKwzkfQ\" name=\"Gateway1\" default=\"_7WRGkPeQEeO2W5WJKwzkfQ\"/><model:sequenceFlow id=\"_7WRGkPeQEeO2W5WJKwzkfQ\" name=\"\" sourceRef=\"_jDY8EPeREeO2W5WJKwzkfQ\" targetRef=\"_7TL9YPeQEeO2W5WJKwzkfQ\">      <model:conditionExpression xsi:type=\"model:tFormalExpression\" id=\"_kZ1xofeREeO2W5WJKwzkfQ\" evaluatesToTypeRef=\"java:java.lang.Boolean\">true</model:conditionExpression>    </model:sequenceFlow>\r\n\r\nThe litigious case is in green and I put my understanding of the right value:\r\n![issue187bpmn-sequenceflowdefaultconditional](https://cloud.githubusercontent.com/assets/1105127/3384803/0732240a-fc61-11e3-925a-a91e1cd3905a.png)\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/185",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/185/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/185/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/185/events",
@@ -4939,6 +5146,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/182/events",
@@ -4980,6 +5188,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/181/events",
@@ -5030,6 +5239,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/180",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/180/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/180/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/180/events",
@@ -5095,6 +5305,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/179/events",
@@ -5140,6 +5351,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/178/events",
@@ -5213,6 +5425,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/177/events",
@@ -5263,6 +5476,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/171",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/171/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/171/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/171/events",
@@ -5348,6 +5562,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/164",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/164/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/164/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/164/events",
@@ -5395,6 +5610,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/157",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/157/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/157/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/157/events",
@@ -5442,6 +5658,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/156",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/156/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/156/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/156/events",
@@ -5489,6 +5706,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/155",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/155/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/155/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/155/events",
@@ -5536,6 +5754,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/153",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/153/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/153/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/153/events",
@@ -5583,6 +5802,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/152",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/152/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/152/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/152/events",
@@ -5630,6 +5850,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/151",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/151/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/151/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/151/events",
@@ -5677,6 +5898,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/150",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/150/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/150/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/150/events",
@@ -5724,6 +5946,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/144",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/144/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/144/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/144/events",
@@ -5771,6 +5994,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/142",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/142/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/142/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/142/events",
@@ -5844,6 +6068,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/136/events",
@@ -5927,6 +6152,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/135",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/135/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/135/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/135/events",
@@ -5974,6 +6200,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/129",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/129/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/129/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/129/events",
@@ -6034,6 +6261,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/128",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/128/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/128/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/128/events",
@@ -6094,6 +6322,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/127",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/127/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/127/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/127/events",
@@ -6141,6 +6370,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/126",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/126/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/126/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/126/events",
@@ -6188,6 +6418,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/125",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/125/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/125/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/125/events",
@@ -6235,6 +6466,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/119",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/119/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/119/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/119/events",
@@ -6290,6 +6522,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/118",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/118/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/118/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/118/events",
@@ -6335,6 +6568,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/116",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/116/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/116/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/116/events",
@@ -6390,6 +6624,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/114",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/114/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/114/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/114/events",
@@ -6437,6 +6672,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/113",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/113/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/113/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/113/events",
@@ -6492,6 +6728,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/112",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/112/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/112/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/112/events",
@@ -6539,6 +6776,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/110",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/110/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/110/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/110/events",
@@ -6594,6 +6832,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/109",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/109/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/109/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/109/events",
@@ -6641,6 +6880,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/108",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/108/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/108/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/108/events",
@@ -6688,6 +6928,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/106",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/106/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/106/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/106/events",
@@ -6756,6 +6997,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/105",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/105/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/105/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/105/events",
@@ -6824,6 +7066,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/104",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/104/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/104/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/104/events",
@@ -6897,6 +7140,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/103",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/103/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/103/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/103/events",
@@ -6944,6 +7188,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/102",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/102/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/102/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/102/events",
@@ -7017,6 +7262,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/101",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/101/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/101/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/101/events",
@@ -7090,6 +7336,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/97",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/97/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/97/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/97/events",
@@ -7158,6 +7405,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/81",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/81/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/81/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/81/events",
@@ -7226,6 +7474,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/80",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/80/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/80/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/80/events",
@@ -7281,6 +7530,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/77",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/77/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/77/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/77/events",
@@ -7336,6 +7586,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/76",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/76/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/76/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/76/events",
@@ -7391,6 +7642,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/75",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/75/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/75/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/75/events",
@@ -7438,6 +7690,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/58",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/58/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/58/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/58/events",
@@ -7503,6 +7756,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/57",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/57/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/57/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/57/events",
@@ -7571,6 +7825,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/55",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/55/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/55/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/55/events",
@@ -7621,6 +7876,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/50",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/50/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/50/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/50/events",
@@ -7668,6 +7924,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/49",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/49/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/49/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/49/events",
@@ -7728,6 +7985,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/48",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/48/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/48/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/48/events",
@@ -7788,6 +8046,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/46",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/46/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/46/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/46/events",
@@ -7843,6 +8102,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/45",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/45/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/45/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/45/events",
@@ -7898,6 +8158,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/44",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/44/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/44/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/44/events",
@@ -7945,6 +8206,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/41",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/41/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/41/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/41/events",
@@ -8010,6 +8272,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/40",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/40/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/40/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/40/events",
@@ -8075,6 +8338,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/39",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/39/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/39/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/39/events",
@@ -8140,6 +8404,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/37",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/37/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/37/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/37/events",
@@ -8205,6 +8470,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/36",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/36/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/36/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/36/events",
@@ -8252,6 +8518,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/32",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/32/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/32/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/32/events",
@@ -8317,6 +8584,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/31",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/31/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/31/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/31/events",
@@ -8385,6 +8653,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/30",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/30/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/30/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/30/events",
@@ -8453,6 +8722,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/26",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/26/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/26/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/26/events",
@@ -8546,6 +8816,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/25",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/25/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/25/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/25/events",
@@ -8609,6 +8880,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/22",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/22/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/22/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/22/events",
@@ -8656,6 +8928,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/19",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/19/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/19/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/19/events",
@@ -8703,6 +8976,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/18",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/18/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/18/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/18/events",
@@ -8768,6 +9042,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/17",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/17/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/17/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/17/events",
@@ -8809,6 +9084,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/16",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/16/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/16/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/16/events",
@@ -8854,6 +9130,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/15",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/15/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/15/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/15/events",
@@ -8899,6 +9176,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/14",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/14/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/14/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/14/events",
@@ -8944,6 +9222,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/13",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/13/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/13/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/13/events",
@@ -8991,6 +9270,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/12",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/12/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/12/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/12/events",
@@ -9036,6 +9316,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/11",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/11/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/11/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/11/events",
@@ -9081,6 +9362,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/10",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/10/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/10/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/10/events",
@@ -9126,6 +9408,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/9",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/9/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/9/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/9/events",
@@ -9173,6 +9456,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/8",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/8/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/8/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/8/events",
@@ -9218,6 +9502,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/7",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/7/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/7/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/7/events",
@@ -9286,6 +9571,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/6",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/6/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/6/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/6/events",
@@ -9333,6 +9619,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/5",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/5/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/5/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/5/events",
@@ -9380,6 +9667,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/4",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/4/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/4/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/4/events",
@@ -9427,6 +9715,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/3",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/3/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/3/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/3/events",
@@ -9492,6 +9781,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/2",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/2/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/2/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/2/events",
@@ -9555,6 +9845,7 @@
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/1",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/1/labels{/name}",
     "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/1/comments",
     "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/1/events",
