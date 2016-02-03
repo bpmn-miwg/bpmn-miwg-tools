@@ -3,6 +3,7 @@ package org.omg.bpmn.miwg.cli;
 import java.io.File;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
 import org.omg.bpmn.miwg.api.Variant;
 import org.omg.bpmn.miwg.api.input.FileAnalysisInput;
@@ -35,6 +36,7 @@ public class CLI2 {
 		String testCaseName = BpmnFileScanner.inferTestName(inputFile);
 		Variant variant = BpmnFileScanner.inferMiwgVariant(inputFile);
 
+		System.out.println(String.format("Input    : %s", inputFileName));
 		System.out.println(String.format("Test Case: %s", testCaseName));
 		System.out.println(String.format("Variant  : %s", variant.toString()));
 
@@ -42,7 +44,6 @@ public class CLI2 {
 			AnalysisJob job = new AnalysisJob(applicationName, testCaseName,
 					variant, new FileAnalysisInput(inputFile));
 			job.disableXmlCompare();
-
 			AnalysisFacade.executeAnalysisJob(job);
 
 		} catch (ReferenceNotFoundException e) {
