@@ -104,6 +104,7 @@
     <module>xpath-tool</module>
     <module>schema-tool</module>
     <module>bpmn-miwg-maven-plugin</module>
+	<module>cli</module>
   </modules>
 
   <dependencies>

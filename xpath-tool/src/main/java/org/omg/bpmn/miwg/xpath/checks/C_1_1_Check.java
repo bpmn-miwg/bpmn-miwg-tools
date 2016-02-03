@@ -40,7 +40,7 @@ public class C_1_1_Check extends AbstractXpathCheck {
 					"Invoice approved?");
 
 			{
-				navigateFollowingElement("bpmn:userTask", "Rechnung klären",
+				navigateFollowingElement("bpmn:userTask", "Rechnung kl\u00e4ren",
 						"no");
 
 				Node n2 = navigateFollowingElement("bpmn:exclusiveGateway",
