@@ -87,17 +87,6 @@
     <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
   </properties>
 
-  <repositories>
-    <repository>
-      <id>bpmn-miwg-tools-mvn-repo</id>
-      <url>https://raw.github.com/bpmn-miwg/bpmn-miwg-tools/mvn-repo/</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-      </snapshots>
-    </repository>
-  </repositories>
-
   <modules>
     <module>analysis-tool-api</module>
     <module>xml-compare-tool</module>
@@ -127,12 +116,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <!-- TODO required only by xml-compare so should prob not be here
-    <dependency>
-      <groupId>xmlunit</groupId>
-      <artifactId>xmlunit</artifactId>
-      <version>1.3</version>
-    </dependency>-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
@@ -161,25 +144,7 @@
           <artifactId>maven-scm-publish-plugin</artifactId>
           <version>1.0-beta-2</version>
         </plugin>
-		<plugin>
-			<artifactId>maven-assembly-plugin</artifactId>
-			<version>2.2-beta-2</version>
-			<executions>
-				<execution>
-					<id>create-project-bundle</id>
-					<phase>package</phase>
-					<goals>
-						<goal>single</goal>
-					</goals>
-					<configuration>
-						<descriptorRefs>
-							<descriptorRef>project</descriptorRef>
-						</descriptorRefs>
-					</configuration>
-				</execution>
-			</executions>
-			</plugin>
-		</plugins>
+	  </plugins>
     </pluginManagement>
     
     <plugins>
@@ -191,13 +156,6 @@
           <target>${java.version}</target>
         </configuration>
         <version>2.3.2</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.8.1</version>
-        <configuration>
-          <altDeploymentRepository>internal.repo::default::${local-mvn-repo.snapshot.directory}</altDeploymentRepository>
-        </configuration>
       </plugin>
     </plugins>
 

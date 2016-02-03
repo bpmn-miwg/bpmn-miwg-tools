@@ -83,7 +83,7 @@ public class ModelInterchangeMojoTest {
 			// folders of vendors listed in tools-tested-by-miwg.json
             // At time of writing this includes W4 & camunda but excludes
             // bpmn.io
-            assertEquals(20, nodes.getLength());
+            assertEquals(8, nodes.getLength());
 
 			// report files for each tool
 			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER_NAME,
