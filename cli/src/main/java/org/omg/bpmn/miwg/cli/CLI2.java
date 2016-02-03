@@ -23,7 +23,7 @@ public class CLI2 {
 		File inputFile = new File(inputFileName);
 
 		if (!inputFile.isFile()) {
-			System.out.println("There is no file %s");
+			System.out.println(String.format("There is no file %s", inputFileName));
 			return;
 		}
 
