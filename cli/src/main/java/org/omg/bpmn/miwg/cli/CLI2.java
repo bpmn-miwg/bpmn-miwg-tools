@@ -1,6 +1,7 @@
 package org.omg.bpmn.miwg.cli;
 
 import java.io.File;
+import java.util.Arrays;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
@@ -11,38 +12,52 @@ import org.omg.bpmn.miwg.scan.BpmnFileScanner;
 
 public class CLI2 {
 
+	private static void printUsage(String[] args) {
+		System.out
+				.println("Please specify the file name using the schema application-testcase-variant.bpmn");
+		System.out
+				.println("Given: " + Arrays.toString(args));
+	}
+
 	public static void main(String[] args) {
-		if (args.length != 2) {
-			System.out.println("Parameters: InputFile.bpmn ApplicationName");
+		if (args.length != 1) {
+			printUsage(args);
 			return;
 		}
-
 		String inputFileName = args[0];
-		String applicationName = args[1];
-
 		File inputFile = new File(inputFileName);
 
+		String[] parts = inputFile.getName().split("-");
+		if (parts.length != 3) {
+			printUsage(args);
+			return;
+		}
+
+		String applicationName = parts[0];
+		String testCaseName = parts[1];
+		String variantName = parts[2];
+
+
 		if (!inputFile.isFile()) {
-			System.out.println(String.format("There is no file %s", inputFileName));
+			System.out.println(String.format("There is no file %s",
+					inputFileName));
 			return;
 		}
 
-		if (applicationName.isEmpty()) {
-			System.out.println("No application name specified");
-			return;
-		}
+		String testCase = testCaseName.toUpperCase();
+		Variant variant = BpmnFileScanner.inferMiwgVariant(variantName);
 
-		String testCaseName = BpmnFileScanner.inferTestName(inputFile);
-		Variant variant = BpmnFileScanner.inferMiwgVariant(inputFile);
-
-		System.out.println(String.format("Input    : %s", inputFileName));
-		System.out.println(String.format("Test Case: %s", testCaseName));
-		System.out.println(String.format("Variant  : %s", variant.toString()));
+		System.out.println(String.format("Input      : %s", inputFileName));
+		System.out.println(String.format("Application: %s", applicationName));
+		System.out.println(String.format("Test Case  : %s", testCaseName));
+		System.out
+				.println(String.format("Variant    : %s", variant.toString()));
 
 		try {
-			AnalysisJob job = new AnalysisJob(applicationName, testCaseName,
+			AnalysisJob job = new AnalysisJob(applicationName, testCase,
 					variant, new FileAnalysisInput(inputFile));
 			job.disableXmlCompare();
+			job.disableReportWriting();
 			AnalysisFacade.executeAnalysisJob(job);
 
 		} catch (ReferenceNotFoundException e) {
@@ -52,9 +67,9 @@ public class CLI2 {
 		} catch (Exception e) {
 			System.out
 					.println(String.format("Error occured: %s", e.toString()));
+			e.printStackTrace();
 		}
 
 		return;
 	}
-
 }

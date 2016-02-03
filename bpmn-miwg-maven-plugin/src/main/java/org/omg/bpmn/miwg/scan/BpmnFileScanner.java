@@ -62,8 +62,7 @@ public class BpmnFileScanner {
 				List<TestResult> testResults = listTestResults(application.folder);
 				for (TestResult testResult : testResults) {
 					if (conf.acceptTestResult(testResult)) {
-						AnalysisJob job = new AnalysisJob(
-								application.fullName,
+						AnalysisJob job = new AnalysisJob(application.fullName,
 								inferTestName(testResult.file),
 								inferMiwgVariant(testResult.file),
 								new FileAnalysisInput(testResult.file));
@@ -81,7 +80,8 @@ public class BpmnFileScanner {
 		return application;
 	}
 
-	public static List<Application> listApplications(Collection<File> inputFolders) {
+	public static List<Application> listApplications(
+			Collection<File> inputFolders) {
 
 		class ApplicationDirFilter implements FileFilter {
 			@Override
@@ -123,10 +123,14 @@ public class BpmnFileScanner {
 
 	public static Variant inferMiwgVariant(File file) {
 		String fileName = file.getName().toLowerCase();
+		return inferMiwgVariant(fileName);
+	}
+
+	public static Variant inferMiwgVariant(String variantName) {
 		Variant variant = null;
-		if (fileName.contains(Variant.Roundtrip.toString().toLowerCase())) {
+		if (variantName.contains(Variant.Roundtrip.toString().toLowerCase())) {
 			variant = Variant.Roundtrip;
-		} else if (fileName.contains(Variant.Export.toString().toLowerCase())) {
+		} else if (variantName.contains(Variant.Export.toString().toLowerCase())) {
 			variant = Variant.Export;
 		} else {
 			variant = Variant.Reference;
