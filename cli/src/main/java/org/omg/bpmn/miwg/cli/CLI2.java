@@ -3,7 +3,6 @@ package org.omg.bpmn.miwg.cli;
 import java.io.File;
 
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
 import org.omg.bpmn.miwg.api.Variant;
 import org.omg.bpmn.miwg.api.input.FileAnalysisInput;
