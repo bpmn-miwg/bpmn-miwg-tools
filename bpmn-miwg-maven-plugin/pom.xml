@@ -2,18 +2,18 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>bpmn-miwg-maven-plugin</artifactId>
-  <packaging>maven-plugin</packaging>
   <parent>
     <groupId>org.omg.bpmn.miwg</groupId>
     <artifactId>tools</artifactId>
     <version>0.3-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
+  <artifactId>bpmn-miwg-maven-plugin</artifactId>
+  <packaging>maven-plugin</packaging>
 
   <name>BPMN MIWG Maven Plugin</name>
   <inceptionYear>2013</inceptionYear>
-  <description>Maven plugin to invoke tests on the BPMN test cases in this project. </description>
+  <description>Maven plugin to invoke tests on the BPMN test cases in this project.</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,36 +67,31 @@
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>schema-tool</artifactId>
       <version>${bpmn.miwg.tools.version}</version>
-    </dependency>    <dependency>
+    </dependency>
+    <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>analysis-tool-api</artifactId>
+      <version>${bpmn.miwg.tools.version}</version>
+    </dependency>
+	
+	<dependency>
       <groupId>org.glassfish</groupId>
       <artifactId>javax.json</artifactId>
       <version>1.0.4</version>
     </dependency>
     
-    <!-- Required at runtime for private testing -->
-    <dependency>
+    <!-- Required at runtime for private testing - REALLY? -->
+    <!--<dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>test-suite</artifactId>
       <version>0.2-SNAPSHOT</version>
       <scope>runtime</scope>
-    </dependency>
+    </dependency>-->
   </dependencies>
 
   <build>
-    <testResources>
-      <testResource>
-        <directory>${project.basedir}/src/test/resources</directory>
-      </testResource>
-      <testResource>
-        <filtering>false</filtering>
-        <directory>${project.basedir}/src/test/invalid-resources</directory>
-         <includes>
-          <!-- include only files that follow the naming conventions and are thus understood by the tools -->
-          <include>**/*.bpmn</include>
-          <include>**/*.png</include>
-        </includes>
-      </testResource>
-    </testResources>
+
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -134,7 +129,9 @@
     </plugins>
     <pluginManagement>
       <plugins>
-        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+
+	  
+		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
           <artifactId>lifecycle-mapping</artifactId>
@@ -163,44 +160,4 @@
       </plugins>
     </pluginManagement>
   </build>
-  <profiles>
-    <profile>
-      <id>run-its</id>
-      <build>
-
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-invoker-plugin</artifactId>
-            <version>1.7</version>
-            <configuration>
-              <debug>true</debug>
-              <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
-              <pomIncludes>
-                <pomInclude>*/pom.xml</pomInclude>
-              </pomIncludes>
-              <postBuildHookScript>verify</postBuildHookScript>
-              <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
-              <settingsFile>src/it/settings.xml</settingsFile>
-              <goals>
-                <goal>clean</goal>
-                <goal>test-compile</goal>
-              </goals>
-            </configuration>
-            <executions>
-              <execution>
-                <id>integration-test</id>
-                <goals>
-                  <goal>install</goal>
-                  <goal>integration-test</goal>
-                  <goal>verify</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-
-      </build>
-    </profile>
-  </profiles>
 </project>
