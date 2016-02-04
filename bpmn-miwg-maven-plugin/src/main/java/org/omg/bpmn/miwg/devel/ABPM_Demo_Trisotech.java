@@ -47,7 +47,7 @@ public class ABPM_Demo_Trisotech extends AbstractTest {
 	public static List<Object[]> data() throws IOException, ReferenceNotFoundException {
 		return BpmnFileScanner
 				.data(new StandardScanParameters(
-						"Trisotech BPMN Modeler",
+						"Trisotech BPMN Modeler 5.0.15",
 						null));
 	}
 
