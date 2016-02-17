@@ -44,7 +44,7 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "2015,2014,2013",
+      "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": false,
       "notes": "Apart from commercial ADONIS, free Community Edition (with BPMN DI import and export) is available."
     },
@@ -107,8 +107,8 @@
       "hasImport": true,
       "hasExport": true,
       "hasRoundtrip": true,
-      "lastResultsSubmitted": "",
-      "participatedInDemos": false,
+      "lastResultsSubmitted": "2016",
+      "participatedInDemosByYear": "2016",
       "openSource": false,
       "notes": ""
     },
@@ -140,7 +140,7 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "2015,2014",
+      "participatedInDemosByYear": "2016,2015,2014",
       "openSource": true,
       "notes": ""
     },
@@ -156,7 +156,7 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "2015,2014,2013",
+      "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": true,
       "notes": ""
     },
@@ -289,22 +289,22 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "2015,2014,2013",
+      "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": false,
       "notes": "actually 6.3488.15730"
     },
     {
-      "vendor": "MID",
+      "vendor": "MID GmbH",
       "tool": "MID Innovator",
-      "maintainer": "",
-      "version": "11.5.2.30413",
-      "website": "",
+      "maintainer": "Joachim Back <j.back(at)mid.de>",
+      "version": "12.3.1.20212",
+      "website": "http://www.mid.de/en/products/innovator-for-business-analysts.html",
       "bpiId": "innovator-for-business-analysts",
       "supportsBpmn2": true,
       "hasImport": true,
       "hasExport": true,
       "hasRoundtrip": true,
-      "lastResultsSubmitted": "2013",
+      "lastResultsSubmitted": "2016",
       "participatedInDemosByYear": "0",
       "openSource": false,
       "notes": ""
@@ -321,7 +321,7 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "0",
+      "participatedInDemosByYear": "2016",
       "openSource": false,
       "notes": "BPMN import/export services will be include in version 3.5 of Modelio which will be released in December2015"
     },
@@ -353,7 +353,7 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2014",
-      "participatedInDemosByYear": "2015,2014,2013",
+      "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": false,
       "notes": ""
     },
@@ -385,7 +385,7 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "2015,2014,2013",
+      "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": false,
       "notes": ""
     },
@@ -400,8 +400,8 @@
       "hasImport": true,
       "hasExport": true,
       "hasRoundtrip": true,
-      "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "2015,2014,2013",
+      "lastResultsSubmitted": "2016",
+      "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": false,
       "notes": ""
     },
@@ -433,7 +433,7 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "2015,2014,2013",
+      "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": false,
       "notes": ""
     },
@@ -449,7 +449,7 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2015",
-      "participatedInDemosByYear": "2015,2014,2013",
+      "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": true,
       "notes": ""
     }
