@@ -154,7 +154,7 @@
               function renderYear(data, type, full) {
                 var lastParticipation = data.split(",")[0];
                 var participated = false;
-                if (lastParticipation == "2015") {
+                if (lastParticipation == "2016") {
 		  participated = true;
 		} else if (lastParticipation != "0") {
 		  participated = "partial";
@@ -173,7 +173,7 @@
               }
 
               function renderTestResultsASubmitted(data, type, full) {
-                return renderTestResultsSubmittedInCategory(data, type, full, 20);
+                return renderTestResultsSubmittedInCategory(data, type, full, 24);
               }
 
               function renderTestResultsBSubmitted(data, type, full) {
