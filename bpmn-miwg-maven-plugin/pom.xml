@@ -80,13 +80,13 @@
       <version>1.0.4</version>
     </dependency>
     
-    <!-- Required at runtime for private testing - REALLY? -->
-    <!--<dependency>
+    <!-- Required at runtime for private testing - MK: REALLY? -->
+    <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>test-suite</artifactId>
       <version>0.2-SNAPSHOT</version>
       <scope>runtime</scope>
-    </dependency>-->
+    </dependency>
   </dependencies>
 
   <build>
