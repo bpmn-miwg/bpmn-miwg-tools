@@ -67,11 +67,17 @@
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>schema-tool</artifactId>
       <version>${bpmn.miwg.tools.version}</version>
-    </dependency>    <dependency>
+    </dependency>    
+    <dependency>
       <groupId>org.glassfish</groupId>
       <artifactId>javax.json</artifactId>
       <version>1.0.4</version>
     </dependency>
+    <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>bounds-generator</artifactId>
+      <version>${bpmn.miwg.tools.version}</version>
+    </dependency>    
     
     <!-- Required at runtime for private testing -->
     <dependency>
