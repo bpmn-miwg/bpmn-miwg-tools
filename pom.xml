@@ -9,6 +9,8 @@
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
+
+  
   <licenses>
     <license>
       <name>MIT</name>
@@ -79,13 +81,14 @@
   </developers>
 
   <properties>
-    <java.version>1.6</java.version>
+    <java.version>1.7</java.version>
+    <bpmn.miwg.tools.version>0.3-SNAPSHOT</bpmn.miwg.tools.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
     <!-- staging area for subsequent commit and push -->
     <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
-  </properties>
+ </properties>
 
   <modules>
     <module>analysis-tool-api</module>
@@ -94,6 +97,7 @@
     <module>schema-tool</module>
     <module>bpmn-miwg-maven-plugin</module>
 	<module>cli</module>
+	<module>facade</module>
   </modules>
 
   <dependencies>

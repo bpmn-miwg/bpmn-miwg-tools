@@ -37,8 +37,9 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.scan.BpmnFileScanner;
-import org.omg.bpmn.miwg.scan.StandardScanParameters;
+import org.omg.bpmn.miwg.facade.AnalysisFacade;
+import org.omg.bpmn.miwg.facade.scan.BpmnFileScanner;
+import org.omg.bpmn.miwg.facade.scan.StandardScanParameters;
 
 /**
  * Goal which scans project for BPMN files and tests them for interoperability.

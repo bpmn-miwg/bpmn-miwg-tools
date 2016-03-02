@@ -19,15 +19,7 @@
 	<packaging>jar</packaging>
 
 	<inceptionYear>2013</inceptionYear>
-	<organization>
-		<name>BPMN-MIWG</name>
-		<url>https://github.com/bpmn-miwg</url>
-	</organization>
 
-	<properties>
-		<java.version>1.6</java.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 
 	<dependencies>
 		<dependency>

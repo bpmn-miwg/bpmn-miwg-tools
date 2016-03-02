@@ -9,16 +9,10 @@
 	</parent>
 	<artifactId>cli</artifactId>
 
-	<properties>
-		<java.version>1.7</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<bpmn.miwg.tools.version>0.3-SNAPSHOT</bpmn.miwg.tools.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 		  <groupId>org.omg.bpmn.miwg</groupId>
-		  <artifactId>bpmn-miwg-maven-plugin</artifactId>
+		  <artifactId>facade</artifactId>
 		  <version>${bpmn.miwg.tools.version}</version>
 		</dependency>
 	</dependencies>

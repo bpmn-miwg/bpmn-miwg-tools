@@ -33,8 +33,8 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
-import org.omg.bpmn.miwg.scan.BpmnFileScanner;
-import org.omg.bpmn.miwg.scan.StandardScanParameters;
+import org.omg.bpmn.miwg.facade.scan.BpmnFileScanner;
+import org.omg.bpmn.miwg.facade.scan.StandardScanParameters;
 
 @RunWith(Parameterized.class)
 public class W4_Composer extends AbstractTest {

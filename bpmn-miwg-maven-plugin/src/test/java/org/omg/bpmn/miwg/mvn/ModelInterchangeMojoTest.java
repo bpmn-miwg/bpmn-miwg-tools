@@ -21,6 +21,7 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.junit.Before;
 import org.junit.Test;
 import org.omg.bpmn.miwg.api.output.overview.OverviewWriter;
+import org.omg.bpmn.miwg.mvn.ModelInterchangeMojo;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.util.TestUtil;
 import org.omg.bpmn.miwg.xmlCompare.XmlCompareAnalysisTool;
@@ -83,7 +84,7 @@ public class ModelInterchangeMojoTest {
 			// folders of vendors listed in tools-tested-by-miwg.json
             // At time of writing this includes W4 & camunda but excludes
             // bpmn.io
-            assertEquals(8, nodes.getLength());
+            assertEquals(7, nodes.getLength());
 
 			// report files for each tool
 			assertHtmlReportsExist(new File(TestUtil.REPORT_BASE_FOLDER_NAME,
@@ -96,8 +97,8 @@ public class ModelInterchangeMojoTest {
 			// assert structure of individual results file
 			File xpathResult = new File(TestUtil.REPORT_BASE_FOLDER_NAME
 					+ File.separator + XpathAnalysisTool.NAME + File.separator
-					+ TestConsts.W4_MODELER_ID + File.separator
-					+ TestConsts.W4_MODELER_ID + "-A.1.0-roundtrip.html");
+					+ MavenTestConsts.W4_MODELER_ID + File.separator
+					+ MavenTestConsts.W4_MODELER_ID + "-A.1.0-roundtrip.html");
 			System.out.println("Checking file: " + xpathResult);
 			assertTrue(xpathResult.exists());
 			document = docBuilder.parse(xpathResult);
@@ -121,26 +122,26 @@ public class ModelInterchangeMojoTest {
 	}
 
 	private void assertHtmlReportsExist(File toolFldr) {
-		File w4Fldr = new File(toolFldr, TestConsts.W4_MODELER_ID);
+		File w4Fldr = new File(toolFldr, MavenTestConsts.W4_MODELER_ID);
 		assertTrue("Tool folder " + toolFldr.getAbsolutePath() + " not found",
 				toolFldr.exists());
 		/*
 		 * The automation tools only work reliably with roundtrips.
 		 */
 		assertTrue("Tool report for W4 A.1.0 roundtrip not found",
-				new File(w4Fldr, TestConsts.W4_MODELER_ID
+				new File(w4Fldr, MavenTestConsts.W4_MODELER_ID
 						+ "-A.1.0-roundtrip.html").exists());
 		assertTrue("Tool report for W4 A.2.0 roundtrip not found",
-				new File(w4Fldr, TestConsts.W4_MODELER_ID
+				new File(w4Fldr, MavenTestConsts.W4_MODELER_ID
 						+ "-A.2.0-roundtrip.html").exists());
 		assertTrue("Tool report for W4 A.3.0 roundtrip not found",
-				new File(w4Fldr, TestConsts.W4_MODELER_ID
+				new File(w4Fldr, MavenTestConsts.W4_MODELER_ID
 						+ "-A.3.0-roundtrip.html").exists());
 		assertTrue("Tool report for W4 A.4.0 roundtrip not found",
-				new File(w4Fldr, TestConsts.W4_MODELER_ID
+				new File(w4Fldr, MavenTestConsts.W4_MODELER_ID
 						+ "-A.4.0-roundtrip.html").exists());
 		assertTrue("Tool report for W4 A.4.1 roundtrip not found",
-				new File(w4Fldr, TestConsts.W4_MODELER_ID
+				new File(w4Fldr, MavenTestConsts.W4_MODELER_ID
 						+ "-A.4.1-roundtrip.html").exists());
 	}
 

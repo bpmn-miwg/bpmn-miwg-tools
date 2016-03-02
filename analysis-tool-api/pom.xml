@@ -9,11 +9,6 @@
 	</parent>
 	<artifactId>analysis-tool-api</artifactId>
 
-	<properties>
-		<java.version>1.7</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
 
 	<dependencies>
 		<dependency>
