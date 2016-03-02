@@ -84,7 +84,7 @@
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>test-suite</artifactId>
-      <version>0.2-SNAPSHOT</version>
+      <version>0.4-SNAPSHOT</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>
