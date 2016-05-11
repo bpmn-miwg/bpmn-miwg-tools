@@ -64,7 +64,7 @@
       "openSource": false,
       "notes": "BPMN support is an additional plugin to Aeneis. Aeneis provides an automatic layouter."
     },
-    {
+	{
       "vendor": "Software AG",
       "tool": "ARIS Architect",
       "maintainer": "",
@@ -76,6 +76,22 @@
       "hasExport": true,
       "hasRoundtrip": true,
       "lastResultsSubmitted": "2013",
+      "participatedInDemosByYear": "0",
+      "openSource": false,
+      "notes": ""
+    },
+    {
+      "vendor": "Software AG",
+      "tool": "ARIS Architect",
+      "maintainer": "",
+      "version": "9.8.3",
+      "website": "",
+      "bpiId": "",
+      "supportsBpmn2": true,
+      "hasImport": true,
+      "hasExport": true,
+      "hasRoundtrip": true,
+      "lastResultsSubmitted": "2016",
       "participatedInDemosByYear": "0",
       "openSource": false,
       "notes": ""
@@ -452,6 +468,22 @@
       "participatedInDemosByYear": "2016,2015,2014,2013",
       "openSource": true,
       "notes": ""
+    },
+    {
+      "vendor": "ModelFoundry Pty. Ltd.",
+      "tool": "ModelFoundry",
+      "maintainer": "",
+      "version": "1.1.1",
+      "website": "http://modelfoundry.com/",
+      "bpiId": "",
+      "supportsBpmn2": true,
+      "hasImport": true,
+      "hasExport": true,
+      "hasRoundtrip": true,
+      "lastResultsSubmitted": "2016",
+      "participatedInDemosByYear": "2016",
+      "openSource": false,
+      "notes": "Tested using ModelFoundry for the iPad. Support for BPMN is available as an In-App Purchase"
     }
   ]
 }

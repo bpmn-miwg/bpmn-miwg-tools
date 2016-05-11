@@ -1,5 +1,151 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/591",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/591/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/591/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/591/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/591",
+    "id": 143585748,
+    "number": 591,
+    "title": "Incorrect data store reference labels",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2016-03-25T20:10:16Z",
+    "updated_at": "2016-03-25T20:19:11Z",
+    "closed_at": "2016-03-25T20:17:11Z",
+    "body": "The label of data store references are incorrect.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/565",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/565/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/565/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/565/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/565",
+    "id": 140105868,
+    "number": 565,
+    "title": "Adding ARIS 9.8.3",
+    "user": {
+      "login": "mbiewener",
+      "id": 17571065,
+      "avatar_url": "https://avatars.githubusercontent.com/u/17571065?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mbiewener",
+      "html_url": "https://github.com/mbiewener",
+      "followers_url": "https://api.github.com/users/mbiewener/followers",
+      "following_url": "https://api.github.com/users/mbiewener/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mbiewener/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mbiewener/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mbiewener/subscriptions",
+      "organizations_url": "https://api.github.com/users/mbiewener/orgs",
+      "repos_url": "https://api.github.com/users/mbiewener/repos",
+      "events_url": "https://api.github.com/users/mbiewener/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mbiewener/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-11T07:01:01Z",
+    "updated_at": "2016-03-23T14:46:32Z",
+    "closed_at": "2016-03-23T14:46:32Z",
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/565",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/565",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/565.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/565.patch"
+    },
+    "body": "Added ARIS Architect 9.8.3 and did a Crosstest with Signavio and camunda as far as possible."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/564",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/564/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/564/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/564/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/564",
+    "id": 134561518,
+    "number": 564,
+    "title": "Sequence flow out of task has no condition and no default",
+    "user": {
+      "login": "mid-back",
+      "id": 17289579,
+      "avatar_url": "https://avatars.githubusercontent.com/u/17289579?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mid-back",
+      "html_url": "https://github.com/mid-back",
+      "followers_url": "https://api.github.com/users/mid-back/followers",
+      "following_url": "https://api.github.com/users/mid-back/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mid-back/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mid-back/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mid-back/subscriptions",
+      "organizations_url": "https://api.github.com/users/mid-back/orgs",
+      "repos_url": "https://api.github.com/users/mid-back/repos",
+      "events_url": "https://api.github.com/users/mid-back/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mid-back/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2016-02-18T12:03:28Z",
+    "updated_at": "2016-03-25T20:22:22Z",
+    "closed_at": "2016-03-25T19:58:08Z",
+    "body": "Tool name: Innovator\r\nTool version: 12.3.1.20212\r\nTest case id: A.2.1\r\nTest procedure: import\r\nDescription: The task \"Task 3\" has an outgoing sequence flow which is not default. The Task \"Task 4\" has an outgoing sequence flow without condition."
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/557",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/557/labels{/name}",
@@ -5124,75 +5270,6 @@
     "body": ""
   },
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
-    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
-    "id": 36060863,
-    "number": 187,
-    "title": "Reference A.2.1 Provide test case with different kinds of Sequence Flows",
-    "user": {
-      "login": "apupier",
-      "id": 1105127,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1105127?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/apupier",
-      "html_url": "https://github.com/apupier",
-      "followers_url": "https://api.github.com/users/apupier/followers",
-      "following_url": "https://api.github.com/users/apupier/following{/other_user}",
-      "gists_url": "https://api.github.com/users/apupier/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/apupier/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/apupier/subscriptions",
-      "organizations_url": "https://api.github.com/users/apupier/orgs",
-      "repos_url": "https://api.github.com/users/apupier/repos",
-      "events_url": "https://api.github.com/users/apupier/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/apupier/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
-        "name": "bug",
-        "color": "fc2929"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
-        "name": "Test: A.2.1",
-        "color": "006b75"
-      }
-    ],
-    "state": "closed",
-    "locked": false,
-    "assignee": {
-      "login": "benmichel",
-      "id": 8003851,
-      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/benmichel",
-      "html_url": "https://github.com/benmichel",
-      "followers_url": "https://api.github.com/users/benmichel/followers",
-      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
-      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
-      "organizations_url": "https://api.github.com/users/benmichel/orgs",
-      "repos_url": "https://api.github.com/users/benmichel/repos",
-      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/benmichel/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "milestone": null,
-    "comments": 9,
-    "created_at": "2014-06-19T09:02:48Z",
-    "updated_at": "2016-01-20T19:39:14Z",
-    "closed_at": "2016-01-20T19:39:14Z",
-    "body": "As mentioned in Table 12.35, we could provide sample for:\r\n- (\"normal\") Sequence Flow\r\n- Default Sequence Flow\r\n- Conditional Sequence Flow\r\n\r\nUse case where I detected an interchange incompatibility:\r\nIf no conditionExpression set on a Sequence Flow and the Sequence Flow is not marked as default on outgoing reference of Task/Gateways, the Sequence Flow is  a \"normal\" Sequence Flow. It seems that some tools are considering it as \"Default Sequence Flow\" (itp Commerce, Trisotech and Signavio... I'm feeling alone :s). I think that the *default* attribute on preceding Task/Gateway is missing.\r\nWhy I want to make the difference? I want to keep the condition defined by user even if it is ignored in order that if he is not sure between default and a condition he can switch easily from one to another as we kept the conditionExpression.\r\n\r\nBased on the specification the right behavior seems to ignore the conditionExpression and be based only on the default attribute to detect Default Sequence Flow:\r\nTable 10.3, 10.123, 10.124, 10.125 on default attribute:\r\n> The Sequence Flow that will receive a token when none of the conditionExpressions on  other outgoing Sequence Flows evaluate to true. The default Sequence Flow should not have a conditionExpression. Any such Expression SHALL be ignored.\r\n\r\nI\r\n![diagramtotestdefaultsequenceflowwithcondition-1 0](https://cloud.githubusercontent.com/assets/1105127/3325776/c7c3b756-f793-11e3-84fb-cfe92abb727d.png)\r\n\r\n>     <model:exclusiveGateway id=\"_jDY8EPeREeO2W5WJKwzkfQ\" name=\"Gateway1\" default=\"_7WRGkPeQEeO2W5WJKwzkfQ\"/><model:sequenceFlow id=\"_7WRGkPeQEeO2W5WJKwzkfQ\" name=\"\" sourceRef=\"_jDY8EPeREeO2W5WJKwzkfQ\" targetRef=\"_7TL9YPeQEeO2W5WJKwzkfQ\">      <model:conditionExpression xsi:type=\"model:tFormalExpression\" id=\"_kZ1xofeREeO2W5WJKwzkfQ\" evaluatesToTypeRef=\"java:java.lang.Boolean\">true</model:conditionExpression>    </model:sequenceFlow>\r\n\r\nThe litigious case is in green and I put my understanding of the right value:\r\n![issue187bpmn-sequenceflowdefaultconditional](https://cloud.githubusercontent.com/assets/1105127/3384803/0732240a-fc61-11e3-925a-a91e1cd3905a.png)\r\n"
-  },
-  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/185",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/185/labels{/name}",
@@ -8613,6 +8690,67 @@
     "body": ""
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/35",
+    "id": 13853852,
+    "number": 35,
+    "title": "Data associations cannot be assigned a name / label",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-05-01T16:02:59Z",
+    "updated_at": "2016-03-25T20:17:23Z",
+    "closed_at": "2016-03-25T20:17:23Z",
+    "body": "Data associations cannot be assigned a name / label in the tool.\r\nTherefore, the associations cannot be imported or exported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the center left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/32",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/32/labels{/name}",
@@ -8817,6 +8955,123 @@
     "body": "We have an issue with importing model B 2.0 to ADONIS. Object \"Parallel  Gateway 2\" is defined as:\r\nsemantic:parallelGateway gatewayDirection=\"Unspecified\" name=\"Parallel  Gateway 2\" id=\"_397c783e-ad6a-4cf3-8266-9b41962c83bd\"\r\n\r\nwhile it seems to us it should be:\r\nsemantic:parallelGateway gatewayDirection=\"Converging\" name=\"Parallel  Gateway 2\" id=\"_397c783e-ad6a-4cf3-8266-9b41962c83bd\""
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
+    "id": 13733336,
+    "number": 28,
+    "title": "B.1.0 Data object names are ommitted",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-04-28T11:37:52Z",
+    "updated_at": "2016-03-25T20:15:19Z",
+    "closed_at": "2016-03-25T20:15:19Z",
+    "body": "Data object names are not imported.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data object in question is in the center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
+    "id": 13733261,
+    "number": 27,
+    "title": "Expanded call activities and collapsed subprocesses are not supported.",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-04-28T11:29:10Z",
+    "updated_at": "2016-03-25T20:14:44Z",
+    "closed_at": "2016-03-25T20:14:44Z",
+    "body": "Call activities cannot be expanded in MID Innovator. Therefore, they are not imported correctly as *expanded call activities* but as *collapsed call activities*. The elements of the expanded call activity are not supported as well.\r\nAs modeling expanded call activities is not supported by the software, the export fails as well.\r\n\r\nSimilarly, collapsed subprocesses are not supported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the lower left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/26",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/26/labels{/name}",
@@ -8975,6 +9230,118 @@
     "body": "As according meeting of 24-04-2013, Please include in the BPMN MIWG Test Case Structure.xlsx file that:\r\n\r\nBizagi Process Modeler version 2.4 - only supports XPDL, However, this has not been tested.\r\n\r\nAris express version version 2.4 - only support Visio VDX file format import only. However, this has not been tested.\r\n\r\nBest\r\n\r\nAlberto"
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
+    "id": 13594794,
+    "number": 24,
+    "title": "Text annotations are not exported",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-04-24T15:44:58Z",
+    "updated_at": "2016-03-25T20:14:16Z",
+    "closed_at": "2016-03-25T20:14:16Z",
+    "body": "Text annotations are not exported in the BPMN file.\r\n\r\nExample B.1.0:\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n* [Exported BPMN](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-export.bpmn)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
+    "id": 13594240,
+    "number": 23,
+    "title": "BPMN text annotations are not imported",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-04-24T15:37:19Z",
+    "updated_at": "2016-03-25T20:17:31Z",
+    "closed_at": "2016-03-25T20:17:31Z",
+    "body": "Text annotations appear not to be imported from the BPMN file in MID Innovator.\r\n\r\nExample B.1.0:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/22",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/22/labels{/name}",
@@ -9021,6 +9388,128 @@
       "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/22.patch"
     },
     "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
+    "id": 13587618,
+    "number": 21,
+    "title": "Import places Events and Gateways in upper left corner",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-04-24T13:47:32Z",
+    "updated_at": "2016-03-25T20:13:56Z",
+    "closed_at": "2016-03-25T20:13:56Z",
+    "body": "In MID Innovator 11 R5 E (Version 11.5.1.30223) Events and Gateways are positioned in the upper left corner of the containing Lane.\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
+    "id": 13586218,
+    "number": 20,
+    "title": "Sequence Flows not imported",
+    "user": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-04-24T13:25:14Z",
+    "updated_at": "2016-03-25T20:13:47Z",
+    "closed_at": "2016-03-25T20:13:47Z",
+    "body": "Matthias Kurz reported: \"The Innovator creates both a process model as well as a diagram during update (these are two different yet linked entities in Innovator). Yet the diagram misses basic basic layout information like connectors.\"\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/19",

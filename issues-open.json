@@ -1,5 +1,1871 @@
 [
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/597",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/597/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/597/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/597/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/597",
+    "id": 148100330,
+    "number": 597,
+    "title": "Exclusive marker added",
+    "user": {
+      "login": "Sistemlegend",
+      "id": 2684687,
+      "avatar_url": "https://avatars.githubusercontent.com/u/2684687?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Sistemlegend",
+      "html_url": "https://github.com/Sistemlegend",
+      "followers_url": "https://api.github.com/users/Sistemlegend/followers",
+      "following_url": "https://api.github.com/users/Sistemlegend/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Sistemlegend/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Sistemlegend/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Sistemlegend/subscriptions",
+      "organizations_url": "https://api.github.com/users/Sistemlegend/orgs",
+      "repos_url": "https://api.github.com/users/Sistemlegend/repos",
+      "events_url": "https://api.github.com/users/Sistemlegend/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Sistemlegend/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20Esteco",
+        "name": "Tool: Esteco",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-04-13T15:34:11Z",
+    "updated_at": "2016-04-13T20:51:34Z",
+    "closed_at": null,
+    "body": "An exclusive marker is added to the gateway. This marker is not part of the reference files A.2.0, C.1.1.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-04-13."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/596",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/596/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/596/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/596/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/596",
+    "id": 148087140,
+    "number": 596,
+    "title": "No bounds for flow elements in C.1.1",
+    "user": {
+      "login": "zmisiak",
+      "id": 4265164,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zmisiak",
+      "html_url": "https://github.com/zmisiak",
+      "followers_url": "https://api.github.com/users/zmisiak/followers",
+      "following_url": "https://api.github.com/users/zmisiak/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zmisiak/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zmisiak/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zmisiak/subscriptions",
+      "organizations_url": "https://api.github.com/users/zmisiak/orgs",
+      "repos_url": "https://api.github.com/users/zmisiak/repos",
+      "events_url": "https://api.github.com/users/zmisiak/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zmisiak/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "benmichel",
+      "id": 8003851,
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/benmichel",
+      "html_url": "https://github.com/benmichel",
+      "followers_url": "https://api.github.com/users/benmichel/followers",
+      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
+      "organizations_url": "https://api.github.com/users/benmichel/orgs",
+      "repos_url": "https://api.github.com/users/benmichel/repos",
+      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/benmichel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-04-13T14:54:55Z",
+    "updated_at": "2016-04-13T20:52:36Z",
+    "closed_at": null,
+    "body": "Bug in reference model - only data objects have bounds"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/595",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/595/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/595/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/595/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/595",
+    "id": 148082782,
+    "number": 595,
+    "title": "Added missing test cases for ADONIS 6.0",
+    "user": {
+      "login": "zmisiak",
+      "id": 4265164,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4265164?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zmisiak",
+      "html_url": "https://github.com/zmisiak",
+      "followers_url": "https://api.github.com/users/zmisiak/followers",
+      "following_url": "https://api.github.com/users/zmisiak/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zmisiak/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zmisiak/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zmisiak/subscriptions",
+      "organizations_url": "https://api.github.com/users/zmisiak/orgs",
+      "repos_url": "https://api.github.com/users/zmisiak/repos",
+      "events_url": "https://api.github.com/users/zmisiak/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zmisiak/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-04-13T14:41:37Z",
+    "updated_at": "2016-04-13T14:41:37Z",
+    "closed_at": null,
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/595",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/595",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/595.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/595.patch"
+    },
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/594",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/594/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/594/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/594/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/594",
+    "id": 143586278,
+    "number": 594,
+    "title": "Incorrect start event label",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T20:12:32Z",
+    "updated_at": "2016-03-25T20:18:21Z",
+    "closed_at": null,
+    "body": "Text has been added to the \"Invoice received\" start event.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/593",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/593/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/593/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/593/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/593",
+    "id": 143586140,
+    "number": 593,
+    "title": "Label added incorrectly",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T20:12:01Z",
+    "updated_at": "2016-03-25T20:19:02Z",
+    "closed_at": null,
+    "body": "A label has been added to the error end event and the boundary error intermediate event.\r\n\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/592",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/592/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/592/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/592/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/592",
+    "id": 143586048,
+    "number": 592,
+    "title": "Incorrect group position",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T20:11:35Z",
+    "updated_at": "2016-03-25T20:19:07Z",
+    "closed_at": null,
+    "body": "The boundaries of the groups are incorrect.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/590",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/590/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/590/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/590/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/590",
+    "id": 143585595,
+    "number": 590,
+    "title": "Incorrect data object labels",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T20:09:36Z",
+    "updated_at": "2016-03-25T20:19:14Z",
+    "closed_at": null,
+    "body": "The labels of the data objects are incorrect.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/589",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/589/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/589/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/589/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/589",
+    "id": 143585465,
+    "number": 589,
+    "title": "Added pool",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T20:08:54Z",
+    "updated_at": "2016-03-25T20:19:21Z",
+    "closed_at": null,
+    "body": "A pool has been added around the bottom lanes.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/588",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/588/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/588/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/588/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/588",
+    "id": 143585325,
+    "number": 588,
+    "title": "Incorrect pool label",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T20:08:17Z",
+    "updated_at": "2016-03-25T20:19:29Z",
+    "closed_at": null,
+    "body": "The top pool has an incorrect pool label (adds \"Process\").\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/587",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/587/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/587/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/587/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/587",
+    "id": 143583069,
+    "number": 587,
+    "title": "Incorrect sequence flow labels in conditional structures",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
+        "name": "Test: A.2.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:57:57Z",
+    "updated_at": "2016-03-25T20:19:34Z",
+    "closed_at": null,
+    "body": "In some sequence flows following a gateway, the labels are incorrect or missing.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/586",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/586/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/586/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/586/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/586",
+    "id": 143582827,
+    "number": 586,
+    "title": "Missing default indicator",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
+        "name": "Test: A.2.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:56:42Z",
+    "updated_at": "2016-03-25T20:19:37Z",
+    "closed_at": null,
+    "body": "In the sequence Flow \"Task 3\" -> \"Gateway\" the default indicator is missing.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/585",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/585/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/585/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/585/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/585",
+    "id": 143582554,
+    "number": 585,
+    "title": "Pool label changed",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:55:21Z",
+    "updated_at": "2016-03-25T20:19:41Z",
+    "closed_at": null,
+    "body": "The pool labels are changed incorrectly.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/584",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/584/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/584/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/584/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/584",
+    "id": 143582293,
+    "number": 584,
+    "title": "Missing label in call activity",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:53:58Z",
+    "updated_at": "2016-03-25T20:19:45Z",
+    "closed_at": null,
+    "body": "The expanded call activity is (1) missing the label and (2) a border as added within the activity.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/583",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/583/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/583/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/583/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/583",
+    "id": 143582158,
+    "number": 583,
+    "title": "Incorrect text annotation association",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:53:08Z",
+    "updated_at": "2016-03-25T20:19:48Z",
+    "closed_at": null,
+    "body": "The text annotation association is routed differently.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/582",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/582/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/582/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/582/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/582",
+    "id": 143581974,
+    "number": 582,
+    "title": "Duplicate pool label",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:52:23Z",
+    "updated_at": "2016-03-25T20:19:51Z",
+    "closed_at": null,
+    "body": "The pool labels are duplicated.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/581",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/581/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/581/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/581/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/581",
+    "id": 143581782,
+    "number": 581,
+    "title": "Sub process has wrong size",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:51:46Z",
+    "updated_at": "2016-03-25T20:19:54Z",
+    "closed_at": null,
+    "body": "The collapsed sub process has the wrong size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/580",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/580/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/580/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/580/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/580",
+    "id": 143581599,
+    "number": 580,
+    "title": "Message envelopes added",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:51:15Z",
+    "updated_at": "2016-03-25T20:19:58Z",
+    "closed_at": null,
+    "body": "Message envelopes have been added.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/579",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/579/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/579/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/579/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/579",
+    "id": 143581042,
+    "number": 579,
+    "title": "Added a pool label",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:48:26Z",
+    "updated_at": "2016-03-25T20:20:01Z",
+    "closed_at": null,
+    "body": "A pool label (participant process_25) has been added incorrectly.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/578",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/578/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/578/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/578/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/578",
+    "id": 143580925,
+    "number": 578,
+    "title": "Incorrect sub process label position",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:47:53Z",
+    "updated_at": "2016-03-25T20:20:03Z",
+    "closed_at": null,
+    "body": "The label of the collapsed sub process is at the wrong position.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/577",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/577/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/577/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/577/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/577",
+    "id": 143580595,
+    "number": 577,
+    "title": "Incorrect model",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:46:39Z",
+    "updated_at": "2016-03-25T20:20:09Z",
+    "closed_at": null,
+    "body": "A different model has been created. It appears to match A.2.1.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/576",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/576/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/576/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/576/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/576",
+    "id": 143580458,
+    "number": 576,
+    "title": "Exclusive marker added",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
+        "name": "Test: A.2.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:46:04Z",
+    "updated_at": "2016-03-25T20:20:12Z",
+    "closed_at": null,
+    "body": "An exclusive marker is added to the gateway. This marker is not part of the reference file.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23."
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/575",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/575/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/575/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/575/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/575",
+    "id": 143579557,
+    "number": 575,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:41:53Z",
+    "updated_at": "2016-03-25T20:20:20Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23.\r\n\r\n![c 3 0 import](https://cloud.githubusercontent.com/assets/4007840/14052362/f8185050-f2c9-11e5-9f90-af82ad03c803.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/574",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/574/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/574/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/574/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/574",
+    "id": 143579435,
+    "number": 574,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:41:15Z",
+    "updated_at": "2016-03-25T20:20:25Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23.\r\n\r\n![c 2 0 import](https://cloud.githubusercontent.com/assets/4007840/14052347/e1fecad8-f2c9-11e5-929c-1eee42667e03.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/573",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/573/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/573/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/573/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/573",
+    "id": 143579258,
+    "number": 573,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:40:32Z",
+    "updated_at": "2016-03-25T20:20:31Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nExample: The label of the timer event is at the wrong position.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23.\r\n\r\n![c 1 0 import](https://cloud.githubusercontent.com/assets/4007840/14052337/c9cf5b44-f2c9-11e5-9f06-00d182ef2306.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/572",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/572/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/572/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/572/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/572",
+    "id": 143579054,
+    "number": 572,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:39:42Z",
+    "updated_at": "2016-03-25T20:20:39Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nFor example, the text annotation in the expanded sub process is at the wrong position.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23.\r\n\r\n![b 2 0 import](https://cloud.githubusercontent.com/assets/4007840/14052324/a8a2bf24-f2c9-11e5-8c4c-7e98bf047bed.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/571",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/571/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/571/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/571/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/571",
+    "id": 143578893,
+    "number": 571,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:38:50Z",
+    "updated_at": "2016-03-25T20:20:43Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23.\r\n\r\n![b 1 0 import](https://cloud.githubusercontent.com/assets/4007840/14052309/87c48030-f2c9-11e5-8f89-bf9a076749cc.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/570",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/570/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/570/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/570/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/570",
+    "id": 143578693,
+    "number": 570,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:37:58Z",
+    "updated_at": "2016-03-25T20:20:47Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nFor example:\r\n* The top pool has an incorrect size (relative to the bottom lanes).\r\n* For example, the content of both Sub-Processes is shifted left up.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23.\r\n\r\n![a 4 1 import](https://cloud.githubusercontent.com/assets/4007840/14052292/6e1fa25e-f2c9-11e5-96ab-f49c1ba59051.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/569",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/569/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/569/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/569/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/569",
+    "id": 143578562,
+    "number": 569,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:37:22Z",
+    "updated_at": "2016-03-25T19:37:22Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\n![a 4 0 import](https://cloud.githubusercontent.com/assets/4007840/14052285/5682e336-f2c9-11e5-9a23-afd8461d1a16.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/568",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/568/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/568/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/568/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/568",
+    "id": 143578305,
+    "number": 568,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:36:27Z",
+    "updated_at": "2016-03-25T20:20:52Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nExample: The boundary events and their labels are place in the incorrect position.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23.\r\n\r\n\r\n![a 3 0 import](https://cloud.githubusercontent.com/assets/4007840/14052264/25125de0-f2c9-11e5-80ce-413e95618f17.png)"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/567",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/567/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/567/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/567/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/567",
+    "id": 143577887,
+    "number": 567,
+    "title": "Boundaries are not respected",
+    "user": {
+      "login": "mskurz",
+      "id": 4007840,
+      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mskurz",
+      "html_url": "https://github.com/mskurz",
+      "followers_url": "https://api.github.com/users/mskurz/followers",
+      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
+      "organizations_url": "https://api.github.com/users/mskurz/orgs",
+      "repos_url": "https://api.github.com/users/mskurz/repos",
+      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mskurz/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-03-25T19:34:57Z",
+    "updated_at": "2016-03-25T20:20:56Z",
+    "closed_at": null,
+    "body": "The boundaries are not respected.\r\nPlease refer to the boundary comparison below.\r\n\r\nNote: Boundaries are used for element position /size and label position/size.\r\n\r\nThis issue has been identified in the BPMN MIWG meeting of 2016-03-23.\r\n\r\n![a 2 0 import](https://cloud.githubusercontent.com/assets/4007840/14052239/f459fad2-f2c8-11e5-8cb2-f849dcd10af2.png)\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/566",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/566/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/566/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/566/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/566",
+    "id": 141419811,
+    "number": 566,
+    "title": "Performed additional tests for bpmn.io Modeler",
+    "user": {
+      "login": "benhoffmann",
+      "id": 17595149,
+      "avatar_url": "https://avatars.githubusercontent.com/u/17595149?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/benhoffmann",
+      "html_url": "https://github.com/benhoffmann",
+      "followers_url": "https://api.github.com/users/benhoffmann/followers",
+      "following_url": "https://api.github.com/users/benhoffmann/following{/other_user}",
+      "gists_url": "https://api.github.com/users/benhoffmann/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/benhoffmann/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/benhoffmann/subscriptions",
+      "organizations_url": "https://api.github.com/users/benhoffmann/orgs",
+      "repos_url": "https://api.github.com/users/benhoffmann/repos",
+      "events_url": "https://api.github.com/users/benhoffmann/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/benhoffmann/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "falko",
+      "id": 40038,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/falko",
+      "html_url": "https://github.com/falko",
+      "followers_url": "https://api.github.com/users/falko/followers",
+      "following_url": "https://api.github.com/users/falko/following{/other_user}",
+      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
+      "organizations_url": "https://api.github.com/users/falko/orgs",
+      "repos_url": "https://api.github.com/users/falko/repos",
+      "events_url": "https://api.github.com/users/falko/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/falko/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2016-03-16T22:20:34Z",
+    "updated_at": "2016-03-17T18:37:27Z",
+    "closed_at": null,
+    "pull_request": {
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/566",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/566",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/566.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/566.patch"
+    },
+    "body": "Hey guys, \r\n\r\nI'd be happy if you would merge my test results into your repo"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/563",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/563/labels{/name}",
@@ -8,7 +1874,7 @@
     "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/563",
     "id": 134218207,
     "number": 563,
-    "title": "Task overlaps sequence flow",
+    "title": "Incorrect sequence flow routing",
     "user": {
       "login": "mid-back",
       "id": 17289579,
@@ -29,15 +1895,44 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2016-02-17T08:49:15Z",
-    "updated_at": "2016-02-17T08:49:15Z",
+    "updated_at": "2016-03-25T20:06:01Z",
     "closed_at": null,
     "body": "Tool name: Innovator\r\nTool version: 12.3.1.120212\r\nTest case id: C.3.0\r\nTest procedure: import\r\nDescription: The task \"Perform repair (premium level)\" has a greter width and overlaps hence the sequence flow to sub-process \"Perform emergency repair\". "
   },
@@ -50,7 +1945,7 @@
     "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/562",
     "id": 134217074,
     "number": 562,
-    "title": "Name of message flow is not shown",
+    "title": "Incorrect message flow labels",
     "user": {
       "login": "mid-back",
       "id": 17289579,
@@ -71,15 +1966,44 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2016-02-17T08:44:42Z",
-    "updated_at": "2016-02-17T08:44:42Z",
+    "updated_at": "2016-03-25T20:04:46Z",
     "closed_at": null,
     "body": "Tool name: Innovator\r\nTool version: 12.3.1.120212\r\nTest case id: C.2.0\r\nTest procedure: import\r\nDescription: At the message flow the Name of the message is shown instead of the name of the message flow."
   },
@@ -155,7 +2079,21 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
+        "name": "Import",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
@@ -163,7 +2101,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2016-02-17T08:38:49Z",
-    "updated_at": "2016-02-17T08:38:49Z",
+    "updated_at": "2016-03-25T20:07:33Z",
     "closed_at": null,
     "body": "Tool name: Innovator\r\n Tool version: 12.3.1.120212\r\n Test case id: B.2.0\r\n Test procedure: import\r\n Description: The text annotation \"Annotation\" is positioned within the sub-process \"Expanded Sub-Process 1\" and not below it."
   },
@@ -176,7 +2114,7 @@
     "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/559",
     "id": 134214982,
     "number": 559,
-    "title": "Collaboration, participant and process are always visible",
+    "title": "Gray boder added",
     "user": {
       "login": "mid-back",
       "id": 17289579,
@@ -197,15 +2135,84 @@
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
+        "name": "Export",
+        "color": "0052cc"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
+        "name": "Test: A.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
+        "name": "Test: A.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
+        "name": "Test: A.2.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.3.0",
+        "name": "Test: A.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.0",
+        "name": "Test: A.4.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.4.1",
+        "name": "Test: A.4.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
+        "name": "Test: B.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.2.0",
+        "name": "Test: B.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.0",
+        "name": "Test: C.1.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.1.1",
+        "name": "Test: C.1.1",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.2.0",
+        "name": "Test: C.2.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20C.3.0",
+        "name": "Test: C.3.0",
+        "color": "006b75"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
+        "name": "Tool: MID Innovator",
+        "color": "009800"
+      }
     ],
     "state": "open",
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2016-02-17T08:35:43Z",
-    "updated_at": "2016-02-17T08:35:43Z",
+    "updated_at": "2016-03-25T19:44:15Z",
     "closed_at": null,
     "body": "Tool name: Innovator\r\nTool version: 12.3.1.120212\r\nTest case id: A.4.0\r\nTest procedure: import\r\nDescription: Collaboration, participant and process are always visible and shown in the diagram. The process is always shown within the participant. A lane set always has a process rectangle  around it. Participants always have a collaboration rectangle around it."
   },
@@ -1914,9 +3921,9 @@
     "locked": false,
     "assignee": null,
     "milestone": null,
-    "comments": 1,
+    "comments": 2,
     "created_at": "2015-11-25T18:47:22Z",
-    "updated_at": "2015-12-07T17:06:27Z",
+    "updated_at": "2016-04-13T19:55:45Z",
     "closed_at": null,
     "body": ""
   },
@@ -3447,9 +5454,9 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2015-08-30T16:11:44Z",
-    "updated_at": "2015-09-20T15:51:45Z",
+    "updated_at": "2016-04-16T17:43:15Z",
     "closed_at": null,
-    "body": "In #461 the group agreed on creating a proposal for the placement of association elements.\r\nThe proposal can be found here: [Link](https://www.dropbox.com/s/14xbq3b8pknndzp/Text%20Annotation%20Placement.docx?dl=0)."
+    "body": "In #461 the group agreed on creating a proposal for the placement of association elements.\r\n\r\nThe proposal can be found here: [defunct link]\r\n_Update 2016-05-16_: Added the proposal as an attachment because the link is not working anymore:  [Text Annotation Placement.docx](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/files/222311/Text.Annotation.Placement.docx)\r\n"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/482",
@@ -16212,6 +18219,75 @@
     "body": "Tool name: Process Modeler 6\r\nTool version: 6.3876.16053\r\nTest case id: A.4.0, A.4.1\r\nTest procedure: import\r\n\r\nDescription: \r\n- In test A.4.0 the message flow label \"Message Flow2\" is misplaced.\r\n- In test A.4.1 the message flow labels \"Message Flow 1\" and \"Message Flow 2\" are misplaced."
   },
   {
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
+    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
+    "id": 36060863,
+    "number": 187,
+    "title": "Reference A.2.1 Provide test case with different kinds of Sequence Flows",
+    "user": {
+      "login": "apupier",
+      "id": 1105127,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1105127?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/apupier",
+      "html_url": "https://github.com/apupier",
+      "followers_url": "https://api.github.com/users/apupier/followers",
+      "following_url": "https://api.github.com/users/apupier/following{/other_user}",
+      "gists_url": "https://api.github.com/users/apupier/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/apupier/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/apupier/subscriptions",
+      "organizations_url": "https://api.github.com/users/apupier/orgs",
+      "repos_url": "https://api.github.com/users/apupier/repos",
+      "events_url": "https://api.github.com/users/apupier/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/apupier/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
+        "name": "Test: A.2.1",
+        "color": "006b75"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "benmichel",
+      "id": 8003851,
+      "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/benmichel",
+      "html_url": "https://github.com/benmichel",
+      "followers_url": "https://api.github.com/users/benmichel/followers",
+      "following_url": "https://api.github.com/users/benmichel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/benmichel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/benmichel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/benmichel/subscriptions",
+      "organizations_url": "https://api.github.com/users/benmichel/orgs",
+      "repos_url": "https://api.github.com/users/benmichel/repos",
+      "events_url": "https://api.github.com/users/benmichel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/benmichel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "milestone": null,
+    "comments": 13,
+    "created_at": "2014-06-19T09:02:48Z",
+    "updated_at": "2016-04-20T15:03:39Z",
+    "closed_at": null,
+    "body": "As mentioned in Table 12.35, we could provide sample for:\r\n- (\"normal\") Sequence Flow\r\n- Default Sequence Flow\r\n- Conditional Sequence Flow\r\n\r\nUse case where I detected an interchange incompatibility:\r\nIf no conditionExpression set on a Sequence Flow and the Sequence Flow is not marked as default on outgoing reference of Task/Gateways, the Sequence Flow is  a \"normal\" Sequence Flow. It seems that some tools are considering it as \"Default Sequence Flow\" (itp Commerce, Trisotech and Signavio... I'm feeling alone :s). I think that the *default* attribute on preceding Task/Gateway is missing.\r\nWhy I want to make the difference? I want to keep the condition defined by user even if it is ignored in order that if he is not sure between default and a condition he can switch easily from one to another as we kept the conditionExpression.\r\n\r\nBased on the specification the right behavior seems to ignore the conditionExpression and be based only on the default attribute to detect Default Sequence Flow:\r\nTable 10.3, 10.123, 10.124, 10.125 on default attribute:\r\n> The Sequence Flow that will receive a token when none of the conditionExpressions on  other outgoing Sequence Flows evaluate to true. The default Sequence Flow should not have a conditionExpression. Any such Expression SHALL be ignored.\r\n\r\nI\r\n![diagramtotestdefaultsequenceflowwithcondition-1 0](https://cloud.githubusercontent.com/assets/1105127/3325776/c7c3b756-f793-11e3-84fb-cfe92abb727d.png)\r\n\r\n>     <model:exclusiveGateway id=\"_jDY8EPeREeO2W5WJKwzkfQ\" name=\"Gateway1\" default=\"_7WRGkPeQEeO2W5WJKwzkfQ\"/><model:sequenceFlow id=\"_7WRGkPeQEeO2W5WJKwzkfQ\" name=\"\" sourceRef=\"_jDY8EPeREeO2W5WJKwzkfQ\" targetRef=\"_7TL9YPeQEeO2W5WJKwzkfQ\">      <model:conditionExpression xsi:type=\"model:tFormalExpression\" id=\"_kZ1xofeREeO2W5WJKwzkfQ\" evaluatesToTypeRef=\"java:java.lang.Boolean\">true</model:conditionExpression>    </model:sequenceFlow>\r\n\r\nThe litigious case is in green and I put my understanding of the right value:\r\n![issue187bpmn-sequenceflowdefaultconditional](https://cloud.githubusercontent.com/assets/1105127/3384803/0732240a-fc61-11e3-925a-a91e1cd3905a.png)\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/186",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/186/labels{/name}",
@@ -18809,9 +20885,9 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2013-10-26T14:36:31Z",
-    "updated_at": "2015-06-11T16:24:11Z",
+    "updated_at": "2016-04-16T17:43:01Z",
     "closed_at": null,
-    "body": "Page 303 states: “The Compensation Activity, which can be either a Task or a Sub-Process, has a marker to show that it is used for compensation only and is outside the normal flow of the Process.”\r\n \r\nHowever, in Table 7.2 on Page 35, this marker is missing in the compensation activity.\r\n\r\nThe proposal is available here: https://www.dropbox.com/s/nutzp6o16malzzn/Proposal.docx?dl=0"
+    "body": "Page 303 states: “The Compensation Activity, which can be either a Task or a Sub-Process, has a marker to show that it is used for compensation only and is outside the normal flow of the Process.”\r\n \r\nHowever, in Table 7.2 on Page 35, this marker is missing in the compensation activity.\r\n\r\nThe proposal is available here: [defunct link]\r\n_Update 2016-05-16_: Added the proposal as an attachment because the link is not working anymore: \r\n[Proposal.docx](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/files/222314/Proposal.docx)\r\n"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/117",
@@ -19147,7 +21223,7 @@
     "milestone": null,
     "comments": 5,
     "created_at": "2013-06-26T21:03:34Z",
-    "updated_at": "2015-06-11T16:23:41Z",
+    "updated_at": "2016-04-16T17:42:48Z",
     "closed_at": null,
     "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue18256"
   },
@@ -19198,7 +21274,7 @@
     "milestone": null,
     "comments": 7,
     "created_at": "2013-06-26T21:02:53Z",
-    "updated_at": "2015-06-11T16:23:16Z",
+    "updated_at": "2016-04-16T17:42:36Z",
     "closed_at": null,
     "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue17047"
   },
@@ -19369,7 +21445,7 @@
     "milestone": null,
     "comments": 10,
     "created_at": "2013-06-26T21:00:21Z",
-    "updated_at": "2015-06-11T16:22:39Z",
+    "updated_at": "2016-04-16T17:42:16Z",
     "closed_at": null,
     "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15428"
   },
@@ -19438,7 +21514,7 @@
     "milestone": null,
     "comments": 5,
     "created_at": "2013-06-26T20:59:31Z",
-    "updated_at": "2015-06-11T16:21:39Z",
+    "updated_at": "2016-04-16T17:44:52Z",
     "closed_at": null,
     "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15393"
   },
@@ -19553,7 +21629,7 @@
     "milestone": null,
     "comments": 2,
     "created_at": "2013-06-26T20:58:02Z",
-    "updated_at": "2015-06-11T16:20:37Z",
+    "updated_at": "2016-04-16T17:45:31Z",
     "closed_at": null,
     "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue15171"
   },
@@ -21819,67 +23895,6 @@
     "body": "Tested with camunda modeler 2.0.12\r\n\r\n![B.1.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.1.0-import.png)\r\n\r\n![B.2.0](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/camunda%20modeler%202.0.12/B.2.0-import.png)"
   },
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35",
-    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/35/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/35",
-    "id": 13853852,
-    "number": 35,
-    "title": "Data associations cannot be assigned a name / label",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-05-01T16:02:59Z",
-    "updated_at": "2013-05-03T15:07:23Z",
-    "closed_at": null,
-    "body": "Data associations cannot be assigned a name / label in the tool.\r\nTherefore, the associations cannot be imported or exported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the center left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)"
-  },
-  {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
     "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/34/labels{/name}",
@@ -22041,356 +24056,5 @@
     "updated_at": "2013-04-30T11:37:16Z",
     "closed_at": null,
     "body": "Data store references are imported, yet not displayed. The node is assigned the name correctly. Yet, data store references have a separate label which is assigned a default text. The name of the node can be retrieved when looking at the node properties.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data store reference in question is in the left center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
-    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/28/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/28",
-    "id": 13733336,
-    "number": 28,
-    "title": "B.1.0 Data object names are ommitted",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-28T11:37:52Z",
-    "updated_at": "2013-04-30T11:37:50Z",
-    "closed_at": null,
-    "body": "Data object names are not imported.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The data object in question is in the center of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
-    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/27/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/27",
-    "id": 13733261,
-    "number": 27,
-    "title": "Expanded call activities and collapsed subprocesses are not supported.",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-28T11:29:10Z",
-    "updated_at": "2013-05-01T16:02:54Z",
-    "closed_at": null,
-    "body": "Call activities cannot be expanded in MID Innovator. Therefore, they are not imported correctly as *expanded call activities* but as *collapsed call activities*. The elements of the expanded call activity are not supported as well.\r\nAs modeling expanded call activities is not supported by the software, the export fails as well.\r\n\r\nSimilarly, collapsed subprocesses are not supported as well.\r\n\r\nExample B.1.0:\r\n* Imported Diagram:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n*Note*: The call activity in question is the call activitiy in the lower left border of the diagram.\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
-    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/24/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/24",
-    "id": 13594794,
-    "number": 24,
-    "title": "Text annotations are not exported",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Export",
-        "name": "Export",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-24T15:44:58Z",
-    "updated_at": "2013-04-28T11:38:21Z",
-    "closed_at": null,
-    "body": "Text annotations are not exported in the BPMN file.\r\n\r\nExample B.1.0:\r\n* [Reference Diagram](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/Reference/B.1.0.pdf)\r\n* [Exported BPMN](https://raw.github.com/bpmn-miwg/bpmn-miwg-test-suite/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-export.bpmn)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
-    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/23/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/23",
-    "id": 13594240,
-    "number": 23,
-    "title": "BPMN text annotations are not imported",
-    "user": {
-      "login": "mskurz",
-      "id": 4007840,
-      "avatar_url": "https://avatars.githubusercontent.com/u/4007840?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/mskurz",
-      "html_url": "https://github.com/mskurz",
-      "followers_url": "https://api.github.com/users/mskurz/followers",
-      "following_url": "https://api.github.com/users/mskurz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/mskurz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/mskurz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/mskurz/subscriptions",
-      "organizations_url": "https://api.github.com/users/mskurz/orgs",
-      "repos_url": "https://api.github.com/users/mskurz/repos",
-      "events_url": "https://api.github.com/users/mskurz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/mskurz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20B.1.0",
-        "name": "Test: B.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 0,
-    "created_at": "2013-04-24T15:37:19Z",
-    "updated_at": "2013-04-28T11:38:42Z",
-    "closed_at": null,
-    "body": "Text annotations appear not to be imported from the BPMN file in MID Innovator.\r\n\r\nExample B.1.0:\r\n![B.1.0-import.png](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/B%20-%20Validate%20that%20tool%20covers%20conformance%20class%20set/MID%20Innovator 11.5.1.30223/B.1.0-import.png)\r\n\r\n"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
-    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/21/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/21",
-    "id": 13587618,
-    "number": 21,
-    "title": "Import places Events and Gateways in upper left corner",
-    "user": {
-      "login": "falko",
-      "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/falko",
-      "html_url": "https://github.com/falko",
-      "followers_url": "https://api.github.com/users/falko/followers",
-      "following_url": "https://api.github.com/users/falko/following{/other_user}",
-      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
-      "organizations_url": "https://api.github.com/users/falko/orgs",
-      "repos_url": "https://api.github.com/users/falko/repos",
-      "events_url": "https://api.github.com/users/falko/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/falko/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
-        "name": "Test: A.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
-        "name": "Test: A.2.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2013-04-24T13:47:32Z",
-    "updated_at": "2013-04-29T09:33:45Z",
-    "closed_at": null,
-    "body": "In MID Innovator 11 R5 E (Version 11.5.1.30223) Events and Gateways are positioned in the upper left corner of the containing Lane.\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
-  },
-  {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
-    "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/20/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/20",
-    "id": 13586218,
-    "number": 20,
-    "title": "Sequence Flows not imported",
-    "user": {
-      "login": "falko",
-      "id": 40038,
-      "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/falko",
-      "html_url": "https://github.com/falko",
-      "followers_url": "https://api.github.com/users/falko/followers",
-      "following_url": "https://api.github.com/users/falko/following{/other_user}",
-      "gists_url": "https://api.github.com/users/falko/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/falko/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/falko/subscriptions",
-      "organizations_url": "https://api.github.com/users/falko/orgs",
-      "repos_url": "https://api.github.com/users/falko/repos",
-      "events_url": "https://api.github.com/users/falko/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/falko/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "labels": [
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Import",
-        "name": "Import",
-        "color": "0052cc"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.1.0",
-        "name": "Test: A.1.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.0",
-        "name": "Test: A.2.0",
-        "color": "006b75"
-      },
-      {
-        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Tool:%20MID%20Innovator",
-        "name": "Tool: MID Innovator",
-        "color": "009800"
-      }
-    ],
-    "state": "open",
-    "locked": false,
-    "assignee": null,
-    "milestone": null,
-    "comments": 2,
-    "created_at": "2013-04-24T13:25:14Z",
-    "updated_at": "2013-04-29T09:35:08Z",
-    "closed_at": null,
-    "body": "Matthias Kurz reported: \"The Innovator creates both a process model as well as a diagram during update (these are two different yet linked entities in Innovator). Yet the diagram misses basic basic layout information like connectors.\"\r\n\r\nExamples:\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.1.0-import.png)\r\n![](https://github.com/bpmn-miwg/bpmn-miwg-test-suite/raw/master/A%20-%20Fixed%20Digrams%20with%20Variations%20of%20Attributes/MID%20Innovator%2011.5.1.30223/A.2.0-import.png)"
   }
 ]
