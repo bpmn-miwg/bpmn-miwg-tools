@@ -154,7 +154,7 @@
               function renderYear(data, type, full) {
                 var lastParticipation = data.split(",")[0];
                 var participated = false;
-                if (lastParticipation == "2016") {
+                if (lastParticipation == new Date().getFullYear()) {
 		  participated = true;
 		} else if (lastParticipation != "0") {
 		  participated = "partial";
