@@ -8,7 +8,7 @@
 
     <!-- DataTables CSS -->
     <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.4/css/jquery.dataTables_themeroller.css">
-
+    
     <!-- Theme -->
     <link rel="stylesheet" type="text/css" href="http://datatables.net/media/css/jui_themes/redmond/jquery-ui-1.7.2.custom.css">
 
@@ -61,7 +61,7 @@
                    toolsTestedByMIWG.tools[i].testResultsASubmitted = 0;
                    toolsTestedByMIWG.tools[i].testResultsBSubmitted = 0;
                    toolsTestedByMIWG.tools[i].testResultsCSubmitted = 0;
-                 }
+                    }
 //                 toolsTestedByMIWG.tools[i].openIssues = 0;
 //                 toolsTestedByMIWG.tools[i].closedIssues = 0;
 //                 openIssues.forEach(function(issue) {
@@ -78,7 +78,7 @@
 //                     }
 //                   });
 //                 });
-              }
+                    }
 
               $('#bpmn-tools').dataTable( {
                 "bJQueryUI": true,
@@ -100,7 +100,7 @@
                     { "mData": "hasExport", "mRender": renderImportExport },
                     { "mData": "hasRoundtrip", "mRender": renderRoundtrip },
                     { "mData": "participatedInDemosByYear",
-                      "mRender": function(data, type, full) {
+                      "mRender": function ( data, type, full ) {
                         return data.split(",")[0];
                       },
                       "bVisible" : false },
@@ -149,16 +149,16 @@
                   // show the anchor encoded as expected
                   //console.debug('toolAndVersion: '+toolAndVersion);
                   return toolAndVersion;
-              }
+                }
 
               function renderYear(data, type, full) {
                 var lastParticipation = data.split(",")[0];
                 var participated = false;
-                if (lastParticipation == "2015") {
+                if (lastParticipation == "2016") {
 		  participated = true;
 		} else if (lastParticipation != "0") {
 		  participated = "partial";
-		}
+              }
                 var result = renderTrafficLight(participated, type, full);
                 return '<span style="white-space:nowrap;">' + result + ' ' + data.split(",").join(", ") + '</span>';
               }
@@ -173,7 +173,7 @@
               }
 
               function renderTestResultsASubmitted(data, type, full) {
-                return renderTestResultsSubmittedInCategory(data, type, full, 20);
+                return renderTestResultsSubmittedInCategory(data, type, full, 24);
               }
 
               function renderTestResultsBSubmitted(data, type, full) {
@@ -204,7 +204,7 @@
                 }
 		if (full.website.length > 0) {
 		  result = '<a href="'+full.website+'">'+result+'</a>';
-		}
+              }
 		return result;
               }
 
@@ -243,8 +243,8 @@
                 return '<span class="glyphicon glyphicon-' + icon + '" style="color: ' + color + '"></span><span class="sr-only">' + data + '</span>';
               }
 
-        })
-
+            })
+                    
         $('.panel[id="legend"] .panel-title').prepend('<span class="toggle-indicator btn btn-default">+</span>&nbsp;');
         $('.panel[id="legend"] .panel-heading').click(function(panel) {
           // TODO this hardcoding of index 0 will always operate on legend panel
@@ -396,28 +396,32 @@
           <p>
             The <a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">MIWG test tools</a> have been built by:   
           </p>
-          <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-3" style="margin-top:10px;">
+          <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="display:inline-block; margin-top:10px;">
               <a href="http://www.camunda.com" target="_newtab">
                 <img alt="camunda" class="img-thumbnail" src="img/camunda.png" style="height: 90px" />
               </a>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-3" style="margin-top:10px;">
+            <div style="display:inline-block; margin-top:10px;">
               <a href="http://www.knowprocess.com" target="_newtab">
                 <img alt="Know Process" class="img-thumbnail" src="img/knowprocess.png"/>
               </a>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-3" style="margin-top:10px;">
-              <p style="margin-top: 26px;font-size: 20px;font-weight: bold;text-align: center;">Matthias Kurz</p>
+            <div style="display:inline-block; margin-top:10px;">
+              <p class="img-thumbnail" style="height:90px; padding: 26px 26px;font-size: 20px;font-weight: bold;text-align: center;">Matthias Kurz</p>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-3" style="margin-top:10px;">
+            <div style="display:inline-block; margin-top:10px;">
               <a href="http://www.signavio.com" target="_newtab">
                 <img alt="Signavio" class="img-thumbnail" src="img/Signavio.jpg" style="height: 90px" />
               </a>
             </div>
+            <div style="display:inline-block; margin-top:10px;">
+              <a href="http://www.trisotech.com" target="_newtab">
+                <img alt="Signavio" class="img-thumbnail" src="img/Trisotech.png" style="height: 90px" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
         
       <p>Powered by <a href="http://datatables.net/">jQuery DataTables</a>, <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://open.dapper.net/">Dapper</a></p>
     </div>
