@@ -70,6 +70,7 @@
                     <exclude name="submissions.sh"/>
                     <exclude name="submissions.json"/>
                     <exclude name="visual-test-result-comparison.html"/>
+                    <exclude name="visual-test-result-comparison-bounds.html"/>
                   </fileset>
                 </delete>
                 <echo>Unzipping test suite from ${maven.dependency.org.omg.bpmn.miwg.test-suite.jar.path}</echo>
