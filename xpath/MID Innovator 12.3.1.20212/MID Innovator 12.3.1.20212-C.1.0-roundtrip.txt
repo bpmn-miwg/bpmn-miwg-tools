@@ -1,0 +1,168 @@
+ANALYSIS: MID Innovator 12.3.1.20212-C.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : selectCollaboration                      Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'Grid' but was 'null' - comparing <Grid...> at /extensionElements[1]/graphStyle[1]/root[1]/Grid[1] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'VerticalRuler' but was 'null' - comparing <VerticalRuler...> at /extensionElements[1]/graphStyle[1]/root[1]/VerticalRuler[1] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'HorizontalRuler' but was 'null' - comparing <HorizontalRuler...> at /extensionElements[1]/graphStyle[1]/root[1]/HorizontalRuler[1] to  at null; Parameter: null
+        OK     : selectCollaboration                      Pop (id: )
+      OK     : selectPool                               Message: bpmn:participant[@name='Team-Assistant']
+      OK     : selectPool                               Push (id: sid-46891B57-A9D3-4A8B-AEBF-D4BA5F3961AD)
+        FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+        OK     : selectPool                               Push (id: )
+          FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+          OK     : selectPool                               Pop (id: )
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57']
+        OK     : selectReferencedProcess                  Push (id: sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57)
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : selectReferencedProcess                  Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : selectReferencedProcess                  Pop (id: )
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=false
+          FINDING: navigateElement                          Message: No node found; Parameter: bpmn:startEvent[@name='Invoice received']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Scan Invoice']
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name='') and @sourceRef='sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Archive original']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:intermediateCatchEvent[@name='Approver to be assigned']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Assign approver']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:eventBasedGateway[@name='']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:intermediateCatchEvent[@name='7 days']
+          FINDING: checkTimerEvent                          Message: Cannot find timer event definition; Parameter: bpmn:timerEventDefinition | bpmn:eventDefinitionRef
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='null']
+          OK     : navigateBookmarkedElement                Message: 
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
+          OK     : navigateElement                          Message: bpmn:task[@name='Review and document result']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateElement                          Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateElement                          Pop (id: )
+          OK     : navigateElement                          Message: bpmn:endEvent[not(@name)]
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateElement                          Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateElement                          Pop (id: )
+          OK     : doExecute                                Pop (id: sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57)
+        OK     : doExecute                                Pop (id: sid-46891B57-A9D3-4A8B-AEBF-D4BA5F3961AD)
+      OK     : selectPool                               Message: bpmn:participant[@name='Process Engine - Invoice Receipt']
+      OK     : selectPool                               Push (id: Process_Engine_1)
+        FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+        OK     : selectPool                               Push (id: )
+          FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+          OK     : selectPool                               Pop (id: )
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='bpmn-miwg-test-case-c.1.0']
+        OK     : selectReferencedProcess                  Push (id: bpmn-miwg-test-case-c.1.0)
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : selectReferencedProcess                  Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : selectReferencedProcess                  Pop (id: )
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=true
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Team Assistant']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateLane                             Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateLane                             Pop (id: )
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Approver']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateLane                             Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateLane                             Pop (id: )
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Accountant']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateLane                             Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateLane                             Pop (id: )
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateElement                          Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateElement                          Pop (id: )
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:formKey="app:startProcess.jsf"' from reference in test file; Parameter: null
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name='') and @targetRef='StartEvent_1']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Assign Approver' and @id='assignApprover']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="demo"' from reference in test file; Parameter: null
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="${approver}"' from reference in test file; Parameter: null
+          FINDING: checkAttributeValue                      Message: Attribute camunda:assignee is not existing.; Parameter: 
+          FINDING: checkAttributeValue                      Message: Attribute camunda:formKey is not existing.; Parameter: 
+          OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='invoice_approved']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung klären' and @id='reviewInvoice']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="demo"' from reference in test file; Parameter: null
+          OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='reviewSuccessful_gw']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice not processed' and @id='invoiceNotProcessed']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions/bpmn:process[@id='id="bpmn-miwg-test-case-c.1.0"']/bpmn:exclusiveGateway[@id='id="reviewSuccessful_gw"']/
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateBookmarkedElement                Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateBookmarkedElement                Pop (id: )
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="${approver}"' from reference in test file; Parameter: null
+          OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions/bpmn:process[@id='id="bpmn-miwg-test-case-c.1.0"']/bpmn:exclusiveGateway[@id='id="invoice_approved"']/
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateBookmarkedElement                Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateBookmarkedElement                Pop (id: )
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Prepare Bank Transfer' and @id='prepareBankTransfer']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:candidateGroups="accounting"' from reference in test file; Parameter: null
+          OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Archive Invoice' and @id='archiveInvoice']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 18: Expected presence of child nodes to be 'true' but was 'false' - comparing <camunda:expression...> at /extensionElements[1]/field[2]/expression[1] to <camunda:expression...> at /extensionElements[1]/field[2]/expression[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 18: Expected presence of child nodes to be 'true' but was 'false' - comparing <camunda:expression...> at /extensionElements[1]/field[3]/expression[1] to <camunda:expression...> at /extensionElements[1]/field[3]/expression[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 18: Expected presence of child nodes to be 'true' but was 'false' - comparing <camunda:string...> at /extensionElements[1]/field[4]/string[1] to <camunda:string...> at /extensionElements[1]/field[4]/string[1]; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 18: Expected presence of child nodes to be 'true' but was 'false' - comparing <camunda:string...> at /extensionElements[1]/field[5]/string[1] to <camunda:string...> at /extensionElements[1]/field[5]/string[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:delegateExpression="#{archiveService}"' from reference in test file; Parameter: null
+          FINDING: checkAttributeValue                      Message: Attribute camunda:delegateExpression is not existing.; Parameter: 
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice processed' and @id='invoiceProcessed']
+          FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+          OK     : navigateFollowingElement                 Push (id: )
+            FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+            OK     : navigateFollowingElement                 Pop (id: )
+          OK     : doExecute                                Pop (id: bpmn-miwg-test-case-c.1.0)
+        OK     : doExecute                                Pop (id: Process_Engine_1)
+      OK     : doExecute                                Pop (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)

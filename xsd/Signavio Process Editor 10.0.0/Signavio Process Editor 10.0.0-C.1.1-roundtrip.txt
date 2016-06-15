@@ -1,0 +1,2 @@
+ANALYSIS: Signavio Process Editor 10.0.0-C.1.1-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

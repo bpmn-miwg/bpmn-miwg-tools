@@ -61,11 +61,11 @@
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373655174418&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:exclusiveGateway[@id=&apos;id=&quot;_ad81e6ba-40f5-43c1-9602-47d2e58804c8&quot;&apos;]/"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Service Task 7&apos; and @id=&apos;_fea1c5af-6c76-403f-809e-26d476d92741&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_fea1c5af-6c76-403f-809e-26d476d92741" caller="checkDataAssociation">
-               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find the associated artifact dataObject &apos;Data Object&apos;"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkDataAssociation" message="Association reference dataObject &apos;Data Object&apos; found"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_fea1c5af-6c76-403f-809e-26d476d92741" caller="checkDataAssociation"/>
             </entry>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_fea1c5af-6c76-403f-809e-26d476d92741" caller="checkDataAssociation">
-               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find the associated artifact dataStoreReference &apos;Data Store Reference&apos;"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkDataAssociation" message="Association reference dataStoreReference &apos;Data Store Reference&apos; found"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_fea1c5af-6c76-403f-809e-26d476d92741" caller="checkDataAssociation"/>
             </entry>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;_33f30031-2e29-46b6-b080-30a192a36b45&apos;]"/>

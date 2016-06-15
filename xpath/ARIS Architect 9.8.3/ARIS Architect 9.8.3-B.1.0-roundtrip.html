@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="ARIS Architect 9.8.3">
+      <h2>ARIS Architect 9.8.3</h2>
+      <div class="test" data-test="B.1.0" data-variant="Roundtrip">
+         <h3>B.1.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: ARIS Architect 9.8.3-B.1.0-roundtrip (Tool: xpath)</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : execute                                  Push (id: ARISBPMN_32592577-e45e-11e5-537c-0050568d1e04)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectCollaboration                      Message: bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectCollaboration                      Push (id: COLLABORATION_32592577-e45e-11e5-537c-0050568d1e04)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;COLLABORATION_32592577-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;COLLABORATION_32592577-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:messageFlow[@name=&apos;Message Flow 1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOW_32677d66-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOW_32677d66-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:messageFlow[@name=&apos;Message Flow 2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOW_32650c62-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOW_32650c62-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessByParticipant               Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;PROCESS_32650c69-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;PROCESS_32650c69-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectProcessByParticipant               Push (id: PROCESS_32650c69-e45e-11e5-537c-0050568d1e04)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Start Event Timer&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_768172bd-24e6-37c7-8b90-c13bbb0adb35&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_768172bd-24e6-37c7-8b90-c13bbb0adb35&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkTimerEvent                          Message: Timer event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;FLOWNODE_0a75fdb7-00fa-3556-94cb-346687f04a62&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_0a75fdb7-00fa-3556-94cb-346687f04a62&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_0a75fdb7-00fa-3556-94cb-346687f04a62&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow                         Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;User Task 2&apos; and @id=&apos;FLOWNODE_2ff92555-7430-37f9-901d-fef8c3205f86&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_2ff92555-7430-37f9-901d-fef8c3205f86&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_2ff92555-7430-37f9-901d-fef8c3205f86&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name=&apos;Service Task 3&apos; and @id=&apos;FLOWNODE_f8cafd87-b438-37a9-98c7-7892e8d98c2d&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_f8cafd87-b438-37a9-98c7-7892e8d98c2d&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_f8cafd87-b438-37a9-98c7-7892e8d98c2d&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event None 1&apos; and @id=&apos;FLOWNODE_efc75758-62b6-318b-b224-5f5e272d881c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_efc75758-62b6-318b-b224-5f5e272d881c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_efc75758-62b6-318b-b224-5f5e272d881c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: PROCESS_32650c69-e45e-11e5-537c-0050568d1e04)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessByParticipant               Message: //bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;PROCESS_325b9671-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;PROCESS_325b9671-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectProcessByParticipant               Push (id: PROCESS_325b9671-e45e-11e5-537c-0050568d1e04)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkXORMarkersForProcess                Message: All XOR markers have the expected value &apos;false&apos;.</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkXORMarkersForProcess                Message: All XOR markers have the expected value &apos;false&apos;.</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkXORMarkersForProcess                Message: All XOR markers have the expected value &apos;false&apos;.</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkXORMarkersForProcess                Message: All XOR markers have the expected value &apos;false&apos;.</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_8355952d-005b-36c5-816f-a7f0370f2e4b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_8355952d-005b-36c5-816f-a7f0370f2e4b&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_93dfbad4-1c3a-3e18-8f62-1041cb7c4ce3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_93dfbad4-1c3a-3e18-8f62-1041cb7c4ce3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Start Event Message&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_9e5db20b-69bd-3b4e-a99e-419bde752b0d&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_9e5db20b-69bd-3b4e-a99e-419bde752b0d&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:parallelGateway[@name=&apos;Parallel Gateway Divergence&apos; and @id=&apos;FLOWNODE_de99f661-e100-3af3-b30a-48d1c7282c3c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_de99f661-e100-3af3-b30a-48d1c7282c3c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_de99f661-e100-3af3-b30a-48d1c7282c3c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 1&apos; and @id=&apos;FLOWNODE_11d5dfad-c5ae-33ea-afd6-6da0e43bcc71&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_11d5dfad-c5ae-33ea-afd6-6da0e43bcc71&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_11d5dfad-c5ae-33ea-afd6-6da0e43bcc71&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:callActivity[@name=&apos;Call Activity Collapsed&apos; and @id=&apos;FLOWNODE_31149561-228c-3a8f-94f9-0efc37350fcb&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_31149561-228c-3a8f-94f9-0efc37350fcb&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_31149561-228c-3a8f-94f9-0efc37350fcb&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkTextAssociation                     Message: Text annotation &apos;Text Annotation&apos; not found; Parameter: //bpmn:textAnnotation[@id=../bpmn:association[@sourceRef=&apos;FLOWNODE_31149561-228c-3a8f-94f9-0efc37350fcb&apos;]/@targetRef]/bpmn:text</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement                   Message: bpmn:callActivity[@name=&apos;Call Activity - Expanded&apos; and @id=&apos;FLOWNODE_264938c8-81f6-3f43-9506-6895ee693228&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_264938c8-81f6-3f43-9506-6895ee693228&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_264938c8-81f6-3f43-9506-6895ee693228&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement                   Push (id: FLOWNODE_264938c8-81f6-3f43-9506-6895ee693228)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectProcessOfCallActivity              Message: Cannot find process with id PROCESS_32650c51-e45e-11e5-537c-0050568d1e04; Parameter: //bpmn:process[@id=&apos;PROCESS_32650c51-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : selectProcessOfCallActivity              Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Start Event None 1&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: FLOWNODE_264938c8-81f6-3f43-9506-6895ee693228)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 1&apos; and @id=&apos;FLOWNODE_f1645b7e-1622-3f8a-91e2-3dbaa68bbf44&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_f1645b7e-1622-3f8a-91e2-3dbaa68bbf44&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_f1645b7e-1622-3f8a-91e2-3dbaa68bbf44&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event Message&apos; and @id=&apos;FLOWNODE_64272b41-2de4-3f24-ba5b-9ce994db05cf&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_64272b41-2de4-3f24-ba5b-9ce994db05cf&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_64272b41-2de4-3f24-ba5b-9ce994db05cf&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow                         Message: message flow &apos;Message Flow 2&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id=&apos;id=&quot;ARISBPMN_32592577-e45e-11e5-537c-0050568d1e04&quot;&apos;]/semantic:process[@id=&apos;id=&quot;PROCESS_325b9671-e45e-11e5-537c-0050568d1e04&quot;&apos;]/semantic:exclusiveGateway[@id=&apos;id=&quot;FLOWNODE_11d5dfad-c5ae-33ea-afd6-6da0e43bcc71&quot;&apos;]/</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_11d5dfad-c5ae-33ea-afd6-6da0e43bcc71&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_11d5dfad-c5ae-33ea-afd6-6da0e43bcc71&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:callActivity[@name=&apos;Call Activity Calling a Global Task&apos; and @id=&apos;FLOWNODE_d966ad5e-15a4-3a6f-af8a-1a15c4a3e2dd&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_d966ad5e-15a4-3a6f-af8a-1a15c4a3e2dd&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_d966ad5e-15a4-3a6f-af8a-1a15c4a3e2dd&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkGlobalTask                          Message: Attibute &apos;calledElement&apos; does not exist (as expected)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 1&apos; and @id=&apos;FLOWNODE_f1645b7e-1622-3f8a-91e2-3dbaa68bbf44&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_f1645b7e-1622-3f8a-91e2-3dbaa68bbf44&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_f1645b7e-1622-3f8a-91e2-3dbaa68bbf44&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id=&apos;id=&quot;ARISBPMN_32592577-e45e-11e5-537c-0050568d1e04&quot;&apos;]/semantic:process[@id=&apos;id=&quot;PROCESS_325b9671-e45e-11e5-537c-0050568d1e04&quot;&apos;]/semantic:parallelGateway[@id=&apos;id=&quot;FLOWNODE_de99f661-e100-3af3-b30a-48d1c7282c3c&quot;&apos;]/</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_de99f661-e100-3af3-b30a-48d1c7282c3c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_de99f661-e100-3af3-b30a-48d1c7282c3c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;User Task 5&apos; and @id=&apos;FLOWNODE_bddfbe62-0812-3d50-b7bb-d4d8177c3c0d&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_bddfbe62-0812-3d50-b7bb-d4d8177c3c0d&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_bddfbe62-0812-3d50-b7bb-d4d8177c3c0d&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Divergence 2&apos; and @id=&apos;FLOWNODE_7502d450-962f-379f-a9f0-18414191ba6c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_7502d450-962f-379f-a9f0-18414191ba6c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_7502d450-962f-379f-a9f0-18414191ba6c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:subProcess[@name=&apos;Collapsed Sub-Process&apos; and @id=&apos;FLOWNODE_d2752a12-91a3-3ab8-8c92-ce0e41f327f4&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_d2752a12-91a3-3ab8-8c92-ce0e41f327f4&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_d2752a12-91a3-3ab8-8c92-ce0e41f327f4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement                   Message: bpmn:subProcess[@name=&apos;Sub Process - Expanded&apos; and @id=&apos;FLOWNODE_c659c065-e965-3e66-80d8-971ca2777716&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_c659c065-e965-3e66-80d8-971ca2777716&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_c659c065-e965-3e66-80d8-971ca2777716&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement                   Push (id: FLOWNODE_c659c065-e965-3e66-80d8-971ca2777716)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Start Event None 2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_67cbd8ad-4787-3e8e-9cb0-f7e869f6628f&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_67cbd8ad-4787-3e8e-9cb0-f7e869f6628f&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Abstract Task 6&apos; and @id=&apos;FLOWNODE_92af3dd3-ab29-3ecb-995f-d54807c830d2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_92af3dd3-ab29-3ecb-995f-d54807c830d2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_92af3dd3-ab29-3ecb-995f-d54807c830d2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event None 3&apos; and @id=&apos;FLOWNODE_71652dc1-c85a-3eb7-95e9-3227e1c30896&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_71652dc1-c85a-3eb7-95e9-3227e1c30896&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_71652dc1-c85a-3eb7-95e9-3227e1c30896&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: FLOWNODE_c659c065-e965-3e66-80d8-971ca2777716)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;FLOWNODE_55c620bb-55c4-3bfc-9584-a8abcff02d2b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_55c620bb-55c4-3bfc-9584-a8abcff02d2b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_55c620bb-55c4-3bfc-9584-a8abcff02d2b&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event Terminate&apos; and @id=&apos;FLOWNODE_b77cf2d8-a08a-3280-8167-317dfe856f91&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_b77cf2d8-a08a-3280-8167-317dfe856f91&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_b77cf2d8-a08a-3280-8167-317dfe856f91&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id=&apos;id=&quot;ARISBPMN_32592577-e45e-11e5-537c-0050568d1e04&quot;&apos;]/semantic:process[@id=&apos;id=&quot;PROCESS_325b9671-e45e-11e5-537c-0050568d1e04&quot;&apos;]/semantic:exclusiveGateway[@id=&apos;id=&quot;FLOWNODE_7502d450-962f-379f-a9f0-18414191ba6c&quot;&apos;]/</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_7502d450-962f-379f-a9f0-18414191ba6c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_7502d450-962f-379f-a9f0-18414191ba6c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name=&apos;Service Task 7&apos; and @id=&apos;FLOWNODE_7d9da1ce-fc5f-3f0d-9ed1-9ed3eb8b8b1e&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_7d9da1ce-fc5f-3f0d-9ed1-9ed3eb8b8b1e&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_7d9da1ce-fc5f-3f0d-9ed1-9ed3eb8b8b1e&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation                     Push (id: FLOWNODE_7d9da1ce-fc5f-3f0d-9ed1-9ed3eb8b8b1e)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkDataAssociation                     Message: Cannot find artifact node; Parameter: ../bpmn:dataObjectReference[@id=&apos;FLOWNODE_f0663d20-ce99-35b8-82c6-a0e0e8ced240&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkDataAssociation                     Pop (id: FLOWNODE_7d9da1ce-fc5f-3f0d-9ed1-9ed3eb8b8b1e)</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : checkDataAssociation                     Push (id: FLOWNODE_7d9da1ce-fc5f-3f0d-9ed1-9ed3eb8b8b1e)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkDataAssociation                     Message: Cannot find artifact node; Parameter: ../bpmn:dataStoreReference[@id=&apos;FLOWNODE_325de06c-e45e-11e5-537c-0050568d1e04&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkDataAssociation                     Pop (id: FLOWNODE_7d9da1ce-fc5f-3f0d-9ed1-9ed3eb8b8b1e)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;FLOWNODE_55c620bb-55c4-3bfc-9584-a8abcff02d2b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_55c620bb-55c4-3bfc-9584-a8abcff02d2b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;FLOWNODE_55c620bb-55c4-3bfc-9584-a8abcff02d2b&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: PROCESS_325b9671-e45e-11e5-537c-0050568d1e04)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: COLLABORATION_32592577-e45e-11e5-537c-0050568d1e04)</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68020511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+ANALYSIS: ModelFoundry 1.1.1-C.3.0-roundtrip (Tool: xsd)
+  Error Line 11: cvc-complex-type.2.4.a: Invalid content was found starting with element 'outgoing'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinition, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinitionRef}' is expected.
+
+  Error Line 43: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 43: cvc-elt.4.1: The value 'bpmn:tExpression' of attribute 'http://www.w3.org/2001/XMLSchema-instance,type' of element 'timeDuration' is not a valid QName.
+
+  Error Line 43: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 43: cvc-attribute.3: The value 'bpmn:tExpression' of attribute 'xsi:type' on element 'timeDuration' is not valid with respect to its type, 'QName'.
+
+  Error Line 45: cvc-complex-type.2.4.a: Invalid content was found starting with element 'outgoing'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinition, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinitionRef}' is expected.
+
+  Error Line 49: cvc-complex-type.2.4.a: Invalid content was found starting with element 'outgoing'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinition, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinitionRef}' is expected.
+
+  Error Line 73: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 73: cvc-elt.4.1: The value 'bpmn:tExpression' of attribute 'http://www.w3.org/2001/XMLSchema-instance,type' of element 'conditionExpression' is not a valid QName.
+
+  Error Line 73: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 73: cvc-attribute.3: The value 'bpmn:tExpression' of attribute 'xsi:type' on element 'conditionExpression' is not valid with respect to its type, 'QName'.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 11, Fatal Errors: 0

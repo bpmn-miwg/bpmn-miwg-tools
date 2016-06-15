@@ -1,0 +1,13 @@
+<analysis name="Signavio Process Editor 10.0.0-B.2.0-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 200: cvc-complex-type.2.4.b: The content of element &apos;ioSpecification&apos; is not complete. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:inputSet, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:outputSet}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 920: cvc-complex-type.2.4.b: The content of element &apos;ioSpecification&apos; is not complete. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:inputSet, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:outputSet}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 1641: cvc-id.2: There are multiple occurrences of ID value &apos;Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 1641: cvc-attribute.3: The value &apos;Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450&apos; of attribute &apos;id&apos; on element &apos;process&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 2866: cvc-id.1: There is no ID/IDREF binding for IDREF &apos;sid-f39b4ae9-8cf2-44ef-987b-cc7b9c443b14&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 5, Fatal Errors: 0"/>
+</analysis>

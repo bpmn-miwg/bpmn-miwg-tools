@@ -11,7 +11,7 @@ ANALYSIS: bpmn.io 0.9.2-B.2.0-roundtrip (Tool: xpath)
         OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Output)
         OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='User Task 3' and @id='_0e87da16-736e-45b2-95e5-8f45940f3adf']
         OK     : checkDataAssociation                     Push (id: _0e87da16-736e-45b2-95e5-8f45940f3adf)
-          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataObject 'Data Object'; Parameter: null
+          OK     : checkDataAssociation                     Message: Association reference dataObject 'Data Object' found
           OK     : checkDataAssociation                     Pop (id: _0e87da16-736e-45b2-95e5-8f45940f3adf)
         OK     : navigateFollowingElement                 Message: bpmn:inclusiveGateway[@name='Inclusive Gateway 1' and @id='_dec393e7-f182-4d31-b05f-e33ac3a5e35f']
         OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 4' and @id='_ac1fde31-c0cd-4a8a-9728-a5fb49602de7']
@@ -99,7 +99,7 @@ ANALYSIS: bpmn.io 0.9.2-B.2.0-roundtrip (Tool: xpath)
           OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Output)
           OK     : navigateElement                          Message: bpmn:subProcess[@name='Collapsed Sub-Process 2']
           OK     : checkDataAssociation                     Push (id: _0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447)
-            FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'Data Store Reference'; Parameter: null
+            OK     : checkDataAssociation                     Message: Association reference dataStoreReference 'Data Store Reference' found
             OK     : checkDataAssociation                     Pop (id: _0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447)
           OK     : selectElement                            Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: _49e94b5f-ce21-4c2b-b78d-3cde5c09c15e)

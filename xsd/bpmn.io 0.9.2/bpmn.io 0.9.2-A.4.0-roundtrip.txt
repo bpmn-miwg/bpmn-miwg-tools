@@ -1,8 +1,2 @@
 ANALYSIS: bpmn.io 0.9.2-A.4.0-roundtrip (Tool: xsd)
-  Error Line 100: cvc-complex-type.3.2.2: Attribute 'di:name' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
-
-  Error Line 100: cvc-complex-type.3.2.2: Attribute 'di:documentation' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
-
-  Error Line 100: cvc-complex-type.3.2.2: Attribute 'di:resolution' is not allowed to appear in element 'bpmndi:BPMNDiagram'.
-
-  INFO   : Validation failed: Warnings: 0, Errors: 3, Fatal Errors: 0
+  OK     : Validation                               Message: Schema validation succeeded
