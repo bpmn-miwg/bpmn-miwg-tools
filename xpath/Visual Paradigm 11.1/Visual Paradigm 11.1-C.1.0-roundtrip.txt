@@ -75,7 +75,7 @@ ANALYSIS: Visual Paradigm 11.1-C.1.0-roundtrip (Tool: xpath)
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='sid_499dfba4_1449_4914_9e85_55b252800bad_Approver_invoice_approved']
           FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='sid_499dfba4_1449_4914_9e85_55b252800bad_Approver_invoice_approved']
           FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='sid_499dfba4_1449_4914_9e85_55b252800bad_Approver_invoice_approved']
-          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Rechnung kl√§ren']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Rechnung kl‰ren']
           FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Review successful?']
           FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='Invoice not processed']
           OK     : navigateBookmarkedElement                Message: 

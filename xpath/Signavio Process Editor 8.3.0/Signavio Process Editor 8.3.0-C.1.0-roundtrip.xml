@@ -161,7 +161,7 @@
                   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="22: Expected presence of child node &apos;w4graph:graphStyle&apos; but was &apos;null&apos; - comparing &lt;w4graph:graphStyle...&gt; at /extensionElements[1]/graphStyle[1] to  at null"/>
                   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="" caller="navigateFollowingElement"/>
                </entry>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Rechnung klÃ¤ren&apos; and @id=&apos;reviewInvoice&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Rechnung klären&apos; and @id=&apos;reviewInvoice&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Extension Elements are not similar to the reference"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="navigateFollowingElement">
                   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="22: Expected presence of child node &apos;signavio:signavioMetaData&apos; but was &apos;null&apos; - comparing &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[2] to  at null"/>

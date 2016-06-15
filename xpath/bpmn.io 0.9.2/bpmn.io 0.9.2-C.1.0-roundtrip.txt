@@ -77,7 +77,7 @@ ANALYSIS: bpmn.io 0.9.2-C.1.0-roundtrip (Tool: xpath)
           OK     : checkAttributeValue                      Message: Attribute camunda:formKey=app:approveInvoice.jsf
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='invoice_approved']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
-          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl√§ren' and @id='reviewInvoice']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl‰ren' and @id='reviewInvoice']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
           FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="demo"' from reference in test file; Parameter: null
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='reviewSuccessful_gw']

@@ -146,7 +146,7 @@ ANALYSIS: Signavio Process Editor 8.3.0-C.1.0-roundtrip (Tool: xpath)
             FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
             FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'w4graph:graphStyle' but was 'null' - comparing <w4graph:graphStyle...> at /extensionElements[1]/graphStyle[1] to  at null; Parameter: null
             OK     : navigateFollowingElement                 Pop (id: )
-          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl√§ren' and @id='reviewInvoice']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl‰ren' and @id='reviewInvoice']
           FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
           OK     : navigateFollowingElement                 Push (id: )
             FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null

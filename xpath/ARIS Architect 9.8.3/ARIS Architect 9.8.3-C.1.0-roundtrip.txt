@@ -1,11 +1,11 @@
 ANALYSIS: ARIS Architect 9.8.3-C.1.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: ARISBPMN_1e394383-e464-11e5-537c-0050568d1e04)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     OK     : selectCollaboration                      Message: bpmn:collaboration
     OK     : selectCollaboration                      Push (id: COLLABORATION_1e394383-e464-11e5-537c-0050568d1e04)
       FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='COLLABORATION_1e394383-e464-11e5-537c-0050568d1e04']
@@ -91,7 +91,7 @@ ANALYSIS: ARIS Architect 9.8.3-C.1.0-roundtrip (Tool: xpath)
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
           FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
           FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
-          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Rechnung kl√§ren']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Rechnung kl‰ren']
           FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Review successful?']
           FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='Invoice not processed']
           OK     : navigateBookmarkedElement                Message: 

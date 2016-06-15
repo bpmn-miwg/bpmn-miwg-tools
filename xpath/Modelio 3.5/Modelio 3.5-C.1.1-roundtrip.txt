@@ -27,7 +27,7 @@ ANALYSIS: Modelio 3.5-C.1.1-roundtrip (Tool: xpath)
       OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='MO-c5dd6d72-4d25-425c-b4e0-86de36201fd0']
       FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-c5dd6d72-4d25-425c-b4e0-86de36201fd0']
       FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-c5dd6d72-4d25-425c-b4e0-86de36201fd0']
-      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl√§ren' and @id='MO-1e6b04b3-6ea0-40cf-972a-28e0bbd75424']
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl‰ren' and @id='MO-1e6b04b3-6ea0-40cf-972a-28e0bbd75424']
       FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1e6b04b3-6ea0-40cf-972a-28e0bbd75424']
       FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1e6b04b3-6ea0-40cf-972a-28e0bbd75424']
       OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='MO-ed652e46-a588-489c-b889-6059f5e8227d']

@@ -109,7 +109,7 @@ ANALYSIS: MID Innovator 12.3.1.20212-C.1.0-roundtrip (Tool: xpath)
           OK     : navigateFollowingElement                 Push (id: )
             FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
             OK     : navigateFollowingElement                 Pop (id: )
-          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl√§ren' and @id='reviewInvoice']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl‰ren' and @id='reviewInvoice']
           FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
           OK     : navigateFollowingElement                 Push (id: )
             FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
