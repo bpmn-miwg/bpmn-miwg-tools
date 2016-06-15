@@ -77,7 +77,7 @@ ANALYSIS: Camunda Modeler 2.7.0-C.1.0-roundtrip (Tool: xpath)
           OK     : checkAttributeValue                      Message: Attribute camunda:formKey=app:approveInvoice.jsf
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='invoice_approved']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
-          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl‰ren' and @id='reviewInvoice']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl√§ren' and @id='reviewInvoice']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
           OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='reviewSuccessful_gw']

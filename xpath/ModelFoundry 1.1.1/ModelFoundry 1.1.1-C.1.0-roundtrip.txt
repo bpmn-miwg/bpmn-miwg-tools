@@ -74,7 +74,7 @@ ANALYSIS: ModelFoundry 1.1.1-C.1.0-roundtrip (Tool: xpath)
           FINDING: checkAttributeValue                      Message: Attribute camunda:formKey is not existing.; Parameter: 
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='invoice_approved']
           FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
-          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl‰ren' and @id='reviewInvoice']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl√§ren' and @id='reviewInvoice']
           FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
           FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="demo"' from reference in test file; Parameter: null
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='reviewSuccessful_gw']

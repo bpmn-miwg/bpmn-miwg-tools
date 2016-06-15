@@ -27,7 +27,7 @@ ANALYSIS: ARIS Architect 9.8.3-C.1.1-roundtrip (Tool: xpath)
       OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
       FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
       FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
-      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Rechnung kl‰ren']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Rechnung kl√§ren']
       FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Review successful?']
       FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Approve Invoice']
       OK     : navigateBookmarkedElement                Message: 

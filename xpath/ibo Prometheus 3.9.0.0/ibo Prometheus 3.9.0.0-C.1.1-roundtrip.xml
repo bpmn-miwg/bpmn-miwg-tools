@@ -28,7 +28,7 @@
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Invoice approved?&apos; and @id=&apos;invoice_approved&apos;]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Rechnung klären&apos; and @id=&apos;reviewInvoice&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Rechnung klÃ¤ren&apos; and @id=&apos;reviewInvoice&apos;]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Review successful?&apos; and @id=&apos;reviewSuccessful_gw&apos;]"/>

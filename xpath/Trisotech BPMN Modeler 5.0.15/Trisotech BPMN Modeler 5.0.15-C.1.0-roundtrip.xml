@@ -298,7 +298,7 @@
                   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="2: Expected attribute name &apos;metaValue&apos; but was &apos;null&apos; - comparing &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[5] to &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[5]"/>
                   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="" caller="navigateFollowingElement"/>
                </entry>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Rechnung klären&apos; and @id=&apos;reviewInvoice&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Rechnung klÃ¤ren&apos; and @id=&apos;reviewInvoice&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Extension Elements are not similar to the reference"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="navigateFollowingElement">
                   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="15: Expected namespace prefix &apos;null&apos; but was &apos;semantic&apos; - comparing &lt;extensionElements...&gt; at /extensionElements[1] to &lt;semantic:extensionElements...&gt; at /extensionElements[1]"/>

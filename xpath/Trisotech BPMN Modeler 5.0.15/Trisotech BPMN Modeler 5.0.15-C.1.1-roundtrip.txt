@@ -84,7 +84,7 @@ ANALYSIS: Trisotech BPMN Modeler 5.0.15-C.1.1-roundtrip (Tool: xpath)
         FINDING: checkAutoExtensionElements               Message: 11: Expected number of element attributes '2' but was '1' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5]; Parameter: null
         FINDING: checkAutoExtensionElements               Message: 2: Expected attribute name 'metaValue' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5]; Parameter: null
         OK     : navigateFollowingElement                 Pop (id: )
-      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl‰ren' and @id='reviewInvoice']
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung kl√§ren' and @id='reviewInvoice']
       FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
       OK     : navigateFollowingElement                 Push (id: )
         FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'semantic' - comparing <extensionElements...> at /extensionElements[1] to <semantic:extensionElements...> at /extensionElements[1]; Parameter: null
