@@ -1,0 +1,54 @@
+ANALYSIS: MID Innovator 12.3.1.20212-C.3.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
+    OK     : checkAttributeValue                      Message: Attribute id=_8170787a-3207-434d-9bea-4787059f444f
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+    OK     : selectFirstProcess                       Push (id: )
+      FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn' - comparing <extensionElements...> at /extensionElements[1] to <bpmn:extensionElements...> at /extensionElements[1]; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'attribute' but was 'null' - comparing <attribute...> at /extensionElements[1]/systemDefinedAttributes[1]/attribute[1] to  at null; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'attribute' but was 'null' - comparing <attribute...> at /extensionElements[1]/systemDefinedAttributes[1]/attribute[2] to  at null; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'attribute' but was 'null' - comparing <attribute...> at /extensionElements[1]/systemDefinedAttributes[1]/attribute[3] to  at null; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'attribute' but was 'null' - comparing <attribute...> at /extensionElements[1]/systemDefinedAttributes[1]/attribute[4] to  at null; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'attribute' but was 'null' - comparing <attribute...> at /extensionElements[1]/systemDefinedAttributes[1]/attribute[5] to  at null; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'Grid' but was 'null' - comparing <Grid...> at /extensionElements[1]/graphStyle[1]/root[1]/Grid[1] to  at null; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'VerticalRuler' but was 'null' - comparing <VerticalRuler...> at /extensionElements[1]/graphStyle[1]/root[1]/VerticalRuler[1] to  at null; Parameter: null
+      FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'HorizontalRuler' but was 'null' - comparing <HorizontalRuler...> at /extensionElements[1]/graphStyle[1]/root[1]/HorizontalRuler[1] to  at null; Parameter: null
+      OK     : selectFirstProcess                       Pop (id: )
+    OK     : selectFirstProcess                       Push (id: _8170787a-3207-434d-9bea-4787059f444f)
+      OK     : checkAttributeValue                      Message: Attribute isExecutable=true
+      FINDING: navigateElement                          Message: No node found; Parameter: bpmn:startEvent[@name='Receive customer request']
+      FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Analyse customer request']
+      FINDING: checkAttributeValue                      Message: Attribute startQuantity is not existing.; Parameter: 
+      FINDING: checkAttributeValue                      Message: Attribute completionQuantity is not existing.; Parameter: 
+      FINDING: checkAttributeValue                      Message: Attribute implementation is not existing.; Parameter: 
+      FINDING: navigateChildElement                     Message: No node found; Parameter: bpmn:potentialOwner[@name='Potential Owner']
+      FINDING: checkChildElementValue                   Message: No node found; Parameter: bpmn:resourceRef[(not(@name) or @name='')]
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: checkAttributeValue                      Message: No Current node; Parameter: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateBoundaryEvent                    Message: Current node is null; Parameter: null
+      FINDING: checkTimerEvent                          Message: Current node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateBoundaryEvent                    Message: Current node is null; Parameter: null
+      FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : doExecute                                Pop (id: _8170787a-3207-434d-9bea-4787059f444f)

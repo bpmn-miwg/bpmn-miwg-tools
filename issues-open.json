@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/631",
@@ -24881,6 +24882,11 @@
     "updated_at": "2013-11-27T15:09:57Z",
     "closed_at": null,
     "body": "http://www.omg.org/issues/bpmn2-rtf.open.html#Issue14709"
+=======
+  },
+  },
+  },
+>>>>>>> 8e66d54ffa5e23aa6c3c775d62a9a3a0b9360fad
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/83",

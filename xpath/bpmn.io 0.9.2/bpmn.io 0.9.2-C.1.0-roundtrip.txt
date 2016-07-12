@@ -64,35 +64,46 @@ ANALYSIS: bpmn.io 0.9.2-C.1.0-roundtrip (Tool: xpath)
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
           OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
-          OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:formKey="app:startProcess.jsf"' from reference in test file; Parameter: null
           OK     : checkMessageEvent                        Message: Message event definition
           OK     : checkMessageFlow                         Message: message flow '' (Input) -> //bpmn:task[@name='Scan Invoice' and @id='sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF']
           OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Assign Approver' and @id='assignApprover']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
-          OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="demo"' from reference in test file; Parameter: null
           OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
-          OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="${approver}"' from reference in test file; Parameter: null
           OK     : checkAttributeValue                      Message: Attribute camunda:assignee=${approver}
           OK     : checkAttributeValue                      Message: Attribute camunda:formKey=app:approveInvoice.jsf
           OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='invoice_approved']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
-          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Rechnung klären']
-          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Review successful?']
-          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='Invoice not processed']
-          OK     : navigateBookmarkedElement                Message: 
-          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung klären' and @id='reviewInvoice']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="demo"' from reference in test file; Parameter: null
+          OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='reviewSuccessful_gw']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice not processed' and @id='invoiceNotProcessed']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="bpmn-miwg-test-case-c.1.0"']/exclusiveGateway[@id='id="reviewSuccessful_gw"']/
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="${approver}"' from reference in test file; Parameter: null
           OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="bpmn-miwg-test-case-c.1.0"']/exclusiveGateway[@id='id="invoice_approved"']/
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
           OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Prepare Bank Transfer' and @id='prepareBankTransfer']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
-          OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:candidateGroups="accounting"' from reference in test file; Parameter: null
           OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Archive Invoice' and @id='archiveInvoice']
           FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
           OK     : navigateFollowingElement                 Push (id: )
-            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node '#text' but was 'null' - comparing <camunda:expression ...>Hello ${gender == 'male' ? 'Mr.' : 'Mrs.'} ${name}</camunda:expression> at /extensionElements[1]/field[3]/expression[1]/text()[1] to  at null; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'camunda:field' but was 'null' - comparing <camunda:field...> at /extensionElements[1]/field[1] to  at null; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'camunda:field' but was 'null' - comparing <camunda:field...> at /extensionElements[1]/field[2] to  at null; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'camunda:field' but was 'null' - comparing <camunda:field...> at /extensionElements[1]/field[3] to  at null; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'camunda:field' but was 'null' - comparing <camunda:field...> at /extensionElements[1]/field[4] to  at null; Parameter: null
+            FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'camunda:field' but was 'null' - comparing <camunda:field...> at /extensionElements[1]/field[5] to  at null; Parameter: null
             OK     : navigateFollowingElement                 Pop (id: )
-          OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:delegateExpression="#{archiveService}"' from reference in test file; Parameter: null
           OK     : checkAttributeValue                      Message: Attribute camunda:delegateExpression=#{archiveService}
           OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice processed' and @id='invoiceProcessed']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference

@@ -1,19 +1,3 @@
 <analysis name="bpmn.io 0.9.2-B.1.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 140: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;semantic:inputOutputSpecification&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:outgoing, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:ioSpecification, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:property, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:dataInputAssociation, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:dataOutputAssociation, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:resourceRole, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:loopCharacteristics}&apos; is expected.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 206: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;semantic:participant&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:artifact, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:conversationNode, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:conversationAssociation, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:participantAssociation, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:messageFlowAssociation, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:correlationKey, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:choreographyRef, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:conversationLink}&apos; is expected.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 211: cvc-complex-type.3.2.2: Attribute &apos;di:name&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 211: cvc-complex-type.3.2.2: Attribute &apos;di:documentation&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 211: cvc-complex-type.3.2.2: Attribute &apos;di:resolution&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 595: cvc-complex-type.3.2.2: Attribute &apos;di:name&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 595: cvc-complex-type.3.2.2: Attribute &apos;di:documentation&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 595: cvc-complex-type.3.2.2: Attribute &apos;di:resolution&apos; is not allowed to appear in element &apos;bpmndi:BPMNDiagram&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 8, Fatal Errors: 0"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
 </analysis>

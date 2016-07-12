@@ -1,0 +1,14 @@
+ANALYSIS: ModelFoundry 1.1.1-A.3.0-roundtrip (Tool: xsd)
+  Error Line 16: cvc-datatype-valid.1.2.1: '_428dcbf5-8e5e-48e0-9c0c-d93003fa8c82-semantic:messageEventDefinition1' is not a valid value for 'NCName'.
+
+  Error Line 16: cvc-attribute.3: The value '_428dcbf5-8e5e-48e0-9c0c-d93003fa8c82-semantic:messageEventDefinition1' of attribute 'id' on element 'messageEventDefinition' is not valid with respect to its type, 'ID'.
+
+  Error Line 17: cvc-complex-type.2.4.a: Invalid content was found starting with element 'outgoing'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinition, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinitionRef}' is expected.
+
+  Error Line 20: cvc-datatype-valid.1.2.1: '_178e16eb-4c9e-4ea0-9644-7c5fb2b71825-semantic:escalationEventDefinition1' is not a valid value for 'NCName'.
+
+  Error Line 20: cvc-attribute.3: The value '_178e16eb-4c9e-4ea0-9644-7c5fb2b71825-semantic:escalationEventDefinition1' of attribute 'id' on element 'escalationEventDefinition' is not valid with respect to its type, 'ID'.
+
+  Error Line 21: cvc-complex-type.2.4.a: Invalid content was found starting with element 'outgoing'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinition, "http://www.omg.org/spec/BPMN/20100524/MODEL":eventDefinitionRef}' is expected.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 6, Fatal Errors: 0

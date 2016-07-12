@@ -14,6 +14,9 @@
 				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
         <ul class="nav">
           <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
         </ul>
 			</div>
 		</div>
@@ -163,8 +166,24 @@
          <div class="ok">
             <h4>OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name=&apos;Archive Invoice&apos; and @id=&apos;archiveInvoice&apos;]</h4>
          </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
          <div class="ok">
-            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+            <h4>      OK     : navigateFollowingElement                 Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;#text&apos; but was &apos;null&apos; - comparing &lt;camunda:string ...&gt;
+	          Hello World
+	      &lt;/camunda:string&gt; at /extensionElements[1]/field[4]/string[1]/text()[1] to  at null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;#text&apos; but was &apos;null&apos; - comparing &lt;camunda:string ...&gt;
+	          &lt;p&gt;Hello World&lt;/p&gt;&lt;br&gt;
+	      &lt;/camunda:string&gt; at /extensionElements[1]/field[5]/string[1]/text()[1] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Pop (id: )</h4>
          </div>
          <div class="ok">
             <h4>OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.</h4>

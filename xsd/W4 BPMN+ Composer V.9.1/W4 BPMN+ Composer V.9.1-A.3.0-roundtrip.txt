@@ -1,2 +1,0 @@
-ANALYSIS: W4 BPMN+ Composer V.9.1-A.3.0-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

@@ -1,1 +1,0 @@
-ANALYSIS: W4 BPMN+ Composer V.9.1-C.2.0-roundtrip (Tool: init)

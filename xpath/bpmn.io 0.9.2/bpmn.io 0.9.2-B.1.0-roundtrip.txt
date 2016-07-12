@@ -57,10 +57,10 @@ ANALYSIS: bpmn.io 0.9.2-B.1.0-roundtrip (Tool: xpath)
         OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="_1373655174418"']/semantic:process[@id='id="WFP-6-2"']/semantic:exclusiveGateway[@id='id="_ad81e6ba-40f5-43c1-9602-47d2e58804c8"']/
         OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 7' and @id='_fea1c5af-6c76-403f-809e-26d476d92741']
         OK     : checkDataAssociation                     Push (id: _fea1c5af-6c76-403f-809e-26d476d92741)
-          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataObject 'Data Object'; Parameter: null
+          OK     : checkDataAssociation                     Message: Association reference dataObject 'Data Object' found
           OK     : checkDataAssociation                     Pop (id: _fea1c5af-6c76-403f-809e-26d476d92741)
         OK     : checkDataAssociation                     Push (id: _fea1c5af-6c76-403f-809e-26d476d92741)
-          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'Data Store Reference'; Parameter: null
+          OK     : checkDataAssociation                     Message: Association reference dataStoreReference 'Data Store Reference' found
           OK     : checkDataAssociation                     Pop (id: _fea1c5af-6c76-403f-809e-26d476d92741)
         OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2' and @id='_33f30031-2e29-46b6-b080-30a192a36b45']
         OK     : doExecute                                Pop (id: WFP-6-2)

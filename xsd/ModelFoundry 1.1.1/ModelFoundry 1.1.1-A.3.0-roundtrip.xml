@@ -1,0 +1,15 @@
+<analysis name="ModelFoundry 1.1.1-A.3.0-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 16: cvc-datatype-valid.1.2.1: &apos;_428dcbf5-8e5e-48e0-9c0c-d93003fa8c82-semantic:messageEventDefinition1&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 16: cvc-attribute.3: The value &apos;_428dcbf5-8e5e-48e0-9c0c-d93003fa8c82-semantic:messageEventDefinition1&apos; of attribute &apos;id&apos; on element &apos;messageEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 17: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;outgoing&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinition, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinitionRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 20: cvc-datatype-valid.1.2.1: &apos;_178e16eb-4c9e-4ea0-9644-7c5fb2b71825-semantic:escalationEventDefinition1&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 20: cvc-attribute.3: The value &apos;_178e16eb-4c9e-4ea0-9644-7c5fb2b71825-semantic:escalationEventDefinition1&apos; of attribute &apos;id&apos; on element &apos;escalationEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 21: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;outgoing&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinition, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinitionRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 6, Fatal Errors: 0"/>
+</analysis>

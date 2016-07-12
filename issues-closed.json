@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/632",
@@ -6171,17 +6172,19 @@
     "updated_at": "2014-09-24T21:47:48Z",
     "closed_at": "2014-09-24T21:47:48Z",
     "body": "A.1.2.bpmn:\r\n\r\nIs:\r\n```xml\r\n<bpmndi:BPMNShape bpmnElement=\"dataObject1Ref1\" id=\"S1398204189937_dataObject1Ref1\">\r\n   <dc:Bounds height=\"38.0\" width=\"0.0\" x=\"200.0\" y=\"216.0\"/>\r\n```\r\n\r\nShould be:\r\n```xml\r\n<bpmndi:BPMNShape bpmnElement=\"dataObject1Ref1\" id=\"S1398204189937_dataObject1Ref1\">\r\n   <dc:Bounds height=\"38.0\" width=\"30.0\" x=\"200.0\" y=\"216.0\"/>\r\n```"
+=======
+>>>>>>> 8e66d54ffa5e23aa6c3c775d62a9a3a0b9360fad
   },
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/191",
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/188",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/191/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/191/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/191/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/191",
-    "id": 43027831,
-    "number": 191,
-    "title": "First version based on Berlin demo",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/188/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/188/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/188/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/188",
+    "id": 37024358,
+    "number": 188,
+    "title": "Add cross test procedure and replace spreadsheet by HMTL table & JSON files",
     "user": {
       "login": "falko",
       "id": 40038,
@@ -6212,52 +6215,62 @@
     ],
     "milestone": null,
     "comments": 0,
-    "created_at": "2014-09-17T15:43:45Z",
-    "updated_at": "2014-09-17T15:44:22Z",
-    "closed_at": "2014-09-17T15:44:22Z",
+    "created_at": "2014-07-02T21:01:23Z",
+    "updated_at": "2014-07-09T15:12:39Z",
+    "closed_at": "2014-07-09T15:12:39Z",
     "pull_request": {
-      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/191",
-      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/191",
-      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/191.diff",
-      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/191.patch"
+      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/188",
+      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/188",
+      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/188.diff",
+      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/188.patch"
     },
     "body": ""
   },
   {
-    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/190",
+    "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
     "repository_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite",
-    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/190/labels{/name}",
-    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/190/comments",
-    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/190/events",
-    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/190",
-    "id": 42780436,
-    "number": 190,
-    "title": "feat(bpmn-io): add v0.5.0 version results",
+    "labels_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/labels{/name}",
+    "comments_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/comments",
+    "events_url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187/events",
+    "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/187",
+    "id": 36060863,
+    "number": 187,
+    "title": "Reference A.2.1 Provide test case with different kinds of Sequence Flows",
     "user": {
-      "login": "nikku",
-      "id": 58601,
-      "avatar_url": "https://avatars.githubusercontent.com/u/58601?v=3",
+      "login": "apupier",
+      "id": 1105127,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1105127?v=3",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/nikku",
-      "html_url": "https://github.com/nikku",
-      "followers_url": "https://api.github.com/users/nikku/followers",
-      "following_url": "https://api.github.com/users/nikku/following{/other_user}",
-      "gists_url": "https://api.github.com/users/nikku/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/nikku/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/nikku/subscriptions",
-      "organizations_url": "https://api.github.com/users/nikku/orgs",
-      "repos_url": "https://api.github.com/users/nikku/repos",
-      "events_url": "https://api.github.com/users/nikku/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/nikku/received_events",
+      "url": "https://api.github.com/users/apupier",
+      "html_url": "https://github.com/apupier",
+      "followers_url": "https://api.github.com/users/apupier/followers",
+      "following_url": "https://api.github.com/users/apupier/following{/other_user}",
+      "gists_url": "https://api.github.com/users/apupier/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/apupier/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/apupier/subscriptions",
+      "organizations_url": "https://api.github.com/users/apupier/orgs",
+      "repos_url": "https://api.github.com/users/apupier/repos",
+      "events_url": "https://api.github.com/users/apupier/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/apupier/received_events",
       "type": "User",
       "site_admin": false
     },
     "labels": [
-
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/bug",
+        "name": "bug",
+        "color": "fc2929"
+      },
+      {
+        "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/labels/Test:%20A.2.1",
+        "name": "Test: A.2.1",
+        "color": "006b75"
+      }
     ],
     "state": "closed",
     "locked": false,
     "assignee": {
+<<<<<<< HEAD
       "login": "falko",
       "id": 40038,
       "avatar_url": "https://avatars.githubusercontent.com/u/40038?v=3",
@@ -6321,6 +6334,8 @@
     "number": 189,
     "title": "Artifact is used as FlowElement in an example",
     "user": {
+=======
+>>>>>>> 8e66d54ffa5e23aa6c3c775d62a9a3a0b9360fad
       "login": "benmichel",
       "id": 8003851,
       "avatar_url": "https://avatars.githubusercontent.com/u/8003851?v=3",
@@ -6339,6 +6354,7 @@
       "type": "User",
       "site_admin": false
     },
+<<<<<<< HEAD
     "labels": [
 
     ],
@@ -6393,18 +6409,14 @@
     "assignees": [
 
     ],
+=======
+>>>>>>> 8e66d54ffa5e23aa6c3c775d62a9a3a0b9360fad
     "milestone": null,
-    "comments": 0,
-    "created_at": "2014-07-02T21:01:23Z",
-    "updated_at": "2014-07-09T15:12:39Z",
-    "closed_at": "2014-07-09T15:12:39Z",
-    "pull_request": {
-      "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/pulls/188",
-      "html_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/188",
-      "diff_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/188.diff",
-      "patch_url": "https://github.com/bpmn-miwg/bpmn-miwg-test-suite/pull/188.patch"
-    },
-    "body": ""
+    "comments": 15,
+    "created_at": "2014-06-19T09:02:48Z",
+    "updated_at": "2016-06-15T16:11:04Z",
+    "closed_at": "2016-06-15T16:11:04Z",
+    "body": "As mentioned in Table 12.35, we could provide sample for:\r\n- (\"normal\") Sequence Flow\r\n- Default Sequence Flow\r\n- Conditional Sequence Flow\r\n\r\nUse case where I detected an interchange incompatibility:\r\nIf no conditionExpression set on a Sequence Flow and the Sequence Flow is not marked as default on outgoing reference of Task/Gateways, the Sequence Flow is  a \"normal\" Sequence Flow. It seems that some tools are considering it as \"Default Sequence Flow\" (itp Commerce, Trisotech and Signavio... I'm feeling alone :s). I think that the *default* attribute on preceding Task/Gateway is missing.\r\nWhy I want to make the difference? I want to keep the condition defined by user even if it is ignored in order that if he is not sure between default and a condition he can switch easily from one to another as we kept the conditionExpression.\r\n\r\nBased on the specification the right behavior seems to ignore the conditionExpression and be based only on the default attribute to detect Default Sequence Flow:\r\nTable 10.3, 10.123, 10.124, 10.125 on default attribute:\r\n> The Sequence Flow that will receive a token when none of the conditionExpressions on  other outgoing Sequence Flows evaluate to true. The default Sequence Flow should not have a conditionExpression. Any such Expression SHALL be ignored.\r\n\r\nI\r\n![diagramtotestdefaultsequenceflowwithcondition-1 0](https://cloud.githubusercontent.com/assets/1105127/3325776/c7c3b756-f793-11e3-84fb-cfe92abb727d.png)\r\n\r\n>     <model:exclusiveGateway id=\"_jDY8EPeREeO2W5WJKwzkfQ\" name=\"Gateway1\" default=\"_7WRGkPeQEeO2W5WJKwzkfQ\"/><model:sequenceFlow id=\"_7WRGkPeQEeO2W5WJKwzkfQ\" name=\"\" sourceRef=\"_jDY8EPeREeO2W5WJKwzkfQ\" targetRef=\"_7TL9YPeQEeO2W5WJKwzkfQ\">      <model:conditionExpression xsi:type=\"model:tFormalExpression\" id=\"_kZ1xofeREeO2W5WJKwzkfQ\" evaluatesToTypeRef=\"java:java.lang.Boolean\">true</model:conditionExpression>    </model:sequenceFlow>\r\n\r\nThe litigious case is in green and I put my understanding of the right value:\r\n![issue187bpmn-sequenceflowdefaultconditional](https://cloud.githubusercontent.com/assets/1105127/3384803/0732240a-fc61-11e3-925a-a91e1cd3905a.png)\r\n"
   },
   {
     "url": "https://api.github.com/repos/bpmn-miwg/bpmn-miwg-test-suite/issues/187",

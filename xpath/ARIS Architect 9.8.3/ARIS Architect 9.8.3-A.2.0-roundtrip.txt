@@ -1,0 +1,43 @@
+ANALYSIS: ARIS Architect 9.8.3-A.2.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: ARISBPMN_56a9f051-e45c-11e5-537c-0050568d1e04)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='PROCESS_56a9f051-e45c-11e5-537c-0050568d1e04']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='PROCESS_56a9f051-e45c-11e5-537c-0050568d1e04']
+    OK     : selectFirstProcess                       Push (id: PROCESS_56a9f051-e45c-11e5-537c-0050568d1e04)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_2cfa8295-7c13-338b-bad9-9c3f931ff8e5']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_2cfa8295-7c13-338b-bad9-9c3f931ff8e5']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='FLOWNODE_1c7cb076-aaeb-39c2-8519-b8825bd05abd']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_1c7cb076-aaeb-39c2-8519-b8825bd05abd']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_1c7cb076-aaeb-39c2-8519-b8825bd05abd']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Split Flow)' and @id='FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='FLOWNODE_351c8376-1c0d-3328-8c59-f57778dc5861']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_351c8376-1c0d-3328-8c59-f57778dc5861']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_351c8376-1c0d-3328-8c59-f57778dc5861']
+      OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="ARISBPMN_56a9f051-e45c-11e5-537c-0050568d1e04"']/semantic:process[@id='id="PROCESS_56a9f051-e45c-11e5-537c-0050568d1e04"']/semantic:exclusiveGateway[@id='id="FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='FLOWNODE_e2e220f1-20bf-3a4a-bd95-41042a44df39']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_e2e220f1-20bf-3a4a-bd95-41042a44df39']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_e2e220f1-20bf-3a4a-bd95-41042a44df39']
+      OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="ARISBPMN_56a9f051-e45c-11e5-537c-0050568d1e04"']/semantic:process[@id='id="PROCESS_56a9f051-e45c-11e5-537c-0050568d1e04"']/semantic:exclusiveGateway[@id='id="FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_ea3c3429-db7a-346b-b7e2-e7e1ee87b095']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 4' and @id='FLOWNODE_8adcb90c-5249-3a67-a4b9-3ee177b871a0']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_8adcb90c-5249-3a67-a4b9-3ee177b871a0']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_8adcb90c-5249-3a67-a4b9-3ee177b871a0']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='FLOWNODE_afa18af5-41da-3948-8ef0-d91e5a3afa40']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_afa18af5-41da-3948-8ef0-d91e5a3afa40']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_afa18af5-41da-3948-8ef0-d91e5a3afa40']
+      OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="ARISBPMN_56a9f051-e45c-11e5-537c-0050568d1e04"']/semantic:process[@id='id="PROCESS_56a9f051-e45c-11e5-537c-0050568d1e04"']/semantic:task[@id='id="FLOWNODE_e2e220f1-20bf-3a4a-bd95-41042a44df39"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_e2e220f1-20bf-3a4a-bd95-41042a44df39']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_e2e220f1-20bf-3a4a-bd95-41042a44df39']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='FLOWNODE_afa18af5-41da-3948-8ef0-d91e5a3afa40']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_afa18af5-41da-3948-8ef0-d91e5a3afa40']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_afa18af5-41da-3948-8ef0-d91e5a3afa40']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event' and @id='FLOWNODE_25ba5baa-f12f-3df2-b666-ed7354882295']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_25ba5baa-f12f-3df2-b666-ed7354882295']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_25ba5baa-f12f-3df2-b666-ed7354882295']
+      OK     : doExecute                                Pop (id: PROCESS_56a9f051-e45c-11e5-537c-0050568d1e04)

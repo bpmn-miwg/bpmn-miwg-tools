@@ -45,7 +45,16 @@
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Archive Invoice&apos; and @id=&apos;archiveInvoice&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Extension Elements are not similar to the reference"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="navigateFollowingElement">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="22: Expected presence of child node &apos;#text&apos; but was &apos;null&apos; - comparing &lt;camunda:string ...&gt;
+	          Hello World
+	      &lt;/camunda:string&gt; at /extensionElements[1]/field[4]/string[1]/text()[1] to  at null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="22: Expected presence of child node &apos;#text&apos; but was &apos;null&apos; - comparing &lt;camunda:string ...&gt;
+	          &lt;p&gt;Hello World&lt;/p&gt;&lt;br&gt;
+	      &lt;/camunda:string&gt; at /extensionElements[1]/field[5]/string[1]/text()[1] to  at null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="" caller="navigateFollowingElement"/>
+         </entry>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Invoice processed&apos; and @id=&apos;invoiceProcessed&apos;]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
