@@ -37,9 +37,9 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.boundary.BoundaryCreator;    
-import org.omg.bpmn.miwg.scan.BpmnFileScanner;
-import org.omg.bpmn.miwg.scan.StandardScanParameters;
+import org.omg.bpmn.miwg.facade.AnalysisFacade;
+import org.omg.bpmn.miwg.facade.scan.BpmnFileScanner;
+import org.omg.bpmn.miwg.facade.scan.StandardScanParameters;
 
 /**
  * Goal which scans project for BPMN files and tests them for interoperability.
@@ -94,12 +94,6 @@ public class ModelInterchangeMojo extends AbstractMojo {
 							null, inputFolders, outputDirectory.getCanonicalPath()));
 			AnalysisFacade.executeAnalysisJobs(jobs,
 					outputDirectory.getAbsolutePath());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		try {        
-            //Generate the Bounds Stencil using the Bounds Creator
-            BoundaryCreator.generate(new File("Reference"), new File(outputDirectory, "Reference/Bounds"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

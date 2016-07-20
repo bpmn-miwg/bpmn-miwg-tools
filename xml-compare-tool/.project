@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>xml-compare</name>
-	<comment>Utilises XML Unit to compare vendor models to reference ones. Read more 
+  <name>xml-compare-tool</name>
+  <comment>Utilises XML Unit to compare vendor models to reference ones. Read more 
       at: https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN 2.0 XML Compare. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
-	<projects>
-		<project>test-result</project>
-	</projects>
-	<buildSpec>
-		<buildCommand>
-			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.m2e.core.maven2Builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-	</buildSpec>
-	<natures>
-		<nature>org.eclipse.m2e.core.maven2Nature</nature>
-		<nature>org.eclipse.jdt.core.javanature</nature>
-	</natures>
+  <projects>
+    <project>analysis-tool-api</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+    <buildCommand>
+      <name>org.eclipse.m2e.core.maven2Builder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.m2e.core.maven2Nature</nature>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
 </projectDescription>

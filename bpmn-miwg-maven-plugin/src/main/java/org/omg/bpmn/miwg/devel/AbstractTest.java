@@ -40,7 +40,7 @@ import org.junit.runners.Parameterized;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisOutput;
 import org.omg.bpmn.miwg.api.AnalysisRun;
-import org.omg.bpmn.miwg.mvn.AnalysisFacade;
+import org.omg.bpmn.miwg.facade.AnalysisFacade;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 

@@ -9,17 +9,6 @@
 	</parent>
 	<artifactId>analysis-tool-api</artifactId>
 
-	<properties>
-		<java.version>1.6</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
-	<distributionManagement>
-		<site>
-			<id>github-bpmn-miwg</id>
-			<url>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
-		</site>
-	</distributionManagement>
 
 	<dependencies>
 		<dependency>
