@@ -1,11 +1,11 @@
 <analysis name="ARIS Architect 9.8.3-C.1.0-roundtrip" toolName="xpath">
    <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="ARISBPMN_1e394383-e464-11e5-537c-0050568d1e04" caller="execute">
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="No node found" parameter="bpmn:resource[@name=&apos;Team Assistant&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type is not existing." parameter=""/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="No node found" parameter="bpmn:resource[@name=&apos;Approver&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type is not existing." parameter=""/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="No node found" parameter="bpmn:resource[@name=&apos;Accountant&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type=User"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute w4:type is not existing." parameter=""/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaboration" message="bpmn:collaboration"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="COLLABORATION_1e394383-e464-11e5-537c-0050568d1e04" caller="selectCollaboration">
          <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;COLLABORATION_1e394383-e464-11e5-537c-0050568d1e04&apos;]"/>

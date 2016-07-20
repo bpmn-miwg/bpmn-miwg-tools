@@ -1,7 +1,0 @@
-<analysis name="Signavio Process Editor 8.3.0-B.1.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 209: cvc-id.2: There are multiple occurrences of ID value &apos;Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 209: cvc-attribute.3: The value &apos;Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450&apos; of attribute &apos;id&apos; on element &apos;process&apos; is not valid with respect to its type, &apos;ID&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 2, Fatal Errors: 0"/>
-</analysis>

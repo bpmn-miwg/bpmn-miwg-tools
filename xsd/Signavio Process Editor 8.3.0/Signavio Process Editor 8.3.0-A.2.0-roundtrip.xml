@@ -1,3 +1,0 @@
-<analysis name="Signavio Process Editor 8.3.0-A.2.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>
