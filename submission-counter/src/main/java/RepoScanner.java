@@ -74,13 +74,17 @@ public class RepoScanner {
       String name = content.getName();
       String type = content.getType();
       for (String testCase : testCases) {
-        if ("file".equals(type) && name.matches(testCase + "-(import.png|roundtrip.bpmn|export.png|export.bpmn)")) {
-          count++;
-          if (name.startsWith("A")) countA++;
-          if (name.startsWith("B")) countB++;
-          if (name.startsWith("C")) countC++;
-          files.add(name);
-          break;
+        if ("file".equals(type)) {
+          if (name.matches(testCase + "-(import.png|roundtrip.bpmn|export.png|export.bpmn)")) {
+            count++;
+            if (name.startsWith("A")) countA++;
+            if (name.startsWith("B")) countB++;
+            if (name.startsWith("C")) countC++;
+            files.add(name);
+            break;
+          } else if (name.startsWith(testCase)) {
+            LOGGER.warning("[" + tool + "] File '" + name + "' does not match the naming conventions.");
+          }
         }
       }
     }

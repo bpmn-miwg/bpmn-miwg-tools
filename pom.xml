@@ -5,7 +5,7 @@
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>tools</artifactId>
   <packaging>pom</packaging>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.5-SNAPSHOT</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
@@ -82,7 +82,7 @@
 
   <properties>
     <java.version>1.7</java.version>
-    <bpmn.miwg.tools.version>0.3-SNAPSHOT</bpmn.miwg.tools.version>
+    <bpmn.miwg.tools.version>0.5-SNAPSHOT</bpmn.miwg.tools.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
@@ -95,6 +95,7 @@
     <module>xml-compare-tool</module>
     <module>xpath-tool</module>
     <module>schema-tool</module>
+    <module>bounds-generator</module>
     <module>bpmn-miwg-maven-plugin</module>
 	<module>cli</module>
 	<module>facade</module>

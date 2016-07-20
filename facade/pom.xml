@@ -5,7 +5,7 @@
 		<groupId>org.omg.bpmn.miwg</groupId>
 		<artifactId>tools</artifactId>
 		<relativePath>..</relativePath>
-		<version>0.3-SNAPSHOT</version>
+		<version>0.5-SNAPSHOT</version>
 	</parent>
 	<artifactId>facade</artifactId>
 
