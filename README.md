@@ -16,7 +16,7 @@ Information for anyone wanting to publish the latest results
 Where is everything kept? 
 -------------------------
 
-1. The tests themselves are in the repository at: http://bpmn-miwg.github.io/bpmn-miwg-tools/. You will need to clone it to your machine to get the very latest content or to add new results. Approximately once a week an archive is published to the MIWG Maven repository, more of this later. 
+1. The tests themselves are in the repository at: https://github.com/bpmn-miwg/bpmn-miwg-test-suite. You will need to clone it to your machine to get the very latest content or to add new results. Approximately once a week an archive is published to the MIWG Maven repository, more of this later. 
 
 1. The tools that analyse the tests are in this repository: https://github.com/bpmn-miwg/bpmn-miwg-tools in the master branch. They are also compiled and published to the Maven repo. 
 
