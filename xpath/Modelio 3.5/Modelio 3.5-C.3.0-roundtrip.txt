@@ -1,7 +1,7 @@
 ANALYSIS: Modelio 3.5-C.3.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: MO-68a45e76-c353-4558-ac28-cfe126f6294b)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
-    OK     : checkAttributeValue                      Message: Attribute id=_8170787a-3207-434d-9bea-4787059f444f
+    FINDING: checkAttributeValue                      Message: Null node; Parameter: 
     OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
     FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-9e256cde-8ba7-459d-b4bd-2416f6609c98']
     FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-9e256cde-8ba7-459d-b4bd-2416f6609c98']
