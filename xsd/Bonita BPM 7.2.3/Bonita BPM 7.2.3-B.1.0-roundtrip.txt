@@ -1,0 +1,28 @@
+ANALYSIS: Bonita BPM 7.2.3-B.1.0-roundtrip (Tool: xsd)
+  Warning Line 2: SchemaLocation: schemaLocation value = 'schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd' must have even number of URI's.
+
+  Error Line 71: cvc-complex-type.2.4.b: The content of element 'model:dataInputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 72: cvc-complex-type.2.4.b: The content of element 'model:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 75: cvc-complex-type.2.4.b: The content of element 'model:dataInputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 76: cvc-complex-type.2.4.b: The content of element 'model:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 85: cvc-complex-type.2.4.b: The content of element 'model:dataInputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 86: cvc-complex-type.2.4.b: The content of element 'model:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 89: cvc-complex-type.2.4.b: The content of element 'model:dataInputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 90: cvc-complex-type.2.4.b: The content of element 'model:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 96: cvc-complex-type.2.4.b: The content of element 'model:dataInputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 97: cvc-complex-type.2.4.b: The content of element 'model:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 127: cvc-datatype-valid.1.2.1: 'event-defStart Event Timer' is not a valid value for 'NCName'.
+
+  Error Line 127: cvc-attribute.3: The value 'event-defStart Event Timer' of attribute 'id' on element 'model:timerEventDefinition' is not valid with respect to its type, 'ID'.
+
+  INFO   : Validation failed: Warnings: 1, Errors: 12, Fatal Errors: 0

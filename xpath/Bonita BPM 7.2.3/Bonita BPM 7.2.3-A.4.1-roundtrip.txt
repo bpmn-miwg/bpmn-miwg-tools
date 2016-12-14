@@ -1,0 +1,72 @@
+ANALYSIS: Bonita BPM 7.2.3-A.4.1-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: _Okq28LZ2EeawX8E3Bjsrfw)
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_Okq28LZ2EeawX8E3Bjsrfw']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_Okq28LZ2EeawX8E3Bjsrfw']
+      OK     : selectPool                               Message: bpmn:participant[@name='Pool 1']
+      OK     : selectPool                               Push (id: _3FgoY7Z2EeawX8E3Bjsrfw)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_3FgoY7Z2EeawX8E3Bjsrfw']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_3FgoY7Z2EeawX8E3Bjsrfw']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='_OltYwLZ2EeawX8E3Bjsrfw']
+        OK     : selectReferencedProcess                  Push (id: _OltYwLZ2EeawX8E3Bjsrfw)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OltYwLZ2EeawX8E3Bjsrfw']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OltYwLZ2EeawX8E3Bjsrfw']
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 1']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmA6wLZ2EeawX8E3Bjsrfw']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmA6wLZ2EeawX8E3Bjsrfw']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='_OmFMMLZ2EeawX8E3Bjsrfw']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_Os0GULZ2EeawX8E3Bjsrfw']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_Os0GULZ2EeawX8E3Bjsrfw']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmFMMLZ2EeawX8E3Bjsrfw']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmFMMLZ2EeawX8E3Bjsrfw']
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 1' and @sourceRef='_OmFMMLZ2EeawX8E3Bjsrfw']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='_OmI2kLZ2EeawX8E3Bjsrfw']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_OtCIwLZ2EeawX8E3Bjsrfw']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_OtCIwLZ2EeawX8E3Bjsrfw']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmI2kLZ2EeawX8E3Bjsrfw']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmI2kLZ2EeawX8E3Bjsrfw']
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 2' and @targetRef='_OmI2kLZ2EeawX8E3Bjsrfw']
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 1' and @id='_Ol8CQLZ2EeawX8E3Bjsrfw']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_OvhcELZ2EeawX8E3Bjsrfw']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_OvhcELZ2EeawX8E3Bjsrfw']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_Ol8CQLZ2EeawX8E3Bjsrfw']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_Ol8CQLZ2EeawX8E3Bjsrfw']
+          OK     : doExecute                                Pop (id: _OltYwLZ2EeawX8E3Bjsrfw)
+        OK     : doExecute                                Pop (id: _3FgoY7Z2EeawX8E3Bjsrfw)
+      OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OltYwLZ2EeawX8E3Bjsrfw']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OltYwLZ2EeawX8E3Bjsrfw']
+      OK     : selectProcessByLane                      Push (id: _OltYwLZ2EeawX8E3Bjsrfw)
+        OK     : doExecute                                Pop (id: _OltYwLZ2EeawX8E3Bjsrfw)
+      OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmNIALZ2EeawX8E3Bjsrfw']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmNIALZ2EeawX8E3Bjsrfw']
+      OK     : selectProcessByLane                      Push (id: _OmNIALZ2EeawX8E3Bjsrfw)
+        OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 2']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmrpILZ2EeawX8E3Bjsrfw']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_OmrpILZ2EeawX8E3Bjsrfw']
+        OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='_Omc_oLZ2EeawX8E3Bjsrfw']
+        FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_O77gYLZ2EeawX8E3Bjsrfw']
+        FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_O77gYLZ2EeawX8E3Bjsrfw']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_Omc_oLZ2EeawX8E3Bjsrfw']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_Omc_oLZ2EeawX8E3Bjsrfw']
+        FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 1' and @targetRef='_Omc_oLZ2EeawX8E3Bjsrfw']
+        FINDING: selectFollowingElement                   Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Expanded Sub-Process 1']
+        OK     : selectFollowingElement                   Push (id: )
+          OK     : doExecute                                Pop (id: )
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 5']
+        FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 2' and @sourceRef='_Omc_oLZ2EeawX8E3Bjsrfw']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 2']
+        OK     : navigateBookmarkedElement                Message: #document/model:definitions/model:process[@id='id="_OmNIALZ2EeawX8E3Bjsrfw"']/model:task[@id='id="_Omc_oLZ2EeawX8E3Bjsrfw"']/
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_Omc_oLZ2EeawX8E3Bjsrfw']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_Omc_oLZ2EeawX8E3Bjsrfw']
+        FINDING: selectFollowingElement                   Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Expanded Sub-Process 2']
+        OK     : selectFollowingElement                   Push (id: )
+          FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 4']
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          OK     : doExecute                                Pop (id: )
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 5']
+        OK     : doExecute                                Pop (id: _OmNIALZ2EeawX8E3Bjsrfw)
+      OK     : doExecute                                Pop (id: _Okq28LZ2EeawX8E3Bjsrfw)

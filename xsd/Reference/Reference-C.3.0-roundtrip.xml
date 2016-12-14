@@ -1,0 +1,13 @@
+<analysis name="Reference-C.3.0-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Warning Line 2: SchemaLocation: schemaLocation value = &apos;schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd&apos; must have even number of URI&apos;s.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 39: cvc-datatype-valid.1.2.1: &apos;eventdef-2 hours&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 39: cvc-attribute.3: The value &apos;eventdef-2 hours&apos; of attribute &apos;id&apos; on element &apos;model:timerEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 46: cvc-complex-type.2.4.b: The content of element &apos;model:dataInputAssociation&apos; is not complete. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:documentation, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:extensionElements, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:sourceRef, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:targetRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 47: cvc-complex-type.2.4.b: The content of element &apos;model:dataOutputAssociation&apos; is not complete. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:documentation, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:extensionElements, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:sourceRef, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:targetRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 1, Errors: 4, Fatal Errors: 0"/>
+</analysis>

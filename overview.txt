@@ -142,6 +142,15 @@ Aeneis 5.7.89.2400                                           A.4.0              
 Aeneis 5.7.89.2400                                           A.3.0                0          177            0
 IBM BlueWorks Live April 2014                                A.1.0                0            8           20
 IBM BlueWorks Live April 2014                                A.2.0                0            8           42
+Bonita BPM 7.2.3                                             A.4.1                9          102           44
+Bonita BPM 7.2.3                                             C.1.1                1           89           60
+Bonita BPM 7.2.3                                             A.1.0                1           37           20
+Bonita BPM 7.2.3                                             B.2.0               37          411          141
+Bonita BPM 7.2.3                                             A.2.0                1           53           42
+Bonita BPM 7.2.3                                             C.1.0                5          139           63
+Bonita BPM 7.2.3                                             B.1.0               13          158           46
+Bonita BPM 7.2.3                                             A.4.0                5           94           34
+Bonita BPM 7.2.3                                             A.3.0                5           54           17
 Yaoqiang BPMN Editor 4.0                                     A.4.1                0          149           21
 Yaoqiang BPMN Editor 4.0                                     A.1.0                0           39            0
 Yaoqiang BPMN Editor 4.0                                     B.2.0                0          595            0
@@ -181,8 +190,10 @@ ARIS Architect 9.8.3                                         A.3.0              
 IBM Process Designer 8.0.1                                   A.1.0                0            6            8
 IBM Process Designer 8.0.1                                   A.2.0                0            6           12
 IBM Process Designer 8.0.1                                   A.3.0                0            6           18
+Reference                                                    C.2.0                3          183           56
 Reference                                                    A.4.1                0            0            0
 Reference                                                    A.2.0                0            0            0
+Reference                                                    C.3.0                5          101           31
 Reference                                                    C.1.0                0            0            0
 Reference                                                    C.1.1                0           52            3
 Reference                                                    A.1.0                0            0            0
@@ -191,7 +202,7 @@ Reference                                                    A.3.0              
 Reference                                                    B.1.0                0            0            0
 Reference                                                    C.2.0                0            0            0
 Reference                                                    B.2.0                0            0            0
-Reference                                                    C.3.0                0           16            0
+Reference                                                    C.3.0                0           19            3
 GenMyModel 0.47                                              C.2.0                9          167           56
 GenMyModel 0.47                                              C.1.1                -            -            -
 GenMyModel 0.47                                              A.1.0                0           35            0

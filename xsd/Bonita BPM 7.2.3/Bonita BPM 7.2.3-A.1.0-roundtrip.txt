@@ -1,0 +1,4 @@
+ANALYSIS: Bonita BPM 7.2.3-A.1.0-roundtrip (Tool: xsd)
+  Warning Line 2: SchemaLocation: schemaLocation value = 'schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd' must have even number of URI's.
+
+  OK     : Validation                               Message: Schema validation succeeded
