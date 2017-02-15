@@ -1,4 +1,4 @@
-<analysis name="Reference-C.2.0-roundtrip" toolName="xpath">
+<analysis name="Bonita BPM 7.2.3-C.2.0-roundtrip" toolName="xpath">
    <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="execute">
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaboration" message="bpmn:collaboration"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_P3kMwLZ3EeawX8E3Bjsrfw" caller="selectCollaboration">

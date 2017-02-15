@@ -1,4 +1,4 @@
-ANALYSIS: Reference-C.3.0-roundtrip (Tool: xsd)
+ANALYSIS: Bonita BPM 7.2.3-C.3.0-roundtrip (Tool: xsd)
   Warning Line 2: SchemaLocation: schemaLocation value = 'schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd' must have even number of URI's.
 
   Error Line 39: cvc-datatype-valid.1.2.1: 'eventdef-2 hours' is not a valid value for 'NCName'.

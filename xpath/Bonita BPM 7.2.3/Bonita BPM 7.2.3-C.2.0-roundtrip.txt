@@ -1,4 +1,4 @@
-ANALYSIS: Reference-C.2.0-roundtrip (Tool: xpath)
+ANALYSIS: Bonita BPM 7.2.3-C.2.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: )
     OK     : selectCollaboration                      Message: bpmn:collaboration
     OK     : selectCollaboration                      Push (id: _P3kMwLZ3EeawX8E3Bjsrfw)

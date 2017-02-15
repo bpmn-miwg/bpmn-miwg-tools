@@ -1,4 +1,4 @@
-ANALYSIS: Reference-C.3.0-roundtrip (Tool: xml-compare)
+ANALYSIS: Bonita BPM 7.2.3-C.3.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1] = id
 Test: /definitions[1] = null
   Reference: /definitions[1] = author

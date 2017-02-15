@@ -143,8 +143,10 @@ Aeneis 5.7.89.2400                                           A.3.0              
 IBM BlueWorks Live April 2014                                A.1.0                0            8           20
 IBM BlueWorks Live April 2014                                A.2.0                0            8           42
 Bonita BPM 7.2.3                                             A.4.1                9          102           44
+Bonita BPM 7.2.3                                             C.2.0                3          183           56
 Bonita BPM 7.2.3                                             C.1.1                1           89           60
 Bonita BPM 7.2.3                                             A.1.0                1           37           20
+Bonita BPM 7.2.3                                             C.3.0                5          101           31
 Bonita BPM 7.2.3                                             B.2.0               37          411          141
 Bonita BPM 7.2.3                                             A.2.0                1           53           42
 Bonita BPM 7.2.3                                             C.1.0                5          139           63
@@ -190,10 +192,8 @@ ARIS Architect 9.8.3                                         A.3.0              
 IBM Process Designer 8.0.1                                   A.1.0                0            6            8
 IBM Process Designer 8.0.1                                   A.2.0                0            6           12
 IBM Process Designer 8.0.1                                   A.3.0                0            6           18
-Reference                                                    C.2.0                3          183           56
 Reference                                                    A.4.1                0            0            0
 Reference                                                    A.2.0                0            0            0
-Reference                                                    C.3.0                5          101           31
 Reference                                                    C.1.0                0            0            0
 Reference                                                    C.1.1                0           52            3
 Reference                                                    A.1.0                0            0            0
