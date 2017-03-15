@@ -104,7 +104,7 @@
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;Message Flow 2&apos; (Output)"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:subProcess[@name=&apos;Collapsed Sub-Process 2&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447" caller="checkDataAssociation">
-                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkDataAssociation" message="Association reference dataStoreReference &apos;Data Store Reference&apos; found"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find the associated artifact dataStoreReference &apos;Data Store Reference&apos;"/>
                   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447" caller="checkDataAssociation"/>
                </entry>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectElement" message="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway 4&apos;]"/>

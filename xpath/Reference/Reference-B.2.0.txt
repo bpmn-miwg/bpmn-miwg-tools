@@ -99,7 +99,7 @@ ANALYSIS: Reference-B.2.0 (Tool: xpath)
           OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Output)
           OK     : navigateElement                          Message: bpmn:subProcess[@name='Collapsed Sub-Process 2']
           OK     : checkDataAssociation                     Push (id: _0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447)
-            OK     : checkDataAssociation                     Message: Association reference dataStoreReference 'Data Store Reference' found
+            FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'Data Store Reference'; Parameter: null
             OK     : checkDataAssociation                     Pop (id: _0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447)
           OK     : selectElement                            Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: _49e94b5f-ce21-4c2b-b78d-3cde5c09c15e)
