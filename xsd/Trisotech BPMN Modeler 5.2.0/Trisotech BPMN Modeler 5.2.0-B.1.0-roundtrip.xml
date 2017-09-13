@@ -1,3 +1,0 @@
-<analysis name="Trisotech BPMN Modeler 5.2.0-B.1.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>

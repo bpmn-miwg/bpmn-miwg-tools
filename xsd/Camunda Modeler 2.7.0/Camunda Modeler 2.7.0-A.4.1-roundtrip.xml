@@ -1,3 +1,0 @@
-<analysis name="Camunda Modeler 2.7.0-A.4.1-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>

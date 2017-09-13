@@ -1,5 +1,0 @@
-<analysis name="Bonita BPM 7.2.3-C.1.1-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Warning Line 2: SchemaLocation: schemaLocation value = &apos;schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd&apos; must have even number of URI&apos;s.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>

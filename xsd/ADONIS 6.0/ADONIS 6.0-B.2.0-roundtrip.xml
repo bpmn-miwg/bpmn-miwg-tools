@@ -1,5 +1,0 @@
-<analysis name="ADONIS 6.0-B.2.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 2671: cvc-id.1: There is no ID/IDREF binding for IDREF &apos;dataInput_con.144345&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0"/>
-</analysis>

@@ -1,2 +1,0 @@
-ANALYSIS: ADONIS 6.0-C.3.0-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

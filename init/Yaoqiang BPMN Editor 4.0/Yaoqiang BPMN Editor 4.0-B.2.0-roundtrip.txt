@@ -1,1 +1,0 @@
-ANALYSIS: Yaoqiang BPMN Editor 4.0-B.2.0-roundtrip (Tool: init)

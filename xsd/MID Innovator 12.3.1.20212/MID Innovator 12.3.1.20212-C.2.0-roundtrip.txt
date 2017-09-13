@@ -1,2 +1,0 @@
-ANALYSIS: MID Innovator 12.3.1.20212-C.2.0-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

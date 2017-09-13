@@ -1,0 +1,23 @@
+<analysis name="ARIS Architect 10.0.0-B.2.0-roundtrip" toolName="xpath">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="Definitions_Trisotech_Visio-_6" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaboration" message="bpmn:collaboration"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="Collaboration_Trisotech_Visio-_6" caller="selectCollaboration">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;Collaboration_Trisotech_Visio-_6&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;Collaboration_Trisotech_Visio-_6&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByParticipant" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;Process__cde15ee4-b395-43a3-9f5e-9028446f8a52&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;Process__cde15ee4-b395-43a3-9f5e-9028446f8a52&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="Process__cde15ee4-b395-43a3-9f5e-9028446f8a52" caller="selectProcessByParticipant">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1 Timer&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkTimerEvent" message="Timer event definition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;_d84e5824-7bb7-4057-9dba-6c8794f7948c&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:sendTask[@name=&apos;Send Task 2&apos; and @id=&apos;_76ee26df-2c95-495b-9d9a-cb806aea6baf&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;Message Flow 1&apos; (Output)"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;User Task 3&apos; and @id=&apos;_0e87da16-736e-45b2-95e5-8f45940f3adf&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_0e87da16-736e-45b2-95e5-8f45940f3adf" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find attribute" parameter="name"/>
+            </entry>
+         </entry>
+      </entry>
+   </entry>
+</analysis>
