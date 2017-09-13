@@ -1089,12 +1089,20 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 						return;
 					}
 
-					if (getAttribute(artifactNode, "name").equals(artifactName)) {
-						ok(String.format("Association reference %s '%s' found",
-								artifactTypeToString(artifactType),
-								artifactName));
-						pop();
-						return;
+					try {
+					    if (getAttribute(artifactNode, "name").equals(artifactName)) {
+							ok(String.format("Association reference %s '%s' found",
+									artifactTypeToString(artifactType),
+									artifactName));
+							pop();
+							return;
+						}
+					} catch (NullPointerException e) {
+					    // TS 13 Sep 17 submission by a vendor omitted this
+					    // name attribute causing the build to fail so whilst
+					    // this is not a good solution we are just getting
+					    // the build back to running.
+					    e.printStackTrace();
 					}
 				}
 

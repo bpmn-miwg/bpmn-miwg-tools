@@ -5,7 +5,7 @@
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>tools</artifactId>
   <packaging>pom</packaging>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.4.1</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
@@ -38,11 +38,6 @@
     </snapshotRepository>
   </distributionManagement>
 
-  <ciManagement>
-    <url>https://bpmn-miwg.ci.cloudbees.com/</url>
-    <system>Jenkins</system>
-  </ciManagement>
-
   <issueManagement>
     <system>GitHub</system>
     <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
@@ -51,9 +46,6 @@
   <developers>
     <developer>
       <name>Denis Gagne</name>
-      <!-- 
-      <email>http://mailhide.recaptcha.net/d?k=01ebFB9eM2hZL-T96IpUgRmA==&amp;c=AI-pouLFNTr5xMTBVDaj8iKeIFI5dy9Wj5cxSY0Nuhw=</email>
-      -->
       <organization>Trisotech / Business Process Incubator</organization>
       <organizationUrl>http://www.businessprocessincubator.com/</organizationUrl>
     </developer>
@@ -84,7 +76,7 @@
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
     <!-- staging area for subsequent commit and push -->
-    <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
+    <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo</local-mvn-repo.snapshot.directory>
   </properties>
 
   <repositories>
