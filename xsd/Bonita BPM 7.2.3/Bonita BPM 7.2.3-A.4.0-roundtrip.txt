@@ -1,0 +1,12 @@
+ANALYSIS: Bonita BPM 7.2.3-A.4.0-roundtrip (Tool: xsd)
+  Warning Line 2: SchemaLocation: schemaLocation value = 'schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd' must have even number of URI's.
+
+  Error Line 52: cvc-complex-type.2.4.b: The content of element 'model:dataInputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 53: cvc-complex-type.2.4.b: The content of element 'model:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 59: cvc-complex-type.2.4.b: The content of element 'model:dataInputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 60: cvc-complex-type.2.4.b: The content of element 'model:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  INFO   : Validation failed: Warnings: 1, Errors: 4, Fatal Errors: 0

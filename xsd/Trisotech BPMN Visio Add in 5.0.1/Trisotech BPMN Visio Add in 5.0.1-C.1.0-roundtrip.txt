@@ -1,0 +1,2 @@
+ANALYSIS: Trisotech BPMN Visio Add in 5.0.1-C.1.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

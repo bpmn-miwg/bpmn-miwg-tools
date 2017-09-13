@@ -1,0 +1,81 @@
+ANALYSIS: Visual Paradigm 11.1-A.4.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: Definition)
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: collaboration-Trisotech_Visio-_6)
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='collaboration-Trisotech_Visio-_6']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='collaboration-Trisotech_Visio-_6']
+      OK     : selectPool                               Message: bpmn:participant[@name='Pool']
+      OK     : selectPool                               Push (id: WFP_6_1)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='process-WFP_6_1']
+        OK     : selectReferencedProcess                  Push (id: process-WFP_6_1)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process-WFP_6_1']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process-WFP_6_1']
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 1']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1__c03f2b1f_32dc_41ef_b325_c9811a814fbe']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1__c03f2b1f_32dc_41ef_b325_c9811a814fbe']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='WFP_6_1__ab851300_b5de_4ad3_bbec_215553757fc8']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1__ab851300_b5de_4ad3_bbec_215553757fc8']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1__ab851300_b5de_4ad3_bbec_215553757fc8']
+          OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Output)
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='WFP_6_1__80d1f02b_f39c_45c2_b731_43df75d81779']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1__80d1f02b_f39c_45c2_b731_43df75d81779']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1__80d1f02b_f39c_45c2_b731_43df75d81779']
+          OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Input)
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 1' and @id='WFP_6_1__6e79c19f_749d_48c4_8271_d9ca028354fa']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1__6e79c19f_749d_48c4_8271_d9ca028354fa']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='WFP_6_1__6e79c19f_749d_48c4_8271_d9ca028354fa']
+          OK     : doExecute                                Pop (id: process-WFP_6_1)
+        OK     : doExecute                                Pop (id: WFP_6_1)
+      OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process-ls_1373649949139']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process-ls_1373649949139']
+      OK     : selectProcessByLane                      Push (id: process-ls_1373649949139)
+        OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Lane 1']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b']
+        OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Lane 2']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe']
+        OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 2']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__65d1bebf_e613_4317_acb2_b12b69fc67ff']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__65d1bebf_e613_4317_acb2_b12b69fc67ff']
+        OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__6fed62c8_8241_4a1d_ae67_266fda7dcead']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__6fed62c8_8241_4a1d_ae67_266fda7dcead']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__6fed62c8_8241_4a1d_ae67_266fda7dcead']
+        OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Input)
+        OK     : selectFollowingElement                   Message: bpmn:subProcess[@name='Expanded Sub-Process 1' and @id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__ee35fa2c_dfea_40cf_a469_845b765a7b50']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__ee35fa2c_dfea_40cf_a469_845b765a7b50']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__ee35fa2c_dfea_40cf_a469_845b765a7b50']
+        OK     : selectFollowingElement                   Push (id: ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__ee35fa2c_dfea_40cf_a469_845b765a7b50)
+          OK     : doExecute                                Pop (id: ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__ee35fa2c_dfea_40cf_a469_845b765a7b50)
+        OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 5' and @id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__1c347d0d_750b_4c09_980d_6877caae409b']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__1c347d0d_750b_4c09_980d_6877caae409b']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__1c347d0d_750b_4c09_980d_6877caae409b']
+        OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Output)
+        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 2' and @id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__7c434d45_d319_457b_9fd6_853c218bc3f1']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__7c434d45_d319_457b_9fd6_853c218bc3f1']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__7c434d45_d319_457b_9fd6_853c218bc3f1']
+        OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="Definition"']/process[@id='id="process-ls_1373649949139"']/task[@id='id="ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__6fed62c8_8241_4a1d_ae67_266fda7dcead"']/
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__6fed62c8_8241_4a1d_ae67_266fda7dcead']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__17bebb0f_f31e_475a_b1b1_76fcc2da172b__6fed62c8_8241_4a1d_ae67_266fda7dcead']
+        OK     : selectFollowingElement                   Message: bpmn:subProcess[@name='Expanded Sub-Process 2' and @id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5']
+        OK     : selectFollowingElement                   Push (id: ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5)
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 4']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5__47bef337_7915_459d_a9cd_e9c87c98f8fa']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5__47bef337_7915_459d_a9cd_e9c87c98f8fa']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 6' and @id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5__15f8f2a4_5e55_4159_b349_403ac4cbdefb']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5__15f8f2a4_5e55_4159_b349_403ac4cbdefb']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5__15f8f2a4_5e55_4159_b349_403ac4cbdefb']
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 4' and @id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5__bb8b7952_0991_4b7c_a851_97327832d7b8']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5__bb8b7952_0991_4b7c_a851_97327832d7b8']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5__bb8b7952_0991_4b7c_a851_97327832d7b8']
+          OK     : doExecute                                Pop (id: ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__f52b6ad0_4dcc_4053_b696_b924dda01db5)
+        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 5' and @id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__8e6cecb7_b247_4c43_a6b6_532fb6a89753']
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__8e6cecb7_b247_4c43_a6b6_532fb6a89753']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_1373649949139__cc1845d0_ec34_44d3_8ba5_4981040d8dfe__8e6cecb7_b247_4c43_a6b6_532fb6a89753']
+        OK     : doExecute                                Pop (id: process-ls_1373649949139)
+      OK     : doExecute                                Pop (id: collaboration-Trisotech_Visio-_6)

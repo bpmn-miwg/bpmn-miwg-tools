@@ -1,0 +1,2 @@
+ANALYSIS: Bizagi Modeler 2.8.0.8-A.4.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

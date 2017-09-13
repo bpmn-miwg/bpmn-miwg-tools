@@ -1,0 +1,26 @@
+ANALYSIS: IBM Process Designer 8.0.1-A.3.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: bpmnid-e393f0fc-8988-4366-bf2d-9acbcc624e56)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmnid-b06553db-31aa-4969-8b64-8c200c139c4e']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmnid-b06553db-31aa-4969-8b64-8c200c139c4e']
+    OK     : selectFirstProcess                       Push (id: bpmnid-b06553db-31aa-4969-8b64-8c200c139c4e)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmnid-805419c4-af2d-4517-a648-12bcf64c65a9']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='bpmnid-805419c4-af2d-4517-a648-12bcf64c65a9']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:subProcess[@name='Collapsed Sub-Process']
+      FINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='Boundary Intermediate Event Non-Interrupting Message' and @attachedToRef='bpmnid-805419c4-af2d-4517-a648-12bcf64c65a9']
+      FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+      FINDING: checkCancelActivity                      Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 1']
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateBoundaryEvent                    Message: Current node is null; Parameter: null
+      FINDING: checkEscalationEvent                     Message: Current node is null; Parameter: null
+      FINDING: checkCancelActivity                      Message: No current node; Parameter: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : doExecute                                Pop (id: bpmnid-b06553db-31aa-4969-8b64-8c200c139c4e)

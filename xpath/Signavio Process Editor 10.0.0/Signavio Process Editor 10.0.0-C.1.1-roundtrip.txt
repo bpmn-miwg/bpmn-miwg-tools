@@ -1,0 +1,163 @@
+ANALYSIS: Signavio Process Editor 10.0.0-C.1.1-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: sid-bdb880ac-c464-4e5c-aa56-569d709436e0)
+    OK     : navigateDefinitions                      Message: /bpmn:definitions
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"' from reference in test file; Parameter: null
+    FINDING: checkAttributeValue                      Message: Attribute expressionLanguage does not have the expected value 'http://www.w3.org/1999/XPath'; Parameter: expressionLanguage
+    OK     : navigateElement                          Message: bpmn:resource[@name='Team Assistant']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'w4:type="User"' from reference in test file; Parameter: null
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    OK     : navigateElement                          Message: bpmn:resource[@name='Approver']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'w4:type="User"' from reference in test file; Parameter: null
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    OK     : navigateElement                          Message: bpmn:resource[@name='Accountant']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'w4:type="User"' from reference in test file; Parameter: null
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    OK     : selectElement                            Message: bpmn:process[@name='Invoice Handling (OMG BPMN MIWG Demo)']
+    OK     : selectElement                            Push (id: handle-invoice)
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAttributeValue                      Message: Attribute isExecutable=true
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateElement                          Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        OK     : navigateElement                          Pop (id: )
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Assign Approver' and @id='assignApprover']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[6] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[7] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[8] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[9] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[10] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[12] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[6] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[7] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[8] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[9] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[10] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[12] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='invoice_approved']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung klären' and @id='reviewInvoice']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[6] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[7] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[8] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[9] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[10] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[12] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='reviewSuccessful_gw']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[6] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[7] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[8] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[9] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[10] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[12] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="handle-invoice"']/exclusiveGateway[@id='id="reviewSuccessful_gw"']/
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateBookmarkedElement                Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        OK     : navigateBookmarkedElement                Pop (id: )
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice not processed' and @id='invoiceNotProcessed']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="handle-invoice"']/exclusiveGateway[@id='id="invoice_approved"']/
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateBookmarkedElement                Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        OK     : navigateBookmarkedElement                Pop (id: )
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Prepare Bank Transfer' and @id='prepareBankTransfer']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[6] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[7] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[8] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[9] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[10] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[12] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Archive Invoice' and @id='archiveInvoice']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node '#cdata-section' but was 'null' - comparing <![CDATA[
+	          Hello World
+	      ]]> at /extensionElements[1]/field[4]/string[1]/text()[1] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node '#cdata-section' but was 'null' - comparing <![CDATA[
+	          <p>Hello World</p><br>
+	      ]]> at /extensionElements[1]/field[5]/string[1]/text()[1] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[3] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[4] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[5] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[6] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[7] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[8] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[9] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[10] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[12] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice processed' and @id='invoiceProcessed']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'signavio:signavioMetaData' but was 'null' - comparing <signavio:signavioMetaData...> at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
+      OK     : doExecute                                Pop (id: handle-invoice)

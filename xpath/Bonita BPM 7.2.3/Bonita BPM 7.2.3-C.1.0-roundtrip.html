@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="Bonita BPM 7.2.3">
+      <h2>Bonita BPM 7.2.3</h2>
+      <div class="test" data-test="C.1.0" data-variant="Roundtrip">
+         <h3>C.1.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: Bonita BPM 7.2.3-C.1.0-roundtrip (Tool: xpath)</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : execute                                  Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name=&apos;Team Assistant&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name=&apos;Approver&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name=&apos;Accountant&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: </h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectCollaboration                      Message: bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectCollaboration                      Push (id: _7jRNILZ2EeawX8E3Bjsrfw)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7jRNILZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7jRNILZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectPool                               Message: bpmn:participant[@name=&apos;Team-Assistant&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectPool                               Push (id: _BFRdM7Z3EeawX8E3Bjsrfw)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_BFRdM7Z3EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_BFRdM7Z3EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectReferencedProcess                  Message: //bpmn:process[@id=&apos;_7kUWALZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectReferencedProcess                  Push (id: _7kUWALZ2EeawX8E3Bjsrfw)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kUWALZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kUWALZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAttributeValue                      Message: Attribute isExecutable is not existing.; Parameter: </h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Invoice received&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kbqwLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kbqwLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageEvent                        Message: Message event definition</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Scan Invoice&apos; and @id=&apos;_7kf8MLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()=&apos;_8pq0gLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()=&apos;_8pq0gLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kf8MLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kf8MLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name=&apos;&apos;) and @sourceRef=&apos;_7kf8MLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Archive original&apos; and @id=&apos;_7ki_gLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()=&apos;_7vtGoLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()=&apos;_7vtGoLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7ki_gLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7ki_gLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name=&apos;Approver to be assigned&apos; and @id=&apos;_7kpGILZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()=&apos;_7l-i4LZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()=&apos;_7l-i4LZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kpGILZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kpGILZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Assign approver&apos; and @id=&apos;_7kswgLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()=&apos;_7odPILZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()=&apos;_7odPILZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kswgLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7kswgLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:eventBasedGateway[@name=&apos;&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:intermediateCatchEvent[@name=&apos;7 days&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkTimerEvent                          Message: Cannot find timer event definition; Parameter: bpmn:timerEventDefinition | bpmn:eventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;null&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:task[@name=&apos;Review and document result&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7k3voLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_7k3voLZ2EeawX8E3Bjsrfw&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement                          Message: No node found; Parameter: bpmn:endEvent[not(@name)]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: _7kUWALZ2EeawX8E3Bjsrfw)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: _BFRdM7Z3EeawX8E3Bjsrfw)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectPool                               Message: No node found; Parameter: bpmn:participant[@name=&apos;Process Engine - Invoice Receipt&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectPool                               Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: selectReferencedProcess                  Message: Node is null; Parameter: </h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectReferencedProcess                  Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAttributeValue                      Message: Attribute isExecutable is not existing.; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateLane                             Message: Parent failed; Parameter: bpmn:laneSet/bpmn:lane[@name=&apos;Team Assistant&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateLane                             Message: Parent failed; Parameter: bpmn:laneSet/bpmn:lane[@name=&apos;Approver&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateLane                             Message: Parent failed; Parameter: bpmn:laneSet/bpmn:lane[@name=&apos;Accountant&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name=&apos;Invoice received&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAttributeValue                      Message: Attribute camunda:assignee is not existing.; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAttributeValue                      Message: Attribute camunda:formKey is not existing.; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAttributeValue                      Message: No Current node; Parameter: </h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: _7jRNILZ2EeawX8E3Bjsrfw)</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68020511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

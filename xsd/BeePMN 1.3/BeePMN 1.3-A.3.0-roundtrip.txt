@@ -1,0 +1,2 @@
+ANALYSIS: BeePMN 1.3-A.3.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

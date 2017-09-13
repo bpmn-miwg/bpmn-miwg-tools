@@ -1,0 +1,12 @@
+ANALYSIS: iGrafx Process 2013 for Six Sigma 15.0.4.1565-A.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='diagram_IDAMQDYB']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='diagram_IDAMQDYB']
+    OK     : selectFirstProcess                       Push (id: diagram_IDAMQDYB)
+      FINDING: navigateElement                          Message: No node found; Parameter: bpmn:startEvent[@name='Start Event']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 1']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 2']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 3']
+      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event']
+      OK     : doExecute                                Pop (id: diagram_IDAMQDYB)

@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="BeePMN 1.3">
+      <h2>BeePMN 1.3</h2>
+      <div class="test" data-test="A.2.0" data-variant="Roundtrip">
+         <h3>A.2.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: BeePMN 1.3-A.2.0-roundtrip (Tool: xml-compare)</h4>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/@targetNamespace">/definitions[1]/@targetNamespace :	http://www.trisotech.com/definitions/_1373649889746</span>
+               <span class="vendor" data-xpath="/definitions[1]/@targetNamespace">/definitions[1]/@targetNamespace :	http://www.esteco.com/bpmn</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in xsi:schemaLocation attribute (id:23)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]">/definitions[1] :	[attribute absent]</span>
+               <span class="vendor" data-xpath="/definitions[1]/@schemaLocation">/definitions[1]/@schemaLocation :	http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/startEvent[1]">/definitions[1]/process[1]/startEvent[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]">/definitions[1]/process[1]/startEvent[1] :	12</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[1]">/definitions[1]/process[1]/task[1] :	13</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/endEvent[1]">/definitions[1]/process[1]/endEvent[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[1]">/definitions[1]/process[1]/endEvent[1] :	0</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[2]">/definitions[1]/process[1]/task[2] :	14</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[3]">/definitions[1]/process[1]/task[3] :	15</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]">/definitions[1]/process[1]/exclusiveGateway[1] :	5</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]">/definitions[1]/process[1]/exclusiveGateway[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	6</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/task[4]">/definitions[1]/process[1]/task[4] :	16</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]">/definitions[1]/process[1]/exclusiveGateway[2] :	7</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]">/definitions[1]/process[1]/exclusiveGateway[2] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[1]">/definitions[1]/process[1]/sequenceFlow[1] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[1]">/definitions[1]/process[1]/sequenceFlow[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[1]">/definitions[1]/process[1]/sequenceFlow[1] :	8</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[1]">/definitions[1]/process[1]/sequenceFlow[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[2]">/definitions[1]/process[1]/sequenceFlow[2] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[2]">/definitions[1]/process[1]/sequenceFlow[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[2]">/definitions[1]/process[1]/sequenceFlow[2] :	9</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[2]">/definitions[1]/process[1]/sequenceFlow[2] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[3]">/definitions[1]/process[1]/sequenceFlow[3] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[3]">/definitions[1]/process[1]/sequenceFlow[3] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[3]">/definitions[1]/process[1]/sequenceFlow[3] :	10</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[3]">/definitions[1]/process[1]/sequenceFlow[3] :	5</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[4]">/definitions[1]/process[1]/sequenceFlow[4] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[4]">/definitions[1]/process[1]/sequenceFlow[4] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[4]">/definitions[1]/process[1]/sequenceFlow[4] :	11</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[4]">/definitions[1]/process[1]/sequenceFlow[4] :	6</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[5]">/definitions[1]/process[1]/sequenceFlow[5] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[5]">/definitions[1]/process[1]/sequenceFlow[5] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[5]">/definitions[1]/process[1]/sequenceFlow[5] :	12</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[5]">/definitions[1]/process[1]/sequenceFlow[5] :	7</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[6]">/definitions[1]/process[1]/sequenceFlow[6] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[6]">/definitions[1]/process[1]/sequenceFlow[6] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[6]">/definitions[1]/process[1]/sequenceFlow[6] :	13</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[6]">/definitions[1]/process[1]/sequenceFlow[6] :	8</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[7]">/definitions[1]/process[1]/sequenceFlow[7] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[7]">/definitions[1]/process[1]/sequenceFlow[7] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[7]">/definitions[1]/process[1]/sequenceFlow[7] :	14</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[7]">/definitions[1]/process[1]/sequenceFlow[7] :	9</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[8]">/definitions[1]/process[1]/sequenceFlow[8] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[8]">/definitions[1]/process[1]/sequenceFlow[8] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[8]">/definitions[1]/process[1]/sequenceFlow[8] :	15</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[8]">/definitions[1]/process[1]/sequenceFlow[8] :	10</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[9]">/definitions[1]/process[1]/sequenceFlow[9] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[9]">/definitions[1]/process[1]/sequenceFlow[9] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]/sequenceFlow[9]">/definitions[1]/process[1]/sequenceFlow[9] :	16</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[9]">/definitions[1]/process[1]/sequenceFlow[9] :	11</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	documentation</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1] :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1] :	id</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height :	30.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height :	30</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@width :	30.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@width :	30</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@x :	186.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@x :	186</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@y :	276.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@y :	276</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1] :	labelStyle</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@height :	68.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@height :	68</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@width :	83.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@width :	83</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@x :	252.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@x :	252</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@y :	257.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@y :	257</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1] :	labelStyle</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/BPMNLabel[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@height :	32.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@height :	32</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@width :	32.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@width :	32</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@x :	736.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@x :	736</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/Bounds[1]/@y :	244.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/Bounds[1]/@y :	244</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/BPMNLabel[1] :	labelStyle</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@height :	68.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@height :	68</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@width :	83.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@width :	83</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@x :	480.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@x :	480</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@y :	172.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/Bounds[1]/@y :	172</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1] :	labelStyle</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@height :	68.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@height :	68</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@width :	83.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@width :	83</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@x :	480.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@x :	480</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@y :	257.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/Bounds[1]/@y :	257</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1] :	labelStyle</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@height :	42.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@height :	42</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@width :	42.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@width :	42</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@x :	399.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@x :	399</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@y :	270.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@y :	270</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1] :	labelStyle</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/BPMNLabel[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] :	5</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] :	6</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@height :	68.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@height :	68</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@width :	83.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@width :	83</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@x :	480.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@x :	480</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/Bounds[1]/@y :	352.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/Bounds[1]/@y :	352</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/BPMNLabel[1] :	labelStyle</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] :	6</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] :	5</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@height :	42.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@height">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@height :	42</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@width :	42.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@width">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@width :	42</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@x :	621.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@x :	621</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@y :	315.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/Bounds[1]/@y :	315</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1] :	labelStyle</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[1]/@x :	563.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[1]/@x :	563</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[1]/@y :	206.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[1]/@y :	206</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[2]/@x :	752.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[2]/@x :	752</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[2]/@y :	206.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[2]/@y :	206</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[3]/@x :	752.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@x :	752</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[3]/@y :	244.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@y :	244</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1] :	8</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4] :	11</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[1]/@x :	216.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[1]/@x :	216</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[1]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[1]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[2]/@x :	234.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[2]/@x :	234</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[2]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[2]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[3]/@x :	252.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[3]/@x :	252</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[3]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]/waypoint[3]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2] :	9</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1] :	8</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[1]/@x :	335.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[1]/@x :	335</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[1]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[1]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[2]/@x :	353.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[2]/@x :	353</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[2]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[2]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[3]/@x :	399.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[3]/@x :	399</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[3]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]/waypoint[3]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3] :	10</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2] :	9</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[1]/@x :	420.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[1]/@x :	420</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[1]/@y :	312.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[1]/@y :	312</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[2]/@x :	420.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@x :	420</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[2]/@y :	386.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@y :	386</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@x :	480.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@x :	480</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@y :	386.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@y :	386</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4] :	11</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9] :	16</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[1]/@x :	663.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[1]/@x :	663</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[1]/@y :	336.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[1]/@y :	336</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[2]/@x :	752.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[2]/@x :	752</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[2]/@y :	336.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[2]/@y :	336</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[3]/@x :	752.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[3]/@x :	752</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[3]/@y :	276.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[3]/@y :	276</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] :	12</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7] :	14</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[1]/@x :	563.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[1]/@x :	563</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[1]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[1]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[2]/@x :	642.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[2]/@x :	642</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[2]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[2]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[3]/@x :	642.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[3]/@x :	642</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[3]/@y :	315.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]/waypoint[3]/@y :	315</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6] :	13</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] :	12</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[1]/@x :	420.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[1]/@x :	420</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[1]/@y :	270.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[1]/@y :	270</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[2]/@x :	420.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[2]/@x :	420</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[2]/@y :	206.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[2]/@y :	206</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[3]/@x :	480.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[3]/@x :	480</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/waypoint[3]/@y :	206.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]/waypoint[3]/@y :	206</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7] :	14</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3] :	10</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[1]/@x :	440.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[1]/@x :	440</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[1]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[1]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[2]/@x :	458.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[2]/@x :	458</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[2]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[2]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[3]/@x :	480.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[3]/@x :	480</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[3]/@y :	291.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/waypoint[3]/@y :	291</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[1]/@x :	563.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[1]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[1]/@x :	563</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[1]/@y :	386.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[1]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[1]/@y :	386</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@x :	642.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[2]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[2]/@x :	642</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@y :	386.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[2]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[2]/@y :	386</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@x :	642.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[3]/@x">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[3]/@x :	642</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@y :	357.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[3]/@y">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]/waypoint[3]/@y :	357</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/BPMNLabel[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/BPMNLabel[1] :	bpmndi:BPMNLabel</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9] :	16</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6] :	13</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size">/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size :	8.0</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size">/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size :	8</span>
+            </span>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68020511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+ANALYSIS: ARIS Architect 9.8.3-C.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: ARISBPMN_1e394383-e464-11e5-537c-0050568d1e04)
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: COLLABORATION_1e394383-e464-11e5-537c-0050568d1e04)
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='COLLABORATION_1e394383-e464-11e5-537c-0050568d1e04']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='COLLABORATION_1e394383-e464-11e5-537c-0050568d1e04']
+      OK     : selectPool                               Message: bpmn:participant[@name='Team-Assistant']
+      OK     : selectPool                               Push (id: FLOWNODE_da32ecf1-4bfd-3bdf-a9ac-c4359f783d4b)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_da32ecf1-4bfd-3bdf-a9ac-c4359f783d4b']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_da32ecf1-4bfd-3bdf-a9ac-c4359f783d4b']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='PROCESS_1e479b61-e464-11e5-537c-0050568d1e04']
+        OK     : selectReferencedProcess                  Push (id: PROCESS_1e479b61-e464-11e5-537c-0050568d1e04)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='PROCESS_1e479b61-e464-11e5-537c-0050568d1e04']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='PROCESS_1e479b61-e464-11e5-537c-0050568d1e04']
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=false
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_01715a2d-7710-306c-b802-012d1d37892f']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_01715a2d-7710-306c-b802-012d1d37892f']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Scan Invoice' and @id='FLOWNODE_65e478b3-5423-354a-85a2-0a82b6bd85ff']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_65e478b3-5423-354a-85a2-0a82b6bd85ff']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_65e478b3-5423-354a-85a2-0a82b6bd85ff']
+          OK     : checkMessageFlow                         Message: message flow '' (Output) -> //bpmn:startEvent[@name='Invoice received' and @id='FLOWNODE_487f70fb-d5b6-3878-8fc9-0907bfe0d8de']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Archive original' and @id='FLOWNODE_f93ce628-76c2-3b98-8931-535f16e27fcd']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_f93ce628-76c2-3b98-8931-535f16e27fcd']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_f93ce628-76c2-3b98-8931-535f16e27fcd']
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='Approver to be assigned' and @id='FLOWNODE_a480001d-b715-3e6c-a575-4038c3535d4a']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_a480001d-b715-3e6c-a575-4038c3535d4a']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_a480001d-b715-3e6c-a575-4038c3535d4a']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Assign approver' and @id='FLOWNODE_4dba0f72-f0b7-359b-b936-e3248d245677']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_4dba0f72-f0b7-359b-b936-e3248d245677']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_4dba0f72-f0b7-359b-b936-e3248d245677']
+          OK     : navigateFollowingElement                 Message: bpmn:eventBasedGateway[@id='FLOWNODE_2306523c-f8a1-30d4-88e8-ab5077b3e883']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_2306523c-f8a1-30d4-88e8-ab5077b3e883']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_2306523c-f8a1-30d4-88e8-ab5077b3e883']
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='7 days' and @id='FLOWNODE_fa9da05c-1269-3d94-8c0e-d43b6dc4488a']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_fa9da05c-1269-3d94-8c0e-d43b6dc4488a']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_fa9da05c-1269-3d94-8c0e-d43b6dc4488a']
+          OK     : checkTimerEvent                          Message: Timer event definition
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='null']
+          OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="ARISBPMN_1e394383-e464-11e5-537c-0050568d1e04"']/semantic:process[@id='id="PROCESS_1e479b61-e464-11e5-537c-0050568d1e04"']/semantic:eventBasedGateway[@id='id="FLOWNODE_2306523c-f8a1-30d4-88e8-ab5077b3e883"']/
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_2306523c-f8a1-30d4-88e8-ab5077b3e883']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_2306523c-f8a1-30d4-88e8-ab5077b3e883']
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='Invoice review needed' and @id='FLOWNODE_717f9748-fc41-31ce-93ad-655dd3765554']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_717f9748-fc41-31ce-93ad-655dd3765554']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_717f9748-fc41-31ce-93ad-655dd3765554']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          OK     : navigateElement                          Message: bpmn:task[@name='Review and document result']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_3c2fb1a3-8821-342e-89d6-0cf88fb7b007']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_3c2fb1a3-8821-342e-89d6-0cf88fb7b007']
+          FINDING: navigateElement                          Message: No node found; Parameter: bpmn:endEvent[not(@name)]
+          OK     : doExecute                                Pop (id: PROCESS_1e479b61-e464-11e5-537c-0050568d1e04)
+        OK     : doExecute                                Pop (id: FLOWNODE_da32ecf1-4bfd-3bdf-a9ac-c4359f783d4b)
+      OK     : selectPool                               Message: bpmn:participant[@name='Process Engine - Invoice Receipt']
+      OK     : selectPool                               Push (id: FLOWNODE_57cd5323-377c-30c2-b30b-f658f462842c)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_57cd5323-377c-30c2-b30b-f658f462842c']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_57cd5323-377c-30c2-b30b-f658f462842c']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='PROCESS_1e53824b-e464-11e5-537c-0050568d1e04']
+        OK     : selectReferencedProcess                  Push (id: PROCESS_1e53824b-e464-11e5-537c-0050568d1e04)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='PROCESS_1e53824b-e464-11e5-537c-0050568d1e04']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='PROCESS_1e53824b-e464-11e5-537c-0050568d1e04']
+          FINDING: checkAttributeValue                      Message: Attribute isExecutable does not have the expected value 'true'; Parameter: isExecutable
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Team Assistant']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_f11703d5-61c9-3a1b-854a-8d8ca6cd24b7']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_f11703d5-61c9-3a1b-854a-8d8ca6cd24b7']
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Approver']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_8ac45c9b-4832-365b-a8aa-1f890c66b047']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_8ac45c9b-4832-365b-a8aa-1f890c66b047']
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Accountant']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_7516132c-51e7-3ce6-9534-cbdcc96c2c45']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_7516132c-51e7-3ce6-9534-cbdcc96c2c45']
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_487f70fb-d5b6-3878-8fc9-0907bfe0d8de']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_487f70fb-d5b6-3878-8fc9-0907bfe0d8de']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          OK     : checkMessageFlow                         Message: message flow '' (Input) -> //bpmn:task[@name='Scan Invoice' and @id='FLOWNODE_65e478b3-5423-354a-85a2-0a82b6bd85ff']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Assign Approver' and @id='FLOWNODE_1f4e2e2d-d57d-3984-8641-deb752debcf6']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_1f4e2e2d-d57d-3984-8641-deb752debcf6']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_1f4e2e2d-d57d-3984-8641-deb752debcf6']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='FLOWNODE_ea45b49b-3562-3c19-ac92-e9d0764d4dd9']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_ea45b49b-3562-3c19-ac92-e9d0764d4dd9']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_ea45b49b-3562-3c19-ac92-e9d0764d4dd9']
+          FINDING: checkAttributeValue                      Message: Attribute camunda:assignee is not existing.; Parameter: 
+          FINDING: checkAttributeValue                      Message: Attribute camunda:formKey is not existing.; Parameter: 
+          OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Rechnung klären']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Review successful?']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='Invoice not processed']
+          OK     : navigateBookmarkedElement                Message: 
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="ARISBPMN_1e394383-e464-11e5-537c-0050568d1e04"']/semantic:process[@id='id="PROCESS_1e53824b-e464-11e5-537c-0050568d1e04"']/semantic:exclusiveGateway[@id='id="FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f"']/
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='FLOWNODE_448e497b-7a2b-3e82-b5f6-8fe02da3c62f']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Prepare Bank Transfer']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:serviceTask[@name='Archive Invoice']
+          FINDING: checkAttributeValue                      Message: Attribute camunda:delegateExpression is not existing.; Parameter: 
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='Invoice processed']
+          OK     : doExecute                                Pop (id: PROCESS_1e53824b-e464-11e5-537c-0050568d1e04)
+        OK     : doExecute                                Pop (id: FLOWNODE_57cd5323-377c-30c2-b30b-f658f462842c)
+      OK     : doExecute                                Pop (id: COLLABORATION_1e394383-e464-11e5-537c-0050568d1e04)

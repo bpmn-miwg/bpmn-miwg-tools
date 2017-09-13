@@ -1,0 +1,45 @@
+<analysis name="ModelFoundry 1.1.1-C.2.0-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 25: cvc-datatype-valid.1.2.1: &apos;__0ef615c7-5456-45c8-9cfb-f1fe30c44436-semantic:messageEventDefinition1&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 25: cvc-attribute.3: The value &apos;__0ef615c7-5456-45c8-9cfb-f1fe30c44436-semantic:messageEventDefinition1&apos; of attribute &apos;id&apos; on element &apos;messageEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 26: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;incoming&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinition, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinitionRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 30: cvc-datatype-valid.1.2.1: &apos;__4011aa2d-a7a9-4e1a-9f16-8a662d138bd4-semantic:messageEventDefinition1&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 30: cvc-attribute.3: The value &apos;__4011aa2d-a7a9-4e1a-9f16-8a662d138bd4-semantic:messageEventDefinition1&apos; of attribute &apos;id&apos; on element &apos;messageEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 31: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;incoming&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinition, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinitionRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 51: cvc-datatype-valid.1.2.1: &apos;__e6a9dd54-6cb0-4713-8b77-e659f2658e40-semantic:messageEventDefinition1&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 51: cvc-attribute.3: The value &apos;__e6a9dd54-6cb0-4713-8b77-e659f2658e40-semantic:messageEventDefinition1&apos; of attribute &apos;id&apos; on element &apos;messageEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 52: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;incoming&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinition, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinitionRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 72: cvc-datatype-valid.1.2.1: &apos;_7ea6639e-e773-4236-94bf-78f149188c30-semantic:errorEventDefinition1&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 72: cvc-attribute.3: The value &apos;_7ea6639e-e773-4236-94bf-78f149188c30-semantic:errorEventDefinition1&apos; of attribute &apos;id&apos; on element &apos;errorEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 73: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;incoming&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinition, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinitionRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 95: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;incoming&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:flowElement, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:artifact}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 106: cvc-datatype-valid.1.2.1: &apos;__cec149db-adae-4b69-8ea4-b866f2eef248-semantic:errorEventDefinition1&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 106: cvc-attribute.3: The value &apos;__cec149db-adae-4b69-8ea4-b866f2eef248-semantic:errorEventDefinition1&apos; of attribute &apos;id&apos; on element &apos;errorEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 107: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;outgoing&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinition, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinitionRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 141: cvc-datatype-valid.1.2.1: &apos;__fd16081c-ecf9-4e0f-857f-f3404a7ee784-semantic:messageEventDefinition1&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 141: cvc-attribute.3: The value &apos;__fd16081c-ecf9-4e0f-857f-f3404a7ee784-semantic:messageEventDefinition1&apos; of attribute &apos;id&apos; on element &apos;messageEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 142: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;incoming&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinition, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:eventDefinitionRef}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 165: cvc-complex-type.2.4.a: Invalid content was found starting with element &apos;laneSet&apos;. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:flowElement, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:artifact, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:resourceRole, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:correlationSubscription, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:supports}&apos; is expected.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 483: cvc-id.1: There is no ID/IDREF binding for IDREF &apos;_f35ee29d-018c-47e2-afeb-eebc2e25925e&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 21, Fatal Errors: 0"/>
+</analysis>

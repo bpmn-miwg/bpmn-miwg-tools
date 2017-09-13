@@ -15,7 +15,10 @@ ANALYSIS: ibo Prometheus 3.9.0.0-C.1.1-roundtrip (Tool: xpath)
     OK     : checkAttributeValue                      Message: Attribute w4:type=User
     OK     : selectElement                            Message: bpmn:process[@name='Invoice Handling (OMG BPMN MIWG Demo)']
     OK     : selectElement                            Push (id: handle-invoice)
-      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : selectElement                            Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node 'w4graph:root' but was 'null' - comparing <w4graph:root...> at /extensionElements[1]/graphStyle[1]/root[1] to  at null; Parameter: null
+        OK     : selectElement                            Pop (id: )
       OK     : checkAttributeValue                      Message: Attribute isExecutable=true
       OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
       OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
@@ -46,7 +49,15 @@ ANALYSIS: ibo Prometheus 3.9.0.0-C.1.1-roundtrip (Tool: xpath)
       OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
       OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
       OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Archive Invoice' and @id='archiveInvoice']
-      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node '#cdata-section' but was 'null' - comparing <![CDATA[
+	          Hello World
+	      ]]> at /extensionElements[1]/field[4]/string[1]/text()[1] to  at null; Parameter: null
+        FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node '#cdata-section' but was 'null' - comparing <![CDATA[
+	          <p>Hello World</p><br>
+	      ]]> at /extensionElements[1]/field[5]/string[1]/text()[1] to  at null; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
       OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
       OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice processed' and @id='invoiceProcessed']
       OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference

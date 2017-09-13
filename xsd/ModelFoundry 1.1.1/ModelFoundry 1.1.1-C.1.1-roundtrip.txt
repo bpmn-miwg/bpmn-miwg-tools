@@ -1,0 +1,48 @@
+ANALYSIS: ModelFoundry 1.1.1-C.1.1-roundtrip (Tool: xsd)
+  Error Line 3: cvc-complex-type.3.2.2: Attribute 'id' is not allowed to appear in element 'import'.
+
+  Error Line 3: cvc-complex-type.3.2.2: Attribute 'name' is not allowed to appear in element 'import'.
+
+  Error Line 3: cvc-complex-type.4: Attribute 'importType' must appear on element 'import'.
+
+  Error Line 54: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 54: cvc-elt.4.1: The value 'bpmn:tExpression' of attribute 'http://www.w3.org/2001/XMLSchema-instance,type' of element 'conditionExpression' is not a valid QName.
+
+  Error Line 54: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 54: cvc-attribute.3: The value 'bpmn:tExpression' of attribute 'xsi:type' on element 'conditionExpression' is not valid with respect to its type, 'QName'.
+
+  Error Line 57: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 57: cvc-elt.4.1: The value 'bpmn:tExpression' of attribute 'http://www.w3.org/2001/XMLSchema-instance,type' of element 'conditionExpression' is not a valid QName.
+
+  Error Line 57: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 57: cvc-attribute.3: The value 'bpmn:tExpression' of attribute 'xsi:type' on element 'conditionExpression' is not valid with respect to its type, 'QName'.
+
+  Error Line 60: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 60: cvc-elt.4.1: The value 'bpmn:tExpression' of attribute 'http://www.w3.org/2001/XMLSchema-instance,type' of element 'conditionExpression' is not a valid QName.
+
+  Error Line 60: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 60: cvc-attribute.3: The value 'bpmn:tExpression' of attribute 'xsi:type' on element 'conditionExpression' is not valid with respect to its type, 'QName'.
+
+  Error Line 63: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 63: cvc-elt.4.1: The value 'bpmn:tExpression' of attribute 'http://www.w3.org/2001/XMLSchema-instance,type' of element 'conditionExpression' is not a valid QName.
+
+  Error Line 63: UndeclaredPrefix: Cannot resolve 'bpmn:tExpression' as a QName: the prefix 'bpmn' is not declared.
+
+  Error Line 63: cvc-attribute.3: The value 'bpmn:tExpression' of attribute 'xsi:type' on element 'conditionExpression' is not valid with respect to its type, 'QName'.
+
+  Error Line 72: UndeclaredPrefix: Cannot resolve 'xs:tString' as a QName: the prefix 'xs' is not declared.
+
+  Error Line 72: cvc-attribute.3: The value 'xs:tString' of attribute 'structureRef' on element 'itemDefinition' is not valid with respect to its type, 'QName'.
+
+  Error Line 73: UndeclaredPrefix: Cannot resolve 'xs:tBool' as a QName: the prefix 'xs' is not declared.
+
+  Error Line 73: cvc-attribute.3: The value 'xs:tBool' of attribute 'structureRef' on element 'itemDefinition' is not valid with respect to its type, 'QName'.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 23, Fatal Errors: 0

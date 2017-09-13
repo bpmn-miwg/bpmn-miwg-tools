@@ -76,8 +76,17 @@
          <div class="ok">
             <h4>    OK     : selectElement                            Push (id: handle-invoice)</h4>
          </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
          <div class="ok">
-            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+            <h4>      OK     : selectElement                            Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;w4graph:root&apos; but was &apos;null&apos; - comparing &lt;w4graph:root...&gt; at /extensionElements[1]/graphStyle[1]/root[1] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectElement                            Pop (id: )</h4>
          </div>
          <div class="ok">
             <h4>OK     : checkAttributeValue                      Message: Attribute isExecutable=true</h4>
@@ -169,8 +178,24 @@
          <div class="ok">
             <h4>OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name=&apos;Archive Invoice&apos; and @id=&apos;archiveInvoice&apos;]</h4>
          </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
          <div class="ok">
-            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+            <h4>      OK     : navigateFollowingElement                 Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;#cdata-section&apos; but was &apos;null&apos; - comparing &lt;![CDATA[
+	          Hello World
+	      ]]&gt; at /extensionElements[1]/field[4]/string[1]/text()[1] to  at null; Parameter: null</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;#cdata-section&apos; but was &apos;null&apos; - comparing &lt;![CDATA[
+	          &lt;p&gt;Hello World&lt;/p&gt;&lt;br&gt;
+	      ]]&gt; at /extensionElements[1]/field[5]/string[1]/text()[1] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Pop (id: )</h4>
          </div>
          <div class="ok">
             <h4>OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.</h4>

@@ -1,0 +1,6 @@
+ANALYSIS: Bizagi Modeler 2.8.0.8-B.1.0-roundtrip (Tool: xsd)
+  Error Line 301: cvc-complex-type.2.4.b: The content of element 'dataInputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 302: cvc-complex-type.2.4.b: The content of element 'dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":documentation, "http://www.omg.org/spec/BPMN/20100524/MODEL":extensionElements, "http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 2, Fatal Errors: 0

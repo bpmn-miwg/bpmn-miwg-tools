@@ -1,0 +1,13 @@
+<analysis name="Bonita BPM 7.2.3-C.1.0-roundtrip" toolName="xsd">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Warning Line 2: SchemaLocation: schemaLocation value = &apos;schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd&apos; must have even number of URI&apos;s.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 12: cvc-datatype-valid.1.2.1: &apos;BPMN MIWG Test Case C.1.0_laneSet&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 12: cvc-attribute.3: The value &apos;BPMN MIWG Test Case C.1.0_laneSet&apos; of attribute &apos;id&apos; on element &apos;model:laneSet&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 93: cvc-datatype-valid.1.2.1: &apos;eventdef-7 days&apos; is not a valid value for &apos;NCName&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 93: cvc-attribute.3: The value &apos;eventdef-7 days&apos; of attribute &apos;id&apos; on element &apos;model:timerEventDefinition&apos; is not valid with respect to its type, &apos;ID&apos;.
+"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 1, Errors: 4, Fatal Errors: 0"/>
+</analysis>
