@@ -104,6 +104,7 @@
     <module>xpath-tool</module>
     <module>schema-tool</module>
     <module>bounds-generator</module>
+    <module>submission-counter</module>
     <module>bpmn-miwg-maven-plugin</module>
   </modules>
 

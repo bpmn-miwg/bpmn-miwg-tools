@@ -1,4 +1,4 @@
-
+package org.omg.bpmn.miwg.submission;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,16 +12,32 @@ import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 
 public class RepoScanner {
-  
+
   protected static final Logger LOGGER = Logger.getLogger(RepoScanner.class.getName());
-  
+
   List<String> testCases;
+
+  private String githubUser;
+
+  private String githubToken;
+
+    public RepoScanner() {
+        githubUser = System.getProperty("githubUser");
+        githubToken = System.getProperty("githubToken");
+
+        if (githubUser == null || githubToken == null) {
+            String msg = ("To scan GitHub for submissions please provide your username and a valid Personal Access Token.\n"
+                    + "Without this the submissions table will be out of date.\n"
+                    + "JVM parameters are githubUser and githubToken");
+            throw new IllegalStateException(msg);
+        }
+    }
 
 	public JSONObject getSubmissionsFromRepo(String repoName) {
     LOGGER.info("Scanning Repo '" + repoName + "'.\n\n This might take some time!\n\n");
 		JSONObject submissions;
     try {
-			GitHub github = GitHub.connect("falko", "90011a5a4f2606a6981c5d961b9b43ba22223f47");
+            GitHub github = GitHub.connect(githubUser, githubToken);
 			GHRepository repository = github.getRepository(repoName);
 			testCases = getReferences(repository);
 			submissions = getSubmissionsFromRootDir(repository);
@@ -59,7 +75,7 @@ public class RepoScanner {
     }
     return submissions;
   }
-  
+
   @SuppressWarnings("unchecked")
   private void getSubmissionsFromToolDir(JSONObject submissions, GHRepository repository,
       String tool) throws IOException {
@@ -96,5 +112,5 @@ public class RepoScanner {
     submission.put("files", files);
     submissions.put(tool, submission);
   }
-  
+
 }

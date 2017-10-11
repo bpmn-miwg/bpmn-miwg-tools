@@ -20,7 +20,7 @@
     <java.version>1.7</java.version>
     <bpmn.miwg.tools.version>0.5-SNAPSHOT</bpmn.miwg.tools.version>
   </properties>
-  
+
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>
@@ -67,7 +67,7 @@
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>schema-tool</artifactId>
       <version>${bpmn.miwg.tools.version}</version>
-    </dependency>    
+    </dependency>
     <dependency>
       <groupId>org.glassfish</groupId>
       <artifactId>javax.json</artifactId>
@@ -77,8 +77,13 @@
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>bounds-generator</artifactId>
       <version>${bpmn.miwg.tools.version}</version>
-    </dependency>    
-    
+    </dependency>
+    <dependency>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>submission-counter</artifactId>
+      <version>${bpmn.miwg.tools.version}</version>
+    </dependency>
+
     <!-- Required at runtime for private testing -->
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
