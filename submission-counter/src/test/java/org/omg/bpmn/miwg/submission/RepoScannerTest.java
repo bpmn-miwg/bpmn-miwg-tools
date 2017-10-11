@@ -1,9 +1,12 @@
+package org.omg.bpmn.miwg.submission;
+
 import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONObject;
 import org.junit.Test;
+import org.omg.bpmn.miwg.submission.RepoScanner;
 
 
 public class RepoScannerTest {

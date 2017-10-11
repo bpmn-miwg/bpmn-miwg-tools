@@ -2,17 +2,17 @@
  * The MIT License (MIT)
  * Copyright (c) 2013 OMG BPMN Model Interchange Working Group
  *
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,11 +20,12 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- * 
+ *
  */
 package org.omg.bpmn.miwg.mvn;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -36,10 +37,12 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
+import org.json.simple.JSONObject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.boundary.BoundaryCreator;    
+import org.omg.bpmn.miwg.boundary.BoundaryCreator;
 import org.omg.bpmn.miwg.scan.BpmnFileScanner;
 import org.omg.bpmn.miwg.scan.StandardScanParameters;
+import org.omg.bpmn.miwg.submission.RepoScanner;
 
 /**
  * Goal which scans project for BPMN files and tests them for interoperability.
@@ -68,7 +71,7 @@ public class ModelInterchangeMojo extends AbstractMojo {
 	 * The list of resource definitions to be included in the project jar. List
 	 * of Resource objects for the current build, containing directory,
 	 * includes, and excludes.
-	 * 
+	 *
 	 */
 	@Parameter(defaultValue = "${project.resources}", readonly = true, required = true)
 	protected List<Resource> resources;
@@ -97,12 +100,20 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		try {        
+		try {
             //Generate the Bounds Stencil using the Bounds Creator
             BoundaryCreator.generate(new File("Reference"), new File(outputDirectory, "Reference/Bounds"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+        try {
+            //Generate the submissions.json
+            JSONObject submissions = new RepoScanner().getSubmissionsFromRepo("bpmn-miwg/bpmn-miwg-test-suite");
+            FileWriter out = new FileWriter(new File(outputDirectory, "submissions.json"));
+            submissions.writeJSONString(out);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 	}
 
 }

@@ -5,7 +5,7 @@
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>tools</artifactId>
   <packaging>pom</packaging>
-  <version>0.4.1</version>
+  <version>0.4.2</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
@@ -96,6 +96,7 @@
     <module>xpath-tool</module>
     <module>schema-tool</module>
     <module>bounds-generator</module>
+    <module>submission-counter</module>
     <module>bpmn-miwg-maven-plugin</module>
   </modules>
 
