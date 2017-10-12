@@ -1,0 +1,2 @@
+ANALYSIS: ADONIS NP 5.2-A.4.1-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded
