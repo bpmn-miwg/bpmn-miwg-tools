@@ -106,10 +106,9 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-        try {
-            //Generate the submissions.json
+        //Generate the submissions.json
+        try (FileWriter out = new FileWriter(new File(outputDirectory, "submissions.json"))) {
             JSONObject submissions = new RepoScanner().getSubmissionsFromRepo("bpmn-miwg/bpmn-miwg-test-suite");
-            FileWriter out = new FileWriter(new File(outputDirectory, "submissions.json"));
             submissions.writeJSONString(out);
         } catch (Exception e) {
             e.printStackTrace();
