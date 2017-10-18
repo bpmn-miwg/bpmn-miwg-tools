@@ -1047,3 +1047,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[10] = 36
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13] = bpmndi:BPMNShape
   Reference: null = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] = bpmndi:BPMNShape
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.00
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 16.35

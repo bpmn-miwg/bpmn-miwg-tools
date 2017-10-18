@@ -3,6 +3,9 @@ ANALYSIS: ModelFoundry 1.1.1-A.3.0-roundtrip (Tool: xml-compare)
 Test: /definitions[1]/process[1]/startEvent[1] = 1
   Reference: /definitions[1]/process[1]/task[1] = 1
 Test: /definitions[1]/process[1]/task[1] = 2
+  Reference: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed
+Sub-Process
+Test: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed  Sub-Process
   Reference: /definitions[1]/process[1]/subProcess[1] = 2
 Test: /definitions[1]/process[1]/subProcess[1] = 0
   Reference: /definitions[1]/process[1]/boundaryEvent[1]/outgoing[1] = 0
@@ -53,13 +56,17 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/BPMNLabel[1]/@lab
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/BPMNLabel[1] = false
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/@labelStyle = LS1373649919253
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/@labelStyle = Trisotech_Visio-_6_Arial8.0255
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@width = 104.93333333333335
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@width = 94.93333333333335
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@x = 252.4591285949397
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@x = 252.45912859494
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@y = 208.34455751275414
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@y = 208.344557512754
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/@labelStyle = LS1373649919253
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/@labelStyle = Trisotech_Visio-_6_Arial8.0255
-  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 265.10712859493964
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@width = 104.93333333333335
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@width = 94.93333333333335
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 260.10712859493964
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 265.10712859494
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@y = 370.33175751275405
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@y = 370.331757512754

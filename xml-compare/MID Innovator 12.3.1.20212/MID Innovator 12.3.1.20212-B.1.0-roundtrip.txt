@@ -113,6 +113,9 @@ Test: /definitions[1]/process[3]/task[1]/extensionElements[1] = bpmn:extensionEl
 Test: /definitions[1]/process[3]/task[1] = 7
   Reference: /definitions[1]/process[2]/userTask[1] = completionQuantity
 Test: /definitions[1]/process[3]/userTask[1] = null
+  Reference: /definitions[1]/process[2]/userTask[1]/@name = User
+Task 2
+Test: /definitions[1]/process[3]/userTask[1]/@name = User  Task 2
   Reference: /definitions[1]/process[2]/userTask[1] = 2
 Test: /definitions[1]/process[3]/userTask[1] = 3
   Reference: /definitions[1]/process[2]/userTask[1]/incoming[1]/text()[1] = _a1505d79-bbc0-42cf-866a-401a2f94b675
@@ -527,6 +530,9 @@ Test: /definitions[1]/process[4]/endEvent[2]/eventDefinitionRef[1] = bpmn:eventD
 Test: /definitions[1]/process[4]/endEvent[2] = 10
   Reference: /definitions[1]/process[3]/dataObjectReference[1] = semantic:dataObjectReference
 Test: null = null
+  Reference: /definitions[1]/process[3]/dataStoreReference[1]/@name = Data
+Store Reference
+Test: /definitions[1]/process[4]/dataStoreReference[1]/@name = Data  Store Reference
   Reference: /definitions[1]/process[3]/dataStoreReference[1] = false
 Test: /definitions[1]/process[4]/dataStoreReference[1] = true
   Reference: /definitions[1]/process[3]/dataStoreReference[1] = 18

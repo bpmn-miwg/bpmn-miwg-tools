@@ -179,6 +179,9 @@ Test: /definitions[1]/process[4]/sequenceFlow[2] = 3
 Test: /definitions[1]/process[4]/task[2] = 9
   Reference: /definitions[1]/process[4]/sequenceFlow[3] = 6
 Test: /definitions[1]/process[4]/sequenceFlow[3] = 4
+  Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
+items
+Test: /definitions[1]/process[4]/task[3]/@name = Receive and Package  items
   Reference: /definitions[1]/process[4]/task[3] = 7
 Test: /definitions[1]/process[4]/task[3] = 10
   Reference: /definitions[1]/process[4]/sequenceFlow[4] = 8
@@ -509,3 +512,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] = bpmndi:BPMNShap
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] = bpmndi:BPMNShape
   Reference: null = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[35] = bpmndi:BPMNShape
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8

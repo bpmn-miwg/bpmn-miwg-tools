@@ -9,10 +9,16 @@ Test: /definitions[1]/process[1]/endEvent[1] = false
 Test: /definitions[1]/process[1]/task[2] = false
   Reference: /definitions[1]/process[1]/task[3] = true
 Test: /definitions[1]/process[1]/task[3] = false
+  Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway
+(Split Flow)
+Test: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway  (Split Flow)
   Reference: /definitions[1]/process[1]/exclusiveGateway[1] = true
 Test: /definitions[1]/process[1]/exclusiveGateway[1] = false
   Reference: /definitions[1]/process[1]/task[4] = true
 Test: /definitions[1]/process[1]/task[4] = false
+  Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway
+(Merge Flows)
+Test: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway  (Merge Flows)
   Reference: /definitions[1]/process[1]/exclusiveGateway[2] = true
 Test: /definitions[1]/process[1]/exclusiveGateway[2] = false
   Reference: /definitions[1]/process[1]/sequenceFlow[1] = name

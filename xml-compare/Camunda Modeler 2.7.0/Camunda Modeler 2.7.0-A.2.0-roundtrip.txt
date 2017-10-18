@@ -21,6 +21,9 @@ Test: /definitions[1]/process[1]/task[3] = null
 Test: /definitions[1]/process[1]/task[3] = null
   Reference: /definitions[1]/process[1]/exclusiveGateway[1] = gatewayDirection
 Test: /definitions[1]/process[1]/exclusiveGateway[1] = null
+  Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway
+(Split Flow)
+Test: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway  (Split Flow)
   Reference: /definitions[1]/process[1]/task[4] = completionQuantity
 Test: /definitions[1]/process[1]/task[4] = null
   Reference: /definitions[1]/process[1]/task[4] = isForCompensation
@@ -29,6 +32,9 @@ Test: /definitions[1]/process[1]/task[4] = null
 Test: /definitions[1]/process[1]/task[4] = null
   Reference: /definitions[1]/process[1]/exclusiveGateway[2] = gatewayDirection
 Test: /definitions[1]/process[1]/exclusiveGateway[2] = null
+  Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway
+(Merge Flows)
+Test: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway  (Merge Flows)
   Reference: /definitions[1]/BPMNDiagram[1]/@resolution = 96.00000267028808
 Test: /definitions[1]/BPMNDiagram[1]/@resolution = 96.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1]/Bounds[1]/@height = 12.804751171875008
@@ -107,3 +113,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = isUnderline
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0

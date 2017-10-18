@@ -11,6 +11,9 @@ Test: /definitions[1]/process[1]/task[1] = null
 Test: /definitions[1]/process[1]/subProcess[1] = null
   Reference: /definitions[1]/process[1]/subProcess[1] = isForCompensation
 Test: /definitions[1]/process[1]/subProcess[1] = null
+  Reference: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed
+Sub-Process
+Test: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed  Sub-Process
   Reference: /definitions[1]/process[1]/subProcess[1] = startQuantity
 Test: /definitions[1]/process[1]/subProcess[1] = null
   Reference: /definitions[1]/process[1]/subProcess[1] = triggeredByEvent
@@ -69,7 +72,7 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]/BPMNLabel[1]/Bounds[1]/@y = 297.1898
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@height = 51.204604687499994
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@height = 51.204605
-  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@width = 94.93333333333335
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@width = 104.93333333333335
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@width = 94.933334
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@x = 252.4591285949397
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@x = 252.45912
@@ -77,9 +80,9 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@y = 208.34456
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@height = 51.204604687499994
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@height = 51.204605
-  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@width = 94.93333333333335
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@width = 104.93333333333335
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@width = 94.933334
-  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 265.10712859493964
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 260.10712859493964
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 265.10712
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@y = 370.33175751275405
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@y = 370.33176
@@ -131,3 +134,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = isUnderline
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0

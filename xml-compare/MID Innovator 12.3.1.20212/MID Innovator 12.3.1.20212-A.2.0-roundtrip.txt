@@ -87,6 +87,9 @@ Test: /definitions[1]/process[1]/task[4]/extensionElements[1] = bpmn:extensionEl
 Test: /definitions[1]/process[1]/task[4] = 17
   Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[1]/exclusiveGateway[2]/@gatewayDirection = Diverging
+  Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway
+(Split Flow)
+Test: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway  (Split Flow)
   Reference: /definitions[1]/process[1]/exclusiveGateway[1] = 4
 Test: /definitions[1]/process[1]/exclusiveGateway[2] = 5
   Reference: /definitions[1]/process[1]/exclusiveGateway[1]/incoming[1]/text()[1] = _fe74c141-8843-4b00-a704-5e5e13be53b0
@@ -127,6 +130,9 @@ Test: /definitions[1]/process[1]/task[3]/extensionElements[1] = bpmn:extensionEl
 Test: /definitions[1]/process[1]/task[3] = 16
   Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[1]/exclusiveGateway[1]/@gatewayDirection = Converging
+  Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway
+(Merge Flows)
+Test: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway  (Merge Flows)
   Reference: /definitions[1]/process[1]/exclusiveGateway[2] = 3
 Test: /definitions[1]/process[1]/exclusiveGateway[1] = 4
   Reference: /definitions[1]/process[1]/exclusiveGateway[2]/incoming[1]/text()[1] = _e9ebc7c7-995d-46db-86ce-d823bc2b4687

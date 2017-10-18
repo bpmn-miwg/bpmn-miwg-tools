@@ -1,1 +1,4 @@
-<analysis name="Camunda Modeler 2.7.0-C.2.0-roundtrip" toolName="xml-compare"/>
+<analysis name="Camunda Modeler 2.7.0-C.2.0-roundtrip" toolName="xml-compare">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+</analysis>

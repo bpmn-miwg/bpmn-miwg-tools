@@ -19,6 +19,9 @@ Test: /definitions[1]/process[1]/task[3] = null
 Test: /definitions[1]/process[1]/task[3] = null
   Reference: /definitions[1]/process[1]/exclusiveGateway[1] = gatewayDirection
 Test: /definitions[1]/process[1]/exclusiveGateway[1] = null
+  Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway
+(Split Flow)
+Test: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway  (Split Flow)
   Reference: /definitions[1]/process[1]/task[4] = completionQuantity
 Test: /definitions[1]/process[1]/task[4] = null
   Reference: /definitions[1]/process[1]/task[4] = isForCompensation
@@ -27,6 +30,9 @@ Test: /definitions[1]/process[1]/task[4] = null
 Test: /definitions[1]/process[1]/task[4] = null
   Reference: /definitions[1]/process[1]/exclusiveGateway[2] = gatewayDirection
 Test: /definitions[1]/process[1]/exclusiveGateway[2] = null
+  Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway
+(Merge Flows)
+Test: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway  (Merge Flows)
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height = 30.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@height = 30
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/Bounds[1]/@width = 30.0
@@ -203,5 +209,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[2]/@y = 3
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@x = 642
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@y = 357.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]/waypoint[3]/@y = 357
-  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8

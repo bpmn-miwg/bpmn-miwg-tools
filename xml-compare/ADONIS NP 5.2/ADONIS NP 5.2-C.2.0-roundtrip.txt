@@ -507,6 +507,9 @@ Test: /definitions[1]/process[3]/sequenceFlow[4] = true
 Test: /definitions[1]/process[3]/sequenceFlow[4] = 11
   Reference: /definitions[1]/process[4]/task[3] = completionQuantity
 Test: /definitions[1]/process[3]/task[4] = null
+  Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
+items
+Test: /definitions[1]/process[3]/task[4]/@name = Receive and Package  items
   Reference: /definitions[1]/process[4]/task[3] = startQuantity
 Test: /definitions[1]/process[3]/task[4] = null
   Reference: /definitions[1]/process[4]/task[3] = 2

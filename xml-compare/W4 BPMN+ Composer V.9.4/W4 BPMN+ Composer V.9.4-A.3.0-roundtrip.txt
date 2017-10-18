@@ -1,6 +1,9 @@
 ANALYSIS: W4 BPMN+ Composer V.9.4-A.3.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1]/process[1]/startEvent[1] = null
 Test: /definitions[1]/process[1]/startEvent[1] = isInterrupting
+  Reference: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed
+Sub-Process
+Test: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed  Sub-Process
   Reference: /definitions[1]/process[1]/boundaryEvent[1] = parallelMultiple
 Test: /definitions[1]/process[1]/boundaryEvent[1] = null
   Reference: /definitions[1]/process[1]/boundaryEvent[1]/messageEventDefinition[1] = semantic:messageEventDefinition
@@ -119,3 +122,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = isUnderline
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0

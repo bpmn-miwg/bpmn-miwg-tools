@@ -209,4 +209,10 @@
    <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
    <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
    <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
 </analysis>

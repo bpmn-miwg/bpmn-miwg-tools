@@ -135,6 +135,9 @@ Test: /definitions[1]/process[4]/task[4] = 9
 Test: /definitions[1]/process[4]/sequenceFlow[4] = 8
   Reference: /definitions[1]/process[4]/task[2] = 5
 Test: /definitions[1]/process[4]/task[3] = 7
+  Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
+items
+Test: /definitions[1]/process[4]/task[2]/@name = Receive and Package  items
   Reference: /definitions[1]/process[4]/task[3] = 7
 Test: /definitions[1]/process[4]/task[2] = 5
   Reference: /definitions[1]/process[4]/sequenceFlow[4] = 8
@@ -575,5 +578,7 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[29]/BPMNLabel[1]/@lab
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[29]/BPMNLabel[1] = false
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[30]/BPMNLabel[1]/@labelStyle = LSPage_1
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[30]/BPMNLabel[1]/@labelStyle = LSPage_1_1
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8
   Reference: null = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[2] = bpmndi:BPMNLabelStyle

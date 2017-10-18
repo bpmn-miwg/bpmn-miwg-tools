@@ -25,6 +25,9 @@ Test: /definitions[1]/process[2]/task[1] = null
 Test: /definitions[1]/process[2]/userTask[1] = null
   Reference: /definitions[1]/process[2]/userTask[1] = isForCompensation
 Test: /definitions[1]/process[2]/userTask[1] = null
+  Reference: /definitions[1]/process[2]/userTask[1]/@name = User
+Task 2
+Test: /definitions[1]/process[2]/userTask[1]/@name = User  Task 2
   Reference: /definitions[1]/process[2]/userTask[1] = startQuantity
 Test: /definitions[1]/process[2]/userTask[1] = null
   Reference: /definitions[1]/process[2]/serviceTask[1] = completionQuantity
@@ -55,6 +58,9 @@ Test: /definitions[1]/process[3]/exclusiveGateway[1]/incoming[1]/text()[1] = _f5
 Test: /definitions[1]/process[3]/exclusiveGateway[1]/incoming[2]/text()[1] = _61abe245-5604-46ba-8152-94d6e68ffda4
   Reference: /definitions[1]/process[3]/exclusiveGateway[2] = gatewayDirection
 Test: /definitions[1]/process[3]/exclusiveGateway[2] = null
+  Reference: /definitions[1]/process[3]/startEvent[1]/@name = Start Event
+Message
+Test: /definitions[1]/process[3]/startEvent[1]/@name = Start Event  Message
   Reference: /definitions[1]/process[3]/startEvent[1]/messageEventDefinition[1] = semantic:messageEventDefinition
 Test: null = null
   Reference: null = null
@@ -111,6 +117,9 @@ Test: /definitions[1]/process[3]/serviceTask[1]/ioSpecification[1] = bpmn2:ioSpe
 Test: null = null
   Reference: null = null
 Test: /definitions[1]/process[3]/endEvent[2]/terminateEventDefinition[1] = bpmn2:terminateEventDefinition
+  Reference: /definitions[1]/process[3]/dataStoreReference[1]/@name = Data
+Store Reference
+Test: /definitions[1]/process[3]/dataStoreReference[1]/@name = Data  Store Reference
   Reference: /definitions[1]/process[3]/association[1] = associationDirection
 Test: /definitions[1]/process[3]/association[1] = null
   Reference: /definitions[1]/process[4] = isExecutable
@@ -121,6 +130,9 @@ Test: /definitions[1]/process[4]/task[1] = null
 Test: /definitions[1]/process[4]/task[1] = null
   Reference: /definitions[1]/process[4]/task[1] = startQuantity
 Test: /definitions[1]/process[4]/task[1] = null
+  Reference: /definitions[1]/collaboration[1]/messageFlow[2]/@name = Message
+Flow 2
+Test: /definitions[1]/collaboration[1]/messageFlow[2]/@name = Message  Flow 2
   Reference: /definitions[1]/BPMNDiagram[1] = documentation
 Test: /definitions[1]/BPMNDiagram[1] = null
   Reference: /definitions[1]/BPMNDiagram[1]/@name = B.1.0

@@ -459,6 +459,9 @@ Test: /definitions[1]/process[4]/sequenceFlow[3] = isImmediate
 Test: /definitions[1]/process[4]/sequenceFlow[3] = true
   Reference: /definitions[1]/process[4]/sequenceFlow[3] = 6
 Test: /definitions[1]/process[4]/sequenceFlow[3] = 10
+  Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
+items
+Test: /definitions[1]/process[4]/task[3]/@name = Receive and Package  items
   Reference: /definitions[1]/process[4]/task[3] = 2
 Test: /definitions[1]/process[4]/task[3] = 3
   Reference: /definitions[1]/process[4]/task[3]/incoming[1] = 0

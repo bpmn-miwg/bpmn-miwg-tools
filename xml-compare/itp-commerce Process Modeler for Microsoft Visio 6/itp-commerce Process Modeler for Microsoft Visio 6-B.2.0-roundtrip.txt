@@ -93,6 +93,9 @@ Test: /definitions[1]/process[2]/startEvent[1]/timerEventDefinition[1]/timeDate[
 Test: /definitions[1]/process[2]/startEvent[1] = 4
   Reference: /definitions[1]/process[2]/endEvent[1] = 7
 Test: /definitions[1]/process[2]/endEvent[1] = 5
+  Reference: /definitions[1]/process[2]/endEvent[2]/@name = End Event 1
+Message
+Test: /definitions[1]/process[2]/endEvent[2]/@name = End Event 1  Message
   Reference: /definitions[1]/process[2]/endEvent[2] = 8
 Test: /definitions[1]/process[2]/endEvent[2] = 6
   Reference: /definitions[1]/process[2]/userTask[2] = completionQuantity
@@ -389,6 +392,9 @@ Test: /definitions[1]/process[3]/exclusiveGateway[1]/@gatewayDirection = Divergi
 Test: /definitions[1]/process[3]/exclusiveGateway[1] = 13
   Reference: /definitions[1]/process[3]/startEvent[1] = 21
 Test: /definitions[1]/process[3]/startEvent[1] = 14
+  Reference: /definitions[1]/process[3]/endEvent[2]/@name = End Event 6
+Message
+Test: /definitions[1]/process[3]/endEvent[2]/@name = End Event 6  Message
   Reference: /definitions[1]/process[3]/endEvent[2] = 22
 Test: /definitions[1]/process[3]/endEvent[2] = 15
   Reference: /definitions[1]/process[3]/intermediateThrowEvent[2]/linkEventDefinition[1] = semantic:linkEventDefinition
@@ -513,6 +519,8 @@ Test: /definitions[1]/process[3]/task[12] = 31
 Test: /definitions[1]/process[3]/intermediateThrowEvent[4] = 32
   Reference: /definitions[1]/process[3]/inclusiveGateway[1]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[3]/inclusiveGateway[1]/@gatewayDirection = Converging
+  Reference: /definitions[1]/process[3]/inclusiveGateway[1]/@name = Inclusive Gateway 6
+Test: /definitions[1]/process[3]/inclusiveGateway[1]/@name = Inclusive Gateway  6
   Reference: /definitions[1]/process[3]/inclusiveGateway[1] = 41
 Test: /definitions[1]/process[3]/inclusiveGateway[1] = 33
   Reference: /definitions[1]/process[3]/intermediateCatchEvent[4] = parallelMultiple

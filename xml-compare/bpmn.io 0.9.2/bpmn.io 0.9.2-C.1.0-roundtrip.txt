@@ -817,3 +817,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[25]/waypoint[1]/@y = 
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[25]/waypoint[2]/@x = 167
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[25]/waypoint[2]/@y = 133.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[25]/waypoint[2]/@y = 133
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.00
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 16.35

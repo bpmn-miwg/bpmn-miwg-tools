@@ -1,8 +1,14 @@
 ANALYSIS: ModelFoundry 1.1.1-A.2.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway
+(Split Flow)
+Test: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway  (Split Flow)
   Reference: /definitions[1]/process[1]/exclusiveGateway[1] = 5
 Test: /definitions[1]/process[1]/exclusiveGateway[1] = 6
   Reference: /definitions[1]/process[1]/task[4] = 6
 Test: /definitions[1]/process[1]/task[4] = 5
+  Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway
+(Merge Flows)
+Test: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway  (Merge Flows)
   Reference: /definitions[1]/process[1]/sequenceFlow[1] = name
 Test: /definitions[1]/process[1]/sequenceFlow[1] = null
   Reference: /definitions[1]/process[1]/sequenceFlow[2] = name

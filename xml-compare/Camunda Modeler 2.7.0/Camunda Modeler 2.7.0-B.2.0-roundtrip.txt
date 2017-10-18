@@ -1,10 +1,18 @@
 ANALYSIS: Camunda Modeler 2.7.0-B.2.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/process[2]/endEvent[2]/@name = End Event 1
+Message
+Test: /definitions[1]/process[2]/endEvent[2]/@name = End Event 1  Message
+  Reference: /definitions[1]/process[3]/endEvent[2]/@name = End Event 6
+Message
+Test: /definitions[1]/process[3]/endEvent[2]/@name = End Event 6  Message
   Reference: /definitions[1]/process[3]/subProcess[2] = 2
 Test: /definitions[1]/process[3]/subProcess[2] = 4
   Reference: null = null
 Test: /definitions[1]/process[3]/subProcess[2]/ioSpecification[1] = semantic:ioSpecification
   Reference: null = null
 Test: /definitions[1]/process[3]/subProcess[2]/dataInputAssociation[1] = semantic:dataInputAssociation
+  Reference: /definitions[1]/process[3]/inclusiveGateway[1]/@name = Inclusive Gateway 6
+Test: /definitions[1]/process[3]/inclusiveGateway[1]/@name = Inclusive Gateway  6
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1] = 186
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1] = 187
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] = 103
@@ -175,3 +183,7 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[87] = 185
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[88] = 186
   Reference: null = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] = bpmndi:BPMNEdge
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0
+  Reference: /definitions[1]/BPMNDiagram[2]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
+Test: /definitions[1]/BPMNDiagram[2]/BPMNLabelStyle[1]/Font[1]/@size = 8.0

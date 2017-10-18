@@ -11,6 +11,9 @@ Test: /definitions[1]/process[1]/endEvent[1] = 0
 Test: /definitions[1]/process[1]/task[4] = 16
   Reference: /definitions[1]/process[1]/task[3] = 4
 Test: /definitions[1]/process[1]/task[2] = 14
+  Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway
+(Split Flow)
+Test: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway  (Split Flow)
   Reference: /definitions[1]/process[1]/exclusiveGateway[1]/outgoing[1]/text()[1] = _f1478fb7-98c4-4c01-8c15-68bd04c91535
 Test: /definitions[1]/process[1]/exclusiveGateway[1]/outgoing[1]/text()[1] = _20ebb3c1-5178-4c7c-a91d-23e58f2aa73b
   Reference: /definitions[1]/process[1]/exclusiveGateway[1]/outgoing[2]/text()[1] = _a1570a53-28d2-41b1-a3a2-3e50c00d747e
@@ -21,6 +24,9 @@ Test: /definitions[1]/process[1]/exclusiveGateway[1]/outgoing[3]/text()[1] = _a1
 Test: /definitions[1]/process[1]/exclusiveGateway[1] = 3
   Reference: /definitions[1]/process[1]/task[4] = 6
 Test: /definitions[1]/process[1]/task[3] = 15
+  Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway
+(Merge Flows)
+Test: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway  (Merge Flows)
   Reference: /definitions[1]/process[1]/exclusiveGateway[2] = 7
 Test: /definitions[1]/process[1]/exclusiveGateway[2] = 8
   Reference: /definitions[1]/process[1]/sequenceFlow[1] = name

@@ -3,8 +3,14 @@ ANALYSIS: Aeneis 5.7.89.2400-A.2.0-roundtrip (Tool: xml-compare)
 Test: /definitions[1]/process[1] = name
   Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[1]/exclusiveGateway[1]/@gatewayDirection = Diverging
+  Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway
+(Split Flow)
+Test: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway  (Split Flow)
   Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[1]/exclusiveGateway[2]/@gatewayDirection = Converging
+  Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway
+(Merge Flows)
+Test: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway  (Merge Flows)
   Reference: /definitions[1]/process[1]/sequenceFlow[4] = 11
 Test: /definitions[1]/process[1]/sequenceFlow[6] = 13
   Reference: /definitions[1]/process[1]/sequenceFlow[5] = 12
@@ -351,5 +357,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8] = 15
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = isUnderline
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
-  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8

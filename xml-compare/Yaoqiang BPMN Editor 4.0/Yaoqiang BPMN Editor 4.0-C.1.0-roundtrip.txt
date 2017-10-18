@@ -1,1 +1,3 @@
 ANALYSIS: Yaoqiang BPMN Editor 4.0-C.1.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.00
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 16.35

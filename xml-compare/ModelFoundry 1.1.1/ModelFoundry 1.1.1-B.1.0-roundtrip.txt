@@ -15,6 +15,9 @@ Test: /definitions[1]/process[2]/startEvent[1]/timerEventDefinition[1] = timerEv
 Test: /definitions[1]/process[2]/task[1] = 3
   Reference: null = null
 Test: /definitions[1]/process[2]/task[1]/outgoing[2] = outgoing
+  Reference: /definitions[1]/process[2]/userTask[1]/@name = User
+Task 2
+Test: /definitions[1]/process[2]/userTask[1]/@name = User  Task 2
   Reference: /definitions[1]/process[2]/serviceTask[1] = 2
 Test: /definitions[1]/process[2]/serviceTask[1] = 3
   Reference: /definitions[1]/process[2]/serviceTask[1]/outgoing[1] = 1
@@ -53,6 +56,9 @@ Test: /definitions[1]/process[3]/callActivity[2] = 7
 Test: /definitions[1]/process[3]/exclusiveGateway[1] = 13
   Reference: /definitions[1]/process[3]/exclusiveGateway[2] = 6
 Test: /definitions[1]/process[3]/exclusiveGateway[2] = 14
+  Reference: /definitions[1]/process[3]/startEvent[1]/@name = Start Event
+Message
+Test: /definitions[1]/process[3]/startEvent[1]/@name = Start Event  Message
   Reference: /definitions[1]/process[3]/startEvent[1] = 2
 Test: /definitions[1]/process[3]/startEvent[1] = 3
   Reference: /definitions[1]/process[3]/startEvent[1]/outgoing[1] = 0
@@ -115,6 +121,9 @@ Test: /definitions[1]/process[3]/endEvent[2]/terminateEventDefinition[1] = termi
 Test: /definitions[1]/process[3]/endEvent[2] = 12
   Reference: /definitions[1]/process[3]/dataObjectReference[1] = 17
 Test: /definitions[1]/process[3]/dataObjectReference[1] = 3
+  Reference: /definitions[1]/process[3]/dataStoreReference[1]/@name = Data
+Store Reference
+Test: /definitions[1]/process[3]/dataStoreReference[1]/@name = Data  Store Reference
   Reference: /definitions[1]/process[3]/dataStoreReference[1] = 18
 Test: /definitions[1]/process[3]/dataStoreReference[1] = 4
   Reference: /definitions[1]/process[3]/sequenceFlow[1] = name
@@ -157,6 +166,9 @@ Test: /definitions[1]/process[4]/sequenceFlow[1] = null
 Test: /definitions[1]/process[4]/sequenceFlow[2] = null
   Reference: /definitions[1]/category[1] = semantic:category
 Test: null = null
+  Reference: /definitions[1]/collaboration[1]/messageFlow[2]/@name = Message
+Flow 2
+Test: /definitions[1]/collaboration[1]/messageFlow[2]/@name = Message  Flow 2
   Reference: /definitions[1]/collaboration[1]/group[1] = categoryValueRef
 Test: /definitions[1]/collaboration[1]/group[1] = null
   Reference: /definitions[1]/collaboration[1] = 8

@@ -31,6 +31,9 @@ Test: /definitions[1]/process[2]/task[1] = null
 Test: /definitions[1]/process[2]/userTask[1] = null
   Reference: /definitions[1]/process[2]/userTask[1] = isForCompensation
 Test: /definitions[1]/process[2]/userTask[1] = null
+  Reference: /definitions[1]/process[2]/userTask[1]/@name = User
+Task 2
+Test: /definitions[1]/process[2]/userTask[1]/@name = User  Task 2
   Reference: /definitions[1]/process[2]/userTask[1] = startQuantity
 Test: /definitions[1]/process[2]/userTask[1] = null
   Reference: /definitions[1]/process[2]/serviceTask[1] = completionQuantity
@@ -65,6 +68,9 @@ Test: /definitions[1]/process[3]/callActivity[1] = null
 Test: /definitions[1]/process[3]/exclusiveGateway[1]/@gatewayDirection = Converging
   Reference: /definitions[1]/process[3]/exclusiveGateway[2]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[3]/exclusiveGateway[2]/@gatewayDirection = Diverging
+  Reference: /definitions[1]/process[3]/startEvent[1]/@name = Start Event
+Message
+Test: /definitions[1]/process[3]/startEvent[1]/@name = Start Event  Message
   Reference: /definitions[1]/process[3]/parallelGateway[1]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[3]/parallelGateway[1]/@gatewayDirection = Diverging
   Reference: /definitions[1]/process[3]/subProcess[1] = completionQuantity
@@ -109,6 +115,9 @@ Test: /definitions[1]/process[3]/serviceTask[1] = null
 Test: /definitions[1]/process[3]/serviceTask[1] = null
   Reference: /definitions[1]/process[3]/serviceTask[1] = startQuantity
 Test: /definitions[1]/process[3]/serviceTask[1] = null
+  Reference: /definitions[1]/process[3]/dataStoreReference[1]/@name = Data
+Store Reference
+Test: /definitions[1]/process[3]/dataStoreReference[1]/@name = Data  Store Reference
   Reference: /definitions[1]/process[3]/sequenceFlow[1] = name
 Test: /definitions[1]/process[3]/sequenceFlow[1] = null
   Reference: /definitions[1]/process[3]/sequenceFlow[2] = name
@@ -161,6 +170,9 @@ Test: /definitions[1]/process[4]/sequenceFlow[1] = null
 Test: /definitions[1]/process[4]/sequenceFlow[2] = null
   Reference: /definitions[1]/collaboration[1] = 5
 Test: /definitions[1]/collaboration[1] = 4
+  Reference: /definitions[1]/collaboration[1]/messageFlow[2]/@name = Message
+Flow 2
+Test: /definitions[1]/collaboration[1]/messageFlow[2]/@name = Message  Flow 2
   Reference: /definitions[1]/collaboration[1]/group[1] = semantic:group
 Test: null = null
   Reference: /definitions[1]/BPMNDiagram[1] = documentation

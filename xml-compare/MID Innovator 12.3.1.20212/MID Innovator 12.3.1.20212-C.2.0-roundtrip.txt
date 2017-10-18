@@ -603,6 +603,9 @@ Test: /definitions[1]/process[4]/task[1] = 9
 Test: null = null
   Reference: /definitions[1]/process[4]/task[3] = completionQuantity
 Test: /definitions[1]/process[4]/task[2] = null
+  Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
+items
+Test: /definitions[1]/process[4]/task[2]/@name = Receive and Package  items
   Reference: /definitions[1]/process[4]/task[3] = 2
 Test: /definitions[1]/process[4]/task[2] = 3
   Reference: /definitions[1]/process[4]/task[3]/incoming[1]/text()[1] = __04700d0b-5231-46f6-ae74-698ba3864a60

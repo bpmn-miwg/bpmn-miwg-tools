@@ -19,6 +19,9 @@ Test: /definitions[1]/process[1]/task[3] = null
 Test: /definitions[1]/process[1]/task[3] = null
   Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[1]/exclusiveGateway[1]/@gatewayDirection = Diverging
+  Reference: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway
+(Split Flow)
+Test: /definitions[1]/process[1]/exclusiveGateway[1]/@name = Gateway  (Split Flow)
   Reference: /definitions[1]/process[1]/task[4] = completionQuantity
 Test: /definitions[1]/process[1]/task[4] = null
   Reference: /definitions[1]/process[1]/task[4] = isForCompensation
@@ -27,6 +30,9 @@ Test: /definitions[1]/process[1]/task[4] = null
 Test: /definitions[1]/process[1]/task[4] = null
   Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@gatewayDirection = Unspecified
 Test: /definitions[1]/process[1]/exclusiveGateway[2]/@gatewayDirection = Converging
+  Reference: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway
+(Merge Flows)
+Test: /definitions[1]/process[1]/exclusiveGateway[2]/@name = Gateway  (Merge Flows)
   Reference: /definitions[1]/BPMNDiagram[1] = documentation
 Test: /definitions[1]/BPMNDiagram[1] = null
   Reference: /definitions[1]/BPMNDiagram[1] = resolution

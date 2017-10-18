@@ -285,6 +285,9 @@ Test: /definitions[1]/process[4]/sequenceFlow[3] = 9
 Test: /definitions[1]/process[4]/task[3] = null
   Reference: /definitions[1]/process[4]/task[3] = isForCompensation
 Test: /definitions[1]/process[4]/task[3] = null
+  Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
+items
+Test: /definitions[1]/process[4]/task[3]/@name = Receive and Package  items
   Reference: /definitions[1]/process[4]/task[3] = startQuantity
 Test: /definitions[1]/process[4]/task[3] = null
   Reference: /definitions[1]/process[4]/task[3] = 7

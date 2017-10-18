@@ -5,6 +5,9 @@ Test: /definitions[1]/process[1] = name
 Test: /definitions[1]/process[1]/startEvent[1] = 9
   Reference: /definitions[1]/process[1]/task[1] = 1
 Test: /definitions[1]/process[1]/task[1] = 14
+  Reference: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed
+Sub-Process
+Test: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed  Sub-Process
   Reference: /definitions[1]/process[1]/subProcess[1] = 2
 Test: /definitions[1]/process[1]/subProcess[1] = 11
   Reference: /definitions[1]/process[1]/boundaryEvent[1] = parallelMultiple

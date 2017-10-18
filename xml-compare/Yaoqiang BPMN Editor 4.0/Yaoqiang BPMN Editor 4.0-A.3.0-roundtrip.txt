@@ -11,6 +11,9 @@ Test: /definitions[1]/process[1]/startEvent[1] = parallelMultiple
 Test: /definitions[1]/process[1]/startEvent[1] = 1
   Reference: /definitions[1]/process[1]/task[1] = 1
 Test: /definitions[1]/process[1]/task[1] = 2
+  Reference: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed
+Sub-Process
+Test: /definitions[1]/process[1]/subProcess[1]/@name = Collapsed  Sub-Process
   Reference: /definitions[1]/process[1]/subProcess[1] = 2
 Test: /definitions[1]/process[1]/subProcess[1] = 3
   Reference: /definitions[1]/process[1]/boundaryEvent[1]/messageEventDefinition[1] = semantic:messageEventDefinition

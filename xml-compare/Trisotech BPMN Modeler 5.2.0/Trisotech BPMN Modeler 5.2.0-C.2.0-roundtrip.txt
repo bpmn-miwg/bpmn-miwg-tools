@@ -15,6 +15,9 @@ Test: /definitions[1]/process[2] = name
 Test: /definitions[1]/process[3] = name
   Reference: /definitions[1]/process[4] = null
 Test: /definitions[1]/process[4] = name
+  Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
+items
+Test: /definitions[1]/process[4]/task[3]/@name = Receive and Package  items
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1] = 65
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1] = 66
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1] = bpmndi:BPMNShape

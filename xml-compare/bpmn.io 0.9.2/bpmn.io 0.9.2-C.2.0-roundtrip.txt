@@ -79,6 +79,9 @@ Test: /definitions[1]/process[4]/task[2] = null
 Test: /definitions[1]/process[4]/task[3] = null
   Reference: /definitions[1]/process[4]/task[3] = isForCompensation
 Test: /definitions[1]/process[4]/task[3] = null
+  Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
+items
+Test: /definitions[1]/process[4]/task[3]/@name = Receive and Package  items
   Reference: /definitions[1]/process[4]/task[3] = startQuantity
 Test: /definitions[1]/process[4]/task[3] = null
   Reference: /definitions[1]/process[4]/task[4] = completionQuantity
@@ -87,3 +90,5 @@ Test: /definitions[1]/process[4]/task[4] = null
 Test: /definitions[1]/process[4]/task[4] = null
   Reference: /definitions[1]/process[4]/task[4] = startQuantity
 Test: /definitions[1]/process[4]/task[4] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8

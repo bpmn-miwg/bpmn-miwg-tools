@@ -151,5 +151,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@x = 6
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/waypoint[3]/@y = 351
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]/BPMNLabel[1] = bpmndi:BPMNLabel
 Test: null = null
-  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8

@@ -69,3 +69,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = isUnderline
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
+Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0
