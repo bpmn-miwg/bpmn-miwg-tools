@@ -114,7 +114,7 @@ function loadJSON() {
           if (selectedTool == toolAndVersion) {
             selected = ' selected="selected"';
           }
-          $("<option" + selected + ">" + toolAndVersion + "</option>").appendTo(selector);
+          $("<option" + selected + ">" + toolAndVersion + "</option>").appendTo(selector).data('configuration', tool);
         });
 
         $("#message").text("Reference processed");
@@ -133,8 +133,9 @@ function loadJSON() {
 function toolSelected() {
 
   $("#message").text("Processing results...");
-
-  var selectedTool = $("#selector").val();
+  var selectedOptions = $("#selector option:selected");
+  var selectedTool = selectedOptions.val();
+  var options = selectedOptions.data('configuration');
 //   var selectedToolJSON = findInList(jsonData.results, "tool", selectedTool);
   var url_pattern = jsonData.config.url_pattern;
 
@@ -162,8 +163,24 @@ function toolSelected() {
       //}
 
       var nav = $("<ul class='nav nav-pills'/>").appendTo(div);
+	  var zoom = "";
+	  if(options.boundsZoom) {
+		if(typeof(options.boundsZoom) === 'number') {
+			zoom = "zoom=" +  options.boundsZoom + "&";
+		} else {
+			if (options.boundsZoom[type]) {
+				if(typeof(options.boundsZoom[type]) === 'number') {
+					zoom = "zoom=" +  options.boundsZoom[type] + "&";
+				} else {
+					if(typeof(options.boundsZoom[type][referenceVariation]) === 'number'){
+						zoom = "zoom=" +  options.boundsZoom[type][referenceVariation] + "&";
+					}
+				}
+			}
+		}
+	  }
 
-      $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(referenceVariation) + "&title=" + type + "%20" + referenceVariation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
+      $("<li><a href='visual-test-result-comparison-bounds.html?" + zoom + "base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(referenceVariation) + "&title=" + type + "%20" + referenceVariation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
       $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
       $("<li><a href='" + folder_url + "' target='_blank'>Results folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
 
