@@ -186,7 +186,7 @@
 
               function renderTestResultsSubmittedInCategory(data, type, full, referenceCount) {
                 var complete = false;
-                if (data == referenceCount) {
+                if (data >= referenceCount) {
                   complete = true;
                 } else if (data != 0) {
                   complete = "partial";
