@@ -71,7 +71,7 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		navigateBookmarkedElement(gateway3);
 		Node task3 = navigateFollowingElement("bpmn:userTask",
 				"Perform repair (standard level)", "Standard");
-		navigateBoundaryEvent("");
+		navigateBoundaryEvent(null);
 		checkMessageEvent(true, "Service Level");
 
 		navigateFollowingElement("bpmn:userTask",
