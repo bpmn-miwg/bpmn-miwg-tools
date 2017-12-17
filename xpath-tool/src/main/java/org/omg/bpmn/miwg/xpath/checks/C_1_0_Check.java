@@ -107,7 +107,7 @@ public class C_1_0_Check extends AbstractXpathCheck {
 
 				{
 					navigateFollowingElement("bpmn:userTask",
-							"Rechnung klären", "no");
+							"Rechnung kl\u00e4ren", "no");
 					// checkMessageFlow("", Direction.Output,
 					// "bpmn:intermediateCatchEvent", "Invoice review needed");
 					// checkMessageFlow("", Direction.Input, "bpmn:task",

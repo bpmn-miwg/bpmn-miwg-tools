@@ -14,3 +14,4 @@ XPathTestRunner/.classpath
 XPathTestRunner/.project
 XPathTestRunner/.*
 *.log
+_install.cmd

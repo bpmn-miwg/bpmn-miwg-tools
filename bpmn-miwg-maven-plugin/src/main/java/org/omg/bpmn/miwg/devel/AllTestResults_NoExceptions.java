@@ -37,9 +37,9 @@ import org.junit.runners.Parameterized.Parameters;
 import org.omg.bpmn.miwg.api.AnalysisJob;
 import org.omg.bpmn.miwg.api.AnalysisRun;
 import org.omg.bpmn.miwg.api.ReferenceNotFoundException;
-import org.omg.bpmn.miwg.mvn.AnalysisFacade;
-import org.omg.bpmn.miwg.scan.BpmnFileScanner;
-import org.omg.bpmn.miwg.scan.StandardScanParameters;
+import org.omg.bpmn.miwg.facade.AnalysisFacade;
+import org.omg.bpmn.miwg.facade.scan.BpmnFileScanner;
+import org.omg.bpmn.miwg.facade.scan.StandardScanParameters;
 import org.omg.bpmn.miwg.schema.SchemaAnalysisTool;
 import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
