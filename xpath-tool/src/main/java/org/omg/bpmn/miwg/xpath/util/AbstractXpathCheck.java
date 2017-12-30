@@ -499,6 +499,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 	public void selectCollaboration() throws Throwable {
 		selectElementX("bpmn:collaboration");
 	}
+	
+	public void selectCollaborationByName(String name) throws Throwable {
+		String xpath = String.format("bpmn:collaboration[@name='%s']", name);
+		selectElementX(xpath);
+	}
 
 	public void selectPool(String name) throws Throwable {
 		String xpath = String.format("bpmn:participant[@name='%s']", name);
@@ -1215,6 +1220,24 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 		}
 	}
 
+	public void checkStandardLoopCharacteristics() throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String xpath = "bpmn:standardLoopCharacteristics";
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			finding(xpath, "Cannot standard loop characteristics");
+			return;
+		} else {
+			ok("Standard loop characteristics");
+			return;
+		}
+	}	
+	
 	protected Node findCorrespondingReferenceElement(Node testNode) throws XPathExpressionException {
 		if (getReferenceDocument() == null) {
 			findingTop(null, "The reference has not been specified");

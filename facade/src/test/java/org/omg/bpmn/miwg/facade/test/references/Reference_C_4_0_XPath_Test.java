@@ -23,40 +23,38 @@
  * 
  */
 
-package org.omg.bpmn.miwg.xpath.checks;
+package org.omg.bpmn.miwg.facade.test.references;
 
-import java.util.LinkedList;
-import java.util.List;
+import static org.junit.Assert.assertEquals;
 
-import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
+import org.junit.Test;
+import org.omg.bpmn.miwg.api.AnalysisJob;
+import org.omg.bpmn.miwg.api.AnalysisOutput;
+import org.omg.bpmn.miwg.api.Variant;
+import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
+import org.omg.bpmn.miwg.facade.AnalysisFacade;
+import org.omg.bpmn.miwg.xpath.XpathAnalysisTool;
 
-public class Registry {
-	
-	private static List<AbstractXpathCheck> registeredChecks = null;
-	
-	private static void createRegistry() {
-		registeredChecks = new LinkedList<AbstractXpathCheck>();
-		registeredChecks.add(new A_1_0_Check());
-		registeredChecks.add(new A_1_1_Check());
-		registeredChecks.add(new A_1_2_Check());
-		registeredChecks.add(new A_2_0_Check());
-		registeredChecks.add(new A_3_0_Check());
-		registeredChecks.add(new A_4_0_Check());
-		registeredChecks.add(new A_4_1_Check());
-		registeredChecks.add(new B_1_0_Check());
-		registeredChecks.add(new B_2_0_Check());
-		registeredChecks.add(new C_1_0_Check());
-		registeredChecks.add(new C_1_1_Check());
-		registeredChecks.add(new C_2_0_Check());
-		registeredChecks.add(new C_3_0_Check());
-		registeredChecks.add(new C_4_0_Check());
-		registeredChecks.add(new DemoTechnicalSupportCheck());
+/**
+ * This test case applies all tools to the reference files.
+ * 
+ * @author matthias
+ *
+ */
+
+public class Reference_C_4_0_XPath_Test {
+
+	@Test
+	public void testReference_XPath() throws Exception {
+		AnalysisJob job = new AnalysisJob("Reference", "C.4.0",
+				Variant.Reference, new ResourceAnalysisInput(getClass(),
+						"/Reference/C.4.0.bpmn"));
+		job.setXpathOnly();
+
+		AnalysisOutput result = AnalysisFacade.executeAnalysisJob(job)
+				.getResult(XpathAnalysisTool.class);
+
+		assertEquals(0, result.numFindings());
 	}
 
-	public static List<AbstractXpathCheck> getChecks() {
-		if (registeredChecks == null)
-			createRegistry();
-		return registeredChecks;
-	}
-	
 }
