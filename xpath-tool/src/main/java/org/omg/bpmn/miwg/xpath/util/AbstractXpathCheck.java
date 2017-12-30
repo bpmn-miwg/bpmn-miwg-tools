@@ -377,6 +377,64 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 		return navigateElementX("/bpmn:definitions");
 	}
 
+	public Node navigateItemDefinition(String id) throws Throwable {
+		String xpath = String.format("/bpmn:definitions/bpmn:itemDefinition[@id='%s']", id);
+		return navigateElementX(xpath);
+	}
+
+	public enum ItemKind {
+		Information
+	};
+
+	public void checkItemDefinition(ItemKind itemKind, String structureRef, boolean isCollection) throws Throwable {
+		checkAttributeValue(currentNode, "itemKind", itemKind.toString());
+		checkAttributeValue(currentNode, "structureRef", structureRef);
+		checkAttributeValue(currentNode, "isCollection", Boolean.toString(isCollection));
+	}
+
+	public Node navigateDataStore(String name) throws Throwable {
+		String xpath = String.format("/bpmn:definitions/bpmn:dataStore[@name='%s']", name);
+		return navigateElementX(xpath);
+	}
+
+	public void checkDataStore(boolean isUnlimited, boolean hasSubjectRef) throws Throwable {
+		checkAttributeValue(currentNode, "isUnlimited", Boolean.toString(isUnlimited));
+		String subjectRef = getAttribute(currentNode, "itemSubjectRef", false);
+		if (hasSubjectRef) {
+			String xpath = String.format("/bpmn:definitions/bpmn:itemDefinition[@id='%s']", subjectRef);
+			Node n = this.findNode(xpath);
+			if (n != null) {
+				ok("Referenced item definition exists");
+			} else {
+				finding(xpath, "Referenced item definition does not exist");
+			}
+		} else {
+			if (subjectRef == null) {
+				ok("Has no subject reference");
+			} else {
+				finding("itemSubjectRef", "Has subject reference although it should not have");
+			}
+		}
+	}
+
+	public Node navigateSignal(String name) throws Throwable {
+		String xpath = String.format("/bpmn:definitions/bpmn:signal[@name='%s']", name);
+		return navigateElementX(xpath);
+	}
+
+	public void checkSignal(String structureRef) throws Throwable {
+		checkAttributeValue(currentNode, "structureRef", structureRef);
+	}
+
+	public Node navigateMessage(String name) throws Throwable {
+		String xpath = String.format("/bpmn:definitions/bpmn:message[@name='%s']", name);
+		return navigateElementX(xpath);
+	}
+
+	public void checkMessage(String itemRef) throws Throwable {
+		checkAttributeValue(currentNode, "itemRef", itemRef);
+	}
+
 	protected Node navigateSequenceFlow(Node node, String type, String name) throws Throwable {
 		String nameCondition;
 		if (name == null) {
@@ -446,10 +504,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 				ok(xpathTarget);
 
 				/**
-				 * We have found the correct sequence flow and the target
-				 * element. Now we check whether there is a corresponding
-				 * incoming and outgoing element (this is necessary as agreed in
-				 * issue #100).
+				 * We have found the correct sequence flow and the target element. Now we check
+				 * whether there is a corresponding incoming and outgoing element (this is
+				 * necessary as agreed in issue #100).
 				 */
 
 				String xpathOutgoing = String.format("bpmn:outgoing[text()='%s']", sequenceFlowID);
@@ -499,7 +556,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 	public void selectCollaboration() throws Throwable {
 		selectElementX("bpmn:collaboration");
 	}
-	
+
 	public void selectCollaborationByName(String name) throws Throwable {
 		String xpath = String.format("bpmn:collaboration[@name='%s']", name);
 		selectElementX(xpath);
@@ -891,10 +948,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 						attribute, value, defaultValue));
 				return;
 			} else {
-				finding("",
-						String.format(
-								"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
-								attribute, value, defaultValue));
+				finding("", String.format(
+						"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
+						attribute, value, defaultValue));
 				return;
 			}
 		}
@@ -1073,15 +1129,58 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 		}
 	}
 
+	protected void genericCheckEvent(String xmlEventDefinitionName, String xmlTargetElementName,
+			String humanTargetElementName, String referenceAttribute, String expectedName) throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String xpath = xmlEventDefinitionName;
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			finding(xpath, String.format("Cannot find %s event definition", humanTargetElementName));
+			return;
+		} else {
+			ok(String.format("%s event definition", humanTargetElementName));
+
+			String targetRef = getAttribute(n, referenceAttribute, false);
+			if (targetRef == null) {
+				finding(referenceAttribute,
+						String.format("No %s reference provided, although expected.", humanTargetElementName));
+			} else {
+				xpath = String.format("/bpmn:definitions/%s[@id='%s']", xmlTargetElementName, targetRef);
+				n = findNode(xpath);
+				if (n == null) {
+					finding(xpath, String.format("Referenced %s was not found.", humanTargetElementName));
+				} else {
+					String actualTargetName = getAttribute(n, "name", false);
+					if (actualTargetName == null) {
+						finding("name", String.format("The referenced %s has no name.", humanTargetElementName));
+					} else {
+						if (actualTargetName.equals(expectedName)) {
+							ok(String.format("Correct %s reference.", humanTargetElementName));
+						} else {
+							finding("name", String.format("The referenced %s has the name '%s', but should have '%s'.",
+									humanTargetElementName, actualTargetName, expectedName));
+						}
+					}
+				}
+			}
+			return;
+		}
+	}
+
+	public void checkSignalEvent(String signalName) throws Throwable {
+		genericCheckEvent("bpmn:signalEventDefinition", "bpmn:signal", "signal", "signalRef", signalName);
+	}
+
 	public void checkMessageEvent() throws Throwable {
-		checkMessageEvent(false, null);
+		checkMessageEvent(null);
 	}
 
-	public void checkMessageEvent(boolean followMessageRef) throws Throwable {
-		checkMessageEvent(followMessageRef, null);
-	}
-
-	public void checkMessageEvent(boolean followMessageRef, String expectedMessageName) throws Throwable {
+	public void checkMessageEvent(String expectedMessageName) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
@@ -1094,7 +1193,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 			return;
 		}
 
-		if (followMessageRef) {
+		if (expectedMessageName != null) {
 			String messageID = getAttribute(messageEventDefinitionNode, "messageRef", false);
 			if (messageID == null) {
 				finding(null, "The messageEventDefinition element has no messageRef attribute");
@@ -1163,18 +1262,16 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 
 				if (value == null) {
 					if (hasMarker) {
-						finding(null,
-								String.format(
-										"There is no isMarkerVisible attribute in the BPMNShape element for the BPMN element with the id '%s' although %s is expected.",
-										id, Boolean.toString(true)));
+						finding(null, String.format(
+								"There is no isMarkerVisible attribute in the BPMNShape element for the BPMN element with the id '%s' although %s is expected.",
+								id, Boolean.toString(true)));
 						return;
 					}
 				} else {
 					if (!value.equals(Boolean.toString(hasMarker))) {
-						finding(null,
-								String.format(
-										"The XOR marker for the BPMN element with the id '%s' is %s although %s is expected.",
-										id, value, Boolean.toString(hasMarker)));
+						finding(null, String.format(
+								"The XOR marker for the BPMN element with the id '%s' is %s although %s is expected.",
+								id, value, Boolean.toString(hasMarker)));
 						return;
 					}
 				}
@@ -1236,8 +1333,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 			ok("Standard loop characteristics");
 			return;
 		}
-	}	
-	
+	}
+
 	protected Node findCorrespondingReferenceElement(Node testNode) throws XPathExpressionException {
 		if (getReferenceDocument() == null) {
 			findingTop(null, "The reference has not been specified");
@@ -1257,8 +1354,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 	}
 
 	/**
-	 * This method checks whether all extension elements from the reference
-	 * exist in the test file as well.
+	 * This method checks whether all extension elements from the reference exist in
+	 * the test file as well.
 	 * 
 	 * @throws Throwable
 	 */
@@ -1279,15 +1376,15 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 		Node refEE = (Node) getXpathTest().evaluate(xpath, refNode, XPathConstants.NODE);
 		if (refEE == null) {
 			/*
-			 * The corresponding reference element contains no extension
-			 * element. This is OK.
+			 * The corresponding reference element contains no extension element. This is
+			 * OK.
 			 */
 			return;
 		}
 		if (!refEE.hasChildNodes()) {
 			/*
-			 * The correspondign reference element contains an extension element
-			 * with no children. This is OK.
+			 * The correspondign reference element contains an extension element with no
+			 * children. This is OK.
 			 */
 			return;
 		}
@@ -1602,10 +1699,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 						attribute, sequential, defaultValue));
 				return;
 			} else {
-				finding("",
-						String.format(
-								"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
-								attribute, sequential, defaultValue));
+				finding("", String.format(
+						"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
+						attribute, sequential, defaultValue));
 				return;
 			}
 		} else {
@@ -1714,7 +1810,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 		xpathTest = xpathfactory.newXPath();
 		xpathTest.setNamespaceContext(new NameSpaceContexts());
 		nodeStack = new Stack<Node>();
+		currentNode = doc.getDocumentElement();
 		currentNodeStack = new Stack<Node>();
+		currentNodeStack.push(currentNode);
 		push(doc.getDocumentElement());
 		normalizeNames(doc);
 		if (this.referenceDocument != null)

@@ -21,7 +21,7 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		checkAttributeValue("isExecutable", "true");
 
 		navigateElement("bpmn:startEvent", "Receive customer request");
-		checkMessageEvent(true, "Service Level");
+		checkMessageEvent("Service Level");
 
 		Node taskAnalyseCustomerRequest = navigateFollowingElement(
 				"bpmn:userTask", "Analyse customer request");
@@ -72,7 +72,7 @@ public class C_3_0_Check extends AbstractXpathCheck {
 		Node task3 = navigateFollowingElement("bpmn:userTask",
 				"Perform repair (standard level)", "Standard");
 		navigateBoundaryEvent(null);
-		checkMessageEvent(true, "Service Level");
+		checkMessageEvent("Service Level");
 
 		navigateFollowingElement("bpmn:userTask",
 				"Perform repair (premium level)");

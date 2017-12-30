@@ -1,7 +1,5 @@
 package org.omg.bpmn.miwg.xpath.checks;
 
-import org.omg.bpmn.miwg.xpath.pluggableAssertions.Assertion;
-import org.omg.bpmn.miwg.xpath.pluggableAssertions.SequenceFlowCondition;
 import org.omg.bpmn.miwg.xpath.util.AbstractXpathCheck;
 import org.omg.bpmn.miwg.xpath.util.ArtifactType;
 import org.omg.bpmn.miwg.xpath.util.Direction;
@@ -16,6 +14,51 @@ public class C_4_0_Check extends AbstractXpathCheck {
 
 	@Override
 	public void doExecute() throws Throwable {
+
+		{
+			this.navigateDefinitions();
+			checkAttributeValue("name", "EmployeeOnboarding");
+			// According to Falko's document, this is the expected value. However, it is not
+			// retained.
+			// checkAttributeValue("id", "definition_");
+			// checkAttributeValue("targetNamespace", "http://www.boc-group.com");
+			checkAttributeValue("expressionLanguage", "http://www.w3.org/1999/XPath");
+			checkAttributeValue("typeLanguage", "http://www.w3.org/2001/XMLSchema");
+			// unclear: What is "Version" referring to?
+
+			navigateItemDefinition("itemDefEmployeeDetails");
+			checkItemDefinition(ItemKind.Information, "semantic:string", false);
+
+			navigateItemDefinition("itemDefUserManagement");
+			checkItemDefinition(ItemKind.Information, "semantic:string", false);
+
+			navigateItemDefinition("itemDefPayrollSystem");
+			checkItemDefinition(ItemKind.Information, "semantic:string", false);
+
+			navigateItemDefinition("itemDefAck");
+			checkItemDefinition(ItemKind.Information, "semantic:boolean", false);
+
+			navigateDataStore("User Management");
+			checkDataStore(true, true);
+
+			navigateDataStore("Payroll system");
+			checkDataStore(true, true);
+
+			navigateDataStore("Employee Details");
+			checkDataStore(true, true);
+			
+			navigateSignal("Employee_hired_Dept_X");
+			checkSignal("itemDefEmployeeDetails");
+			
+			navigateMessage("msgFacilites");
+			checkMessage("itemDefAck");
+			
+			navigateMessage("msgIT");
+			checkMessage("itemDefAck");
+
+			navigateMessage("msgPayroll");
+			checkMessage("itemDefAck");
+		}
 
 		{
 			selectCollaborationByName("Onboarding employee");
@@ -62,6 +105,7 @@ public class C_4_0_Check extends AbstractXpathCheck {
 			// https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/779
 			// checkDataAssociation(ArtifactType.DataStoreReference, "Employee Details",
 			// Direction.Input);
+			checkSignalEvent("Employee_hired_Dept_X");
 
 			navigateFollowingElement("bpmn:parallelGateway", "Non-exclusive Gateway");
 
@@ -72,14 +116,17 @@ public class C_4_0_Check extends AbstractXpathCheck {
 			gateway = navigateFollowingElement("bpmn:parallelGateway", "Non-exclusive Gateway");
 
 			navigateFollowingElement("bpmn:intermediateCatchEvent", "Input from IT ready");
+			checkMessageEvent("msgIT");
 			navigateFollowingElement("bpmn:parallelGateway", "Non-exclusive Gateway");
 
 			navigateBookmarkedElement(gateway);
 			navigateFollowingElement("bpmn:intermediateCatchEvent", "Input from Payroll ready");
+			checkMessageEvent("msgPayroll");
 			navigateFollowingElement("bpmn:parallelGateway", "Non-exclusive Gateway");
 
 			navigateBookmarkedElement(gateway);
 			navigateFollowingElement("bpmn:intermediateCatchEvent", "Input from Facilities ready");
+			checkMessageEvent("msgFacilites");
 			navigateFollowingElement("bpmn:parallelGateway", "Non-exclusive Gateway");
 
 			navigateFollowingElement("bpmn:userTask", "Compile welcome package");
@@ -97,7 +144,7 @@ public class C_4_0_Check extends AbstractXpathCheck {
 			selectProcessByParticipant("IT");
 
 			navigateElement("bpmn:startEvent", "New employee hired");
-			checkSignalEvent();
+			checkSignalEvent("Employee_hired_Dept_X");
 			// POTENTIAL BUG IN THE REFERENCE: cf. issue #779,
 			// https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/779
 			// checkDataAssociation(ArtifactType.DataStoreReference, "Employee Details",
@@ -119,7 +166,7 @@ public class C_4_0_Check extends AbstractXpathCheck {
 			navigateFollowingElement("bpmn:userTask", "Prepare IT part of welcome package");
 
 			navigateFollowingElement("bpmn:endEvent", "Workstation and permissions ready");
-			checkMessageEvent();
+			checkMessageEvent("msgIT");
 
 			pop();
 			pop();
@@ -130,30 +177,30 @@ public class C_4_0_Check extends AbstractXpathCheck {
 			selectProcessByParticipant("Payroll");
 
 			navigateElement("bpmn:startEvent", "New employee hired");
-			checkSignalEvent();
+			checkSignalEvent("Employee_hired_Dept_X");
 			// POTENTIAL BUG IN THE REFERENCE: cf. issue #779,
 			// https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/779
 			// checkDataAssociation(ArtifactType.DataStoreReference, "Employee Details",
 			// Direction.Output);
-			
+
 			navigateFollowingElement("bpmn:userTask", "Validate provided information");
 			checkDataAssociation(ArtifactType.DataStoreReference, "Employee Details", Direction.Input);
-			
+
 			Node gateway = navigateFollowingElement("bpmn:exclusiveGateway", "All necessary data available?");
-			
+
 			navigateFollowingElement("bpmn:manualTask", "Clarify missing points", "No");
 			checkStandardLoopCharacteristics();
-			
+
 			navigateFollowingElement("bpmn:userTask", "Update payroll system");
-			
+
 			navigateBookmarkedElement(gateway);
-			
+
 			navigateFollowingElement("bpmn:userTask", "Update payroll system");
 			checkDataAssociation(ArtifactType.DataStoreReference, "Payroll system", Direction.Output);
-			
+
 			navigateFollowingElement("bpmn:endEvent", "Payroll ready");
-			checkMessageEvent();
-			
+			checkMessageEvent("msgPayroll");
+
 			pop();
 			pop();
 		}
@@ -163,20 +210,20 @@ public class C_4_0_Check extends AbstractXpathCheck {
 			selectProcessByParticipant("Facilities");
 
 			navigateElement("bpmn:startEvent", "New employee hired");
-			checkSignalEvent();
+			checkSignalEvent("Employee_hired_Dept_X");
 			// POTENTIAL BUG IN THE REFERENCE: cf. issue #779,
 			// https://github.com/bpmn-miwg/bpmn-miwg-test-suite/issues/779
 			// checkDataAssociation(ArtifactType.DataStoreReference, "Employee Details",
 			// Direction.Output);
-			
+
 			navigateFollowingElement("bpmn:manualTask", "Prepare access card");
-			
+
 			navigateFollowingElement("bpmn:userTask", "Configure access details");
 			checkDataAssociation(ArtifactType.DataStoreReference, "Employee Details", Direction.Input);
-			
+
 			navigateFollowingElement("bpmn:endEvent", "Access card ready");
-			checkMessageEvent();
-			
+			checkMessageEvent("msgFacilites");
+
 			pop();
 			pop();
 		}
