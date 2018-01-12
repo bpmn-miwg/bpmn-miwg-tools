@@ -1,8 +1,11 @@
 # BPMN MIWG Tools
 
-This is a set of Tools for validating and comparing the [test results](https://github.com/bpmn-miwg/bpmn-miwg-test-suite) collected by the BPMN Model Interchange Workging Group (BPMN MIWG) at the OMG.
+This is a set of tools for validating and comparing the [test results](https://github.com/bpmn-miwg/bpmn-miwg-test-suite) collected by the BPMN Model Interchange Workging Group (BPMN MIWG) at the OMG.
 
-[Test Reports](http://bpmn-miwg.github.io/bpmn-miwg-tools):
+
+# Test Reports
+
+One of the outputs of the BPMN MIWG tools is a set of [Test Reports](http://bpmn-miwg.github.io/bpmn-miwg-tools):
 
 [<img height="400" src="http://bpmn-miwg.github.io/bpmn-miwg-tools/bpmn-tools-tested-for-model-interchange-screenshot.png">](http://bpmn-miwg.github.io/bpmn-miwg-tools/)
 
