@@ -1076,7 +1076,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements DOMChe
 						return;
 					}
 
-					if (getAttribute(artifactNode, "name").equals(artifactName)) {
+					if (artifactName.equals(getAttribute(artifactNode, "name",false))) {
 						ok(String.format("Association reference %s '%s' found", artifactTypeToString(artifactType),
 								artifactName));
 						pop();

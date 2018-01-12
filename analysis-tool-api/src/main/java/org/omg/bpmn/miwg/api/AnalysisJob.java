@@ -99,6 +99,10 @@ public class AnalysisJob {
 			return fullApplicationName + "-" + miwgTestCase + "-"
 					+ variant.toString().toLowerCase();
 	}
+	
+	public String toString() {
+		return getName();
+	}
 
 	public String getFullApplicationName() {
 		return fullApplicationName;
