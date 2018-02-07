@@ -1,7 +1,7 @@
 ANALYSIS: ARIS Architect 9.8.3-C.3.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: ARISBPMN_442c1e41-e465-11e5-537c-0050568d1e04)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
-    OK     : checkAttributeValue                      Message: Attribute id=_bqFYkLZ3EeawX8E3Bjsrfw
+    OK     : checkAttributeValue                      Message: Attribute id=_8170787a-3207-434d-9bea-4787059f444f
     OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
     FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='PROCESS_442c1e41-e465-11e5-537c-0050568d1e04']
     FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='PROCESS_442c1e41-e465-11e5-537c-0050568d1e04']
