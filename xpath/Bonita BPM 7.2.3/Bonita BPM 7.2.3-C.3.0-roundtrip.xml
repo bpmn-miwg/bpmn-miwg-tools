@@ -1,7 +1,7 @@
 <analysis name="Bonita BPM 7.2.3-C.3.0-roundtrip" toolName="xpath">
    <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="execute">
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="No node found" parameter="bpmn:resource[@name=&apos;User&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute id=_8170787a-3207-434d-9bea-4787059f444f"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute id=_2dafe4a3-3ab0-4cd3-b819-f286612ad2fa"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFirstProcess" message="/bpmn:definitions/bpmn:process"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;_bqFYkLZ3EeawX8E3Bjsrfw&apos;]"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;_bqFYkLZ3EeawX8E3Bjsrfw&apos;]"/>

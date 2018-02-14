@@ -1,0 +1,22 @@
+ANALYSIS: Enterprise Explorer 1.0.0-A.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: _04498172-7ffd-4ab2-9c5a-6ce6088005b7)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_aed89ce1-5ded-4251-b2b4-c829de75295b']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_aed89ce1-5ded-4251-b2b4-c829de75295b']
+    OK     : selectFirstProcess                       Push (id: _aed89ce1-5ded-4251-b2b4-c829de75295b)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1733f085-7677-4aca-8df0-2de0157cb51e']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_1733f085-7677-4aca-8df0-2de0157cb51e']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='_8178c994-d3d2-4b2b-a2c6-5a80196be7a5']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_8178c994-d3d2-4b2b-a2c6-5a80196be7a5']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_8178c994-d3d2-4b2b-a2c6-5a80196be7a5']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='_50173386-a3b8-4372-b615-df0fc634abd1']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_50173386-a3b8-4372-b615-df0fc634abd1']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_50173386-a3b8-4372-b615-df0fc634abd1']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='_cdcb0246-df3c-4ca4-8c04-ddfd55a32aab']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_cdcb0246-df3c-4ca4-8c04-ddfd55a32aab']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_cdcb0246-df3c-4ca4-8c04-ddfd55a32aab']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event' and @id='_45f3ccbd-8a47-4c2f-896d-289d8c393ad2']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_45f3ccbd-8a47-4c2f-896d-289d8c393ad2']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_45f3ccbd-8a47-4c2f-896d-289d8c393ad2']
+      OK     : doExecute                                Pop (id: _aed89ce1-5ded-4251-b2b4-c829de75295b)

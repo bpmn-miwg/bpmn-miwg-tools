@@ -1,7 +1,7 @@
 ANALYSIS: Bonita BPM 7.2.3-C.3.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: )
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
-    OK     : checkAttributeValue                      Message: Attribute id=_8170787a-3207-434d-9bea-4787059f444f
+    OK     : checkAttributeValue                      Message: Attribute id=_2dafe4a3-3ab0-4cd3-b819-f286612ad2fa
     OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
     FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_bqFYkLZ3EeawX8E3Bjsrfw']
     FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_bqFYkLZ3EeawX8E3Bjsrfw']
