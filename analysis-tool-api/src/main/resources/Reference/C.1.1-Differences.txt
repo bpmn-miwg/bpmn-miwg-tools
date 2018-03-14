@@ -1,0 +1,5 @@
+The following differences are introduced to C.1.1-Removed-Extension-Elements.bpmn:
+
+* <userTask id="approveInvoice" ...>: The first <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/> is removed.
+* <serviceTask id="archiveInvoice">: The attribute w4:serviceName="ArchiveInvoiceService" is removed.
+

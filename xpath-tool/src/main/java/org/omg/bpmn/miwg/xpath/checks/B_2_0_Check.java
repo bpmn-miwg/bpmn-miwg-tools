@@ -201,8 +201,6 @@ public class B_2_0_Check extends AbstractXpathCheck {
 
 					navigateElement("bpmn:subProcess",
 							"Collapsed Sub-Process 2");
-					checkDataAssociation(ArtifactType.DataStoreReference,
-							"Data Store Reference", Direction.Input);
 
 					{
 						selectElement("bpmn:exclusiveGateway",

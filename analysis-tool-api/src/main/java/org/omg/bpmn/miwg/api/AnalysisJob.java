@@ -8,9 +8,9 @@ import org.omg.bpmn.miwg.api.input.ResourceAnalysisInput;
 
 public class AnalysisJob {
 
-	private String fullApplicationName; // e.g., “camunda Modeler 2.4.0”,
-										// “Reference”)
-	private String miwgTestCase; // e.g., “A.1.0”
+	private String fullApplicationName; // e.g., "camunda Modeler 2.4.0",
+										// "Reference")
+	private String miwgTestCase; // e.g., "A.1.0"
 	private Variant variant;
 	private AnalysisInput actualInput, referenceInput;
 	private String reportFolder = null;
@@ -69,6 +69,10 @@ public class AnalysisJob {
 	public void disableSchema() {
 		enableSchema = false;
 	}
+	
+	public void disableReportWriting() {
+		reportFolder= null;
+	}
 
 	public void setXpathOnly() {
 		enableXpath = true;
@@ -94,6 +98,10 @@ public class AnalysisJob {
 		else
 			return fullApplicationName + "-" + miwgTestCase + "-"
 					+ variant.toString().toLowerCase();
+	}
+	
+	public String toString() {
+		return getName();
 	}
 
 	public String getFullApplicationName() {

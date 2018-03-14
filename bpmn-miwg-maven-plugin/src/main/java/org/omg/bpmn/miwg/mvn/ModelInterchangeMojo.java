@@ -39,9 +39,9 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.json.simple.JSONObject;
 import org.omg.bpmn.miwg.api.AnalysisJob;
-import org.omg.bpmn.miwg.boundary.BoundaryCreator;
-import org.omg.bpmn.miwg.scan.BpmnFileScanner;
-import org.omg.bpmn.miwg.scan.StandardScanParameters;
+import org.omg.bpmn.miwg.facade.AnalysisFacade;
+import org.omg.bpmn.miwg.facade.scan.BpmnFileScanner;
+import org.omg.bpmn.miwg.facade.scan.StandardScanParameters;
 import org.omg.bpmn.miwg.submission.RepoScanner;
 
 /**
@@ -100,12 +100,7 @@ public class ModelInterchangeMojo extends AbstractMojo {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		try {
-            //Generate the Bounds Stencil using the Bounds Creator
-            BoundaryCreator.generate(new File("Reference"), new File(outputDirectory, "Reference/Bounds"));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
         //Generate the submissions.json
         try (FileWriter out = new FileWriter(new File(outputDirectory, "submissions.json"))) {
             JSONObject submissions = new RepoScanner().getSubmissionsFromRepo("bpmn-miwg/bpmn-miwg-test-suite");

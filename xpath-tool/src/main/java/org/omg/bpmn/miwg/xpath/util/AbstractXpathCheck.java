@@ -24,8 +24,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-public abstract class AbstractXpathCheck extends AbstractCheck implements
-		DOMCheck {
+public abstract class AbstractXpathCheck extends AbstractCheck implements DOMCheck {
 
 	private XPath xpathTest;
 	private Node currentNode;
@@ -33,7 +32,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	private Stack<Node> currentNodeStack;
 	private Document referenceDocument;
 	protected AnalysisOutput out;
-	
+
 	protected Stack<Node> __getNodeStack() {
 		return nodeStack;
 	}
@@ -50,16 +49,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		currentNodeStack = null;
 	}
 
-	private void normalizeNames(Document document)
-			throws XPathExpressionException {
-		Object o = xpathTest.evaluate("//bpmn:*[@name]", document,
-				XPathConstants.NODESET);
+	private void normalizeNames(Document document) throws XPathExpressionException {
+		Object o = xpathTest.evaluate("//bpmn:*[@name]", document, XPathConstants.NODESET);
 		NodeList nl = (NodeList) o;
 		for (int i = 0; i < nl.getLength(); i++) {
 			Node n = nl.item(i);
 			Attr attr = (Attr) n.getAttributes().getNamedItem("name");
 			String s = attr.getValue();
-			// out.println(">>>  " + s);
+			// out.println(">>> " + s);
 			s = WhitespaceUtil.normalizeWhitespace(s);
 
 			while (s.contains("  "))
@@ -70,8 +67,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			attr.setTextContent(s);
 		}
 
-		Object o2 = xpathTest.evaluate("//child::text()", head(),
-				XPathConstants.NODESET);
+		Object o2 = xpathTest.evaluate("//child::text()", head(), XPathConstants.NODESET);
 		NodeList nl2 = (NodeList) o2;
 		for (int i = 0; i < nl2.getLength(); i++) {
 			Node n = nl2.item(i);
@@ -81,8 +77,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	protected Node pop() {
-		NodePopEntry e = new NodePopEntry(callingMethod(),
-				getNodeIDNoNull(nodeStack.peek()),
+		NodePopEntry e = new NodePopEntry(callingMethod(), getNodeIDNoNull(nodeStack.peek()),
 				XpathCheckContext.createTestContext(this));
 		out.pop(e);
 		Node n = nodeStack.pop();
@@ -102,8 +97,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	protected void push(Node n) {
-		NodePushEntry e = new NodePushEntry(callingMethod(),
-				getNodeIDNoNull(n), XpathCheckContext.createTestContext(this));
+		NodePushEntry e = new NodePushEntry(callingMethod(), getNodeIDNoNull(n),
+				XpathCheckContext.createTestContext(this));
 		out.push(e);
 		nodeStack.push(n);
 		currentNodeStack.push(currentNode);
@@ -116,13 +111,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	public void ok(String message) {
-		out.ok(new OKAssertionEntry(callingMethod(), message,
-				XpathCheckContext.createTestContext(this)));
+		out.ok(new OKAssertionEntry(callingMethod(), message, XpathCheckContext.createTestContext(this)));
 	}
 
 	public void okTop(String message) {
-		out.ok(new OKAssertionEntry(callingMethodTop(), message,
-				XpathCheckContext.createTestContext(this)));
+		out.ok(new OKAssertionEntry(callingMethodTop(), message, XpathCheckContext.createTestContext(this)));
 	}
 
 	public void finding(String parameter, String message) {
@@ -134,8 +127,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	 * name.
 	 */
 	public void findingTop(String parameter, String message) {
-		out.finding(new FindingAssertionEntry(callingMethodTop(), message,
-				parameter));
+		out.finding(new FindingAssertionEntry(callingMethodTop(), message, parameter));
 	}
 
 	private void setCurrentNode(Node n) throws Throwable {
@@ -151,8 +143,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		for (StackTraceElement e : stacktrace) {
 			String methodName = e.getMethodName();
 
-			if (methodName.startsWith("navigate")
-					|| methodName.startsWith("select")
+			if (methodName.startsWith("navigate") || methodName.startsWith("select")
 					|| methodName.startsWith("check")) {
 				lastName = methodName;
 			}
@@ -171,8 +162,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		for (StackTraceElement e : stacktrace) {
 			String methodName = e.getMethodName();
 
-			if (methodName.startsWith("navigate")
-					|| methodName.startsWith("select")
+			if (methodName.startsWith("navigate") || methodName.startsWith("select")
 					|| methodName.startsWith("check")) {
 				return methodName;
 			}
@@ -209,8 +199,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return findNode(head(), expr);
 	}
 
-	private Node findNode(Node base, String expr)
-			throws XPathExpressionException {
+	private Node findNode(Node base, String expr) throws XPathExpressionException {
 		Object o = xpathTest.evaluate(expr, base, XPathConstants.NODE);
 		if (o == null)
 			return null;
@@ -251,8 +240,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return path;
 	}
 
-	private List<Node> findNodes(Node base, String expr)
-			throws XPathExpressionException {
+	private List<Node> findNodes(Node base, String expr) throws XPathExpressionException {
 		Object o = xpathTest.evaluate(expr, base, XPathConstants.NODESET);
 		if (o == null)
 			return null;
@@ -270,37 +258,28 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	/***
 	 * This works only if the gateway is on the stack
 	 */
-	public void navigateGatewaySequenceFlowStack(String sequenceFlowName)
-			throws Throwable {
-		navigateReferenceX("bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']",
-				".",
+	public void navigateGatewaySequenceFlowStack(String sequenceFlowName) throws Throwable {
+		navigateReferenceX("bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']", ".",
 				String.format("self::node()[@name='%s']", sequenceFlowName));
 	}
 
-	public void navigateGatewaySequenceFlow(String sequenceFlowName)
-			throws Throwable {
-		navigateReferenceX(currentNode, "bpmn:outgoing",
-				"//bpmn:sequenceFlow[@id='%s']", ".",
+	public void navigateGatewaySequenceFlow(String sequenceFlowName) throws Throwable {
+		navigateReferenceX(currentNode, "bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']", ".",
 				String.format("self::node()[@name='%s']", sequenceFlowName));
 	}
 
-	public void navigateGatewaySequenceFlowCurrentNode(String sequenceFlowName)
-			throws Throwable {
-		navigateReferenceX(currentNode, "bpmn:outgoing",
-				"//bpmn:sequenceFlow[@id='%s']", ".",
+	public void navigateGatewaySequenceFlowCurrentNode(String sequenceFlowName) throws Throwable {
+		navigateReferenceX(currentNode, "bpmn:outgoing", "//bpmn:sequenceFlow[@id='%s']", ".",
 				String.format("self::node()[@name='%s']", sequenceFlowName));
 	}
 
-	private void navigateReferenceX(String referenceXpath, String targetXpath,
-			String targetXpathParameter, String targetCheckXpath)
-			throws Throwable {
-		navigateReferenceX(head(), referenceXpath, targetXpath,
-				targetXpathParameter, targetCheckXpath);
-	}
-
-	private void navigateReferenceX(Node baseNode, String referenceXpath,
-			String targetXpath, String targetXpathParameter,
+	private void navigateReferenceX(String referenceXpath, String targetXpath, String targetXpathParameter,
 			String targetCheckXpath) throws Throwable {
+		navigateReferenceX(head(), referenceXpath, targetXpath, targetXpathParameter, targetCheckXpath);
+	}
+
+	private void navigateReferenceX(Node baseNode, String referenceXpath, String targetXpath,
+			String targetXpathParameter, String targetCheckXpath) throws Throwable {
 
 		if (baseNode == null) {
 			finding("", "Parent failed");
@@ -315,18 +294,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		Node foundNode = null;
 		for (Node n : nodes) {
-			Node evaluatedTargetXpathParameterNode = findNode(n,
-					targetXpathParameter);
+			Node evaluatedTargetXpathParameterNode = findNode(n, targetXpathParameter);
 			if (evaluatedTargetXpathParameterNode == null) {
-				finding(targetXpathParameter,
-						"Target parameter cannot be evaluated");
+				finding(targetXpathParameter, "Target parameter cannot be evaluated");
 				return;
 			}
-			String evaluatedTargetXpathParameter = evaluatedTargetXpathParameterNode
-					.getTextContent();
+			String evaluatedTargetXpathParameter = evaluatedTargetXpathParameterNode.getTextContent();
 
-			String evaluatedXpath = String.format(targetXpath,
-					evaluatedTargetXpathParameter);
+			String evaluatedXpath = String.format(targetXpath, evaluatedTargetXpathParameter);
 			Node fn = findNode(n, evaluatedXpath);
 
 			if (fn == null) {
@@ -342,10 +317,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		if (foundNode != null) {
-			String message = String
-					.format("Reference: %s; Target: %s; Target parameter %s; Target Check: %s",
-							referenceXpath, targetXpath, targetXpathParameter,
-							targetCheckXpath);
+			String message = String.format("Reference: %s; Target: %s; Target parameter %s; Target Check: %s",
+					referenceXpath, targetXpath, targetXpathParameter, targetCheckXpath);
 			ok(message);
 			setCurrentNode(foundNode);
 		} else {
@@ -359,8 +332,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return navigateElementX(expr, null);
 	}
 
-	public Node navigateElement(String type, String attrKey, String attrValue)
-			throws Throwable {
+	public Node navigateElement(String type, String attrKey, String attrValue) throws Throwable {
 		String xpath = String.format("%s[@%s='%s']", type, attrKey, attrValue);
 		// String xpath = String.format("%s", type);
 		Node n = navigateElementX(xpath);
@@ -379,22 +351,17 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 	}
 
-	public Node navigateFollowingElement(String type, String name)
+	public Node navigateFollowingElement(String type, String name) throws Throwable {
+		return navigateFollowingElement(currentNode, type, name, null, new Assertion[] {});
+	}
+
+	public Node navigateFollowingElement(String type, String name, String sequenceFlowName) throws Throwable {
+		return navigateFollowingElement(currentNode, type, name, sequenceFlowName, new Assertion[] {});
+	}
+
+	public Node navigateFollowingElement(String type, String name, String sequenceFlowName, Assertion[] assertions)
 			throws Throwable {
-		return navigateFollowingElement(currentNode, type, name, null,
-				new Assertion[] {});
-	}
-
-	public Node navigateFollowingElement(String type, String name,
-			String sequenceFlowName) throws Throwable {
-		return navigateFollowingElement(currentNode, type, name,
-				sequenceFlowName, new Assertion[] {});
-	}
-
-	public Node navigateFollowingElement(String type, String name,
-			String sequenceFlowName, Assertion[] assertions) throws Throwable {
-		return navigateFollowingElement(currentNode, type, name,
-				sequenceFlowName, assertions);
+		return navigateFollowingElement(currentNode, type, name, sequenceFlowName, assertions);
 	}
 
 	public Node navigateSequenceFlow(String type, String name) throws Throwable {
@@ -402,8 +369,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	public Node navigateLane(String name) throws Throwable {
-		String xPath = String
-				.format("bpmn:laneSet/bpmn:lane[@name='%s']", name);
+		String xPath = String.format("bpmn:laneSet/bpmn:lane[@name='%s']", name);
 		return navigateElementX(xPath);
 	}
 
@@ -411,8 +377,65 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return navigateElementX("/bpmn:definitions");
 	}
 
-	protected Node navigateSequenceFlow(Node node, String type, String name)
-			throws Throwable {
+	public Node navigateItemDefinition(String id) throws Throwable {
+		String xpath = String.format("/bpmn:definitions/bpmn:itemDefinition[@id='%s']", id);
+		return navigateElementX(xpath);
+	}
+
+	public enum ItemKind {
+		Information
+	};
+
+	public void checkItemDefinition(ItemKind itemKind, String structureRef, boolean isCollection) throws Throwable {
+		checkAttributeValue(currentNode, "itemKind", itemKind.toString());
+		checkAttributeValue(currentNode, "structureRef", structureRef);
+		checkAttributeValue(currentNode, "isCollection", Boolean.toString(isCollection));
+	}
+
+	public Node navigateDataStore(String name) throws Throwable {
+		String xpath = String.format("/bpmn:definitions/bpmn:dataStore[@name='%s']", name);
+		return navigateElementX(xpath);
+	}
+
+	public void checkDataStore(boolean isUnlimited, boolean hasSubjectRef) throws Throwable {
+		checkAttributeValue(currentNode, "isUnlimited", Boolean.toString(isUnlimited));
+		String subjectRef = getAttribute(currentNode, "itemSubjectRef", false);
+		if (hasSubjectRef) {
+			String xpath = String.format("/bpmn:definitions/bpmn:itemDefinition[@id='%s']", subjectRef);
+			Node n = this.findNode(xpath);
+			if (n != null) {
+				ok("Referenced item definition exists");
+			} else {
+				finding(xpath, "Referenced item definition does not exist");
+			}
+		} else {
+			if (subjectRef == null) {
+				ok("Has no subject reference");
+			} else {
+				finding("itemSubjectRef", "Has subject reference although it should not have");
+			}
+		}
+	}
+
+	public Node navigateSignal(String name) throws Throwable {
+		String xpath = String.format("/bpmn:definitions/bpmn:signal[@name='%s']", name);
+		return navigateElementX(xpath);
+	}
+
+	public void checkSignal(String structureRef) throws Throwable {
+		checkAttributeValue(currentNode, "structureRef", structureRef);
+	}
+
+	public Node navigateMessage(String name) throws Throwable {
+		String xpath = String.format("/bpmn:definitions/bpmn:message[@name='%s']", name);
+		return navigateElementX(xpath);
+	}
+
+	public void checkMessage(String itemRef) throws Throwable {
+		checkAttributeValue(currentNode, "itemRef", itemRef);
+	}
+
+	protected Node navigateSequenceFlow(Node node, String type, String name) throws Throwable {
 		String nameCondition;
 		if (name == null) {
 			nameCondition = "";
@@ -421,14 +444,12 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		String targetId = getAttribute(node, "targetRef");
-		String xpathTarget = String.format("%s[%s@id='%s']", type,
-				nameCondition, targetId);
+		String xpathTarget = String.format("%s[%s@id='%s']", type, nameCondition, targetId);
 		xpathTarget = String.format("%s[@id='%s']", type, targetId);
 		Node n = findNode(xpathTarget);
 
 		if (n == null) {
-			finding(String.format("%s[@name='%s']", type, name),
-					"No outgoing reference found");
+			finding(String.format("%s[@name='%s']", type, name), "No outgoing reference found");
 			return null;
 		}
 
@@ -437,9 +458,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return n;
 	}
 
-	protected Node navigateFollowingElement(Node node, String type,
-			String name, String sequenceFlowName, Assertion[] assertions)
-			throws Throwable {
+	protected Node navigateFollowingElement(Node node, String type, String name, String sequenceFlowName,
+			Assertion[] assertions) throws Throwable {
 
 		if (node == null) {
 			finding(null, "The base node is null");
@@ -456,12 +476,10 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		String xpathSequenceFlow;
 
 		if (sequenceFlowName == null) {
-			xpathSequenceFlow = String.format(
-					"bpmn:sequenceFlow[@sourceRef='%s']", sourceID);
+			xpathSequenceFlow = String.format("bpmn:sequenceFlow[@sourceRef='%s']", sourceID);
 		} else {
-			xpathSequenceFlow = String.format(
-					"bpmn:sequenceFlow[@sourceRef='%s' and @name='%s']",
-					sourceID, sequenceFlowName);
+			xpathSequenceFlow = String.format("bpmn:sequenceFlow[@sourceRef='%s' and @name='%s']", sourceID,
+					sequenceFlowName);
 		}
 
 		List<Node> sequenceFlowNodes = findNodes(head(), xpathSequenceFlow);
@@ -479,34 +497,28 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			}
 
 			String targetId = getAttribute(sequenceFlowNode, "targetRef");
-			String xpathTarget = String.format("%s[%s@id='%s']", type,
-					nameCondition, targetId);
+			String xpathTarget = String.format("%s[%s@id='%s']", type, nameCondition, targetId);
 
 			Node targetNode = findNode(xpathTarget);
 			if (targetNode != null) {
 				ok(xpathTarget);
 
 				/**
-				 * We have found the correct sequence flow and the target
-				 * element. Now we check whether there is a corresponding
-				 * incoming and outgoing element (this is necessary as agreed in
-				 * issue #100).
+				 * We have found the correct sequence flow and the target element. Now we check
+				 * whether there is a corresponding incoming and outgoing element (this is
+				 * necessary as agreed in issue #100).
 				 */
 
-				String xpathOutgoing = String.format(
-						"bpmn:outgoing[text()='%s']", sequenceFlowID);
+				String xpathOutgoing = String.format("bpmn:outgoing[text()='%s']", sequenceFlowID);
 				Node outgoingNode = findNode(node, xpathOutgoing);
 				if (outgoingNode == null) {
-					finding(xpathOutgoing,
-							"There is no corresponding outgoing node for the sequence flow");
+					finding(xpathOutgoing, "There is no corresponding outgoing node for the sequence flow");
 				}
 
-				String xpathIncoming = String.format(
-						"bpmn:incoming[text()='%s']", sequenceFlowID);
+				String xpathIncoming = String.format("bpmn:incoming[text()='%s']", sequenceFlowID);
 				Node incomingNode = findNode(targetNode, xpathIncoming);
 				if (incomingNode == null) {
-					finding(xpathIncoming,
-							"There is no corresponding incoming node for the sequence flow");
+					finding(xpathIncoming, "There is no corresponding incoming node for the sequence flow");
 				}
 
 				if (assertions != null) {
@@ -521,8 +533,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		}
 
-		finding(String.format("%s[@name='%s']", type, name),
-				"No outgoing reference found");
+		finding(String.format("%s[@name='%s']", type, name), "No outgoing reference found");
 
 		return null;
 	}
@@ -544,6 +555,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	public void selectCollaboration() throws Throwable {
 		selectElementX("bpmn:collaboration");
+	}
+
+	public void selectCollaborationByName(String name) throws Throwable {
+		String xpath = String.format("bpmn:collaboration[@name='%s']", name);
+		selectElementX(xpath);
 	}
 
 	public void selectPool(String name) throws Throwable {
@@ -582,8 +598,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			nameCondition = String.format("@name='%s' and ", name);
 		}
 
-		String xpathBoundaryElement = String.format(
-				"bpmn:boundaryEvent[%s@attachedToRef='%s']", nameCondition,
+		String xpathBoundaryElement = String.format("bpmn:boundaryEvent[%s@attachedToRef='%s']", nameCondition,
 				currentElementID);
 		Node n = findNode(xpathBoundaryElement);
 		if (n == null) {
@@ -600,11 +615,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		setCurrentNode(node);
 	}
 
-	public Node selectFollowingElement(String type, String name)
-			throws Throwable {
+	public Node selectFollowingElement(String type, String name) throws Throwable {
 		if (head() == null) {
-			finding(String.format("Type: %s, name: %s", type, name),
-					"Parent failed");
+			finding(String.format("Type: %s, name: %s", type, name), "Parent failed");
 			push(null);
 			return null;
 		}
@@ -641,8 +654,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return n;
 	}
 
-	public void checkChildElementValue(String type, String name,
-			String expectedValue) throws Throwable {
+	public void checkChildElementValue(String type, String name, String expectedValue) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
@@ -664,10 +676,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		String actualValue = n.getTextContent();
 
 		if (!expectedValue.equals(actualValue)) {
-			finding(xpath,
-					String.format(
-							"The element has the expected value '%s', but the actual value is '%s'",
-							expectedValue, actualValue));
+			finding(xpath, String.format("The element has the expected value '%s', but the actual value is '%s'",
+					expectedValue, actualValue));
 			return;
 		}
 
@@ -766,15 +776,12 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	public void selectProcessByParticipant(String participant) throws Throwable {
-		String xpath = String
-				.format("//bpmn:process[@id=//bpmn:participant[@name='%s']/@processRef]",
-						participant);
+		String xpath = String.format("//bpmn:process[@id=//bpmn:participant[@name='%s']/@processRef]", participant);
 		selectProcessX(xpath);
 	}
 
 	public void selectProcessByLane(String lane) throws Throwable {
-		String xpath = String.format(
-				"//bpmn:process[bpmn:laneSet/bpmn:lane[@name='%s']]", lane);
+		String xpath = String.format("//bpmn:process[bpmn:laneSet/bpmn:lane[@name='%s']]", lane);
 		selectProcessX(xpath);
 	}
 
@@ -812,8 +819,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		if (!currentNode.getLocalName().equals("sequenceFlow")) {
-			finding(currentNode.getLocalName(),
-					"Current node is not a sequenceFlow");
+			finding(currentNode.getLocalName(), "Current node is not a sequenceFlow");
 			return;
 		}
 
@@ -855,14 +861,11 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		ok("Attribute " + attribute + "exists");
 	}
 
-	protected void checkAttributeValue(String attribute, boolean value,
-			boolean defaultValue) throws Throwable {
-		checkAttributeValue(attribute, Boolean.toString(value),
-				Boolean.toString(defaultValue));
+	protected void checkAttributeValue(String attribute, boolean value, boolean defaultValue) throws Throwable {
+		checkAttributeValue(attribute, Boolean.toString(value), Boolean.toString(defaultValue));
 	}
 
-	protected void checkAttributeValue(String attribute, String value)
-			throws Throwable {
+	protected void checkAttributeValue(String attribute, String value) throws Throwable {
 		if (currentNode == null) {
 			finding("", "No Current node");
 			return;
@@ -871,8 +874,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		Node attr = currentNode.getAttributes().getNamedItem(attribute);
 
 		if (attr == null) {
-			finding("",
-					String.format("Attribute %s is not existing.", attribute));
+			finding("", String.format("Attribute %s is not existing.", attribute));
 			return;
 
 		}
@@ -880,9 +882,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		String s = attr.getTextContent();
 
 		if (!s.equals(value)) {
-			finding(attribute, String.format(
-					"Attribute %s does not have the expected value '%s'",
-					attribute, value));
+			finding(attribute, String.format("Attribute %s does not have the expected value '%s'", attribute, value));
 			return;
 		}
 
@@ -898,8 +898,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		Node attr = currentNode.getAttributes().getNamedItem(attribute);
 
 		if (attr == null) {
-			finding("",
-					String.format("Attribute %s is not existing.", attribute));
+			finding("", String.format("Attribute %s is not existing.", attribute));
 			return null;
 
 		}
@@ -910,8 +909,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		return value;
 	}
 
-	protected void checkAttributeValue(Node n, String attribute, String value)
-			throws Throwable {
+	protected void checkAttributeValue(Node n, String attribute, String value) throws Throwable {
 		if (n == null) {
 			finding("", "Null node");
 			return;
@@ -920,8 +918,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		Node attr = n.getAttributes().getNamedItem(attribute);
 
 		if (attr == null) {
-			finding("",
-					String.format("Attribute %s is not existing.", attribute));
+			finding("", String.format("Attribute %s is not existing.", attribute));
 			return;
 
 		}
@@ -929,17 +926,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		String s = attr.getTextContent();
 
 		if (!s.equals(value)) {
-			finding(attribute, String.format(
-					"Attribute %s does not have the expected value '%s'",
-					attribute, value));
+			finding(attribute, String.format("Attribute %s does not have the expected value '%s'", attribute, value));
 			return;
 		}
 
 		ok("Attribute " + attribute + "=" + value);
 	}
 
-	protected void checkAttributeValue(String attribute, String value,
-			String defaultValue) throws Throwable {
+	protected void checkAttributeValue(String attribute, String value, String defaultValue) throws Throwable {
 		if (currentNode == null) {
 			finding("", "No current node");
 			return;
@@ -949,15 +943,14 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		if (attr == null) {
 			if (value.equals(defaultValue)) {
-				ok(String
-						.format("Attribute %s is not existing but the expected value (%s) equals the default value (%s)",
-								attribute, value, defaultValue));
+				ok(String.format(
+						"Attribute %s is not existing but the expected value (%s) equals the default value (%s)",
+						attribute, value, defaultValue));
 				return;
 			} else {
-				finding("",
-						String.format(
-								"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
-								attribute, value, defaultValue));
+				finding("", String.format(
+						"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
+						attribute, value, defaultValue));
 				return;
 			}
 		}
@@ -965,9 +958,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		String s = attr.getTextContent();
 
 		if (!s.equals(value)) {
-			finding(attribute, String.format(
-					"Attribute %s does not have the expected value '%s'",
-					attribute, value));
+			finding(attribute, String.format("Attribute %s does not have the expected value '%s'", attribute, value));
 			return;
 		}
 
@@ -994,8 +985,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 	}
 
-	public void checkDataAssociation(ArtifactType artifactType,
-			String artifactName, Direction associationDirection)
+	public void checkDataAssociation(ArtifactType artifactType, String artifactName, Direction associationDirection)
 			throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
@@ -1047,18 +1037,15 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			}
 
 			{
-				String dataAssociationRef2 = String.format(dataAssociationRef,
-						id);
-				Node dataAssociationRefNode = findNode(elementNode,
-						dataAssociationRef2);
+				String dataAssociationRef2 = String.format(dataAssociationRef, id);
+				Node dataAssociationRefNode = findNode(elementNode, dataAssociationRef2);
 
 				if (dataAssociationRefNode == null) {
 					finding(dataAssociationRef2, "Cannot find node");
 					pop();
 					return;
 				} else {
-					Node artifactRefNode = findNode(dataAssociationRefNode,
-							artifactRef);
+					Node artifactRefNode = findNode(dataAssociationRefNode, artifactRef);
 
 					if (artifactRefNode == null) {
 						finding(artifactRef, "Cannot find node");
@@ -1089,9 +1076,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 						return;
 					}
 
-					if (getAttribute(artifactNode, "name").equals(artifactName)) {
-						ok(String.format("Association reference %s '%s' found",
-								artifactTypeToString(artifactType),
+					if (artifactName.equals(getAttribute(artifactNode, "name",false))) {
+						ok(String.format("Association reference %s '%s' found", artifactTypeToString(artifactType),
 								artifactName));
 						pop();
 						return;
@@ -1102,9 +1088,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		}
 
-		finding(null, String.format(
-				"Cannot find the associated artifact %s '%s'",
-				artifactTypeToString(artifactType), artifactName));
+		finding(null, String.format("Cannot find the associated artifact %s '%s'", artifactTypeToString(artifactType),
+				artifactName));
 		pop();
 	}
 
@@ -1144,16 +1129,58 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 	}
 
+	protected void genericCheckEvent(String xmlEventDefinitionName, String xmlTargetElementName,
+			String humanTargetElementName, String referenceAttribute, String expectedName) throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String xpath = xmlEventDefinitionName;
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			finding(xpath, String.format("Cannot find %s event definition", humanTargetElementName));
+			return;
+		} else {
+			ok(String.format("%s event definition", humanTargetElementName));
+
+			String targetRef = getAttribute(n, referenceAttribute, false);
+			if (targetRef == null) {
+				finding(referenceAttribute,
+						String.format("No %s reference provided, although expected.", humanTargetElementName));
+			} else {
+				xpath = String.format("/bpmn:definitions/%s[@id='%s']", xmlTargetElementName, targetRef);
+				n = findNode(xpath);
+				if (n == null) {
+					finding(xpath, String.format("Referenced %s was not found.", humanTargetElementName));
+				} else {
+					String actualTargetName = getAttribute(n, "name", false);
+					if (actualTargetName == null) {
+						finding("name", String.format("The referenced %s has no name.", humanTargetElementName));
+					} else {
+						if (actualTargetName.equals(expectedName)) {
+							ok(String.format("Correct %s reference.", humanTargetElementName));
+						} else {
+							finding("name", String.format("The referenced %s has the name '%s', but should have '%s'.",
+									humanTargetElementName, actualTargetName, expectedName));
+						}
+					}
+				}
+			}
+			return;
+		}
+	}
+
+	public void checkSignalEvent(String signalName) throws Throwable {
+		genericCheckEvent("bpmn:signalEventDefinition", "bpmn:signal", "signal", "signalRef", signalName);
+	}
+
 	public void checkMessageEvent() throws Throwable {
-		checkMessageEvent(false, null);
+		checkMessageEvent(null);
 	}
 
-	public void checkMessageEvent(boolean followMessageRef) throws Throwable {
-		checkMessageEvent(followMessageRef, null);
-	}
-
-	public void checkMessageEvent(boolean followMessageRef,
-			String expectedMessageName) throws Throwable {
+	public void checkMessageEvent(String expectedMessageName) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
@@ -1166,33 +1193,25 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			return;
 		}
 
-		if (followMessageRef) {
-			String messageID = getAttribute(messageEventDefinitionNode,
-					"messageRef", false);
+		if (expectedMessageName != null) {
+			String messageID = getAttribute(messageEventDefinitionNode, "messageRef", false);
 			if (messageID == null) {
-				finding(null,
-						"The messageEventDefinition element has no messageRef attribute");
+				finding(null, "The messageEventDefinition element has no messageRef attribute");
 				return;
 			}
 
-			String messageXpath = String.format("//bpmn:message[@id='%s']",
-					messageID);
+			String messageXpath = String.format("//bpmn:message[@id='%s']", messageID);
 			Node messageNode = findNode(messageXpath);
 			if (messageNode == null) {
-				finding(messageXpath, String.format(
-						"Cannot find the referenced message with the id %s",
-						messageID));
+				finding(messageXpath, String.format("Cannot find the referenced message with the id %s", messageID));
 				return;
 			}
 
 			if (expectedMessageName != null) {
-				String actualMessageName = getAttribute(messageNode, "name",
-						false);
+				String actualMessageName = getAttribute(messageNode, "name", false);
 				if (!expectedMessageName.equals(actualMessageName)) {
-					finding(null,
-							String.format(
-									"The name of the referenced message should be %s, but it is %s",
-									expectedMessageName, actualMessageName));
+					finding(null, String.format("The name of the referenced message should be %s, but it is %s",
+							expectedMessageName, actualMessageName));
 					return;
 				}
 			}
@@ -1231,40 +1250,34 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		for (Node gatewayNode : gatewayNodes) {
 			String id = getAttribute(gatewayNode, "id");
-			String xpath2 = String.format(
-					"//bpmndi:BPMNShape[@bpmnElement='%s']", id);
+			String xpath2 = String.format("//bpmndi:BPMNShape[@bpmnElement='%s']", id);
 			Node n = findNode(currentNode, xpath2);
 
 			if (n == null) {
 				finding(xpath,
-						String.format(
-								"There is no BPMNShape element for the BPMN element with the id '%s'.",
-								id));
+						String.format("There is no BPMNShape element for the BPMN element with the id '%s'.", id));
 				return;
 			} else {
 				String value = getAttribute(n, "isMarkerVisible", false);
 
 				if (value == null) {
 					if (hasMarker) {
-						finding(null,
-								String.format(
-										"There is no isMarkerVisible attribute in the BPMNShape element for the BPMN element with the id '%s' although %s is expected.",
-										id, Boolean.toString(true)));
+						finding(null, String.format(
+								"There is no isMarkerVisible attribute in the BPMNShape element for the BPMN element with the id '%s' although %s is expected.",
+								id, Boolean.toString(true)));
 						return;
 					}
 				} else {
 					if (!value.equals(Boolean.toString(hasMarker))) {
-						finding(null,
-								String.format(
-										"The XOR marker for the BPMN element with the id '%s' is %s although %s is expected.",
-										id, value, Boolean.toString(hasMarker)));
+						finding(null, String.format(
+								"The XOR marker for the BPMN element with the id '%s' is %s although %s is expected.",
+								id, value, Boolean.toString(hasMarker)));
 						return;
 					}
 				}
 			}
 
-			ok(String.format("All XOR markers have the expected value '%s'.",
-					Boolean.toString(hasMarker)));
+			ok(String.format("All XOR markers have the expected value '%s'.", Boolean.toString(hasMarker)));
 		}
 	}
 
@@ -1304,8 +1317,25 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 	}
 
-	protected Node findCorrespondingReferenceElement(Node testNode)
-			throws XPathExpressionException {
+	public void checkStandardLoopCharacteristics() throws Throwable {
+		if (currentNode == null) {
+			finding(null, "Current node is null");
+			return;
+		}
+
+		String xpath = "bpmn:standardLoopCharacteristics";
+		Node n = findNode(currentNode, xpath);
+
+		if (n == null) {
+			finding(xpath, "Cannot standard loop characteristics");
+			return;
+		} else {
+			ok("Standard loop characteristics");
+			return;
+		}
+	}
+
+	protected Node findCorrespondingReferenceElement(Node testNode) throws XPathExpressionException {
 		if (getReferenceDocument() == null) {
 			findingTop(null, "The reference has not been specified");
 			return null;
@@ -1313,12 +1343,10 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		String id = getCurrentNodeID();
 		String xpath = "//bpmn:*[@id='" + id + "']";
-		Node refNode = (Node) getXpathTest().evaluate(xpath,
-				getReferenceDocument(), XPathConstants.NODE);
+		Node refNode = (Node) getXpathTest().evaluate(xpath, getReferenceDocument(), XPathConstants.NODE);
 
 		if (refNode == null) {
-			findingTop(xpath,
-					"Cannot find corresponding element in reference DOM");
+			findingTop(xpath, "Cannot find corresponding element in reference DOM");
 			return null;
 		}
 
@@ -1326,8 +1354,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	/**
-	 * This method checks whether all extension elements from the reference
-	 * exist in the test file as well.
+	 * This method checks whether all extension elements from the reference exist in
+	 * the test file as well.
 	 * 
 	 * @throws Throwable
 	 */
@@ -1345,42 +1373,41 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		String xpath = "bpmn:extensionElements";
 
-		Node refEE = (Node) getXpathTest().evaluate(xpath, refNode,
-				XPathConstants.NODE);
+		Node refEE = (Node) getXpathTest().evaluate(xpath, refNode, XPathConstants.NODE);
 		if (refEE == null) {
 			/*
-			 * The corresponding reference element contains no extension
-			 * element. This is ok.
+			 * The corresponding reference element contains no extension element. This is
+			 * OK.
 			 */
-			// findingTop(xpath,
-			// "Cannot find corresponding extension element in reference DOM");
+			return;
+		}
+		if (!refEE.hasChildNodes()) {
+			/*
+			 * The correspondign reference element contains an extension element with no
+			 * children. This is OK.
+			 */
 			return;
 		}
 
-		Node testEE = (Node) getXpathTest().evaluate(xpath, currentNode,
-				XPathConstants.NODE);
+		Node testEE = (Node) getXpathTest().evaluate(xpath, currentNode, XPathConstants.NODE);
 		if (testEE == null) {
-			findingTop(
-					xpath,
+			findingTop(xpath,
 					"Cannot find extension element although the corresponding reference element contains an extension element");
 			return;
 		}
 
-		List<Difference> differences = DOMUtil.checkSubtreeForDifferences(
-				testEE, refEE);
+		List<Difference> differences = DOMUtil.checkSubtreeForDifferences(testEE, refEE);
 
 		if (differences.isEmpty()) {
 			okTop("Extension elements are similar to the reference");
 			return;
 		} else {
-			findingTop(null,
-					"Extension Elements are not similar to the reference");
+			findingTop(null, "Extension Elements are not similar to the reference");
 
 			push(testEE);
 
 			for (Difference difference : differences) {
-				findingTop(null,
-						difference.getId() + ": " + difference.toString());
+				findingTop(null, difference.getId() + ": " + difference.toString());
 			}
 
 			pop();
@@ -1407,29 +1434,21 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			Node refAttr = refAttrs.item(i);
 
 			if (refAttr.getNamespaceURI() != null
-					&& !refAttr.getNamespaceURI().equals(
-							NameSpaceContexts.BPMN_MODEL_NS_URI)) {
+					&& !refAttr.getNamespaceURI().equals(NameSpaceContexts.BPMN_MODEL_NS_URI)) {
 
 				hasNonBPMNAttributes = true;
 
-				Node testAttr = testAttrs.getNamedItemNS(
-						refAttr.getNamespaceURI(), refAttr.getLocalName());
+				Node testAttr = testAttrs.getNamedItemNS(refAttr.getNamespaceURI(), refAttr.getLocalName());
 
 				if (testAttr == null) {
-					findingTop(null,
-							"Cannot find attribute '" + refAttr.toString()
-									+ "' from reference in test file");
+					findingTop(null, "Cannot find attribute '" + refAttr.toString() + "' from reference in test file");
 					return;
 				}
 
 				if (!testAttr.getNodeValue().equals(refAttr.getNodeValue())) {
-					findingTop(
-							null,
-							"The attribute '" + refAttr.toString()
-									+ "' has the value '"
-									+ testAttr.getNodeValue()
-									+ "'. In the reference the value is '"
-									+ refAttr.getNodeValue() + "'.");
+					findingTop(null,
+							"The attribute '" + refAttr.toString() + "' has the value '" + testAttr.getNodeValue()
+									+ "'. In the reference the value is '" + refAttr.getNodeValue() + "'.");
 
 					return;
 				}
@@ -1478,8 +1497,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			ok(String.format("Element name attribute: %s", nameExpected));
 			return;
 		} else {
-			finding("", String.format("Wrong name (expected: %s, actual: %s",
-					nameExpected, nameActual));
+			finding("", String.format("Wrong name (expected: %s, actual: %s", nameExpected, nameActual));
 			return;
 		}
 	}
@@ -1498,8 +1516,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				return;
 			}
 
-			String xpath = String.format("//bpmn:globalUserTask[@id='%s']",
-					calledElement);
+			String xpath = String.format("//bpmn:globalUserTask[@id='%s']", calledElement);
 
 			Node n = findNode(currentNode, xpath);
 			if (n == null) {
@@ -1540,9 +1557,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			return;
 		}
 
-		String xpath = String
-				.format("//bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='%s']/@targetRef]/bpmn:text",
-						currentID);
+		String xpath = String.format(
+				"//bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='%s']/@targetRef]/bpmn:text", currentID);
 
 		List<Node> nl = findNodes(head(), xpath);
 		for (Node candidate : nl) {
@@ -1583,13 +1599,12 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 	}
 
-	public void checkMessageFlow(String name, Direction direction)
-			throws Throwable {
+	public void checkMessageFlow(String name, Direction direction) throws Throwable {
 		checkMessageFlow(name, direction, null, null);
 	}
 
-	public void checkMessageFlow(String name, Direction direction,
-			String partnerType, String partnerName) throws Throwable {
+	public void checkMessageFlow(String name, Direction direction, String partnerType, String partnerName)
+			throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
@@ -1620,8 +1635,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 			xpathName = String.format("@name='%s'", name);
 		}
 
-		String xpath = String.format("//bpmn:messageFlow[%s and @%s='%s']",
-				xpathName, dir, getCurrentNodeID());
+		String xpath = String.format("//bpmn:messageFlow[%s and @%s='%s']", xpathName, dir, getCurrentNodeID());
 
 		Node n = findNode(xpath);
 		if (n == null) {
@@ -1646,8 +1660,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 			String targetID = getAttribute(n, partnerDirectionAttribute);
 
-			String xpathTarget = String.format("//%s[@name='%s' and @id='%s']",
-					partnerType, partnerName, targetID);
+			String xpathTarget = String.format("//%s[@name='%s' and @id='%s']", partnerType, partnerName, targetID);
 
 			Node targetNode = findNode(xpathTarget);
 			if (targetNode == null) {
@@ -1655,8 +1668,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 				return;
 			}
 
-			ok(String.format("message flow '%s' (%s) -> %s", name, direction,
-					xpathTarget));
+			ok(String.format("message flow '%s' (%s) -> %s", name, direction, xpathTarget));
 		} else {
 			ok(String.format("message flow '%s' (%s)", name, direction));
 		}
@@ -1682,28 +1694,24 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		if (attr == null) {
 			if (sequential == defaultValue) {
-				ok(String
-						.format("Attribute %s is not existing but the expected value (%s) equals the default value (%s)",
-								attribute, sequential, defaultValue));
+				ok(String.format(
+						"Attribute %s is not existing but the expected value (%s) equals the default value (%s)",
+						attribute, sequential, defaultValue));
 				return;
 			} else {
-				finding("",
-						String.format(
-								"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
-								attribute, sequential, defaultValue));
+				finding("", String.format(
+						"Attribute %s is not existing and the expected value (%s) is not equal to the default value (%s)",
+						attribute, sequential, defaultValue));
 				return;
 			}
 		} else {
 			String v = attr.getTextContent();
 			if (!v.equals(Boolean.toString(sequential))) {
-				finding(null, String.format("%s=%s, should be %s", attribute,
-						v, sequential));
+				finding(null, String.format("%s=%s, should be %s", attribute, v, sequential));
 				return;
 			}
 
-			ok(String.format(
-					"Multi instance loop characteristics (sequential=%s)",
-					sequential));
+			ok(String.format("Multi instance loop characteristics (sequential=%s)", sequential));
 		}
 	}
 
@@ -1716,8 +1724,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	public void checkEventGatewayExclusive(boolean exclusive) throws Throwable {
-		checkAttributeValue("eventGatewayType", exclusive ? "Exclusive"
-				: "Inclusive", "Exclusive");
+		checkAttributeValue("eventGatewayType", exclusive ? "Exclusive" : "Inclusive", "Exclusive");
 	}
 
 	public void checkMessageDefinition() throws Throwable {
@@ -1744,8 +1751,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 	}
 
-	public void checkOwner(OwnerType ownerType, String potentialOwner)
-			throws Throwable {
+	public void checkOwner(OwnerType ownerType, String potentialOwner) throws Throwable {
 		if (currentNode == null) {
 			finding(null, "Current node is null");
 			return;
@@ -1766,8 +1772,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 
 		String ref = n.getTextContent();
 
-		String xpath2 = String.format(
-				"/bpmn:definitions/bpmn:resource[@id='%s']", ref);
+		String xpath2 = String.format("/bpmn:definitions/bpmn:resource[@id='%s']", ref);
 		Node n2 = findNode(currentNode, xpath2);
 		if (n2 == null) {
 			finding(xpath, "Cannot find resource");
@@ -1784,9 +1789,7 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		}
 
 		String ref = getAttribute(currentNode, "operationRef");
-		String xpath = String.format(
-				"/bpmn:definitions/bpmn:interface/bpmn:operation[@id='%s']",
-				ref);
+		String xpath = String.format("/bpmn:definitions/bpmn:interface/bpmn:operation[@id='%s']", ref);
 
 		Node n = findNode(currentNode, xpath);
 		if (n == null) {
@@ -1798,8 +1801,8 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 	}
 
 	@Override
-	public void execute(Document actualDocument, Document referenceDocument,
-			AnalysisJob job, AnalysisOutput output) throws Throwable {
+	public void execute(Document actualDocument, Document referenceDocument, AnalysisJob job, AnalysisOutput output)
+			throws Throwable {
 		this.out = output;
 		this.doc = actualDocument;
 		this.referenceDocument = referenceDocument;
@@ -1807,7 +1810,9 @@ public abstract class AbstractXpathCheck extends AbstractCheck implements
 		xpathTest = xpathfactory.newXPath();
 		xpathTest.setNamespaceContext(new NameSpaceContexts());
 		nodeStack = new Stack<Node>();
+		currentNode = doc.getDocumentElement();
 		currentNodeStack = new Stack<Node>();
+		currentNodeStack.push(currentNode);
 		push(doc.getDocumentElement());
 		normalizeNames(doc);
 		if (this.referenceDocument != null)
