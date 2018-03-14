@@ -1,7 +1,7 @@
 ANALYSIS: ADONIS NP 5.2-C.3.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: _5033f8b0-0396-494b-a52c-787034420443)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
-    OK     : checkAttributeValue                      Message: Attribute id=Process_Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw
+    OK     : checkAttributeValue                      Message: Attribute id=_8170787a-3207-434d-9bea-4787059f444f
     OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
     OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
     OK     : selectFirstProcess                       Push (id: _8170787a-3207-434d-9bea-4787059f444f)

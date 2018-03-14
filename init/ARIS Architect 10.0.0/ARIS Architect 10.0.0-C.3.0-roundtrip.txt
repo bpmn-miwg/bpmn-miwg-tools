@@ -1,1 +1,0 @@
-ANALYSIS: ARIS Architect 10.0.0-C.3.0-roundtrip (Tool: init)

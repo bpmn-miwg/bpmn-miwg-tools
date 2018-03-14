@@ -36,17 +36,6 @@ ibo Prometheus 3.9.0.0                                       C.1.0              
 ibo Prometheus 3.9.0.0                                       B.1.0                2          549           15
 ibo Prometheus 3.9.0.0                                       A.4.0                4          119           17
 ibo Prometheus 3.9.0.0                                       A.3.0                1          162            0
-ARIS Architect 10.0.0                                        A.4.1                0           92           24
-ARIS Architect 10.0.0                                        C.2.0                0          160           12
-ARIS Architect 10.0.0                                        C.1.1                0           81           22
-ARIS Architect 10.0.0                                        A.1.0                0           26            2
-ARIS Architect 10.0.0                                        C.3.0                0           87           39
-ARIS Architect 10.0.0                                        B.2.0                4          402           45
-ARIS Architect 10.0.0                                        A.2.0                0           42            2
-ARIS Architect 10.0.0                                        C.1.0                0          142           51
-ARIS Architect 10.0.0                                        B.1.0                0          151           11
-ARIS Architect 10.0.0                                        A.4.0                0           84            6
-ARIS Architect 10.0.0                                        A.3.0                0           44            2
 ADONIS NP 5.2                                                A.4.1                0          200            0
 ADONIS NP 5.2                                                C.2.0                0          419            0
 ADONIS NP 5.2                                                C.1.1                0          220            7
