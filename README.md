@@ -18,7 +18,7 @@ This work is licensed under the MIT License (see LICENSE.txt).
 The development environment is being set up as follows:
 
 1. First, clone the following repositories bmpm-miwig-test-suite and bpmn-miwg-tools
-2. In `bmpm-miwig-test-suite`:
+2. In `bpmn-mwig-test-suite`:
 	1. Run `mvn clean install`
 3. In `bpmn-miwg-tools`:
 	1. Run `mvn clean install`
