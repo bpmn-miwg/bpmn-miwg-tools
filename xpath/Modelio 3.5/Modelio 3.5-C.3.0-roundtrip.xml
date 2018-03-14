@@ -1,7 +1,7 @@
 <analysis name="Modelio 3.5-C.3.0-roundtrip" toolName="xpath">
    <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="MO-68a45e76-c353-4558-ac28-cfe126f6294b" caller="execute">
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="No node found" parameter="bpmn:resource[@name=&apos;User&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Null node" parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute id=MO-68a45e76-c353-4558-ac28-cfe126f6294b"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFirstProcess" message="/bpmn:definitions/bpmn:process"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;MO-9e256cde-8ba7-459d-b4bd-2416f6609c98&apos;]"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;MO-9e256cde-8ba7-459d-b4bd-2416f6609c98&apos;]"/>
@@ -79,7 +79,7 @@
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Perform repair (standard level)&apos; and @id=&apos;MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6&apos;]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6&apos;]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;&apos; found"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;null&apos; found"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;MO-1a5ac989-8618-490a-b878-e0f88a3dc8c5&apos;]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;MO-1a5ac989-8618-490a-b878-e0f88a3dc8c5&apos;]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="The messageEventDefinition element has no messageRef attribute"/>

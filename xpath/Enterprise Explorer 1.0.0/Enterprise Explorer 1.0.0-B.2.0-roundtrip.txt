@@ -191,9 +191,6 @@ ANALYSIS: Enterprise Explorer 1.0.0-B.2.0-roundtrip (Tool: xpath)
           OK     : navigateElement                          Message: bpmn:subProcess[@name='Collapsed Sub-Process 2']
           FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_cd569cb0-354f-46cd-bd4b-b5727da37631']
           FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_cd569cb0-354f-46cd-bd4b-b5727da37631']
-          OK     : checkDataAssociation                     Push (id: _cd569cb0-354f-46cd-bd4b-b5727da37631)
-            FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'Data Store Reference'; Parameter: null
-            OK     : checkDataAssociation                     Pop (id: _cd569cb0-354f-46cd-bd4b-b5727da37631)
           OK     : selectElement                            Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: _765e4c70-d278-4527-b8a5-ee94e0c8458c)
             FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_765e4c70-d278-4527-b8a5-ee94e0c8458c']

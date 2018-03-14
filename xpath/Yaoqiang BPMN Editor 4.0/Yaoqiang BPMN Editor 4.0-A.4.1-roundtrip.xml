@@ -7,7 +7,6 @@
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;sid-34746A54-1D7D-46CA-B219-0C4CEAE51170&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-34746A54-1D7D-46CA-B219-0C4CEAE51170" caller="selectReferencedProcess">
-               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find extension element although the corresponding reference element contains an extension element" parameter="bpmn:extensionElements"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;sid-3D477D07-D669-4A26-9454-12AD775FDE70&apos;]"/>
@@ -33,12 +32,10 @@
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1" caller="doExecute"/>
          </entry>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByLane" message="//bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find extension element although the corresponding reference element contains an extension element" parameter="bpmn:extensionElements"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-34746A54-1D7D-46CA-B219-0C4CEAE51170" caller="selectProcessByLane">
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-34746A54-1D7D-46CA-B219-0C4CEAE51170" caller="doExecute"/>
          </entry>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByLane" message="//bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find extension element although the corresponding reference element contains an extension element" parameter="bpmn:extensionElements"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4" caller="selectProcessByLane">
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>

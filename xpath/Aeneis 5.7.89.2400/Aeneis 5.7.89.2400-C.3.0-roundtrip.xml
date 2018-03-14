@@ -1,7 +1,7 @@
 <analysis name="Aeneis 5.7.89.2400-C.3.0-roundtrip" toolName="xpath">
    <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_5033f8b0-0396-494b-a52c-787034420443" caller="execute">
       <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="No node found" parameter="bpmn:resource[@name=&apos;User&apos;]"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute id=_8170787a-3207-434d-9bea-4787059f444f"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute id=_5033f8b0-0396-494b-a52c-787034420443"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFirstProcess" message="/bpmn:definitions/bpmn:process"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_8170787a-3207-434d-9bea-4787059f444f" caller="selectFirstProcess">
@@ -59,9 +59,11 @@
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Perform repair (standard level)&apos; and @id=&apos;_d034722f-751d-4f37-a3d7-47993822e979&apos;]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateBoundaryEvent" message="Cannot find boundary element" parameter="bpmn:boundaryEvent[@name=&apos;&apos; and @attachedToRef=&apos;_d034722f-751d-4f37-a3d7-47993822e979&apos;]"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Cannot find message event definition" parameter="bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef"/>
-         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:userTask[@name=&apos;Perform repair (premium level)&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;null&apos; found"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="The messageEventDefinition element has no messageRef attribute"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Perform repair (premium level)&apos; and @id=&apos;_6a34496f-8cf7-42e5-88a9-d1af98cc3cba&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/bpmn20:definitions[@id=&apos;id=&quot;_5033f8b0-0396-494b-a52c-787034420443&quot;&apos;]/bpmn20:process[@id=&apos;id=&quot;_8170787a-3207-434d-9bea-4787059f444f&quot;&apos;]/bpmn20:userTask[@id=&apos;id=&quot;_d034722f-751d-4f37-a3d7-47993822e979&quot;&apos;]/"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoExtensionElements" message="Extension elements are similar to the reference"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Repair completed&apos; and @id=&apos;_dcee5c64-3010-4ee5-b480-bce856e6f29c&apos;]"/>

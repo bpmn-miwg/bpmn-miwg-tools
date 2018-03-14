@@ -1,7 +1,7 @@
 ANALYSIS: Enterprise Explorer 1.0.0-C.3.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: _03eb5be7-8ee6-49f3-b042-a6d7a9cb20b9)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
-    OK     : checkAttributeValue                      Message: Attribute id=_8170787a-3207-434d-9bea-4787059f444f
+    OK     : checkAttributeValue                      Message: Attribute id=_03eb5be7-8ee6-49f3-b042-a6d7a9cb20b9
     OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
     FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_2dafe4a3-3ab0-4cd3-b819-f286612ad2fa']
     FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_2dafe4a3-3ab0-4cd3-b819-f286612ad2fa']
@@ -81,7 +81,7 @@ ANALYSIS: Enterprise Explorer 1.0.0-C.3.0-roundtrip (Tool: xpath)
       OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (standard level)' and @id='_39176d25-6a95-47b5-aa30-1b5fece5b9b5']
       FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_39176d25-6a95-47b5-aa30-1b5fece5b9b5']
       FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_39176d25-6a95-47b5-aa30-1b5fece5b9b5']
-      FINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='' and @attachedToRef='_39176d25-6a95-47b5-aa30-1b5fece5b9b5']
+      FINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@attachedToRef='_39176d25-6a95-47b5-aa30-1b5fece5b9b5']
       FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
       FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Perform repair (premium level)']
       OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="_03eb5be7-8ee6-49f3-b042-a6d7a9cb20b9"']/process[@id='id="_2dafe4a3-3ab0-4cd3-b819-f286612ad2fa"']/userTask[@id='id="_39176d25-6a95-47b5-aa30-1b5fece5b9b5"']/

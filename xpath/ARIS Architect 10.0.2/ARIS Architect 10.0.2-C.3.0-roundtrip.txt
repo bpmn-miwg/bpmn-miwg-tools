@@ -1,7 +1,7 @@
 ANALYSIS: ARIS Architect 10.0.2-C.3.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: Definitions_Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
-    OK     : checkAttributeValue                      Message: Attribute id=_8170787a-3207-434d-9bea-4787059f444f
+    OK     : checkAttributeValue                      Message: Attribute id=Definitions_Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw
     OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
     FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='Process_Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw']
     FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='Process_Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw']
@@ -61,9 +61,11 @@ ANALYSIS: ARIS Architect 10.0.2-C.3.0-roundtrip (Tool: xpath)
       FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
       OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (standard level)' and @id='_d034722f-751d-4f37-a3d7-47993822e979']
       FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
-      FINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='' and @attachedToRef='_d034722f-751d-4f37-a3d7-47993822e979']
-      FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
-      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Perform repair (premium level)']
+      OK     : navigateBoundaryEvent                    Message: Boundary element 'null' found
+      FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+      FINDING: checkMessageEvent                        Message: The messageEventDefinition element has no messageRef attribute; Parameter: null
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (premium level)' and @id='_6a34496f-8cf7-42e5-88a9-d1af98cc3cba']
+      FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
       OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="Definitions_Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw"']/semantic:process[@id='id="Process_Bpmndi_BPMNDiagram_jcwkwO_bEeSGoscwBjzAjw"']/semantic:userTask[@id='id="_d034722f-751d-4f37-a3d7-47993822e979"']/
       FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
       OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Repair completed' and @id='_dcee5c64-3010-4ee5-b480-bce856e6f29c']

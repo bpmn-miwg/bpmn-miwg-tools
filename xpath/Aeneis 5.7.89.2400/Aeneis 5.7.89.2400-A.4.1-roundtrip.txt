@@ -8,7 +8,6 @@ ANALYSIS: Aeneis 5.7.89.2400-A.4.1-roundtrip (Tool: xpath)
         FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_497780e1-7c8e-493d-ac58-8cd4c27b7e6a_716b7597-e6ef-46f6-841d-cc60e803a310']
         OK     : selectReferencedProcess                  Message: //bpmn:process[@id='sid-34746A54-1D7D-46CA-B219-0C4CEAE51170']
         OK     : selectReferencedProcess                  Push (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)
-          OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
           OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 1']
           OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
           OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='sid-3D477D07-D669-4A26-9454-12AD775FDE70']
@@ -22,11 +21,9 @@ ANALYSIS: Aeneis 5.7.89.2400-A.4.1-roundtrip (Tool: xpath)
           OK     : doExecute                                Pop (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)
         OK     : doExecute                                Pop (id: _497780e1-7c8e-493d-ac58-8cd4c27b7e6a_716b7597-e6ef-46f6-841d-cc60e803a310)
       OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
-      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
       OK     : selectProcessByLane                      Push (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)
         OK     : doExecute                                Pop (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)
       OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
-      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
       OK     : selectProcessByLane                      Push (id: sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4)
         OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 2']
         OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference

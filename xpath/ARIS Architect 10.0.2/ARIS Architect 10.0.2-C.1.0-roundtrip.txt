@@ -1,11 +1,11 @@
 ANALYSIS: ARIS Architect 10.0.2-C.1.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: Definitions_sid-78cf0368-c97e-4dea-885f-0e535c20d6c7)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     OK     : selectCollaboration                      Message: bpmn:collaboration
     OK     : selectCollaboration                      Push (id: Collaboration_sid-78cf0368-c97e-4dea-885f-0e535c20d6c7)
       FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='Collaboration_sid-78cf0368-c97e-4dea-885f-0e535c20d6c7']

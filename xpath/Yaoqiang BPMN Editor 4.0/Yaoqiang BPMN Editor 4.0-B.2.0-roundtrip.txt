@@ -98,9 +98,6 @@ ANALYSIS: Yaoqiang BPMN Editor 4.0-B.2.0-roundtrip (Tool: xpath)
           OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 6 Message' and @id='_c889aa27-e389-48eb-aa18-613ec53614e7']
           OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Output)
           OK     : navigateElement                          Message: bpmn:subProcess[@name='Collapsed Sub-Process 2']
-          OK     : checkDataAssociation                     Push (id: _0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447)
-            OK     : checkDataAssociation                     Message: Association reference dataStoreReference 'Data Store Reference' found
-            OK     : checkDataAssociation                     Pop (id: _0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447)
           OK     : selectElement                            Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: _49e94b5f-ce21-4c2b-b78d-3cde5c09c15e)
             OK     : navigateGatewaySequenceFlowStack         Message: Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id='%s']; Target parameter .; Target Check: self::node()[@name='Default Sequence Flow 2']

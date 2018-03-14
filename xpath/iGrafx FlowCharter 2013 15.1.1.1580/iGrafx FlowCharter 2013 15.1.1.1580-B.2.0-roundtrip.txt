@@ -4,31 +4,31 @@ ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-B.2.0-roundtrip (Tool: xpath)
     OK     : selectCollaboration                      Push (id: )
       FINDING: selectProcessByParticipant               Message: Parent failed; Parameter: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
       OK     : selectProcessByParticipant               Push (id: )
-        FINDING: checkXORMarkersForProcess                Message: Current node is null; Parameter: null
         FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 1 Timer']
-        FINDING: checkTimerEvent                          Message: Current node is null; Parameter: null
-        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-        FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
-        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-        FINDING: checkDataAssociation                     Message: Current node is null; Parameter: null
-        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-        FINDING: checkSignalEvent                         Message: Current node is null; Parameter: null
+        OK     : checkTimerEvent                          Message: Timer event definition
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : checkDataAssociation                     Push (id: )
+          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataObject 'Data Object'; Parameter: null
+          OK     : checkDataAssociation                     Pop (id: )
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: checkSignalEvent                         Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef
         FINDING: selectFollowingElement                   Message: Parent failed; Parameter: Type: bpmn:subProcess, name: Collapsed Sub-Process 1 Multi-Instances
         OK     : selectFollowingElement                   Push (id: )
-          FINDING: checkMultiInstanceParallel               Message: Current node is null; Parameter: null
-          FINDING: checkXORMarkersForProcess                Message: Current node is null; Parameter: null
+          FINDING: checkMultiInstanceParallel               Message: Loop characteristics not set; Parameter: bpmn:multiInstanceLoopCharacteristics
           OK     : doExecute                                Pop (id: )
-        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-        FINDING: navigateBoundaryEvent                    Message: Current node is null; Parameter: null
-        FINDING: checkCancelActivity                      Message: No current node; Parameter: 
-        FINDING: checkParallelMultiple                    Message: No current node; Parameter: 
-        FINDING: checkConditionalEvent                    Message: Current node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateBoundaryEvent                    Message: Parent failed; Parameter: null
+        FINDING: checkCancelActivity                      Message: Attribute cancelActivity is not existing and the expected value (false) is not equal to the default value (true); Parameter: 
+        OK     : checkParallelMultiple                    Message: Attribute parallelMultiple is not existing but the expected value (false) equals the default value (false)
+        FINDING: checkConditionalEvent                    Message: Cannot find conditional event definition; Parameter: bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef
         FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:parallelGateway[@name='Parallel Gateway 2']
         FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:endEvent[@name='End Event 1 Message']
-        FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
+        FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
         OK     : navigateBookmarkedElement                Message: 
         FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
         FINDING: checkGlobalTask                          Message: Current node is null; Parameter: null
@@ -54,15 +54,14 @@ ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-B.2.0-roundtrip (Tool: xpath)
       OK     : selectPool                               Push (id: )
         FINDING: selectReferencedProcess                  Message: Node is null; Parameter: 
         OK     : selectReferencedProcess                  Push (id: )
-          FINDING: checkXORMarkersForProcess                Message: Current node is null; Parameter: null
           FINDING: navigateLane                             Message: Parent failed; Parameter: bpmn:laneSet/bpmn:lane[@name='Lane 1']
           FINDING: navigateLane                             Message: Parent failed; Parameter: bpmn:laneSet/bpmn:lane[@name='Lane 2']
           FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 2 Message']
-          FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
-          FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
-          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
-          FINDING: checkEventGatewayExclusive               Message: No current node; Parameter: 
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+          OK     : checkEventGatewayExclusive               Message: Attribute eventGatewayType is not existing but the expected value (Exclusive) equals the default value (Exclusive)
           OK     : navigateBookmarkedElement                Message: 
           FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
           FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
@@ -98,7 +97,6 @@ ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-B.2.0-roundtrip (Tool: xpath)
           FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
           FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
           FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:subProcess[@name='Collapsed Sub-Process 2']
-          FINDING: checkDataAssociation                     Message: Current node is null; Parameter: null
           FINDING: selectElement                            Message: Parent failed; Parameter: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: )
             FINDING: navigateGatewaySequenceFlowStack         Message: Parent failed; Parameter: 

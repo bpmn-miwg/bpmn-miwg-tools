@@ -217,10 +217,6 @@
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:subProcess[@name=&apos;Collapsed Sub-Process 2&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;EAID_833ED3BE_0F07_4e15_BEC6_6430B08A02BF&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;EAID_833ED3BE_0F07_4e15_BEC6_6430B08A02BF&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="EAID_833ED3BE_0F07_4e15_BEC6_6430B08A02BF" caller="checkDataAssociation">
-                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkDataAssociation" message="Association reference dataStoreReference &apos;Data Store Reference&apos; found"/>
-                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="EAID_833ED3BE_0F07_4e15_BEC6_6430B08A02BF" caller="checkDataAssociation"/>
-               </entry>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectElement" message="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway 4&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="EAID_4C1BC587_4ED7_44d8_8E51_2071F97F2C07" caller="selectElement">
                   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;EAID_4C1BC587_4ED7_44d8_8E51_2071F97F2C07&apos;]"/>

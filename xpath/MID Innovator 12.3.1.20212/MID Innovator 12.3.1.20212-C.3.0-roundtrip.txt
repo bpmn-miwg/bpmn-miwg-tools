@@ -1,7 +1,7 @@
 ANALYSIS: MID Innovator 12.3.1.20212-C.3.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: )
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
-    OK     : checkAttributeValue                      Message: Attribute id=_8170787a-3207-434d-9bea-4787059f444f
+    FINDING: checkAttributeValue                      Message: Attribute id is not existing.; Parameter: 
     OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
     FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
     OK     : selectFirstProcess                       Push (id: )

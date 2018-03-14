@@ -1,11 +1,11 @@
 ANALYSIS: MID Innovator 12.3.1.20212-C.1.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: )
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     OK     : selectCollaboration                      Message: bpmn:collaboration
     OK     : selectCollaboration                      Push (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)
       FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null

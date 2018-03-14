@@ -211,9 +211,6 @@ ANALYSIS: Modelio 3.5-B.2.0-roundtrip (Tool: xpath)
           OK     : navigateElement                          Message: bpmn:subProcess[@name='Collapsed Sub-Process 2']
           FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-a9a5783c-39a6-45a6-bd34-743ff27d0ea0']
           FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-a9a5783c-39a6-45a6-bd34-743ff27d0ea0']
-          OK     : checkDataAssociation                     Push (id: MO-a9a5783c-39a6-45a6-bd34-743ff27d0ea0)
-            OK     : checkDataAssociation                     Message: Association reference dataStoreReference 'Data Store Reference' found
-            OK     : checkDataAssociation                     Pop (id: MO-a9a5783c-39a6-45a6-bd34-743ff27d0ea0)
           OK     : selectElement                            Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: MO-7198b20d-4183-4257-abc3-2f67bb079286)
             FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-7198b20d-4183-4257-abc3-2f67bb079286']

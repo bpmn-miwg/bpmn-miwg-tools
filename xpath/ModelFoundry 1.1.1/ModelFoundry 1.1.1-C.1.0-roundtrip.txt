@@ -1,11 +1,11 @@
 ANALYSIS: ModelFoundry 1.1.1-C.1.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: sid-bdb880ac-c464-4e5c-aa56-569d709436e0)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
-    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
     OK     : selectCollaboration                      Message: bpmn:collaboration
     OK     : selectCollaboration                      Push (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)
       FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements

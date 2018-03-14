@@ -1,7 +1,7 @@
 ANALYSIS: Modelio 3.5-C.3.0-roundtrip (Tool: xpath)
   OK     : execute                                  Push (id: MO-68a45e76-c353-4558-ac28-cfe126f6294b)
     FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='User']
-    FINDING: checkAttributeValue                      Message: Null node; Parameter: 
+    OK     : checkAttributeValue                      Message: Attribute id=MO-68a45e76-c353-4558-ac28-cfe126f6294b
     OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
     FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-9e256cde-8ba7-459d-b4bd-2416f6609c98']
     FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-9e256cde-8ba7-459d-b4bd-2416f6609c98']
@@ -79,7 +79,7 @@ ANALYSIS: Modelio 3.5-C.3.0-roundtrip (Tool: xpath)
       OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (standard level)' and @id='MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6']
       FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6']
       FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-f6aa0481-1a50-48be-b64e-d0c2c8a00da6']
-      OK     : navigateBoundaryEvent                    Message: Boundary element '' found
+      OK     : navigateBoundaryEvent                    Message: Boundary element 'null' found
       FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1a5ac989-8618-490a-b878-e0f88a3dc8c5']
       FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='MO-1a5ac989-8618-490a-b878-e0f88a3dc8c5']
       FINDING: checkMessageEvent                        Message: The messageEventDefinition element has no messageRef attribute; Parameter: null

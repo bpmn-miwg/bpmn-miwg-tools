@@ -212,9 +212,6 @@ ANALYSIS: Enterprise Architect 12.0.1207-B.2.0-roundtrip (Tool: xpath)
           OK     : navigateElement                          Message: bpmn:subProcess[@name='Collapsed Sub-Process 2']
           FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='EAID_833ED3BE_0F07_4e15_BEC6_6430B08A02BF']
           FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='EAID_833ED3BE_0F07_4e15_BEC6_6430B08A02BF']
-          OK     : checkDataAssociation                     Push (id: EAID_833ED3BE_0F07_4e15_BEC6_6430B08A02BF)
-            OK     : checkDataAssociation                     Message: Association reference dataStoreReference 'Data Store Reference' found
-            OK     : checkDataAssociation                     Pop (id: EAID_833ED3BE_0F07_4e15_BEC6_6430B08A02BF)
           OK     : selectElement                            Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: EAID_4C1BC587_4ED7_44d8_8E51_2071F97F2C07)
             FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='EAID_4C1BC587_4ED7_44d8_8E51_2071F97F2C07']

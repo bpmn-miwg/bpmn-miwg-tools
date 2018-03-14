@@ -179,9 +179,6 @@ ANALYSIS: Visual Paradigm 11.1-B.2.0-roundtrip (Tool: xpath)
           OK     : navigateElement                          Message: bpmn:subProcess[@name='Collapsed Sub-Process 2']
           FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__0263ca9e_2ca0_4f4e_b7dd_86e15dcf2447']
           FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__0263ca9e_2ca0_4f4e_b7dd_86e15dcf2447']
-          OK     : checkDataAssociation                     Push (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__0263ca9e_2ca0_4f4e_b7dd_86e15dcf2447)
-            FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:dataInputAssociation/bpmn:targetRef[text()='_fa10ebaf_7088_4def_8cc3_d959b8876b06-target']
-            OK     : checkDataAssociation                     Pop (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__0263ca9e_2ca0_4f4e_b7dd_86e15dcf2447)
           OK     : selectElement                            Message: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__49e94b5f_ce21_4c2b_b78d_3cde5c09c15e)
             FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='ls_55bb31e8_9e62_48ea_8f0e_1a748c04bbf6__4a6df7ac_26d8_4718_ac05_90af463d5e23__49e94b5f_ce21_4c2b_b78d_3cde5c09c15e']

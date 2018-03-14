@@ -99,7 +99,6 @@ ANALYSIS: Bonita BPM 7.2.3-B.2.0-roundtrip (Tool: xpath)
           FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
           FINDING: checkMessageFlow                         Message: Current node is null; Parameter: null
           FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:subProcess[@name='Collapsed Sub-Process 2']
-          FINDING: checkDataAssociation                     Message: Current node is null; Parameter: null
           FINDING: selectElement                            Message: Parent failed; Parameter: bpmn:exclusiveGateway[@name='Exclusive Gateway 4']
           OK     : selectElement                            Push (id: )
             FINDING: navigateGatewaySequenceFlowStack         Message: Parent failed; Parameter: 

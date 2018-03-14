@@ -126,9 +126,17 @@ ANALYSIS: BeePMN 1.3-C.3.0-roundtrip (Tool: xpath)
       OK     : navigateFollowingElement                 Push (id: )
         FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn2' - comparing <extensionElements...> at /extensionElements[1] to <bpmn2:extensionElements...> at /extensionElements[1]; Parameter: null
         OK     : navigateFollowingElement                 Pop (id: )
-      FINDING: navigateBoundaryEvent                    Message: Cannot find boundary element; Parameter: bpmn:boundaryEvent[@name='' and @attachedToRef='_d034722f-751d-4f37-a3d7-47993822e979']
-      FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
-      FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='Perform repair (premium level)']
+      OK     : navigateBoundaryEvent                    Message: Boundary element 'null' found
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateBoundaryEvent                    Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn2' - comparing <extensionElements...> at /extensionElements[1] to <bpmn2:extensionElements...> at /extensionElements[1]; Parameter: null
+        OK     : navigateBoundaryEvent                    Pop (id: )
+      OK     : checkMessageEvent                        Message: Message event definition
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (premium level)' and @id='_6a34496f-8cf7-42e5-88a9-d1af98cc3cba']
+      FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+      OK     : navigateFollowingElement                 Push (id: )
+        FINDING: checkAutoExtensionElements               Message: 15: Expected namespace prefix 'null' but was 'bpmn2' - comparing <extensionElements...> at /extensionElements[1] to <bpmn2:extensionElements...> at /extensionElements[1]; Parameter: null
+        OK     : navigateFollowingElement                 Pop (id: )
       OK     : navigateBookmarkedElement                Message: #document/bpmn2:definitions[@id='id="_5033f8b0-0396-494b-a52c-787034420443"']/bpmn2:process[@id='id="_8170787a-3207-434d-9bea-4787059f444f"']/bpmn2:userTask[@id='id="_d034722f-751d-4f37-a3d7-47993822e979"']/
       FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
       OK     : navigateBookmarkedElement                Push (id: )

@@ -104,10 +104,6 @@
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 6 Message&apos; and @id=&apos;_c889aa27-e389-48eb-aa18-613ec53614e7&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;Message Flow 2&apos; (Output)"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:subProcess[@name=&apos;Collapsed Sub-Process 2&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447" caller="checkDataAssociation">
-                  <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find the associated artifact dataStoreReference &apos;Data Store Reference&apos;"/>
-                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_0263ca9e-2ca0-4f4e-b7dd-86e15dcf2447" caller="checkDataAssociation"/>
-               </entry>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectElement" message="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway 4&apos;]"/>
                <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_49e94b5f-ce21-4c2b-b78d-3cde5c09c15e" caller="selectElement">
                   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateGatewaySequenceFlowStack" message="Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id=&apos;%s&apos;]; Target parameter .; Target Check: self::node()[@name=&apos;Default Sequence Flow 2&apos;]"/>

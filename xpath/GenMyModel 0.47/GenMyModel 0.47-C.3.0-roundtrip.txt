@@ -60,7 +60,7 @@ ANALYSIS: GenMyModel 0.47-C.3.0-roundtrip (Tool: xpath)
       FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
       OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (standard level)' and @id='_d034722f-751d-4f37-a3d7-47993822e979']
       FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
-      OK     : navigateBoundaryEvent                    Message: Boundary element '' found
+      OK     : navigateBoundaryEvent                    Message: Boundary element 'null' found
       FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
       OK     : checkMessageEvent                        Message: Message event definition
       OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Perform repair (premium level)' and @id='_6a34496f-8cf7-42e5-88a9-d1af98cc3cba']
