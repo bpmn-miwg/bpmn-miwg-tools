@@ -198,6 +198,17 @@ ARIS Architect 9.8.3                                         C.1.0              
 ARIS Architect 9.8.3                                         B.1.0                0          157           79
 ARIS Architect 9.8.3                                         A.4.0                0           64           29
 ARIS Architect 9.8.3                                         A.3.0                0           50           30
+BPMN+ Composer V.10.3                                        A.4.1                0          159            0
+BPMN+ Composer V.10.3                                        C.2.0                0          686            0
+BPMN+ Composer V.10.3                                        A.1.0                0           72            0
+BPMN+ Composer V.10.3                                        C.3.0                0           19            0
+BPMN+ Composer V.10.3                                        B.2.0                0          603            0
+BPMN+ Composer V.10.3                                        A.2.0                0          124            0
+BPMN+ Composer V.10.3                                        C.1.0                0          120            0
+BPMN+ Composer V.10.3                                        B.1.0                0          514            0
+BPMN+ Composer V.10.3                                        C.4.0                0          977            3
+BPMN+ Composer V.10.3                                        A.4.0                0          252            0
+BPMN+ Composer V.10.3                                        A.3.0                0          135            0
 IBM Process Designer 8.0.1                                   A.1.0                0            6            8
 IBM Process Designer 8.0.1                                   A.2.0                0            6           12
 IBM Process Designer 8.0.1                                   A.3.0                0            6           18
