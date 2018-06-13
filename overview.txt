@@ -272,6 +272,7 @@ ARIS Architect 10.0.2                                        B.2.0              
 ARIS Architect 10.0.2                                        A.2.0                0           42            2
 ARIS Architect 10.0.2                                        C.1.0                0          142           54
 ARIS Architect 10.0.2                                        B.1.0                0          151           11
+ARIS Architect 10.0.2                                        C.4.0                0          560           64
 ARIS Architect 10.0.2                                        A.4.0                0           84            6
 ARIS Architect 10.0.2                                        A.3.0                0           44            2
 BeePMN 1.3                                                   C.2.0                0          257            0
