@@ -80,13 +80,18 @@
 
   <properties>
     <java.version>1.7</java.version>
-    <bpmn.miwg.tools.version>0.5-SNAPSHOT</bpmn.miwg.tools.version>
+    <!--
+      The tools version the maven plugin should use.
+      At various times we have run public tests using the previous tools
+      version so the tools can stabilise.
+    -->
+    <bpmn.miwg.tools.version>0.6.0-SNAPSHOT</bpmn.miwg.tools.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
     <!-- staging area for subsequent commit and push -->
     <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
- </properties>
+  </properties>
 
   <modules>
     <module>analysis-tool-api</module>
