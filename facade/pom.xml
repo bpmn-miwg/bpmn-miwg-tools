@@ -31,13 +31,6 @@
 		  <version>${bpmn.miwg.tools.version}</version>
 		</dependency>
 		<dependency>
-		  <groupId>org.omg.bpmn.miwg</groupId>
-		  <artifactId>test-suite</artifactId>
-		  <version>0.4-SNAPSHOT</version>
-		  <scope>runtime</scope>
-		  <classifier>reference-only</classifier>
-		</dependency>
-		<dependency>
 		  <groupId>org.glassfish</groupId>
 		  <artifactId>javax.json</artifactId>
 		  <version>1.0.4</version>

@@ -4,6 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>tools</artifactId>
+  <name>BPMN MIWG Tools</name>
   <packaging>pom</packaging>
   <version>0.6.0-SNAPSHOT</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
@@ -24,7 +25,8 @@
   </organization>
   
   <scm>
-    <url>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
+    <connection>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-tools</connection>
+    <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
   </scm>
 
   <distributionManagement>
@@ -101,8 +103,8 @@
     <module>bounds-generator</module>
     <module>submission-counter</module>
     <module>bpmn-miwg-maven-plugin</module>
-	<module>cli</module>
-	<module>facade</module>
+    <module>cli</module>
+    <module>facade</module>
   </modules>
 
   <dependencies>
@@ -153,7 +155,7 @@
           <artifactId>maven-scm-publish-plugin</artifactId>
           <version>1.0-beta-2</version>
         </plugin>
-	  </plugins>
+      </plugins>
     </pluginManagement>
     
     <plugins>
@@ -165,6 +167,11 @@
           <target>${java.version}</target>
         </configuration>
         <version>2.3.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
       </plugin>
     </plugins>
 
@@ -206,7 +213,4 @@
     </plugins>
   </reporting>
 
-  
-  
-  <name>BPMN MIWG Tools</name>
 </project>
