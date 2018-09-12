@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.omg.bpmn.miwg</groupId>
   <artifactId>tools</artifactId>
   <name>BPMN MIWG Tools</name>
   <packaging>pom</packaging>
-  <version>0.6.0-SNAPSHOT</version>
+  <version>0.6.0</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
@@ -27,6 +26,7 @@
   <scm>
     <connection>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-tools</connection>
     <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
+    <tag>0.6.0</tag>
   </scm>
 
   <distributionManagement>
@@ -66,7 +66,7 @@
     </developer>
     <developer>
       <name>Matthias Kurz</name>
-      <organization></organization>
+      <organization />
     </developer>
     <developer>
       <name>Sven Wagner-Boysen</name>
