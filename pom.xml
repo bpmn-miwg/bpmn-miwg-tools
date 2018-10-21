@@ -93,6 +93,7 @@
     <github.global.server>github</github.global.server>
     <!-- staging area for subsequent commit and push -->
     <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
+    <jackson.version>[2.8.11.1,)</jackson.version>
     <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
   </properties>
 
