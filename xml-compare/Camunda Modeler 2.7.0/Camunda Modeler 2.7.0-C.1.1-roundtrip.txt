@@ -91,12 +91,16 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@width = 56.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@y = 209.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@y = 229.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11] = sourceElement
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11]/waypoint[2]/@x = 230.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11]/waypoint[2]/@x = 229.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@x = 373.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@x = 365.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@y = 385.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@y = 400.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12] = sourceElement
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12]/waypoint[2]/@x = 403.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12]/waypoint[2]/@x = 402.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@height = 15.0
@@ -107,6 +111,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@x = 556.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@y = 209.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@y = 229.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13] = sourceElement
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13]/waypoint[2]/@x = 598.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13]/waypoint[2]/@x = 597.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 12.0

@@ -1,7 +1,11 @@
 ANALYSIS: Camunda Modeler 2.7.0-B.2.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/process[2]/dataObject[1] = name
+Test: /definitions[1]/process[2]/dataObject[1] = null
   Reference: /definitions[1]/process[2]/endEvent[2]/@name = End Event 1
 Message
 Test: /definitions[1]/process[2]/endEvent[2]/@name = End Event 1  Message
+  Reference: /definitions[1]/process[2]/dataObjectReference[1] = null
+Test: /definitions[1]/process[2]/dataObjectReference[1] = name
   Reference: /definitions[1]/process[3]/endEvent[2]/@name = End Event 6
 Message
 Test: /definitions[1]/process[3]/endEvent[2]/@name = End Event 6  Message

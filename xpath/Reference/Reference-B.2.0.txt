@@ -11,7 +11,7 @@ ANALYSIS: Reference-B.2.0 (Tool: xpath)
         OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Output)
         OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='User Task 3' and @id='_0e87da16-736e-45b2-95e5-8f45940f3adf']
         OK     : checkDataAssociation                     Push (id: _0e87da16-736e-45b2-95e5-8f45940f3adf)
-          OK     : checkDataAssociation                     Message: Association reference dataObject 'Data Object' found
+          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataObject 'Data Object'; Parameter: null
           OK     : checkDataAssociation                     Pop (id: _0e87da16-736e-45b2-95e5-8f45940f3adf)
         OK     : navigateFollowingElement                 Message: bpmn:inclusiveGateway[@name='Inclusive Gateway 1' and @id='_dec393e7-f182-4d31-b05f-e33ac3a5e35f']
         OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 4' and @id='_ac1fde31-c0cd-4a8a-9728-a5fb49602de7']

@@ -23,6 +23,8 @@ Test: /definitions[1]/process[1]/boundaryEvent[1]/messageEventDefinition[1] = se
 Test: null = null
   Reference: null = null
 Test: /definitions[1]/process[1]/endEvent[1]/terminateEventDefinition[1] = semantic:terminateEventDefinition
+  Reference: /definitions[1]/process[2]/dataObject[1] = name
+Test: /definitions[1]/process[2]/dataObject[1] = null
   Reference: /definitions[1]/process[2]/boundaryEvent[1] = parallelMultiple
 Test: /definitions[1]/process[2]/boundaryEvent[1] = null
   Reference: /definitions[1]/process[2]/boundaryEvent[1]/escalationEventDefinition[1] = semantic:escalationEventDefinition
@@ -76,6 +78,8 @@ Test: /definitions[1]/process[2]/subProcess[2]/userTask[1]/standardLoopCharacter
 Test: null = null
   Reference: null = null
 Test: /definitions[1]/process[2]/intermediateThrowEvent[1]/signalEventDefinition[1] = semantic:signalEventDefinition
+  Reference: /definitions[1]/process[2]/dataObjectReference[1] = null
+Test: /definitions[1]/process[2]/dataObjectReference[1] = name
   Reference: /definitions[1]/process[2]/textAnnotation[1] = null
 Test: /definitions[1]/process[2]/textAnnotation[1] = textFormat
   Reference: /definitions[1]/process[3]/subProcess[1]/startEvent[1] = null

@@ -389,6 +389,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@x = 201
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@y = 209.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@y = 229
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11] = sourceElement
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11]/waypoint[1]/@x = 230.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11]/waypoint[1]/@x = 230
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11]/waypoint[1]/@y = 132.0
@@ -413,6 +415,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@x = 365
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@y = 385.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@y = 400
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12] = sourceElement
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12]/waypoint[1]/@x = 403.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12]/waypoint[1]/@x = 403
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12]/waypoint[1]/@y = 305.0
@@ -437,6 +441,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@x = 556
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@y = 209.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@y = 229
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13] = sourceElement
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13]/waypoint[1]/@x = 598.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13]/waypoint[1]/@x = 598
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13]/waypoint[1]/@y = 132.0
