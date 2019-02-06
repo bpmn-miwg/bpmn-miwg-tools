@@ -373,6 +373,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/@lab
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@width = 67.17857360839844
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 281.32142693655834
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 285.05357033865795
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/@labelStyle = sid-ae9a9300-bd5c-4531-84ab-5f0791d9f49f
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/@labelStyle = sid-952dce12-2bfc-47b2-a6ce-2a913fb9e953
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Bounds[1]/@width = 40.28571319580078
@@ -381,6 +383,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Bounds[1]/@x = 299.01428658621654
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Bounds[1]/@y = 251.44999999999996
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Bounds[1]/@y = 250.44999999999996
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/BPMNLabel[1]/@labelStyle = sid-ae9a9300-bd5c-4531-84ab-5f0791d9f49f
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/BPMNLabel[1]/@labelStyle = sid-952dce12-2bfc-47b2-a6ce-2a913fb9e953
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]/BPMNLabel[1]/Bounds[1]/@width = 40.28571319580078
@@ -417,6 +421,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10]/BPMNLabel[1]/Bounds[1]/@x = 584.4500002179827
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10]/BPMNLabel[1]/Bounds[1]/@y = 726.7
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10]/BPMNLabel[1]/Bounds[1]/@y = 725.7
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/@labelStyle = sid-ae9a9300-bd5c-4531-84ab-5f0791d9f49f
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/@labelStyle = sid-952dce12-2bfc-47b2-a6ce-2a913fb9e953
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@width = 40.28571319580078
@@ -435,6 +441,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/@la
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@width = 67.17857360839844
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@x = 581.5357126508441
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@x = 585.2678560529437
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14]/BPMNLabel[1]/@labelStyle = sid-ae9a9300-bd5c-4531-84ab-5f0791d9f49f
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14]/BPMNLabel[1]/@labelStyle = sid-952dce12-2bfc-47b2-a6ce-2a913fb9e953
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14]/BPMNLabel[1]/Bounds[1]/@width = 40.28571319580078
@@ -455,6 +463,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15]/BPMNLabel[1]/Bounds[1]/@x = 585.4500002179827
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15]/BPMNLabel[1]/Bounds[1]/@y = 557.8
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15]/BPMNLabel[1]/Bounds[1]/@y = 556.8
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16]/BPMNLabel[1]/@labelStyle = sid-ae9a9300-bd5c-4531-84ab-5f0791d9f49f
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16]/BPMNLabel[1]/@labelStyle = sid-952dce12-2bfc-47b2-a6ce-2a913fb9e953
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16]/BPMNLabel[1]/Bounds[1]/@width = 40.28571319580078
@@ -491,6 +501,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/@la
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/Bounds[1]/@width = 67.17857360839844
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/Bounds[1]/@x = 861.5357126508438
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/Bounds[1]/@x = 865.2678560529434
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]/@labelStyle = sid-ae9a9300-bd5c-4531-84ab-5f0791d9f49f
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]/@labelStyle = sid-952dce12-2bfc-47b2-a6ce-2a913fb9e953
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]/Bounds[1]/@width = 40.28571319580078

@@ -1,1 +1,13 @@
 ANALYSIS: Camunda Modeler 2.7.0-A.4.1-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16] = null
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] = null

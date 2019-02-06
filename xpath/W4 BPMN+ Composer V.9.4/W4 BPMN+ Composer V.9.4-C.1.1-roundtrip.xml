@@ -1,7 +1,7 @@
 <analysis name="W4 BPMN+ Composer V.9.4-C.1.1-roundtrip" toolName="xpath">
    <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-bdb880ac-c464-4e5c-aa56-569d709436e0" caller="execute">
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateDefinitions" message="/bpmn:definitions"/>
-      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find attribute &apos;xmlns:color=&quot;http://www.omg.org/spec/BPMN/non-normative/color/1.0&quot;&apos; from reference in test file"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute expressionLanguage=http://www.w3.org/1999/XPath"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:resource[@name=&apos;Team Assistant&apos;]"/>
       <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="All non-BPMN attributes from reference exist in the test document as well."/>

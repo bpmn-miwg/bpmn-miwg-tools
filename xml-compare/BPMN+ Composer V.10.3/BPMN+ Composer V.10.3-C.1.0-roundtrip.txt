@@ -19,12 +19,16 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1]/Bounds[1]/@width = 20.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1]/Bounds[1]/@y = 68.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/BPMNLabel[1]/Bounds[1]/@y = 57.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1]/Bounds[1]/@height = 195.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1]/Bounds[1]/@height = 68.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1]/Bounds[1]/@width = 17.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1]/Bounds[1]/@width = 80.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1]/Bounds[1]/@y = 417.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1]/Bounds[1]/@y = 480.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -33,6 +37,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@width = 76.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@x = 86.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]/BPMNLabel[1]/Bounds[1]/@x = 76.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@height = 17.0
@@ -43,6 +49,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@x = 185.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@y = 125.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/BPMNLabel[1]/Bounds[1]/@y = 113.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -53,8 +61,12 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Bounds[1]/@x = 327.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Bounds[1]/@y = 116.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]/BPMNLabel[1]/Bounds[1]/@y = 113.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] = isHorizontal
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -65,6 +77,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1]/Bounds[1]/@x = 432.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1]/Bounds[1]/@y = 84.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]/BPMNLabel[1]/Bounds[1]/@y = 38.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]/BPMNLabel[1]/Bounds[1]/@height = 17.0
@@ -75,8 +89,12 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]/BPMNLabel[1]/Boun
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]/BPMNLabel[1]/Bounds[1]/@x = 541.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]/BPMNLabel[1]/Bounds[1]/@y = 125.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]/BPMNLabel[1]/Bounds[1]/@y = 113.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10] = isHorizontal
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -87,12 +105,16 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@x = 712.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@y = 125.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]/BPMNLabel[1]/Bounds[1]/@y = 99.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@height = 51.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@height = 80.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@y = 149.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]/BPMNLabel[1]/Bounds[1]/@y = 134.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@height = 17.0
@@ -103,6 +125,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@x = 726.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@y = 45.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]/BPMNLabel[1]/Bounds[1]/@y = 22.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15]/BPMNLabel[1]/Bounds[1]/@height = 64.0
@@ -123,6 +147,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[17]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[17]/BPMNLabel[1]/Bounds[1]/@width = 20.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[17]/BPMNLabel[1]/Bounds[1]/@y = 648.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[17]/BPMNLabel[1]/Bounds[1]/@y = 642.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -133,6 +159,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]/BPMNLabel[1]/Bounds[1]/@x = 384.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]/BPMNLabel[1]/Bounds[1]/@y = 518.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]/BPMNLabel[1]/Bounds[1]/@y = 515.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -141,6 +169,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]/BPMNLabel[1]/Bounds[1]/@width = 84.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]/BPMNLabel[1]/Bounds[1]/@x = 491.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]/BPMNLabel[1]/Bounds[1]/@x = 481.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -151,6 +181,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/Bounds[1]/@x = 207.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/Bounds[1]/@y = 345.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]/BPMNLabel[1]/Bounds[1]/@y = 342.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -161,6 +193,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]/Bounds[1]/@x = 575.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]/Bounds[1]/@y = 345.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]/BPMNLabel[1]/Bounds[1]/@y = 342.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -169,6 +203,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22]/BPMNLabel[1]/Bounds[1]/@width = 100.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22]/BPMNLabel[1]/Bounds[1]/@x = 691.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22]/BPMNLabel[1]/Bounds[1]/@x = 678.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -177,6 +213,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1]/Bounds[1]/@width = 96.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1]/Bounds[1]/@x = 919.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]/BPMNLabel[1]/Bounds[1]/@x = 907.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -185,6 +223,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]/BPMNLabel[1]/Bounds[1]/@width = 76.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]/BPMNLabel[1]/Bounds[1]/@x = 97.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]/BPMNLabel[1]/Bounds[1]/@x = 87.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1]/Bounds[1]/@height = 51.0
@@ -195,6 +235,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1]/Bounds[1]/@x = 665.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1]/Bounds[1]/@y = 670.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]/BPMNLabel[1]/Bounds[1]/@y = 665.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1]/Bounds[1]/@height = 34.0
@@ -203,6 +245,8 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1]/Bou
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1]/Bounds[1]/@width = 84.0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1]/Bounds[1]/@x = 924.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]/BPMNLabel[1]/Bounds[1]/@x = 913.0
+  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] = background-color
+Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] = isHorizontal
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27]/BPMNLabel[1]/Bounds[1]/@height = 34.0
