@@ -1,6 +1,7 @@
 ANALYSIS: Trisotech BPMN Visio Add in 5.0.1-B.1.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1]/dataStore[1] = null
-Test: /definitions[1]/dataStore[1] = name
+  Reference: /definitions[1]/dataStore[1]/@name = Data
+Store Reference
+Test: /definitions[1]/dataStore[1]/@name = Data  Store Reference
   Reference: /definitions[1]/dataStore[1] = 0
 Test: /definitions[1]/dataStore[1] = 2
   Reference: /definitions[1]/process[1] = null
@@ -58,8 +59,6 @@ Test: /definitions[1]/process[3] = name
 Test: /definitions[1]/process[3] = 35
   Reference: /definitions[1]/process[3]/laneSet[1] = semantic:laneSet
 Test: null = null
-  Reference: /definitions[1]/process[3]/dataObject[1] = null
-Test: /definitions[1]/process[3]/dataObject[1] = name
   Reference: /definitions[1]/process[3]/endEvent[1] = 2
 Test: /definitions[1]/process[3]/endEvent[2] = 34
   Reference: /definitions[1]/process[3]/callActivity[1] = 3

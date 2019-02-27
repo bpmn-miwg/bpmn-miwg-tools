@@ -1,8 +1,6 @@
 ANALYSIS: Trisotech BPMN Visio Add in 5.0.1-B.2.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1]/globalUserTask[1] = semantic:globalUserTask
 Test: null = null
-  Reference: /definitions[1]/dataStore[1] = null
-Test: /definitions[1]/dataStore[1] = name
   Reference: /definitions[1]/dataStore[1] = 1
 Test: /definitions[1]/dataStore[1] = 2
   Reference: /definitions[1]/process[1] = null
@@ -134,8 +132,6 @@ Test: /definitions[1]/process[2]/callActivity[1] = 8
 Test: /definitions[1]/process[2]/task[2] = 5
   Reference: /definitions[1]/process[2]/task[5] = 21
 Test: /definitions[1]/process[2]/task[1] = 2
-  Reference: /definitions[1]/process[2]/dataObjectReference[1] = null
-Test: /definitions[1]/process[2]/dataObjectReference[1] = name
   Reference: /definitions[1]/process[2]/dataObjectReference[1] = 22
 Test: /definitions[1]/process[2]/dataObjectReference[1] = 1
   Reference: /definitions[1]/process[2]/sequenceFlow[1] = name

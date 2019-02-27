@@ -1,7 +1,11 @@
 ANALYSIS: Camunda Modeler 2.7.0-B.1.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/dataStore[1] = name
+Test: /definitions[1]/dataStore[1] = null
   Reference: /definitions[1]/process[2]/userTask[1]/@name = User
 Task 2
 Test: /definitions[1]/process[2]/userTask[1]/@name = User  Task 2
+  Reference: /definitions[1]/process[3]/dataObject[1] = name
+Test: /definitions[1]/process[3]/dataObject[1] = null
   Reference: /definitions[1]/process[3]/startEvent[1]/@name = Start Event
 Message
 Test: /definitions[1]/process[3]/startEvent[1]/@name = Start Event  Message

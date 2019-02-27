@@ -1,6 +1,8 @@
 ANALYSIS: ModelFoundry 1.1.1-B.1.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1] = 11
 Test: /definitions[1] = 10
+  Reference: /definitions[1]/dataStore[1] = name
+Test: /definitions[1]/dataStore[1] = null
   Reference: /definitions[1]/process[1]/sequenceFlow[1] = name
 Test: /definitions[1]/process[1]/sequenceFlow[1] = null
   Reference: /definitions[1]/process[1]/sequenceFlow[2] = name
@@ -34,6 +36,8 @@ Test: /definitions[1]/process[2]/sequenceFlow[3] = null
 Test: /definitions[1]/process[2]/sequenceFlow[4] = null
   Reference: /definitions[1]/process[3]/laneSet[1] = semantic:laneSet
 Test: null = null
+  Reference: /definitions[1]/process[3]/dataObject[1] = name
+Test: /definitions[1]/process[3]/dataObject[1] = null
   Reference: /definitions[1]/process[3]/dataObject[1] = 1
 Test: /definitions[1]/process[3]/dataObject[1] = 2
   Reference: /definitions[1]/process[3]/endEvent[1] = 2

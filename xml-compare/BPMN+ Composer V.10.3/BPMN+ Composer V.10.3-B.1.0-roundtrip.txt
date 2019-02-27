@@ -1,6 +1,8 @@
 ANALYSIS: BPMN+ Composer V.10.3-B.1.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1]/dataStore[1] = capacity
 Test: /definitions[1]/dataStore[1] = null
+  Reference: /definitions[1]/dataStore[1] = name
+Test: /definitions[1]/dataStore[1] = null
   Reference: /definitions[1]/process[1] = 5
 Test: /definitions[1]/process[1] = 6
   Reference: /definitions[1]/process[1]/startEvent[1] = null
@@ -143,6 +145,8 @@ Test: /definitions[1]/process[3]/laneSet[1]/lane[2]/flowNodeRef[7] = 7
 Test: /definitions[1]/process[3]/laneSet[1]/lane[2]/extensionElements[1] = semantic:extensionElements
   Reference: /definitions[1]/process[3]/laneSet[1] = 0
 Test: /definitions[1]/process[3]/laneSet[1] = 1
+  Reference: /definitions[1]/process[3]/dataObject[1] = name
+Test: /definitions[1]/process[3]/dataObject[1] = null
   Reference: /definitions[1]/process[3]/dataObject[1] = 1
 Test: /definitions[1]/process[3]/dataObject[1] = 2
   Reference: /definitions[1]/process[3]/endEvent[1] = 2

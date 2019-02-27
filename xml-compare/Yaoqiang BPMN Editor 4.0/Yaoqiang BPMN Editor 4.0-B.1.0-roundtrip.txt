@@ -1,6 +1,8 @@
 ANALYSIS: Yaoqiang BPMN Editor 4.0-B.1.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1] = [attribute absent]
 Test: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd
+  Reference: /definitions[1]/dataStore[1] = name
+Test: /definitions[1]/dataStore[1] = null
   Reference: /definitions[1]/dataStore[1] = 0
 Test: /definitions[1]/dataStore[1] = 2
   Reference: /definitions[1]/process[1]/startEvent[1] = null
@@ -34,6 +36,8 @@ Test: /definitions[1]/process[2]/sequenceFlow[3] = null
 Test: /definitions[1]/process[2]/sequenceFlow[4] = null
   Reference: /definitions[1]/process[2] = 2
 Test: /definitions[1]/process[2] = 4
+  Reference: /definitions[1]/process[3]/dataObject[1] = name
+Test: /definitions[1]/process[3]/dataObject[1] = null
   Reference: /definitions[1]/process[3]/endEvent[1]/messageEventDefinition[1] = semantic:messageEventDefinition
 Test: null = null
   Reference: null = null

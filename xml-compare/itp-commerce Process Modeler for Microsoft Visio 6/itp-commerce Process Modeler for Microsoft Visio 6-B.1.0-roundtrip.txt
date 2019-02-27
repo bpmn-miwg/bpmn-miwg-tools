@@ -3,6 +3,8 @@ ANALYSIS: itp-commerce Process Modeler for Microsoft Visio 6-B.1.0-roundtrip (To
 Test: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd
   Reference: /definitions[1]/dataStore[1] = isUnlimited
 Test: /definitions[1]/dataStore[1] = null
+  Reference: /definitions[1]/dataStore[1] = name
+Test: /definitions[1]/dataStore[1] = null
   Reference: /definitions[1]/process[1] = isExecutable
 Test: /definitions[1]/process[1] = null
   Reference: /definitions[1]/process[1]/task[1] = completionQuantity
@@ -57,6 +59,8 @@ Test: /definitions[1]/process[3] = name
   Reference: /definitions[1]/process[3] = 37
 Test: /definitions[1]/process[3] = 38
   Reference: /definitions[1]/process[3]/dataObject[1] = isCollection
+Test: /definitions[1]/process[3]/dataObject[1] = null
+  Reference: /definitions[1]/process[3]/dataObject[1] = name
 Test: /definitions[1]/process[3]/dataObject[1] = null
   Reference: /definitions[1]/process[3]/callActivity[1] = completionQuantity
 Test: /definitions[1]/process[3]/callActivity[1] = null

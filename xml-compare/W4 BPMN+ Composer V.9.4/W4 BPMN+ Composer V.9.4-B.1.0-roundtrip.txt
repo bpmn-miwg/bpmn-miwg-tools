@@ -1,6 +1,8 @@
 ANALYSIS: W4 BPMN+ Composer V.9.4-B.1.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1]/dataStore[1] = capacity
 Test: /definitions[1]/dataStore[1] = null
+  Reference: /definitions[1]/dataStore[1] = name
+Test: /definitions[1]/dataStore[1] = null
   Reference: /definitions[1]/process[1]/startEvent[1] = null
 Test: /definitions[1]/process[1]/startEvent[1] = isInterrupting
   Reference: /definitions[1]/process[2]/startEvent[1] = null
@@ -12,6 +14,8 @@ Test: /definitions[1]/process[2]/startEvent[1]/timerEventDefinition[1] = semanti
   Reference: /definitions[1]/process[2]/userTask[1]/@name = User
 Task 2
 Test: /definitions[1]/process[2]/userTask[1]/@name = User  Task 2
+  Reference: /definitions[1]/process[3]/dataObject[1] = name
+Test: /definitions[1]/process[3]/dataObject[1] = null
   Reference: /definitions[1]/process[3]/endEvent[1]/messageEventDefinition[1] = semantic:messageEventDefinition
 Test: null = null
   Reference: null = null

@@ -1,8 +1,6 @@
 ANALYSIS: Trisotech BPMN Modeler 6.0.0-B.2.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1]/globalUserTask[1] = 0
 Test: /definitions[1]/globalUserTask[1] = 2
-  Reference: /definitions[1]/dataStore[1] = null
-Test: /definitions[1]/dataStore[1] = name
   Reference: /definitions[1]/process[1]/userTask[1] = isForCompensation
 Test: /definitions[1]/process[1]/userTask[1] = null
   Reference: /definitions[1]/process[1]/userTask[1]/multiInstanceLoopCharacteristics[1] = semantic:multiInstanceLoopCharacteristics
@@ -143,8 +141,6 @@ Test: /definitions[1]/process[2]/task[4] = 17
 Test: /definitions[1]/process[2]/task[5] = null
   Reference: /definitions[1]/process[2]/task[5] = 21
 Test: /definitions[1]/process[2]/task[5] = 18
-  Reference: /definitions[1]/process[2]/dataObjectReference[1] = null
-Test: /definitions[1]/process[2]/dataObjectReference[1] = name
   Reference: /definitions[1]/process[2]/dataObjectReference[1] = 22
 Test: /definitions[1]/process[2]/dataObjectReference[1] = 19
   Reference: /definitions[1]/process[2]/sequenceFlow[1] = name

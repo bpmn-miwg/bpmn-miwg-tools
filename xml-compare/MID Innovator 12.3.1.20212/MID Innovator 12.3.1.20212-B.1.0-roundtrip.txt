@@ -11,8 +11,9 @@ Test: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MO
 Test: /definitions[1] = 18
   Reference: /definitions[1]/dataStore[1] = capacity
 Test: /definitions[1]/dataStore[1] = null
-  Reference: /definitions[1]/dataStore[1] = null
-Test: /definitions[1]/dataStore[1] = name
+  Reference: /definitions[1]/dataStore[1]/@name = Data
+Store Reference
+Test: /definitions[1]/dataStore[1]/@name = Data Store
   Reference: /definitions[1]/dataStore[1] = false
 Test: /definitions[1]/dataStore[1] = true
   Reference: /definitions[1]/dataStore[1] = 0

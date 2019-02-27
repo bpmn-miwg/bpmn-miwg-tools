@@ -1,6 +1,4 @@
 ANALYSIS: Trisotech BPMN Modeler 6.0.0-B.1.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1]/dataStore[1] = null
-Test: /definitions[1]/dataStore[1] = name
   Reference: /definitions[1]/dataStore[1] = 0
 Test: /definitions[1]/dataStore[1] = 1
   Reference: /definitions[1]/process[1]/task[1] = isForCompensation
@@ -29,8 +27,6 @@ Test: /definitions[1]/process[2]/sequenceFlow[4] = null
 Test: /definitions[1]/process[2] = 6
   Reference: /definitions[1]/process[3]/laneSet[1] = semantic:laneSet
 Test: null = null
-  Reference: /definitions[1]/process[3]/dataObject[1] = null
-Test: /definitions[1]/process[3]/dataObject[1] = name
   Reference: /definitions[1]/process[3]/dataObject[1] = 1
 Test: /definitions[1]/process[3]/dataObject[1] = 34
   Reference: /definitions[1]/process[3]/endEvent[1] = 2
