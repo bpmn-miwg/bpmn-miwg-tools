@@ -1,4 +1,6 @@
 ANALYSIS: ModelFoundry 1.1.1-C.2.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1] = 11
+Test: /definitions[1] = 18
   Reference: /definitions[1]/process[1]/sequenceFlow[1] = 1
 Test: /definitions[1]/process[1]/sequenceFlow[1] = 3
   Reference: /definitions[1]/process[1]/sequenceFlow[2] = 2
@@ -570,3 +572,19 @@ Test: null = null
 Test: null = null
   Reference: null = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1] = bpmndi:BPMNLabelStyle
+  Reference: /definitions[1]/BPMNDiagram[1] = 10
+Test: /definitions[1]/BPMNDiagram[1] = 17
+  Reference: null = null
+Test: /definitions[1]/process[5] = process
+  Reference: null = null
+Test: /definitions[1]/process[6] = process
+  Reference: null = null
+Test: /definitions[1]/process[7] = process
+  Reference: null = null
+Test: /definitions[1]/process[8] = process
+  Reference: null = null
+Test: /definitions[1]/process[9] = process
+  Reference: null = null
+Test: /definitions[1]/process[10] = process
+  Reference: null = null
+Test: /definitions[1]/process[11] = process

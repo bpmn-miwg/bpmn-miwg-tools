@@ -1,6 +1,8 @@
 ANALYSIS: Trisotech BPMN Modeler 6.0.0-C.2.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1] = typeLanguage
 Test: /definitions[1] = null
+  Reference: /definitions[1] = 11
+Test: /definitions[1] = 18
   Reference: /definitions[1]/process[1]/task[1] = isForCompensation
 Test: /definitions[1]/process[1]/task[1] = null
   Reference: /definitions[1]/process[1]/sequenceFlow[1] = 1
@@ -975,3 +977,19 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[30]/BPMNLabel[1]/@lab
 Test: null = null
   Reference: null = null
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1] = bpmndi:BPMNLabelStyle
+  Reference: /definitions[1]/BPMNDiagram[1] = 10
+Test: /definitions[1]/BPMNDiagram[1] = 17
+  Reference: null = null
+Test: /definitions[1]/process[5] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[6] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[7] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[8] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[9] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[10] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[11] = semantic:process

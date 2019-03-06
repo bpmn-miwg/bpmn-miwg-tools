@@ -1,6 +1,24 @@
 ANALYSIS: Camunda Modeler 2.7.0-C.2.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1] = 11
+Test: /definitions[1] = 18
   Reference: /definitions[1]/process[4]/task[3]/@name = Receive and Package
 items
 Test: /definitions[1]/process[4]/task[3]/@name = Receive and Package  items
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8
+  Reference: /definitions[1]/BPMNDiagram[1] = 10
+Test: /definitions[1]/BPMNDiagram[1] = 17
+  Reference: null = null
+Test: /definitions[1]/process[5] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[6] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[7] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[8] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[9] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[10] = semantic:process
+  Reference: null = null
+Test: /definitions[1]/process[11] = semantic:process
