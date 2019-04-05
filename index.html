@@ -136,7 +136,7 @@
                     { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted },
                     { "mData": "schemasValid",
                       "mRender": function ( data, type, full) {
-                        if (data && full.schemasValidMax) {
+                        if (data && full.schemasValidMax && full.schemasValidMax !== 0) {
                           return data/full.schemasValidMax;
                         }
                         return 0;
@@ -173,7 +173,7 @@
               }
 
               function renderSchemasValid(data, type, full) {
-                var schemasValid = renderTestResultsSubmittedInCategory(data, type, full, full.schemasValidMax);
+                var schemasValid = renderTestResultsSubmittedInCategory(data, type, full, full.schemasValidMax, true);
                 var result = '<span class="sr-only">' + data + '</span><a href="overview.html#' + generateToolAndVersion(full) + '">' + schemasValid + '</a>';
                 return result;
               }
@@ -220,18 +220,27 @@
               }
 
               function renderTestResultsCSubmitted(data, type, full) {
-                return renderTestResultsSubmittedInCategory(data, type, full, 18);
+                return renderTestResultsSubmittedInCategory(data, type, full, 32);
               }
 
-              function renderTestResultsSubmittedInCategory(data, type, full, referenceCount) {
+              function renderTestResultsSubmittedInCategory(originalData, type, full, referenceCount, penalizeZero = false) {
+                var data = originalData;
+                if (originalData > referenceCount) {
+                  data = referenceCount;
+                }
                 var complete = false;
                 if (data >= referenceCount) {
                   complete = true;
                 } else if (data != 0) {
                   complete = "partial";
                 }
+
+                if (penalizeZero && referenceCount === 0) {
+                  complete = false;
+                }
+
                 var result = renderTrafficLight(complete, type, full);
-                return result + ' ' + data + '/' + referenceCount;
+                return '<span class="sr-only">' + data/referenceCount + '</span>' + result + ' ' + data + '/' + referenceCount;
               }
 
               function renderLicense(data, type, full) {
