@@ -37,18 +37,41 @@
         var submissionsUrl = "submissions.json";
         var openIssuesUrl = "issues-open.json";
         var closedIssuesUrl = "issues-closed.json";
+        var roundtripUrl = "overview.html";
+        var schemasValid = {}
 
         $.when(
           $.getJSON(toolsUrl),
-          $.getJSON(submissionsUrl)/*,
+          $.getJSON(submissionsUrl),
+          $.get(roundtripUrl)
+          /*,
             $.getJSON(closedIssuesUrl)*/
-        ).then(function (res1, res2) {
+        ).then(function (res1, res2, res3) {
               var toolsTestedByMIWG = res1[0];
               var submissions = res2[0];
+              var roundtrip = res3[0];
+
+              const html = $(roundtrip);
+
               //var closedIssues = res3[0];
               for (i = 0; i < toolsTestedByMIWG.tools.length; i++) {
                  var tool = toolsTestedByMIWG.tools[i];
+                 var count = 0;
+                 var max = 0;
+                 var testsByTool = html.find('div.test[tool="' + tool.tool + ' ' + tool.version + '"]');
+                //  console.log(testsByTool)
+                 testsByTool.each((index, line) => {
+                   if (line.dataset['xsdOk']) {
+                    max += 1;
+                    count += Number(line.dataset['xsdOk'])
+                   }
+                 });
+
+                 toolsTestedByMIWG.tools[i].schemasValid = count;
+                 toolsTestedByMIWG.tools[i].schemasValidMax = max;
+                 
                  var toolAndVersion = tool.tool + ' ' + tool.version;
+                 
                  if (submissions[toolAndVersion]) {
                    var submission = submissions[toolAndVersion];
                    toolsTestedByMIWG.tools[i].testResultsSubmitted = submission.count;
@@ -87,7 +110,7 @@
       //          "sAjaxSource": toolsUrl,
       //          "sAjaxDataProp": "tools",
                 "aaData": toolsTestedByMIWG.tools,
-                "aaSorting": [/*[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ],*/ [ 6, "desc" ],  [ 8, "desc" ], [ 9, "desc" ], [ 10, "desc" ], [ 11, "desc" ], [ 12, "desc" ], [ 0, "asc" ], [1, "asc" ]],
+                "aaSorting": [/*[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ],*/ [ 6, "desc" ],  [ 8, "desc" ], [ 9, "desc" ], [ 10, "desc" ], /*[ 11, "desc" ], [ 12, "desc" ] */ [ 0, "asc" ], [1, "asc" ]],
                 "aoColumns": [
                     { "mData": "vendor" },
                     { "mData": "tool",
@@ -110,6 +133,7 @@
                     { "mData": "testResultsASubmitted", "mRender": renderTestResultsASubmitted },
                     { "mData": "testResultsBSubmitted", "mRender": renderTestResultsBSubmitted },
                     { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted },
+                    { "mData": "schemasValid", "mRender": renderSchemasValid },
                     { "mData": "website", "mRender": renderWebsite },
 //                     { "mData": "openSource", "mRender": renderLicense },
                     /*{ "mData": "openIssues",
@@ -136,6 +160,12 @@
               function renderRoundtrip(data, type, full) {
                 var result = renderBoolean(data, type, full);
                 result = '<span class="sr-only">' + data + '</span><a href="overview.html#' + generateToolAndVersion(full) + '">' + result + ' Details</a>';
+                return result;
+              }
+
+              function renderSchemasValid(data, type, full) {
+                var schemasValid = renderTestResultsSubmittedInCategory(data, type, full, full.schemasValidMax);
+                var result = '<span class="sr-only">' + data + '</span><a href="overview.html#' + generateToolAndVersion(full) + '">' + schemasValid + '</a>';
                 return result;
               }
               
@@ -282,6 +312,7 @@
             <th>A Results Submitted</th>
             <th>B Results Submitted</th>
             <th>C Results Submitted</th>
+            <th>Schemas valid</th>
             <th>Website</th>
             <!--<th>License</th>-->
             <!--<th>Open Issues</th>
@@ -349,6 +380,10 @@
               <tr>
                 <td>C Results Submitted</td>
                 <td>Number of test results submitted in category C "Complex scenarios" (<span class="glyphicon glyphicon-plus-sign" style="color: darkgreen"></span> complete, <span class="glyphicon glyphicon-adjust" style="color: darkorange"></span> partial, <span class="glyphicon glyphicon-minus-sign" style="color: darkred"></span> none)</td>
+              </tr>
+              <tr>
+                <td>Schemas valid</td>
+                <td>..</td>
               </tr>
               <tr>
                 <td>Website</td>
