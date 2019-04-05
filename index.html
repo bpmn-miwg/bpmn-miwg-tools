@@ -134,6 +134,14 @@
                     { "mData": "testResultsASubmitted", "mRender": renderTestResultsASubmitted },
                     { "mData": "testResultsBSubmitted", "mRender": renderTestResultsBSubmitted },
                     { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted },
+                    { "mData": "schemasValid",
+                      "mRender": function ( data, type, full) {
+                        if (data && full.schemasValidMax) {
+                          return data/full.schemasValidMax;
+                        }
+                        return 0;
+                      },
+                      "bVisible" : false },
                     { "mData": "schemasValid", "mRender": renderSchemasValid },
                     { "mData": "website", "mRender": renderWebsite },
 //                     { "mData": "openSource", "mRender": renderLicense },
@@ -313,6 +321,7 @@
             <th>A Results Submitted</th>
             <th>B Results Submitted</th>
             <th>C Results Submitted</th>
+            <th>Schema-valid</th>
             <th>Schema-valid</th>
             <th>Website</th>
             <!--<th>License</th>-->
