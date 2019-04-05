@@ -2,8 +2,8 @@
 
 <head>
 <title>Results comparison</title>
-<link rel="icon" href="http://www.omg.org/favicon.ico?" type="image/x-icon" />
-<link rel="shortcut icon" href="http://www.omg.org/favicon.ico?" type="image/x-icon" />
+<link rel="icon" href="img/favicon.ico?" type="image/x-icon" />
+<link rel="shortcut icon" href="img/favicon.ico?" type="image/x-icon" />
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/navigation.css">
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -25,6 +25,7 @@ $(document).ready(function() {
 
 var jsonData = null;
 var resultDIVs = null;
+var multipleDiagramsRefs = {};
 var referenceVariations = null;
 
 function loadJSON() {
@@ -70,37 +71,65 @@ function loadJSON() {
 
               $("<li><a href='#sect-" + variation.variation + "'>" + variation.variation + "</a></li>").appendTo(sidebar)
 
-              var div2 = $("<div class='row' />");
-              div2.appendTo(ulroot);
-
-
-              var refDiv = $("<div class='col-md-6'/>");
-              refDiv.appendTo(div2);
+              if (!variation.numberOfDiagrams) {
+                var row = $("<div class='row' />");
+                row.appendTo(ulroot);
+                var refDiv = $("<div class='col-md-6'/>");
+                refDiv.appendTo(row);
               
-              $("<p class='caption'>" + variation.variation + " reference</p>").appendTo(refDiv);
+                $("<p class='caption'>" + variation.variation + " reference</p>").appendTo(refDiv);
 
-              var png_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "png");
-              $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' /></a>").appendTo(refDiv);
-              //$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
-              
-              var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "bpmn");
-              var folder_url = url_pattern.folder.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference");
+                var png_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "png");
+                $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' /></a>").appendTo(refDiv);
+                //$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
+                
+                var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "bpmn");
+                var folder_url = url_pattern.folder.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference");
 
-              var nav = $("<ul class='nav nav-pills'/>").appendTo(refDiv);
+                var nav = $("<ul class='nav nav-pills'/>").appendTo(refDiv);
 
-              $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(variation.variation) + "&title=Reference%20" + variation.variation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
-              $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
-              $("<li><a href='" + folder_url + "' target='_blank'>Reference folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+                $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(variation.variation) + "&title=Reference%20" + variation.variation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
+                $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+                $("<li><a href='" + folder_url + "' target='_blank'>Reference folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+             
+                //$("<div class='col2'>right</div>").appendTo(ulroot);
+                var temp = $("<div class='col-md-6' id='results-" + variation.variation + "' >No results available.</div>");
+                temp.appendTo(row);
+                resultDIVs[variation.variation] = temp;
+                referenceVariations.push(variation);
+              } else {
 
+                
+                  
+                for (var diagramNumber = 1; diagramNumber <= variation.numberOfDiagrams; diagramNumber += 1) {
+                  var refDiv = $("<div class='col-md-6'/>");
+                  var row = $("<div class='row' />");
+                  row.appendTo(ulroot);
 
-              //$("<div class='col2'>right</div>").appendTo(ulroot);
-              var temp = $("<div class='col-md-6' id='results-" + variation.variation + "' >No results available.</div>");
-              temp.appendTo(div2);
-              resultDIVs[variation.variation] = temp;
-              referenceVariations.push(variation.variation);
+                  refDiv.appendTo(row);
 
+                  $("<p class='caption'>" + variation.variation + " reference, diagram " + diagramNumber + "</p>").appendTo(refDiv);
+
+                  var png_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation+'.'+diagramNumber).replace("{FILEEXT}", "png");
+                  $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' /></a>").appendTo(refDiv);
+                  //$("<div class='caption'>Tool Results</div>").appendTo(ulroot);
+                  
+                  var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference").replace("{FILEURL}", variation.variation).replace("{FILEEXT}", "bpmn");
+                  var folder_url = url_pattern.folder.replace("{CATEGORYURL}", category.url_fragment).replace("{TOOLURL}", "Reference");
+
+                  var nav = $("<ul class='nav nav-pills'/>").appendTo(refDiv);
+
+                  $("<li><a href='visual-test-result-comparison-bounds.html?base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(variation.variation) + "&title=Reference%20" + variation.variation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
+                  $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+                  $("<li><a href='" + folder_url + "' target='_blank'>Reference folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+            
+                  var temp = $("<div class='col-md-6' id='results-" + variation.variation + "' >No results available.</div>");
+                  temp.appendTo(row);
+                  multipleDiagramsRefs[variation.variation+diagramNumber] = temp;
+                }
+                referenceVariations.push(variation);
+              }
             });
-
           });
 
         });
@@ -140,22 +169,71 @@ function toolSelected() {
   var url_pattern = jsonData.config.url_pattern;
 
   referenceVariations.forEach(function(referenceVariation) {
-    var div = resultDIVs[referenceVariation];
- 
+    // don't continue if we have multiple diagrams for this variation
+    if (referenceVariation.numberOfDiagrams) {
+      for (var diagramNumber = 1; diagramNumber <= referenceVariation.numberOfDiagrams; diagramNumber += 1) {
+        var div = multipleDiagramsRefs[referenceVariation.variation+diagramNumber];
+        div.empty();
+
+        ['import', 'export', 'roundtrip'].forEach(function(type) {
+
+          $("<p class='caption'>" + referenceVariation.variation + ", diagram " + diagramNumber + " " + type + "</p>").appendTo(div);
+
+          var categoryID = referenceVariation.variation[0];
+          var categoryJSON = findInList(jsonData.categories, "category", categoryID);
+
+          var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation.variation+"-"+type).replace("{FILEEXT}", "bpmn");
+          var png_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation.variation+"-"+type+"."+diagramNumber).replace("{FILEEXT}", "png");
+          var folder_url = url_pattern.folder.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool);
+          var img_id = "'" + referenceVariation.variation + "-" + type + "'"
+          //if (type.png) {
+            $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' onerror='ImgError(this);'/></a>").appendTo(div);
+          //} else {
+          //  $("<p>No image.</p>").appendTo(div);
+          //}
+
+          var nav = $("<ul class='nav nav-pills'/>").appendTo(div);
+          var zoom = "";
+          if(options.boundsZoom) {
+            if(typeof(options.boundsZoom) === 'number') {
+              zoom = "zoom=" +  options.boundsZoom + "&";
+            } else {
+              if (options.boundsZoom[type]) {
+                if(typeof(options.boundsZoom[type]) === 'number') {
+                  zoom = "zoom=" +  options.boundsZoom[type] + "&";
+                } else {
+                  if(typeof(options.boundsZoom[type][referenceVariation.variation]) === 'number'){
+                    zoom = "zoom=" +  options.boundsZoom[type][referenceVariation.variation] + "&";
+                  }
+                }
+              }
+            }
+          }
+
+          $("<li><a href='visual-test-result-comparison-bounds.html?" + zoom + "base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(referenceVariation.variation) + "&title=" + type + "%20" + referenceVariation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
+          $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+          $("<li><a href='" + folder_url + "' target='_blank'>Results folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
+        });
+
+      
+      }
+      return;
+    }
+
+    var div = resultDIVs[referenceVariation.variation];
     div.empty();
 
     ['import', 'export', 'roundtrip'].forEach(function(type) {
 
-      $("<p class='caption'>" + referenceVariation + " " + type + "</p>").appendTo(div);
+      $("<p class='caption'>" + referenceVariation.variation + " " + type + "</p>").appendTo(div);
 
-      var categoryID = referenceVariation[0];
+      var categoryID = referenceVariation.variation[0];
       var categoryJSON = findInList(jsonData.categories, "category", categoryID);
 
-
-      var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type).replace("{FILEEXT}", "bpmn");
-      var png_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation+"-"+type).replace("{FILEEXT}", "png");
+      var bpmn_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation.variation+"-"+type).replace("{FILEEXT}", "bpmn");
+      var png_url = url_pattern.file.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool).replace("{FILEURL}", referenceVariation.variation+"-"+type).replace("{FILEEXT}", "png");
       var folder_url = url_pattern.folder.replace("{CATEGORYURL}", categoryJSON.url_fragment).replace("{TOOLURL}", selectedTool);
-      var img_id = "'" + referenceVariation + "-" + type + "'"
+      var img_id = "'" + referenceVariation.variation + "-" + type + "'"
       //if (type.png) {
         $("<a href='"+png_url+"' target='_blank'><img src='" + png_url + "' class='bpmn-image' onerror='ImgError(this);'/></a>").appendTo(div);
       //} else {
@@ -163,24 +241,24 @@ function toolSelected() {
       //}
 
       var nav = $("<ul class='nav nav-pills'/>").appendTo(div);
-	  var zoom = "";
-	  if(options.boundsZoom) {
-		if(typeof(options.boundsZoom) === 'number') {
-			zoom = "zoom=" +  options.boundsZoom + "&";
-		} else {
-			if (options.boundsZoom[type]) {
-				if(typeof(options.boundsZoom[type]) === 'number') {
-					zoom = "zoom=" +  options.boundsZoom[type] + "&";
-				} else {
-					if(typeof(options.boundsZoom[type][referenceVariation]) === 'number'){
-						zoom = "zoom=" +  options.boundsZoom[type][referenceVariation] + "&";
-					}
-				}
-			}
-		}
-	  }
+      var zoom = "";
+      if(options.boundsZoom) {
+        if(typeof(options.boundsZoom) === 'number') {
+          zoom = "zoom=" +  options.boundsZoom + "&";
+        } else {
+          if (options.boundsZoom[type]) {
+            if(typeof(options.boundsZoom[type]) === 'number') {
+              zoom = "zoom=" +  options.boundsZoom[type] + "&";
+            } else {
+              if(typeof(options.boundsZoom[type][referenceVariation.variation]) === 'number'){
+                zoom = "zoom=" +  options.boundsZoom[type][referenceVariation.variation] + "&";
+              }
+            }
+          }
+        }
+      }
 
-      $("<li><a href='visual-test-result-comparison-bounds.html?" + zoom + "base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(referenceVariation) + "&title=" + type + "%20" + referenceVariation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
+      $("<li><a href='visual-test-result-comparison-bounds.html?" + zoom + "base=" + encodeURIComponent(png_url) + "&overlayFolder=" + encodeURIComponent(url_pattern.boundsFolder)+"&variation=" + encodeURIComponent(referenceVariation.variation) + "&title=" + type + "%20" + referenceVariation +"' target='_blank'>Bounds Overlay <span class='glyphicon glyphicon glyphicon-picture'></span></a></li>").appendTo(nav);
       $("<li><a href='" + bpmn_url + "' target='_blank'>BPMN file <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
       $("<li><a href='" + folder_url + "' target='_blank'>Results folder <span class='glyphicon glyphicon-new-window'></span></a></li>").appendTo(nav);
 
