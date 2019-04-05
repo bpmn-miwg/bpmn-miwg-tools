@@ -1,0 +1,2 @@
+ANALYSIS: Camunda Eclipse Plugin 3.0.0-A.2.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

@@ -1,0 +1,2 @@
+ANALYSIS: bpmn.io (Cawemo, Camunda Modeler) 1.12.0-A.4.1-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded
