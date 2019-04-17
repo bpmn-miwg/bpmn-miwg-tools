@@ -154,10 +154,11 @@
                     /* 15 */ { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted, "iDataSort": 14 },
                     /* 16 */ { "mData": "schemasValid",
                       "mRender": function ( data, type, full) {
+                        var schemaValidRatio = 0;
                         if (data && full.schemasValidMax && full.schemasValidMax !== 0) {
-                          return Number(String(data) + String(data/full.schemasValidMax));
+                          schemaValidRatio = data/full.schemasValidMax;
                         }
-                        return 0;
+                        return schemaValidRatio + full.schemasValidMax/10000;
                       },
                       "bVisible" : false },
                     /* 17 */ { "mData": "schemasValid", "mRender": renderSchemasValid, "iDataSort": 16 },
@@ -192,7 +193,7 @@
 
               function renderSchemasValid(data, type, full) {
                 var schemasValid = renderTestResultsSubmittedInCategory(data, type, full, full.schemasValidMax, true);
-                var result = '<span class="sr-only">' + data + '</span><a href="overview.html#' + generateToolAndVersion(full) + '">' + schemasValid + '</a>';
+                var result = '<a href="overview.html#' + generateToolAndVersion(full) + '">' + schemasValid + '</a>';
                 return result;
               }
               
