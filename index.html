@@ -110,40 +110,58 @@
       //          "sAjaxSource": toolsUrl,
       //          "sAjaxDataProp": "tools",
                 "aaData": toolsTestedByMIWG.tools,
-                             /* [ 2, BPMN   ], [ 5, Round  ], [ 4, Export ], [ 3, Import ],   [ 6, Demo   ], [ 8, Last   ], [ 9, Cat A  ], [ 10, Cat B  ], [ 11, Cat C  ], [ 12, Schema ],   [ 14, IssueO ], [ 15, IssueC ]    [ 0, Vendo ], [1, Tool  ] */
-                "aaSorting": [/*[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ],*/ [ 6, "desc" ], [ 8, "desc" ], [ 9, "desc" ], [ 10, "desc" ], [ 11, "desc" ], [ 12, "desc" ],/* [ 14, "desc" ], [ 15, "desc" ],*/ [ 0, "asc" ], [1, "asc" ]],
+                           /* [ 2, BPMN   ], [ 5, Round  ], [ 4, Export ], [ 3, Import ], [ 12, Schema ],  [ 6, Demo   ], [ 8, Last   ], [ 9, Cat A  ], [ 10, Cat B  ], [ 11, Cat C  ],   [ 14, IssueO ], [ 15, IssueC ]    [ 0, Vendo ], [1, Tool  ] */
+                "aaSorting": [[ 2, "desc" ], [ 5, "desc" ], [ 4, "desc" ], [ 3, "desc" ], [ 16, "desc" ],  [ 6, "desc" ], [ 8, "desc" ], [ 10, "desc" ], [ 12, "desc" ], [ 14, "desc" ], /*[ 14, "desc" ], [ 15, "desc" ] */ [ 0, "asc" ], [1, "asc" ]],
                 "aoColumns": [
-                    { "mData": "vendor" },
-                    { "mData": "tool",
+                    /* 0 */ { "mData": "vendor" },
+                    /* 1 */ { "mData": "tool",
                       "mRender": function ( data, type, full ) {
                         var result = '<a href="' + generateVisualDiffUrl(full) + '">' + data.replace('Microsoft', 'MS') + ' ' + full.version + '</a>';
                         return '<strong>' + result + '</strong>';
                       } },
-                    { "mData": "supportsBpmn2", "mRender": renderBoolean },
-                    { "mData": "hasImport", "mRender": renderImportExport },
-                    { "mData": "hasExport", "mRender": renderImportExport },
-                    { "mData": "hasRoundtrip", "mRender": renderRoundtrip },
-                    { "mData": "participatedInDemosByYear",
+                    /* 2 */ { "mData": "supportsBpmn2", "mRender": renderBoolean },
+                    /* 3 */ { "mData": "hasImport", "mRender": renderImportExport },
+                    /* 4 */ { "mData": "hasExport", "mRender": renderImportExport },
+                    /* 5 */ { "mData": "hasRoundtrip", "mRender": renderRoundtrip },
+                    /* 6 */ { "mData": "participatedInDemosByYear",
                       "mRender": function ( data, type, full ) {
                         return data.split(",")[0];
                       },
                       "bVisible" : false },
-                    { "mData": "participatedInDemosByYear", "mRender": renderYear },
-                    { "mData": "lastResultsSubmitted", "mRender": renderYear },
-                    { "mData": "testResultsSubmitted", "bVisible" : false /*"mRender": renderTestResultsSubmitted*/ },
-                    { "mData": "testResultsASubmitted", "mRender": renderTestResultsASubmitted },
-                    { "mData": "testResultsBSubmitted", "mRender": renderTestResultsBSubmitted },
-                    { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted },
-                    { "mData": "schemasValid",
+                    /* 7 */ { "mData": "participatedInDemosByYear", "mRender": renderYear, "iDataSort": 6 },
+                    /* 8 */ { "mData": "lastResultsSubmitted", "mRender": renderYear },
+                    /* 9 */ { "mData": "testResultsSubmitted", "bVisible" : false /*"mRender": renderTestResultsSubmitted*/ },
+                    /* 10 */ { "mData": "testResultsASubmitted", "mRender": function ( data, type, full) {
+                      if (data && full.testResultsASubmitted && full.testResultsASubmitted !== 0) {
+                          return Number(String(data) + String(data/full.testResultsASubmitted));
+                        }
+                        return 0;
+                      }, "bVisible": false },
+                    /* 11 */ { "mData": "testResultsASubmitted", "mRender": renderTestResultsASubmitted, "iDataSort": 10 },
+                    /* 12 */ { "mData": "testResultsBSubmitted", "mRender": function ( data, type, full) {
+                      if (data && full.testResultsBSubmitted && full.testResultsBSubmitted !== 0) {
+                          return Number(String(data) + String(data/full.testResultsBSubmitted));
+                        }
+                        return 0;
+                      }, "bVisible": false },
+                    /* 13 */ { "mData": "testResultsBSubmitted", "mRender": renderTestResultsBSubmitted, "iDataSort": 12 },
+                    /* 14 */ { "mData": "testResultsCSubmitted", "mRender": function ( data, type, full) {
+                      if (data && full.testResultsCSubmitted && full.testResultsCSubmitted !== 0) {
+                          return Number(String(data) + String(data/full.testResultsCSubmitted));
+                        }
+                        return 0;
+                      }, "bVisible": false },
+                    /* 15 */ { "mData": "testResultsCSubmitted", "mRender": renderTestResultsCSubmitted, "iDataSort": 14 },
+                    /* 16 */ { "mData": "schemasValid",
                       "mRender": function ( data, type, full) {
                         if (data && full.schemasValidMax && full.schemasValidMax !== 0) {
-                          return data/full.schemasValidMax;
+                          return Number(String(data) + String(data/full.schemasValidMax));
                         }
                         return 0;
                       },
                       "bVisible" : false },
-                    { "mData": "schemasValid", "mRender": renderSchemasValid },
-                    { "mData": "website", "mRender": renderWebsite },
+                    /* 17 */ { "mData": "schemasValid", "mRender": renderSchemasValid, "iDataSort": 16 },
+                    /* 18 */ { "mData": "website", "mRender": renderWebsite },
 //                     { "mData": "openSource", "mRender": renderLicense },
                     /*{ "mData": "openIssues",
                       "mRender": function ( data, type, full ) {
@@ -328,7 +346,10 @@
             <th>Last Test Submission</th>
             <th>Results Submitted</th>
             <th>A Results Submitted</th>
+            <th>A Results Submitted</th>
             <th>B Results Submitted</th>
+            <th>B Results Submitted</th>
+            <th>C Results Submitted</th>
             <th>C Results Submitted</th>
             <th>Schema-valid</th>
             <th>Schema-valid</th>
