@@ -1,4 +1,6 @@
 ANALYSIS: bpmn.io (Cawemo, Camunda Modeler) 1.12.0-A.4.1-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1] = name
+Test: /definitions[1] = null
   Reference: /definitions[1] = typeLanguage
 Test: /definitions[1] = null
   Reference: /definitions[1]/process[1]/task[1] = completionQuantity

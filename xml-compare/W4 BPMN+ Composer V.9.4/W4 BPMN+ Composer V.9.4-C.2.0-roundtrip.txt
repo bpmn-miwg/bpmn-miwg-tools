@@ -1,4 +1,6 @@
 ANALYSIS: W4 BPMN+ Composer V.9.4-C.2.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/@name = C.2.0
+Test: /definitions[1]/@name = Amazon
   Reference: /definitions[1] = 11
 Test: /definitions[1] = 18
   Reference: /definitions[1]/collaboration[1] = 9

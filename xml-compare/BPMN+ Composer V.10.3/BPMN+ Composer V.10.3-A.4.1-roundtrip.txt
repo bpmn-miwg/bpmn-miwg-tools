@@ -1,6 +1,6 @@
 ANALYSIS: BPMN+ Composer V.10.3-A.4.1-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1] = null
-Test: /definitions[1] = name
+  Reference: /definitions[1]/@name = A.4.1
+Test: /definitions[1]/@name = sid-ad44e239-e96e-4a80-b0e4-cf63b741c3cb
   Reference: /definitions[1]/process[1] = isClosed
 Test: /definitions[1]/process[1] = null
   Reference: /definitions[1]/process[1]/startEvent[1] = null

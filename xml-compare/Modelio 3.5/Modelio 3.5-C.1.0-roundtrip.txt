@@ -1,6 +1,4 @@
 ANALYSIS: Modelio 3.5-C.1.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1]/@name = sid-bdb880ac-c464-4e5c-aa56-569d709436e0
-Test: /definitions[1]/@name = C.1.0
   Reference: /definitions[1] = targetNamespace
 Test: /definitions[1] = null
   Reference: /definitions[1] = typeLanguage

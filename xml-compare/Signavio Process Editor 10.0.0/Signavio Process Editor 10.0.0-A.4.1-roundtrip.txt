@@ -1,6 +1,6 @@
 ANALYSIS: Signavio Process Editor 10.0.0-A.4.1-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1] = null
-Test: /definitions[1] = name
+  Reference: /definitions[1]/@name = A.4.1
+Test: /definitions[1]/@name = Collaboration A.4.1
   Reference: /definitions[1]/collaboration[1] = 4
 Test: /definitions[1]/collaboration[1] = 5
   Reference: /definitions[1]/collaboration[1]/participant[1] = 0

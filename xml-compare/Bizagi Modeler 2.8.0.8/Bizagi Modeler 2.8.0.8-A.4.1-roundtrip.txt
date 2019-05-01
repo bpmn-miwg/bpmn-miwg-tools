@@ -1,4 +1,6 @@
 ANALYSIS: Bizagi Modeler 2.8.0.8-A.4.1-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1] = name
+Test: /definitions[1] = null
   Reference: /definitions[1]/@targetNamespace = http://www.trisotech.com/definitions/_1365195427479
 Test: /definitions[1]/@targetNamespace = http://www.bizagi.com/definitions/_2014120801133
   Reference: /definitions[1] = typeLanguage

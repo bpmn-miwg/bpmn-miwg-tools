@@ -1,5 +1,5 @@
 ANALYSIS: GenMyModel 0.47-C.2.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1]/@name = Amazon
+  Reference: /definitions[1]/@name = C.2.0
 Test: /definitions[1]/@name = Untitled Diagram
   Reference: /definitions[1]/@targetNamespace = http://www.trisotech.com/definitions/_1aa4e08d-219c-418c-8aed-5ddf4cd45a41
 Test: /definitions[1]/@targetNamespace = http://sourceforge.net/bpmn/definitions/_1434549882485

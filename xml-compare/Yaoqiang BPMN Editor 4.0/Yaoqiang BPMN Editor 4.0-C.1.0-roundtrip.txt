@@ -1,4 +1,6 @@
 ANALYSIS: Yaoqiang BPMN Editor 4.0-C.1.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/@name = C.1.0
+Test: /definitions[1]/@name = sid-bdb880ac-c464-4e5c-aa56-569d709436e0
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1] = background-color
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]/BPMNLabel[1] = null
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] = background-color

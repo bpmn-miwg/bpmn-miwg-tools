@@ -1,4 +1,6 @@
 ANALYSIS: Camunda Eclipse Plugin 3.0.0-C.3.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/@name = C.3.0
+Test: /definitions[1]/@name = Fridge Repair Service
   Reference: /definitions[1]/process[1]/boundaryEvent[2] = null
 Test: /definitions[1]/process[1]/boundaryEvent[2] = name
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]/@background-color = #6db700

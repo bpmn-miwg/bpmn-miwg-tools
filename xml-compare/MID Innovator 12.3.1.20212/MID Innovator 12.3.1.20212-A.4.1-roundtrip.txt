@@ -1,6 +1,8 @@
 ANALYSIS: MID Innovator 12.3.1.20212-A.4.1-roundtrip (Tool: xml-compare)
   Reference: /definitions[1] = id
 Test: /definitions[1] = null
+  Reference: /definitions[1] = name
+Test: /definitions[1] = null
   Reference: /definitions[1]/@targetNamespace = http://www.trisotech.com/definitions/_1365195427479
 Test: /definitions[1]/@targetNamespace = http://sample.bpmn.mid.de/
   Reference: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd

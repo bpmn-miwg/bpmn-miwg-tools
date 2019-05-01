@@ -1,4 +1,6 @@
 ANALYSIS: Trisotech BPMN Visio Add in 5.0.1-C.3.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/@name = C.3.0
+Test: /definitions[1]/@name = Fridge Repair Service
   Reference: /definitions[1]/process[1]/extensionElements[1]/graphStyle[1]/root[1]/Grid[1] = color
 Test: /definitions[1]/process[1]/extensionElements[1]/graphStyle[1]/root[1]/Grid[1] = null
   Reference: /definitions[1]/process[1]/startEvent[1] = 1

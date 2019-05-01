@@ -1,6 +1,4 @@
 ANALYSIS: Modelio 3.5-C.2.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1]/@name = Amazon
-Test: /definitions[1]/@name = C.2.0
   Reference: /definitions[1] = targetNamespace
 Test: /definitions[1] = null
   Reference: /definitions[1] = typeLanguage

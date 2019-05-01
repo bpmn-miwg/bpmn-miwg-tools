@@ -1,4 +1,6 @@
 ANALYSIS: Enterprise Architect 12.0.1207-A.4.1-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1] = name
+Test: /definitions[1] = null
   Reference: /definitions[1]/@targetNamespace = http://www.trisotech.com/definitions/_1365195427479
 Test: /definitions[1]/@targetNamespace = www.sparxsystems.com.au/bpmn20
   Reference: /definitions[1] = typeLanguage

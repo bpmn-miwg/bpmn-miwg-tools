@@ -43,7 +43,7 @@ ANALYSIS: Reference-B.1.0 (Tool: xpath)
         OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Output)
         OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="_1373655174418"']/semantic:process[@id='id="WFP-6-2"']/semantic:exclusiveGateway[@id='id="_3c8c32c3-089a-4643-bf42-6c37c0dac7e0"']/
         OK     : navigateFollowingElement                 Message: bpmn:callActivity[@name='Call Activity Calling a Global Task' and @id='_fa3a8e53-5be0-4f0b-8680-d2498e255209']
-        OK     : checkGlobalTask                          Message: Attibute 'calledElement' does not exist (as expected)
+        FINDING: checkGlobalTask                          Message: Attribute 'calledElement' exists although the test expects that this element does not exist; Parameter: null
         OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 1' and @id='_93021cd0-6f49-485d-966f-209744c748de']
         OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="_1373655174418"']/semantic:process[@id='id="WFP-6-2"']/semantic:parallelGateway[@id='id="_be29f267-9d56-46ef-8bbc-e13513b25fce"']/
         OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='User Task 5' and @id='_7706e700-2aed-4b94-8070-961f118aab8f']

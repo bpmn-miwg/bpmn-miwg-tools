@@ -1,5 +1,5 @@
 ANALYSIS: ARIS Architect 10.0.2-C.1.1-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1]/@name = sid-bdb880ac-c464-4e5c-aa56-569d709436e0
+  Reference: /definitions[1]/@name = C.1.1
 Test: /definitions[1]/@name = sid-78cf0368-c97e-4dea-885f-0e535c20d6c7
   Reference: /definitions[1]/@targetNamespace = http://www.omg.org/spec/BPMN/20100524/MODEL
 Test: /definitions[1]/@targetNamespace = http://www.softwareag.com/aris/bpmn2

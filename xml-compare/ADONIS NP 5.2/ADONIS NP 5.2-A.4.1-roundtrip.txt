@@ -1,4 +1,6 @@
 ANALYSIS: ADONIS NP 5.2-A.4.1-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1] = name
+Test: /definitions[1] = null
   Reference: /definitions[1]/collaboration[1] = null
 Test: /definitions[1]/collaboration[1] = isClosed
   Reference: /definitions[1]/collaboration[1] = null

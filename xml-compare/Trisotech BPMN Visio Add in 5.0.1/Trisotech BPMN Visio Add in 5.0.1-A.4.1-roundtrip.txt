@@ -1,6 +1,6 @@
 ANALYSIS: Trisotech BPMN Visio Add in 5.0.1-A.4.1-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1] = null
-Test: /definitions[1] = name
+  Reference: /definitions[1]/@name = A.4.1
+Test: /definitions[1]/@name = Drawing 1
   Reference: /definitions[1]/collaboration[1] = null
 Test: /definitions[1]/collaboration[1] = name
   Reference: /definitions[1]/collaboration[1]/participant[1] = 0

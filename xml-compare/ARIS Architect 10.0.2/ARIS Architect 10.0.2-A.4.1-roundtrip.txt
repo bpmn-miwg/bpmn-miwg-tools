@@ -1,12 +1,12 @@
 ANALYSIS: ARIS Architect 10.0.2-A.4.1-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/@name = A.4.1
+Test: /definitions[1]/@name = Collaboration A.4.1
   Reference: /definitions[1]/@targetNamespace = http://www.trisotech.com/definitions/_1365195427479
 Test: /definitions[1]/@targetNamespace = http://www.softwareag.com/aris/bpmn2
   Reference: /definitions[1] = typeLanguage
 Test: /definitions[1] = null
   Reference: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd
 Test: /definitions[1] = [attribute absent]
-  Reference: /definitions[1] = null
-Test: /definitions[1] = name
   Reference: /definitions[1]/collaboration[1] = null
 Test: /definitions[1]/collaboration[1] = name
   Reference: /definitions[1]/collaboration[1]/participant[1]/@processRef = sid-34746A54-1D7D-46CA-B219-0C4CEAE51170

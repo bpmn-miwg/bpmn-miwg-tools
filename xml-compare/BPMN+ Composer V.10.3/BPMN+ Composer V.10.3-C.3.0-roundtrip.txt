@@ -1,4 +1,6 @@
 ANALYSIS: BPMN+ Composer V.10.3-C.3.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1]/@name = C.3.0
+Test: /definitions[1]/@name = Fridge Repair Service
   Reference: /definitions[1]/process[1]/endEvent[1]/extensionElements[1]/graphStyle[1] = 1
 Test: /definitions[1]/process[1]/endEvent[1]/extensionElements[1]/graphStyle[1] = 2
   Reference: null = null

@@ -1,5 +1,5 @@
 ANALYSIS: Signavio Process Editor 10.0.0-C.3.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1]/@name = Fridge Repair Service
+  Reference: /definitions[1]/@name = C.3.0
 Test: /definitions[1]/@name = Fridge Repair Process (1)
   Reference: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd
 Test: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd
