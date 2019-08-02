@@ -1,1 +1,0 @@
-ANALYSIS: BPMN+ Composer V.10.3-A.2.0-roundtrip (Tool: init)

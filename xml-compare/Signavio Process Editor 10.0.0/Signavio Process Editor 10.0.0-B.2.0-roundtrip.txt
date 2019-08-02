@@ -1,7 +1,7 @@
 ANALYSIS: Signavio Process Editor 10.0.0-B.2.0-roundtrip (Tool: xml-compare)
   Reference: /definitions[1] = [attribute absent]
 Test: /definitions[1]/@schemaLocation = http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd
-  Reference: /definitions[1] = 12
+  Reference: /definitions[1] = 11
 Test: /definitions[1] = 14
   Reference: /definitions[1]/globalUserTask[1] = 0
 Test: /definitions[1]/globalUserTask[1] = 7
@@ -2393,8 +2393,6 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1] = bpmndi:BPMNLabelStyle
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[2] = bpmndi:BPMNLabelStyle
   Reference: /definitions[1]/BPMNDiagram[1] = 10
 Test: /definitions[1]/BPMNDiagram[1] = 13
-  Reference: /definitions[1]/BPMNDiagram[2] = bpmndi:BPMNDiagram
-Test: null = null
   Reference: null = null
 Test: /definitions[1]/escalation[1] = escalation
   Reference: null = null

@@ -1,5 +1,5 @@
 ANALYSIS: ibo Prometheus 3.9.0.0-B.1.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1] = 12
+  Reference: /definitions[1] = 11
 Test: /definitions[1] = 8
   Reference: /definitions[1]/dataStore[1] = semantic:dataStore
 Test: null = null
@@ -1100,8 +1100,6 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11] = 40
 Test: null = null
   Reference: /definitions[1]/BPMNDiagram[1] = 10
 Test: /definitions[1]/BPMNDiagram[1] = 7
-  Reference: /definitions[1]/BPMNDiagram[2] = bpmndi:BPMNDiagram
-Test: null = null
   Reference: null = null
 Test: /definitions[1]/dataStore[1] = semantic:dataStore
   Reference: null = null

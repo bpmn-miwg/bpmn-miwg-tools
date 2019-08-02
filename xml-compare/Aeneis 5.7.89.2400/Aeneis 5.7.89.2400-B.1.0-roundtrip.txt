@@ -1,5 +1,5 @@
 ANALYSIS: Aeneis 5.7.89.2400-B.1.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1] = 12
+  Reference: /definitions[1] = 11
 Test: /definitions[1] = 10
   Reference: /definitions[1]/dataStore[1] = semantic:dataStore
 Test: null = null
@@ -1060,8 +1060,6 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[2] = bpmndi:BPMNLabelStyle
   Reference: /definitions[1]/BPMNDiagram[1] = 10
 Test: /definitions[1]/BPMNDiagram[1] = 9
-  Reference: /definitions[1]/BPMNDiagram[2] = bpmndi:BPMNDiagram
-Test: null = null
   Reference: null = null
 Test: /definitions[1]/resource[1] = semantic:resource
   Reference: null = null

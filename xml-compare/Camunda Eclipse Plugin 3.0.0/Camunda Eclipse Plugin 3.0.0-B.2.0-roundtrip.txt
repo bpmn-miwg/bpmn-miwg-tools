@@ -1,4 +1,6 @@
 ANALYSIS: Camunda Eclipse Plugin 3.0.0-B.2.0-roundtrip (Tool: xml-compare)
+  Reference: /definitions[1] = 11
+Test: /definitions[1] = 12
   Reference: /definitions[1]/dataStore[1] = name
 Test: /definitions[1]/dataStore[1] = null
   Reference: /definitions[1]/process[2]/dataObject[1] = name
@@ -189,5 +191,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[88] = 186
 Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] = bpmndi:BPMNEdge
   Reference: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]/Font[1]/@size = 8.0
-  Reference: /definitions[1]/BPMNDiagram[2]/BPMNLabelStyle[1]/Font[1]/@size = 11.0
-Test: /definitions[1]/BPMNDiagram[2]/BPMNLabelStyle[1]/Font[1]/@size = 8.0
+  Reference: null = null
+Test: /definitions[1]/BPMNDiagram[2] = bpmndi:BPMNDiagram

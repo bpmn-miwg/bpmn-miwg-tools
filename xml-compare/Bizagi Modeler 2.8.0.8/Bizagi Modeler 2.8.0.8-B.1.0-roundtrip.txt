@@ -3,7 +3,7 @@ ANALYSIS: Bizagi Modeler 2.8.0.8-B.1.0-roundtrip (Tool: xml-compare)
 Test: /definitions[1] = null
   Reference: /definitions[1]/@targetNamespace = http://www.trisotech.com/definitions/_1373655174418
 Test: /definitions[1]/@targetNamespace = http://www.bizagi.com/definitions/_2014120807720
-  Reference: /definitions[1] = 12
+  Reference: /definitions[1] = 11
 Test: /definitions[1] = 7
   Reference: /definitions[1]/dataStore[1] = semantic:dataStore
 Test: null = null
@@ -895,7 +895,5 @@ Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[63] = BPMNLabelStyle
 Test: /definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[64] = BPMNLabelStyle
   Reference: /definitions[1]/BPMNDiagram[1] = 10
 Test: /definitions[1]/BPMNDiagram[1] = 6
-  Reference: /definitions[1]/BPMNDiagram[2] = bpmndi:BPMNDiagram
-Test: null = null
   Reference: null = null
 Test: /definitions[1]/process[5] = process
