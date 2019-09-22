@@ -209,6 +209,7 @@ Enterprise Explorer 1.0.0                                    A.3.0              
 Enterprise Explorer 1.0.0                                    A.4.1                0          104           39
 Enterprise Explorer 1.0.0                                    A.2.0                0           45           30
 Enterprise Explorer 1.0.0                                    C.2.0                0          161           65
+Enterprise Explorer 1.0.0                                    C.4.0                0          243          113
 Enterprise Explorer 1.0.0                                    A.4.0                0           91           41
 Enterprise Explorer 1.0.0                                    B.1.0                1          154           83
 Enterprise Explorer 1.0.0                                    A.1.0                0           29           12
