@@ -253,6 +253,17 @@ Yaoqiang BPMN Editor 4.0                                     A.4.0              
 Yaoqiang BPMN Editor 4.0                                     B.1.0                0          162            0
 Yaoqiang BPMN Editor 4.0                                     A.1.0                0           39            0
 Yaoqiang BPMN Editor 4.0                                     B.2.0                0          591            0
+ADONIS NP 8.0                                                C.1.0                0          346            6
+ADONIS NP 8.0                                                A.3.0                0          121            0
+ADONIS NP 8.0                                                A.4.1                0          205            0
+ADONIS NP 8.0                                                A.2.0                0          114            0
+ADONIS NP 8.0                                                C.2.0                0          414            0
+ADONIS NP 8.0                                                A.4.0                0          212            0
+ADONIS NP 8.0                                                B.1.0                0          439            0
+ADONIS NP 8.0                                                A.1.0                0           60            0
+ADONIS NP 8.0                                                C.1.1                0          214           20
+ADONIS NP 8.0                                                B.2.0                0         1327            1
+ADONIS NP 8.0                                                C.3.0                0          333          108
 MID bpanda 2019.05.0.8393                                    C.1.0                0          457            3
 MID bpanda 2019.05.0.8393                                    A.3.0                0          166            0
 MID bpanda 2019.05.0.8393                                    A.4.1                0           94            0
@@ -284,15 +295,3 @@ Reference                                                    C.1.0              
 Reference                                                    C.4.0                0            0          107
 Reference                                                    C.1.1                0            0            0
 Reference                                                    A.4.1                0            0            0
-ADONIS NP 5.2                                                C.1.0                0          351            6
-ADONIS NP 5.2                                                A.3.0                0          123            0
-ADONIS NP 5.2                                                A.4.1                0          201            0
-ADONIS NP 5.2                                                A.2.0                0          119            0
-ADONIS NP 5.2                                                C.2.0                0          411            0
-ADONIS NP 5.2                                                C.4.0                0          274          169
-ADONIS NP 5.2                                                A.4.0                0          215            0
-ADONIS NP 5.2                                                B.1.0                0          402            0
-ADONIS NP 5.2                                                A.1.0                0           61            0
-ADONIS NP 5.2                                                C.1.1                0          221            7
-ADONIS NP 5.2                                                B.2.0                0         1167            1
-ADONIS NP 5.2                                                C.3.0                0          332          108
