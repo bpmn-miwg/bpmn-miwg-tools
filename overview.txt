@@ -23,18 +23,6 @@ ARIS Architect 9.8.3                                         C.3.0              
 Activiti Designer 5.14.1                                     A.3.0                0            5            0
 Activiti Designer 5.14.1                                     A.2.0                0            3            0
 Activiti Designer 5.14.1                                     A.1.0                0            1            0
-ARIS Architect 10.0.2                                        C.1.0                0          142           54
-ARIS Architect 10.0.2                                        A.3.0                0           44            2
-ARIS Architect 10.0.2                                        A.4.1                0           92           24
-ARIS Architect 10.0.2                                        A.2.0                0           42            2
-ARIS Architect 10.0.2                                        C.2.0                0          151           12
-ARIS Architect 10.0.2                                        C.4.0                0          270          172
-ARIS Architect 10.0.2                                        A.4.0                0           84            6
-ARIS Architect 10.0.2                                        B.1.0                0          151           11
-ARIS Architect 10.0.2                                        A.1.0                0           26            2
-ARIS Architect 10.0.2                                        C.1.1                0           81           22
-ARIS Architect 10.0.2                                        B.2.0                0          819            5
-ARIS Architect 10.0.2                                        C.3.0                0           87           39
 Cardanit (prev. BeePMN) 2.21                                 C.1.0                0          612           66
 Cardanit (prev. BeePMN) 2.21                                 A.3.0                0          162            0
 Cardanit (prev. BeePMN) 2.21                                 A.2.0                0          147            0
@@ -139,6 +127,18 @@ MID Innovator 12.3.1.20212                                   A.1.0              
 MID Innovator 12.3.1.20212                                   C.1.1                0          247           24
 MID Innovator 12.3.1.20212                                   B.2.0                0         1341          108
 MID Innovator 12.3.1.20212                                   C.3.0                0          375           39
+ARIS Architect 10.0.10                                       C.1.0                -            -            -
+ARIS Architect 10.0.10                                       A.3.0                0           82            0
+ARIS Architect 10.0.10                                       A.4.1                0          168           32
+ARIS Architect 10.0.10                                       A.2.0                0           78            0
+ARIS Architect 10.0.10                                       C.2.0                0          273            2
+ARIS Architect 10.0.10                                       C.4.0                0          428           73
+ARIS Architect 10.0.10                                       A.4.0                0          104            2
+ARIS Architect 10.0.10                                       B.1.0                0          278            4
+ARIS Architect 10.0.10                                       A.1.0                0           41            0
+ARIS Architect 10.0.10                                       C.1.1                -            -            -
+ARIS Architect 10.0.10                                       B.2.0                0          817           30
+ARIS Architect 10.0.10                                       C.3.0                0          143           63
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.3.0                0           59           17
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.4.1                0          115           33
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.2.0                0           57           11
