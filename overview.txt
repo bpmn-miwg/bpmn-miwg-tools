@@ -258,6 +258,7 @@ ADONIS NP 8.0                                                A.3.0              
 ADONIS NP 8.0                                                A.4.1                0          205            0
 ADONIS NP 8.0                                                A.2.0                0          114            0
 ADONIS NP 8.0                                                C.2.0                0          414            0
+ADONIS NP 8.0                                                C.4.0                0          734           77
 ADONIS NP 8.0                                                A.4.0                0          212            0
 ADONIS NP 8.0                                                B.1.0                0          439            0
 ADONIS NP 8.0                                                A.1.0                0           60            0
