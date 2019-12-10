@@ -87,7 +87,7 @@
       At various times we have run public tests using the previous tools
       version so the tools can stabilise.
     -->
-    <bpmn.miwg.tools.version>0.6.0-SNAPSHOT</bpmn.miwg.tools.version>
+    <bpmn.miwg.tools.version>${project.version}</bpmn.miwg.tools.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
