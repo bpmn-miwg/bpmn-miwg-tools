@@ -240,18 +240,18 @@
               }
 
               function renderTestResultsASubmitted(data, type, full) {
-                return renderTestResultsSubmittedInCategory(data, type, full, 24);
+                return renderTestResultsSubmittedInCategory(data, type, full, 24, false, true);
               }
 
               function renderTestResultsBSubmitted(data, type, full) {
-                return renderTestResultsSubmittedInCategory(data, type, full, 8);
+                return renderTestResultsSubmittedInCategory(data, type, full, 8, false, true);
               }
 
               function renderTestResultsCSubmitted(data, type, full) {
-                return renderTestResultsSubmittedInCategory(data, type, full, 24);
+                return renderTestResultsSubmittedInCategory(data, type, full, 24, false, true);
               }
 
-              function renderTestResultsSubmittedInCategory(originalData, type, full, referenceCount, penalizeZero = false) {
+              function renderTestResultsSubmittedInCategory(originalData, type, full, referenceCount, penalizeZero = false, printLink) {
                 var data = originalData;
                 if (originalData > referenceCount) {
                   data = referenceCount;
@@ -268,7 +268,15 @@
                 }
 
                 var result = renderTrafficLight(complete, type, full);
-                return '<span class="sr-only">' + data/referenceCount + '</span>' + result + ' ' + data + '/' + referenceCount;
+                var linkStart = '';
+                var linkEnd = '';
+
+                if (printLink) {
+                  linkStart = '<a href="https://github.com/bpmn-miwg/bpmn-miwg-test-suite/tree/master/' + full.tool + ' ' + full.version + '">';
+                  linkEnd = '</a>'
+                }
+
+                return '<span class="sr-only">' + data/referenceCount + '</span>' + result + ' ' + linkStart + data + '/' + referenceCount + linkEnd;
               }
 
               function renderLicense(data, type, full) {
