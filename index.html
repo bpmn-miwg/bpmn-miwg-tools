@@ -120,8 +120,8 @@
                         return '<strong>' + result + '</strong>';
                       } },
                     /* 2 */ { "mData": "supportsBpmn2", "mRender": renderBoolean },
-                    /* 3 */ { "mData": "hasImport", "mRender": renderImportExport },
-                    /* 4 */ { "mData": "hasExport", "mRender": renderImportExport },
+                    /* 3 */ { "mData": "hasImport", "mRender": renderImport },
+                    /* 4 */ { "mData": "hasExport", "mRender": renderExport },
                     /* 5 */ { "mData": "hasRoundtrip", "mRender": renderRoundtrip },
                     /* 6 */ { "mData": "participatedInDemosByYear",
                       "mRender": function ( data, type, full ) {
@@ -176,10 +176,19 @@
                 ],
               } );
 
-              function renderImportExport(data, type, full) {
+              function renderImport(data, type, full) {
                 var result = renderBoolean(data, type, full);
                 if ((data === true) && (full.lastResultsSubmitted != 0)) {
-                  var visualDiffUrl = generateVisualDiffUrl(full);
+                  var visualDiffUrl = generateVisualDiffUrl(full, 'import');
+                  result = '<span class="sr-only">' + data + '</span><a href="' + visualDiffUrl +'">' + result + ' Diff</a>';
+                }
+                return result;
+              }
+
+              function renderExport(data, type, full) {
+                var result = renderBoolean(data, type, full);
+                if ((data === true) && (full.lastResultsSubmitted != 0)) {
+                  var visualDiffUrl = generateVisualDiffUrl(full, 'export');
                   result = '<span class="sr-only">' + data + '</span><a href="' + visualDiffUrl + '">' + result + ' Diff</a>';
                 }
                 return result;
@@ -197,8 +206,8 @@
                 return result;
               }
               
-              function generateVisualDiffUrl(full) {
-                  return 'visual-test-result-comparison.html?tool=' + generateToolAndVersion(full);
+              function generateVisualDiffUrl(full, type) {
+                  return 'visual-test-result-comparison.html?tool=' + generateToolAndVersion(full) + '&type=' + type;
               }
               
               function generateToolAndVersion(full) {

@@ -161,6 +161,25 @@ function loadJSON() {
 
 function toolSelected() {
 
+  var typesToIterate = ['import', 'export', 'roundtrip'];
+
+  // get the search value of the location of the browser window
+  var search = document.location.search;
+
+  // if there is a search value
+  if (search) {
+
+    // get the type out of the search value
+    var forcedOnlyType = search.split('&type=')[1];
+
+    // if we got a type out of the search value, overwrite the types we iterate over,
+    // so we don't iterate over import, export and rountrip but rather "ONLY" over
+    // the one type submitted through the search.
+    if (forcedOnlyType) {
+      typesToIterate = [forcedOnlyType];
+    }
+  }
+
   $("#message").text("Processing results...");
   var selectedOptions = $("#selector option:selected");
   var selectedTool = selectedOptions.val();
@@ -175,7 +194,7 @@ function toolSelected() {
         var div = multipleDiagramsRefs[referenceVariation.variation+diagramNumber];
         div.empty();
 
-        ['import', 'export', 'roundtrip'].forEach(function(type) {
+        typesToIterate.forEach(function(type) {
 
           $("<p class='caption'>" + referenceVariation.variation + ", diagram " + diagramNumber + " " + type + "</p>").appendTo(div);
 
@@ -226,7 +245,7 @@ function toolSelected() {
     var div = resultDIVs[referenceVariation.variation];
     div.empty();
 
-    ['import', 'export', 'roundtrip'].forEach(function(type) {
+    typesToIterate.forEach(function(type) {
 
       $("<p class='caption'>" + referenceVariation.variation + " " + type + "</p>").appendTo(div);
 
