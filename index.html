@@ -207,7 +207,13 @@
               }
               
               function generateVisualDiffUrl(full, type) {
-                  return 'visual-test-result-comparison.html?tool=' + generateToolAndVersion(full) + '&type=' + type;
+                  var diffUrl = 'visual-test-result-comparison.html?tool=' + generateToolAndVersion(full);
+
+                  if (type) {
+                    diffUrl += '&type=' + type;
+                  }
+
+                  return diffUrl;
               }
               
               function generateToolAndVersion(full) {

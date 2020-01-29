@@ -175,7 +175,7 @@ function toolSelected() {
     // if we got a type out of the search value, overwrite the types we iterate over,
     // so we don't iterate over import, export and rountrip but rather "ONLY" over
     // the one type submitted through the search.
-    if (forcedOnlyType) {
+    if (forcedOnlyType && forcedOnlyType !== 'undefined') {
       typesToIterate = [forcedOnlyType];
     }
   }
