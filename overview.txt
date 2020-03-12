@@ -51,6 +51,18 @@ actiBPM 3.E-8                                                A.1.0              
 IBM Process Designer 8.0.1                                   A.3.0                0            6           18
 IBM Process Designer 8.0.1                                   A.2.0                0            6           12
 IBM Process Designer 8.0.1                                   A.1.0                0            6            8
+OMNITRACKER BPMN                                             C.1.0                0          142          110
+OMNITRACKER BPMN                                             A.3.0                0           49           44
+OMNITRACKER BPMN                                             A.4.1                0          101           34
+OMNITRACKER BPMN                                             A.2.0                0           47           42
+OMNITRACKER BPMN                                             C.2.0                0          162          140
+OMNITRACKER BPMN                                             C.4.0                0          270          119
+OMNITRACKER BPMN                                             A.4.0                0           91           35
+OMNITRACKER BPMN                                             B.1.0                0          147          121
+OMNITRACKER BPMN                                             A.1.0                0           31           20
+OMNITRACKER BPMN                                             C.1.1                0           84           60
+OMNITRACKER BPMN                                             B.2.0                0          386          331
+OMNITRACKER BPMN                                             C.3.0                1           35           32
 Trisotech BPMN Modeler 6.2.0                                 C.1.0                0          575          277
 Trisotech BPMN Modeler 6.2.0                                 A.3.0                0          153            0
 Trisotech BPMN Modeler 6.2.0                                 A.4.1                0          199           44

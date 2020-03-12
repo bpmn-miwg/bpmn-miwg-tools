@@ -1,0 +1,4 @@
+ANALYSIS: OMNITRACKER BPMN-C.3.0-roundtrip (Tool: xsd)
+  Error Line 13: cvc-complex-type.2.4.a: Invalid content was found starting with element 'sem:documentation'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":supportedInterfaceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioSpecification, "http://www.omg.org/spec/BPMN/20100524/MODEL":ioBinding, "http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":property, "http://www.omg.org/spec/BPMN/20100524/MODEL":laneSet, "http://www.omg.org/spec/BPMN/20100524/MODEL":flowElement, "http://www.omg.org/spec/BPMN/20100524/MODEL":artifact, "http://www.omg.org/spec/BPMN/20100524/MODEL":resourceRole, "http://www.omg.org/spec/BPMN/20100524/MODEL":correlationSubscription, "http://www.omg.org/spec/BPMN/20100524/MODEL":supports}' is expected.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0

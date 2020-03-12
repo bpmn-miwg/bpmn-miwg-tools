@@ -1,0 +1,162 @@
+ANALYSIS: OMNITRACKER BPMN-C.4.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : navigateDefinitions                      Message: /bpmn:definitions
+    FINDING: navigateDefinitions                      Message: Cannot find attribute; Parameter: id
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='null']
+    FINDING: navigateDefinitions                      Message: Cannot find attribute; Parameter: id
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='null']
+    FINDING: checkAttributeValue                      Message: Attribute name is not existing.; Parameter: 
+    FINDING: checkAttributeValue                      Message: Attribute expressionLanguage does not have the expected value 'http://www.w3.org/1999/XPath'; Parameter: expressionLanguage
+    FINDING: checkAttributeValue                      Message: Attribute typeLanguage does not have the expected value 'http://www.w3.org/2001/XMLSchema'; Parameter: typeLanguage
+    FINDING: navigateItemDefinition                   Message: No node found; Parameter: /bpmn:definitions/bpmn:itemDefinition[@id='itemDefEmployeeDetails']
+    FINDING: checkItemDefinition                      Message: Attribute itemKind is not existing.; Parameter: 
+    FINDING: checkItemDefinition                      Message: Attribute structureRef is not existing.; Parameter: 
+    FINDING: checkItemDefinition                      Message: Attribute isCollection is not existing.; Parameter: 
+    FINDING: navigateItemDefinition                   Message: No node found; Parameter: /bpmn:definitions/bpmn:itemDefinition[@id='itemDefUserManagement']
+    FINDING: checkItemDefinition                      Message: Attribute itemKind is not existing.; Parameter: 
+    FINDING: checkItemDefinition                      Message: Attribute structureRef is not existing.; Parameter: 
+    FINDING: checkItemDefinition                      Message: Attribute isCollection is not existing.; Parameter: 
+    FINDING: navigateItemDefinition                   Message: No node found; Parameter: /bpmn:definitions/bpmn:itemDefinition[@id='itemDefPayrollSystem']
+    FINDING: checkItemDefinition                      Message: Attribute itemKind is not existing.; Parameter: 
+    FINDING: checkItemDefinition                      Message: Attribute structureRef is not existing.; Parameter: 
+    FINDING: checkItemDefinition                      Message: Attribute isCollection is not existing.; Parameter: 
+    FINDING: navigateItemDefinition                   Message: No node found; Parameter: /bpmn:definitions/bpmn:itemDefinition[@id='itemDefAck']
+    FINDING: checkItemDefinition                      Message: Attribute itemKind is not existing.; Parameter: 
+    FINDING: checkItemDefinition                      Message: Attribute structureRef is not existing.; Parameter: 
+    FINDING: checkItemDefinition                      Message: Attribute isCollection is not existing.; Parameter: 
+    OK     : navigateDataStore                        Message: /bpmn:definitions/bpmn:dataStore[@name='User Management']
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_6']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_6']
+    FINDING: checkDataStore                           Message: Attribute isUnlimited is not existing.; Parameter: 
+    FINDING: checkDataStore                           Message: Referenced item definition does not exist; Parameter: /bpmn:definitions/bpmn:itemDefinition[@id='null']
+    OK     : navigateDataStore                        Message: /bpmn:definitions/bpmn:dataStore[@name='Payroll system']
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_5']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_5']
+    FINDING: checkDataStore                           Message: Attribute isUnlimited is not existing.; Parameter: 
+    FINDING: checkDataStore                           Message: Referenced item definition does not exist; Parameter: /bpmn:definitions/bpmn:itemDefinition[@id='null']
+    OK     : navigateDataStore                        Message: /bpmn:definitions/bpmn:dataStore[@name='Employee Details']
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_4']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_4']
+    FINDING: checkDataStore                           Message: Attribute isUnlimited is not existing.; Parameter: 
+    FINDING: checkDataStore                           Message: Referenced item definition does not exist; Parameter: /bpmn:definitions/bpmn:itemDefinition[@id='null']
+    FINDING: navigateSignal                           Message: No node found; Parameter: /bpmn:definitions/bpmn:signal[@name='Employee_hired_Dept_X']
+    FINDING: checkSignal                              Message: Attribute structureRef is not existing.; Parameter: 
+    FINDING: navigateMessage                          Message: No node found; Parameter: /bpmn:definitions/bpmn:message[@name='msgFacilites']
+    FINDING: checkMessage                             Message: Attribute itemRef is not existing.; Parameter: 
+    FINDING: navigateMessage                          Message: No node found; Parameter: /bpmn:definitions/bpmn:message[@name='msgIT']
+    FINDING: checkMessage                             Message: Attribute itemRef is not existing.; Parameter: 
+    FINDING: navigateMessage                          Message: No node found; Parameter: /bpmn:definitions/bpmn:message[@name='msgPayroll']
+    FINDING: checkMessage                             Message: Attribute itemRef is not existing.; Parameter: 
+    FINDING: selectCollaborationByName                Message: No node found; Parameter: bpmn:collaboration[@name='Onboarding employee']
+    OK     : selectCollaborationByName                Push (id: )
+      FINDING: selectProcessByParticipant               Message: Parent failed; Parameter: //bpmn:process[@id=//bpmn:participant[@name='Money Bank']/@processRef]
+      OK     : selectProcessByParticipant               Push (id: )
+        FINDING: checkAttributeValue                      Message: Attribute name does not have the expected value 'Onboarding employee - Money Bank - Process'; Parameter: name
+        FINDING: selectProcessByLane                      Message: Parent failed; Parameter: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='HR Department']]
+        OK     : selectProcessByLane                      Push (id: )
+          OK     : doExecute                                Pop (id: )
+        FINDING: selectProcessByLane                      Message: Parent failed; Parameter: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Responsible Department']]
+        OK     : selectProcessByLane                      Push (id: )
+          OK     : doExecute                                Pop (id: )
+        FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Candidate accepted offer']
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : navigateBookmarkedElement                Message: 
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: checkDataAssociation                     Message: Current node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        OK     : navigateBookmarkedElement                Message: 
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: checkSignalEvent                         Message: Current node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        OK     : navigateBookmarkedElement                Message: 
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        OK     : navigateBookmarkedElement                Message: 
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        OK     : doExecute                                Pop (id: )
+      OK     : doExecute                                Pop (id: )
+    FINDING: selectCollaborationByName                Message: No node found; Parameter: bpmn:collaboration[@name='IT']
+    OK     : selectCollaborationByName                Push (id: )
+      FINDING: selectProcessByParticipant               Message: Parent failed; Parameter: //bpmn:process[@id=//bpmn:participant[@name='IT']/@processRef]
+      OK     : selectProcessByParticipant               Push (id: )
+        FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='New employee hired']
+        FINDING: checkSignalEvent                         Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : checkDataAssociation                     Push (id: _4)
+          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'Employee Details'; Parameter: null
+          OK     : checkDataAssociation                     Pop (id: _4)
+        OK     : checkDataAssociation                     Push (id: _4)
+          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'User Management'; Parameter: null
+          OK     : checkDataAssociation                     Pop (id: _4)
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : checkDataAssociation                     Push (id: _4)
+          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'User Management'; Parameter: null
+          OK     : checkDataAssociation                     Pop (id: _4)
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : checkDataAssociation                     Push (id: _4)
+          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'User Management'; Parameter: null
+          OK     : checkDataAssociation                     Pop (id: _4)
+        FINDING: checkTextAssociation                     Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+        OK     : doExecute                                Pop (id: )
+      OK     : doExecute                                Pop (id: )
+    FINDING: selectCollaborationByName                Message: No node found; Parameter: bpmn:collaboration[@name='Payroll']
+    OK     : selectCollaborationByName                Push (id: )
+      FINDING: selectProcessByParticipant               Message: Parent failed; Parameter: //bpmn:process[@id=//bpmn:participant[@name='Payroll']/@processRef]
+      OK     : selectProcessByParticipant               Push (id: )
+        FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='New employee hired']
+        FINDING: checkSignalEvent                         Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : checkDataAssociation                     Push (id: _4)
+          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'Employee Details'; Parameter: null
+          OK     : checkDataAssociation                     Pop (id: _4)
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: checkStandardLoopCharacteristics         Message: Cannot standard loop characteristics; Parameter: bpmn:standardLoopCharacteristics
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : navigateBookmarkedElement                Message: 
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: checkDataAssociation                     Message: Current node is null; Parameter: null
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        FINDING: checkMessageEvent                        Message: Current node is null; Parameter: null
+        OK     : doExecute                                Pop (id: )
+      OK     : doExecute                                Pop (id: )
+    FINDING: selectCollaborationByName                Message: No node found; Parameter: bpmn:collaboration[@name='Facilities']
+    OK     : selectCollaborationByName                Push (id: )
+      FINDING: selectProcessByParticipant               Message: Parent failed; Parameter: //bpmn:process[@id=//bpmn:participant[@name='Facilities']/@processRef]
+      OK     : selectProcessByParticipant               Push (id: )
+        FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='New employee hired']
+        FINDING: checkSignalEvent                         Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : checkDataAssociation                     Push (id: _4)
+          FINDING: checkDataAssociation                     Message: Cannot find the associated artifact dataStoreReference 'Employee Details'; Parameter: null
+          OK     : checkDataAssociation                     Pop (id: _4)
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+        OK     : doExecute                                Pop (id: )
+      OK     : doExecute                                Pop (id: )

@@ -1,0 +1,37 @@
+<analysis name="OMNITRACKER BPMN-C.3.0-roundtrip" toolName="xml-compare">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.XmlDiffEntry"/>
+</analysis>
