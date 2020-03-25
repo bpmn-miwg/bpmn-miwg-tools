@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="BIC Cloud Design 6.2.0">
+      <h2>BIC Cloud Design 6.2.0</h2>
+      <div class="test" data-test="A.2.0" data-variant="Roundtrip">
+         <h3>A.2.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: BIC Cloud Design 6.2.0-A.2.0-roundtrip (Tool: xpath)</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : execute                                  Push (id: Diagram--de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectFirstProcess                       Push (id: process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_3809ffaf-70b1-4dc3-a1db-44b2f432a64a&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_3809ffaf-70b1-4dc3-a1db-44b2f432a64a&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;UUID_5aee01c6-8868-4299-a1b9-ebd98969ec67&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_5aee01c6-8868-4299-a1b9-ebd98969ec67&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_5aee01c6-8868-4299-a1b9-ebd98969ec67&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Split Flow)&apos; and @id=&apos;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;UUID_2474a89b-0206-4edc-8b6e-0704e5b042ab&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()=&apos;Sequence_170cc190-4cbd-4fea-90f6-bc870301d0b4&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_2474a89b-0206-4edc-8b6e-0704e5b042ab&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_2474a89b-0206-4edc-8b6e-0704e5b042ab&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions[@id=&apos;id=&quot;Diagram--de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&quot;&apos;]/</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;UUID_4befdf2e-a4df-414f-9007-63a2297324d2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()=&apos;Sequence_cab84479-847b-4c29-b301-693b74ffa1df&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_4befdf2e-a4df-414f-9007-63a2297324d2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_4befdf2e-a4df-414f-9007-63a2297324d2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions[@id=&apos;id=&quot;Diagram--de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&quot;&apos;]/</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 4&apos; and @id=&apos;UUID_d35b2c50-58fb-4c49-9294-ec47b8a28dd9&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_d35b2c50-58fb-4c49-9294-ec47b8a28dd9&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_d35b2c50-58fb-4c49-9294-ec47b8a28dd9&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions[@id=&apos;id=&quot;Diagram--de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3&quot;&apos;]/bpmn:task[@id=&apos;id=&quot;UUID_4befdf2e-a4df-414f-9007-63a2297324d2&quot;&apos;]/</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_4befdf2e-a4df-414f-9007-63a2297324d2&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_4befdf2e-a4df-414f-9007-63a2297324d2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Gateway (Merge Flows)&apos; and @id=&apos;UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()=&apos;Sequence_16d2ca77-4b71-4d7a-b10e-5debdab78190&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;UUID_a0a1177a-3e86-493d-a6c0-528b67a7e847&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_a0a1177a-3e86-493d-a6c0-528b67a7e847&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;UUID_a0a1177a-3e86-493d-a6c0-528b67a7e847&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3)</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68020511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

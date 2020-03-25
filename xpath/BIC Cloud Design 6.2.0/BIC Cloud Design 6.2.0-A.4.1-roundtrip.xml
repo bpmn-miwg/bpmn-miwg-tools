@@ -1,0 +1,73 @@
+<analysis name="BIC Cloud Design 6.2.0-A.4.1-roundtrip" toolName="xpath">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="Diagram--df0a1030-e5ca-48ee-8cbb-c0f17e91d4d7" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaboration" message="bpmn:collaboration"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="CollaborationID" caller="selectCollaboration">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;CollaborationID&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;CollaborationID&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectPool" message="bpmn:participant[@name=&apos;Pool 1&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="UUID_c0a1feb8-193a-4515-a419-f86252648cfe" caller="selectPool">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_c0a1feb8-193a-4515-a419-f86252648cfe&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_c0a1feb8-193a-4515-a419-f86252648cfe&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe" caller="selectReferencedProcess">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_7cb045b7-5c36-407a-bdf7-810a5ae3392d&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_7cb045b7-5c36-407a-bdf7-810a5ae3392d&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;UUID_43b62259-bfa0-4afc-8baa-d09cff9b611e&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_43b62259-bfa0-4afc-8baa-d09cff9b611e&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_43b62259-bfa0-4afc-8baa-d09cff9b611e&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 1&apos; and @sourceRef=&apos;UUID_43b62259-bfa0-4afc-8baa-d09cff9b611e&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;UUID_0c2b6c25-d047-4293-8270-7f32330befad&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_0c2b6c25-d047-4293-8270-7f32330befad&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_0c2b6c25-d047-4293-8270-7f32330befad&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 2&apos; and @targetRef=&apos;UUID_0c2b6c25-d047-4293-8270-7f32330befad&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;UUID_cf23f725-5ae2-4e58-8d73-2a8e399c75cb&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_cf23f725-5ae2-4e58-8d73-2a8e399c75cb&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_cf23f725-5ae2-4e58-8d73-2a8e399c75cb&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="UUID_c0a1feb8-193a-4515-a419-f86252648cfe" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByLane" message="//bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe" caller="selectProcessByLane">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="process_UUID_c0a1feb8-193a-4515-a419-f86252648cfe" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByLane" message="//bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;process_UUID_75e6aae1-d9fa-4518-b208-072d1c79c46a&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;process_UUID_75e6aae1-d9fa-4518-b208-072d1c79c46a&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="process_UUID_75e6aae1-d9fa-4518-b208-072d1c79c46a" caller="selectProcessByLane">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_5558b9f3-e12a-40d4-bde1-b3b78554168e&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_5558b9f3-e12a-40d4-bde1-b3b78554168e&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;UUID_6854236e-c21d-445c-bb4d-859db705e8ce&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_6854236e-c21d-445c-bb4d-859db705e8ce&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_6854236e-c21d-445c-bb4d-859db705e8ce&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 1&apos; and @targetRef=&apos;UUID_6854236e-c21d-445c-bb4d-859db705e8ce&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="selectFollowingElement" message="No outgoing reference found" parameter="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="selectFollowingElement">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 5&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 2&apos; and @sourceRef=&apos;UUID_6854236e-c21d-445c-bb4d-859db705e8ce&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event 2&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/bpmn:definitions[@id=&apos;id=&quot;Diagram--df0a1030-e5ca-48ee-8cbb-c0f17e91d4d7&quot;&apos;]/bpmn:process[@id=&apos;id=&quot;process_UUID_75e6aae1-d9fa-4518-b208-072d1c79c46a&quot;&apos;]/bpmn:task[@id=&apos;id=&quot;UUID_6854236e-c21d-445c-bb4d-859db705e8ce&quot;&apos;]/"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_6854236e-c21d-445c-bb4d-859db705e8ce&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;UUID_6854236e-c21d-445c-bb4d-859db705e8ce&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="selectFollowingElement" message="No outgoing reference found" parameter="bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="selectFollowingElement">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 4&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="Parent failed"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="Parent failed"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event 5&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="process_UUID_75e6aae1-d9fa-4518-b208-072d1c79c46a" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="CollaborationID" caller="doExecute"/>
+      </entry>
+   </entry>
+</analysis>

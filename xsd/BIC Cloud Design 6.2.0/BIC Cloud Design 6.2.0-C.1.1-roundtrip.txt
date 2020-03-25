@@ -1,0 +1,8 @@
+ANALYSIS: BIC Cloud Design 6.2.0-C.1.1-roundtrip (Tool: xsd)
+  Error Line 47: cvc-complex-type.2.4.b: The content of element 'bpmn:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 90: cvc-complex-type.2.4.b: The content of element 'bpmn:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  Error Line 133: cvc-complex-type.2.4.b: The content of element 'bpmn:dataOutputAssociation' is not complete. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":sourceRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":targetRef}' is expected.
+
+  INFO   : Validation failed: Warnings: 0, Errors: 3, Fatal Errors: 0

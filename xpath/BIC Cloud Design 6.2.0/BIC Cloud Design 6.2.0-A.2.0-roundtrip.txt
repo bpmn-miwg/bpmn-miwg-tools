@@ -1,0 +1,46 @@
+ANALYSIS: BIC Cloud Design 6.2.0-A.2.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: Diagram--de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3)
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3']
+    OK     : selectFirstProcess                       Push (id: process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_3809ffaf-70b1-4dc3-a1db-44b2f432a64a']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_3809ffaf-70b1-4dc3-a1db-44b2f432a64a']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='UUID_5aee01c6-8868-4299-a1b9-ebd98969ec67']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_5aee01c6-8868-4299-a1b9-ebd98969ec67']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_5aee01c6-8868-4299-a1b9-ebd98969ec67']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Split Flow)' and @id='UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='UUID_2474a89b-0206-4edc-8b6e-0704e5b042ab']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='Sequence_170cc190-4cbd-4fea-90f6-bc870301d0b4']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_2474a89b-0206-4edc-8b6e-0704e5b042ab']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_2474a89b-0206-4edc-8b6e-0704e5b042ab']
+      OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions[@id='id="Diagram--de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3"']/bpmn:process[@id='id="process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3"']/bpmn:exclusiveGateway[@id='id="UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='UUID_4befdf2e-a4df-414f-9007-63a2297324d2']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='Sequence_cab84479-847b-4c29-b301-693b74ffa1df']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_4befdf2e-a4df-414f-9007-63a2297324d2']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_4befdf2e-a4df-414f-9007-63a2297324d2']
+      OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions[@id='id="Diagram--de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3"']/bpmn:process[@id='id="process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3"']/bpmn:exclusiveGateway[@id='id="UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_c6e2cac7-ecfd-4491-a3b3-5426447f81f3']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 4' and @id='UUID_d35b2c50-58fb-4c49-9294-ec47b8a28dd9']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_d35b2c50-58fb-4c49-9294-ec47b8a28dd9']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_d35b2c50-58fb-4c49-9294-ec47b8a28dd9']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b']
+      OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions[@id='id="Diagram--de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3"']/bpmn:process[@id='id="process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3"']/bpmn:task[@id='id="UUID_4befdf2e-a4df-414f-9007-63a2297324d2"']/
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_4befdf2e-a4df-414f-9007-63a2297324d2']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_4befdf2e-a4df-414f-9007-63a2297324d2']
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Gateway (Merge Flows)' and @id='UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='Sequence_16d2ca77-4b71-4d7a-b10e-5debdab78190']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_88a89582-0152-4003-8bc5-cb8a1333ab7b']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event' and @id='UUID_a0a1177a-3e86-493d-a6c0-528b67a7e847']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_a0a1177a-3e86-493d-a6c0-528b67a7e847']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='UUID_a0a1177a-3e86-493d-a6c0-528b67a7e847']
+      OK     : doExecute                                Pop (id: process_de9ee1ee-06bb-4ad2-a6c2-dab6d2f665a3)
