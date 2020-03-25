@@ -1,0 +1,30 @@
+ANALYSIS: OMNITRACKER BPMN 11.5-A.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_3']
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_3']
+    OK     : selectFirstProcess                       Push (id: _3)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_5']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_5']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='_6']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_4']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_4']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_6']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_6']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='_8']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_7']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_7']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_8']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_8']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='_10']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_9']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_9']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_10']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_10']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event' and @id='_12']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_11']
+      FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_11']
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_12']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_12']
+      OK     : doExecute                                Pop (id: _3)

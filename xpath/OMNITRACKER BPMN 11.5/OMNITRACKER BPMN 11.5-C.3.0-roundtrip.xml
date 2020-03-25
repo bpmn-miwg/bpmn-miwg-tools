@@ -1,0 +1,47 @@
+<analysis name="OMNITRACKER BPMN 11.5-C.3.0-roundtrip" toolName="xpath">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="No node found" parameter="bpmn:resource[@name=&apos;User&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute id is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFirstProcess" message="/bpmn:definitions/bpmn:process"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;_5&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;_5&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_5" caller="selectFirstProcess">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute isExecutable is not existing." parameter=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="No node found" parameter="bpmn:startEvent[@name=&apos;Receive customer request&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Cannot find message event definition" parameter="bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:userTask[@name=&apos;Analyse customer request&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute startQuantity is not existing." parameter=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute completionQuantity is not existing." parameter=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute implementation is not existing." parameter=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateChildElement" message="No node found" parameter="bpmn:potentialOwner[@name=&apos;Potential Owner&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkChildElementValue" message="No node found" parameter="bpmn:resourceRef[(not(@name) or @name=&apos;&apos;)]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="No Current node" parameter=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateBoundaryEvent" message="Current node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkTimerEvent" message="Current node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateBoundaryEvent" message="Current node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Current node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_5" caller="doExecute"/>
+      </entry>
+   </entry>
+</analysis>

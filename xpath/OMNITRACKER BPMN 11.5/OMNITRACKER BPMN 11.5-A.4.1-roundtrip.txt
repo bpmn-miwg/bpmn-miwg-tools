@@ -1,0 +1,60 @@
+ANALYSIS: OMNITRACKER BPMN 11.5-A.4.1-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: _3)
+      FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_3']
+      FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_3']
+      OK     : selectPool                               Message: bpmn:participant[@name='Pool 1']
+      OK     : selectPool                               Push (id: _4)
+        FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_4']
+        FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_4']
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='_5']
+        OK     : selectReferencedProcess                  Push (id: _5)
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_5']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_5']
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 1']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_12']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_12']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='_13']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_11']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_11']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_13']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_13']
+          OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Output)
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='_15']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_14']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_14']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_15']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_15']
+          OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Input)
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 1' and @id='_17']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding outgoing node for the sequence flow; Parameter: bpmn:outgoing[text()='_16']
+          FINDING: navigateFollowingElement                 Message: There is no corresponding incoming node for the sequence flow; Parameter: bpmn:incoming[text()='_16']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_17']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_17']
+          OK     : doExecute                                Pop (id: _5)
+        OK     : doExecute                                Pop (id: _4)
+      FINDING: selectProcessByLane                      Message: Process node not found; Parameter: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 1']]
+      OK     : selectProcessByLane                      Push (id: )
+        OK     : doExecute                                Pop (id: )
+      FINDING: selectProcessByLane                      Message: Process node not found; Parameter: //bpmn:process[bpmn:laneSet/bpmn:lane[@name='Lane 2']]
+      OK     : selectProcessByLane                      Push (id: )
+        FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 2']
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+        FINDING: selectFollowingElement                   Message: Parent failed; Parameter: Type: bpmn:subProcess, name: Expanded Sub-Process 1
+        OK     : selectFollowingElement                   Push (id: )
+          OK     : doExecute                                Pop (id: )
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        FINDING: checkMessageFlow                         Message: Parent failed; Parameter: null
+        FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+        OK     : navigateBookmarkedElement                Message: 
+        FINDING: selectFollowingElement                   Message: Parent failed; Parameter: Type: bpmn:subProcess, name: Expanded Sub-Process 2
+        OK     : selectFollowingElement                   Push (id: )
+          FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Start Event 4']
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+          OK     : doExecute                                Pop (id: )
+        FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+        OK     : doExecute                                Pop (id: )
+      OK     : doExecute                                Pop (id: _3)
