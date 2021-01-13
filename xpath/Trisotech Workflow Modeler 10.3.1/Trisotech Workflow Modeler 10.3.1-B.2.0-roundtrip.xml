@@ -1,0 +1,189 @@
+<analysis name="Trisotech Workflow Modeler 10.3.1-B.2.0-roundtrip" toolName="xpath">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_1373638079286" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaboration" message="bpmn:collaboration"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="C1373638080953" caller="selectCollaboration">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByParticipant" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Participant&apos;]/@processRef]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="WFP-6-1" caller="selectProcessByParticipant">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1 Timer&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkTimerEvent" message="Timer event definition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;_d84e5824-7bb7-4057-9dba-6c8794f7948c&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:sendTask[@name=&apos;Send Task 2&apos; and @id=&apos;_76ee26df-2c95-495b-9d9a-cb806aea6baf&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;Message Flow 1&apos; (Output)"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;User Task 3&apos; and @id=&apos;_0e87da16-736e-45b2-95e5-8f45940f3adf&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_0e87da16-736e-45b2-95e5-8f45940f3adf" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkDataAssociation" message="Association reference dataObject &apos;Data Object&apos; found"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_0e87da16-736e-45b2-95e5-8f45940f3adf" caller="checkDataAssociation"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 1&apos; and @id=&apos;_dec393e7-f182-4d31-b05f-e33ac3a5e35f&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Service Task 4&apos; and @id=&apos;_ac1fde31-c0cd-4a8a-9728-a5fb49602de7&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Signal Throw 1&apos; and @id=&apos;_0326fdf5-7c71-41d9-838c-ab141a1b1ed0&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkSignalEvent" message="Signal event definition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Collapsed Sub-Process 1 Multi-Instances&apos; and @id=&apos;_149a6e1d-0385-4d0f-a90c-c2150a291a67&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_149a6e1d-0385-4d0f-a90c-c2150a291a67" caller="selectFollowingElement">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMultiInstanceParallel" message="Multi instance loop characteristics (sequential=false)"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_149a6e1d-0385-4d0f-a90c-c2150a291a67" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;_2a08c361-be51-437e-a86d-c62798c14e83&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Non-Interrupting Conditional&apos; found"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkCancelActivity" message="Attribute cancelActivity=false"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkParallelMultiple" message="Attribute parallelMultiple is not existing but the expected value (false) equals the default value (false)"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkConditionalEvent" message="Conditional event definition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:parallelGateway[@name=&apos;Parallel Gateway 2&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:endEvent[@name=&apos;End Event 1 Message&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-1&quot;&apos;]/semantic:inclusiveGateway[@id=&apos;id=&quot;_dec393e7-f182-4d31-b05f-e33ac3a5e35f&quot;&apos;]/"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:callActivity[@name=&apos;Call Activity calling a Global User Task&apos; and @id=&apos;_a74c1d4d-db90-43ff-8920-139a300b39a5&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkGlobalTask" message="Global Task is referenced"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_303e68ec-dbb3-4d90-8a96-26e0be44f5f3" caller="selectElement">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;User Task 7 Standard Loop&apos; and @id=&apos;_b9343536-6490-4559-8365-71d5c4cbb7cb&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;_a9b9c08d-377a-49a8-a869-f82308702018&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_303e68ec-dbb3-4d90-8a96-26e0be44f5f3" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:userTask[@name=&apos;User Task 8&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;null&apos; found"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkEscalationEvent" message="Escalation event definition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 9&apos; and @id=&apos;_8f41085a-3302-4cfc-9231-23bb4b43c7a1&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Conditional Catch&apos; and @id=&apos;_c9cb2415-6a2e-49d6-84b9-27babcde4088&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkConditionalEvent" message="Conditional event definition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 10&apos; and @id=&apos;_a01498ae-086c-4adc-9229-ec3135bc2bcf&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;Message Flow 2&apos; (Input)"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 3 Signal&apos; and @id=&apos;_5cc02d0f-c090-4e48-8da3-f32cbbca9565&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkSignalEvent" message="Signal event definition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="WFP-6-1" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectPool" message="bpmn:participant[@name=&apos;Pool&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_55bb31e8-9e62-48ea-8f0e-1a748c04bbf6" caller="selectPool">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;WFP-6-2&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="WFP-6-2" caller="selectReferencedProcess">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkXORMarkersForProcess" message="All XOR markers have the expected value &apos;true&apos;."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkXORMarkersForProcess" message="All XOR markers have the expected value &apos;true&apos;."/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2 Message&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;Message Flow 1&apos; (Input)"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 11&apos; and @id=&apos;_511d95ed-38f9-473e-9466-525285a007f5&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:eventBasedGateway[@name=&apos;Event Base Gateway 3&apos; and @id=&apos;_be29f267-9d56-46ef-8bbc-e13513b25fce&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkEventGatewayExclusive" message="Attribute eventGatewayType=Exclusive"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:eventBasedGateway[@id=&apos;id=&quot;_be29f267-9d56-46ef-8bbc-e13513b25fce&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch&apos; and @id=&apos;_f2081fdb-3b8a-480b-9f61-fbf683e2018c&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:eventBasedGateway[@id=&apos;id=&quot;_be29f267-9d56-46ef-8bbc-e13513b25fce&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch 2&apos; and @id=&apos;_05c6bc89-5265-435c-8a9e-533c44a6888b&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:eventBasedGateway[@id=&apos;id=&quot;_be29f267-9d56-46ef-8bbc-e13513b25fce&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Timer Catch&apos; and @id=&apos;_034907bf-d3d7-4629-818c-14c3e69d5bc6&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:callActivity[@name=&apos;Expanded Call Activity&apos; and @id=&apos;_ba16239e-181e-4b9f-bc5b-0bb2ee973450&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCallActivityProcess" message="//bpmn:process[@id=&apos;Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450" caller="selectCallActivityProcess">
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 3&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 4 Conditional&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;User Task 12 Muti-Inst. Seq.&apos; and @id=&apos;_c57a5344-213f-4834-a6c3-94ce878b413c&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMultiInstanceSequential" message="Multi instance loop characteristics (sequential=true)"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;User Task 13&apos; and @id=&apos;_7f4fe4ea-901f-4c74-bcd4-e933495712fd&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Interrupting Message&apos; found"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkCancelActivity" message="Attribute cancelActivity=true"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 5 Terminate&apos; and @id=&apos;_778ff738-a5af-4373-a8da-0fbbfae9e00a&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkTerminateEvent" message="Terminate event definition"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450&quot;&apos;]/semantic:userTask[@id=&apos;id=&quot;_7f4fe4ea-901f-4c74-bcd4-e933495712fd&quot;&apos;]/"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Service Task 14&apos; and @id=&apos;_3bfec246-ab94-4807-a79a-3df91ac13800&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 4&apos; and @id=&apos;_ed405919-9fd6-47d0-bb00-9be7d5467efb&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450" caller="doExecute"/>
+               </entry>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Service Task 15&apos; and @id=&apos;_fa90f891-fc07-463a-97c9-2ee0812351e1&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Interrupting Conditional&apos; found"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkConditionalEvent" message="Conditional event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkCancelActivity" message="Attribute cancelActivity=true"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Link&apos; and @id=&apos;_f27040d5-765c-493c-bbe7-9fb6ad04cbdc&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkLinkEvent" message="Link event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:serviceTask[@id=&apos;id=&quot;_fa90f891-fc07-463a-97c9-2ee0812351e1&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:receiveTask[@name=&apos;Receive Task 16&apos; and @id=&apos;_f07e4bd2-768d-42c6-a8d5-24d1c3bfa3cb&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 6 Message&apos; and @id=&apos;_c889aa27-e389-48eb-aa18-613ec53614e7&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;Message Flow 2&apos; (Output)"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:subProcess[@name=&apos;Collapsed Sub-Process 2&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectElement" message="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway 4&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_49e94b5f-ce21-4c2b-b78d-3cde5c09c15e" caller="selectElement">
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateGatewaySequenceFlowStack" message="Reference: bpmn:outgoing; Target: //bpmn:sequenceFlow[@id=&apos;%s&apos;]; Target parameter .; Target Check: self::node()[@name=&apos;Default Sequence Flow 2&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkDefaultSequenceFlow" message="Default Sequence Flow"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_49e94b5f-ce21-4c2b-b78d-3cde5c09c15e" caller="doExecute"/>
+               </entry>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Message Throw&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:callActivity[@name=&apos;Collapsed Call Activity&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Non-Interrupting Escalation&apos; found"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkEscalationEvent" message="Escalation event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 18&apos; and @id=&apos;_dbca671f-08b6-4b58-a614-62b98fa36be5&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateThrowEvent[@id=&apos;_3a19ce2d-e30d-461c-aeaa-b2acb118f9a4&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkEscalationEvent" message="Escalation event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 23&apos; and @id=&apos;_73343358-7838-48a1-baf2-2b0266e3a55b&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:callActivity[@id=&apos;id=&quot;_1237e756-d53c-4591-a731-dafffbf0b3f9&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 17&apos; and @id=&apos;_15e9a3bf-53de-40d8-8364-7f534b175ff4&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Non-Interrupting Message&apos; found"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkCancelActivity" message="Attribute cancelActivity=false"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkParallelMultiple" message="Attribute parallelMultiple is not existing but the expected value (false) equals the default value (false)"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageEvent" message="Message event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 19&apos; and @id=&apos;_187063b6-107e-4ac9-bdb3-e8ce9d83763d&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 7 None&apos; and @id=&apos;_087d0602-ff51-491e-a021-d2e7c940dbd8&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:task[@id=&apos;id=&quot;_15e9a3bf-53de-40d8-8364-7f534b175ff4&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 7 None&apos; and @id=&apos;_087d0602-ff51-491e-a021-d2e7c940dbd8&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Message Catch 2&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 21&apos; and @id=&apos;_137281ee-758e-4c36-8942-74c5d807e1b3&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Interrupting Timer&apos; found"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkCancelActivity" message="Attribute cancelActivity=true"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkTimerEvent" message="Timer event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 27&apos; and @id=&apos;_0e99d67a-a88a-4631-85cc-aa1f9cd8cc5e&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 6&apos; and @id=&apos;_10ecbff1-cd15-4a5c-9aa5-6f2a35479416&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:task[@id=&apos;id=&quot;_137281ee-758e-4c36-8942-74c5d807e1b3&quot;&apos;]/"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;_7e6ccf38-e740-4537-a439-a8e984d066de&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_7e6ccf38-e740-4537-a439-a8e984d066de" caller="selectFollowingElement">
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 5 None&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Service Task 22&apos; and @id=&apos;_6936f794-7bbb-4aa1-ae48-3a35bab4e2f4&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMultiInstanceParallel" message="Multi instance loop characteristics (sequential=false)"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 8 None&apos; and @id=&apos;_4f744697-3643-41a9-9d07-84c78e2df64b&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_7e6ccf38-e740-4537-a439-a8e984d066de" caller="doExecute"/>
+               </entry>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 23&apos; and @id=&apos;_73343358-7838-48a1-baf2-2b0266e3a55b&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;Boundary Intermediate Event Non-Interrupting Signal&apos; found"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkSignalEvent" message="Signal event definition"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkCancelActivity" message="Attribute cancelActivity=false"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 24&apos; and @id=&apos;_663e9963-9cf6-4032-9652-3a20f50dcda3&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 11 Escalation&apos; and @id=&apos;_dfb273c6-0ad3-4030-9e72-638adf7ca75f&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 6 Signal&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 25&apos; and @id=&apos;_242b8e6c-681c-438e-ab34-729255121eff&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:parallelGateway[@name=&apos;Parallel Gateway 5&apos; and @id=&apos;_1215d072-524b-4724-99d7-a0a406435904&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 26&apos; and @id=&apos;_cbebc7f2-9fb5-4fbf-a6dc-13140c784da7&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Signal Throw 2&apos; and @id=&apos;_8476a0f7-36b7-4666-a3b2-c18efcc68a94&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 6&apos; and @id=&apos;_10ecbff1-cd15-4a5c-9aa5-6f2a35479416&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 28&apos; and @id=&apos;_928cd158-ebe1-4c0a-9c3e-42e77d663aa2&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:parallelGateway[@name=&apos;Parallel Gateway 7&apos; and @id=&apos;_df7727a0-f509-45eb-bb89-85753f439576&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 11 Escalation&apos; and @id=&apos;_dfb273c6-0ad3-4030-9e72-638adf7ca75f&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:parallelGateway[@name=&apos;Parallel Gateway 5&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 3&apos; and @id=&apos;_189118eb-65fc-43e8-8a34-a155b113914f&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Link&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectFollowingElement" message="bpmn:subProcess[@name=&apos;Expanded Sub-Process 3&apos; and @id=&apos;_189118eb-65fc-43e8-8a34-a155b113914f&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_189118eb-65fc-43e8-8a34-a155b113914f" caller="selectFollowingElement">
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 7&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Signal Catch&apos; and @id=&apos;_e233b5e1-244d-422e-8886-4588b7566122&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkSignalEvent" message="Signal event definition"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 31&apos; and @id=&apos;_6d90f706-17c9-4635-87c2-ccab31e9a32d&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway 7&apos; and @id=&apos;_84918a6a-5e98-40c6-9155-c081bb5bdee8&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 12&apos; and @id=&apos;_cd7b1449-fc16-4015-befe-cc9b5aa1df27&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/semantic:definitions[@id=&apos;id=&quot;_1373638079286&quot;&apos;]/semantic:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/semantic:subProcess[@id=&apos;id=&quot;_189118eb-65fc-43e8-8a34-a155b113914f&quot;&apos;]/semantic:exclusiveGateway[@id=&apos;id=&quot;_84918a6a-5e98-40c6-9155-c081bb5bdee8&quot;&apos;]/"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 13 Error&apos; and @id=&apos;_d60db966-c03d-4f0e-a5bd-945525fa0aaf&apos;]"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkErrorEvent" message="Error event definition"/>
+                  <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_189118eb-65fc-43e8-8a34-a155b113914f" caller="doExecute"/>
+               </entry>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 32&apos; and @id=&apos;_d58753a7-d38b-49cd-914d-14e4cdaa4449&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBoundaryEvent" message="Boundary element &apos;null&apos; found"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Task 33&apos; and @id=&apos;_0ab0e0ac-f88b-4402-9986-e95a72dfc8a3&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event 14&apos; and @id=&apos;_147b1900-7e7d-4b8f-b243-0155265f1c00&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="WFP-6-2" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_55bb31e8-9e62-48ea-8f0e-1a748c04bbf6" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="C1373638080953" caller="doExecute"/>
+      </entry>
+   </entry>
+</analysis>
