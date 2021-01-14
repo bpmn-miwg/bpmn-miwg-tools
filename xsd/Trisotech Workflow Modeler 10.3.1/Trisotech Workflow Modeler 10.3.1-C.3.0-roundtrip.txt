@@ -1,6 +1,4 @@
 ANALYSIS: Trisotech Workflow Modeler 10.3.1-C.3.0-roundtrip (Tool: xsd)
-  Error Line 11: cvc-complex-type.2.4.d: Invalid content was found starting with element 'semantic:extensionElements'. No child element is expected at this point.
+  Error Line 275: cvc-complex-type.3.2.2: Attribute 'language' is not allowed to appear in element 'semantic:timeDuration'.
 
-  Error Line 276: cvc-complex-type.3.2.2: Attribute 'language' is not allowed to appear in element 'semantic:timeDuration'.
-
-  INFO   : Validation failed: Warnings: 0, Errors: 2, Fatal Errors: 0
+  INFO   : Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0

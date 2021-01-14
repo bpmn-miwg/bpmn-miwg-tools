@@ -1,0 +1,28 @@
+ANALYSIS: ADONIS NP 10.0-C.1.1-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: sid-bdb880ac-c464-4e5c-aa56-569d709436e0)
+    OK     : navigateDefinitions                      Message: /bpmn:definitions
+    FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'xmlns:camunda="http://activiti.org/bpmn"' from reference in test file; Parameter: null
+    OK     : checkAttributeValue                      Message: Attribute expressionLanguage=http://www.w3.org/1999/XPath
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    FINDING: selectElement                            Message: No node found; Parameter: bpmn:process[@name='Invoice Handling (OMG BPMN MIWG Demo)']
+    OK     : selectElement                            Push (id: )
+      FINDING: checkAttributeValue                      Message: Attribute isExecutable is not existing.; Parameter: 
+      FINDING: navigateElement                          Message: Parent failed; Parameter: bpmn:startEvent[@name='Invoice received']
+      FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+      FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+      FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+      FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+      FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+      FINDING: navigateFollowingElement                 Message: Parent failed; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : navigateBookmarkedElement                Message: 
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+      OK     : doExecute                                Pop (id: )

@@ -1,0 +1,108 @@
+ANALYSIS: ADONIS NP 10.0-C.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: sid-bdb880ac-c464-4e5c-aa56-569d709436e0)
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Team Assistant']
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Approver']
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    FINDING: navigateElement                          Message: No node found; Parameter: bpmn:resource[@name='Accountant']
+    FINDING: checkAttributeValue                      Message: Attribute w4:type is not existing.; Parameter: 
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)
+      FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+      OK     : selectPool                               Message: bpmn:participant[@name='Team-Assistant']
+      OK     : selectPool                               Push (id: sid-46891B57-A9D3-4A8B-AEBF-D4BA5F3961AD)
+        FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+        OK     : selectPool                               Push (id: )
+          FINDING: checkAutoExtensionElements               Message: 18: Expected presence of child nodes to be 'true' but was 'false' - comparing <extensionElements...> at /extensionElements[1] to <extensionElements...> at /extensionElements[1]; Parameter: null
+          OK     : selectPool                               Pop (id: )
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57']
+        OK     : selectReferencedProcess                  Push (id: sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57)
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=false
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : checkMessageEvent                        Message: Message event definition
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Scan Invoice' and @id='sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : checkMessageFlow                         Message: message flow '' (Output) -> //bpmn:startEvent[@name='Invoice received' and @id='StartEvent_1']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Archive original' and @id='sid-CFAC8502-0E69-4F08-BE36-8499B8C0FA44']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='Approver to be assigned' and @id='sid-40EC6574-E644-425C-8CE7-EE384F0C3520']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Assign approver' and @id='sid-64AFCE49-96A2-4A51-96CB-9DF689C37DAD']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:eventBasedGateway[@id='sid-F0D29912-929D-491C-8D23-73BD80CF980A']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='7 days' and @id='sid-0E349B8B-14A7-4565-988A-38F3A9B624D2']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : checkTimerEvent                          Message: Timer event definition
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[not(@name) and @id='sid-BC9AC0B6-1785-4E35-A974-7FEF1A586B9D']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57"']/eventBasedGateway[@id='id="sid-F0D29912-929D-491C-8D23-73BD80CF980A"']/
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='Invoice review needed' and @id='sid-B548B980-12E3-408E-9AC4-7031B85A8F2D']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : checkMessageEvent                        Message: Message event definition
+          OK     : navigateElement                          Message: bpmn:task[@name='Review and document result']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateElement                          Message: bpmn:endEvent[not(@name)]
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : doExecute                                Pop (id: sid-5FBB6CB3-8A7C-42B5-9024-15BB2684EC57)
+        OK     : doExecute                                Pop (id: sid-46891B57-A9D3-4A8B-AEBF-D4BA5F3961AD)
+      OK     : selectPool                               Message: bpmn:participant[@name='Process Engine - Invoice Receipt']
+      OK     : selectPool                               Push (id: Process_Engine_1)
+        FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null
+        OK     : selectPool                               Push (id: )
+          FINDING: checkAutoExtensionElements               Message: 18: Expected presence of child nodes to be 'true' but was 'false' - comparing <extensionElements...> at /extensionElements[1] to <extensionElements...> at /extensionElements[1]; Parameter: null
+          OK     : selectPool                               Pop (id: )
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='bpmn-miwg-test-case-c.1.0']
+        OK     : selectReferencedProcess                  Push (id: bpmn-miwg-test-case-c.1.0)
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=true
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Team Assistant']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Approver']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Accountant']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:formKey="app:startProcess.jsf"' from reference in test file; Parameter: null
+          OK     : checkMessageEvent                        Message: Message event definition
+          OK     : checkMessageFlow                         Message: message flow '' (Input) -> //bpmn:task[@name='Scan Invoice' and @id='sid-05039C4F-59F7-4CBD-8C84-D35E27C7B5EF']
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Assign Approver' and @id='assignApprover']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="demo"' from reference in test file; Parameter: null
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="${approver}"' from reference in test file; Parameter: null
+          OK     : checkAttributeValue                      Message: Attribute camunda:assignee=${approver}
+          OK     : checkAttributeValue                      Message: Attribute camunda:formKey=app:approveInvoice.jsf
+          OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='invoice_approved']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung klären' and @id='reviewInvoice']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="demo"' from reference in test file; Parameter: null
+          OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='reviewSuccessful_gw']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice not processed' and @id='invoiceNotProcessed']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="bpmn-miwg-test-case-c.1.0"']/exclusiveGateway[@id='id="reviewSuccessful_gw"']/
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:assignee="${approver}"' from reference in test file; Parameter: null
+          OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="bpmn-miwg-test-case-c.1.0"']/exclusiveGateway[@id='id="invoice_approved"']/
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Prepare Bank Transfer' and @id='prepareBankTransfer']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:candidateGroups="accounting"' from reference in test file; Parameter: null
+          OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Archive Invoice' and @id='archiveInvoice']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute 'camunda:delegateExpression="#{archiveService}"' from reference in test file; Parameter: null
+          OK     : checkAttributeValue                      Message: Attribute camunda:delegateExpression=#{archiveService}
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice processed' and @id='invoiceProcessed']
+          FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements
+          OK     : doExecute                                Pop (id: bpmn-miwg-test-case-c.1.0)
+        OK     : doExecute                                Pop (id: Process_Engine_1)
+      OK     : doExecute                                Pop (id: sid-e5defbed-c12d-4c0a-9b5e-0f187e35ffd3)

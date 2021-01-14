@@ -1,7 +1,5 @@
 <analysis name="Trisotech Workflow Modeler 10.3.1-C.3.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 11: cvc-complex-type.2.4.d: Invalid content was found starting with element &apos;semantic:extensionElements&apos;. No child element is expected at this point.
+   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 275: cvc-complex-type.3.2.2: Attribute &apos;language&apos; is not allowed to appear in element &apos;semantic:timeDuration&apos;.
 "/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 276: cvc-complex-type.3.2.2: Attribute &apos;language&apos; is not allowed to appear in element &apos;semantic:timeDuration&apos;.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 2, Fatal Errors: 0"/>
+   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0"/>
 </analysis>
