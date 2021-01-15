@@ -1,0 +1,2 @@
+ANALYSIS: Trisotech Workflow Modeler 10.4.0-C.1.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

@@ -1,3 +1,0 @@
-<analysis name="Trisotech Workflow Modeler 10.3.1-B.2.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>

@@ -86,6 +86,18 @@ bpmn.io (Cawemo, Camunda Modeler) 1.12.0                     A.1.0              
 bpmn.io (Cawemo, Camunda Modeler) 1.12.0                     C.1.1                0          244           17
 bpmn.io (Cawemo, Camunda Modeler) 1.12.0                     B.2.0                0         1177            0
 bpmn.io (Cawemo, Camunda Modeler) 1.12.0                     C.3.0                0          291            0
+Trisotech Workflow Modeler 10.4.0                            C.1.0                0          573          281
+Trisotech Workflow Modeler 10.4.0                            A.3.0                0          161            0
+Trisotech Workflow Modeler 10.4.0                            A.4.1                0          198           44
+Trisotech Workflow Modeler 10.4.0                            A.2.0                0          148            0
+Trisotech Workflow Modeler 10.4.0                            C.2.0                0          242            0
+Trisotech Workflow Modeler 10.4.0                            C.4.0                0           73          107
+Trisotech Workflow Modeler 10.4.0                            A.4.0                0          301            0
+Trisotech Workflow Modeler 10.4.0                            B.1.0                0          545            1
+Trisotech Workflow Modeler 10.4.0                            A.1.0                0           80            0
+Trisotech Workflow Modeler 10.4.0                            C.1.1                0          347           14
+Trisotech Workflow Modeler 10.4.0                            B.2.0                0         1665            0
+Trisotech Workflow Modeler 10.4.0                            C.3.0                0          404          199
 itp-commerce Process Modeler for Microsoft Visio 6           C.1.0                0          618           31
 itp-commerce Process Modeler for Microsoft Visio 6           A.3.0                0           78            0
 itp-commerce Process Modeler for Microsoft Visio 6           A.4.1                0          269           17
@@ -163,18 +175,6 @@ ARIS Architect 10.0.10                                       A.1.0              
 ARIS Architect 10.0.10                                       C.1.1                -            -            -
 ARIS Architect 10.0.10                                       B.2.0                0          817           30
 ARIS Architect 10.0.10                                       C.3.0                0          143           63
-Trisotech Workflow Modeler 10.3.1                            C.1.0                0          573          281
-Trisotech Workflow Modeler 10.3.1                            A.3.0                0          161            0
-Trisotech Workflow Modeler 10.3.1                            A.4.1                0          198           44
-Trisotech Workflow Modeler 10.3.1                            A.2.0                0          148            0
-Trisotech Workflow Modeler 10.3.1                            C.2.0                0          242            0
-Trisotech Workflow Modeler 10.3.1                            C.4.0                0           73          107
-Trisotech Workflow Modeler 10.3.1                            A.4.0                0          301            0
-Trisotech Workflow Modeler 10.3.1                            B.1.0                0          545            1
-Trisotech Workflow Modeler 10.3.1                            A.1.0                0           80            0
-Trisotech Workflow Modeler 10.3.1                            C.1.1                0          347           14
-Trisotech Workflow Modeler 10.3.1                            B.2.0                0         1665            0
-Trisotech Workflow Modeler 10.3.1                            C.3.0                1          396          199
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.3.0                0           59           17
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.4.1                0          115           33
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.2.0                0           57           11

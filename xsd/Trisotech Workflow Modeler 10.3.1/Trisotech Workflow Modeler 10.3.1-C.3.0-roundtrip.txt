@@ -1,4 +1,0 @@
-ANALYSIS: Trisotech Workflow Modeler 10.3.1-C.3.0-roundtrip (Tool: xsd)
-  Error Line 275: cvc-complex-type.3.2.2: Attribute 'language' is not allowed to appear in element 'semantic:timeDuration'.
-
-  INFO   : Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0
