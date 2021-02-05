@@ -140,17 +140,6 @@ Aeneis 5.7.89.2400                                           A.1.0              
 Aeneis 5.7.89.2400                                           C.1.1                0          297           13
 Aeneis 5.7.89.2400                                           B.2.0                4         1666           34
 Aeneis 5.7.89.2400                                           C.3.0                0          483            6
-MID Innovator 12.3.1.20212                                   C.1.0                0          613           84
-MID Innovator 12.3.1.20212                                   A.3.0                0          145            9
-MID Innovator 12.3.1.20212                                   A.4.1                0          282           32
-MID Innovator 12.3.1.20212                                   A.2.0                0          136            0
-MID Innovator 12.3.1.20212                                   C.2.0                0          424           28
-MID Innovator 12.3.1.20212                                   A.4.0                0          252            0
-MID Innovator 12.3.1.20212                                   B.1.0                0          438           43
-MID Innovator 12.3.1.20212                                   A.1.0                0           76            0
-MID Innovator 12.3.1.20212                                   C.1.1                0          247           24
-MID Innovator 12.3.1.20212                                   B.2.0                0         1341          108
-MID Innovator 12.3.1.20212                                   C.3.0                0          375           39
 BPMN-Modeler for Confluence Enterprise 3.5.1                 C.1.0                0          457            3
 BPMN-Modeler for Confluence Enterprise 3.5.1                 A.3.0                0          104            0
 BPMN-Modeler for Confluence Enterprise 3.5.1                 A.4.1                0           86            0
