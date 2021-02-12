@@ -1,0 +1,10 @@
+ANALYSIS: MID Innovator 15.0.1.20127-A.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process
+    OK     : selectFirstProcess                       Push (id: WFP-6-)
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 1' and @id='_ec59e164-68b4-4f94-98de-ffb1c58a84af']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 2' and @id='_820c21c0-45f3-473b-813f-06381cc637cd']
+      OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 3' and @id='_e70a6fcb-913c-4a7b-a65d-e83adc73d69c']
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event' and @id='_a47df184-085b-49f7-bb82-031c84625821']
+      OK     : doExecute                                Pop (id: WFP-6-)

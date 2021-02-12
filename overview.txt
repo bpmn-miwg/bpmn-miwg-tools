@@ -152,6 +152,18 @@ BPMN-Modeler for Confluence Enterprise 3.5.1                 A.1.0              
 BPMN-Modeler for Confluence Enterprise 3.5.1                 C.1.1                0          270            5
 BPMN-Modeler for Confluence Enterprise 3.5.1                 B.2.0                0         1082            0
 BPMN-Modeler for Confluence Enterprise 3.5.1                 C.3.0                0          305            0
+MID Innovator 15.0.1.20127                                   C.1.0                0          402           53
+MID Innovator 15.0.1.20127                                   A.3.0                0           95            2
+MID Innovator 15.0.1.20127                                   A.4.1                0          238           16
+MID Innovator 15.0.1.20127                                   A.2.0                0           89            0
+MID Innovator 15.0.1.20127                                   C.2.0                0          297            6
+MID Innovator 15.0.1.20127                                   C.4.0                0          525           87
+MID Innovator 15.0.1.20127                                   A.4.0                0          159            0
+MID Innovator 15.0.1.20127                                   B.1.0                0          322            7
+MID Innovator 15.0.1.20127                                   A.1.0                0           46            0
+MID Innovator 15.0.1.20127                                   C.1.1                0          203           29
+MID Innovator 15.0.1.20127                                   B.2.0                0          822           23
+MID Innovator 15.0.1.20127                                   C.3.0                0          242           31
 ARIS Architect 10.0.10                                       C.1.0                -            -            -
 ARIS Architect 10.0.10                                       A.3.0                0           82            0
 ARIS Architect 10.0.10                                       A.4.1                0          168           32
