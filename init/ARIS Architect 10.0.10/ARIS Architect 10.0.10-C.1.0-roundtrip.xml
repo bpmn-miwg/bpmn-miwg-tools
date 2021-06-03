@@ -1,3 +1,0 @@
-<analysis name="ARIS Architect 10.0.10-C.1.0-roundtrip" toolName="init">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ExceptionEntry" message="Exception during job preparation"/>
-</analysis>

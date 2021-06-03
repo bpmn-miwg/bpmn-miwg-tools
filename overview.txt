@@ -11,15 +11,6 @@ W4 BPMN+ Composer V.9.4                                      A.1.0              
 W4 BPMN+ Composer V.9.4                                      C.1.1                0           39            1
 W4 BPMN+ Composer V.9.4                                      B.2.0                0          680            0
 W4 BPMN+ Composer V.9.4                                      C.3.0                0           64            0
-ARIS Architect 9.8.3                                         C.1.0                0          148           68
-ARIS Architect 9.8.3                                         A.3.0                0           50           30
-ARIS Architect 9.8.3                                         A.4.1                0           88           40
-ARIS Architect 9.8.3                                         A.2.0                0           42           26
-ARIS Architect 9.8.3                                         A.4.0                0           64           29
-ARIS Architect 9.8.3                                         B.1.0                0          152           79
-ARIS Architect 9.8.3                                         A.1.0                0           26           12
-ARIS Architect 9.8.3                                         C.1.1                0           88           29
-ARIS Architect 9.8.3                                         C.3.0                0           93           40
 Activiti Designer 5.14.1                                     A.3.0                0            5            0
 Activiti Designer 5.14.1                                     A.2.0                0            3            0
 Activiti Designer 5.14.1                                     A.1.0                0            1            0
@@ -152,18 +143,6 @@ MID Innovator 15.0.1.20127                                   A.1.0              
 MID Innovator 15.0.1.20127                                   C.1.1                0          203           29
 MID Innovator 15.0.1.20127                                   B.2.0                0          822           23
 MID Innovator 15.0.1.20127                                   C.3.0                0          242           31
-ARIS Architect 10.0.10                                       C.1.0                -            -            -
-ARIS Architect 10.0.10                                       A.3.0                0           82            0
-ARIS Architect 10.0.10                                       A.4.1                0          168           32
-ARIS Architect 10.0.10                                       A.2.0                0           78            0
-ARIS Architect 10.0.10                                       C.2.0                0          273            2
-ARIS Architect 10.0.10                                       C.4.0                0          428           73
-ARIS Architect 10.0.10                                       A.4.0                0          104            2
-ARIS Architect 10.0.10                                       B.1.0                0          278            4
-ARIS Architect 10.0.10                                       A.1.0                0           41            0
-ARIS Architect 10.0.10                                       C.1.1                -            -            -
-ARIS Architect 10.0.10                                       B.2.0                0          817           30
-ARIS Architect 10.0.10                                       C.3.0                0          143           63
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.3.0                0           59           17
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.4.1                0          115           33
 iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.2.0                0           57           11
@@ -270,6 +249,18 @@ Bizagi Modeler 2.8.0.8                                       A.4.0              
 Bizagi Modeler 2.8.0.8                                       B.1.0                2          447            7
 Bizagi Modeler 2.8.0.8                                       A.1.0                0           81            0
 Bizagi Modeler 2.8.0.8                                       B.2.0                6         1370           16
+ARIS Architect 10.0.14                                       C.1.0                0          293           76
+ARIS Architect 10.0.14                                       A.3.0                0          132            0
+ARIS Architect 10.0.14                                       A.4.1                0          220           32
+ARIS Architect 10.0.14                                       A.2.0                0          123            0
+ARIS Architect 10.0.14                                       C.2.0                0          376            2
+ARIS Architect 10.0.14                                       C.4.0                0          631           73
+ARIS Architect 10.0.14                                       A.4.0                0          122            2
+ARIS Architect 10.0.14                                       B.1.0                0          385            4
+ARIS Architect 10.0.14                                       A.1.0                0           67            0
+ARIS Architect 10.0.14                                       C.1.1                0          242           43
+ARIS Architect 10.0.14                                       B.2.0                1         1132           30
+ARIS Architect 10.0.14                                       C.3.0                0          203           64
 Bonita BPM 7.2.3                                             C.1.0                5          139           63
 Bonita BPM 7.2.3                                             A.3.0                5           54           17
 Bonita BPM 7.2.3                                             A.4.1                9          103           44

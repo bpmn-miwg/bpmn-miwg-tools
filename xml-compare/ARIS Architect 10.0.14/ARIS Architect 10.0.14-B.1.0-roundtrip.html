@@ -1,0 +1,2752 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="ARIS Architect 10.0.14">
+      <h2>ARIS Architect 10.0.14</h2>
+      <div class="test" data-test="B.1.0" data-variant="Roundtrip">
+         <h3>B.1.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: ARIS Architect 10.0.14-B.1.0-roundtrip (Tool: xml-compare)</h4>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/@targetNamespace">/definitions[1]/@targetNamespace :	http://www.trisotech.com/definitions/_1373655174418</span>
+               <span class="vendor" data-xpath="/definitions[1]/@targetNamespace">/definitions[1]/@targetNamespace :	http://www.softwareag.com/aris/bpmn2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]">/definitions[1] :	11</span>
+               <span class="vendor" data-xpath="/definitions[1]">/definitions[1] :	8</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/dataStore[1]">/definitions[1]/dataStore[1] :	capacity</span>
+               <span class="vendor" data-xpath="/definitions[1]/dataStore[1]">/definitions[1]/dataStore[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/dataStore[1]">/definitions[1]/dataStore[1] :	isUnlimited</span>
+               <span class="vendor" data-xpath="/definitions[1]/dataStore[1]">/definitions[1]/dataStore[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/dataStore[1]/@name">/definitions[1]/dataStore[1]/@name :	Data
+Store Reference</span>
+               <span class="vendor" data-xpath="/definitions[1]/dataStore[1]/@name">/definitions[1]/dataStore[1]/@name :	Data
+Store Reference</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/dataStore[1]">/definitions[1]/dataStore[1] :	false</span>
+               <span class="vendor" data-xpath="/definitions[1]/dataStore[1]">/definitions[1]/dataStore[1] :	true</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/globalTask[1]">/definitions[1]/globalTask[1] :	false</span>
+               <span class="vendor" data-xpath="/definitions[1]/globalTask[1]">/definitions[1]/globalTask[1] :	true</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/globalTask[1]">/definitions[1]/globalTask[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/globalTask[1]">/definitions[1]/globalTask[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[1]">/definitions[1]/process[1] :	semantic:process</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]">/definitions[1]/process[2] :	isExecutable</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]">/definitions[1]/process[3] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]">/definitions[1]/process[2]/startEvent[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/startEvent[1]">/definitions[1]/process[3]/startEvent[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]/outgoing[1]">/definitions[1]/process[2]/startEvent[1]/outgoing[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/startEvent[1]/outgoing[1]">/definitions[1]/process[3]/startEvent[1]/outgoing[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/startEvent[1]/timerEventDefinition[1]">/definitions[1]/process[2]/startEvent[1]/timerEventDefinition[1] :	semantic:timerEventDefinition</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/startEvent[1]/extensionElements[1]">/definitions[1]/process[3]/startEvent[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/startEvent[1]/timerEventDefinition[1]">/definitions[1]/process[3]/startEvent[1]/timerEventDefinition[1] :	semantic:timerEventDefinition</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/endEvent[1]">/definitions[1]/process[2]/endEvent[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/endEvent[1]">/definitions[1]/process[3]/endEvent[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/endEvent[1]/incoming[1]">/definitions[1]/process[2]/endEvent[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/endEvent[1]/incoming[1]">/definitions[1]/process[3]/endEvent[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/endEvent[1]/extensionElements[1]">/definitions[1]/process[3]/endEvent[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/task[1]">/definitions[1]/process[2]/task[1] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/task[1]">/definitions[1]/process[3]/task[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/task[1]">/definitions[1]/process[2]/task[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/task[1]">/definitions[1]/process[3]/task[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/task[1]">/definitions[1]/process[2]/task[1] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/task[1]">/definitions[1]/process[3]/task[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/task[1]">/definitions[1]/process[2]/task[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/task[1]">/definitions[1]/process[3]/task[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/task[1]/incoming[1]">/definitions[1]/process[2]/task[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/task[1]/incoming[1]">/definitions[1]/process[3]/task[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/task[1]/outgoing[1]">/definitions[1]/process[2]/task[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/task[1]/outgoing[1]">/definitions[1]/process[3]/task[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/task[1]/extensionElements[1]">/definitions[1]/process[3]/task[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	implementation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]/@name">/definitions[1]/process[2]/userTask[1]/@name :	User
+Task 2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]/@name">/definitions[1]/process[3]/userTask[1]/@name :	User
+Task 2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]">/definitions[1]/process[2]/userTask[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]/incoming[1]">/definitions[1]/process[2]/userTask[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]/incoming[1]">/definitions[1]/process[3]/userTask[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/userTask[1]/outgoing[1]">/definitions[1]/process[2]/userTask[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]/outgoing[1]">/definitions[1]/process[3]/userTask[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/userTask[1]/extensionElements[1]">/definitions[1]/process[3]/userTask[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	implementation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]">/definitions[1]/process[2]/serviceTask[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]/incoming[1]">/definitions[1]/process[2]/serviceTask[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/serviceTask[1]/incoming[1]">/definitions[1]/process[3]/serviceTask[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/serviceTask[1]/outgoing[1]">/definitions[1]/process[2]/serviceTask[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/serviceTask[1]/outgoing[1]">/definitions[1]/process[3]/serviceTask[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/serviceTask[1]/extensionElements[1]">/definitions[1]/process[3]/serviceTask[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/sequenceFlow[1]">/definitions[1]/process[2]/sequenceFlow[1] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/sequenceFlow[4]">/definitions[1]/process[3]/sequenceFlow[4] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/sequenceFlow[1]">/definitions[1]/process[2]/sequenceFlow[1] :	5</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/sequenceFlow[4]">/definitions[1]/process[3]/sequenceFlow[4] :	8</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/sequenceFlow[2]">/definitions[1]/process[2]/sequenceFlow[2] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/sequenceFlow[2]">/definitions[1]/process[3]/sequenceFlow[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/sequenceFlow[3]">/definitions[1]/process[2]/sequenceFlow[3] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/sequenceFlow[1]">/definitions[1]/process[3]/sequenceFlow[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/sequenceFlow[3]">/definitions[1]/process[2]/sequenceFlow[3] :	7</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/sequenceFlow[1]">/definitions[1]/process[3]/sequenceFlow[1] :	5</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/sequenceFlow[4]">/definitions[1]/process[2]/sequenceFlow[4] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/sequenceFlow[3]">/definitions[1]/process[3]/sequenceFlow[3] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]/sequenceFlow[4]">/definitions[1]/process[2]/sequenceFlow[4] :	8</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]/sequenceFlow[3]">/definitions[1]/process[3]/sequenceFlow[3] :	7</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[2]">/definitions[1]/process[2] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[3]">/definitions[1]/process[3] :	6</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]">/definitions[1]/process[3] :	isExecutable</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]">/definitions[1]/process[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]">/definitions[1]/process[3] :	37</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]">/definitions[1]/process[1] :	35</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/laneSet[1]">/definitions[1]/process[3]/laneSet[1] :	semantic:laneSet</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/dataObject[1]">/definitions[1]/process[3]/dataObject[1] :	false</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/dataObject[1]">/definitions[1]/process[1]/dataObject[1] :	true</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/endEvent[1]">/definitions[1]/process[3]/endEvent[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[1]">/definitions[1]/process[1]/endEvent[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/endEvent[1]/incoming[1]">/definitions[1]/process[3]/endEvent[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[1]/incoming[1]">/definitions[1]/process[1]/endEvent[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/endEvent[1]/messageEventDefinition[1]">/definitions[1]/process[3]/endEvent[1]/messageEventDefinition[1] :	semantic:messageEventDefinition</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[1]/extensionElements[1]">/definitions[1]/process[1]/endEvent[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[1]/messageEventDefinition[1]">/definitions[1]/process[1]/endEvent[1]/messageEventDefinition[1] :	semantic:messageEventDefinition</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[1]">/definitions[1]/process[3]/callActivity[1] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[1]">/definitions[1]/process[1]/callActivity[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[1]">/definitions[1]/process[3]/callActivity[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[1]">/definitions[1]/process[1]/callActivity[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[1]">/definitions[1]/process[3]/callActivity[1] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[1]">/definitions[1]/process[1]/callActivity[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[1]">/definitions[1]/process[3]/callActivity[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[1]">/definitions[1]/process[1]/callActivity[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[1]/incoming[1]">/definitions[1]/process[3]/callActivity[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[1]/incoming[1]">/definitions[1]/process[1]/callActivity[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[1]/outgoing[1]">/definitions[1]/process[3]/callActivity[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[1]/outgoing[1]">/definitions[1]/process[1]/callActivity[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[1]/extensionElements[1]">/definitions[1]/process[1]/callActivity[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[2]/@calledElement">/definitions[1]/process[3]/callActivity[2]/@calledElement :	Process_ba16239e-181e-4b9f-bc5b-0bb2ee973450</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[2]/@calledElement">/definitions[1]/process[1]/callActivity[2]/@calledElement :	Process__ba16239e-181e-4b9f-bc5b-0bb2ee973450</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[2]">/definitions[1]/process[3]/callActivity[2] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[2]">/definitions[1]/process[1]/callActivity[2] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[2]/incoming[1]">/definitions[1]/process[3]/callActivity[2]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[2]/incoming[1]">/definitions[1]/process[1]/callActivity[2]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[2]/outgoing[1]">/definitions[1]/process[3]/callActivity[2]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[2]/outgoing[1]">/definitions[1]/process[1]/callActivity[2]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[2]/extensionElements[1]">/definitions[1]/process[1]/callActivity[2]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[1]">/definitions[1]/process[3]/exclusiveGateway[1] :	gatewayDirection</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]">/definitions[1]/process[1]/exclusiveGateway[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[1]">/definitions[1]/process[3]/exclusiveGateway[1] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]">/definitions[1]/process[1]/exclusiveGateway[1] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[1]/incoming[1]/text()[1]">/definitions[1]/process[3]/exclusiveGateway[1]/incoming[1]/text()[1] :	_61abe245-5604-46ba-8152-94d6e68ffda4</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]/incoming[1]/text()[1]">/definitions[1]/process[1]/exclusiveGateway[1]/incoming[1]/text()[1] :	_f5c5d52a-204f-4f97-b872-817d63cf36ab</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[1]/incoming[1]">/definitions[1]/process[3]/exclusiveGateway[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]/incoming[1]">/definitions[1]/process[1]/exclusiveGateway[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[1]/incoming[2]/text()[1]">/definitions[1]/process[3]/exclusiveGateway[1]/incoming[2]/text()[1] :	_f5c5d52a-204f-4f97-b872-817d63cf36ab</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]/incoming[2]/text()[1]">/definitions[1]/process[1]/exclusiveGateway[1]/incoming[2]/text()[1] :	_61abe245-5604-46ba-8152-94d6e68ffda4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[1]/incoming[2]">/definitions[1]/process[3]/exclusiveGateway[1]/incoming[2] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]/incoming[2]">/definitions[1]/process[1]/exclusiveGateway[1]/incoming[2] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[1]/outgoing[1]">/definitions[1]/process[3]/exclusiveGateway[1]/outgoing[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]/outgoing[1]">/definitions[1]/process[1]/exclusiveGateway[1]/outgoing[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[1]/extensionElements[1]">/definitions[1]/process[1]/exclusiveGateway[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[2]">/definitions[1]/process[3]/exclusiveGateway[2] :	gatewayDirection</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]">/definitions[1]/process[1]/exclusiveGateway[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[2]">/definitions[1]/process[3]/exclusiveGateway[2] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]">/definitions[1]/process[1]/exclusiveGateway[2] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[2]/incoming[1]">/definitions[1]/process[3]/exclusiveGateway[2]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]/incoming[1]">/definitions[1]/process[1]/exclusiveGateway[2]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[2]/outgoing[1]/text()[1]">/definitions[1]/process[3]/exclusiveGateway[2]/outgoing[1]/text()[1] :	_9d489bd9-9435-4692-bc98-4cdda4a61569</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]/outgoing[1]/text()[1]">/definitions[1]/process[1]/exclusiveGateway[2]/outgoing[1]/text()[1] :	_eeb6812d-d182-489f-aea2-493ab8732cfd</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[2]/outgoing[1]">/definitions[1]/process[3]/exclusiveGateway[2]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]/outgoing[1]">/definitions[1]/process[1]/exclusiveGateway[2]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[2]/outgoing[2]/text()[1]">/definitions[1]/process[3]/exclusiveGateway[2]/outgoing[2]/text()[1] :	_eeb6812d-d182-489f-aea2-493ab8732cfd</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]/outgoing[2]/text()[1]">/definitions[1]/process[1]/exclusiveGateway[2]/outgoing[2]/text()[1] :	_9d489bd9-9435-4692-bc98-4cdda4a61569</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[2]/outgoing[2]">/definitions[1]/process[3]/exclusiveGateway[2]/outgoing[2] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]/outgoing[2]">/definitions[1]/process[1]/exclusiveGateway[2]/outgoing[2] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[2]/extensionElements[1]">/definitions[1]/process[1]/exclusiveGateway[2]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/startEvent[1]/@name">/definitions[1]/process[3]/startEvent[1]/@name :	Start Event
+Message</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]/@name">/definitions[1]/process[1]/startEvent[1]/@name :	Start Event
+Message</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/startEvent[1]">/definitions[1]/process[3]/startEvent[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]">/definitions[1]/process[1]/startEvent[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/startEvent[1]/outgoing[1]">/definitions[1]/process[3]/startEvent[1]/outgoing[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]/outgoing[1]">/definitions[1]/process[1]/startEvent[1]/outgoing[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/startEvent[1]/messageEventDefinition[1]">/definitions[1]/process[3]/startEvent[1]/messageEventDefinition[1] :	semantic:messageEventDefinition</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]/extensionElements[1]">/definitions[1]/process[1]/startEvent[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/startEvent[1]/messageEventDefinition[1]">/definitions[1]/process[1]/startEvent[1]/messageEventDefinition[1] :	semantic:messageEventDefinition</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/parallelGateway[1]">/definitions[1]/process[3]/parallelGateway[1] :	gatewayDirection</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/parallelGateway[1]">/definitions[1]/process[1]/parallelGateway[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/parallelGateway[1]">/definitions[1]/process[3]/parallelGateway[1] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/parallelGateway[1]">/definitions[1]/process[1]/parallelGateway[1] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/parallelGateway[1]/incoming[1]">/definitions[1]/process[3]/parallelGateway[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/parallelGateway[1]/incoming[1]">/definitions[1]/process[1]/parallelGateway[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/parallelGateway[1]/outgoing[1]/text()[1]">/definitions[1]/process[3]/parallelGateway[1]/outgoing[1]/text()[1] :	_ab34472d-95a4-459c-a13b-5ed8b8b75eca</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/parallelGateway[1]/outgoing[1]/text()[1]">/definitions[1]/process[1]/parallelGateway[1]/outgoing[1]/text()[1] :	_d30f7fb3-ec91-4a60-b73e-42419417f3be</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/parallelGateway[1]/outgoing[1]">/definitions[1]/process[3]/parallelGateway[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/parallelGateway[1]/outgoing[1]">/definitions[1]/process[1]/parallelGateway[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/parallelGateway[1]/outgoing[2]/text()[1]">/definitions[1]/process[3]/parallelGateway[1]/outgoing[2]/text()[1] :	_d30f7fb3-ec91-4a60-b73e-42419417f3be</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/parallelGateway[1]/outgoing[2]/text()[1]">/definitions[1]/process[1]/parallelGateway[1]/outgoing[2]/text()[1] :	_ab34472d-95a4-459c-a13b-5ed8b8b75eca</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/parallelGateway[1]/outgoing[2]">/definitions[1]/process[3]/parallelGateway[1]/outgoing[2] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/parallelGateway[1]/outgoing[2]">/definitions[1]/process[1]/parallelGateway[1]/outgoing[2] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/parallelGateway[1]/extensionElements[1]">/definitions[1]/process[1]/parallelGateway[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[3]">/definitions[1]/process[3]/callActivity[3] :	calledElement</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[3]">/definitions[1]/process[1]/callActivity[3] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[3]">/definitions[1]/process[3]/callActivity[3] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[3]">/definitions[1]/process[1]/callActivity[3] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[3]/incoming[1]">/definitions[1]/process[3]/callActivity[3]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[3]/incoming[1]">/definitions[1]/process[1]/callActivity[3]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/callActivity[3]/outgoing[1]">/definitions[1]/process[3]/callActivity[3]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[3]/outgoing[1]">/definitions[1]/process[1]/callActivity[3]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/callActivity[3]/extensionElements[1]">/definitions[1]/process[1]/callActivity[3]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[1]">/definitions[1]/process[3]/subProcess[1] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[1]">/definitions[1]/process[1]/subProcess[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[1]">/definitions[1]/process[3]/subProcess[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[1]">/definitions[1]/process[1]/subProcess[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[1]">/definitions[1]/process[3]/subProcess[1] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[1]">/definitions[1]/process[1]/subProcess[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[1]">/definitions[1]/process[3]/subProcess[1] :	triggeredByEvent</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[1]">/definitions[1]/process[1]/subProcess[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[1]">/definitions[1]/process[3]/subProcess[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[1]">/definitions[1]/process[1]/subProcess[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[1]/incoming[1]">/definitions[1]/process[3]/subProcess[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[1]/incoming[1]">/definitions[1]/process[1]/subProcess[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[1]/outgoing[1]">/definitions[1]/process[3]/subProcess[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[1]/outgoing[1]">/definitions[1]/process[1]/subProcess[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[1]/extensionElements[1]">/definitions[1]/process[1]/subProcess[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/userTask[1]">/definitions[1]/process[1]/userTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	implementation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/userTask[1]">/definitions[1]/process[1]/userTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/userTask[1]">/definitions[1]/process[1]/userTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/userTask[1]">/definitions[1]/process[1]/userTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/userTask[1]">/definitions[1]/process[3]/userTask[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/userTask[1]">/definitions[1]/process[1]/userTask[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/userTask[1]/incoming[1]">/definitions[1]/process[3]/userTask[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/userTask[1]/incoming[1]">/definitions[1]/process[1]/userTask[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/userTask[1]/outgoing[1]">/definitions[1]/process[3]/userTask[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/userTask[1]/outgoing[1]">/definitions[1]/process[1]/userTask[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/userTask[1]/extensionElements[1]">/definitions[1]/process[1]/userTask[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[3]">/definitions[1]/process[3]/exclusiveGateway[3] :	gatewayDirection</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[3]">/definitions[1]/process[1]/exclusiveGateway[3] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[3]">/definitions[1]/process[3]/exclusiveGateway[3] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[3]">/definitions[1]/process[1]/exclusiveGateway[3] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[3]/incoming[1]">/definitions[1]/process[3]/exclusiveGateway[3]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[3]/incoming[1]">/definitions[1]/process[1]/exclusiveGateway[3]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[3]/outgoing[1]">/definitions[1]/process[3]/exclusiveGateway[3]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[3]/outgoing[1]">/definitions[1]/process[1]/exclusiveGateway[3]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[3]/outgoing[2]">/definitions[1]/process[3]/exclusiveGateway[3]/outgoing[2] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[3]/outgoing[2]">/definitions[1]/process[1]/exclusiveGateway[3]/outgoing[2] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[3]/extensionElements[1]">/definitions[1]/process[1]/exclusiveGateway[3]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[4]">/definitions[1]/process[3]/exclusiveGateway[4] :	gatewayDirection</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[4]">/definitions[1]/process[1]/exclusiveGateway[4] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[4]">/definitions[1]/process[3]/exclusiveGateway[4] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[4]">/definitions[1]/process[1]/exclusiveGateway[4] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[4]/incoming[1]/text()[1]">/definitions[1]/process[3]/exclusiveGateway[4]/incoming[1]/text()[1] :	_8f68b889-83a4-44ad-9777-d39acdd5415e</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[4]/incoming[1]/text()[1]">/definitions[1]/process[1]/exclusiveGateway[4]/incoming[1]/text()[1] :	_657f30ba-0690-4a14-8b8e-d8939efcc7bd</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[4]/incoming[1]">/definitions[1]/process[3]/exclusiveGateway[4]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[4]/incoming[1]">/definitions[1]/process[1]/exclusiveGateway[4]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[4]/incoming[2]/text()[1]">/definitions[1]/process[3]/exclusiveGateway[4]/incoming[2]/text()[1] :	_657f30ba-0690-4a14-8b8e-d8939efcc7bd</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[4]/incoming[2]/text()[1]">/definitions[1]/process[1]/exclusiveGateway[4]/incoming[2]/text()[1] :	_8f68b889-83a4-44ad-9777-d39acdd5415e</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[4]/incoming[2]">/definitions[1]/process[3]/exclusiveGateway[4]/incoming[2] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[4]/incoming[2]">/definitions[1]/process[1]/exclusiveGateway[4]/incoming[2] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/exclusiveGateway[4]/outgoing[1]">/definitions[1]/process[3]/exclusiveGateway[4]/outgoing[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[4]/outgoing[1]">/definitions[1]/process[1]/exclusiveGateway[4]/outgoing[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/exclusiveGateway[4]/extensionElements[1]">/definitions[1]/process[1]/exclusiveGateway[4]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]">/definitions[1]/process[3]/subProcess[2] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]">/definitions[1]/process[1]/subProcess[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]">/definitions[1]/process[3]/subProcess[2] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]">/definitions[1]/process[1]/subProcess[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]">/definitions[1]/process[3]/subProcess[2] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]">/definitions[1]/process[1]/subProcess[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]">/definitions[1]/process[3]/subProcess[2] :	triggeredByEvent</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]">/definitions[1]/process[1]/subProcess[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]">/definitions[1]/process[3]/subProcess[2] :	7</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]">/definitions[1]/process[1]/subProcess[2] :	8</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/incoming[1]">/definitions[1]/process[3]/subProcess[2]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/incoming[1]">/definitions[1]/process[1]/subProcess[2]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/outgoing[1]">/definitions[1]/process[3]/subProcess[2]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/outgoing[1]">/definitions[1]/process[1]/subProcess[2]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/startEvent[1]">/definitions[1]/process[3]/subProcess[2]/startEvent[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/startEvent[1]">/definitions[1]/process[1]/subProcess[2]/startEvent[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/startEvent[1]/outgoing[1]">/definitions[1]/process[3]/subProcess[2]/startEvent[1]/outgoing[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/startEvent[1]/outgoing[1]">/definitions[1]/process[1]/subProcess[2]/startEvent[1]/outgoing[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/startEvent[1]/extensionElements[1]">/definitions[1]/process[1]/subProcess[2]/startEvent[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/startEvent[1]">/definitions[1]/process[3]/subProcess[2]/startEvent[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/startEvent[1]">/definitions[1]/process[1]/subProcess[2]/startEvent[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/task[1]">/definitions[1]/process[3]/subProcess[2]/task[1] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/task[1]">/definitions[1]/process[1]/subProcess[2]/task[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/task[1]">/definitions[1]/process[3]/subProcess[2]/task[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/task[1]">/definitions[1]/process[1]/subProcess[2]/task[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/task[1]">/definitions[1]/process[3]/subProcess[2]/task[1] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/task[1]">/definitions[1]/process[1]/subProcess[2]/task[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/task[1]">/definitions[1]/process[3]/subProcess[2]/task[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/task[1]">/definitions[1]/process[1]/subProcess[2]/task[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/task[1]/incoming[1]">/definitions[1]/process[3]/subProcess[2]/task[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/task[1]/incoming[1]">/definitions[1]/process[1]/subProcess[2]/task[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/task[1]/outgoing[1]">/definitions[1]/process[3]/subProcess[2]/task[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/task[1]/outgoing[1]">/definitions[1]/process[1]/subProcess[2]/task[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/task[1]/extensionElements[1]">/definitions[1]/process[1]/subProcess[2]/task[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/task[1]">/definitions[1]/process[3]/subProcess[2]/task[1] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/task[1]">/definitions[1]/process[1]/subProcess[2]/task[1] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/endEvent[1]">/definitions[1]/process[3]/subProcess[2]/endEvent[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/endEvent[1]">/definitions[1]/process[1]/subProcess[2]/endEvent[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/endEvent[1]/incoming[1]">/definitions[1]/process[3]/subProcess[2]/endEvent[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/endEvent[1]/incoming[1]">/definitions[1]/process[1]/subProcess[2]/endEvent[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/endEvent[1]/extensionElements[1]">/definitions[1]/process[1]/subProcess[2]/endEvent[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/endEvent[1]">/definitions[1]/process[3]/subProcess[2]/endEvent[1] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/endEvent[1]">/definitions[1]/process[1]/subProcess[2]/endEvent[1] :	5</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/sequenceFlow[1]">/definitions[1]/process[3]/subProcess[2]/sequenceFlow[1] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/sequenceFlow[1]">/definitions[1]/process[1]/subProcess[2]/sequenceFlow[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/sequenceFlow[1]">/definitions[1]/process[3]/subProcess[2]/sequenceFlow[1] :	5</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/sequenceFlow[1]">/definitions[1]/process[1]/subProcess[2]/sequenceFlow[1] :	6</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/sequenceFlow[2]">/definitions[1]/process[3]/subProcess[2]/sequenceFlow[2] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/sequenceFlow[2]">/definitions[1]/process[1]/subProcess[2]/sequenceFlow[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/subProcess[2]/sequenceFlow[2]">/definitions[1]/process[3]/subProcess[2]/sequenceFlow[2] :	6</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/sequenceFlow[2]">/definitions[1]/process[1]/subProcess[2]/sequenceFlow[2] :	7</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/subProcess[2]/extensionElements[1]">/definitions[1]/process[1]/subProcess[2]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	completionQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]">/definitions[1]/process[1]/serviceTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	implementation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]">/definitions[1]/process[1]/serviceTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	isForCompensation</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]">/definitions[1]/process[1]/serviceTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	startQuantity</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]">/definitions[1]/process[1]/serviceTask[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]">/definitions[1]/process[3]/serviceTask[1] :	5</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]">/definitions[1]/process[1]/serviceTask[1] :	6</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/incoming[1]">/definitions[1]/process[3]/serviceTask[1]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/incoming[1]">/definitions[1]/process[1]/serviceTask[1]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/outgoing[1]">/definitions[1]/process[3]/serviceTask[1]/outgoing[1] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/outgoing[1]">/definitions[1]/process[1]/serviceTask[1]/outgoing[1] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]/dataInput[1]">/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]/dataInput[1] :	semantic:dataInput</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]/dataOutput[1]">/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]/dataOutput[1] :	semantic:dataOutput</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]/inputSet[1]/dataInputRefs[1]/text()[1]">/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]/inputSet[1]/dataInputRefs[1]/text()[1] :	Din1373655174951</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]/inputSet[1]/dataInputRefs[1]/text()[1]">/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]/inputSet[1]/dataInputRefs[1]/text()[1] :	DataInput__fea1c5af-6c76-403f-809e-26d476d92741</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]/outputSet[1]/dataOutputRefs[1]/text()[1]">/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]/outputSet[1]/dataOutputRefs[1]/text()[1] :	Dout1373655174952</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]/outputSet[1]/dataOutputRefs[1]/text()[1]">/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]/outputSet[1]/dataOutputRefs[1]/text()[1] :	DataOutput__fea1c5af-6c76-403f-809e-26d476d92741</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]/dataInput[1]">/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]/dataInput[1] :	semantic:dataInput</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]/dataOutput[1]">/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]/dataOutput[1] :	semantic:dataOutput</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1]">/definitions[1]/process[3]/serviceTask[1]/ioSpecification[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1]">/definitions[1]/process[1]/serviceTask[1]/ioSpecification[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/dataInputAssociation[1]/sourceRef[1]/text()[1]">/definitions[1]/process[3]/serviceTask[1]/dataInputAssociation[1]/sourceRef[1]/text()[1] :	_3d35229f-2c75-4d5d-a066-2d14e46e442e</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/dataInputAssociation[1]/sourceRef[1]/text()[1]">/definitions[1]/process[1]/serviceTask[1]/dataInputAssociation[1]/sourceRef[1]/text()[1] :	Reference_DF1373655174778</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/dataInputAssociation[1]/targetRef[1]/text()[1]">/definitions[1]/process[3]/serviceTask[1]/dataInputAssociation[1]/targetRef[1]/text()[1] :	Din1373655174951</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/dataInputAssociation[1]/targetRef[1]/text()[1]">/definitions[1]/process[1]/serviceTask[1]/dataInputAssociation[1]/targetRef[1]/text()[1] :	DataInput__fea1c5af-6c76-403f-809e-26d476d92741</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/dataInputAssociation[1]">/definitions[1]/process[3]/serviceTask[1]/dataInputAssociation[1] :	3</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/dataInputAssociation[1]">/definitions[1]/process[1]/serviceTask[1]/dataInputAssociation[1] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/dataOutputAssociation[1]/sourceRef[1]/text()[1]">/definitions[1]/process[3]/serviceTask[1]/dataOutputAssociation[1]/sourceRef[1]/text()[1] :	Dout1373655174952</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/dataOutputAssociation[1]/sourceRef[1]/text()[1]">/definitions[1]/process[1]/serviceTask[1]/dataOutputAssociation[1]/sourceRef[1]/text()[1] :	DataOutput__fea1c5af-6c76-403f-809e-26d476d92741</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in text value (id:14)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/dataOutputAssociation[1]/targetRef[1]/text()[1]">/definitions[1]/process[3]/serviceTask[1]/dataOutputAssociation[1]/targetRef[1]/text()[1] :	_b9385abf-d293-40b7-848b-8add4db48415</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/dataOutputAssociation[1]/targetRef[1]/text()[1]">/definitions[1]/process[1]/serviceTask[1]/dataOutputAssociation[1]/targetRef[1]/text()[1] :	Reference_DS1373655174514</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/serviceTask[1]/dataOutputAssociation[1]">/definitions[1]/process[3]/serviceTask[1]/dataOutputAssociation[1] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/dataOutputAssociation[1]">/definitions[1]/process[1]/serviceTask[1]/dataOutputAssociation[1] :	5</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/serviceTask[1]/extensionElements[1]">/definitions[1]/process[1]/serviceTask[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/endEvent[2]">/definitions[1]/process[3]/endEvent[2] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[2]">/definitions[1]/process[1]/endEvent[2] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/endEvent[2]/incoming[1]">/definitions[1]/process[3]/endEvent[2]/incoming[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[2]/incoming[1]">/definitions[1]/process[1]/endEvent[2]/incoming[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/endEvent[2]/terminateEventDefinition[1]">/definitions[1]/process[3]/endEvent[2]/terminateEventDefinition[1] :	semantic:terminateEventDefinition</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[2]/extensionElements[1]">/definitions[1]/process[1]/endEvent[2]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/endEvent[2]/terminateEventDefinition[1]">/definitions[1]/process[1]/endEvent[2]/terminateEventDefinition[1] :	semantic:terminateEventDefinition</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/dataObjectReference[1]">/definitions[1]/process[3]/dataObjectReference[1] :	semantic:dataObjectReference</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/dataStoreReference[1]">/definitions[1]/process[3]/dataStoreReference[1] :	semantic:dataStoreReference</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[1]">/definitions[1]/process[3]/sequenceFlow[1] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[3]">/definitions[1]/process[1]/sequenceFlow[3] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[1]">/definitions[1]/process[3]/sequenceFlow[1] :	19</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[3]">/definitions[1]/process[1]/sequenceFlow[3] :	21</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[2]">/definitions[1]/process[3]/sequenceFlow[2] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[15]">/definitions[1]/process[1]/sequenceFlow[15] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[2]">/definitions[1]/process[3]/sequenceFlow[2] :	20</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[15]">/definitions[1]/process[1]/sequenceFlow[15] :	33</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[3]">/definitions[1]/process[3]/sequenceFlow[3] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[6]">/definitions[1]/process[1]/sequenceFlow[6] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[3]">/definitions[1]/process[3]/sequenceFlow[3] :	21</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[6]">/definitions[1]/process[1]/sequenceFlow[6] :	24</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[4]">/definitions[1]/process[3]/sequenceFlow[4] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[8]">/definitions[1]/process[1]/sequenceFlow[8] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[4]">/definitions[1]/process[3]/sequenceFlow[4] :	22</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[8]">/definitions[1]/process[1]/sequenceFlow[8] :	26</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[5]">/definitions[1]/process[3]/sequenceFlow[5] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[16]">/definitions[1]/process[1]/sequenceFlow[16] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[5]">/definitions[1]/process[3]/sequenceFlow[5] :	23</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[16]">/definitions[1]/process[1]/sequenceFlow[16] :	34</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[6]">/definitions[1]/process[3]/sequenceFlow[6] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[10]">/definitions[1]/process[1]/sequenceFlow[10] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[6]">/definitions[1]/process[3]/sequenceFlow[6] :	24</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[10]">/definitions[1]/process[1]/sequenceFlow[10] :	28</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[7]">/definitions[1]/process[3]/sequenceFlow[7] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[13]">/definitions[1]/process[1]/sequenceFlow[13] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[7]">/definitions[1]/process[3]/sequenceFlow[7] :	25</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[13]">/definitions[1]/process[1]/sequenceFlow[13] :	31</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[8]">/definitions[1]/process[3]/sequenceFlow[8] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[9]">/definitions[1]/process[1]/sequenceFlow[9] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[8]">/definitions[1]/process[3]/sequenceFlow[8] :	26</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[9]">/definitions[1]/process[1]/sequenceFlow[9] :	27</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[9]">/definitions[1]/process[3]/sequenceFlow[9] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[4]">/definitions[1]/process[1]/sequenceFlow[4] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[9]">/definitions[1]/process[3]/sequenceFlow[9] :	27</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[4]">/definitions[1]/process[1]/sequenceFlow[4] :	22</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[10]">/definitions[1]/process[3]/sequenceFlow[10] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[14]">/definitions[1]/process[1]/sequenceFlow[14] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[10]">/definitions[1]/process[3]/sequenceFlow[10] :	28</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[14]">/definitions[1]/process[1]/sequenceFlow[14] :	32</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[11]">/definitions[1]/process[3]/sequenceFlow[11] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[7]">/definitions[1]/process[1]/sequenceFlow[7] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[11]">/definitions[1]/process[3]/sequenceFlow[11] :	29</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[7]">/definitions[1]/process[1]/sequenceFlow[7] :	25</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[12]">/definitions[1]/process[3]/sequenceFlow[12] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[5]">/definitions[1]/process[1]/sequenceFlow[5] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[12]">/definitions[1]/process[3]/sequenceFlow[12] :	30</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[5]">/definitions[1]/process[1]/sequenceFlow[5] :	23</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[13]">/definitions[1]/process[3]/sequenceFlow[13] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[1]">/definitions[1]/process[1]/sequenceFlow[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[13]">/definitions[1]/process[3]/sequenceFlow[13] :	31</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[1]">/definitions[1]/process[1]/sequenceFlow[1] :	19</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[14]">/definitions[1]/process[3]/sequenceFlow[14] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[12]">/definitions[1]/process[1]/sequenceFlow[12] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[14]">/definitions[1]/process[3]/sequenceFlow[14] :	32</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[12]">/definitions[1]/process[1]/sequenceFlow[12] :	30</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[15]">/definitions[1]/process[3]/sequenceFlow[15] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[2]">/definitions[1]/process[1]/sequenceFlow[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[15]">/definitions[1]/process[3]/sequenceFlow[15] :	33</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[2]">/definitions[1]/process[1]/sequenceFlow[2] :	20</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[16]">/definitions[1]/process[3]/sequenceFlow[16] :	name</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[11]">/definitions[1]/process[1]/sequenceFlow[11] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/sequenceFlow[16]">/definitions[1]/process[3]/sequenceFlow[16] :	34</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/sequenceFlow[11]">/definitions[1]/process[1]/sequenceFlow[11] :	29</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/textAnnotation[1]">/definitions[1]/process[3]/textAnnotation[1] :	semantic:textAnnotation</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[3]/association[1]">/definitions[1]/process[3]/association[1] :	semantic:association</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/laneSet[1]">/definitions[1]/process[1]/laneSet[1] :	semantic:laneSet</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/dataObjectReference[1]">/definitions[1]/process[1]/dataObjectReference[1] :	semantic:dataObjectReference</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[1]/dataStoreReference[1]">/definitions[1]/process[1]/dataStoreReference[1] :	semantic:dataStoreReference</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/process[4]">/definitions[1]/process[4] :	semantic:process</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/message[1]">/definitions[1]/message[1] :	semantic:message</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/message[2]">/definitions[1]/message[2] :	semantic:message</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/category[1]">/definitions[1]/category[1] :	semantic:category</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	name</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in number of child nodes (id:19)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	5</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	8</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/participant[1]">/definitions[1]/collaboration[1]/participant[1] :	false</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/participant[1]">/definitions[1]/collaboration[1]/participant[1] :	true</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/participant[1]">/definitions[1]/collaboration[1]/participant[1] :	0</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/participant[1]">/definitions[1]/collaboration[1]/participant[1] :	1</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/participant[2]">/definitions[1]/collaboration[1]/participant[2] :	false</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/participant[2]">/definitions[1]/collaboration[1]/participant[2] :	true</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/participant[2]">/definitions[1]/collaboration[1]/participant[2] :	1</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/participant[2]">/definitions[1]/collaboration[1]/participant[2] :	2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[1]">/definitions[1]/collaboration[1]/messageFlow[1] :	messageRef</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[1]">/definitions[1]/collaboration[1]/messageFlow[1] :	false</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	true</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[1]">/definitions[1]/collaboration[1]/messageFlow[1] :	2</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	4</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	messageRef</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[1]">/definitions[1]/collaboration[1]/messageFlow[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]/@name">/definitions[1]/collaboration[1]/messageFlow[2]/@name :	Message
+Flow 2</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[1]/@name">/definitions[1]/collaboration[1]/messageFlow[1]/@name :	Message
+Flow 2</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child nodes to be (id:18)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/messageFlow[2]">/definitions[1]/collaboration[1]/messageFlow[2] :	false</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/messageFlow[1]">/definitions[1]/collaboration[1]/messageFlow[1] :	true</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/group[1]/@categoryValueRef">/definitions[1]/collaboration[1]/group[1]/@categoryValueRef :	Value_Cat1373655174961</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/group[1]/@categoryValueRef">/definitions[1]/collaboration[1]/group[1]/@categoryValueRef :	CategoryValue__bd04180e-49f6-4cf0-a7d6-da59e2840b4b</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]/group[1]">/definitions[1]/collaboration[1]/group[1] :	4</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/group[1]">/definitions[1]/collaboration[1]/group[1] :	6</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/extensionElements[1]">/definitions[1]/collaboration[1]/extensionElements[1] :	semantic:extensionElements</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/textAnnotation[1]">/definitions[1]/collaboration[1]/textAnnotation[1] :	semantic:textAnnotation</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]/association[1]">/definitions[1]/collaboration[1]/association[1] :	semantic:association</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	9</span>
+               <span class="vendor" data-xpath="/definitions[1]/collaboration[1]">/definitions[1]/collaboration[1] :	3</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	documentation</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute value (id:3)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/@resolution">/definitions[1]/BPMNDiagram[1]/@resolution :	96.00000267028808</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/@resolution">/definitions[1]/BPMNDiagram[1]/@resolution :	72.0</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in attribute name (id:2)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1] :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1] :	id</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[17]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[17] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[28]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[28] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[29]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[29] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[30]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[30] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[31]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[31] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[32]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[32] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[33]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[33] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[34]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[34] :	bpmndi:BPMNShape</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[10]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[10] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[14]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[14] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[15]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[15] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[16]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[16] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[17]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[17] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[18]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[18] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[19]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[19] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[20]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[20] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[21]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[21] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[22]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[22] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[23]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[23] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[24]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[24] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[25]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[25] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[26]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[26] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[27]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[27] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[28]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[28] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[29]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[29] :	bpmndi:BPMNEdge</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[1] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[2] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[3] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[4] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[6] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[7] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[8] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[9] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[10] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[11] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[12] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[13] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[14] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[15] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[16] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[17]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[17] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[18] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[19] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[20] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[21] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[22] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[23] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[24] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[25] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[26] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[27] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[28]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[28] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[29]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[29] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[30]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[30] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[31]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[31] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[32]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[32] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[33]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[33] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[34]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[34] :	bpmndi:BPMNShape</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[1] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[2] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[3] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[4] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[5] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[6] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[7] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[8] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[9] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[10]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[10] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[11] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[12] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[13] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[14]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[14] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[15]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[15] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[16]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[16] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[17]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[17] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[18]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[18] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[19]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[19] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[20]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[20] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[21]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[21] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[22]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[22] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[23]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[23] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[24]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[24] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[25]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[25] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[26]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[26] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[27]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[27] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[28]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[28] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[29]">/definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNEdge[29] :	bpmndi:BPMNEdge</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]">/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1] :	bpmndi:BPMNLabelStyle</span>
+               <span class="vendor">null :	null</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1]">/definitions[1]/BPMNDiagram[1]/BPMNLabelStyle[1] :	bpmndi:BPMNLabelStyle</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in sequence of child nodes (id:20)</h4>
+            <span class="detailedoutput">
+               <span class="reference" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	10</span>
+               <span class="vendor" data-xpath="/definitions[1]/BPMNDiagram[1]">/definitions[1]/BPMNDiagram[1] :	7</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/category[1]">/definitions[1]/category[1] :	semantic:category</span>
+            </span>
+         </div>
+         <div class="finding">
+            <h4>Difference found in presence of child node (id:22)</h4>
+            <span class="detailedoutput">
+               <span class="reference">null :	null</span>
+               <span class="vendor" data-xpath="/definitions[1]/process[2]">/definitions[1]/process[2] :	semantic:process</span>
+            </span>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68020511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

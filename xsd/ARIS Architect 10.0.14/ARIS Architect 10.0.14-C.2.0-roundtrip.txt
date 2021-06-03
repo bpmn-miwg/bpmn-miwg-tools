@@ -1,0 +1,2 @@
+ANALYSIS: ARIS Architect 10.0.14-C.2.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded
