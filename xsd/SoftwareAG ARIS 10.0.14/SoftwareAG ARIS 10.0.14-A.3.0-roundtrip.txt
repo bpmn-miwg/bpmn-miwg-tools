@@ -1,0 +1,2 @@
+ANALYSIS: SoftwareAG ARIS 10.0.14-A.3.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

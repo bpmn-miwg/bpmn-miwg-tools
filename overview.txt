@@ -220,6 +220,18 @@ GenMyModel 0.47                                              A.1.0              
 GenMyModel 0.47                                              C.1.1                -            -            -
 GenMyModel 0.47                                              B.2.0                0          633            1
 GenMyModel 0.47                                              C.3.0                0          228           29
+SoftwareAG ARIS 10.0.14                                      C.1.0                0          293           76
+SoftwareAG ARIS 10.0.14                                      A.3.0                0          132            0
+SoftwareAG ARIS 10.0.14                                      A.4.1                0          220           32
+SoftwareAG ARIS 10.0.14                                      A.2.0                0          123            0
+SoftwareAG ARIS 10.0.14                                      C.2.0                0          376            2
+SoftwareAG ARIS 10.0.14                                      C.4.0                0          631           73
+SoftwareAG ARIS 10.0.14                                      A.4.0                0          122            2
+SoftwareAG ARIS 10.0.14                                      B.1.0                0          385            4
+SoftwareAG ARIS 10.0.14                                      A.1.0                0           67            0
+SoftwareAG ARIS 10.0.14                                      C.1.1                0          242           43
+SoftwareAG ARIS 10.0.14                                      B.2.0                1         1132           30
+SoftwareAG ARIS 10.0.14                                      C.3.0                0          203           64
 Enterprise Explorer 1.0.0                                    C.1.0                0          146           78
 Enterprise Explorer 1.0.0                                    A.3.0                0           47           29
 Enterprise Explorer 1.0.0                                    A.4.1                0          104           39
@@ -249,18 +261,6 @@ Bizagi Modeler 2.8.0.8                                       A.4.0              
 Bizagi Modeler 2.8.0.8                                       B.1.0                2          447            7
 Bizagi Modeler 2.8.0.8                                       A.1.0                0           81            0
 Bizagi Modeler 2.8.0.8                                       B.2.0                6         1370           16
-ARIS Architect 10.0.14                                       C.1.0                0          293           76
-ARIS Architect 10.0.14                                       A.3.0                0          132            0
-ARIS Architect 10.0.14                                       A.4.1                0          220           32
-ARIS Architect 10.0.14                                       A.2.0                0          123            0
-ARIS Architect 10.0.14                                       C.2.0                0          376            2
-ARIS Architect 10.0.14                                       C.4.0                0          631           73
-ARIS Architect 10.0.14                                       A.4.0                0          122            2
-ARIS Architect 10.0.14                                       B.1.0                0          385            4
-ARIS Architect 10.0.14                                       A.1.0                0           67            0
-ARIS Architect 10.0.14                                       C.1.1                0          242           43
-ARIS Architect 10.0.14                                       B.2.0                1         1132           30
-ARIS Architect 10.0.14                                       C.3.0                0          203           64
 Bonita BPM 7.2.3                                             C.1.0                5          139           63
 Bonita BPM 7.2.3                                             A.3.0                5           54           17
 Bonita BPM 7.2.3                                             A.4.1                9          103           44
