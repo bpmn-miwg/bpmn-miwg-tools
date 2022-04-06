@@ -1,1 +1,0 @@
-ANALYSIS: BPMN-Modeler for Confluence Enterprise 3.5.1-C.1.1-roundtrip (Tool: init)

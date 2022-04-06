@@ -1,3 +1,0 @@
-<analysis name="BPMN-Modeler for Confluence Enterprise 3.5.1-A.1.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>

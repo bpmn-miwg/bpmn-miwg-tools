@@ -1,0 +1,2 @@
+ANALYSIS: BPMN-Modeler for Confluence Enterprise 3.19.0-B.2.0-roundtrip (Tool: xsd)
+  OK     : Validation                               Message: Schema validation succeeded

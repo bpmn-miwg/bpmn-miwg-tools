@@ -1,9 +1,0 @@
-ANALYSIS: BPMN-Modeler for Confluence Enterprise 3.5.1-C.4.0-roundtrip (Tool: xml-compare)
-  Reference: /definitions[1]/process[2]/startEvent[1]/dataOutput[1] = isCollection
-Test: /definitions[1]/process[2]/startEvent[1]/dataOutput[1] = null
-  Reference: /definitions[1]/process[3]/manualTask[1]/standardLoopCharacteristics[1] = testBefore
-Test: /definitions[1]/process[3]/manualTask[1]/standardLoopCharacteristics[1] = null
-  Reference: /definitions[1]/process[4]/startEvent[1]/dataOutput[1] = isCollection
-Test: /definitions[1]/process[4]/startEvent[1]/dataOutput[1] = null
-  Reference: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/@isMarkerVisible = false
-Test: /definitions[1]/BPMNDiagram[1]/BPMNPlane[1]/BPMNShape[5]/@isMarkerVisible = true
