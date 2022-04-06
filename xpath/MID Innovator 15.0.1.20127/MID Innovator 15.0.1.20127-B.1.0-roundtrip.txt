@@ -8,15 +8,15 @@ ANALYSIS: MID Innovator 15.0.1.20127-B.1.0-roundtrip (Tool: xpath)
       OK     : selectProcessByParticipant               Push (id: WFP-6-1)
         OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event Timer']
         OK     : checkTimerEvent                          Message: Timer event definition
-        OK     : navigateFollowingElement                 Message: bpmn:task[@name='Abstract Task 1' and @id='_219b9ca1-d4c5-497d-a4f7-06a44a6da20e']
-        OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Output)
-        OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='User Task 2' and @id='_f7eade87-bb98-47d3-85c7-66033a62b124']
-        OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 3' and @id='_ec919941-53ec-403d-97e1-6a163a063f21']
-        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event None 1' and @id='_94efa7e0-2322-4fc3-a5bf-6c6296488927']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Abstract Task 1']
+        FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 1' and @sourceRef='_e314751e-5c3a-41f2-a1ae-4cb99efa0916']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:userTask[@name='User Task 2']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:serviceTask[@name='Service Task 3']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event None 1']
         OK     : doExecute                                Pop (id: WFP-6-1)
       OK     : selectProcessByParticipant               Message: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]
       OK     : selectProcessByParticipant               Push (id: WFP-6-2)
-        FINDING: checkXORMarkersForProcess                Message: The XOR marker for the BPMN element with the id '_33f30031-2e29-46b6-b080-30a192a36b45' is true although false is expected.; Parameter: null
+        FINDING: checkXORMarkersForProcess                Message: The XOR marker for the BPMN element with the id '_93021cd0-6f49-485d-966f-209744c748de' is true although false is expected.; Parameter: null
         OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Lane 1']
         OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Lane 2']
         OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event Message']
@@ -55,13 +55,13 @@ ANALYSIS: MID Innovator 15.0.1.20127-B.1.0-roundtrip (Tool: xpath)
         OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2' and @id='_33f30031-2e29-46b6-b080-30a192a36b45']
         OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event Terminate' and @id='_ae916437-d9aa-4e3d-a7c3-34998c410beb']
         OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions/bpmn:process[@id='id="WFP-6-2"']/bpmn:exclusiveGateway[@id='id="_ad81e6ba-40f5-43c1-9602-47d2e58804c8"']/
-        OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 7' and @id='Dout1373655174952']
-        OK     : checkDataAssociation                     Push (id: Dout1373655174952)
-          FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()='_7434095d-5288-58f9-1f1a-7141c861674d']
-          OK     : checkDataAssociation                     Pop (id: Dout1373655174952)
-        OK     : checkDataAssociation                     Push (id: Dout1373655174952)
-          FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:ioSpecification/bpmn:outputSet/bpmn:dataOutputRefs[text()='_76702394-eb49-1c06-5b05-884241b46957']
-          OK     : checkDataAssociation                     Pop (id: Dout1373655174952)
+        OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 7' and @id='_fea1c5af-6c76-403f-809e-26d476d92741']
+        OK     : checkDataAssociation                     Push (id: _fea1c5af-6c76-403f-809e-26d476d92741)
+          FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()='Din1373655174951']
+          OK     : checkDataAssociation                     Pop (id: _fea1c5af-6c76-403f-809e-26d476d92741)
+        OK     : checkDataAssociation                     Push (id: _fea1c5af-6c76-403f-809e-26d476d92741)
+          FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:ioSpecification/bpmn:outputSet/bpmn:dataOutputRefs[text()='Dout1373655174952']
+          OK     : checkDataAssociation                     Pop (id: _fea1c5af-6c76-403f-809e-26d476d92741)
         OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2' and @id='_33f30031-2e29-46b6-b080-30a192a36b45']
         OK     : doExecute                                Pop (id: WFP-6-2)
       OK     : doExecute                                Pop (id: C1373655174958)

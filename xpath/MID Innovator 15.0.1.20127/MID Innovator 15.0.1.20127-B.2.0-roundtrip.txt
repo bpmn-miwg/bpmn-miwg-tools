@@ -9,10 +9,10 @@ ANALYSIS: MID Innovator 15.0.1.20127-B.2.0-roundtrip (Tool: xpath)
         OK     : navigateFollowingElement                 Message: bpmn:task[@name='Abstract Task 1' and @id='_d84e5824-7bb7-4057-9dba-6c8794f7948c']
         OK     : navigateFollowingElement                 Message: bpmn:sendTask[@name='Send Task 2' and @id='_76ee26df-2c95-495b-9d9a-cb806aea6baf']
         OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Output)
-        OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='User Task 3' and @id='Din1373638080886']
-        OK     : checkDataAssociation                     Push (id: Din1373638080886)
-          FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()='_b746b2d0-dbf5-38ca-b192-d89e058388cd']
-          OK     : checkDataAssociation                     Pop (id: Din1373638080886)
+        OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='User Task 3' and @id='_0e87da16-736e-45b2-95e5-8f45940f3adf']
+        OK     : checkDataAssociation                     Push (id: _0e87da16-736e-45b2-95e5-8f45940f3adf)
+          FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()='Din1373638080886']
+          OK     : checkDataAssociation                     Pop (id: _0e87da16-736e-45b2-95e5-8f45940f3adf)
         OK     : navigateFollowingElement                 Message: bpmn:inclusiveGateway[@name='Inclusive Gateway 1' and @id='_dec393e7-f182-4d31-b05f-e33ac3a5e35f']
         OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 4' and @id='_ac1fde31-c0cd-4a8a-9728-a5fb49602de7']
         OK     : navigateFollowingElement                 Message: bpmn:intermediateThrowEvent[@name='Intermediate Event Signal Throw 1' and @id='_0326fdf5-7c71-41d9-838c-ab141a1b1ed0']
@@ -44,9 +44,9 @@ ANALYSIS: MID Innovator 15.0.1.20127-B.2.0-roundtrip (Tool: xpath)
         OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 9' and @id='_8f41085a-3302-4cfc-9231-23bb4b43c7a1']
         OK     : navigateFollowingElement                 Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Conditional Catch' and @id='_c9cb2415-6a2e-49d6-84b9-27babcde4088']
         FINDING: checkConditionalEvent                    Message: Cannot find conditional event definition; Parameter: bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef
-        OK     : navigateFollowingElement                 Message: bpmn:task[@name='Task 10' and @id='_a01498ae-086c-4adc-9229-ec3135bc2bcf']
-        OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Input)
-        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event 3 Signal' and @id='_5cc02d0f-c090-4e48-8da3-f32cbbca9565']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Task 10']
+        FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Message Flow 2' and @targetRef='_c9cb2415-6a2e-49d6-84b9-27babcde4088']
+        FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='End Event 3 Signal']
         FINDING: checkSignalEvent                         Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef
         OK     : doExecute                                Pop (id: WFP-6-1)
       OK     : selectPool                               Message: bpmn:participant[@name='Pool']
@@ -91,9 +91,9 @@ ANALYSIS: MID Innovator 15.0.1.20127-B.2.0-roundtrip (Tool: xpath)
           OK     : navigateBoundaryEvent                    Message: Boundary element 'Boundary Intermediate Event Interrupting Conditional' found
           FINDING: checkConditionalEvent                    Message: Cannot find conditional event definition; Parameter: bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef
           OK     : checkCancelActivity                      Message: Attribute cancelActivity=true
-          OK     : navigateFollowingElement                 Message: bpmn:intermediateThrowEvent[@name='Intermediate Event Link' and @id='_d51e999b-efdc-b40d-8c77-119512bc4c59']
-          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_d51e999b-efdc-b40d-8c77-119512bc4c59']
-          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_d51e999b-efdc-b40d-8c77-119512bc4c59']
+          OK     : navigateFollowingElement                 Message: bpmn:intermediateThrowEvent[@name='Intermediate Event Link' and @id='_22f6be86-1232-8863-c0be-4bf8896dd2ff']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_22f6be86-1232-8863-c0be-4bf8896dd2ff']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_22f6be86-1232-8863-c0be-4bf8896dd2ff']
           FINDING: checkLinkEvent                           Message: Cannot find link event definition; Parameter: bpmn:linkEventDefinition | bpmn:linkDefinitionRef
           OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions/bpmn:process[@id='id="WFP-6-2"']/bpmn:serviceTask[@id='id="_fa90f891-fc07-463a-97c9-2ee0812351e1"']/
           OK     : navigateFollowingElement                 Message: bpmn:receiveTask[@name='Receive Task 16' and @id='_f07e4bd2-768d-42c6-a8d5-24d1c3bfa3cb']
@@ -157,8 +157,8 @@ ANALYSIS: MID Innovator 15.0.1.20127-B.2.0-roundtrip (Tool: xpath)
           OK     : navigateElement                          Message: bpmn:parallelGateway[@name='Parallel Gateway 5']
           OK     : navigateFollowingElement                 Message: bpmn:subProcess[@name='Expanded Sub-Process 3' and @id='_189118eb-65fc-43e8-8a34-a155b113914f']
           OK     : navigateElement                          Message: bpmn:intermediateCatchEvent[@name='Intermediate Event Link']
-          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_ab487ef3-7d34-21be-8029-6f585b9fe454']
-          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_ab487ef3-7d34-21be-8029-6f585b9fe454']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_8d3bb884-d359-7d84-40b4-89b4567c0a2b']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='_8d3bb884-d359-7d84-40b4-89b4567c0a2b']
           OK     : selectFollowingElement                   Message: bpmn:subProcess[@name='Expanded Sub-Process 3' and @id='_189118eb-65fc-43e8-8a34-a155b113914f']
           OK     : selectFollowingElement                   Push (id: _189118eb-65fc-43e8-8a34-a155b113914f)
             OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event 7']

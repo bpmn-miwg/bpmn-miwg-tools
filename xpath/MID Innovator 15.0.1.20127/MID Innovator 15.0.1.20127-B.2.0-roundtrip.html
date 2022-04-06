@@ -59,16 +59,16 @@
             <h4>OK     : checkMessageFlow                         Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;User Task 3&apos; and @id=&apos;Din1373638080886&apos;]</h4>
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;User Task 3&apos; and @id=&apos;_0e87da16-736e-45b2-95e5-8f45940f3adf&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>        OK     : checkDataAssociation                     Push (id: Din1373638080886)</h4>
+            <h4>        OK     : checkDataAssociation                     Push (id: _0e87da16-736e-45b2-95e5-8f45940f3adf)</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()=&apos;_b746b2d0-dbf5-38ca-b192-d89e058388cd&apos;]</h4>
+            <h4>FINDING: checkDataAssociation                     Message: Cannot find node; Parameter: bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()=&apos;Din1373638080886&apos;]</h4>
          </div>
          <div class="ok">
-            <h4>OK     : checkDataAssociation                     Pop (id: Din1373638080886)</h4>
+            <h4>OK     : checkDataAssociation                     Pop (id: _0e87da16-736e-45b2-95e5-8f45940f3adf)</h4>
          </div>
          <div class="ok">
             <h4>OK     : navigateFollowingElement                 Message: bpmn:inclusiveGateway[@name=&apos;Inclusive Gateway 1&apos; and @id=&apos;_dec393e7-f182-4d31-b05f-e33ac3a5e35f&apos;]</h4>
@@ -163,14 +163,14 @@
          <div class="finding">
             <h4>FINDING: checkConditionalEvent                    Message: Cannot find conditional event definition; Parameter: bpmn:conditionalEventDefinition | bpmn:conditionalDefinitionRef</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 10&apos; and @id=&apos;_a01498ae-086c-4adc-9229-ec3135bc2bcf&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name=&apos;Task 10&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : checkMessageFlow                         Message: message flow &apos;Message Flow 2&apos; (Input)</h4>
+         <div class="finding">
+            <h4>FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name=&apos;Message Flow 2&apos; and @targetRef=&apos;_c9cb2415-6a2e-49d6-84b9-27babcde4088&apos;]</h4>
          </div>
-         <div class="ok">
-            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event 3 Signal&apos; and @id=&apos;_5cc02d0f-c090-4e48-8da3-f32cbbca9565&apos;]</h4>
+         <div class="finding">
+            <h4>FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name=&apos;End Event 3 Signal&apos;]</h4>
          </div>
          <div class="finding">
             <h4>FINDING: checkSignalEvent                         Message: Cannot find signal event definition; Parameter: bpmn:signalEventDefinition | bpmn:signalEventDefinitionRef</h4>
@@ -305,13 +305,13 @@
             <h4>OK     : checkCancelActivity                      Message: Attribute cancelActivity=true</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement                 Message: bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Link&apos; and @id=&apos;_d51e999b-efdc-b40d-8c77-119512bc4c59&apos;]</h4>
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:intermediateThrowEvent[@name=&apos;Intermediate Event Link&apos; and @id=&apos;_22f6be86-1232-8863-c0be-4bf8896dd2ff&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_d51e999b-efdc-b40d-8c77-119512bc4c59&apos;]</h4>
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_22f6be86-1232-8863-c0be-4bf8896dd2ff&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_d51e999b-efdc-b40d-8c77-119512bc4c59&apos;]</h4>
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_22f6be86-1232-8863-c0be-4bf8896dd2ff&apos;]</h4>
          </div>
          <div class="finding">
             <h4>FINDING: checkLinkEvent                           Message: Cannot find link event definition; Parameter: bpmn:linkEventDefinition | bpmn:linkDefinitionRef</h4>
@@ -503,10 +503,10 @@
             <h4>OK     : navigateElement                          Message: bpmn:intermediateCatchEvent[@name=&apos;Intermediate Event Link&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_ab487ef3-7d34-21be-8029-6f585b9fe454&apos;]</h4>
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_8d3bb884-d359-7d84-40b4-89b4567c0a2b&apos;]</h4>
          </div>
          <div class="finding">
-            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_ab487ef3-7d34-21be-8029-6f585b9fe454&apos;]</h4>
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;_8d3bb884-d359-7d84-40b4-89b4567c0a2b&apos;]</h4>
          </div>
          <div class="ok">
             <h4>OK     : selectFollowingElement                   Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 3&apos; and @id=&apos;_189118eb-65fc-43e8-8a34-a155b113914f&apos;]</h4>

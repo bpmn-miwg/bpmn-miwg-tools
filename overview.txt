@@ -131,18 +131,18 @@ BPMN-Modeler for Confluence Enterprise 3.5.1                 A.1.0              
 BPMN-Modeler for Confluence Enterprise 3.5.1                 C.1.1                0          270            5
 BPMN-Modeler for Confluence Enterprise 3.5.1                 B.2.0                0         1082            0
 BPMN-Modeler for Confluence Enterprise 3.5.1                 C.3.0                0          305            0
-MID Innovator 15.0.1.20127                                   C.1.0                0          402           53
-MID Innovator 15.0.1.20127                                   A.3.0                0           95            2
-MID Innovator 15.0.1.20127                                   A.4.1                0          238           16
-MID Innovator 15.0.1.20127                                   A.2.0                0           89            0
-MID Innovator 15.0.1.20127                                   C.2.0                0          297            6
-MID Innovator 15.0.1.20127                                   C.4.0                0          525           87
-MID Innovator 15.0.1.20127                                   A.4.0                0          159            0
-MID Innovator 15.0.1.20127                                   B.1.0                0          322            7
-MID Innovator 15.0.1.20127                                   A.1.0                0           46            0
-MID Innovator 15.0.1.20127                                   C.1.1                0          203           29
-MID Innovator 15.0.1.20127                                   B.2.0                0          822           23
-MID Innovator 15.0.1.20127                                   C.3.0                0          242           31
+MID Innovator 15.0.1.20127                                   C.1.0                0          400           53
+MID Innovator 15.0.1.20127                                   A.3.0                0           86            2
+MID Innovator 15.0.1.20127                                   A.4.1                0          221           19
+MID Innovator 15.0.1.20127                                   A.2.0                0           81            0
+MID Innovator 15.0.1.20127                                   C.2.0                0          290           25
+MID Innovator 15.0.1.20127                                   C.4.0                0          540           87
+MID Innovator 15.0.1.20127                                   A.4.0                0          146           16
+MID Innovator 15.0.1.20127                                   B.1.0                0          253           12
+MID Innovator 15.0.1.20127                                   A.1.0                0           43            0
+MID Innovator 15.0.1.20127                                   C.1.1                0          262           33
+MID Innovator 15.0.1.20127                                   B.2.0                0          790           26
+MID Innovator 15.0.1.20127                                   C.3.0                0          244           31
 Camunda Modeler 5.0                                          C.1.0                0           20           13
 Camunda Modeler 5.0                                          A.3.0                0            0            0
 Camunda Modeler 5.0                                          A.4.1                0            0            0

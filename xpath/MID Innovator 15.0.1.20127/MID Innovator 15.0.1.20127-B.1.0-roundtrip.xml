@@ -8,16 +8,16 @@
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="WFP-6-1" caller="selectProcessByParticipant">
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event Timer&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkTimerEvent" message="Timer event definition"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:task[@name=&apos;Abstract Task 1&apos; and @id=&apos;_219b9ca1-d4c5-497d-a4f7-06a44a6da20e&apos;]"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkMessageFlow" message="message flow &apos;Message Flow 1&apos; (Output)"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;User Task 2&apos; and @id=&apos;_f7eade87-bb98-47d3-85c7-66033a62b124&apos;]"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Service Task 3&apos; and @id=&apos;_ec919941-53ec-403d-97e1-6a163a063f21&apos;]"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event None 1&apos; and @id=&apos;_94efa7e0-2322-4fc3-a5bf-6c6296488927&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Abstract Task 1&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 1&apos; and @sourceRef=&apos;_e314751e-5c3a-41f2-a1ae-4cb99efa0916&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:userTask[@name=&apos;User Task 2&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:serviceTask[@name=&apos;Service Task 3&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event None 1&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="WFP-6-1" caller="doExecute"/>
          </entry>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByParticipant" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Pool&apos;]/@processRef]"/>
          <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="WFP-6-2" caller="selectProcessByParticipant">
-            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkXORMarkersForProcess" message="The XOR marker for the BPMN element with the id &apos;_33f30031-2e29-46b6-b080-30a192a36b45&apos; is true although false is expected."/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkXORMarkersForProcess" message="The XOR marker for the BPMN element with the id &apos;_93021cd0-6f49-485d-966f-209744c748de&apos; is true although false is expected."/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateLane" message="bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event Message&apos;]"/>
@@ -59,14 +59,14 @@
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;_33f30031-2e29-46b6-b080-30a192a36b45&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;End Event Terminate&apos; and @id=&apos;_ae916437-d9aa-4e3d-a7c3-34998c410beb&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/bpmn:definitions/bpmn:process[@id=&apos;id=&quot;WFP-6-2&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;_ad81e6ba-40f5-43c1-9602-47d2e58804c8&quot;&apos;]/"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Service Task 7&apos; and @id=&apos;Dout1373655174952&apos;]"/>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="Dout1373655174952" caller="checkDataAssociation">
-               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()=&apos;_7434095d-5288-58f9-1f1a-7141c861674d&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="Dout1373655174952" caller="checkDataAssociation"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Service Task 7&apos; and @id=&apos;_fea1c5af-6c76-403f-809e-26d476d92741&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_fea1c5af-6c76-403f-809e-26d476d92741" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()=&apos;Din1373655174951&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_fea1c5af-6c76-403f-809e-26d476d92741" caller="checkDataAssociation"/>
             </entry>
-            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="Dout1373655174952" caller="checkDataAssociation">
-               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:outputSet/bpmn:dataOutputRefs[text()=&apos;_76702394-eb49-1c06-5b05-884241b46957&apos;]"/>
-               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="Dout1373655174952" caller="checkDataAssociation"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_fea1c5af-6c76-403f-809e-26d476d92741" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:outputSet/bpmn:dataOutputRefs[text()=&apos;Dout1373655174952&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_fea1c5af-6c76-403f-809e-26d476d92741" caller="checkDataAssociation"/>
             </entry>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;Exclusive Gateway Convergence 2&apos; and @id=&apos;_33f30031-2e29-46b6-b080-30a192a36b45&apos;]"/>
             <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="WFP-6-2" caller="doExecute"/>

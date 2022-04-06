@@ -98,16 +98,22 @@
             <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute &apos;camunda:formKey=&quot;app:startProcess.jsf&quot;&apos; from reference in test file; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;Assign Approver&apos; and @id=&apos;Bpmn_DataOutput_assignApprover&apos;]</h4>
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;Assign Approver&apos; and @id=&apos;assignApprover&apos;]</h4>
          </div>
          <div class="finding">
             <h4>FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute &apos;camunda:assignee=&quot;demo&quot;&apos; from reference in test file; Parameter: null</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;Approve Invoice&apos; and @id=&apos;Bpmn_DataOutput_Y6S1ALH1EeSuDf0W70XLGw&apos;]</h4>
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;Approve Invoice&apos; and @id=&apos;approveInvoice&apos;]</h4>
          </div>
          <div class="finding">
             <h4>FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute &apos;camunda:assignee=&quot;${approver}&quot;&apos; from reference in test file; Parameter: null</h4>
          </div>
          <div class="ok">
             <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Invoice approved?&apos; and @id=&apos;invoice_approved&apos;]</h4>
@@ -116,10 +122,13 @@
             <h4>FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;Rechnung klären&apos; and @id=&apos;Bpmn_DataOutput_dCG-8LH1EeSuDf0W70XLGw&apos;]</h4>
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;Rechnung klären&apos; and @id=&apos;reviewInvoice&apos;]</h4>
          </div>
          <div class="finding">
             <h4>FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute &apos;camunda:assignee=&quot;demo&quot;&apos; from reference in test file; Parameter: null</h4>
          </div>
          <div class="ok">
             <h4>OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name=&apos;Review successful?&apos; and @id=&apos;reviewSuccessful_gw&apos;]</h4>
@@ -128,10 +137,13 @@
             <h4>FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements</h4>
          </div>
          <div class="ok">
-            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;Approve Invoice&apos; and @id=&apos;Bpmn_DataOutput_Y6S1ALH1EeSuDf0W70XLGw&apos;]</h4>
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:userTask[@name=&apos;Approve Invoice&apos; and @id=&apos;approveInvoice&apos;]</h4>
          </div>
          <div class="finding">
             <h4>FINDING: checkAutoExtensionElements               Message: Cannot find extension element although the corresponding reference element contains an extension element; Parameter: bpmn:extensionElements</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find attribute &apos;camunda:assignee=&quot;${approver}&quot;&apos; from reference in test file; Parameter: null</h4>
          </div>
          <div class="ok">
             <h4>OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions/bpmn:process[@id=&apos;id=&quot;handle-invoice&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;reviewSuccessful_gw&quot;&apos;]/</h4>
