@@ -1,1 +1,0 @@
-ANALYSIS: SoftwareAG ARIS 10.0.14-C.2.0-roundtrip (Tool: init)

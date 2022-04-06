@@ -1,0 +1,72 @@
+ANALYSIS: ARIS 10.0.16-B.1.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: Definitions_Trisotech_Visio-_6)
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: C1373655174958)
+      OK     : navigateElement                          Message: bpmn:messageFlow[@name='Message Flow 1']
+      OK     : navigateElement                          Message: bpmn:messageFlow[@name='Message Flow 2']
+      OK     : selectProcessByParticipant               Message: //bpmn:process[@id=//bpmn:participant[@name='Participant']/@processRef]
+      OK     : selectProcessByParticipant               Push (id: WFP-6-1)
+        OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event Timer']
+        OK     : checkTimerEvent                          Message: Timer event definition
+        OK     : navigateFollowingElement                 Message: bpmn:task[@name='Abstract Task 1' and @id='_219b9ca1-d4c5-497d-a4f7-06a44a6da20e']
+        OK     : checkMessageFlow                         Message: message flow 'Message Flow 1' (Output)
+        OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='User Task 2' and @id='_f7eade87-bb98-47d3-85c7-66033a62b124']
+        OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 3' and @id='_ec919941-53ec-403d-97e1-6a163a063f21']
+        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event None 1' and @id='_94efa7e0-2322-4fc3-a5bf-6c6296488927']
+        OK     : doExecute                                Pop (id: WFP-6-1)
+      OK     : selectProcessByParticipant               Message: //bpmn:process[@id=//bpmn:participant[@name='Pool']/@processRef]
+      OK     : selectProcessByParticipant               Push (id: WFP-6-2)
+        OK     : checkXORMarkersForProcess                Message: All XOR markers have the expected value 'false'.
+        OK     : checkXORMarkersForProcess                Message: All XOR markers have the expected value 'false'.
+        OK     : checkXORMarkersForProcess                Message: All XOR markers have the expected value 'false'.
+        OK     : checkXORMarkersForProcess                Message: All XOR markers have the expected value 'false'.
+        OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Lane 1']
+        OK     : navigateLane                             Message: bpmn:laneSet/bpmn:lane[@name='Lane 2']
+        OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event Message']
+        OK     : checkMessageEvent                        Message: Message event definition
+        OK     : navigateFollowingElement                 Message: bpmn:parallelGateway[@name='Parallel Gateway Divergence' and @id='_be29f267-9d56-46ef-8bbc-e13513b25fce']
+        OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 1' and @id='_3c8c32c3-089a-4643-bf42-6c37c0dac7e0']
+        OK     : navigateFollowingElement                 Message: bpmn:callActivity[@name='Call Activity Collapsed' and @id='_1237e756-d53c-4591-a731-dafffbf0b3f9']
+        FINDING: checkTextAssociation                     Message: Text annotation 'Text Annotation' not found; Parameter: //bpmn:textAnnotation[@id=../bpmn:association[@sourceRef='_1237e756-d53c-4591-a731-dafffbf0b3f9']/@targetRef]/bpmn:text
+        OK     : selectFollowingElement                   Message: bpmn:callActivity[@name='Call Activity - Expanded' and @id='_ba16239e-181e-4b9f-bc5b-0bb2ee973450']
+        OK     : selectFollowingElement                   Push (id: _ba16239e-181e-4b9f-bc5b-0bb2ee973450)
+          OK     : selectProcessOfCallActivity              Message: //bpmn:process[@id='Process__ba16239e-181e-4b9f-bc5b-0bb2ee973450']
+          FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='Process__ba16239e-181e-4b9f-bc5b-0bb2ee973450']
+          FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id='Process__ba16239e-181e-4b9f-bc5b-0bb2ee973450']
+          OK     : selectProcessOfCallActivity              Push (id: Process__ba16239e-181e-4b9f-bc5b-0bb2ee973450)
+            OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event None 1']
+            OK     : navigateFollowingElement                 Message: bpmn:task[@name='Abstract Task 4' and @id='_c57a5344-213f-4834-a6c3-94ce878b413c']
+            OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event None 2' and @id='_ed405919-9fd6-47d0-bb00-9be7d5467efb']
+            OK     : doExecute                                Pop (id: Process__ba16239e-181e-4b9f-bc5b-0bb2ee973450)
+          OK     : doExecute                                Pop (id: _ba16239e-181e-4b9f-bc5b-0bb2ee973450)
+        OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 1' and @id='_93021cd0-6f49-485d-966f-209744c748de']
+        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event Message' and @id='_2ee553a1-cb03-41e3-b285-345c826fc88d']
+        OK     : checkMessageEvent                        Message: Message event definition
+        OK     : checkMessageFlow                         Message: message flow 'Message Flow 2' (Output)
+        OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="Definitions_Trisotech_Visio-_6"']/semantic:process[@id='id="WFP-6-2"']/semantic:exclusiveGateway[@id='id="_3c8c32c3-089a-4643-bf42-6c37c0dac7e0"']/
+        OK     : navigateFollowingElement                 Message: bpmn:callActivity[@name='Call Activity Calling a Global Task' and @id='_fa3a8e53-5be0-4f0b-8680-d2498e255209']
+        FINDING: checkGlobalTask                          Message: Attribute 'calledElement' exists although the test expects that this element does not exist; Parameter: null
+        OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 1' and @id='_93021cd0-6f49-485d-966f-209744c748de']
+        OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="Definitions_Trisotech_Visio-_6"']/semantic:process[@id='id="WFP-6-2"']/semantic:parallelGateway[@id='id="_be29f267-9d56-46ef-8bbc-e13513b25fce"']/
+        OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='User Task 5' and @id='_7706e700-2aed-4b94-8070-961f118aab8f']
+        OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Divergence 2' and @id='_ad81e6ba-40f5-43c1-9602-47d2e58804c8']
+        OK     : navigateFollowingElement                 Message: bpmn:subProcess[@name='Collapsed Sub-Process' and @id='_1eb62392-1f21-4a63-bbcb-c78880c3165e']
+        OK     : selectFollowingElement                   Message: bpmn:subProcess[@name='Sub Process - Expanded' and @id='_7e6ccf38-e740-4537-a439-a8e984d066de']
+        OK     : selectFollowingElement                   Push (id: _7e6ccf38-e740-4537-a439-a8e984d066de)
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Start Event None 2']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Abstract Task 6' and @id='_6936f794-7bbb-4aa1-ae48-3a35bab4e2f4']
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event None 3' and @id='_4f744697-3643-41a9-9d07-84c78e2df64b']
+          OK     : doExecute                                Pop (id: _7e6ccf38-e740-4537-a439-a8e984d066de)
+        OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2' and @id='_33f30031-2e29-46b6-b080-30a192a36b45']
+        OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='End Event Terminate' and @id='_ae916437-d9aa-4e3d-a7c3-34998c410beb']
+        OK     : navigateBookmarkedElement                Message: #document/semantic:definitions[@id='id="Definitions_Trisotech_Visio-_6"']/semantic:process[@id='id="WFP-6-2"']/semantic:exclusiveGateway[@id='id="_ad81e6ba-40f5-43c1-9602-47d2e58804c8"']/
+        OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Service Task 7' and @id='_fea1c5af-6c76-403f-809e-26d476d92741']
+        OK     : checkDataAssociation                     Push (id: _fea1c5af-6c76-403f-809e-26d476d92741)
+          OK     : checkDataAssociation                     Message: Association reference dataObject 'Data Object' found
+          OK     : checkDataAssociation                     Pop (id: _fea1c5af-6c76-403f-809e-26d476d92741)
+        OK     : checkDataAssociation                     Push (id: _fea1c5af-6c76-403f-809e-26d476d92741)
+          OK     : checkDataAssociation                     Message: Association reference dataStoreReference 'Data Store Reference' found
+          OK     : checkDataAssociation                     Pop (id: _fea1c5af-6c76-403f-809e-26d476d92741)
+        OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Exclusive Gateway Convergence 2' and @id='_33f30031-2e29-46b6-b080-30a192a36b45']
+        OK     : doExecute                                Pop (id: WFP-6-2)
+      OK     : doExecute                                Pop (id: C1373655174958)

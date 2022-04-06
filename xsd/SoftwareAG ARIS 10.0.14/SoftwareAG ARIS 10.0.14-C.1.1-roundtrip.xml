@@ -1,3 +1,0 @@
-<analysis name="SoftwareAG ARIS 10.0.14-C.1.1-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>
