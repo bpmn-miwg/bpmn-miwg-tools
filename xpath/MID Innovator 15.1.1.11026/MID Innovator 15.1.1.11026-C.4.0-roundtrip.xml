@@ -1,0 +1,183 @@
+<analysis name="MID Innovator 15.1.1.11026-C.4.0-roundtrip" toolName="xpath">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateDefinitions" message="/bpmn:definitions"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateDefinitions" message="Cannot find attribute" parameter="id"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;null&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateDefinitions" message="Cannot find attribute" parameter="id"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find corresponding element in reference DOM" parameter="//bpmn:*[@id=&apos;null&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute name is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute expressionLanguage is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkAttributeValue" message="Attribute typeLanguage=http://www.w3.org/2001/XMLSchema"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateItemDefinition" message="No node found" parameter="/bpmn:definitions/bpmn:itemDefinition[@id=&apos;itemDefEmployeeDetails&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute itemKind is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute structureRef is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute isCollection is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateItemDefinition" message="No node found" parameter="/bpmn:definitions/bpmn:itemDefinition[@id=&apos;itemDefUserManagement&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute itemKind is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute structureRef is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute isCollection is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateItemDefinition" message="No node found" parameter="/bpmn:definitions/bpmn:itemDefinition[@id=&apos;itemDefPayrollSystem&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute itemKind is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute structureRef is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute isCollection is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateItemDefinition" message="No node found" parameter="/bpmn:definitions/bpmn:itemDefinition[@id=&apos;itemDefAck&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute itemKind is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute structureRef is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkItemDefinition" message="Attribute isCollection is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateDataStore" message="/bpmn:definitions/bpmn:dataStore[@name=&apos;User Management&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataStore" message="Attribute isUnlimited does not have the expected value &apos;true&apos;" parameter="isUnlimited"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataStore" message="Referenced item definition does not exist" parameter="/bpmn:definitions/bpmn:itemDefinition[@id=&apos;null&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateDataStore" message="/bpmn:definitions/bpmn:dataStore[@name=&apos;Payroll system&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataStore" message="Attribute isUnlimited does not have the expected value &apos;true&apos;" parameter="isUnlimited"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataStore" message="Referenced item definition does not exist" parameter="/bpmn:definitions/bpmn:itemDefinition[@id=&apos;null&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateDataStore" message="/bpmn:definitions/bpmn:dataStore[@name=&apos;Employee Details&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataStore" message="Attribute isUnlimited does not have the expected value &apos;true&apos;" parameter="isUnlimited"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataStore" message="Referenced item definition does not exist" parameter="/bpmn:definitions/bpmn:itemDefinition[@id=&apos;null&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateSignal" message="No node found" parameter="/bpmn:definitions/bpmn:signal[@name=&apos;Employee_hired_Dept_X&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkSignal" message="Attribute structureRef is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateMessage" message="No node found" parameter="/bpmn:definitions/bpmn:message[@name=&apos;msgFacilites&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessage" message="Attribute itemRef is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateMessage" message="No node found" parameter="/bpmn:definitions/bpmn:message[@name=&apos;msgIT&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessage" message="Attribute itemRef is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateMessage" message="No node found" parameter="/bpmn:definitions/bpmn:message[@name=&apos;msgPayroll&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessage" message="Attribute itemRef is not existing." parameter=""/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaborationByName" message="bpmn:collaboration[@name=&apos;Onboarding employee&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_085241a5-fb5c-44d3-8844-5366f865e353" caller="selectCollaborationByName">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByParticipant" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Money Bank&apos;]/@processRef]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find attribute &apos;triso:defaultName=&quot;true&quot;&apos; from reference in test file"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_42cba3a9-a8ab-40b5-b9a4-2e8f32be364e" caller="selectProcessByParticipant">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAttributeValue" message="Attribute name does not have the expected value &apos;Onboarding employee - Money Bank - Process&apos;" parameter="name"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByLane" message="//bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;HR Department&apos;]]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find attribute &apos;triso:defaultName=&quot;true&quot;&apos; from reference in test file"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_42cba3a9-a8ab-40b5-b9a4-2e8f32be364e" caller="selectProcessByLane">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_42cba3a9-a8ab-40b5-b9a4-2e8f32be364e" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByLane" message="//bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Responsible Department&apos;]]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find attribute &apos;triso:defaultName=&quot;true&quot;&apos; from reference in test file"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_42cba3a9-a8ab-40b5-b9a4-2e8f32be364e" caller="selectProcessByLane">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_42cba3a9-a8ab-40b5-b9a4-2e8f32be364e" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Candidate accepted offer&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Send candidate Contract&apos; and @id=&apos;_f8973a92-3d84-4672-a1a3-b0df154121e1&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:exclusiveGateway[@name=&apos;Contract terms accepted?&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:userTask[@name=&apos;Review terms of Contract&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:userTask[@name=&apos;Send candidate Contract&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Current node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkSignalEvent" message="Current node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Current node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Current node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Current node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_42cba3a9-a8ab-40b5-b9a4-2e8f32be364e" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_085241a5-fb5c-44d3-8844-5366f865e353" caller="doExecute"/>
+      </entry>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaborationByName" message="bpmn:collaboration[@name=&apos;IT&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_674b5898-d454-4114-a8eb-66c790366e94" caller="selectCollaborationByName">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByParticipant" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;IT&apos;]/@processRef]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find attribute &apos;triso:defaultName=&quot;true&quot;&apos; from reference in test file"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_f0035388-f829-470c-b82b-0b15c3da3399" caller="selectProcessByParticipant">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;New employee hired&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkSignalEvent" message="Cannot find signal event definition" parameter="bpmn:signalEventDefinition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Create domain account&apos; and @id=&apos;_7e9d2e5a-21f7-493b-9ae4-03245aa33a5c&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_7e9d2e5a-21f7-493b-9ae4-03245aa33a5c" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()=&apos;_b1d40770-825b-4d23-a026-db95f815d520&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_7e9d2e5a-21f7-493b-9ae4-03245aa33a5c" caller="checkDataAssociation"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_7e9d2e5a-21f7-493b-9ae4-03245aa33a5c" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:outputSet/bpmn:dataOutputRefs[text()=&apos;_18dcd171-c602-488e-b53b-0289e2fae114&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_7e9d2e5a-21f7-493b-9ae4-03245aa33a5c" caller="checkDataAssociation"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:manualTask[@name=&apos;Prepare workstation&apos; and @id=&apos;_c29af228-0768-4dfe-945a-17755e173674&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Assign required applications and permissions&apos; and @id=&apos;_912f731a-fb6b-499b-a3f4-4c1632d606bd&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_912f731a-fb6b-499b-a3f4-4c1632d606bd" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:outputSet/bpmn:dataOutputRefs[text()=&apos;_4b0aa8de-e86c-492a-a5da-fd80464b71bd&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_912f731a-fb6b-499b-a3f4-4c1632d606bd" caller="checkDataAssociation"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:serviceTask[@name=&apos;Configure workstation&apos; and @id=&apos;_9db2d136-aa33-4de2-be76-554e7843363d&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_9db2d136-aa33-4de2-be76-554e7843363d" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()=&apos;_4606e5ae-aaa4-4416-9576-68f29181c5b2&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_9db2d136-aa33-4de2-be76-554e7843363d" caller="checkDataAssociation"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkTextAssociation" message="Text annotation &apos;With PowerShell&apos; not found" parameter="//bpmn:textAnnotation[@id=../bpmn:association[@sourceRef=&apos;_9db2d136-aa33-4de2-be76-554e7843363d&apos;]/@targetRef]/bpmn:text"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Prepare IT part of welcome package&apos; and @id=&apos;_ad173aff-cfe3-4098-8c65-02f783ad9e1f&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Workstation and permissions ready&apos; and @id=&apos;_c82dd8eb-ce54-4aa7-b8c4-b8d3e8fd654e&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Cannot find message event definition" parameter="bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_f0035388-f829-470c-b82b-0b15c3da3399" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_674b5898-d454-4114-a8eb-66c790366e94" caller="doExecute"/>
+      </entry>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaborationByName" message="bpmn:collaboration[@name=&apos;Payroll&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_bbdf487b-c3a3-4bfa-8ba3-79be59f08203" caller="selectCollaborationByName">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByParticipant" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Payroll&apos;]/@processRef]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find attribute &apos;triso:defaultName=&quot;true&quot;&apos; from reference in test file"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_da743a6f-d9e5-4fcf-8a96-d2fd5cfb73d4" caller="selectProcessByParticipant">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;New employee hired&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkSignalEvent" message="Cannot find signal event definition" parameter="bpmn:signalEventDefinition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Validate provided information&apos; and @id=&apos;_ae47ce79-bd91-452b-be68-47a2ea589e75&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_ae47ce79-bd91-452b-be68-47a2ea589e75" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()=&apos;_b3935a94-0b1b-4cd7-8a3b-a10f5b8b5e34&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_ae47ce79-bd91-452b-be68-47a2ea589e75" caller="checkDataAssociation"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:exclusiveGateway[@name=&apos;All necessary data available?&apos; and @id=&apos;_fa14ca2d-ea97-49a2-b75e-72e7d27d6fd1&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:manualTask[@name=&apos;Clarify missing points&apos; and @id=&apos;_788443d9-65f0-43a4-96a8-63e8d6f380a7&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="checkStandardLoopCharacteristics" message="Standard loop characteristics"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Update payroll system&apos; and @id=&apos;_9dbd92a5-5c0a-4039-b741-bf4ede54ccf0&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message="#document/bpmn:definitions/bpmn:process[@id=&apos;id=&quot;_da743a6f-d9e5-4fcf-8a96-d2fd5cfb73d4&quot;&apos;]/bpmn:exclusiveGateway[@id=&apos;id=&quot;_fa14ca2d-ea97-49a2-b75e-72e7d27d6fd1&quot;&apos;]/"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Update payroll system&apos; and @id=&apos;_9dbd92a5-5c0a-4039-b741-bf4ede54ccf0&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_9dbd92a5-5c0a-4039-b741-bf4ede54ccf0" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:outputSet/bpmn:dataOutputRefs[text()=&apos;_de11bfcc-129c-4570-b4f0-2b395f932f16&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_9dbd92a5-5c0a-4039-b741-bf4ede54ccf0" caller="checkDataAssociation"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Payroll ready&apos; and @id=&apos;_efbd0983-76cd-4a4c-acf3-6dde71d7c760&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Cannot find message event definition" parameter="bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_da743a6f-d9e5-4fcf-8a96-d2fd5cfb73d4" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_bbdf487b-c3a3-4bfa-8ba3-79be59f08203" caller="doExecute"/>
+      </entry>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaborationByName" message="bpmn:collaboration[@name=&apos;Facilities&apos;]"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_8d4bb408-4175-4fbb-8131-18c32b7aa022" caller="selectCollaborationByName">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByParticipant" message="//bpmn:process[@id=//bpmn:participant[@name=&apos;Facilities&apos;]/@processRef]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoNonBPMNAttributes" message="Cannot find attribute &apos;triso:defaultName=&quot;true&quot;&apos; from reference in test file"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_3486bf55-0a7f-4ff1-be15-1555669f58ad" caller="selectProcessByParticipant">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;New employee hired&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkSignalEvent" message="Cannot find signal event definition" parameter="bpmn:signalEventDefinition"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:manualTask[@name=&apos;Prepare access card&apos; and @id=&apos;_2bf94039-15a1-44bb-9d14-81358777466c&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:userTask[@name=&apos;Configure access details&apos; and @id=&apos;_737503c8-10bc-483f-8871-5461d822b469&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="_737503c8-10bc-483f-8871-5461d822b469" caller="checkDataAssociation">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkDataAssociation" message="Cannot find node" parameter="bpmn:ioSpecification/bpmn:inputSet/bpmn:dataInputRefs[text()=&apos;_946f3a81-8249-481e-afc4-07647f204192&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_737503c8-10bc-483f-8871-5461d822b469" caller="checkDataAssociation"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateFollowingElement" message="bpmn:endEvent[@name=&apos;Access card ready&apos; and @id=&apos;_5ee09fe4-f38f-454d-b6e4-1c3703a6a239&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageEvent" message="Cannot find message event definition" parameter="bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_3486bf55-0a7f-4ff1-be15-1555669f58ad" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="_8d4bb408-4175-4fbb-8131-18c32b7aa022" caller="doExecute"/>
+      </entry>
+   </entry>
+</analysis>

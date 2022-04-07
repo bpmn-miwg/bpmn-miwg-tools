@@ -1,3 +1,0 @@
-<analysis name="MID Innovator 15.0.1.20127-C.3.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>

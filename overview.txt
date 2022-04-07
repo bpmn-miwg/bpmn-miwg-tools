@@ -131,18 +131,6 @@ BPMN-Modeler for Confluence Enterprise 3.19.0                A.1.0              
 BPMN-Modeler for Confluence Enterprise 3.19.0                C.1.1                0          313           45
 BPMN-Modeler for Confluence Enterprise 3.19.0                B.2.0                0         1199            0
 BPMN-Modeler for Confluence Enterprise 3.19.0                C.3.0                0          332            0
-MID Innovator 15.0.1.20127                                   C.1.0                0          400           53
-MID Innovator 15.0.1.20127                                   A.3.0                0           86            2
-MID Innovator 15.0.1.20127                                   A.4.1                0          221           19
-MID Innovator 15.0.1.20127                                   A.2.0                0           81            0
-MID Innovator 15.0.1.20127                                   C.2.0                0          290           25
-MID Innovator 15.0.1.20127                                   C.4.0                0          540           87
-MID Innovator 15.0.1.20127                                   A.4.0                0          146           16
-MID Innovator 15.0.1.20127                                   B.1.0                0          253           12
-MID Innovator 15.0.1.20127                                   A.1.0                0           43            0
-MID Innovator 15.0.1.20127                                   C.1.1                0          262           33
-MID Innovator 15.0.1.20127                                   B.2.0                0          790           26
-MID Innovator 15.0.1.20127                                   C.3.0                0          244           31
 Camunda Modeler 5.0                                          C.1.0                0           20           13
 Camunda Modeler 5.0                                          A.3.0                0            0            0
 Camunda Modeler 5.0                                          A.4.1                0            0            0
@@ -197,6 +185,18 @@ iGrafx FlowCharter 2013 15.1.1.1580                          A.4.0              
 iGrafx FlowCharter 2013 15.1.1.1580                          B.1.0                1          165           52
 iGrafx FlowCharter 2013 15.1.1.1580                          A.1.0                0           41            7
 iGrafx FlowCharter 2013 15.1.1.1580                          B.2.0                0          410          138
+MID Innovator 15.1.1.11026                                   C.1.0                0          400           53
+MID Innovator 15.1.1.11026                                   A.3.0                0           86            2
+MID Innovator 15.1.1.11026                                   A.4.1                0          221           19
+MID Innovator 15.1.1.11026                                   A.2.0                0           81            0
+MID Innovator 15.1.1.11026                                   C.2.0                0          290           25
+MID Innovator 15.1.1.11026                                   C.4.0                0          540           87
+MID Innovator 15.1.1.11026                                   A.4.0                0          146           16
+MID Innovator 15.1.1.11026                                   B.1.0                0          253           12
+MID Innovator 15.1.1.11026                                   A.1.0                0           43            0
+MID Innovator 15.1.1.11026                                   C.1.1                0          262           33
+MID Innovator 15.1.1.11026                                   B.2.0                0          790           26
+MID Innovator 15.1.1.11026                                   C.3.0                0          244           31
 W4 BPMN+ Composer V.10.4                                     C.1.0                0           79            0
 W4 BPMN+ Composer V.10.4                                     A.3.0                0          153            0
 W4 BPMN+ Composer V.10.4                                     A.4.1                0          247            0

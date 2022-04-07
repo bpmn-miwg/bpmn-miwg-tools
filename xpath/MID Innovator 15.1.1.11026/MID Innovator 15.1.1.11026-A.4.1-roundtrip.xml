@@ -1,0 +1,52 @@
+<analysis name="MID Innovator 15.1.1.11026-A.4.1-roundtrip" toolName="xpath">
+   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="execute">
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectCollaboration" message="bpmn:collaboration"/>
+      <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-467b00a2-7f22-4314-bd57-2f84b409dc80" caller="selectCollaboration">
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectPool" message="bpmn:participant[@name=&apos;Pool 1&apos;]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1" caller="selectPool">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find extension element although the corresponding reference element contains an extension element" parameter="bpmn:extensionElements"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectReferencedProcess" message="//bpmn:process[@id=&apos;sid-34746A54-1D7D-46CA-B219-0C4CEAE51170&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-34746A54-1D7D-46CA-B219-0C4CEAE51170" caller="selectReferencedProcess">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 1&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find extension element although the corresponding reference element contains an extension element" parameter="bpmn:extensionElements"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 1&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 1&apos; and @sourceRef=&apos;sid-70D2F83B-77E6-4301-835C-AFF6357344F8&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 2&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 2&apos; and @targetRef=&apos;sid-70D2F83B-77E6-4301-835C-AFF6357344F8&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event 1&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-34746A54-1D7D-46CA-B219-0C4CEAE51170" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByLane" message="//bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-34746A54-1D7D-46CA-B219-0C4CEAE51170" caller="selectProcessByLane">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-34746A54-1D7D-46CA-B219-0C4CEAE51170" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="selectProcessByLane" message="//bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]"/>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4" caller="selectProcessByLane">
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateElement" message="bpmn:startEvent[@name=&apos;Start Event 2&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkAutoExtensionElements" message="Cannot find extension element although the corresponding reference element contains an extension element" parameter="bpmn:extensionElements"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 3&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 1&apos; and @targetRef=&apos;sid-C189128A-82D2-4E5F-8FB4-F6E21FF27E83&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="selectFollowingElement" message="No outgoing reference found" parameter="bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="selectFollowingElement">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:task[@name=&apos;Task 5&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="checkMessageFlow" message="Could not find messageFlow" parameter="//bpmn:messageFlow[@name=&apos;Message Flow 2&apos; and @sourceRef=&apos;sid-C189128A-82D2-4E5F-8FB4-F6E21FF27E83&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="No outgoing reference found" parameter="bpmn:endEvent[@name=&apos;End Event 2&apos;]"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="navigateBookmarkedElement" message=""/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="selectFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePushEntry" message="Push" identifier="" caller="selectFollowingElement">
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateElement" message="Parent failed" parameter="bpmn:startEvent[@name=&apos;Start Event 4&apos;]"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+               <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="" caller="doExecute"/>
+            </entry>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.finding.FindingAssertionEntry" assertion="navigateFollowingElement" message="The base node is null"/>
+            <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4" caller="doExecute"/>
+         </entry>
+         <entry class="org.omg.bpmn.miwg.api.output.dom.ok.NodePopEntry" message="Pop" identifier="sid-467b00a2-7f22-4314-bd57-2f84b409dc80" caller="doExecute"/>
+      </entry>
+   </entry>
+</analysis>

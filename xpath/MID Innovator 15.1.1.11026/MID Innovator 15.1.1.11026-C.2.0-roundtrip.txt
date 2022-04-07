@@ -1,0 +1,81 @@
+ANALYSIS: MID Innovator 15.1.1.11026-C.2.0-roundtrip (Tool: xpath)
+  OK     : execute                                  Push (id: )
+    OK     : selectCollaboration                      Message: bpmn:collaboration
+    OK     : selectCollaboration                      Push (id: C1404332496310)
+      OK     : selectPool                               Message: bpmn:participant[@name='Credit Card Company']
+      OK     : selectPool                               Push (id: __3cf88d6c-e5e4-489e-bc73-e2a18be946bf)
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='WFP-Page_1-1']
+        OK     : selectReferencedProcess                  Push (id: WFP-Page_1-1)
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=false
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Receive Credit Card Information']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow partner; Parameter: //bpmn:task[@name='Pay Order' and @id='_2f24e6da-b44f-4e30-8d85-fd35fd56e209']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Take Payment' and @id='__a7183fc9-402a-418c-bf2a-3b1927d3798d']
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Send Result' and @id='__4011aa2d-a7a9-4e1a-9f16-8a662d138bd4']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow partner; Parameter: //bpmn:task[@name='Pay Order' and @id='_2f24e6da-b44f-4e30-8d85-fd35fd56e209']
+          OK     : doExecute                                Pop (id: WFP-Page_1-1)
+        OK     : doExecute                                Pop (id: __3cf88d6c-e5e4-489e-bc73-e2a18be946bf)
+      OK     : selectPool                               Message: bpmn:participant[@name='Customer']
+      OK     : selectPool                               Push (id: __6f70606b-6781-4f26-b207-5bfff80115d8)
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='WFP-Page_1-3']
+        OK     : selectReferencedProcess                  Push (id: WFP-Page_1-3)
+          OK     : checkAttributeValue                      Message: Attribute isExecutable=false
+          OK     : navigateElement                          Message: bpmn:startEvent[not(@name)]
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Browse Products on Amazon' and @id='__f61e9ae0-855f-4ce6-9e3a-4b4f5c7dd0b8']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Add Item to Cart' and @id='__be386700-06c2-4a29-b861-c516940667fe']
+          OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Done Shopping?' and @id='__509f09eb-5518-4995-b98b-db3cf3f8ea00']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Browse Products on Amazon' and @id='__f61e9ae0-855f-4ce6-9e3a-4b4f5c7dd0b8']
+          OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions/bpmn:process[@id='id="WFP-Page_1-3"']/bpmn:exclusiveGateway[@id='id="__509f09eb-5518-4995-b98b-db3cf3f8ea00"']/
+          OK     : selectFollowingElement                   Message: bpmn:subProcess[@name='Checkout' and @id='__5ffa1675-9ad7-46f8-b19a-85cd5878496f']
+          OK     : selectFollowingElement                   Push (id: __5ffa1675-9ad7-46f8-b19a-85cd5878496f)
+            OK     : navigateElement                          Message: bpmn:startEvent[not(@name)]
+            FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Pay Order']
+            FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[@name='Send Credit Card Information' and @sourceRef='__a1c27e25-4aa2-43dc-8a20-b713e8393d7f']
+            FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name='') and @targetRef='__a1c27e25-4aa2-43dc-8a20-b713e8393d7f']
+            FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:exclusiveGateway[@name='Payment accepted?']
+            FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:intermediateThrowEvent[@name='Send Order']
+            FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name='') and @sourceRef='__a1c27e25-4aa2-43dc-8a20-b713e8393d7f']
+            FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='null']
+            OK     : navigateBookmarkedElement                Message: 
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            OK     : navigateBookmarkedElement                Message: 
+            FINDING: navigateFollowingElement                 Message: The base node is null; Parameter: null
+            FINDING: checkErrorEvent                          Message: Current node is null; Parameter: null
+            OK     : doExecute                                Pop (id: __5ffa1675-9ad7-46f8-b19a-85cd5878496f)
+          OK     : navigateBoundaryEvent                    Message: Boundary element 'null' found
+          FINDING: checkErrorEvent                          Message: Cannot find error event definition; Parameter: bpmn:errorEventDefinition | bpmn:errorDefinitionRef
+          OK     : navigateFollowingElement                 Message: bpmn:endEvent[not(@name) and @id='__8f9632f2-9fdb-4e3c-8b10-6a05091de766']
+          OK     : navigateBookmarkedElement                Message: #document/bpmn:definitions/bpmn:process[@id='id="WFP-Page_1-3"']/bpmn:subProcess[@id='id="__5ffa1675-9ad7-46f8-b19a-85cd5878496f"']/
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Receive items']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='null']
+          OK     : doExecute                                Pop (id: WFP-Page_1-3)
+        OK     : doExecute                                Pop (id: __6f70606b-6781-4f26-b207-5bfff80115d8)
+      OK     : selectPool                               Message: bpmn:participant[@name='Amazon']
+      OK     : selectPool                               Push (id: __a42178ea-f777-4c5b-a0a1-c4014aee6431)
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='WFP-Page_1-4']
+        OK     : selectReferencedProcess                  Push (id: WFP-Page_1-4)
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Receive Order']
+          FINDING: checkMessageEvent                        Message: Cannot find message event definition; Parameter: bpmn:messageEventDefinition | bpmn:messageEventDefinitionRef
+          OK     : checkMessageFlow                         Message: message flow 'null' (Input) -> //bpmn:intermediateThrowEvent[@name='Send Order' and @id='_f35ee29d-018c-47e2-afeb-eebc2e25925e']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Pick items' and @id='__f4846d41-bca9-4788-9ce2-30ff4b9d6b7b']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Place in bin' and @id='__200e3ce9-3381-4d13-8c7e-4f8790388070']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Receive and Package items' and @id='__ac1dc01c-14c2-47cf-9bc9-2b39f5fcd379']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Send to carrier dock']
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name='') and @sourceRef='__ac1dc01c-14c2-47cf-9bc9-2b39f5fcd379']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='null']
+          OK     : doExecute                                Pop (id: WFP-Page_1-4)
+        OK     : doExecute                                Pop (id: __a42178ea-f777-4c5b-a0a1-c4014aee6431)
+      OK     : selectPool                               Message: bpmn:participant[@name='Carrier']
+      OK     : selectPool                               Push (id: __bb6766c5-51e3-4f04-aedc-6c9e4afe0582)
+        OK     : selectReferencedProcess                  Message: //bpmn:process[@id='WFP-Page_1-2']
+        OK     : selectReferencedProcess                  Push (id: WFP-Page_1-2)
+          OK     : navigateElement                          Message: bpmn:startEvent[@name='Pick items']
+          OK     : navigateFollowingElement                 Message: bpmn:task[@name='Load Truck' and @id='__a9de74be-ce4b-4d59-bafd-cf6f61f48867']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:task[@name='Deliver Items']
+          FINDING: checkMessageFlow                         Message: Could not find messageFlow; Parameter: //bpmn:messageFlow[(not(@name) or @name='') and @sourceRef='__a9de74be-ce4b-4d59-bafd-cf6f61f48867']
+          FINDING: navigateFollowingElement                 Message: No outgoing reference found; Parameter: bpmn:endEvent[@name='null']
+          OK     : doExecute                                Pop (id: WFP-Page_1-2)
+        OK     : doExecute                                Pop (id: __bb6766c5-51e3-4f04-aedc-6c9e4afe0582)
+      OK     : doExecute                                Pop (id: C1404332496310)
