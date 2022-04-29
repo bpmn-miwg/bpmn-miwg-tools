@@ -72,7 +72,7 @@ public class SchemaAnalysisTool implements StreamAnalysisTool {
 					getRessourceAsStreamWrapper("schema/BPMN20.xsd")));
 
 			SAXParserFactory parserFactory = SAXParserFactory.newInstance();
-			// parserFactory.setValidating(true);
+			parserFactory.setValidating(true);
 			parserFactory.setNamespaceAware(true);
 			parserFactory.setSchema(schema);
 
