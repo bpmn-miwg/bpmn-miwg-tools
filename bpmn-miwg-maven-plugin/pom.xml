@@ -14,28 +14,17 @@
   <inceptionYear>2013</inceptionYear>
   <description>Maven plugin to invoke tests on the BPMN test cases in this project.</description>
 
-
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-model</artifactId>
-      <version>3.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.maven</groupId>
-      <artifactId>maven-plugin-api</artifactId>
-      <version>2.0</version>
+      <version>${maven.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven.plugin-tools</groupId>
       <artifactId>maven-plugin-annotations</artifactId>
-      <version>3.2</version>
+      <version>${maven.plugin.version}</version>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.maven</groupId>
-      <artifactId>maven-project</artifactId>
-      <version>2.2.1</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
@@ -50,12 +39,12 @@
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>xpath-tool</artifactId>
-      <version>${bpmn.miwg.tools.version}</version>
+      <version>${bpmn-miwg-tools.version}</version>
     </dependency>
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>facade</artifactId>
-      <version>${bpmn.miwg.tools.version}</version>
+      <version>${bpmn-miwg-tools.version}</version>
     </dependency>
 	
   
@@ -63,7 +52,7 @@
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>schema-tool</artifactId>
-      <version>${bpmn.miwg.tools.version}</version>
+      <version>${bpmn-miwg-tools.version}</version>
     </dependency>
     <dependency>
       <groupId>org.glassfish</groupId>
@@ -73,31 +62,29 @@
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>bounds-generator</artifactId>
-      <version>${bpmn.miwg.tools.version}</version>
+      <version>${bpmn-miwg-tools.version}</version>
     </dependency>
     <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>submission-counter</artifactId>
-      <version>${bpmn.miwg.tools.version}</version>
+      <version>${bpmn-miwg-tools.version}</version>
     </dependency>
 
-    <!-- Required at runtime for private testing -->
-    <!--<dependency>
+    <!-- Required at runtime for testing -->
+    <dependency>
       <groupId>org.omg.bpmn.miwg</groupId>
       <artifactId>test-suite</artifactId>
-      <version>0.4-SNAPSHOT</version>
+      <version>${bpmn-miwg-test-suite.version}</version>
       <scope>runtime</scope>
-    </dependency>-->
+    </dependency>
   </dependencies>
 
   <build>
-
-
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
-        <version>3.2</version>
+        <version>${maven.plugin.version}</version>
         <configuration>
           <goalPrefix>bpmn-miwg</goalPrefix>
           <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
@@ -130,8 +117,6 @@
     </plugins>
     <pluginManagement>
       <plugins>
-
-	  
 		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
         <plugin>
           <groupId>org.eclipse.m2e</groupId>

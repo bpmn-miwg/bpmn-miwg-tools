@@ -84,13 +84,17 @@
       At various times we have run public tests using the previous tools
       version so the tools can stabilise.
     -->
-    <bpmn.miwg.tools.version>${project.version}</bpmn.miwg.tools.version>
+    <bpmn-miwg-test-suite.version>0.4-SNAPSHOT</bpmn-miwg-test-suite.version>
+    <bpmn-miwg-tools.version>${project.version}</bpmn-miwg-tools.version>
+    <commons-lang3.version>[3.1.12,)</commons-lang3.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
+    <jackson.version>[2.8.11.1,)</jackson.version>
     <!-- staging area for subsequent commit and push -->
     <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
-    <jackson.version>[2.8.11.1,)</jackson.version>
+    <maven.plugin.version>3.6.4</maven.plugin.version>
+    <maven.version>3.8.5</maven.version>
     <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
   </properties>
 
@@ -129,7 +133,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.1</version>
+      <version>${commons-lang3.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -170,7 +174,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <version>2.5.3</version>
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>

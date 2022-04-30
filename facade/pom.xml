@@ -12,22 +12,22 @@
 		<dependency>
 		  <groupId>org.omg.bpmn.miwg</groupId>
 		  <artifactId>xpath-tool</artifactId>
-		  <version>${bpmn.miwg.tools.version}</version>
+		  <version>${bpmn-miwg-tools.version}</version>
 		</dependency>
 		<dependency>
 		  <groupId>org.omg.bpmn.miwg</groupId>
 		  <artifactId>xml-compare-tool</artifactId>
-		  <version>${bpmn.miwg.tools.version}</version>
+		  <version>${bpmn-miwg-tools.version}</version>
 		</dependency>
 		<dependency>
 		  <groupId>org.omg.bpmn.miwg</groupId>
 		  <artifactId>schema-tool</artifactId>
-		  <version>${bpmn.miwg.tools.version}</version>
+		  <version>${bpmn-miwg-tools.version}</version>
 		</dependency>
 		<dependency>
 		  <groupId>org.omg.bpmn.miwg</groupId>
 		  <artifactId>analysis-tool-api</artifactId>
-		  <version>${bpmn.miwg.tools.version}</version>
+		  <version>${bpmn-miwg-tools.version}</version>
 		</dependency>
 		<dependency>
 		  <groupId>org.glassfish</groupId>

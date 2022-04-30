@@ -12,7 +12,7 @@
 		<dependency>
 		  <groupId>org.omg.bpmn.miwg</groupId>
 		  <artifactId>facade</artifactId>
-		  <version>${bpmn.miwg.tools.version}</version>
+		  <version>${bpmn-miwg-tools.version}</version>
 		</dependency>
 	</dependencies>
 

@@ -1,19 +1,11 @@
 target/
 bin/
 .attach_*
-.classpath
-.DS_Store
-.project
-.settings/
-*.prefs
-bpmn-miwg-maven-plugin/.classpath
-test-result/.classpath
-BPMN 2.0 XML Compare/.classpath
-BPMN 2.0 XML Compare/.project
-BPMN 2.0 XML Compare/lib
-XPathTestRunner/.classpath
-XPathTestRunner/.project
-XPathTestRunner/.*
+**/.classpath
+**/.DS_Store
+**/.project
+**/.settings/
+**/*.prefs
 *.log
 _install.cmd
 /.metadata/
