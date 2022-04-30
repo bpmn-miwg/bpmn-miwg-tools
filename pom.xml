@@ -31,18 +31,15 @@
 
   <distributionManagement>
     <repository>
-      <id>repo</id>
-      <url>https://github.com/bpmn-miwg/bpmn-miwg-mvn-repo/raw/master/releases</url>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/bpmn-miwg/bpmn-miwg-tools</url>
     </repository>
-    <snapshotRepository>
-      <id>snapshot-repo</id>
-      <url>https://github.com/bpmn-miwg/bpmn-miwg-mvn-repo/raw/master/snapshots</url>
-    </snapshotRepository>
   </distributionManagement>
 
   <ciManagement>
-    <url>https://bpmn-miwg.ci.cloudbees.com/</url>
-    <system>Jenkins</system>
+    <url>https://github.com/bpmn-miwg/bpmn-miwg-tools/actions</url>
+    <system>Github</system>
   </ciManagement>
 
   <issueManagement>
