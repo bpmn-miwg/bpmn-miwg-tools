@@ -33,7 +33,8 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.custommonkey.xmlunit.Diff;
 import org.custommonkey.xmlunit.Difference;
 import org.custommonkey.xmlunit.DifferenceConstants;
@@ -63,7 +64,7 @@ public abstract class AbstractXmlDifferenceListener implements DifferenceListene
 	public static final String REGEXP_SIGNAVIO_ID = "sid-........-....-....-....-............";
 	private static final String		ATTR_NULL						= "null";
 	
-	private static final Logger LOGGER = Logger.getLogger(AbstractXmlDifferenceListener.class);
+	private static final Logger LOGGER = LogManager.getLogger(AbstractXmlDifferenceListener.class);
 
 	protected XmlUnitHelper helper;
 	

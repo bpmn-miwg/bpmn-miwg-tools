@@ -30,7 +30,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.custommonkey.xmlunit.DetailedDiff;
 import org.custommonkey.xmlunit.Diff;
 import org.custommonkey.xmlunit.Difference;
@@ -50,7 +51,7 @@ import org.xml.sax.SAXException;
  */
 public class XmlDiffUtil {
 
-	private static final Logger LOGGER = Logger.getLogger(XmlDiffUtil.class);
+	private static final Logger LOGGER = LogManager.getLogger(XmlDiffUtil.class);
 	
 	// TODO FindBugs make private / public and static?
 	// comparator, to order Difference list
