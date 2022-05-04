@@ -64,11 +64,13 @@ public class XpathAnalysisTool implements DOMAnalysisTool {
 			throws Exception {
 		AnalysisOutput output = new AnalysisOutput(job, this);
 		DOMCheck check = getCheck(job);
-		if (check == null)
-			throw new Exception(String.format(
-					"No applicable test found for %s", job.getName()));
-
-		analyzeDOM(job, referenceDocument, actualDocument, check, output);
+		if (check == null) {
+			output.finding(
+					String.format("Submission for %s exists", job.getName()),
+					String.format("No applicable test found for %s", job.getName()));
+		} else {
+			analyzeDOM(job, referenceDocument, actualDocument, check, output);
+		}
 
 		return output;
 	}
