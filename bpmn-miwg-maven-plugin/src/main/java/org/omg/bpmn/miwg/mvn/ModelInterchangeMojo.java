@@ -98,16 +98,17 @@ public class ModelInterchangeMojo extends AbstractMojo {
 			AnalysisFacade.executeAnalysisJobs(jobs,
 					outputDirectory.getAbsolutePath());
 		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	            getLog().error("Unable to perform analysis, cause: "
+	                    + e.getMessage(), e);
+	        }
 
         //Generate the submissions.json
         try (FileWriter out = new FileWriter(new File(outputDirectory, "submissions.json"))) {
             JSONObject submissions = new RepoScanner().getSubmissionsFromRepo("bpmn-miwg/bpmn-miwg-test-suite");
             submissions.writeJSONString(out);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
+            getLog().error("Unable to generate submissions summary, cause: "
+                    + e.getMessage(), e);
 	}
-
+	}
 }
