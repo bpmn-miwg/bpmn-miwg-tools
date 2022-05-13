@@ -31,6 +31,10 @@ img {
     border: 1px solid #aaaaaa;
 }
 
+#scale {
+    width: 5em;
+}
+
 
 
 </style>
@@ -47,7 +51,7 @@ img {
             </select>
         </p>
         <p><span class='glyphicon glyphicon-move'></span> Drag the stencil using the mouse drag/drop or the keyboard arrows.</p>
-        <p><span class='glyphicon glyphicon-zoom-in'></span> Zoom in/out using the Page Up/Page Down buttons (<input type="text" id="scale" size=3 value="1.0"/></span>)</p>
+        <p><span class='glyphicon glyphicon-zoom-in'></span> Zoom in/out using the Page Up/Page Down buttons (<input type="number" id="scale" value="1.0" step="0.01"/></span>)</p>
     </div>
     <div id="comparaison">
         <img id="base"></img>
@@ -156,8 +160,8 @@ img {
                 scale = scale - 0.1;
             }
             scale = scale.toFixed(2);
-            $overlay.css('transform', 'scale(' + scale + ')');
             $('#scale').val(scale);
+            $('#scale').change()
         }
         
 
