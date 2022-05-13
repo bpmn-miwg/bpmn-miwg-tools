@@ -109,9 +109,17 @@ img {
     //Set the image src in the DOM
     var $overlay = $('#overlay');
     $('#base').attr('src', $.url().param('base'));
+
+    // Set overlay scale from local storage
+    if (localStorage.getItem('miwgVisualCompareOverlayScale')) {
+        $('#scale').val(localStorage.getItem('miwgVisualCompareOverlayScale'));
+        scaleOverlay(localStorage.getItem('miwgVisualCompareOverlayScale'))
+    }
+
 	if ($.url().param('zoom')) {
 		$('#scale').val($.url().param('zoom'));
-		$overlay.css('transform', 'scale(' + parseFloat($('#scale').val()) + ')');
+
+        scaleOverlay(parseFloat($('#scale').val()));
 	}
     var overlayPrefix = $.url().param('overlayFolder') + '/' + $.url().param('variation');    
     var overlaySuffix = localStorage.miwgVisualCompareOverlay;
@@ -161,16 +169,23 @@ img {
             }
             scale = scale.toFixed(2);
             $('#scale').val(scale);
-            $('#scale').change()
+
+            scaleOverlay(scale);
         }
-        
+
 
     });
-    
+
     //Scale keyboard entry
     $('#scale').change(function(){
-        $overlay.css('transform', 'scale(' + parseFloat($('#scale').val()) + ')');
+        scaleOverlay(parseFloat($('#scale').val()));
     });
+
+    function scaleOverlay(value) {
+        $overlay.css('transform', 'scale(' + value + ')');
+
+        localStorage.setItem('miwgVisualCompareOverlayScale', value)
+    }
 
 </script>
 
