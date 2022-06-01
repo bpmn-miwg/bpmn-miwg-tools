@@ -1,0 +1,24 @@
+body { padding-top: 70px; }
+
+
+@media (min-width: 979px) {
+
+  #midCol.affix-top {
+      position:fixed;
+      width:265px;
+      margin-right:10px;
+      
+  }
+  
+  #midCol.affix {
+      position:static;
+      width:100%;
+  }
+
+}
+
+@media (min-width: 767px) {
+  .affix,.affix-top {
+      position:fixed;
+  }
+}
