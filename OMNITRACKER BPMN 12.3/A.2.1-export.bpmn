@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sem:definitions expressionLanguage="http://www.omninet.de/bpmn/expressions/v1" typeLanguage="http://www.omninet.de/bpmn/types/v1" targetNamespace="http://www.omninet.de/bpmn/definitions/v1" xmlns:sem="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:ot="http://www.omninet.de/ot/bpmn/v1">
+	<sem:itemDefinition id="_OT_NAMESPACES_">
+		<sem:extensionElements>
+			<ot:namespace id="_1" name="MIWG Tests 2022" alias="MiwgTests2022">
+				<ot:schemaObjectDescription>
+					<ot:translatedText lang="de"/>
+				</ot:schemaObjectDescription>
+			</ot:namespace>
+			<ot:namespace id="_2" name="02. Export" alias="Export" parent="_1">
+				<ot:schemaObjectDescription>
+					<ot:translatedText lang="de"/>
+				</ot:schemaObjectDescription>
+			</ot:namespace>
+			<ot:namespace id="_3" name="A.2.1" alias="A21" parent="_2">
+				<ot:schemaObjectDescription>
+					<ot:translatedText lang="de"/>
+				</ot:schemaObjectDescription>
+			</ot:namespace>
+		</sem:extensionElements>
+	</sem:itemDefinition>
+	<sem:process name="A.2.1 Canvas" ot:alias="A21Canvas" id="_5">
+		<sem:extensionElements>
+			<ot:startPermission/>
+		</sem:extensionElements>
+		<sem:sequenceFlow id="_6" name="condition" ot:displayName="condition" ot:alias="edge3" sourceRef="_7" targetRef="_8">
+			<sem:conditionExpression>false</sem:conditionExpression>
+		</sem:sequenceFlow>
+		<sem:sequenceFlow id="_9" ot:alias="flow1" sourceRef="_10" targetRef="_11"/>
+		<sem:sequenceFlow id="_12" ot:alias="flow2" sourceRef="_11" targetRef="_13"/>
+		<sem:sequenceFlow id="_14" ot:alias="flow3" sourceRef="_13" targetRef="_15"/>
+		<sem:sequenceFlow id="_16" ot:alias="flow4" sourceRef="_13" targetRef="_17"/>
+		<sem:sequenceFlow id="_18" ot:alias="flow5" sourceRef="_13" targetRef="_7"/>
+		<sem:sequenceFlow id="_19" ot:alias="edge1" sourceRef="_7" targetRef="_17"/>
+		<sem:sequenceFlow id="_20" ot:alias="edge2" sourceRef="_15" targetRef="_17"/>
+		<sem:sequenceFlow id="_21" ot:alias="flow7" sourceRef="_17" targetRef="_8"/>
+		<sem:sequenceFlow id="_22" ot:alias="edge4" sourceRef="_8" targetRef="_23"/>
+		<sem:sequenceFlow id="_24" name="Condition" ot:displayName="Condition" ot:alias="flow6" sourceRef="_15" targetRef="_23">
+			<sem:conditionExpression>true</sem:conditionExpression>
+		</sem:sequenceFlow>
+		<sem:exclusiveGateway id="_8" name="Gateway (Merge Flows)" ot:displayName="Gateway (Merge Flows)" ot:alias="gateway2"/>
+		<sem:startEvent id="_10" name="Start Event" ot:displayName="Start Event" ot:alias="event1"/>
+		<sem:task id="_11" name="Task 1" ot:displayName="Task 1" ot:alias="task1"/>
+		<sem:exclusiveGateway id="_13" name="Gateway (Split Flow)" ot:displayName="Gateway (Split Flow)" ot:alias="gateway1" default="_14"/>
+		<sem:task id="_15" name="Task 2" ot:displayName="Task 2" ot:alias="task2" default="_20"/>
+		<sem:task id="_17" name="Task 3" ot:displayName="Task 3" ot:alias="task3"/>
+		<sem:task id="_7" name="Task 4" ot:displayName="Task 4" ot:alias="task4" default="_19"/>
+		<sem:endEvent id="_23" name="End Event" ot:displayName="End Event" ot:alias="event2"/>
+	</sem:process>
+	<bpmndi:BPMNDiagram id="_4" name="A.2.1 Diagram">
+		<bpmndi:BPMNPlane ot:namespace="_3" ot:alias="A21Diagram" ot:diagramType="executable" bpmnElement="_5">
+			<di:extension>
+				<ot:schemaObjectDescription>
+					<ot:translatedText lang="de"/>
+				</ot:schemaObjectDescription>
+			</di:extension>
+			<bpmndi:BPMNEdge bpmnElement="_6">
+				<di:waypoint x="466" y="277"/>
+				<di:waypoint x="565" y="277"/>
+				<di:waypoint x="565" y="234"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_9">
+				<di:waypoint x="32" y="151"/>
+				<di:waypoint x="114" y="151"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_12">
+				<di:waypoint x="204" y="151"/>
+				<di:waypoint x="259" y="151"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_14">
+				<di:waypoint x="280" y="130"/>
+				<di:waypoint x="280" y="30"/>
+				<di:waypoint x="376" y="30"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_16">
+				<di:waypoint x="301" y="151"/>
+				<di:waypoint x="376" y="151"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_18">
+				<di:waypoint x="280" y="172"/>
+				<di:waypoint x="280" y="277"/>
+				<di:waypoint x="376" y="277"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_19">
+				<di:waypoint x="421" y="247"/>
+				<di:waypoint x="421" y="180"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_20">
+				<di:waypoint x="421" y="60"/>
+				<di:waypoint x="421" y="120"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_21">
+				<di:waypoint x="466" y="150"/>
+				<di:waypoint x="565" y="150"/>
+				<di:waypoint x="565" y="192"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_22">
+				<di:waypoint x="586" y="213"/>
+				<di:waypoint x="638" y="213"/>
+				<di:waypoint x="638" y="134"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNEdge bpmnElement="_24">
+				<di:waypoint x="466" y="30"/>
+				<di:waypoint x="638" y="30"/>
+				<di:waypoint x="638" y="102"/>
+			</bpmndi:BPMNEdge>
+			<bpmndi:BPMNShape bpmnElement="_8" isMarkerVisible="true">
+				<dc:Bounds x="544" y="192" width="42" height="42"/>
+			</bpmndi:BPMNShape>
+			<bpmndi:BPMNShape bpmnElement="_10">
+				<dc:Bounds x="0" y="135" width="32" height="32"/>
+			</bpmndi:BPMNShape>
+			<bpmndi:BPMNShape bpmnElement="_11">
+				<dc:Bounds x="114" y="121" width="90" height="60"/>
+			</bpmndi:BPMNShape>
+			<bpmndi:BPMNShape bpmnElement="_13" isMarkerVisible="true">
+				<dc:Bounds x="259" y="130" width="42" height="42"/>
+			</bpmndi:BPMNShape>
+			<bpmndi:BPMNShape bpmnElement="_15">
+				<dc:Bounds x="376" y="0" width="90" height="60"/>
+			</bpmndi:BPMNShape>
+			<bpmndi:BPMNShape bpmnElement="_17">
+				<dc:Bounds x="376" y="120" width="90" height="60"/>
+			</bpmndi:BPMNShape>
+			<bpmndi:BPMNShape bpmnElement="_7">
+				<dc:Bounds x="376" y="247" width="90" height="60"/>
+			</bpmndi:BPMNShape>
+			<bpmndi:BPMNShape bpmnElement="_23">
+				<dc:Bounds x="622" y="102" width="32" height="32"/>
+			</bpmndi:BPMNShape>
+		</bpmndi:BPMNPlane>
+	</bpmndi:BPMNDiagram>
+</sem:definitions>
