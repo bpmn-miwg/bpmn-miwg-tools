@@ -1,8 +1,0 @@
-<project name="tools">
-
-	<target name="war"
-	        description="No-op required due to the customisations put in parent pom.">
-		
-	</target>
-	
-</project>
