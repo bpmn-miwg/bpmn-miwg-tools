@@ -1,2 +1,0 @@
-ANALYSIS: ARIS 10.0.16-C.1.0-roundtrip (Tool: init)
-  EXCEPTION: Exception during job preparation (com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException: Invalid byte 2 of 3-byte UTF-8 sequence.)

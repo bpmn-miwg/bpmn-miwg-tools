@@ -1,9 +1,0 @@
-<analysis name="BIC Cloud Design 6.2.0-C.1.1-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 47: cvc-complex-type.2.4.b: The content of element &apos;bpmn:dataOutputAssociation&apos; is not complete. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:sourceRef, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:targetRef}&apos; is expected.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 90: cvc-complex-type.2.4.b: The content of element &apos;bpmn:dataOutputAssociation&apos; is not complete. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:sourceRef, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:targetRef}&apos; is expected.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.finding.ValidationFindingEntry" message="Error Line 133: cvc-complex-type.2.4.b: The content of element &apos;bpmn:dataOutputAssociation&apos; is not complete. One of &apos;{&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:sourceRef, &quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;:targetRef}&apos; is expected.
-"/>
-   <entry class="org.omg.bpmn.miwg.api.output.dom.info.InfoEntry" message="Validation failed: Warnings: 0, Errors: 3, Fatal Errors: 0"/>
-</analysis>

@@ -1,2 +1,0 @@
-ANALYSIS: itp-commerce Process Modeler for Microsoft Visio 6-B.2.0-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

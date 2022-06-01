@@ -1,4 +1,0 @@
-ANALYSIS: Enterprise Explorer 1.0.0-B.2.0-roundtrip (Tool: xsd)
-  Error Line 159: cvc-complex-type.2.4.a: Invalid content was found starting with element 'extensionElements'. One of '{"http://www.omg.org/spec/BPMN/20100524/MODEL":auditing, "http://www.omg.org/spec/BPMN/20100524/MODEL":monitoring, "http://www.omg.org/spec/BPMN/20100524/MODEL":categoryValueRef, "http://www.omg.org/spec/BPMN/20100524/MODEL":dataState}' is expected.
-
-  INFO   : Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0

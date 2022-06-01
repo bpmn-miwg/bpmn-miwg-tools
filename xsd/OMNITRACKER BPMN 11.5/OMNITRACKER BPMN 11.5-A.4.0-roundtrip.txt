@@ -1,2 +1,0 @@
-ANALYSIS: OMNITRACKER BPMN 11.5-A.4.0-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

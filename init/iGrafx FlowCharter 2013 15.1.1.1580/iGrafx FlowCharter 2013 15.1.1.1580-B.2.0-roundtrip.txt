@@ -1,1 +1,0 @@
-ANALYSIS: iGrafx FlowCharter 2013 15.1.1.1580-B.2.0-roundtrip (Tool: init)

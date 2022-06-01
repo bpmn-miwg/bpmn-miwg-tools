@@ -1,1 +1,0 @@
-ANALYSIS: Visual Paradigm 11.1-A.4.1-roundtrip (Tool: init)

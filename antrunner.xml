@@ -1,0 +1,34 @@
+<project name="tools">
+
+	<target name="war"
+	        description="Create war file from the staged site">
+		
+		<copy todir="${stagingDir}">
+	    <fileset dir="${warSourceDir}">
+	      <include name="**/*"/>
+	    	<exclude name="**/.*"/>
+	    </fileset>
+	  </copy>
+		<zip basedir="${stagingDir}"
+			   destfile="${project.build.directory}/${maven.project.build.finalName}.war">
+			
+	  </zip>
+	</target>
+	
+	<target name="site-install"
+		      description="There is no site:install in the Maven plugin so this may be used instead">
+
+    <echo>Install ${project.name} site into repo at ${settings.localRepository}</echo>
+    <exec executable="mvn">
+      <arg value="-o"/>
+      <arg value="install:install-file"/>
+      <arg value="-DgroupId=${project.groupId}"/>
+      <arg value="-DartifactId=${project.artifactId}"/>
+      <arg value="-Dversion=${project.version}"/>
+      <arg value="-Dpackaging=jar"/>
+      <arg value="-Dclassifier=site"/>
+      <arg value="-Dfile=${project.build.directory}/${project.groupId}.${project.artifactId}-${project.version}-site.jar"/>
+    </exec>
+    
+  </target>
+</project>

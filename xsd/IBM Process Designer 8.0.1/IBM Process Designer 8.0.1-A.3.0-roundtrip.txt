@@ -1,2 +1,0 @@
-ANALYSIS: IBM Process Designer 8.0.1-A.3.0-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

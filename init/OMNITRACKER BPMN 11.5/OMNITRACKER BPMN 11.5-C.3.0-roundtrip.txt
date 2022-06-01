@@ -1,1 +1,0 @@
-ANALYSIS: OMNITRACKER BPMN 11.5-C.3.0-roundtrip (Tool: init)

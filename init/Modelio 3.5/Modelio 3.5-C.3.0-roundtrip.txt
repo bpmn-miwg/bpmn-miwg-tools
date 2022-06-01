@@ -1,1 +1,0 @@
-ANALYSIS: Modelio 3.5-C.3.0-roundtrip (Tool: init)

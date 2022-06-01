@@ -1,2 +1,0 @@
-ANALYSIS: Aeneis 5.7.89.2400-C.1.0-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

@@ -1,3 +1,0 @@
-<analysis name="Reference-A.3.0" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>

@@ -1,2 +1,0 @@
-ANALYSIS: Reference-A.4.1 (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

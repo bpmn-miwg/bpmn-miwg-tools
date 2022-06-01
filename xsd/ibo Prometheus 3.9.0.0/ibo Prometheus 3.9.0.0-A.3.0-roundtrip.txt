@@ -1,4 +1,0 @@
-ANALYSIS: ibo Prometheus 3.9.0.0-A.3.0-roundtrip (Tool: xsd)
-  Error Line 65: cvc-complex-type.2.4.a: Invalid content was found starting with element 'ibo:CollapsedBounds'. One of '{"http://www.omg.org/spec/BPMN/20100524/DI":BPMNLabel}' is expected.
-
-  INFO   : Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0

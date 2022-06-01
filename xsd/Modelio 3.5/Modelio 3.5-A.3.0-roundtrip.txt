@@ -1,4 +1,0 @@
-ANALYSIS: Modelio 3.5-A.3.0-roundtrip (Tool: xsd)
-  Error Line 2: cvc-complex-type.4: Attribute 'targetNamespace' must appear on element 'definitions'.
-
-  INFO   : Validation failed: Warnings: 0, Errors: 1, Fatal Errors: 0

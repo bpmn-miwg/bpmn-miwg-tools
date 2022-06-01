@@ -1,2 +1,0 @@
-ANALYSIS: GenMyModel 0.47-A.4.0-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

@@ -1,10 +1,11 @@
-*.~vsd
-Thumbs.db
-~$*.xlsx
-.DS_Store
-.project
-.classpath
-.settings
-/target
-Work in Progress/
-/bin/
+target/
+bin/
+.attach_*
+**/.classpath
+**/.DS_Store
+**/.project
+**/.settings/
+**/*.prefs
+*.log
+_install.cmd
+/.metadata/

@@ -1,3 +1,0 @@
-<analysis name="Enterprise Architect 12.0.1207-A.4.1-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>

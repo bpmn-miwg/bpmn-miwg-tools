@@ -1,2 +1,0 @@
-ANALYSIS: MID bpanda 2019.05.0.8393-A.4.1-roundtrip (Tool: xsd)
-  OK     : Validation                               Message: Schema validation succeeded

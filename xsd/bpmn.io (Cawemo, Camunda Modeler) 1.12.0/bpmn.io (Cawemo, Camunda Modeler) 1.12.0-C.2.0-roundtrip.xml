@@ -1,3 +1,0 @@
-<analysis name="bpmn.io (Cawemo, Camunda Modeler) 1.12.0-C.2.0-roundtrip" toolName="xsd">
-   <entry class="org.omg.bpmn.miwg.api.output.dom.ok.OKAssertionEntry" assertion="Validation" message="Schema validation succeeded"/>
-</analysis>
