@@ -31,6 +31,10 @@ img {
     border: 1px solid #aaaaaa;
 }
 
+#scale {
+    width: 5em;
+}
+
 
 
 </style>
@@ -47,7 +51,7 @@ img {
             </select>
         </p>
         <p><span class='glyphicon glyphicon-move'></span> Drag the stencil using the mouse drag/drop or the keyboard arrows.</p>
-        <p><span class='glyphicon glyphicon-zoom-in'></span> Zoom in/out using the Page Up/Page Down buttons (<input type="text" id="scale" size=3 value="1.0"/></span>)</p>
+        <p><span class='glyphicon glyphicon-zoom-in'></span> Zoom in/out using the Page Up/Page Down buttons (<input type="number" id="scale" value="1.0" step="0.01"/></span>)</p>
     </div>
     <div id="comparaison">
         <img id="base"></img>
@@ -105,9 +109,17 @@ img {
     //Set the image src in the DOM
     var $overlay = $('#overlay');
     $('#base').attr('src', $.url().param('base'));
+
+    // Set overlay scale from local storage
+    if (localStorage.getItem('miwgVisualCompareOverlayScale')) {
+        $('#scale').val(localStorage.getItem('miwgVisualCompareOverlayScale'));
+        scaleOverlay(localStorage.getItem('miwgVisualCompareOverlayScale'))
+    }
+
 	if ($.url().param('zoom')) {
 		$('#scale').val($.url().param('zoom'));
-		$overlay.css('transform', 'scale(' + parseFloat($('#scale').val()) + ')');
+
+        scaleOverlay(parseFloat($('#scale').val()));
 	}
     var overlayPrefix = $.url().param('overlayFolder') + '/' + $.url().param('variation');    
     var overlaySuffix = localStorage.miwgVisualCompareOverlay;
@@ -156,17 +168,24 @@ img {
                 scale = scale - 0.1;
             }
             scale = scale.toFixed(2);
-            $overlay.css('transform', 'scale(' + scale + ')');
             $('#scale').val(scale);
+
+            scaleOverlay(scale);
         }
-        
+
 
     });
-    
+
     //Scale keyboard entry
     $('#scale').change(function(){
-        $overlay.css('transform', 'scale(' + parseFloat($('#scale').val()) + ')');
+        scaleOverlay(parseFloat($('#scale').val()));
     });
+
+    function scaleOverlay(value) {
+        $overlay.css('transform', 'scale(' + value + ')');
+
+        localStorage.setItem('miwgVisualCompareOverlayScale', value)
+    }
 
 </script>
 
