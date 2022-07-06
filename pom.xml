@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.omg.bpmn.miwg</groupId>
-  <artifactId>tools</artifactId>
-  <name>BPMN MIWG Tools</name>
-  <packaging>pom</packaging>
-  <version>0.6.1-SNAPSHOT</version>
-  <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
-  <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
+  <artifactId>test-suite</artifactId>
+  <version>0.4-SNAPSHOT</version>
+  <name>BPMN 2.0 MIWG Test Suite</name>
+  <description>Reference BPMN files and various vendor's implementations of the same.</description>
+  <packaging>jar</packaging>
 
-  <licenses>
-    <license>
-      <name>MIT</name>
-      <url>http://opensource.org/licenses/mit-license.php</url>
-    </license>
-  </licenses>
-
-  <inceptionYear>2013</inceptionYear>
-
-  <organization>
-    <name>BPMN-MIWG</name>
-    <url>https://github.com/bpmn-miwg</url>
-  </organization>
+  <properties>
+    <java.version>1.6</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <bpmn-miwg-tools.version>0.6.1-SNAPSHOT</bpmn-miwg-tools.version>
+    <!-- Use this property to name just one tool to be tested
+    <project.bpmn.application>Yaoqiang BPMN Editor 2.2.18</project.bpmn.application>
+    -->
+<!-- staging area for subsequent commit and push -->
+    <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
+  </properties>
 
   <scm>
-    <connection>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-tools</connection>
-    <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
-    <tag>HEAD</tag>
+    <connection>scm:git:https://github.com/bpmn-miwg/bpmn-miwg-test-suite</connection>
+    <url>https://github.com/bpmn-miwg/bpmn-miwg-test-suite</url>
   </scm>
 
   <repositories>
+    <repository>
+      <id>bpmn-miwg-repo</id>
+      <url>https://raw.githubusercontent.com/bpmn-miwg/bpmn-miwg-mvn-repo/master/</url>
+    </repository>
     <repository>
       <id>github</id>
       <name>GitHub Packages</name>
@@ -37,188 +37,148 @@
     </repository>
   </repositories>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>bpmn-miwg-plugin-repo</id>
+      <url>https://raw.githubusercontent.com/bpmn-miwg/bpmn-miwg-mvn-repo/master/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/bpmn-miwg/bpmn-miwg-test-suite</url>
+    </pluginRepository>
+  </pluginRepositories>
+
   <distributionManagement>
     <repository>
       <id>github</id>
       <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/bpmn-miwg/bpmn-miwg-tools</url>
+      <url>https://maven.pkg.github.com/bpmn-miwg/bpmn-miwg-test-suite</url>
     </repository>
   </distributionManagement>
 
-  <ciManagement>
-    <url>https://github.com/bpmn-miwg/bpmn-miwg-tools/actions</url>
-    <system>Github</system>
-  </ciManagement>
-
-  <issueManagement>
-    <system>GitHub</system>
-    <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
-  </issueManagement>
-
-  <developers>
-    <developer>
-      <name>Denis Gagne</name>
-      <!--
-      <email>http://mailhide.recaptcha.net/d?k=01ebFB9eM2hZL-T96IpUgRmA==&amp;c=AI-pouLFNTr5xMTBVDaj8iKeIFI5dy9Wj5cxSY0Nuhw=</email>
-      -->
-      <organization>Trisotech / Business Process Incubator</organization>
-      <organizationUrl>http://www.businessprocessincubator.com/</organizationUrl>
-    </developer>
-    <developer>
-      <name>Falko Menge</name>
-      <organization>Camunda Services GmbH</organization>
-      <organizationUrl>http://www.camunda.com/</organizationUrl>
-    </developer>
-    <developer>
-      <name>Matthias Kurz</name>
-      <organization />
-    </developer>
-    <developer>
-      <name>Sven Wagner-Boysen</name>
-      <organization>Signavio</organization>
-      <organizationUrl>http://www.signavio.com/</organizationUrl>
-    </developer>
-    <developer>
-      <name>Tim Stephenson</name>
-      <organization>Know Process</organization>
-      <organizationUrl>http://www.knowprocess.com/</organizationUrl>
-    </developer>
-  </developers>
-
-  <properties>
-    <java.version>1.7</java.version>
-    <!--
-      The tools version the maven plugin should use.
-      At various times we have run public tests using the previous tools
-      version so the tools can stabilise.
-    -->
-    <bpmn-miwg-test-suite.version>0.4-SNAPSHOT</bpmn-miwg-test-suite.version>
-    <bpmn-miwg-tools.version>${project.version}</bpmn-miwg-tools.version>
-    <commons-lang3.version>[3.1.12,)</commons-lang3.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- github server corresponds to entry in ~/.m2/settings.xml -->
-    <github.global.server>github</github.global.server>
-    <jackson.version>[2.8.11.1,)</jackson.version>
-    <!-- staging area for subsequent commit and push -->
-    <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
-    <log4j.version>2.17.2</log4j.version>
-    <maven.plugin.version>3.6.4</maven.plugin.version>
-    <maven.version>3.8.5</maven.version>
-    <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
-  </properties>
-
-  <modules>
-    <module>analysis-tool-api</module>
-    <module>xml-compare-tool</module>
-    <module>xpath-tool</module>
-    <module>schema-tool</module>
-    <module>bounds-generator</module>
-    <module>submission-counter</module>
-    <module>bpmn-miwg-maven-plugin</module>
-    <module>cli</module>
-    <module>facade</module>
-  </modules>
-
   <dependencies>
     <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>${log4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>${commons-lang3.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-scm-publish-plugin</artifactId>
-      <version>1.0-beta-2</version>
-      <type>maven-plugin</type>
+      <groupId>org.omg.bpmn.miwg</groupId>
+      <artifactId>bounds-generator</artifactId>
+      <version>${bpmn-miwg-tools.version}</version>
     </dependency>
   </dependencies>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
-
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>1.0-beta-2</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-
+    <resources>
+      <resource>
+        <filtering>false</filtering>
+        <directory>${basedir}</directory>
+         <includes>
+          <!-- include only files that follow the naming conventions and are thus understood by the tools -->
+          <include>Reference/*.bpmn</include>
+          <include>Reference/*.png</include>
+          <include>**/*-export.bpmn</include>
+          <include>**/*-roundtrip.bpmn</include>
+          <include>**/*-import.png</include>
+          <include>**/*-export.png</include>
+          <include>**/*-import.*.png</include>
+          <include>**/*-export.*.png</include>
+          <include>*.json</include>
+          <include>LICENSE.txt</include>
+        </includes>
+        <excludes>
+          <exclude>.*</exclude><!-- ignore hidden files from Git & Eclipse -->
+          <exclude>.*/**/*</exclude><!-- ignore hidden folders from Git & Eclipse -->
+          <exclude>target/**/*</exclude><!-- ignore Maven build dir -->
+          <exclude>Work in Progress/**/*</exclude><!-- ignore unfinished test cases -->
+        </excludes>
+      </resource>
+    </resources>
     <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <inherited>true</inherited>
-        <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
-        </configuration>
-        <version>2.3.2</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <failIfNoTests>false</failIfNoTests>
-          <trimStackTrace>false</trimStackTrace>
-          <redirectTestOutputToFile>true</redirectTestOutputToFile>
-          <runOrder>alphabetical</runOrder>
-          <!-- See: https://issues.apache.org/jira/browse/SUREFIRE-1588 -->
-          <useSystemClassLoader>false</useSystemClassLoader>
-        </configuration>
-      </plugin>
-    </plugins>
-
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.0.2</version>
+      <executions>
+        <execution>
+          <id>reference-only</id>
+          <phase>package</phase>
+          <goals>
+            <goal>jar</goal>
+          </goals>
+          <configuration>
+            <classifier>reference-only</classifier>
+            <includes>
+              <include>Reference/*.bpmn</include>
+            </includes>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
   </build>
 
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.6</version>
-        <!-- Restrict the report generation to a subset -->
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>index</report>
-              <report>project-team</report>
-              <report>dependencies</report>
-              <report>issue-tracking</report>
-              <report>license</report>
-              <report>scm</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-linkcheck-plugin</artifactId>
-        <version>1.1</version>
-        <configuration>
+  <profiles>
+    <profile>
+      <id>analysis</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.8</version>
+            <executions>
+              <execution>
+                <phase>process-resources</phase>
+                <configuration>
+                  <target>
+                    <property name="compile_classpath" refid="maven.compile.classpath"/>
+                    <property name="runtime_classpath" refid="maven.runtime.classpath"/>
+                    <property name="test_classpath" refid="maven.test.classpath"/>
+                    <property name="plugin_classpath" refid="maven.plugin.classpath"/>
 
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>2.14.1</version>
-      </plugin>
-    </plugins>
-  </reporting>
+                    <java classname="org.omg.bpmn.miwg.boundary.BoundaryCreator">
+                      <arg value="Reference"/>
+                      <arg value="${project.build.directory}/site/Reference/Bounds"/>
+                      <classpath>
+                        <pathelement path="${compile_classpath}"/>
+                      </classpath>
+                    </java>
+                  </target>
+                </configuration>
+                <goals>
+                  <goal>run</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.4</version>
+            <executions>
+              <!-- jar BPMN MIWG analysis reports as part of the build's normal 'install' phase -->
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <phase>install</phase>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- This binds the BPMN MIWG analysis tools to the test phase of the Maven lifecycle -->
+          <plugin>
+            <groupId>org.omg.bpmn.miwg</groupId>
+            <artifactId>bpmn-miwg-maven-plugin</artifactId>
+            <version>${bpmn-miwg-tools.version}</version>
+            <executions>
+              <execution>
+                <phase>test</phase>
+                <goals>
+                  <goal>test</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>
+
