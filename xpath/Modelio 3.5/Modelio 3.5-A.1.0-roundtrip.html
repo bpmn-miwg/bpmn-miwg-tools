@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="Modelio 3.5">
+      <h2>Modelio 3.5</h2>
+      <div class="test" data-test="A.1.0" data-variant="Roundtrip">
+         <h3>A.1.0</h3>
+         <div class="info">
+            <h4>ANALYSIS: Modelio 3.5-A.1.0-roundtrip (Tool: xpath)</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : execute                                  Push (id: MO-d4fc45de-f933-4871-b7ca-b5a491fa5028)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFirstProcess                       Message: /bpmn:definitions/bpmn:process</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-9a0785e3-8dbf-4ced-8b77-a40aad5cc478&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-9a0785e3-8dbf-4ced-8b77-a40aad5cc478&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectFirstProcess                       Push (id: MO-9a0785e3-8dbf-4ced-8b77-a40aad5cc478)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Start Event&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-9d5708f3-d4d2-4858-b2d0-89a055004389&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-9d5708f3-d4d2-4858-b2d0-89a055004389&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;MO-eea4ec79-7538-4dfe-9c5b-bd4fc64e6c2c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-eea4ec79-7538-4dfe-9c5b-bd4fc64e6c2c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-eea4ec79-7538-4dfe-9c5b-bd4fc64e6c2c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;MO-f688da27-ce0e-495c-bcc7-f6a97395ee2d&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-f688da27-ce0e-495c-bcc7-f6a97395ee2d&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-f688da27-ce0e-495c-bcc7-f6a97395ee2d&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;MO-f6e7fcee-d4c8-4ebc-8256-43e0bf2a01ed&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-f6e7fcee-d4c8-4ebc-8256-43e0bf2a01ed&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-f6e7fcee-d4c8-4ebc-8256-43e0bf2a01ed&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event&apos; and @id=&apos;MO-0ff9894b-b9c1-4b6a-bac7-37c631c060ea&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-0ff9894b-b9c1-4b6a-bac7-37c631c060ea&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;MO-0ff9894b-b9c1-4b6a-bac7-37c631c060ea&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: MO-9a0785e3-8dbf-4ced-8b77-a40aad5cc478)</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68020511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

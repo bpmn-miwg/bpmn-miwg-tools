@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Used base rather than absolute urls to ease local, offline development -->
+    <base href="http://bpmn-miwg.github.io/bpmn-miwg-tools/testtool/"/>
+    
+		<link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/highlightjs/github.css"/>
+		<link rel="stylesheet" href="../css/bpmn-miwg.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/bpmn-miwg-tools/">BPMN-MIWG</a>
+        <ul class="nav">
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools">Tools Home</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/BPMN%202.0%20XML%20Compare">XML Compare</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/XPathTestRunner">XPath</a></li>
+          <li><a href="https://github.com/bpmn-miwg/bpmn-miwg-tools/tree/master/bpmn-miwg-maven-plugin">Maven plugin</a></li>
+        </ul>
+			</div>
+		</div>
+<div class="testresults">
+   <div class="tool" data-vendor="Signavio Process Editor 10.0.0">
+      <h2>Signavio Process Editor 10.0.0</h2>
+      <div class="test" data-test="A.4.1" data-variant="Roundtrip">
+         <h3>A.4.1</h3>
+         <div class="info">
+            <h4>ANALYSIS: Signavio Process Editor 10.0.0-A.4.1-roundtrip (Tool: xpath)</h4>
+         </div>
+         <div class="ok">
+            <h4>  OK     : execute                                  Push (id: sid-ad44e239-e96e-4a80-b0e4-cf63b741c3cb)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectCollaboration                      Message: bpmn:collaboration</h4>
+         </div>
+         <div class="ok">
+            <h4>    OK     : selectCollaboration                      Push (id: sid-f9dad787-c799-4443-8070-fce61c3a470c)</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;sid-f9dad787-c799-4443-8070-fce61c3a470c&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoNonBPMNAttributes               Message: Cannot find corresponding element in reference DOM; Parameter: //bpmn:*[@id=&apos;sid-f9dad787-c799-4443-8070-fce61c3a470c&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectPool                               Message: bpmn:participant[@name=&apos;Pool 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectPool                               Push (id: sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectReferencedProcess                  Message: //bpmn:process[@id=&apos;sid-34746A54-1D7D-46CA-B219-0C4CEAE51170&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectReferencedProcess                  Push (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Start Event 1&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 1&apos; and @id=&apos;sid-3D477D07-D669-4A26-9454-12AD775FDE70&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateFollowingElement                 Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;signavio:signavioMetaData&apos; but was &apos;null&apos; - comparing &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow                         Message: message flow &apos;Message Flow 1&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 2&apos; and @id=&apos;sid-1208A5BA-9E1C-49D2-82E3-5DB2C0E9887D&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateFollowingElement                 Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;signavio:signavioMetaData&apos; but was &apos;null&apos; - comparing &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow                         Message: message flow &apos;Message Flow 2&apos; (Input)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event 1&apos; and @id=&apos;sid-5F0F3508-96EF-4F9B-9182-64AD17334E23&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: sid-66751F1E-EEB9-4BA7-9FDA-7965A1CA9CD1)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 1&apos;]]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectProcessByLane                      Push (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: sid-34746A54-1D7D-46CA-B219-0C4CEAE51170)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectProcessByLane                      Message: //bpmn:process[bpmn:laneSet/bpmn:lane[@name=&apos;Lane 2&apos;]]</h4>
+         </div>
+         <div class="ok">
+            <h4>      OK     : selectProcessByLane                      Push (id: sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Start Event 2&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 3&apos; and @id=&apos;sid-34E8C3A5-5C2A-4593-AC67-038B737814D7&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement                 Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;signavio:signavioMetaData&apos; but was &apos;null&apos; - comparing &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow                         Message: message flow &apos;Message Flow 1&apos; (Input)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement                   Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 1&apos; and @id=&apos;sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement                   Push (id: sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: sid-00A82BF4-1D0A-48DC-8389-C8AAF3E7F754)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 5&apos; and @id=&apos;sid-485E1184-9951-4B41-9794-A9AFD42A3249&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateFollowingElement                 Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;signavio:signavioMetaData&apos; but was &apos;null&apos; - comparing &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkMessageFlow                         Message: message flow &apos;Message Flow 2&apos; (Output)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event 2&apos; and @id=&apos;sid-78073B2D-35BB-45D5-9CF1-D446602F8E59&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Message: #document/definitions[@id=&apos;id=&quot;sid-ad44e239-e96e-4a80-b0e4-cf63b741c3cb&quot;&apos;]/process[@id=&apos;id=&quot;sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4&quot;&apos;]/task[@id=&apos;id=&quot;sid-34E8C3A5-5C2A-4593-AC67-038B737814D7&quot;&apos;]/</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : navigateBookmarkedElement                Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;signavio:signavioMetaData&apos; but was &apos;null&apos; - comparing &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateBookmarkedElement                Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : selectFollowingElement                   Message: bpmn:subProcess[@name=&apos;Expanded Sub-Process 2&apos; and @id=&apos;sid-645780CC-D61F-4715-8B58-71679305245F&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>        OK     : selectFollowingElement                   Push (id: sid-645780CC-D61F-4715-8B58-71679305245F)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateElement                          Message: bpmn:startEvent[@name=&apos;Start Event 4&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:task[@name=&apos;Task 6&apos; and @id=&apos;sid-B414AE83-11A2-4968-B4E4-45833D641928&apos;]</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: Extension Elements are not similar to the reference; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>          OK     : navigateFollowingElement                 Push (id: )</h4>
+         </div>
+         <div class="finding">
+            <h4>FINDING: checkAutoExtensionElements               Message: 22: Expected presence of child node &apos;signavio:signavioMetaData&apos; but was &apos;null&apos; - comparing &lt;signavio:signavioMetaData...&gt; at /extensionElements[1]/signavioMetaData[2] to  at null; Parameter: null</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Pop (id: )</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event 4&apos; and @id=&apos;sid-46E6675F-8040-45FE-B5C3-B904596F3D4F&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: sid-645780CC-D61F-4715-8B58-71679305245F)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name=&apos;End Event 5&apos; and @id=&apos;sid-93C83C6A-1122-4E0F-9F47-4027C9080456&apos;]</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: sid-54D696FD-DEDC-45F3-99DB-1404DA433FC4)</h4>
+         </div>
+         <div class="ok">
+            <h4>OK     : doExecute                                Pop (id: sid-f9dad787-c799-4443-8070-fce61c3a470c)</h4>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="../js/jquery-1.9.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/bpmn-miwg.js"></script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68020511-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

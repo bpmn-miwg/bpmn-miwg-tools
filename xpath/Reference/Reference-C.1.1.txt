@@ -1,0 +1,52 @@
+ANALYSIS: Reference-C.1.1 (Tool: xpath)
+  OK     : execute                                  Push (id: sid-bdb880ac-c464-4e5c-aa56-569d709436e0)
+    OK     : navigateDefinitions                      Message: /bpmn:definitions
+    OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+    OK     : checkAttributeValue                      Message: Attribute expressionLanguage=http://www.w3.org/1999/XPath
+    OK     : navigateElement                          Message: bpmn:resource[@name='Team Assistant']
+    OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    OK     : navigateElement                          Message: bpmn:resource[@name='Approver']
+    OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    OK     : navigateElement                          Message: bpmn:resource[@name='Accountant']
+    OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+    OK     : checkAttributeValue                      Message: Attribute w4:type=User
+    OK     : selectElement                            Message: bpmn:process[@name='Invoice Handling (OMG BPMN MIWG Demo)']
+    OK     : selectElement                            Push (id: handle-invoice)
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAttributeValue                      Message: Attribute isExecutable=true
+      OK     : navigateElement                          Message: bpmn:startEvent[@name='Invoice received']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Assign Approver' and @id='assignApprover']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Invoice approved?' and @id='invoice_approved']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Rechnung klären' and @id='reviewInvoice']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:exclusiveGateway[@name='Review successful?' and @id='reviewSuccessful_gw']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Approve Invoice' and @id='approveInvoice']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="handle-invoice"']/exclusiveGateway[@id='id="reviewSuccessful_gw"']/
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice not processed' and @id='invoiceNotProcessed']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : navigateBookmarkedElement                Message: #document/definitions[@id='id="sid-bdb880ac-c464-4e5c-aa56-569d709436e0"']/process[@id='id="handle-invoice"']/exclusiveGateway[@id='id="invoice_approved"']/
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : navigateFollowingElement                 Message: bpmn:userTask[@name='Prepare Bank Transfer' and @id='prepareBankTransfer']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:serviceTask[@name='Archive Invoice' and @id='archiveInvoice']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : checkAutoNonBPMNAttributes               Message: All non-BPMN attributes from reference exist in the test document as well.
+      OK     : navigateFollowingElement                 Message: bpmn:endEvent[@name='Invoice processed' and @id='invoiceProcessed']
+      OK     : checkAutoExtensionElements               Message: Extension elements are similar to the reference
+      OK     : doExecute                                Pop (id: handle-invoice)
