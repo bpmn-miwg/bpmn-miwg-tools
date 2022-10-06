@@ -145,8 +145,7 @@ public class RepoScanner {
     public static void main(String[] args) throws IOException {
         JSONObject submissions = new RepoScanner()
                 .getSubmissionsFromRepo("bpmn-miwg/bpmn-miwg-test-suite");
-        System.out.println(submissions);
-        FileUtils.writeStringToFile(new File("target/submissions.json"),
+        FileUtils.writeStringToFile(new File("target/site/submissions.json"),
                 submissions.toJSONString(), Charset.forName("UTF-8"));
     }
 }
