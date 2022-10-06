@@ -268,20 +268,6 @@ GenMyModel 0.47                                              A.1.0              
 GenMyModel 0.47                                              C.3.0                0          228           29
 GenMyModel 0.47                                              A.3.0                0           69            0
 GenMyModel 0.47                                              A.2.0                0           61            0
-ADONIS NP 10.0                                               B.2.0                0          913            1
-ADONIS NP 10.0                                               A.4.1                0          234           17
-ADONIS NP 10.0                                               C.2.0                0          263            0
-ADONIS NP 10.0                                               C.6.0                0          314            1
-ADONIS NP 10.0                                               C.5.0                0          449            1
-ADONIS NP 10.0                                               B.1.0                0          295            0
-ADONIS NP 10.0                                               C.1.1                0          255           20
-ADONIS NP 10.0                                               C.1.0                0          383           48
-ADONIS NP 10.0                                               A.4.0                0          144            0
-ADONIS NP 10.0                                               C.4.0                0          737           85
-ADONIS NP 10.0                                               A.1.0                0           40            0
-ADONIS NP 10.0                                               C.3.0                0          217           31
-ADONIS NP 10.0                                               A.3.0                0           62           17
-ADONIS NP 10.0                                               A.2.0                0           81            7
 Yaoqiang BPMN Editor 4.0                                     B.2.0                0          591            0
 Yaoqiang BPMN Editor 4.0                                     A.4.1                0          149           18
 Yaoqiang BPMN Editor 4.0                                     B.1.0                0          162            0
