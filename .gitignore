@@ -9,3 +9,4 @@ bin/
 *.log
 _install.cmd
 /.metadata/
+**/.vscode

@@ -1,10 +1,13 @@
 package org.omg.bpmn.miwg.submission;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.kohsuke.github.GHContent;
@@ -81,10 +84,16 @@ public class RepoScanner {
         for (GHContent content : directoryContent) {
             String name = content.getName();
             String type = content.getType();
-            if ("dir".equals(type) && !"Reference".equals(name)
+            if ("dir".equals(type) && !".github".equals(name)
+                    && !"Reference".equals(name)
                     && !"Work in Progress".equals(name)) {
-                getSubmissionsFromToolDir(submissions, repository,
-                        content.getPath());
+                try {
+                    getSubmissionsFromToolDir(
+                            submissions, repository, content.getPath());
+                } catch (Throwable e) {
+                    LOGGER.warning("Unable to get submissions for: "
+                            + name + ", root cause: " + e.getMessage());
+                }
             }
         }
         return submissions;
@@ -100,7 +109,7 @@ public class RepoScanner {
         int countC = 0;
         JSONArray files = new JSONArray();
         List<GHContent> directoryContent = repository
-                .getDirectoryContent(tool.replace(" ", "%20"));
+                .getDirectoryContent(tool);
         for (GHContent content : directoryContent) {
             String name = content.getName();
             String type = content.getType();
@@ -133,4 +142,11 @@ public class RepoScanner {
         submissions.put(tool, submission);
     }
 
+    public static void main(String[] args) throws IOException {
+        JSONObject submissions = new RepoScanner()
+                .getSubmissionsFromRepo("bpmn-miwg/bpmn-miwg-test-suite");
+        System.out.println(submissions);
+        FileUtils.writeStringToFile(new File("target/submissions.json"),
+                submissions.toJSONString(), Charset.forName("UTF-8"));
+    }
 }
