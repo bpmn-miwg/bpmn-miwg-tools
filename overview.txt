@@ -207,15 +207,6 @@ Bonita BPM 7.2.3                                             B.2.0              
 Bonita BPM 7.2.3                                             C.1.0                4          139           63
 Bonita BPM 7.2.3                                             A.1.0                0           37           20
 Bonita BPM 7.2.3                                             C.2.0                2          176           56
-Cardanit (prev. BeePMN) 2.21                                 C.4.0                0          641          108
-Cardanit (prev. BeePMN) 2.21                                 A.3.0                0          162            0
-Cardanit (prev. BeePMN) 2.21                                 C.1.1                0          379           30
-Cardanit (prev. BeePMN) 2.21                                 C.3.0                0          499           55
-Cardanit (prev. BeePMN) 2.21                                 A.2.0                0          147            0
-Cardanit (prev. BeePMN) 2.21                                 C.5.0                0          618            1
-Cardanit (prev. BeePMN) 2.21                                 C.1.0                0          611           66
-Cardanit (prev. BeePMN) 2.21                                 A.1.0                0           74            0
-Cardanit (prev. BeePMN) 2.21                                 C.2.0                0          224            0
 BPMN-Modeler for Confluence Enterprise 3.19.0                A.4.0                0          225            0
 BPMN-Modeler for Confluence Enterprise 3.19.0                C.4.0                0           58          108
 BPMN-Modeler for Confluence Enterprise 3.19.0                B.1.0                0          397            2
@@ -343,3 +334,13 @@ ARIS 10.0.22                                                 C.1.0              
 ARIS 10.0.22                                                 C.6.0                0          285            1
 ARIS 10.0.22                                                 A.1.0                0           41            0
 ARIS 10.0.22                                                 C.2.0                0          273            2
+Cardanit (prev. BeePMN) 4.9.1                                C.4.0                0          642          108
+Cardanit (prev. BeePMN) 4.9.1                                A.3.0                0          161            0
+Cardanit (prev. BeePMN) 4.9.1                                C.1.1               16          539          113
+Cardanit (prev. BeePMN) 4.9.1                                C.3.0                9          498            4
+Cardanit (prev. BeePMN) 4.9.1                                A.2.0                0          146            0
+Cardanit (prev. BeePMN) 4.9.1                                C.5.0                0          625            1
+Cardanit (prev. BeePMN) 4.9.1                                C.1.0               16          966          207
+Cardanit (prev. BeePMN) 4.9.1                                C.6.0               10          487            1
+Cardanit (prev. BeePMN) 4.9.1                                A.1.0                0           73            0
+Cardanit (prev. BeePMN) 4.9.1                                C.2.0                0          221            0
