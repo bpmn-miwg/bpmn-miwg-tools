@@ -194,9 +194,9 @@ OMNITRACKER BPMN 12.3                                        C.2.0              
 OMNITRACKER BPMN 12.3                                        C.1.0                0          142          113
 OMNITRACKER BPMN 12.3                                        A.3.0                0           48           44
 OMNITRACKER BPMN 12.3                                        C.5.0                0          262            1
-OMNITRACKER BPMN 12.3                                        A.1.0                0           30           20
+OMNITRACKER BPMN 12.3                                        A.1.0                1           33            8
 OMNITRACKER BPMN 12.3                                        A.4.1                0           99           62
-OMNITRACKER BPMN 12.3                                        B.2.0                0          399          349
+OMNITRACKER BPMN 12.3                                        B.2.0                2          407          246
 OMNITRACKER BPMN 12.3                                        A.4.0                0           90           64
 OMNITRACKER BPMN 12.3                                        A.2.0                0           46           42
 OMNITRACKER BPMN 12.3                                        C.6.0                0          171            1
