@@ -1,345 +1,345 @@
 Application                                                  Testcase           xsd  xml-compare        xpath
 =============================================================================================================
-Bonita BPM 7.2.3                                             B.1.0               12          158           46
-Bonita BPM 7.2.3                                             C.1.1                0           89           60
-Bonita BPM 7.2.3                                             C.3.0                4          101           32
-Bonita BPM 7.2.3                                             C.2.0                2          176           56
-Bonita BPM 7.2.3                                             C.1.0                4          139           63
-Bonita BPM 7.2.3                                             A.3.0                4           54           17
-Bonita BPM 7.2.3                                             A.1.0                0           37           20
-Bonita BPM 7.2.3                                             A.4.1                8          103           44
-Bonita BPM 7.2.3                                             B.2.0               38          409          140
-Bonita BPM 7.2.3                                             A.4.0                4           94           34
-Bonita BPM 7.2.3                                             A.2.0                0           53           42
-ARIS 10.0.22                                                 B.1.0                0          278            4
-ARIS 10.0.22                                                 C.1.1                0          198           43
-ARIS 10.0.22                                                 C.3.0                0          140           62
-ARIS 10.0.22                                                 C.2.0                0          273            2
-ARIS 10.0.22                                                 C.1.0                0          229           75
-ARIS 10.0.22                                                 A.3.0                0           82            0
-ARIS 10.0.22                                                 C.5.0                0          457            1
-ARIS 10.0.22                                                 A.1.0                0           41            0
-ARIS 10.0.22                                                 A.4.1                0          168           32
-ARIS 10.0.22                                                 B.2.0                0          817           30
-ARIS 10.0.22                                                 A.4.0                0          104            2
-ARIS 10.0.22                                                 A.2.0                0           78            0
-ARIS 10.0.22                                                 C.6.0                0          285            1
-ARIS 10.0.22                                                 C.4.0                0          428           73
-Cardanit (prev. BeePMN) 4.9.1                                C.1.1                0          535          113
-Cardanit (prev. BeePMN) 4.9.1                                C.3.0                0          496            3
-Cardanit (prev. BeePMN) 4.9.1                                C.2.0                0          221            0
-Cardanit (prev. BeePMN) 4.9.1                                C.1.0                0          962          207
-Cardanit (prev. BeePMN) 4.9.1                                A.3.0                0          161            0
-Cardanit (prev. BeePMN) 4.9.1                                C.5.0                0          625            1
-Cardanit (prev. BeePMN) 4.9.1                                A.1.0                0           73            0
-Cardanit (prev. BeePMN) 4.9.1                                A.2.0                0          146            0
-Cardanit (prev. BeePMN) 4.9.1                                C.6.0                0          487            1
-Cardanit (prev. BeePMN) 4.9.1                                C.4.0                0          642          108
-iGrafx Process 2013 for Six Sigma 15.0.4.1565                B.1.0                1          165           52
-iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.3.0                0           59           17
-iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.1.0                0           41            7
-iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.4.1                0          115           33
-iGrafx Process 2013 for Six Sigma 15.0.4.1565                B.2.0                0          408          138
-iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.4.0                0          104           27
-iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.2.0                0           57           11
-IBM BlueWorks Live April 2014                                A.1.0                0            8           20
-IBM BlueWorks Live April 2014                                A.2.0                0            8           42
-actiBPM 3.E-8                                                A.3.0                0           65           16
-actiBPM 3.E-8                                                A.1.0                0           31            8
-actiBPM 3.E-8                                                A.4.1                0          188           40
-actiBPM 3.E-8                                                A.4.0                0          124           22
-actiBPM 3.E-8                                                A.2.0                0           57           16
-W4 BPMN+ Composer V.9.4                                      B.1.0                0          114            0
-W4 BPMN+ Composer V.9.4                                      C.1.1                0           39            1
-W4 BPMN+ Composer V.9.4                                      C.3.0                0           64            0
-W4 BPMN+ Composer V.9.4                                      C.2.0                0          697            0
-W4 BPMN+ Composer V.9.4                                      C.1.0                0           44            0
-W4 BPMN+ Composer V.9.4                                      A.3.0                0           62            0
-W4 BPMN+ Composer V.9.4                                      A.1.0                0           67            0
-W4 BPMN+ Composer V.9.4                                      A.4.1                0          165            0
-W4 BPMN+ Composer V.9.4                                      B.2.0                0          680            0
-W4 BPMN+ Composer V.9.4                                      A.4.0                0           98            0
-W4 BPMN+ Composer V.9.4                                      A.2.0                0          119            0
-iGrafx FlowCharter 2013 15.1.1.1580                          B.1.0                1          165           52
-iGrafx FlowCharter 2013 15.1.1.1580                          A.3.0                0           59           17
-iGrafx FlowCharter 2013 15.1.1.1580                          A.1.0                0           41            7
-iGrafx FlowCharter 2013 15.1.1.1580                          A.4.1                0          115           28
-iGrafx FlowCharter 2013 15.1.1.1580                          B.2.0                0          410          138
-iGrafx FlowCharter 2013 15.1.1.1580                          A.4.0                0          105           30
-iGrafx FlowCharter 2013 15.1.1.1580                          A.2.0                0           57           11
-IBM Process Designer 8.0.1                                   A.3.0                0            6           18
-IBM Process Designer 8.0.1                                   A.1.0                0            6            8
-IBM Process Designer 8.0.1                                   A.2.0                0            6           12
-Enterprise Explorer 1.0.0                                    B.1.0                1          154           83
-Enterprise Explorer 1.0.0                                    C.1.1                3           82           22
-Enterprise Explorer 1.0.0                                    C.3.0                0           87           66
-Enterprise Explorer 1.0.0                                    C.2.0                0          161           65
-Enterprise Explorer 1.0.0                                    C.1.0                0          146           78
-Enterprise Explorer 1.0.0                                    A.3.0                0           47           29
-Enterprise Explorer 1.0.0                                    A.1.0                0           29           12
-Enterprise Explorer 1.0.0                                    A.4.1                0          104           39
+Yaoqiang BPMN Editor 4.0                                     B.2.0                0          591            0
+Yaoqiang BPMN Editor 4.0                                     A.2.0                0           70            0
+Yaoqiang BPMN Editor 4.0                                     B.1.0                0          162            0
+Yaoqiang BPMN Editor 4.0                                     A.1.0                0           39            0
+Yaoqiang BPMN Editor 4.0                                     A.3.0                0           75            0
+Yaoqiang BPMN Editor 4.0                                     C.1.0                0           23            0
+Yaoqiang BPMN Editor 4.0                                     A.4.0                0          106            0
+Yaoqiang BPMN Editor 4.0                                     A.4.1                0          149           18
 Enterprise Explorer 1.0.0                                    B.2.0                1          399          220
-Enterprise Explorer 1.0.0                                    A.4.0                0           91           41
 Enterprise Explorer 1.0.0                                    A.2.0                0           45           30
 Enterprise Explorer 1.0.0                                    C.4.0                0          243          113
+Enterprise Explorer 1.0.0                                    B.1.0                1          154           83
+Enterprise Explorer 1.0.0                                    C.1.1                3           82           22
+Enterprise Explorer 1.0.0                                    A.1.0                0           29           12
+Enterprise Explorer 1.0.0                                    C.2.0                0          161           65
+Enterprise Explorer 1.0.0                                    A.3.0                0           47           29
+Enterprise Explorer 1.0.0                                    C.1.0                0          146           78
+Enterprise Explorer 1.0.0                                    C.3.0                0           87           66
+Enterprise Explorer 1.0.0                                    A.4.0                0           91           41
+Enterprise Explorer 1.0.0                                    A.4.1                0          104           39
+W4 BPMN+ Composer V.9.4                                      B.2.0                0          680            0
+W4 BPMN+ Composer V.9.4                                      A.2.0                0          119            0
+W4 BPMN+ Composer V.9.4                                      B.1.0                0          114            0
+W4 BPMN+ Composer V.9.4                                      C.1.1                0           39            1
+W4 BPMN+ Composer V.9.4                                      A.1.0                0           67            0
+W4 BPMN+ Composer V.9.4                                      C.2.0                0          697            0
+W4 BPMN+ Composer V.9.4                                      A.3.0                0           62            0
+W4 BPMN+ Composer V.9.4                                      C.1.0                0           44            0
+W4 BPMN+ Composer V.9.4                                      C.3.0                0           64            0
+W4 BPMN+ Composer V.9.4                                      A.4.0                0           98            0
+W4 BPMN+ Composer V.9.4                                      A.4.1                0          165            0
+Bonita BPM 7.2.3                                             B.2.0               38          409          140
+Bonita BPM 7.2.3                                             A.2.0                0           53           42
+Bonita BPM 7.2.3                                             B.1.0               12          158           46
+Bonita BPM 7.2.3                                             C.1.1                0           89           60
+Bonita BPM 7.2.3                                             A.1.0                0           37           20
+Bonita BPM 7.2.3                                             C.2.0                2          176           56
+Bonita BPM 7.2.3                                             A.3.0                4           54           17
+Bonita BPM 7.2.3                                             C.1.0                4          139           63
+Bonita BPM 7.2.3                                             C.3.0                4          101           32
+Bonita BPM 7.2.3                                             A.4.0                4           94           34
+Bonita BPM 7.2.3                                             A.4.1                8          103           44
+iGrafx FlowCharter 2013 15.1.1.1580                          B.2.0                0          410          138
+iGrafx FlowCharter 2013 15.1.1.1580                          A.2.0                0           57           11
+iGrafx FlowCharter 2013 15.1.1.1580                          B.1.0                1          165           52
+iGrafx FlowCharter 2013 15.1.1.1580                          A.1.0                0           41            7
+iGrafx FlowCharter 2013 15.1.1.1580                          A.3.0                0           59           17
+iGrafx FlowCharter 2013 15.1.1.1580                          A.4.0                0          105           30
+iGrafx FlowCharter 2013 15.1.1.1580                          A.4.1                0          115           28
+BPMN-Modeler for Confluence Enterprise 3.38.0                B.2.0                0         1202            0
+BPMN-Modeler for Confluence Enterprise 3.38.0                A.2.0                0          111            0
+BPMN-Modeler for Confluence Enterprise 3.38.0                C.4.0                0           36          108
+BPMN-Modeler for Confluence Enterprise 3.38.0                B.1.0                0          399            2
+BPMN-Modeler for Confluence Enterprise 3.38.0                C.1.1                0          306           45
+BPMN-Modeler for Confluence Enterprise 3.38.0                A.1.0                0           52            0
+BPMN-Modeler for Confluence Enterprise 3.38.0                C.2.0                0           93            0
+BPMN-Modeler for Confluence Enterprise 3.38.0                A.3.0                0          118            0
+BPMN-Modeler for Confluence Enterprise 3.38.0                C.1.0                0          523           13
+BPMN-Modeler for Confluence Enterprise 3.38.0                C.5.0                0           69            1
+BPMN-Modeler for Confluence Enterprise 3.38.0                C.3.0                0          323            0
+BPMN-Modeler for Confluence Enterprise 3.38.0                A.4.0                0          221            0
+BPMN-Modeler for Confluence Enterprise 3.38.0                C.6.0                0           92            1
+BPMN-Modeler for Confluence Enterprise 3.38.0                A.4.1                0          121            0
+Modelio 3.5                                                  B.2.0               12          381          230
+Modelio 3.5                                                  A.2.0                2           44           26
+Modelio 3.5                                                  B.1.0               14          144           79
+Modelio 3.5                                                  C.1.1               23           80           37
+Modelio 3.5                                                  A.1.0                2           28           12
+Modelio 3.5                                                  C.2.0                2          160           65
+Modelio 3.5                                                  A.3.0                2           46           29
+Modelio 3.5                                                  C.1.0                2          140           73
+Modelio 3.5                                                  C.3.0                2           86           58
+Modelio 3.5                                                  A.4.0                2           85           42
+ARIS 10.0.22                                                 B.2.0                0          817           30
+ARIS 10.0.22                                                 A.2.0                0           78            0
+ARIS 10.0.22                                                 C.4.0                0          428           73
+ARIS 10.0.22                                                 B.1.0                0          278            4
+ARIS 10.0.22                                                 C.1.1                0          198           43
+ARIS 10.0.22                                                 A.1.0                0           41            0
+ARIS 10.0.22                                                 C.2.0                0          273            2
+ARIS 10.0.22                                                 A.3.0                0           82            0
+ARIS 10.0.22                                                 C.1.0                0          229           75
+ARIS 10.0.22                                                 C.5.0                0          457            1
+ARIS 10.0.22                                                 C.3.0                0          140           62
+ARIS 10.0.22                                                 A.4.0                0          104            2
+ARIS 10.0.22                                                 C.6.0                0          285            1
+ARIS 10.0.22                                                 A.4.1                0          168           32
+ModelFoundry 1.1.1                                           B.2.0               98          579           26
+ModelFoundry 1.1.1                                           A.2.0                0           55            0
+ModelFoundry 1.1.1                                           B.1.0               14          171            2
+ModelFoundry 1.1.1                                           C.1.1               24          259           28
+ModelFoundry 1.1.1                                           A.1.0                0           28            0
+ModelFoundry 1.1.1                                           C.2.0               21          295            4
+ModelFoundry 1.1.1                                           A.3.0                6           65            0
+ModelFoundry 1.1.1                                           C.1.0               25          382           49
+ModelFoundry 1.1.1                                           C.3.0               11          335           32
+ModelFoundry 1.1.1                                           A.4.0                3          127            0
+ModelFoundry 1.1.1                                           A.4.1                6          186           16
+Cardanit (prev. BeePMN) 4.9.1                                A.2.0                0          146            0
+Cardanit (prev. BeePMN) 4.9.1                                C.4.0                0          642          108
+Cardanit (prev. BeePMN) 4.9.1                                C.1.1                0          535          113
+Cardanit (prev. BeePMN) 4.9.1                                A.1.0                0           73            0
+Cardanit (prev. BeePMN) 4.9.1                                C.2.0                0          221            0
+Cardanit (prev. BeePMN) 4.9.1                                A.3.0                0          161            0
+Cardanit (prev. BeePMN) 4.9.1                                C.1.0                0          962          207
+Cardanit (prev. BeePMN) 4.9.1                                C.5.0                0          625            1
+Cardanit (prev. BeePMN) 4.9.1                                C.3.0                0          496            3
+Cardanit (prev. BeePMN) 4.9.1                                C.6.0                0          487            1
+OMNITRACKER BPMN 12.3                                        B.2.0                2          407          246
+OMNITRACKER BPMN 12.3                                        A.2.0                0           46           42
+OMNITRACKER BPMN 12.3                                        C.4.0                0          270          119
+OMNITRACKER BPMN 12.3                                        B.1.0                0          153          130
+OMNITRACKER BPMN 12.3                                        C.1.1                0           84           60
+OMNITRACKER BPMN 12.3                                        A.1.0                1           33            8
+OMNITRACKER BPMN 12.3                                        C.2.0                0          161          140
+OMNITRACKER BPMN 12.3                                        A.3.0                0           48           44
+OMNITRACKER BPMN 12.3                                        C.1.0                0          142          113
+OMNITRACKER BPMN 12.3                                        C.5.0                0          262            1
+OMNITRACKER BPMN 12.3                                        C.3.0                0           87           90
+OMNITRACKER BPMN 12.3                                        A.4.0                0           90           64
+OMNITRACKER BPMN 12.3                                        C.6.0                0          171            1
+OMNITRACKER BPMN 12.3                                        A.4.1                0           99           62
+MID bpanda 2019.05.0.8393                                    B.2.0                0         1575            0
+MID bpanda 2019.05.0.8393                                    A.2.0                0          156            0
+MID bpanda 2019.05.0.8393                                    B.1.0                0          516            2
+MID bpanda 2019.05.0.8393                                    C.1.1                0          270            5
+MID bpanda 2019.05.0.8393                                    A.1.0                0           79            0
+MID bpanda 2019.05.0.8393                                    C.2.0                0          237            0
+MID bpanda 2019.05.0.8393                                    A.3.0                0          166            0
+MID bpanda 2019.05.0.8393                                    C.1.0                0          457            3
+MID bpanda 2019.05.0.8393                                    C.3.0                0          305            0
+MID bpanda 2019.05.0.8393                                    A.4.0                0          289            0
+MID bpanda 2019.05.0.8393                                    A.4.1                0           94            0
+IBM Process Designer 8.0.1                                   A.2.0                0            6           12
+IBM Process Designer 8.0.1                                   A.1.0                0            6            8
+IBM Process Designer 8.0.1                                   A.3.0                0            6           18
+Visual Paradigm 11.1                                         B.2.0                0          221          198
+Visual Paradigm 11.1                                         A.2.0                0          129           26
+Visual Paradigm 11.1                                         B.1.0                0           98           77
+Visual Paradigm 11.1                                         A.1.0                0           66           12
+Visual Paradigm 11.1                                         A.3.0                0          128           25
+Visual Paradigm 11.1                                         C.1.0                0          481           63
+Visual Paradigm 11.1                                         A.4.0                0          279           42
+Visual Paradigm 11.1                                         A.4.1                0          266           40
+SAP Signavio Process Manager 17.5.1                          B.2.0                2         1194           28
+SAP Signavio Process Manager 17.5.1                          A.2.0                0          107            0
 SAP Signavio Process Manager 17.5.1                          B.1.0                2          416            4
 SAP Signavio Process Manager 17.5.1                          C.1.1                0          302          108
-SAP Signavio Process Manager 17.5.1                          C.3.0                0          211            4
-SAP Signavio Process Manager 17.5.1                          C.2.0                0          393            2
-SAP Signavio Process Manager 17.5.1                          C.1.0                0          529          208
-SAP Signavio Process Manager 17.5.1                          A.3.0                0          105            0
 SAP Signavio Process Manager 17.5.1                          A.1.0                0           54            0
-SAP Signavio Process Manager 17.5.1                          A.4.1                0          182           41
-SAP Signavio Process Manager 17.5.1                          B.2.0                2         1194           28
+SAP Signavio Process Manager 17.5.1                          C.2.0                0          393            2
+SAP Signavio Process Manager 17.5.1                          A.3.0                0          105            0
+SAP Signavio Process Manager 17.5.1                          C.1.0                0          529          208
+SAP Signavio Process Manager 17.5.1                          C.3.0                0          211            4
 SAP Signavio Process Manager 17.5.1                          A.4.0                0          117            4
-SAP Signavio Process Manager 17.5.1                          A.2.0                0          107            0
 SAP Signavio Process Manager 17.5.1                          C.6.0                4          515            1
+SAP Signavio Process Manager 17.5.1                          A.4.1                0          182           41
+Bizagi Modeler 2.8.0.8                                       B.2.0                6         1370           16
+Bizagi Modeler 2.8.0.8                                       A.2.0                0          117            0
+Bizagi Modeler 2.8.0.8                                       B.1.0                2          447            7
+Bizagi Modeler 2.8.0.8                                       A.1.0                0           81            0
+Bizagi Modeler 2.8.0.8                                       A.3.0                0          146            0
+Bizagi Modeler 2.8.0.8                                       A.4.0                0          238            0
+Bizagi Modeler 2.8.0.8                                       A.4.1                0          244           47
+MID Innovator 15.1.1.11026                                   B.2.0                0          790           26
+MID Innovator 15.1.1.11026                                   A.2.0                0           81            0
+MID Innovator 15.1.1.11026                                   C.4.0                0          540           87
+MID Innovator 15.1.1.11026                                   B.1.0                0          253           12
+MID Innovator 15.1.1.11026                                   C.1.1                0          262           33
+MID Innovator 15.1.1.11026                                   A.1.0                0           43            0
+MID Innovator 15.1.1.11026                                   C.2.0                0          290           25
+MID Innovator 15.1.1.11026                                   A.3.0                0           86            2
+MID Innovator 15.1.1.11026                                   C.1.0                0          400           53
+MID Innovator 15.1.1.11026                                   C.5.0                0          537            1
+MID Innovator 15.1.1.11026                                   C.3.0                0          244           31
+MID Innovator 15.1.1.11026                                   A.4.0                0          146           16
+MID Innovator 15.1.1.11026                                   C.6.0                0          341            1
+MID Innovator 15.1.1.11026                                   A.4.1                0          221           19
+ibo Prometheus 3.9.0.0                                       B.2.0                5         1727           41
+ibo Prometheus 3.9.0.0                                       A.2.0                0          148            0
+ibo Prometheus 3.9.0.0                                       B.1.0                2          551           15
+ibo Prometheus 3.9.0.0                                       C.1.1                1          360            8
+ibo Prometheus 3.9.0.0                                       A.1.0                0           72            0
+ibo Prometheus 3.9.0.0                                       C.2.0                1          469           27
+ibo Prometheus 3.9.0.0                                       A.3.0                1          162            0
+ibo Prometheus 3.9.0.0                                       C.1.0                0          546            4
+ibo Prometheus 3.9.0.0                                       C.3.0                1          347            2
+ibo Prometheus 3.9.0.0                                       A.4.0                4          119           17
+ibo Prometheus 3.9.0.0                                       A.4.1                2          344            2
+BIC Cloud Design 6.2.0                                       B.2.0                0          370          182
+BIC Cloud Design 6.2.0                                       A.2.0                0           44           29
 BIC Cloud Design 6.2.0                                       B.1.0                0          142           66
 BIC Cloud Design 6.2.0                                       C.1.1                3           83           22
-BIC Cloud Design 6.2.0                                       C.3.0                0           86           61
+BIC Cloud Design 6.2.0                                       A.1.0                0           28           12
 BIC Cloud Design 6.2.0                                       C.2.0                0          144           81
 BIC Cloud Design 6.2.0                                       A.3.0                0           46           19
 BIC Cloud Design 6.2.0                                       C.5.0                0          224            1
-BIC Cloud Design 6.2.0                                       A.1.0                0           28           12
-BIC Cloud Design 6.2.0                                       A.4.1                0           91           36
-BIC Cloud Design 6.2.0                                       B.2.0                0          370          182
+BIC Cloud Design 6.2.0                                       C.3.0                0           86           61
 BIC Cloud Design 6.2.0                                       A.4.0                0           61           31
-BIC Cloud Design 6.2.0                                       A.2.0                0           44           29
 BIC Cloud Design 6.2.0                                       C.6.0                0          139            1
-ADONIS 14.0                                                  B.1.0                0          441            0
-ADONIS 14.0                                                  C.1.1                0          255           19
-ADONIS 14.0                                                  C.3.0                0          331          108
-ADONIS 14.0                                                  C.2.0                0          396            6
-ADONIS 14.0                                                  C.1.0                0          343            6
-ADONIS 14.0                                                  A.3.0                0          124            0
-ADONIS 14.0                                                  C.5.0                0          794            1
-ADONIS 14.0                                                  A.1.0                0           64            0
-ADONIS 14.0                                                  A.4.1                0          219            0
-ADONIS 14.0                                                  B.2.0                0         1316            1
-ADONIS 14.0                                                  A.4.0                0          210            0
-ADONIS 14.0                                                  A.2.0                0          117            0
-ADONIS 14.0                                                  C.6.0                0          498            1
-ADONIS 14.0                                                  C.4.0                0          726          109
-Activiti Designer 5.14.1                                     A.3.0                0            5            0
-Activiti Designer 5.14.1                                     A.1.0                0            1            0
+BIC Cloud Design 6.2.0                                       A.4.1                0           91           36
 Activiti Designer 5.14.1                                     A.2.0                0            3            0
-Yaoqiang BPMN Editor 4.0                                     B.1.0                0          162            0
-Yaoqiang BPMN Editor 4.0                                     C.1.0                0           23            0
-Yaoqiang BPMN Editor 4.0                                     A.3.0                0           75            0
-Yaoqiang BPMN Editor 4.0                                     A.1.0                0           39            0
-Yaoqiang BPMN Editor 4.0                                     A.4.1                0          149           18
-Yaoqiang BPMN Editor 4.0                                     B.2.0                0          591            0
-Yaoqiang BPMN Editor 4.0                                     A.4.0                0          106            0
-Yaoqiang BPMN Editor 4.0                                     A.2.0                0           70            0
+Activiti Designer 5.14.1                                     A.1.0                0            1            0
+Activiti Designer 5.14.1                                     A.3.0                0            5            0
+Trisotech Workflow Modeler 12.6.3                            B.2.0                0         1821            0
+Trisotech Workflow Modeler 12.6.3                            A.2.0                0          163            0
+Trisotech Workflow Modeler 12.6.3                            C.4.0                0          296          108
 Trisotech Workflow Modeler 12.6.3                            B.1.0                0          604            1
 Trisotech Workflow Modeler 12.6.3                            C.1.1                0          362           14
-Trisotech Workflow Modeler 12.6.3                            C.3.0                0          407          199
-Trisotech Workflow Modeler 12.6.3                            C.2.0                0          306            0
-Trisotech Workflow Modeler 12.6.3                            C.1.0                0          591          281
-Trisotech Workflow Modeler 12.6.3                            A.3.0                0          179            0
-Trisotech Workflow Modeler 12.6.3                            C.5.0                0          367            1
 Trisotech Workflow Modeler 12.6.3                            A.1.0                0           90            0
-Trisotech Workflow Modeler 12.6.3                            A.4.1                0          227           44
-Trisotech Workflow Modeler 12.6.3                            B.2.0                0         1821            0
+Trisotech Workflow Modeler 12.6.3                            C.2.0                0          306            0
+Trisotech Workflow Modeler 12.6.3                            A.3.0                0          179            0
+Trisotech Workflow Modeler 12.6.3                            C.1.0                0          591          281
+Trisotech Workflow Modeler 12.6.3                            C.5.0                0          367            1
+Trisotech Workflow Modeler 12.6.3                            C.3.0                0          407          199
 Trisotech Workflow Modeler 12.6.3                            A.4.0                0          324            0
-Trisotech Workflow Modeler 12.6.3                            A.2.0                0          163            0
 Trisotech Workflow Modeler 12.6.3                            C.6.0                0          142            1
-Trisotech Workflow Modeler 12.6.3                            C.4.0                0          296          108
-Enterprise Architect 12.0.1207                               B.1.0                0           97           79
-Enterprise Architect 12.0.1207                               A.3.0                0           45           28
-Enterprise Architect 12.0.1207                               A.1.0                0           27           12
-Enterprise Architect 12.0.1207                               A.4.1                0           98           40
+Trisotech Workflow Modeler 12.6.3                            A.4.1                0          227           44
+Reference                                                    C.3.0                0            0            0
+Reference                                                    C.2.0                0            0            0
+Reference                                                    A.2.0                0            0            0
+Reference                                                    A.4.0                0            0            0
+Reference                                                    A.3.0                0            0            0
+Reference                                                    A.4.1                0            0            0
+Reference                                                    C.6.0                0            0            1
+Reference                                                    B.1.0                0            0            1
+Reference                                                    C.1.1                0            0            0
+Reference                                                    A.1.0                0            0            0
+Reference                                                    C.5.0                0            0            1
+Reference                                                    C.4.0                0            0          107
+Reference                                                    C.1.0                0            0            0
+Reference                                                    B.2.0                0            0            0
+actiBPM 3.E-8                                                A.2.0                0           57           16
+actiBPM 3.E-8                                                A.1.0                0           31            8
+actiBPM 3.E-8                                                A.3.0                0           65           16
+actiBPM 3.E-8                                                A.4.0                0          124           22
+actiBPM 3.E-8                                                A.4.1                0          188           40
+itp-commerce Process Modeler for Microsoft Visio 6           B.2.0                0          739            0
+itp-commerce Process Modeler for Microsoft Visio 6           A.2.0                0           67            0
+itp-commerce Process Modeler for Microsoft Visio 6           B.1.0                0          175            0
+itp-commerce Process Modeler for Microsoft Visio 6           A.1.0                0           39            0
+itp-commerce Process Modeler for Microsoft Visio 6           A.3.0                0           78            0
+itp-commerce Process Modeler for Microsoft Visio 6           C.1.0                0          618           31
+itp-commerce Process Modeler for Microsoft Visio 6           A.4.0                0          119            0
+itp-commerce Process Modeler for Microsoft Visio 6           A.4.1                0          269           17
 Enterprise Architect 12.0.1207                               B.2.0                0          405          220
-Enterprise Architect 12.0.1207                               A.4.0                0           89           42
 Enterprise Architect 12.0.1207                               A.2.0                0           43           26
-MID Innovator 15.1.1.11026                                   B.1.0                0          253           12
-MID Innovator 15.1.1.11026                                   C.1.1                0          262           33
-MID Innovator 15.1.1.11026                                   C.3.0                0          244           31
-MID Innovator 15.1.1.11026                                   C.2.0                0          290           25
-MID Innovator 15.1.1.11026                                   C.1.0                0          400           53
-MID Innovator 15.1.1.11026                                   A.3.0                0           86            2
-MID Innovator 15.1.1.11026                                   C.5.0                0          537            1
-MID Innovator 15.1.1.11026                                   A.1.0                0           43            0
-MID Innovator 15.1.1.11026                                   A.4.1                0          221           19
-MID Innovator 15.1.1.11026                                   B.2.0                0          790           26
-MID Innovator 15.1.1.11026                                   A.4.0                0          146           16
-MID Innovator 15.1.1.11026                                   A.2.0                0           81            0
-MID Innovator 15.1.1.11026                                   C.6.0                0          341            1
-MID Innovator 15.1.1.11026                                   C.4.0                0          540           87
-Camunda Eclipse Plugin 3.0.0                                 B.1.0                0           89            0
-Camunda Eclipse Plugin 3.0.0                                 C.1.1                0           78            6
-Camunda Eclipse Plugin 3.0.0                                 C.3.0                0           42            0
-Camunda Eclipse Plugin 3.0.0                                 C.2.0                0           12            0
-Camunda Eclipse Plugin 3.0.0                                 C.1.0                0           23            0
-Camunda Eclipse Plugin 3.0.0                                 A.3.0                0           68            0
-Camunda Eclipse Plugin 3.0.0                                 A.1.0                0           36            0
-Camunda Eclipse Plugin 3.0.0                                 A.4.1                0            7            0
-Camunda Eclipse Plugin 3.0.0                                 B.2.0                0           96            0
-Camunda Eclipse Plugin 3.0.0                                 A.4.0                0          115            0
-Camunda Eclipse Plugin 3.0.0                                 A.2.0                0           57            0
-Aeneis 5.7.89.2400                                           B.1.0                7          533            3
-Aeneis 5.7.89.2400                                           C.1.1                0          297           13
-Aeneis 5.7.89.2400                                           C.3.0                0          483            6
-Aeneis 5.7.89.2400                                           C.1.0                0          550           15
-Aeneis 5.7.89.2400                                           A.3.0                0          178            0
-Aeneis 5.7.89.2400                                           A.1.0                0           84            0
-Aeneis 5.7.89.2400                                           A.4.1                0          269            2
-Aeneis 5.7.89.2400                                           B.2.0                4         1666           34
-Aeneis 5.7.89.2400                                           A.4.0                0          275            2
-Aeneis 5.7.89.2400                                           A.2.0                0          179            0
-OMNITRACKER BPMN 12.3                                        B.1.0                0          153          130
-OMNITRACKER BPMN 12.3                                        C.1.1                0           84           60
-OMNITRACKER BPMN 12.3                                        C.3.0                0           87           90
-OMNITRACKER BPMN 12.3                                        C.2.0                0          161          140
-OMNITRACKER BPMN 12.3                                        C.1.0                0          142          113
-OMNITRACKER BPMN 12.3                                        A.3.0                0           48           44
-OMNITRACKER BPMN 12.3                                        C.5.0                0          262            1
-OMNITRACKER BPMN 12.3                                        A.1.0                0           30           20
-OMNITRACKER BPMN 12.3                                        A.4.1                0           99           62
-OMNITRACKER BPMN 12.3                                        B.2.0                0          399          349
-OMNITRACKER BPMN 12.3                                        A.4.0                0           90           64
-OMNITRACKER BPMN 12.3                                        A.2.0                0           46           42
-OMNITRACKER BPMN 12.3                                        C.6.0                0          171            1
-OMNITRACKER BPMN 12.3                                        C.4.0                0          270          119
-Visual Paradigm 11.1                                         B.1.0                0           98           77
-Visual Paradigm 11.1                                         C.1.0                0          481           63
-Visual Paradigm 11.1                                         A.3.0                0          128           25
-Visual Paradigm 11.1                                         A.1.0                0           66           12
-Visual Paradigm 11.1                                         A.4.1                0          266           40
-Visual Paradigm 11.1                                         B.2.0                0          221          198
-Visual Paradigm 11.1                                         A.4.0                0          279           42
-Visual Paradigm 11.1                                         A.2.0                0          129           26
-Trisotech BPMN Visio Add in 5.0.1                            B.1.0                0          200            0
-Trisotech BPMN Visio Add in 5.0.1                            C.1.1                0          366          164
-Trisotech BPMN Visio Add in 5.0.1                            C.3.0                0          414          197
-Trisotech BPMN Visio Add in 5.0.1                            C.2.0                0          301            0
-Trisotech BPMN Visio Add in 5.0.1                            C.1.0                0          695          281
-Trisotech BPMN Visio Add in 5.0.1                            A.3.0                0          171            0
-Trisotech BPMN Visio Add in 5.0.1                            A.1.0                0           82            0
-Trisotech BPMN Visio Add in 5.0.1                            A.4.1                0          349           44
-Trisotech BPMN Visio Add in 5.0.1                            B.2.0                0         1768            0
-Trisotech BPMN Visio Add in 5.0.1                            A.4.0                0          313            0
-Trisotech BPMN Visio Add in 5.0.1                            A.2.0                0          169            0
-ModelFoundry 1.1.1                                           B.1.0               14          171            2
-ModelFoundry 1.1.1                                           C.1.1               24          259           28
-ModelFoundry 1.1.1                                           C.3.0               11          335           32
-ModelFoundry 1.1.1                                           C.2.0               21          295            4
-ModelFoundry 1.1.1                                           C.1.0               25          382           49
-ModelFoundry 1.1.1                                           A.3.0                6           65            0
-ModelFoundry 1.1.1                                           A.1.0                0           28            0
-ModelFoundry 1.1.1                                           A.4.1                6          186           16
-ModelFoundry 1.1.1                                           B.2.0               98          579           26
-ModelFoundry 1.1.1                                           A.4.0                3          127            0
-ModelFoundry 1.1.1                                           A.2.0                0           55            0
+Enterprise Architect 12.0.1207                               B.1.0                0           97           79
+Enterprise Architect 12.0.1207                               A.1.0                0           27           12
+Enterprise Architect 12.0.1207                               A.3.0                0           45           28
+Enterprise Architect 12.0.1207                               A.4.0                0           89           42
+Enterprise Architect 12.0.1207                               A.4.1                0           98           40
+iGrafx Process 2013 for Six Sigma 15.0.4.1565                B.2.0                0          408          138
+iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.2.0                0           57           11
+iGrafx Process 2013 for Six Sigma 15.0.4.1565                B.1.0                1          165           52
+iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.1.0                0           41            7
+iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.3.0                0           59           17
+iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.4.0                0          104           27
+iGrafx Process 2013 for Six Sigma 15.0.4.1565                A.4.1                0          115           33
+GenMyModel 0.47                                              B.2.0                0          633            1
+GenMyModel 0.47                                              A.2.0                0           61            0
 GenMyModel 0.47                                              B.1.0                0          153            0
 GenMyModel 0.47                                              C.1.1                -            -            -
-GenMyModel 0.47                                              C.3.0                0          228           29
-GenMyModel 0.47                                              C.2.0               18          160           56
-GenMyModel 0.47                                              C.1.0                -            -            -
-GenMyModel 0.47                                              A.3.0                0           69            0
 GenMyModel 0.47                                              A.1.0                0           35            0
-GenMyModel 0.47                                              B.2.0                0          633            1
+GenMyModel 0.47                                              C.2.0               18          160           56
+GenMyModel 0.47                                              A.3.0                0           69            0
+GenMyModel 0.47                                              C.1.0                -            -            -
+GenMyModel 0.47                                              C.3.0                0          228           29
 GenMyModel 0.47                                              A.4.0                0          106            0
-GenMyModel 0.47                                              A.2.0                0           61            0
-Reference                                                    A.4.0                0            0            0
-Reference                                                    C.6.0                0            0            1
-Reference                                                    B.2.0                0            0            0
-Reference                                                    C.2.0                0            0            0
-Reference                                                    A.1.0                0            0            0
-Reference                                                    A.3.0                0            0            0
-Reference                                                    C.1.1                0            0            0
-Reference                                                    A.4.1                0            0            0
-Reference                                                    B.1.0                0            0            1
-Reference                                                    C.3.0                0            0            0
-Reference                                                    C.1.0                0            0            0
-Reference                                                    C.4.0                0            0          107
-Reference                                                    C.5.0                0            0            1
-Reference                                                    A.2.0                0            0            0
-ibo Prometheus 3.9.0.0                                       B.1.0                2          551           15
-ibo Prometheus 3.9.0.0                                       C.1.1                1          360            8
-ibo Prometheus 3.9.0.0                                       C.3.0                1          347            2
-ibo Prometheus 3.9.0.0                                       C.2.0                1          469           27
-ibo Prometheus 3.9.0.0                                       C.1.0                0          546            4
-ibo Prometheus 3.9.0.0                                       A.3.0                1          162            0
-ibo Prometheus 3.9.0.0                                       A.1.0                0           72            0
-ibo Prometheus 3.9.0.0                                       A.4.1                2          344            2
-ibo Prometheus 3.9.0.0                                       B.2.0                5         1727           41
-ibo Prometheus 3.9.0.0                                       A.4.0                4          119           17
-ibo Prometheus 3.9.0.0                                       A.2.0                0          148            0
-W4 BPMN+ Composer V.10.4                                     B.1.0                0          539            1
-W4 BPMN+ Composer V.10.4                                     C.1.1                0           48            0
-W4 BPMN+ Composer V.10.4                                     C.3.0                0          136            0
-W4 BPMN+ Composer V.10.4                                     C.2.0                0          687            0
-W4 BPMN+ Composer V.10.4                                     C.1.0                0           79            0
-W4 BPMN+ Composer V.10.4                                     A.3.0                0          153            0
-W4 BPMN+ Composer V.10.4                                     C.5.0                0         1341            1
-W4 BPMN+ Composer V.10.4                                     A.1.0                0           86            0
-W4 BPMN+ Composer V.10.4                                     A.4.1                0          247            0
+IBM BlueWorks Live April 2014                                A.2.0                0            8           42
+IBM BlueWorks Live April 2014                                A.1.0                0            8           20
+Camunda Eclipse Plugin 3.0.0                                 B.2.0                0           96            0
+Camunda Eclipse Plugin 3.0.0                                 A.2.0                0           57            0
+Camunda Eclipse Plugin 3.0.0                                 B.1.0                0           89            0
+Camunda Eclipse Plugin 3.0.0                                 C.1.1                0           78            6
+Camunda Eclipse Plugin 3.0.0                                 A.1.0                0           36            0
+Camunda Eclipse Plugin 3.0.0                                 C.2.0                0           12            0
+Camunda Eclipse Plugin 3.0.0                                 A.3.0                0           68            0
+Camunda Eclipse Plugin 3.0.0                                 C.1.0                0           23            0
+Camunda Eclipse Plugin 3.0.0                                 C.3.0                0           42            0
+Camunda Eclipse Plugin 3.0.0                                 A.4.0                0          115            0
+Camunda Eclipse Plugin 3.0.0                                 A.4.1                0            7            0
+Trisotech BPMN Visio Add in 5.0.1                            B.2.0                0         1768            0
+Trisotech BPMN Visio Add in 5.0.1                            A.2.0                0          169            0
+Trisotech BPMN Visio Add in 5.0.1                            B.1.0                0          200            0
+Trisotech BPMN Visio Add in 5.0.1                            C.1.1                0          366          164
+Trisotech BPMN Visio Add in 5.0.1                            A.1.0                0           82            0
+Trisotech BPMN Visio Add in 5.0.1                            C.2.0                0          301            0
+Trisotech BPMN Visio Add in 5.0.1                            A.3.0                0          171            0
+Trisotech BPMN Visio Add in 5.0.1                            C.1.0                0          695          281
+Trisotech BPMN Visio Add in 5.0.1                            C.3.0                0          414          197
+Trisotech BPMN Visio Add in 5.0.1                            A.4.0                0          313            0
+Trisotech BPMN Visio Add in 5.0.1                            A.4.1                0          349           44
+Aeneis 5.7.89.2400                                           B.2.0                4         1666           34
+Aeneis 5.7.89.2400                                           A.2.0                0          179            0
+Aeneis 5.7.89.2400                                           B.1.0                7          533            3
+Aeneis 5.7.89.2400                                           C.1.1                0          297           13
+Aeneis 5.7.89.2400                                           A.1.0                0           84            0
+Aeneis 5.7.89.2400                                           A.3.0                0          178            0
+Aeneis 5.7.89.2400                                           C.1.0                0          550           15
+Aeneis 5.7.89.2400                                           C.3.0                0          483            6
+Aeneis 5.7.89.2400                                           A.4.0                0          275            2
+Aeneis 5.7.89.2400                                           A.4.1                0          269            2
 W4 BPMN+ Composer V.10.4                                     B.2.0                0         1476            0
-W4 BPMN+ Composer V.10.4                                     A.4.0                0          303            0
 W4 BPMN+ Composer V.10.4                                     A.2.0                0          151            0
 W4 BPMN+ Composer V.10.4                                     C.4.0                0         1242          106
-MID bpanda 2019.05.0.8393                                    B.1.0                0          516            2
-MID bpanda 2019.05.0.8393                                    C.1.1                0          270            5
-MID bpanda 2019.05.0.8393                                    C.3.0                0          305            0
-MID bpanda 2019.05.0.8393                                    C.2.0                0          237            0
-MID bpanda 2019.05.0.8393                                    C.1.0                0          457            3
-MID bpanda 2019.05.0.8393                                    A.3.0                0          166            0
-MID bpanda 2019.05.0.8393                                    A.1.0                0           79            0
-MID bpanda 2019.05.0.8393                                    A.4.1                0           94            0
-MID bpanda 2019.05.0.8393                                    B.2.0                0         1575            0
-MID bpanda 2019.05.0.8393                                    A.4.0                0          289            0
-MID bpanda 2019.05.0.8393                                    A.2.0                0          156            0
-Modelio 3.5                                                  B.1.0               14          144           79
-Modelio 3.5                                                  C.1.1               23           80           37
-Modelio 3.5                                                  C.3.0                2           86           58
-Modelio 3.5                                                  C.2.0                2          160           65
-Modelio 3.5                                                  C.1.0                2          140           73
-Modelio 3.5                                                  A.3.0                2           46           29
-Modelio 3.5                                                  A.1.0                2           28           12
-Modelio 3.5                                                  B.2.0               12          381          230
-Modelio 3.5                                                  A.4.0                2           85           42
-Modelio 3.5                                                  A.2.0                2           44           26
-BPMN-Modeler for Confluence Enterprise 3.38.0                B.1.0                0          399            2
-BPMN-Modeler for Confluence Enterprise 3.38.0                C.1.1                0          306           45
-BPMN-Modeler for Confluence Enterprise 3.38.0                C.3.0                0          323            0
-BPMN-Modeler for Confluence Enterprise 3.38.0                C.2.0                0           93            0
-BPMN-Modeler for Confluence Enterprise 3.38.0                C.1.0                0          523           13
-BPMN-Modeler for Confluence Enterprise 3.38.0                A.3.0                0          118            0
-BPMN-Modeler for Confluence Enterprise 3.38.0                C.5.0                0           69            1
-BPMN-Modeler for Confluence Enterprise 3.38.0                A.1.0                0           52            0
-BPMN-Modeler for Confluence Enterprise 3.38.0                A.4.1                0          121            0
-BPMN-Modeler for Confluence Enterprise 3.38.0                B.2.0                0         1202            0
-BPMN-Modeler for Confluence Enterprise 3.38.0                A.4.0                0          221            0
-BPMN-Modeler for Confluence Enterprise 3.38.0                A.2.0                0          111            0
-BPMN-Modeler for Confluence Enterprise 3.38.0                C.6.0                0           92            1
-BPMN-Modeler for Confluence Enterprise 3.38.0                C.4.0                0           36          108
-itp-commerce Process Modeler for Microsoft Visio 6           B.1.0                0          175            0
-itp-commerce Process Modeler for Microsoft Visio 6           C.1.0                0          618           31
-itp-commerce Process Modeler for Microsoft Visio 6           A.3.0                0           78            0
-itp-commerce Process Modeler for Microsoft Visio 6           A.1.0                0           39            0
-itp-commerce Process Modeler for Microsoft Visio 6           A.4.1                0          269           17
-itp-commerce Process Modeler for Microsoft Visio 6           B.2.0                0          739            0
-itp-commerce Process Modeler for Microsoft Visio 6           A.4.0                0          119            0
-itp-commerce Process Modeler for Microsoft Visio 6           A.2.0                0           67            0
-Bizagi Modeler 2.8.0.8                                       B.1.0                2          447            7
-Bizagi Modeler 2.8.0.8                                       A.3.0                0          146            0
-Bizagi Modeler 2.8.0.8                                       A.1.0                0           81            0
-Bizagi Modeler 2.8.0.8                                       A.4.1                0          244           47
-Bizagi Modeler 2.8.0.8                                       B.2.0                6         1370           16
-Bizagi Modeler 2.8.0.8                                       A.4.0                0          238            0
-Bizagi Modeler 2.8.0.8                                       A.2.0                0          117            0
-bpmn.io (Camunda Modeler) 17.6.4                             B.1.0                0          395            1
-bpmn.io (Camunda Modeler) 17.6.4                             C.1.1                0          291           29
-bpmn.io (Camunda Modeler) 17.6.4                             C.3.0                0          323            0
-bpmn.io (Camunda Modeler) 17.6.4                             C.2.0                0           93            0
-bpmn.io (Camunda Modeler) 17.6.4                             C.1.0                0          509            7
-bpmn.io (Camunda Modeler) 17.6.4                             A.3.0                0          118            0
-bpmn.io (Camunda Modeler) 17.6.4                             C.5.0                0           69            1
-bpmn.io (Camunda Modeler) 17.6.4                             A.1.0                0           52            0
-bpmn.io (Camunda Modeler) 17.6.4                             A.4.1                0          121            0
-bpmn.io (Camunda Modeler) 17.6.4                             B.2.0                0         1202            0
-bpmn.io (Camunda Modeler) 17.6.4                             A.4.0                0          221            0
-bpmn.io (Camunda Modeler) 17.6.4                             A.2.0                0          109            0
-bpmn.io (Camunda Modeler) 17.6.4                             C.6.0                0           92            1
-bpmn.io (Camunda Modeler) 17.6.4                             C.4.0                0           35          108
+W4 BPMN+ Composer V.10.4                                     B.1.0                0          539            1
+W4 BPMN+ Composer V.10.4                                     C.1.1                0           48            0
+W4 BPMN+ Composer V.10.4                                     A.1.0                0           86            0
+W4 BPMN+ Composer V.10.4                                     C.2.0                0          687            0
+W4 BPMN+ Composer V.10.4                                     A.3.0                0          153            0
+W4 BPMN+ Composer V.10.4                                     C.1.0                0           79            0
+W4 BPMN+ Composer V.10.4                                     C.5.0                0         1341            1
+W4 BPMN+ Composer V.10.4                                     C.3.0                0          136            0
+W4 BPMN+ Composer V.10.4                                     A.4.0                0          303            0
+W4 BPMN+ Composer V.10.4                                     A.4.1                0          247            0
+bpmn.io (Camunda Modeler) 18.6.1                             B.2.0                0         1202            0
+bpmn.io (Camunda Modeler) 18.6.1                             A.2.0                0          109            0
+bpmn.io (Camunda Modeler) 18.6.1                             C.4.0                0           35          108
+bpmn.io (Camunda Modeler) 18.6.1                             B.1.0                0          395            1
+bpmn.io (Camunda Modeler) 18.6.1                             C.1.1                0          291           29
+bpmn.io (Camunda Modeler) 18.6.1                             A.1.0                0           52            0
+bpmn.io (Camunda Modeler) 18.6.1                             C.2.0                0           93            0
+bpmn.io (Camunda Modeler) 18.6.1                             A.3.0                0          118            0
+bpmn.io (Camunda Modeler) 18.6.1                             C.1.0                0          509            7
+bpmn.io (Camunda Modeler) 18.6.1                             C.5.0                0           69            1
+bpmn.io (Camunda Modeler) 18.6.1                             C.3.0                0          323            0
+bpmn.io (Camunda Modeler) 18.6.1                             A.4.0                0          221            0
+bpmn.io (Camunda Modeler) 18.6.1                             C.6.0                0           92            1
+bpmn.io (Camunda Modeler) 18.6.1                             A.4.1                0          121            0
+ADONIS 14.0                                                  B.2.0                0         1316            1
+ADONIS 14.0                                                  A.2.0                0          117            0
+ADONIS 14.0                                                  C.4.0                0          726          109
+ADONIS 14.0                                                  B.1.0                0          441            0
+ADONIS 14.0                                                  C.1.1                0          255           19
+ADONIS 14.0                                                  A.1.0                0           64            0
+ADONIS 14.0                                                  C.2.0                0          396            6
+ADONIS 14.0                                                  A.3.0                0          124            0
+ADONIS 14.0                                                  C.1.0                0          343            6
+ADONIS 14.0                                                  C.5.0                0          794            1
+ADONIS 14.0                                                  C.3.0                0          331          108
+ADONIS 14.0                                                  A.4.0                0          210            0
+ADONIS 14.0                                                  C.6.0                0          498            1
+ADONIS 14.0                                                  A.4.1                0          219            0
