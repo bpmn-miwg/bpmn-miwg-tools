@@ -128,8 +128,8 @@
                         return data.split(",")[0];
                       },
                       "bVisible" : false },
-                    /* 7 */ { "mData": "participatedInDemosByYear", "mRender": renderYear, "iDataSort": 6 },
-                    /* 8 */ { "mData": "lastResultsSubmitted", "mRender": renderYear },
+                    /* 7 */ { "mData": "participatedInDemosByYear", "mRender": renderDemoParticipation, "iDataSort": 6 },
+                    /* 8 */ { "mData": "lastResultsSubmitted", "mRender": renderLastSubmission },
                     /* 9 */ { "mData": "testResultsSubmitted", "bVisible" : false /*"mRender": renderTestResultsSubmitted*/ },
                     /* 10 */ { "mData": "testResultsASubmitted", "mRender": function ( data, type, full) {
                       if (data && full.testResultsASubmitted && full.testResultsASubmitted !== 0) {
@@ -224,16 +224,35 @@
                   return toolAndVersion;
                 }
 
-              function renderYear(data, type, full) {
-                var lastParticipation = data.split(",")[0];
+              function renderDemoParticipation(data, type, full) {
+                var lastDemoYear = 2024; // Hard-coded last demo year - update when next demo occurs
+                var participationYears = data.split(",");
+                var lastParticipation = participationYears[0];
                 var participated = false;
-                if (lastParticipation == new Date().getFullYear()) {
-		  participated = true;
-		} else if (lastParticipation != "0") {
-		  participated = "partial";
-              }
+                
+                if (lastParticipation >= lastDemoYear) {
+                  participated = true;
+                } else if (lastParticipation != "0") {
+                  participated = "partial";
+                }
+                
                 var result = renderTrafficLight(participated, type, full);
-                return '<span style="white-space:nowrap;">' + result + ' ' + data.split(",").join(", ") + '</span>';
+                return '<span style="white-space:nowrap;">' + result + ' ' + participationYears.join(", ") + '</span>';
+              }
+
+              function renderLastSubmission(data, type, full) {
+                var submissionYear = parseInt(data);
+                var currentYear = new Date().getFullYear();
+                var participated = false;
+                
+                if (submissionYear >= (currentYear - 1)) {
+                  participated = true;
+                } else if (submissionYear > 0) {
+                  participated = "partial";
+                }
+                
+                var result = renderTrafficLight(participated, type, full);
+                return '<span style="white-space:nowrap;">' + result + ' ' + data + '</span>';
               }
 
               function renderTestResultsSubmitted(data, type, full) {
