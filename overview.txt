@@ -193,6 +193,20 @@ Yaoqiang BPMN Editor 4.0                                     A.2.0              
 Yaoqiang BPMN Editor 4.0                                     A.3.0                0           75            0
 Yaoqiang BPMN Editor 4.0                                     B.1.0                0          162            0
 Yaoqiang BPMN Editor 4.0                                     C.1.0                0           23            0
+Open-BPMN 1.2.8                                              A.4.1               32          137            0
+Open-BPMN 1.2.8                                              A.4.0                9           46            0
+Open-BPMN 1.2.8                                              C.1.1                0            0            0
+Open-BPMN 1.2.8                                              A.1.0               11           50            0
+Open-BPMN 1.2.8                                              C.5.0               96          453            1
+Open-BPMN 1.2.8                                              B.2.0              178          696            0
+Open-BPMN 1.2.8                                              A.2.0               19           77            0
+Open-BPMN 1.2.8                                              A.3.0               20           73            0
+Open-BPMN 1.2.8                                              C.4.0              121          394          107
+Open-BPMN 1.2.8                                              C.3.0                0            0            0
+Open-BPMN 1.2.8                                              B.1.0               68          237            1
+Open-BPMN 1.2.8                                              C.6.0               62          327            1
+Open-BPMN 1.2.8                                              C.2.0               57          367            0
+Open-BPMN 1.2.8                                              C.1.0               62          288            0
 ADONIS 17.0                                                  A.4.1                0          207            0
 ADONIS 17.0                                                  A.4.0                0          209            0
 ADONIS 17.0                                                  C.1.1                0          219           19
