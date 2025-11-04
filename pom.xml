@@ -5,7 +5,7 @@
   <artifactId>tools</artifactId>
   <name>BPMN MIWG Tools</name>
   <packaging>pom</packaging>
-  <version>0.6.1-SNAPSHOT</version>
+  <version>0.7.0</version>
   <description>A set of tools for evaluating BPMN 2.0 models produced from a range of tools with reference models produced by the BPMN Model Interchange Working Group of the OMG. </description>
   <url>https://github.com/bpmn-miwg/bpmn-miwg-tools</url>
 
@@ -86,7 +86,9 @@
   </developers>
 
   <properties>
-    <java.version>1.7</java.version>
+    <java.version>21</java.version>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
     <!--
       The tools version the maven plugin should use.
       At various times we have run public tests using the previous tools
@@ -94,17 +96,17 @@
     -->
     <bpmn-miwg-test-suite.version>0.4-SNAPSHOT</bpmn-miwg-test-suite.version>
     <bpmn-miwg-tools.version>${project.version}</bpmn-miwg-tools.version>
-    <commons-lang3.version>[3.1.12,)</commons-lang3.version>
+    <commons-lang3.version>3.13.0</commons-lang3.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
-    <jackson.version>[2.8.11.1,)</jackson.version>
+    <jackson.version>2.15.3</jackson.version>
     <!-- staging area for subsequent commit and push -->
     <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
-    <log4j.version>2.17.2</log4j.version>
-    <maven.plugin.version>3.6.4</maven.plugin.version>
-    <maven.version>3.8.5</maven.version>
-    <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+    <log4j.version>2.21.1</log4j.version>
+    <maven.plugin.version>3.8.2</maven.plugin.version>
+    <maven.version>3.9.5</maven.version>
+    <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
   </properties>
 
   <modules>
@@ -131,9 +133,17 @@
       <version>${commons-lang3.version}</version>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.1</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- For backward compatibility with JUnit 4 tests -->
+    <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <version>5.10.1</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
@@ -161,10 +171,10 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <inherited>true</inherited>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
         </configuration>
-        <version>2.3.2</version>
+        <version>3.11.0</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -172,6 +182,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.2</version>
         <configuration>
           <failIfNoTests>false</failIfNoTests>
           <trimStackTrace>false</trimStackTrace>
@@ -190,7 +201,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.6</version>
+        <version>3.4.5</version>
         <!-- Restrict the report generation to a subset -->
         <reportSets>
           <reportSet>
@@ -208,7 +219,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-linkcheck-plugin</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
         <configuration>
 
         </configuration>
@@ -216,7 +227,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>2.14.1</version>
+        <version>3.2.2</version>
       </plugin>
     </plugins>
   </reporting>
