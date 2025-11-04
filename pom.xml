@@ -96,7 +96,7 @@
     -->
     <bpmn-miwg-test-suite.version>0.4-SNAPSHOT</bpmn-miwg-test-suite.version>
     <bpmn-miwg-tools.version>${project.version}</bpmn-miwg-tools.version>
-    <commons-lang3.version>3.13.0</commons-lang3.version>
+    <commons-lang3.version>3.18.0</commons-lang3.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
