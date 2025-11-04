@@ -25,8 +25,28 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         server-username: GITHUB_ACTOR # env var provided automatically in actions
         server-password: GITHUB_TOKEN # env var provided automatically in actions
+
+    - name: Configure Maven for GitHub Packages
+      run: |
+        mkdir -p $HOME/.m2
+        cat > $HOME/.m2/settings.xml <<EOL
+        <settings>
+          <servers>
+            <server>
+              <id>github</id>
+              <username>${GITHUB_ACTOR}</username>
+              <password>${GITHUB_TOKEN}</password>
+            </server>
+          </servers>
+        </settings>
+        EOL
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_ACTOR: ${{ github.actor }}
+
     - name: Build with Maven
       run: mvn --batch-mode clean compile test --file pom.xml
+
     - name: Publish to GitHub Packages Apache Maven
       run: mvn --batch-mode deploy --file pom.xml -DskipTests
       env:
