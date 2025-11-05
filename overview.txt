@@ -141,18 +141,6 @@ ARIS 10.2025.07                                              C.2.0              
 ARIS 10.2025.07                                              A.4.1                0          168           32
 ARIS 10.2025.07                                              B.2.0                0          815           30
 ARIS 10.2025.07                                              C.1.1                0          198           43
-SAP Signavio Process manager 19.9.0                          C.6.0                0          510            1
-SAP Signavio Process manager 19.9.0                          C.1.0                0          529          208
-SAP Signavio Process manager 19.9.0                          A.1.0                0           54            0
-SAP Signavio Process manager 19.9.0                          A.3.0                0          105            0
-SAP Signavio Process manager 19.9.0                          C.3.0                0          211            4
-SAP Signavio Process manager 19.9.0                          A.4.0                0          117            4
-SAP Signavio Process manager 19.9.0                          B.1.0                2          416            4
-SAP Signavio Process manager 19.9.0                          A.2.0                0          107            0
-SAP Signavio Process manager 19.9.0                          C.2.0                0          393            2
-SAP Signavio Process manager 19.9.0                          A.4.1                0          182           41
-SAP Signavio Process manager 19.9.0                          B.2.0                2         1194           28
-SAP Signavio Process manager 19.9.0                          C.1.1                0          302          108
 Bizagi Modeler 2.8.0.8                                       A.1.0                0           81            0
 Bizagi Modeler 2.8.0.8                                       A.3.0                0          146            0
 Bizagi Modeler 2.8.0.8                                       A.4.0                0          238            0
@@ -199,6 +187,18 @@ Visual Paradigm 11.1                                         B.1.0              
 Visual Paradigm 11.1                                         A.2.0                0          129           26
 Visual Paradigm 11.1                                         A.4.1                0          266           40
 Visual Paradigm 11.1                                         B.2.0                0          221          198
+SAP Signavio Process Manager 19.9.0                          C.6.0                0          510            1
+SAP Signavio Process Manager 19.9.0                          C.1.0                0          529          208
+SAP Signavio Process Manager 19.9.0                          A.1.0                0           54            0
+SAP Signavio Process Manager 19.9.0                          A.3.0                0          105            0
+SAP Signavio Process Manager 19.9.0                          C.3.0                0          211            4
+SAP Signavio Process Manager 19.9.0                          A.4.0                0          117            4
+SAP Signavio Process Manager 19.9.0                          B.1.0                2          416            4
+SAP Signavio Process Manager 19.9.0                          A.2.0                0          107            0
+SAP Signavio Process Manager 19.9.0                          C.2.0                0          393            2
+SAP Signavio Process Manager 19.9.0                          A.4.1                0          182           41
+SAP Signavio Process Manager 19.9.0                          B.2.0                2         1194           28
+SAP Signavio Process Manager 19.9.0                          C.1.1                0          302          108
 itp-commerce Process Modeler for Microsoft Visio 6           C.1.0                0          618           31
 itp-commerce Process Modeler for Microsoft Visio 6           A.1.0                0           39            0
 itp-commerce Process Modeler for Microsoft Visio 6           A.3.0                0           78            0
