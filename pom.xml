@@ -103,7 +103,7 @@
     <jackson.version>2.15.3</jackson.version>
     <!-- staging area for subsequent commit and push -->
     <local-mvn-repo.snapshot.directory>file:${user.home}/bpmn-miwg-mvn-repo/snapshots</local-mvn-repo.snapshot.directory>
-    <log4j.version>2.25.3</log4j.version>
+    <log4j.version>2.25.4</log4j.version>
     <maven.plugin.version>3.8.2</maven.plugin.version>
     <maven.version>3.9.5</maven.version>
     <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
